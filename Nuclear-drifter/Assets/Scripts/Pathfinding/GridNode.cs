@@ -24,11 +24,15 @@ public class GridNode : MonoBehaviour
         CreateGrid();
         Node playerN = NodeFromPoint(player.position);
         Debug.Log(playerN.pos);
-        fourDirection = new Vector2[4];
+        fourDirection = new Vector2[8];
         fourDirection[0] = new Vector2(1, 0);
         fourDirection[1] = new Vector2(-1, 0);
         fourDirection[2] = new Vector2(0, 1);
         fourDirection[3] = new Vector2(0, -1);
+        fourDirection[4] = new Vector2(1, 1);
+        fourDirection[5] = new Vector2(-1, 1);
+        fourDirection[6] = new Vector2(-1, -1);
+        fourDirection[7] = new Vector2(1, -1);
     }
 
     public Node NodeFromPoint(Vector3 point)
@@ -95,7 +99,7 @@ public class GridNode : MonoBehaviour
                 {
                     Gizmos.color = Color.magenta;
                 }
-                //if(nPlayer.Contains(n))
+                //if (nPlayer.Contains(n))
                 //{
                 //    Gizmos.color = Color.green;
                 //}

@@ -6,24 +6,24 @@ public class AStar : MonoBehaviour
 {
     GridNode grid;
 
-    public Transform player, target;
+    //public Transform player, target;
     private void Awake()
     {
         grid = GetComponent<GridNode>();
     }
 
-    private void Update()
-    {
-        if(player != null && target != null)
-        {
-            FindPath(player.position, target.position);
-        }
-    }
-    public void FindPath(Vector3 start, Vector3 end)
+    //private void Update()
+    //{
+    //    if(player != null && target != null)
+    //    {
+    //        FindPath(player.position, target.position);
+    //    }
+    //}
+    public List<Node> FindPath(Vector3 start, Vector3 end)
     {
         Node startNode = grid.NodeFromPoint(start);
         Node endNode = grid.NodeFromPoint(end);
-        if (!endNode.walkable) return;
+        if (!endNode.walkable) return null;
         List<Node> open = new List<Node>();
         HashSet<Node> close = new HashSet<Node>();
         open.Add(startNode);
@@ -44,8 +44,8 @@ public class AStar : MonoBehaviour
 
             if(currentNode == endNode)
             {
-                RePath(startNode, endNode);
-                return;
+               return RePath(startNode, endNode);
+                
             }
 
             foreach(Node n in grid.GetNeighbours(currentNode))
@@ -68,6 +68,7 @@ public class AStar : MonoBehaviour
                 }
             }
         }
+        return null;
     }
 
     int GetDistance(Node nodeA, Node nodeB)
@@ -76,7 +77,7 @@ public class AStar : MonoBehaviour
         return h;
     }
 
-    void RePath(Node start, Node end)
+    List<Node> RePath(Node start, Node end)
     {
         List<Node> path = new List<Node>();
         Node currentNode = end;
@@ -87,5 +88,6 @@ public class AStar : MonoBehaviour
         }
         path.Reverse();
         grid.path = path;
+        return path;
     }
 }
