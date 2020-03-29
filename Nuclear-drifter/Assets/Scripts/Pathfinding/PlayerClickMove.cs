@@ -11,12 +11,14 @@ public class PlayerClickMove : MonoBehaviour
     public int currentIndexPoint;
     public float speed = 2.0f;
     private bool stop = false;
-
+    public Animator anim;
+    public Vector3 direct;
     // Start is called before the first frame update
     void Start()
     {
         aStar = FindObjectOfType<AStar>();
         path = null;
+        stop = true;
     }
 
     // Update is called once per frame
@@ -36,6 +38,9 @@ public class PlayerClickMove : MonoBehaviour
                 target.position = mousePos;
                 path = aStar.FindPath(transform.position, target.position);
                 currentIndexPoint = 0;
+                direct = path[currentIndexPoint].pos - transform.position;
+                anim.SetFloat("moveX", direct.x);
+                 anim.SetFloat("moveY", direct.y);
                 stop = false;
             }
         }
@@ -45,15 +50,31 @@ public class PlayerClickMove : MonoBehaviour
         }
         if (path != null && !stop)
         {
-            float distanceToPoint = Vector3.Distance(transform.position, path[currentIndexPoint].pos);
-            if(distanceToPoint < 0.1f)
+            if (path.Count > 0)
             {
-                if(currentIndexPoint < path.Count -1)currentIndexPoint++;
-            }
-            else
-            {
-                transform.position = Vector3.MoveTowards(transform.position, path[currentIndexPoint].pos, Time.deltaTime * speed);
+                float distanceToPoint = Vector3.Distance(transform.position, path[currentIndexPoint].pos);
+                if (distanceToPoint < 0.01f)
+                {
+                    if (currentIndexPoint < path.Count - 1)
+                    {
+                        currentIndexPoint++;
+                        direct = path[currentIndexPoint].pos - transform.position;
+                        anim.SetFloat("moveX", direct.x);
+                         anim.SetFloat("moveY", direct.y);
+                    }
+                    else
+                    {
+                        stop = true;
+                    }
+                }
+                else
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, path[currentIndexPoint].pos, Time.deltaTime * speed);
+                    
+                }
             }
         }
+        anim.SetBool("walk", !stop);
+
     }
 }

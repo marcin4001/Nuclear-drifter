@@ -73,7 +73,7 @@ public class AStar : MonoBehaviour
 
     int GetDistance(Node nodeA, Node nodeB)
     {
-        int h = Mathf.Max(Mathf.Abs(nodeA.x - nodeB.x), Mathf.Abs(nodeA.y - nodeB.y));
+        int h = Mathf.Abs(nodeA.x - nodeB.x) + Mathf.Abs(nodeA.y - nodeB.y);//Mathf.Max(Mathf.Abs(nodeA.x - nodeB.x), Mathf.Abs(nodeA.y - nodeB.y));
         return h;
     }
 
@@ -86,6 +86,7 @@ public class AStar : MonoBehaviour
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
+        path.Add(currentNode);
         path.Reverse();
         grid.path = path;
         return path;
