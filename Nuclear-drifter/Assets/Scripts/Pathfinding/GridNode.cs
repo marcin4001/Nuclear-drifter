@@ -16,6 +16,7 @@ public class GridNode : MonoBehaviour
     public Transform player;
     private GameObject testGO;
     public List<Node> path;
+    public Node playerN;
     private void Start()
     {
         nodeDiameter = nodeRadius * 2;
@@ -42,8 +43,8 @@ public class GridNode : MonoBehaviour
         percentX = Mathf.Clamp01(percentX);
         percentY = Mathf.Clamp01(percentY);
 
-        int x = Mathf.RoundToInt((gridSizeX - 1) * percentX);
-        int y = Mathf.RoundToInt((gridSizeY - 1) * percentY);
+        int x = Mathf.CeilToInt((gridSizeX - 1) * percentX);
+        int y = Mathf.CeilToInt((gridSizeY - 1) * percentY);
         return nodes[x, y];
     }
 
@@ -85,7 +86,7 @@ public class GridNode : MonoBehaviour
         
         if (nodes != null)
         {
-            Node playerN = NodeFromPoint(player.position);
+            playerN = NodeFromPoint(player.position);
             //List<Node> nPlayer = GetNeighbours(playerN);
             foreach (Node n in nodes)
             {
