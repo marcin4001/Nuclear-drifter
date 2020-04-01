@@ -23,6 +23,7 @@ public class AStar : MonoBehaviour
     {
         Node startNode = grid.NodeFromPoint(start);
         Node endNode = grid.NodeFromPoint(end);
+        if (startNode == endNode) return null;
         if (!endNode.walkable) return null;
         List<Node> open = new List<Node>();
         HashSet<Node> close = new HashSet<Node>();
@@ -86,7 +87,7 @@ public class AStar : MonoBehaviour
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
-        path.Add(currentNode);
+        //path.Add(currentNode);
         path.Reverse();
         grid.path = path;
         return path;

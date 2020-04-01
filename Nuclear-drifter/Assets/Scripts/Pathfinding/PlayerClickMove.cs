@@ -37,11 +37,14 @@ public class PlayerClickMove : MonoBehaviour
             {
                 target.position = mousePos;
                 path = aStar.FindPath(transform.position, target.position);
-                currentIndexPoint = 0;
-                direct = path[currentIndexPoint].pos - transform.position;
-                anim.SetFloat("moveX", direct.x);
-                 anim.SetFloat("moveY", direct.y);
-                stop = false;
+                if (path != null)
+                {
+                    currentIndexPoint = 0;
+                    direct = path[currentIndexPoint].pos - transform.position;
+                    anim.SetFloat("moveX", direct.x);
+                    anim.SetFloat("moveY", direct.y);
+                    stop = false;
+                }
             }
         }
         if(Input.GetMouseButton(1))
