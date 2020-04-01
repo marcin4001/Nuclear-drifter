@@ -13,6 +13,8 @@ public class PlayerClickMove : MonoBehaviour
     private bool stop = false;
     public Animator anim;
     public Vector3 direct;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,8 @@ public class PlayerClickMove : MonoBehaviour
             }
             else
             {
+                RaycastHit2D[] nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
+                foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") n.collider.SendMessage("ShowText",SendMessageOptions.DontRequireReceiver);
                 target.position = mousePos;
                 path = aStar.FindPath(transform.position, target.position);
                 if (path != null)
@@ -44,6 +48,10 @@ public class PlayerClickMove : MonoBehaviour
                     anim.SetFloat("moveX", direct.x);
                     anim.SetFloat("moveY", direct.y);
                     stop = false;
+                }
+                else
+                {
+                    stop = true;
                 }
             }
         }

@@ -76,6 +76,11 @@ public class GridNode : MonoBehaviour
             {
                 Vector3 pos = bottonLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.up * (y * nodeDiameter + nodeRadius);
                 bool walkable = (Physics2D.OverlapCircle((Vector2)pos, nodeRadius - 0.3f) != null);
+                if (walkable)
+                {
+                    Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)pos, nodeRadius - 0.3f);
+                    foreach(Collider2D c in col) if (c.tag == "Obstacle") walkable = false;
+                }
                 nodes[x, y] = new Node(walkable, pos, x, y);
             }
         }
