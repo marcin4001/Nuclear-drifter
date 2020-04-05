@@ -39,7 +39,7 @@ public class PlayerClickMove : MonoBehaviour
             {
                 RaycastHit2D[] nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") n.collider.SendMessage("ShowText",SendMessageOptions.DontRequireReceiver);
-                target.position = mousePos;
+                target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
                 path = aStar.FindPath(transform.position, target.position);
                 if (path != null)
                 {
@@ -64,7 +64,7 @@ public class PlayerClickMove : MonoBehaviour
             if (path.Count > 0)
             {
                 float distanceToPoint = Vector3.Distance(transform.position, path[currentIndexPoint].pos);
-                if (distanceToPoint < 0.01f)
+                if (distanceToPoint < 0.001f)
                 {
                     if (currentIndexPoint < path.Count - 1)
                     {
