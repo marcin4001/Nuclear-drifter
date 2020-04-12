@@ -26,7 +26,7 @@ public class PlayerClickMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButtonDown(0))
         {
             mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D node = Physics2D.Raycast(mousePos, Vector2.zero);
