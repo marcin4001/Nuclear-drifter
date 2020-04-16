@@ -87,7 +87,7 @@ public class AStar : MonoBehaviour
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
-        path.Add(currentNode);
+        //path.Add(currentNode);
         path.Reverse();
         grid.path = path;
         return path;
