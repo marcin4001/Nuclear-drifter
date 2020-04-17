@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Mouse_mode
+{
+    move,
+    look
+}
+
 public class PlayerClickMove : MonoBehaviour
 {
     public Vector2 mousePos;
@@ -13,7 +19,15 @@ public class PlayerClickMove : MonoBehaviour
     private bool stop = false;
     public Animator anim;
     public Vector3 direct;
-    
+    public Mouse_mode mode = 0;
+    public int maxMode = 0;
+    public RaycastHit2D[] nodes;
+    private GridNode grid;
+    public Texture2D arrow;
+    public Texture2D goodWay;
+    public Texture2D noWay;
+    public Texture2D look;
+    public Texture2D hand;
 
     // Start is called before the first frame update
     void Start()
@@ -21,43 +35,101 @@ public class PlayerClickMove : MonoBehaviour
         aStar = FindObjectOfType<AStar>();
         path = null;
         stop = true;
+        maxMode = System.Enum.GetNames(typeof(Mouse_mode)).Length;
+        grid = FindObjectOfType<GridNode>();
+        Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D node = Physics2D.Raycast(mousePos, Vector2.zero);
 
-            if(node.collider == null)
+    private void Move(RaycastHit2D hit)
+    {
+        if (hit.collider == null)
+        {
+            Debug.Log("There is water! I can not swim!");
+        }
+        else
+        {
+            path = aStar.FindPath(transform.position, target.position);
+            if (path != null)
             {
-                Debug.Log("Ocean");
+                currentIndexPoint = 0;
+                direct = path[currentIndexPoint].pos - transform.position;
+                anim.SetFloat("moveX", direct.x);
+                anim.SetFloat("moveY", direct.y);
+                stop = false;
             }
             else
             {
-                RaycastHit2D[] nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
-                foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") n.collider.SendMessage("ShowText",SendMessageOptions.DontRequireReceiver);
-                target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
-                path = aStar.FindPath(transform.position, target.position);
-                if (path != null)
-                {
-                    currentIndexPoint = 0;
-                    direct = path[currentIndexPoint].pos - transform.position;
-                    anim.SetFloat("moveX", direct.x);
-                    anim.SetFloat("moveY", direct.y);
-                    stop = false;
-                }
-                else
-                {
-                    stop = true;
-                }
+                stop = true;
             }
         }
-        if(Input.GetMouseButton(1))
+    }
+
+    private void Look(RaycastHit2D hit)
+    {
+        if (hit.collider == null)
         {
-            stop = true;
+            Debug.Log("This is the ocean");
+        }
+        else
+        {
+            foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
+        }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (mode == Mouse_mode.move)
+        {
+            target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
+            Node checkNode = grid.NodeFromPoint(target.position);
+
+            if(checkNode.walkable) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
+            else Cursor.SetCursor(noWay, Vector2.one, CursorMode.ForceSoftware);
+        }
+        if(mode == Mouse_mode.look)
+        {
+            bool isObstacle = false;
+            nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
+            if(nodes.Length == 0) isObstacle = true;
+            foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") isObstacle = true;
+            if(isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
+            else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+        }
+
+
+
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            
+            RaycastHit2D node = Physics2D.Raycast(mousePos, Vector2.zero);
+
+            switch(mode)
+            {
+                    case Mouse_mode.move:
+                     Move(node);
+                     break;
+                    case Mouse_mode.look:
+                    Look(node);
+                    break;
+            }
+        }
+        if(Input.GetMouseButtonDown(1))
+        {
+            if(!stop)stop = true;
+            else
+            {
+                    if((int)mode < maxMode-1)
+                    {
+                        mode++;
+                    }
+                    else
+                    {
+                        mode = 0;
+                    }
+            }
         }
         if (path != null && !stop)
         {
