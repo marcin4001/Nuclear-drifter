@@ -43,9 +43,4 @@ public class TimeGame : MonoBehaviour
         }
     }
 
-    private void OnGUI()
-    {
-        string time = "Day: " + day + " Time: " + string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", minutes);
-        GUI.Box(new Rect(10, 10, 150, 25),time);
-    }
 }

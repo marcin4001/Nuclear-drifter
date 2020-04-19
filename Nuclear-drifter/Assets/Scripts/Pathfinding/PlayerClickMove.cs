@@ -28,7 +28,9 @@ public class PlayerClickMove : MonoBehaviour
     public Texture2D noWay;
     public Texture2D look;
     public Texture2D hand;
-
+    public bool active = true;
+    private GUIScript gUI;
+    public Node checkNode;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class PlayerClickMove : MonoBehaviour
         stop = true;
         maxMode = System.Enum.GetNames(typeof(Mouse_mode)).Length;
         grid = FindObjectOfType<GridNode>();
+        gUI = FindObjectOfType<GUIScript>();
         Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
     }
 
@@ -45,11 +48,12 @@ public class PlayerClickMove : MonoBehaviour
     {
         if (hit.collider == null)
         {
-            Debug.Log("There is water! I can not swim!");
+            gUI.AddText("I can not swim!");
         }
         else
         {
             path = aStar.FindPath(transform.position, target.position);
+            if(!checkNode.walkable) gUI.AddText("I can't go there!");
             if (path != null)
             {
                 currentIndexPoint = 0;
@@ -69,7 +73,7 @@ public class PlayerClickMove : MonoBehaviour
     {
         if (hit.collider == null)
         {
-            Debug.Log("This is the ocean");
+            gUI.AddText("This is the ocean");
         }
         else
         {
@@ -79,49 +83,51 @@ public class PlayerClickMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (mode == Mouse_mode.move)
+        if (active)
         {
-            target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
-            Node checkNode = grid.NodeFromPoint(target.position);
-
-            if(checkNode.walkable) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
-            else Cursor.SetCursor(noWay, Vector2.one, CursorMode.ForceSoftware);
-        }
-        if(mode == Mouse_mode.look)
-        {
-            bool isObstacle = false;
-            nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
-            if(nodes.Length == 0) isObstacle = true;
-            foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") isObstacle = true;
-            if(isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
-            else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
-        }
-
-
-
-
-        if(Input.GetMouseButtonDown(0))
-        {
-            
-            RaycastHit2D node = Physics2D.Raycast(mousePos, Vector2.zero);
-
-            switch(mode)
+            mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (mode == Mouse_mode.move)
             {
-                    case Mouse_mode.move:
-                     Move(node);
-                     break;
-                    case Mouse_mode.look:
-                    Look(node);
-                    break;
+                target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
+                checkNode = grid.NodeFromPoint(target.position);
+
+                if (checkNode.walkable) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
+                else Cursor.SetCursor(noWay, Vector2.one, CursorMode.ForceSoftware);
             }
-        }
-        if(Input.GetMouseButtonDown(1))
-        {
-            if(!stop)stop = true;
-            else
+            if (mode == Mouse_mode.look)
             {
-                    if((int)mode < maxMode-1)
+                bool isObstacle = false;
+                nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
+                if (nodes.Length == 0) isObstacle = true;
+                foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") isObstacle = true;
+                if (isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
+                else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+            }
+
+
+
+
+            if (Input.GetMouseButtonDown(0))
+            {
+
+                RaycastHit2D node = Physics2D.Raycast(mousePos, Vector2.zero);
+
+                switch (mode)
+                {
+                    case Mouse_mode.move:
+                        Move(node);
+                        break;
+                    case Mouse_mode.look:
+                        Look(node);
+                        break;
+                }
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                if (!stop) stop = true;
+                else
+                {
+                    if ((int)mode < maxMode - 1)
                     {
                         mode++;
                     }
@@ -129,8 +135,14 @@ public class PlayerClickMove : MonoBehaviour
                     {
                         mode = 0;
                     }
+                }
             }
         }
+        else
+        {
+            Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+        }
+
         if (path != null && !stop)
         {
             if (path.Count > 0)
