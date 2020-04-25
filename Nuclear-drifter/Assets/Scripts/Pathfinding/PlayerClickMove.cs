@@ -72,6 +72,11 @@ public class PlayerClickMove : MonoBehaviour
         }
     }
 
+    public void SetStop(bool value)
+    {
+        stop = value;
+    }
+
     private void Look(RaycastHit2D hit)
     {
         if (hit.collider == null)
