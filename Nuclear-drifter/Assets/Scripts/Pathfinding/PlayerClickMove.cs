@@ -31,6 +31,7 @@ public class PlayerClickMove : MonoBehaviour
     public bool active = true;
     private GUIScript gUI;
     public Node checkNode;
+    private TypeScene typeSc;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,7 @@ public class PlayerClickMove : MonoBehaviour
         grid = FindObjectOfType<GridNode>();
         gUI = FindObjectOfType<GUIScript>();
         Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+        typeSc = FindObjectOfType<TypeScene>();
     }
 
 
@@ -48,7 +50,8 @@ public class PlayerClickMove : MonoBehaviour
     {
         if (hit.collider == null)
         {
-            gUI.AddText("I can not swim!");
+            if (!typeSc.isInterior) gUI.AddText("I can not swim!");
+            else gUI.AddText("I can't go there!");
         }
         else
         {
@@ -73,11 +76,29 @@ public class PlayerClickMove : MonoBehaviour
     {
         if (hit.collider == null)
         {
-            gUI.AddText("This is the ocean");
+            if(!typeSc.isInterior)gUI.AddText("This is the ocean");
+            else gUI.AddText("Nothing");
         }
         else
         {
-            foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
+            GameObject wall = null;
+            bool isWall = true;
+            foreach (RaycastHit2D n in nodes)
+            {
+                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed")
+                {
+                    n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
+                    wall = null;
+                    isWall = false;
+                }
+                if (n.collider.tag == "Wall")
+                {
+                    Debug.Log("Wall");
+                    wall = n.collider.gameObject;
+                    isWall = true;
+                }
+            }
+            if(wall != null && isWall) wall.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
         }
     }
     // Update is called once per frame
@@ -99,7 +120,7 @@ public class PlayerClickMove : MonoBehaviour
                 bool isObstacle = false;
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 if (nodes.Length == 0) isObstacle = true;
-                foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle") isObstacle = true;
+                foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle" || n.collider.tag == "Wall" || n.collider.tag == "Bed") isObstacle = true;
                 if (isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
             }

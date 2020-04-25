@@ -12,7 +12,7 @@ public class DayCycle : MonoBehaviour
     void Start()
     {
         time = FindObjectOfType<TimeGame>();
-        lightPlayer.enabled = false;
+        if (lightPlayer != null) lightPlayer.enabled = false;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class DayCycle : MonoBehaviour
             float x = Mathf.Lerp(0f, 90f, alfa);
             Debug.Log(alfa);
             sun.transform.rotation = Quaternion.Euler(new Vector3(x, 0f, 0f));
-            if (time.minutes > 40) lightPlayer.enabled = true;
+            if (time.minutes > 40 && lightPlayer != null) lightPlayer.enabled = true;
         }
         else if (time.hour == 4)
         {
@@ -33,7 +33,7 @@ public class DayCycle : MonoBehaviour
             float alfa = counter / 30f; //(float) time.minutes / 59f;
             float x = Mathf.Lerp(90f, 0f, alfa);
             sun.rotation = Quaternion.Euler(new Vector3(x, 0f, 0f));
-            if (time.minutes > 25) lightPlayer.enabled = false;
+            if (time.minutes > 25 && lightPlayer != null) lightPlayer.enabled = false;
         }
         else counter = 0.0f;
     }
