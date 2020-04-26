@@ -6,6 +6,8 @@ public class Carpet : MonoBehaviour
 {
     private MessageBox box;
     public Animator door;
+    public string sceneName;
+    public Vector2 startPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +18,10 @@ public class Carpet : MonoBehaviour
     {
         if (collision.tag == "Hero")
         {
-            box.ShowBox();
             box.door = door;
+            box.sceneName = sceneName;
+            box.playerPos = startPos;
+            box.ShowBox();
         }
     }
 }

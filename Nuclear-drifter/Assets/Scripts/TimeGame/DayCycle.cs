@@ -12,9 +12,27 @@ public class DayCycle : MonoBehaviour
     void Start()
     {
         time = FindObjectOfType<TimeGame>();
-        if (lightPlayer != null) lightPlayer.enabled = false;
+        
     }
 
+    public void SetTime(int _day, int _hour, int minutes)
+    {
+        time = FindObjectOfType<TimeGame>();
+        time.day = _day;
+        if (minutes > 30) time.hour = _hour + 1;
+        else time.hour = _hour;
+        if (time.hour > 23) _hour = 0;
+        if(time.hour > 19 || time.hour < 5)
+        {
+            sun.transform.rotation = Quaternion.Euler(new Vector3(90f, 0f, 0f));
+            if (lightPlayer != null) lightPlayer.enabled = true;
+        }
+        else
+        {
+            sun.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            if (lightPlayer != null) lightPlayer.enabled = false;
+        }
+    }
     // Update is called once per frame
     void Update()
     {

@@ -22,6 +22,8 @@ public class GUIScript : MonoBehaviour
 
     public Queue<string> consoleText;
 
+    public bool blockGUI = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,23 +56,25 @@ public class GUIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        radImg.enabled = playerHealth.isRad;
-        bioImg.enabled = playerHealth.isPoison;
+            radImg.enabled = playerHealth.isRad;
+            bioImg.enabled = playerHealth.isPoison;
 
-        float percentHealth = (float)playerHealth.currentHealth / (float)playerHealth.maxHealth;
-        percentHealth = Mathf.Clamp01(percentHealth);
-        hpBar.localScale = new Vector3(percentHealth, 1.0f, 1.0f);
+            float percentHealth = (float)playerHealth.currentHealth / (float)playerHealth.maxHealth;
+            percentHealth = Mathf.Clamp01(percentHealth);
+            hpBar.localScale = new Vector3(percentHealth, 1.0f, 1.0f);
 
-        string timeStr = "Day " + time.day + " Time " + string.Format("{0:00}", time.hour) + ":" + string.Format("{0:00}", time.minutes);
-        timeLabel.text = timeStr;
-
-        if(EventSystem.current.IsPointerOverGameObject())
+            string timeStr = "Day " + time.day + " Time " + string.Format("{0:00}", time.hour) + ":" + string.Format("{0:00}", time.minutes);
+            timeLabel.text = timeStr;
+        if (!blockGUI)
         {
-            move.active = false;
-        }
-        else
-        {
-            move.active = true;
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                move.active = false;
+            }
+            else
+            {
+                move.active = true;
+            }
         }
     }
 }
