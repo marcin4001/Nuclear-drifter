@@ -31,8 +31,14 @@ public class CarpetInterior : MonoBehaviour
             PropertyPlayer.property.minutes = time.minutes;
 
             PropertyPlayer.property.startPos = startPos;
-
-            SceneManager.LoadScene(sceneName);
+            LoadingScreen loading = FindObjectOfType<LoadingScreen>();
+            if (loading != null) loading.ShowLoading();
+            Invoke("Load", 0.1f);
         }
+    }
+
+    private void Load()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

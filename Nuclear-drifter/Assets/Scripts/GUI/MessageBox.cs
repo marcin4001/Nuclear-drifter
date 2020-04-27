@@ -14,6 +14,7 @@ public class MessageBox : MonoBehaviour
     private TimeGame time;
     public Vector2 playerPos;
     private GUIScript gUI;
+    //public LoadingScreen loadingSc;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +55,7 @@ public class MessageBox : MonoBehaviour
     private void Load()
     {
         SetProperty();
+        //if (loadingSc != null) loadingSc.ShowLoading();
         SceneManager.LoadScene(sceneName);
     }
 
