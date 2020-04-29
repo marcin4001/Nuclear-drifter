@@ -38,7 +38,7 @@ public class MessageBox : MonoBehaviour
     public void ButtonYes()
     {
         mbCanvas.enabled = false;
-        door.SetTrigger("Open");
+        if(door != null) door.SetTrigger("Open");
         Invoke("Load", 1.5f);
         Time.timeScale = 1.0f;
     }

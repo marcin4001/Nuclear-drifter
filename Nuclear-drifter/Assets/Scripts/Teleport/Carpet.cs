@@ -18,7 +18,7 @@ public class Carpet : MonoBehaviour
     {
         if (collision.tag == "Hero")
         {
-            box.door = door;
+            if (door != null) box.door = door;
             box.sceneName = sceneName;
             box.playerPos = startPos;
             box.ShowBox();
