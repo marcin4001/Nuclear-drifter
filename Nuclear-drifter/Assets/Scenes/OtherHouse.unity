@@ -3758,7 +3758,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1471844711
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -5584,7 +5584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a63d9f9226a7247a943bba5a9304a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textItem: These are barrels
+  textItem: This is a barrel
 --- !u!19719996 &2145477860
 TilemapCollider2D:
   m_ObjectHideFlags: 0
