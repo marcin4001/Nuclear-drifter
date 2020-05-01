@@ -95,12 +95,13 @@ public class PlayerClickMove : MonoBehaviour
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     wall = null;
                     isWall = false;
+                    Debug.Log("Obstacle");
                 }
                 if (n.collider.tag == "Wall")
                 {
                     Debug.Log("Wall");
                     wall = n.collider.gameObject;
-                    isWall = true;
+                    //isWall = true;
                 }
             }
             if(wall != null && isWall) wall.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
