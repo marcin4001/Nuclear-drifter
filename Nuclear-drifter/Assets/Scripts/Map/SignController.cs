@@ -19,6 +19,11 @@ public class Area
     {
         text.enabled = false;
     }
+
+    public void ColliderOff()
+    {
+        col.GetComponent<BoxCollider2D>().enabled = false;
+    }
 }
 
 
@@ -26,12 +31,21 @@ public class SignController : MonoBehaviour
 {
     public Area[] areas;
     private GUIScript gUI;
+    private TypeScene scene;
     // Start is called before the first frame update
     void Start()
     {
+        scene = FindObjectOfType<TypeScene>();
         gUI = FindObjectOfType<GUIScript>();
         if(areas.Length > 0)
         {
+            if(scene.isInterior)
+            {
+                foreach(Area a in areas)
+                {
+                    a.ColliderOff();
+                }
+            }
             for(int i = 0; i < areas.Length; i++)
             {
                 if (PropertyPlayer.property.foundArea[i])

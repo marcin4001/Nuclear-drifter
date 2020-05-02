@@ -14,6 +14,7 @@ public class MessageBox : MonoBehaviour
     private TimeGame time;
     public Vector2 playerPos;
     private GUIScript gUI;
+
     //public LoadingScreen loadingSc;
     // Start is called before the first frame update
     void Start()
@@ -71,5 +72,6 @@ public class MessageBox : MonoBehaviour
         PropertyPlayer.property.minutes = time.minutes;
 
         PropertyPlayer.property.startPos = playerPos;
+        PropertyPlayer.property.posOutside = move.transform.position;
     }
 }

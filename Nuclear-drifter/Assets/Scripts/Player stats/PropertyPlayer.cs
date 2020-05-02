@@ -16,6 +16,7 @@ public class PropertyPlayer : MonoBehaviour
     public int minutes = 0;
 
     public Vector2 startPos;
+    public Vector2 posOutside;
     public bool[] foundArea;
 
     // Start is called before the first frame update
