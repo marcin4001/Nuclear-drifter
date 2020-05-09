@@ -68,7 +68,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 192.75, y: 50.25}
+  m_SizeDelta: {x: 220, y: 55}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4796775783529893723
 CanvasRenderer:
@@ -770,6 +770,7 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   time: {fileID: 0}
   move: {fileID: 0}
+  blockGUI: 0
 --- !u!1 &4796775784898911163
 GameObject:
   m_ObjectHideFlags: 0

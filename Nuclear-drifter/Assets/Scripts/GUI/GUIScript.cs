@@ -62,8 +62,19 @@ public class GUIScript : MonoBehaviour
             float percentHealth = (float)playerHealth.currentHealth / (float)playerHealth.maxHealth;
             percentHealth = Mathf.Clamp01(percentHealth);
             hpBar.localScale = new Vector3(percentHealth, 1.0f, 1.0f);
-
-            string timeStr = "Day " + time.day + " Time " + string.Format("{0:00}", time.hour) + ":" + string.Format("{0:00}", time.minutes);
+            int hour = 0;
+            string timeOfDay = "";
+            if(time.hour > 12)
+            {
+                hour = time.hour - 12;
+                timeOfDay = " PM";
+            }
+            else
+            {
+                hour = time.hour;
+                timeOfDay = " AM";
+            }
+            string timeStr = "Day " + time.day + " Time " + string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", time.minutes) + timeOfDay;
             timeLabel.text = timeStr;
         if (!blockGUI)
         {
