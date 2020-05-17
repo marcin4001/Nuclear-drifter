@@ -14,6 +14,7 @@ public class MessageBox : MonoBehaviour
     private TimeGame time;
     public Vector2 playerPos;
     private GUIScript gUI;
+    private PauseMenu menu;
 
     //public LoadingScreen loadingSc;
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class MessageBox : MonoBehaviour
         playerHP = move.GetComponent<Health>();
         time = FindObjectOfType<TimeGame>();
         gUI = FindObjectOfType<GUIScript>();
+        menu = FindObjectOfType<PauseMenu>();
     }
 
     public void ButtonNo()
@@ -34,6 +36,7 @@ public class MessageBox : MonoBehaviour
         move.SetStop(false);
         gUI.blockGUI = false;
         Time.timeScale = 1.0f;
+        if (menu != null) menu.activeEsc = true;
     }
 
     public void ButtonYes()
@@ -51,6 +54,7 @@ public class MessageBox : MonoBehaviour
         move.SetStop(true);
         gUI.blockGUI = true;
         Time.timeScale = 0.0f;
+        if (menu != null) menu.activeEsc = false;
     }
 
     private void Load()

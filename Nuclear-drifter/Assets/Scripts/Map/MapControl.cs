@@ -9,6 +9,7 @@ public class MapControl : MonoBehaviour
     private bool actveMap = false;
     private GUIScript gUI;
     private PlayerClickMove player;
+    public bool keyActive = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +22,18 @@ public class MapControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.M))
+        if(Input.GetKeyDown(KeyCode.M) && keyActive)
         {
-            actveMap = !actveMap;
-            mapCam.enabled = actveMap;
-            mapCanvas.enabled = actveMap;
-            gUI.blockGUI = actveMap;
-            player.active = !actveMap;
+            OpenMap();
         }
+    }
+
+    public void OpenMap()
+    {
+        actveMap = !actveMap;
+        mapCam.enabled = actveMap;
+        mapCanvas.enabled = actveMap;
+        gUI.blockGUI = actveMap;
+        player.active = !actveMap;
     }
 }

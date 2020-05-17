@@ -19,6 +19,7 @@ public class MenuUI : MonoBehaviour
 
     public void NewGame()
     {
+        ResetProperty();
         SceneManager.LoadScene(1);
     }
 
@@ -26,5 +27,20 @@ public class MenuUI : MonoBehaviour
     {
         Application.Quit(0);
         Debug.Log("Exit");
+    }
+
+    private void ResetProperty()
+    {
+        PropertyPlayer.property.currentHealth = 100;
+        PropertyPlayer.property.maxHealth = 100;
+        PropertyPlayer.property.isPoison = false;
+        PropertyPlayer.property.isRad = false;
+
+        PropertyPlayer.property.day = 1;
+        PropertyPlayer.property.hour = 5;
+        PropertyPlayer.property.minutes = 0;
+
+        PropertyPlayer.property.startPos = new Vector2(235f, 24f);
+        PropertyPlayer.property.posOutside = Vector2.zero;
     }
 }
