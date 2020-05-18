@@ -15,6 +15,7 @@ public class MessageBox : MonoBehaviour
     public Vector2 playerPos;
     private GUIScript gUI;
     private PauseMenu menu;
+    private SoundsTrigger st;
 
     //public LoadingScreen loadingSc;
     // Start is called before the first frame update
@@ -27,6 +28,8 @@ public class MessageBox : MonoBehaviour
         time = FindObjectOfType<TimeGame>();
         gUI = FindObjectOfType<GUIScript>();
         menu = FindObjectOfType<PauseMenu>();
+        st = FindObjectOfType<SoundsTrigger>();
+        
     }
 
     public void ButtonNo()
@@ -45,6 +48,7 @@ public class MessageBox : MonoBehaviour
         if(door != null) door.SetTrigger("Open");
         Invoke("Load", 1.5f);
         Time.timeScale = 1.0f;
+        st.OpenDoor();
     }
 
     public void ShowBox()
