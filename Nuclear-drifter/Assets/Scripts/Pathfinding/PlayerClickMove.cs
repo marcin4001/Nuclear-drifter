@@ -90,7 +90,7 @@ public class PlayerClickMove : MonoBehaviour
             bool isWall = true;
             foreach (RaycastHit2D n in nodes)
             {
-                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info")
+                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player")
                 {
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     wall = null;
@@ -126,7 +126,9 @@ public class PlayerClickMove : MonoBehaviour
                 bool isObstacle = false;
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 if (nodes.Length == 0) isObstacle = true;
-                foreach (RaycastHit2D n in nodes) if (n.collider.tag == "Obstacle" || n.collider.tag == "Wall" || n.collider.tag == "Bed" || n.collider.tag == "Info") isObstacle = true;
+                foreach (RaycastHit2D n in nodes)
+                    if (n.collider.tag == "Obstacle" || n.collider.tag == "Wall" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player")
+                        isObstacle = true;
                 if (isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
             }
