@@ -7,6 +7,11 @@ public class DocItem : Item
 {
     public string idDoc = "";
 
+    private void Awake()
+    {
+        type = ItemType.Document;
+    }
+
     public override void Use()
     {
         

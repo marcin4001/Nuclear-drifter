@@ -11,6 +11,11 @@ public class FoodItem : Item
     public bool isPoison = false;
     public bool addRad = false;
 
+    private void Awake()
+    {
+        type = ItemType.Food;
+    }
+
     public override void Use()
     {
         

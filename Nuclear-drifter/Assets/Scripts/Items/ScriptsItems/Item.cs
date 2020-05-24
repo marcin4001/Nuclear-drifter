@@ -13,6 +13,7 @@ public enum ItemType
 public abstract class Item : ScriptableObject
 {
     public string nameItem;
+    
     public Sprite image;
     public string description;
     public int value;

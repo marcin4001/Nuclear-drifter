@@ -9,6 +9,11 @@ public class WeaponItem : Item
     public int damage = 0;
     public bool isMeleeWeapon = false;
 
+    private void Awake()
+    {
+        type = ItemType.Weapon;
+    }
+
     public override void Use()
     {
         
