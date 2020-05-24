@@ -20,6 +20,11 @@ public abstract class Item : ScriptableObject
     protected ItemType type;
     protected GUIScript gUI;
 
+    public ItemType GetItemType()
+    {
+        return type;
+    }
+
     public void Look()
     {
         if(gUI == null)gUI = FindObjectOfType<GUIScript>();
