@@ -17,7 +17,7 @@ public class TestItem : MonoBehaviour
             img.overrideSprite = item.image;
             string txt = item.nameItem + "\n";
             txt += item.description + "\n";
-            txt += item.value + "\n";
+            txt += item.value + "$\n";
             txt += "Type: " + item.GetItemType();
             textInfo.text = txt;
         }
@@ -32,7 +32,7 @@ public class TestItem : MonoBehaviour
             
             string txt = item.nameItem + "\n";
             txt += item.description + "\n";
-            txt += item.value + "\n";
+            txt += item.value + "$\n";
             txt += "Type: " + item.GetItemType();
             textInfo.text = txt;
         }

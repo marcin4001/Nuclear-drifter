@@ -28,7 +28,12 @@ public abstract class Item : ScriptableObject
     public void Look()
     {
         if(gUI == null)gUI = FindObjectOfType<GUIScript>();
-        if (gUI != null) gUI.AddText("Item: " + nameItem);
+        if (gUI != null)
+        {
+            gUI.AddText("Item: " + nameItem);
+            gUI.AddText(description);
+            gUI.AddText("Value: " + value + "$");
+        }
     }
 
     public abstract void Use();
