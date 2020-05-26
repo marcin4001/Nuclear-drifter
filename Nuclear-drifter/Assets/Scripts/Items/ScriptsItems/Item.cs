@@ -17,6 +17,7 @@ public abstract class Item : ScriptableObject
     public Sprite image;
     public string description;
     public int value;
+    public int idItem;
     protected ItemType type;
     protected GUIScript gUI;
 
@@ -30,6 +31,7 @@ public abstract class Item : ScriptableObject
         if(gUI == null)gUI = FindObjectOfType<GUIScript>();
         if (gUI != null)
         {
+            gUI.ClearText();
             gUI.AddText("Item: " + nameItem);
             gUI.AddText(description);
             gUI.AddText("Value: " + value + "$");

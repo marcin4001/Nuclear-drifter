@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
     {
         int temp = currentHealth + points;
         if (temp > maxHealth) currentHealth = maxHealth;
+        else if (temp < 0) currentHealth = 0;
         else currentHealth = temp;
     }
 

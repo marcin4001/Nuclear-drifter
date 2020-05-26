@@ -53,6 +53,15 @@ public class GUIScript : MonoBehaviour
             consoleLabel.text = textConsole;
         }
     }
+
+    public void ClearText()
+    {
+        if(consoleText.Count > 0)
+        {
+            consoleText.Clear();
+            consoleLabel.text = "";
+        }
+    }
     // Update is called once per frame
     void Update()
     {
