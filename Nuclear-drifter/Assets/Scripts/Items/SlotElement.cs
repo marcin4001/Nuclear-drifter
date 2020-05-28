@@ -9,6 +9,7 @@ public class SlotElement : MonoBehaviour
     public Text labelSlot;
     public Image imgSlot;
     private GUIScript gUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +45,7 @@ public class SlotElement : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I) && itemSlot != null)
+        if (Input.GetKeyDown(KeyCode.I) && itemSlot != null)
         {
             if (itemSlot.itemElement != null && itemSlot.amountItem > 0)
             {
@@ -55,6 +56,11 @@ public class SlotElement : MonoBehaviour
             }
         }
     }
+    public void SetSlotStart(Slot newSlot)
+    {
+        itemSlot = newSlot;
+    }
+
 
     public void SetSlot(Slot newSlot)
     {
