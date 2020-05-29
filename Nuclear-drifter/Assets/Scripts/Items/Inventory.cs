@@ -40,8 +40,9 @@ public class Inventory : MonoBehaviour
         return slots.Count <= 0;
     }
 
-    public void Add(Slot _slot)
+    public bool Add(Slot _slot)
     {
+        bool result = true;
         if(!isEmpty())
         {
             Slot exist = slots.Find(s => s.itemElement == _slot.itemElement);
@@ -63,7 +64,11 @@ public class Inventory : MonoBehaviour
                     slots.Add(new Slot(_slot.itemElement, _slot.amountItem, _slot.ammo));
                     Sort();
                 }
-                else gUI.AddText("Inventory is Full");
+                else
+                {
+                    gUI.AddText("Inventory is Full");
+                    result = false;
+                }
             }
             
             SetItems();
@@ -73,6 +78,7 @@ public class Inventory : MonoBehaviour
             slots.Add(new Slot(_slot.itemElement, _slot.amountItem, _slot.ammo));
             SetItems();
         }
+        return result;
     }
     private void Sort()
     {

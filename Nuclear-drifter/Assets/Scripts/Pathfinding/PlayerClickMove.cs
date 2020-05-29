@@ -5,6 +5,7 @@ using UnityEngine;
 public enum Mouse_mode
 {
     move,
+    use,
     look
 }
 
@@ -28,6 +29,7 @@ public class PlayerClickMove : MonoBehaviour
     public Texture2D noWay;
     public Texture2D look;
     public Texture2D hand;
+    public Texture2D noUse;
     public bool active = true;
     private GUIScript gUI;
     public Node checkNode;
@@ -77,6 +79,20 @@ public class PlayerClickMove : MonoBehaviour
         stop = value;
     }
 
+    private void Use()
+    {
+        bool isItem = false;
+        foreach(RaycastHit2D n in nodes)
+        {
+            if(n.collider.tag == "Item")
+            {
+                n.collider.SendMessage("Use", SendMessageOptions.DontRequireReceiver);
+                isItem = true;
+            }
+        }
+        if(!isItem) gUI.AddText("This can't be used");
+    }
+
     private void Look(RaycastHit2D hit)
     {
         if (hit.collider == null)
@@ -90,7 +106,7 @@ public class PlayerClickMove : MonoBehaviour
             bool isWall = true;
             foreach (RaycastHit2D n in nodes)
             {
-                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player")
+                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player" || n.collider.tag == "Item")
                 {
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     wall = null;
@@ -121,17 +137,29 @@ public class PlayerClickMove : MonoBehaviour
                 if (checkNode.walkable) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(noWay, Vector2.one, CursorMode.ForceSoftware);
             }
+            if(mode == Mouse_mode.use)
+            {
+                bool isItems = false;
+                nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
+                foreach(RaycastHit2D n in nodes)
+                {
+                    if (n.collider.tag == "Item") isItems = true;
+                }
+                if (isItems) Cursor.SetCursor(hand, Vector2.zero, CursorMode.ForceSoftware);
+                else Cursor.SetCursor(noUse, Vector2.zero, CursorMode.ForceSoftware);
+            }
             if (mode == Mouse_mode.look)
             {
                 bool isObstacle = false;
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 if (nodes.Length == 0) isObstacle = true;
                 foreach (RaycastHit2D n in nodes)
-                    if (n.collider.tag == "Obstacle" || n.collider.tag == "Wall" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player")
+                    if (n.collider.tag == "Obstacle" || n.collider.tag == "Wall" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player" || n.collider.tag == "Item")
                         isObstacle = true;
                 if (isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
             }
+            
 
 
 
@@ -145,6 +173,9 @@ public class PlayerClickMove : MonoBehaviour
                 {
                     case Mouse_mode.move:
                         Move(node);
+                        break;
+                    case Mouse_mode.use:
+                        Use();
                         break;
                     case Mouse_mode.look:
                         Look(node);
