@@ -18,6 +18,6 @@ public class FoodItem : Item
 
     public override void Use()
     {
-        
+        Debug.Log("Use: " + name);
     }
 }

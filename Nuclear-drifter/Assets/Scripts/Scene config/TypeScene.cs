@@ -5,4 +5,5 @@ using UnityEngine;
 public class TypeScene : MonoBehaviour
 {
     public bool isInterior = false;
+    public bool combatState = false;
 }

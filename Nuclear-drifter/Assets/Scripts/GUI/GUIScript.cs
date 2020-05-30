@@ -24,6 +24,10 @@ public class GUIScript : MonoBehaviour
 
     public bool blockGUI = false;
 
+    private GraphicRaycaster raycaster;
+    private EventSystem system;
+    private PointerEventData data;
+    private TypeScene typeScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,27 @@ public class GUIScript : MonoBehaviour
         expLabel.text = "lvl:1 exp:0/500";
         consoleLabel.text = "";
         consoleText = new Queue<string>();
+        raycaster = GetComponent<GraphicRaycaster>();
+        system = FindObjectOfType<EventSystem>();
+        typeScene = FindObjectOfType<TypeScene>();
+    }
+
+    public inv_mode GetInvMode()
+    {
+        return move.modeGui;
+    }
+
+    public bool GetCombatState()
+    {
+        return typeScene.combatState;
+    }
+    public bool CursorOnSlot()
+    {
+        data = new PointerEventData(system);
+        data.position = Input.mousePosition;
+        List<RaycastResult> results = new List<RaycastResult>();
+        raycaster.Raycast(data, results);
+        return results.Exists(s => s.gameObject.tag == "Slot");
     }
 
     public void AddText(string _text)

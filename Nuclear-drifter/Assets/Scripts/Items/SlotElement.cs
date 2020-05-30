@@ -9,6 +9,7 @@ public class SlotElement : MonoBehaviour
     public Text labelSlot;
     public Image imgSlot;
     private GUIScript gUI;
+    private Inventory inv;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class SlotElement : MonoBehaviour
             imgSlot.sprite = itemSlot.itemElement.image;
             labelSlot.text = itemSlot.GetAmount();
         }
+        inv = GetComponentInParent<Inventory>();
     }
 
     public void ClickSlot()
@@ -32,13 +34,26 @@ public class SlotElement : MonoBehaviour
         {
             if (itemSlot.itemElement != null && itemSlot.amountItem > 0)
             {
-                itemSlot.itemElement.Look();
-                if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
+                if (gUI.GetInvMode() == inv_mode.look)
                 {
-                    WeaponItem weapon = (WeaponItem)itemSlot.itemElement;
-                    if (!weapon.isMeleeWeapon) gUI.AddText("Ammo amount: " + itemSlot.ammo);
+                    itemSlot.itemElement.Look();
+                    if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
+                    {
+                        WeaponItem weapon = (WeaponItem)itemSlot.itemElement;
+                        if (!weapon.isMeleeWeapon) gUI.AddText("Ammo amount: " + itemSlot.ammo);
+                    }
+                    gUI.AddText("Amount: " + itemSlot.amountItem);
                 }
-                gUI.AddText("Amount: " + itemSlot.amountItem);
+                if(gUI.GetInvMode() == inv_mode.use)
+                {
+                    itemSlot.itemElement.Use();
+                    if (itemSlot.itemElement.GetItemType() == ItemType.Food)
+                        inv.RemoveOne(itemSlot);
+                    else if(itemSlot.itemElement.GetItemType() == ItemType.Weapon)
+                    {
+                        if (!gUI.GetCombatState()) gUI.AddText("I'm not fighting anyone");
+                    }
+                }
             }
         }
     }

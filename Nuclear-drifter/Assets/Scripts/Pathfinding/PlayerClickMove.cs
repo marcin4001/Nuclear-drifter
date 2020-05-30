@@ -9,6 +9,12 @@ public enum Mouse_mode
     look
 }
 
+public enum inv_mode
+{
+    use,
+    look
+}
+
 public class PlayerClickMove : MonoBehaviour
 {
     public Vector2 mousePos;
@@ -22,6 +28,8 @@ public class PlayerClickMove : MonoBehaviour
     public Vector3 direct;
     public Mouse_mode mode = 0;
     public int maxMode = 0;
+    public inv_mode modeGui = 0;
+    public int maxModeGui = 0;
     public RaycastHit2D[] nodes;
     private GridNode grid;
     public Texture2D arrow;
@@ -41,6 +49,7 @@ public class PlayerClickMove : MonoBehaviour
         path = null;
         stop = true;
         maxMode = System.Enum.GetNames(typeof(Mouse_mode)).Length;
+        maxModeGui = System.Enum.GetNames(typeof(inv_mode)).Length;
         grid = FindObjectOfType<GridNode>();
         gUI = FindObjectOfType<GUIScript>();
         Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
@@ -201,6 +210,33 @@ public class PlayerClickMove : MonoBehaviour
         else
         {
             Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+            if (gUI.CursorOnSlot())
+            {
+                switch(modeGui)
+                {
+                    case inv_mode.use:
+                        Cursor.SetCursor(hand, Vector2.zero, CursorMode.ForceSoftware);
+                        break;
+                    case inv_mode.look:
+                        Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
+                        break;
+                }
+            }
+            else
+            {
+                Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                if((int)modeGui < maxModeGui - 1)
+                {
+                    modeGui++;
+                } else
+                {
+                    modeGui = 0;
+                }
+            }
         }
 
         if (path != null && !stop)

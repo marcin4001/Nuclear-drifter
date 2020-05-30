@@ -14,6 +14,6 @@ public class DocItem : Item
 
     public override void Use()
     {
-        
+        Debug.Log("Use: " + name);
     }
 }

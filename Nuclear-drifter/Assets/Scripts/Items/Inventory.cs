@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public SlotElement[] slotsInv;
     private GUIScript gUI;
     public Slot testSlot;
+    
     private void Awake()
     {
         gUI = FindObjectOfType<GUIScript>();
@@ -80,6 +81,30 @@ public class Inventory : MonoBehaviour
         }
         return result;
     }
+
+    public void RemoveOne(Slot _slot)
+    {
+        if (_slot.itemElement.GetItemType() != ItemType.Weapon)
+        {
+            if (_slot.amountItem > 1)
+            {
+                _slot.amountItem--;
+                SetItems();
+            }
+            else
+            {
+                slots.Remove(_slot);
+                SetItems();
+                Sort();
+            }
+        }
+        else
+        {
+            if (_slot.ammo > 0) _slot.ammo--;
+            else gUI.AddText("Ammo is over!");
+        }
+    }
+
     private void Sort()
     {
         slots.Sort(delegate (Slot s1, Slot s2)
@@ -98,7 +123,15 @@ public class Inventory : MonoBehaviour
                 {
                     slotsInv[i].SetSlot(slots[i]);
                 }
+                else
+                {
+                    slotsInv[i].ClearSlot();
+                }
             }
+        }
+        else
+        {
+            for (int i = 0; i < slotsInv.Length; i++) slotsInv[i].ClearSlot();
         }
     }
     // Update is called once per frame
