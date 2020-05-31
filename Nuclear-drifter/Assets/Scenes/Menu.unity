@@ -638,6 +638,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc4bdcd15e897340bb47ad69e402e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSlots:
+  - itemElement: {fileID: 11400000, guid: e3248b2824dc6f841b4a431b27937130, type: 2}
+    amountItem: 1
+    ammo: 0
+  - itemElement: {fileID: 11400000, guid: 7c049909721085248b2fe695b926b58c, type: 2}
+    amountItem: 10
+    ammo: 0
+  - itemElement: {fileID: 11400000, guid: 8c38b27a32bfdbe4aa9b2868db4a4fe7, type: 2}
+    amountItem: 5
+    ammo: 0
 --- !u!1 &608197194
 GameObject:
   m_ObjectHideFlags: 0

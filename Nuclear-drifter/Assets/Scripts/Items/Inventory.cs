@@ -34,6 +34,32 @@ public class Inventory : MonoBehaviour
         
     }
 
+    private void Start()
+    {
+        if (PropertyPlayer.property.inv != null)
+            slots = PropertyPlayer.property.inv;
+        else
+        {
+            PropertyPlayer.property.inv = new List<Slot>();
+            slots = PropertyPlayer.property.inv;
+        }
+        if (slots == null) slots = new List<Slot>();
+        else
+        {
+            if (slots.Count > 0)
+            {
+                Sort();
+                for (int i = 0; i < slotsInv.Length; i++)
+                {
+                    if (i < slots.Count)
+                    {
+                        slotsInv[i].SetSlotStart(slots[i]);
+                    }
+                }
+            }
+        }
+    }
+
     public bool IsFull()
     {
         return slots.Count >= slotsInv.Length;

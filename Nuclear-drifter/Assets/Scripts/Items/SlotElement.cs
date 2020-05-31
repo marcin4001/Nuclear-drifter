@@ -78,6 +78,9 @@ public class SlotElement : MonoBehaviour
     public void SetSlotStart(Slot newSlot)
     {
         itemSlot = newSlot;
+        imgSlot.enabled = true;
+        imgSlot.sprite = itemSlot.itemElement.image;
+        labelSlot.text = itemSlot.GetAmount();
     }
 
 

@@ -298,12 +298,15 @@ MonoBehaviour:
   direct: {x: 0, y: 0, z: 0}
   mode: 0
   maxMode: 0
+  modeGui: 0
+  maxModeGui: 0
   arrow: {fileID: 2800000, guid: e858a20bff74fc545814da858daec668, type: 3}
   goodWay: {fileID: 2800000, guid: 84beed6a406e4934cbaa2bd7f21db095, type: 3}
   noWay: {fileID: 2800000, guid: 449e1a1088576944d8d60a84c449aa9f, type: 3}
   look: {fileID: 2800000, guid: 0470f5ab0468c1c46bebed630b69ff2a, type: 3}
   hand: {fileID: 2800000, guid: 076367989295a104da3aa57785c97886, type: 3}
   noUse: {fileID: 2800000, guid: 242c2350d7076764f9bc189fecda26ec, type: 3}
+  bin: {fileID: 2800000, guid: 2e036279fda7fca46ba31e1288e7950a, type: 3}
   active: 1
   checkNode:
     walkable: 0

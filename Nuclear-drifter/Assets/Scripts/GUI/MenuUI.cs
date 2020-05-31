@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuUI : MonoBehaviour
 {
+    public List<Slot> startSlots;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,8 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.startPos = new Vector2(235f, 24f);
         PropertyPlayer.property.posOutside = Vector2.zero;
         PropertyPlayer.property.foundArea = new bool[9];
-        PropertyPlayer.property.foundArea[0] = true; 
+        PropertyPlayer.property.foundArea[0] = true;
+
+        PropertyPlayer.property.inv = startSlots;
     }
 }

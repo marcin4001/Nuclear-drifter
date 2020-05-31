@@ -24,7 +24,7 @@ public class GridNode : MonoBehaviour
         gridSizeY = Mathf.RoundToInt(gridSize.y / nodeDiameter);
         CreateGrid();
         Node playerN = NodeFromPoint(player.position);
-        Debug.Log(playerN.pos);
+        //Debug.Log(playerN.pos);
         fourDirection = new Vector2[4];
         fourDirection[0] = new Vector2(1, 0);
         fourDirection[1] = new Vector2(-1, 0);
@@ -69,7 +69,7 @@ public class GridNode : MonoBehaviour
     {
         nodes = new Node[gridSizeX, gridSizeY];
         Vector3 bottonLeft = Vector3.zero - new Vector3(0.5f, 0.5f); //transform.position - Vector3.right * gridSize.x / 2 - Vector3.up * gridSize.y / 2;
-        Debug.Log(bottonLeft);
+        //Debug.Log(bottonLeft);
         for (int x = 0; x < gridSizeX; x++)
         {
             for (int y = 0; y < gridSizeY; y++)
