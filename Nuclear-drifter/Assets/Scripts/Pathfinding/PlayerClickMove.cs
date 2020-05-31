@@ -12,7 +12,8 @@ public enum Mouse_mode
 public enum inv_mode
 {
     use,
-    look
+    look,
+    remove
 }
 
 public class PlayerClickMove : MonoBehaviour
@@ -38,6 +39,7 @@ public class PlayerClickMove : MonoBehaviour
     public Texture2D look;
     public Texture2D hand;
     public Texture2D noUse;
+    public Texture2D bin;
     public bool active = true;
     private GUIScript gUI;
     public Node checkNode;
@@ -56,6 +58,12 @@ public class PlayerClickMove : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
     }
 
+    public Vector3 GetPosPlayer()
+    {
+        float posX = Mathf.Ceil(transform.position.x);
+        float posY = Mathf.Ceil(transform.position.y);
+        return new Vector3(posX, posY, 0);
+    }
 
     private void Move(RaycastHit2D hit)
     {
@@ -96,6 +104,7 @@ public class PlayerClickMove : MonoBehaviour
             if(n.collider.tag == "Item")
             {
                 n.collider.SendMessage("Use", SendMessageOptions.DontRequireReceiver);
+                return;
                 isItem = true;
             }
         }
@@ -115,12 +124,17 @@ public class PlayerClickMove : MonoBehaviour
             bool isWall = true;
             foreach (RaycastHit2D n in nodes)
             {
-                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player" || n.collider.tag == "Item")
+                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player")
                 {
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     wall = null;
                     isWall = false;
                     Debug.Log("Obstacle");
+                }
+                if(n.collider.tag == "Item")
+                {
+                    n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
+                    return;
                 }
                 if (n.collider.tag == "Wall")
                 {
@@ -219,6 +233,9 @@ public class PlayerClickMove : MonoBehaviour
                         break;
                     case inv_mode.look:
                         Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
+                        break;
+                    case inv_mode.remove:
+                        Cursor.SetCursor(bin, Vector2.zero, CursorMode.ForceSoftware);
                         break;
                 }
             }

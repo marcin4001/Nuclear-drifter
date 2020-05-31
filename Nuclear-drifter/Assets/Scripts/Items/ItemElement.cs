@@ -18,21 +18,29 @@ public class ItemElement : MonoBehaviour
 
     public void ShowText()
     {
-        gUI.AddText("Item: " + item.itemElement.nameItem);
+        if (item != null)
+        {
+            if(item.itemElement != null && item.amountItem > 0)gUI.AddText("Item: " + item.itemElement.nameItem);
+        }
     }
 
     public void Use()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
-        if (distance <= 1.0f)
+        if (item != null)
         {
-            bool result = inv.Add(item);
-            if (result)
-            {
-                Destroy(gameObject);
+            if (item.itemElement != null && item.amountItem > 0) {
+                float distance = Vector3.Distance(transform.position, player.position);
+                if (distance <= 1.0f)
+                {
+                    bool result = inv.Add(item);
+                    if (result)
+                    {
+                        Destroy(gameObject);
+                    }
+                }
+                else gUI.AddText("This is too far");
             }
         }
-        else gUI.AddText("This is too far");
     }
 
 }

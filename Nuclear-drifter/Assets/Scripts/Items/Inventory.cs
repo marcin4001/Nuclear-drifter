@@ -9,10 +9,13 @@ public class Inventory : MonoBehaviour
     public SlotElement[] slotsInv;
     private GUIScript gUI;
     public Slot testSlot;
-    
+    public GameObject bag;
+    private PlayerClickMove move;
+
     private void Awake()
     {
         gUI = FindObjectOfType<GUIScript>();
+        move = FindObjectOfType<PlayerClickMove>();
         if (slots == null) slots = new List<Slot>();
         else
         {
@@ -103,6 +106,17 @@ public class Inventory : MonoBehaviour
             if (_slot.ammo > 0) _slot.ammo--;
             else gUI.AddText("Ammo is over!");
         }
+    }
+
+    public void RemoveAll(Slot _slot)
+    {
+        Slot newslot = new Slot(_slot.itemElement, _slot.amountItem, _slot.ammo);
+        slots.Remove(_slot);
+        SetItems();
+        Sort();
+        GameObject obj = Instantiate(bag, move.GetPosPlayer(), Quaternion.identity);
+        ItemElement itemElement = obj.GetComponent<ItemElement>();
+        if (itemElement != null) itemElement.item = newslot;
     }
 
     private void Sort()

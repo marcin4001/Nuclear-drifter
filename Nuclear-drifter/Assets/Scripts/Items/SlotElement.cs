@@ -54,6 +54,10 @@ public class SlotElement : MonoBehaviour
                         if (!gUI.GetCombatState()) gUI.AddText("I'm not fighting anyone");
                     }
                 }
+                if (gUI.GetInvMode() == inv_mode.remove)
+                {
+                    inv.RemoveAll(itemSlot);
+                }
             }
         }
     }
