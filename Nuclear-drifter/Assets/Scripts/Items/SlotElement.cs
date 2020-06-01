@@ -46,10 +46,15 @@ public class SlotElement : MonoBehaviour
                 }
                 if(gUI.GetInvMode() == inv_mode.use)
                 {
-                    itemSlot.itemElement.Use();
+
                     if (itemSlot.itemElement.GetItemType() == ItemType.Food)
+                    {
+                        FoodItem food = (FoodItem)itemSlot.itemElement;
+                        food.SetHP(gUI.playerHealth);
+                        itemSlot.itemElement.Use();
                         inv.RemoveOne(itemSlot);
-                    else if(itemSlot.itemElement.GetItemType() == ItemType.Weapon)
+                    }
+                    else if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
                     {
                         if (!gUI.GetCombatState()) gUI.AddText("I'm not fighting anyone");
                     }

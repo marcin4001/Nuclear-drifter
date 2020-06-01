@@ -58,6 +58,14 @@ public class PlayerClickMove : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
     }
 
+    public bool ObjIsNear(string tag, float r)
+    {
+        bool result = false;
+        Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)transform.position, r);
+        foreach (Collider2D c in col) if (c.tag == tag) result = true;
+        return result;
+    }
+
     public Vector3 GetPosPlayer()
     {
         float posX = Mathf.Ceil(transform.position.x);
