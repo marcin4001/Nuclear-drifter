@@ -32,6 +32,17 @@ public class DayCycle : MonoBehaviour
             sun.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
             if (lightPlayer != null) lightPlayer.enabled = false;
         }
+        time.minutes = 0;
+    }
+
+    public int GetHour()
+    {
+        return time.hour;
+    }
+
+    public int GetDay()
+    {
+        return time.day;
     }
     // Update is called once per frame
     void Update()

@@ -26,13 +26,13 @@ public class FadePanel : MonoBehaviour
         Invoke("FadeOut", 1.4f);
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            Fade("Test", gameObject);
-        }
-    }
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.F))
+    //    {
+    //        Fade("Test", gameObject);
+    //    }
+    //}
 
     private void FadeOut()
     {
@@ -40,8 +40,8 @@ public class FadePanel : MonoBehaviour
         anim.SetTrigger("FadeOut");
     }
 
-    private void Test()
-    {
-        Debug.Log("Change");
-    }
+    //private void Test()
+    //{
+    //    Debug.Log("Change");
+    //}
 }

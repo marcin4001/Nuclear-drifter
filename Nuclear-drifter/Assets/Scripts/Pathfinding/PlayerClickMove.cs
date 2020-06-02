@@ -109,7 +109,7 @@ public class PlayerClickMove : MonoBehaviour
         bool isItem = false;
         foreach(RaycastHit2D n in nodes)
         {
-            if(n.collider.tag == "Item")
+            if(n.collider.tag == "Item" || n.collider.tag == "Bed")
             {
                 n.collider.SendMessage("Use", SendMessageOptions.DontRequireReceiver);
                 return;
@@ -174,7 +174,7 @@ public class PlayerClickMove : MonoBehaviour
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 foreach(RaycastHit2D n in nodes)
                 {
-                    if (n.collider.tag == "Item") isItems = true;
+                    if (n.collider.tag == "Item" || n.collider.tag == "Bed") isItems = true;
                 }
                 if (isItems) Cursor.SetCursor(hand, Vector2.zero, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(noUse, Vector2.zero, CursorMode.ForceSoftware);
