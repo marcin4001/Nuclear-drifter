@@ -111,6 +111,11 @@ public class Inventory : MonoBehaviour
         return result;
     }
 
+    public Slot FindItem(int id)
+    {
+        return slots.Find(x => x.itemElement.idItem == id);
+    }
+
     public void RemoveOne(Slot _slot)
     {
         if (_slot.itemElement.GetItemType() != ItemType.Weapon)

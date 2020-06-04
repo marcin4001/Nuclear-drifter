@@ -11,14 +11,23 @@ public class FadePanel : MonoBehaviour
     private GameObject objMethod;
     private PauseMenu menu;
     private MapControl map;
+    public Image imgOpacity;
+    
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
         img.enabled = false;
+        if (imgOpacity != null) imgOpacity.enabled = false;
         anim = GetComponent<Animator>();
         menu = FindObjectOfType<PauseMenu>();
         map = FindObjectOfType<MapControl>();
+        
+    }
+
+    public void EnableImg(bool value)
+    {
+        if (imgOpacity != null) imgOpacity.enabled = value;
     }
 
     public void Fade(string method, GameObject obj)
