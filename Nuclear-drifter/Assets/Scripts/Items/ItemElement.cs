@@ -7,13 +7,13 @@ public class ItemElement : MonoBehaviour
     public Slot item;
     private GUIScript gUI;
     private Inventory inv;
-    private Transform player;
+    private PlayerClickMove player;
     // Start is called before the first frame update
     void Start()
     {
         gUI = FindObjectOfType<GUIScript>();
         inv = FindObjectOfType<Inventory>();
-        player = GameObject.FindWithTag("Player").transform;
+        player = FindObjectOfType<PlayerClickMove>();
     }
 
     public void ShowText()
@@ -29,8 +29,8 @@ public class ItemElement : MonoBehaviour
         if (item != null)
         {
             if (item.itemElement != null && item.amountItem > 0) {
-                float distance = Vector3.Distance(transform.position, player.position);
-                if (distance <= 1.0f)
+
+                if (player.ObjIsNearPlayer(transform.position, 1.1f))
                 {
                     bool result = inv.Add(item);
                     if (result)

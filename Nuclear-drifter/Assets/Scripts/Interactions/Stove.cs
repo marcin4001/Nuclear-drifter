@@ -10,7 +10,7 @@ public class Stove : MonoBehaviour
     public Slot slot;
     private Inventory inv;
     private GUIScript gUI;
-    private Transform player;
+    private PlayerClickMove player;
     private Slot meat;
     private FadePanel fade;
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class Stove : MonoBehaviour
         render.sprite = stoveOff;
         inv = FindObjectOfType<Inventory>();
         gUI = FindObjectOfType<GUIScript>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = FindObjectOfType<PlayerClickMove>();
         fade = FindObjectOfType<FadePanel>();
     }
 
@@ -55,8 +55,8 @@ public class Stove : MonoBehaviour
 
     private void SetCook()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
-        if (distance <= 1.0f)
+        
+        if (player.ObjIsNearPlayer(transform.position, 1.1f))
         {
             render.sprite = stoveOn;
             inv.RemoveOne(meat);

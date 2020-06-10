@@ -73,6 +73,12 @@ public class PlayerClickMove : MonoBehaviour
         return new Vector3(posX, posY, 0);
     }
 
+    public bool ObjIsNearPlayer(Vector3 pos, float dis)
+    {
+        float distance = Vector3.Distance(pos, transform.position);
+        return distance <= dis;
+    }
+
     private void Move(RaycastHit2D hit)
     {
         if (hit.collider == null)
