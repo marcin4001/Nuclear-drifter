@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class EqChestController : MonoBehaviour
 {
     private GUIScript gUI;
-    public Canvas canvasEq;
+    public GameObject goEq;
     public bool active = false;
     // Start is called before the first frame update
     void Start()
     {
         gUI = FindObjectOfType<GUIScript>();
-        canvasEq.enabled = active;
+        goEq.SetActive(active);
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class EqChestController : MonoBehaviour
     public void Close()
     {
         active = false;
-        canvasEq.enabled = active;
+        goEq.SetActive(active);
         gUI.move.active = !active;
         gUI.blockGUI = active;
     }
@@ -36,7 +36,7 @@ public class EqChestController : MonoBehaviour
     public void Open()
     {
         active = true;
-        canvasEq.enabled = active;
+        goEq.SetActive(active);
         gUI.move.active = !active;
         gUI.blockGUI = active;
     }
