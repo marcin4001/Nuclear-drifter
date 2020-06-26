@@ -12,8 +12,8 @@ public enum Mouse_mode
 public enum inv_mode
 {
     use,
+    remove,
     look,
-    remove
 }
 
 public class PlayerClickMove : MonoBehaviour
@@ -40,6 +40,7 @@ public class PlayerClickMove : MonoBehaviour
     public Texture2D hand;
     public Texture2D noUse;
     public Texture2D bin;
+    public Texture2D all;
     public bool active = true;
     private GUIScript gUI;
     public Node checkNode;
@@ -249,7 +250,8 @@ public class PlayerClickMove : MonoBehaviour
                         Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
                         break;
                     case inv_mode.remove:
-                        Cursor.SetCursor(bin, Vector2.zero, CursorMode.ForceSoftware);
+                        if(!typeSc.inBox)Cursor.SetCursor(bin, Vector2.zero, CursorMode.ForceSoftware);
+                        else Cursor.SetCursor(all, Vector2.zero, CursorMode.ForceSoftware);
                         break;
                 }
             }

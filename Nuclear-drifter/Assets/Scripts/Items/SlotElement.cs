@@ -10,26 +10,32 @@ public class SlotElement : MonoBehaviour
     public Image imgSlot;
     private GUIScript gUI;
     private Inventory inv;
-
+    public bool isBoxSlot = false;
+    private TypeScene typeSc;
     // Start is called before the first frame update
     void Start()
     {
         gUI = FindObjectOfType<GUIScript>();
-        if(itemSlot.itemElement == null || itemSlot.amountItem <= 0)
+        if (!isBoxSlot)
         {
-            ClearSlot();
-        }
-        else
-        {
-            imgSlot.enabled = true;
-            imgSlot.sprite = itemSlot.itemElement.image;
-            labelSlot.text = itemSlot.GetAmount();
+            if (itemSlot.itemElement == null || itemSlot.amountItem <= 0)
+            {
+                ClearSlot();
+            }
+            else
+            {
+                imgSlot.enabled = true;
+                imgSlot.sprite = itemSlot.itemElement.image;
+                labelSlot.text = itemSlot.GetAmount();
+            }
         }
         inv = GetComponentInParent<Inventory>();
+        typeSc = FindObjectOfType<TypeScene>();
     }
 
     public void ClickSlot()
     {
+        if(typeSc == null) typeSc = FindObjectOfType<TypeScene>();
         if (itemSlot != null)
         {
             if (itemSlot.itemElement != null && itemSlot.amountItem > 0)
@@ -46,40 +52,53 @@ public class SlotElement : MonoBehaviour
                 }
                 if(gUI.GetInvMode() == inv_mode.use)
                 {
-
-                    if (itemSlot.itemElement.GetItemType() == ItemType.Food)
+                    if (!typeSc.inBox)
                     {
-                        FoodItem food = (FoodItem)itemSlot.itemElement;
-                        food.SetHP(gUI.playerHealth);
-                        itemSlot.itemElement.Use();
-                        inv.RemoveOne(itemSlot);
+                        if (itemSlot.itemElement.GetItemType() == ItemType.Food)
+                        {
+                            FoodItem food = (FoodItem)itemSlot.itemElement;
+                            food.SetHP(gUI.playerHealth);
+                            itemSlot.itemElement.Use();
+                            inv.RemoveOne(itemSlot);
+                        }
+                        else if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
+                        {
+                            if (!gUI.GetCombatState()) gUI.AddText("I'm not fighting anyone");
+                        }
                     }
-                    else if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
+                    else
                     {
-                        if (!gUI.GetCombatState()) gUI.AddText("I'm not fighting anyone");
+                        Debug.Log("Remove or add one");
                     }
                 }
                 if (gUI.GetInvMode() == inv_mode.remove)
                 {
-                    inv.RemoveAll(itemSlot);
+                    if (!typeSc.inBox)
+                    {
+                        inv.RemoveAll(itemSlot);
+                    }
+                    else
+                    {
+                        Debug.Log("Remove or add all");
+                    }
                 }
             }
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I) && itemSlot != null)
-        {
-            if (itemSlot.itemElement != null && itemSlot.amountItem > 0)
-            {
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.I) && itemSlot != null)
+    //    {
+    //        if (itemSlot.itemElement != null && itemSlot.amountItem > 0)
+    //        {
 
-                imgSlot.enabled = true;
-                imgSlot.overrideSprite = itemSlot.itemElement.image;
-                labelSlot.text = itemSlot.GetAmount();
-            }
-        }
-    }
+    //            imgSlot.enabled = true;
+    //            imgSlot.overrideSprite = itemSlot.itemElement.image;
+    //            labelSlot.text = itemSlot.GetAmount();
+    //        }
+    //    }
+    //}
     public void SetSlotStart(Slot newSlot)
     {
         itemSlot = newSlot;
