@@ -10,17 +10,20 @@ public class EqChestController : MonoBehaviour
     public bool active = false;
     public int currentIndex = 0;
     public SlotElement[] slotsInv;
-    public string nameInvScene;
+    //public string nameInvScene;
     public InventoryBox inventoryBox;
     public List<Slot> slots;
+    public Sprite[] backgrounds;
+    public Image backImg;
     private Inventory inv;
     private TypeScene typeSc;
+    //public int testIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
         gUI = FindObjectOfType<GUIScript>();
         goEq.SetActive(active);
-        inventoryBox = GameObject.Find(nameInvScene).GetComponent<InventoryBox>();
+        inventoryBox = FindObjectOfType<InventoryBox>();
         typeSc = FindObjectOfType<TypeScene>();
         inv = FindObjectOfType<Inventory>();
     }
@@ -31,7 +34,7 @@ public class EqChestController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
             if (active) Close();
-            else Open(); //test
+            //else Open(1, testIndex); //test
         }
     }
 
@@ -44,8 +47,10 @@ public class EqChestController : MonoBehaviour
         typeSc.inBox = active;
     }
 
-    public void Open()
+    public void Open(int id, int indexBack)
     {
+        currentIndex = id;
+        backImg.overrideSprite = backgrounds[indexBack];
         active = true;
         goEq.SetActive(active);
         gUI.move.active = !active;

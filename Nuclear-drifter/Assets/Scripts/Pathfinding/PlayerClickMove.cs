@@ -113,17 +113,16 @@ public class PlayerClickMove : MonoBehaviour
 
     private void Use()
     {
-        bool isItem = false;
+        
         foreach(RaycastHit2D n in nodes)
         {
-            if(n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove")
+            if(n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest")
             {
                 n.collider.SendMessage("Use", SendMessageOptions.DontRequireReceiver);
                 return;
-                isItem = true;
             }
         }
-        if(!isItem) gUI.AddText("This can't be used");
+         gUI.AddText("This can't be used");
     }
 
     private void Look(RaycastHit2D hit)
@@ -139,7 +138,7 @@ public class PlayerClickMove : MonoBehaviour
             bool isWall = true;
             foreach (RaycastHit2D n in nodes)
             {
-                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info")
+                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Chest")
                 {
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     wall = null;
@@ -181,7 +180,7 @@ public class PlayerClickMove : MonoBehaviour
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 foreach(RaycastHit2D n in nodes)
                 {
-                    if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove") isItems = true;
+                    if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest") isItems = true;
                 }
                 if (isItems) Cursor.SetCursor(hand, Vector2.zero, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(noUse, Vector2.zero, CursorMode.ForceSoftware);
@@ -192,7 +191,7 @@ public class PlayerClickMove : MonoBehaviour
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 if (nodes.Length == 0) isObstacle = true;
                 foreach (RaycastHit2D n in nodes)
-                    if (n.collider.tag == "Obstacle" || n.collider.tag == "Wall" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player" || n.collider.tag == "Item")
+                    if (n.collider.tag == "Obstacle" || n.collider.tag == "Wall" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player" || n.collider.tag == "Item" || n.collider.tag == "Chest")
                         isObstacle = true;
                 if (isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
