@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     public Slot testSlot;
     public GameObject bag;
     private PlayerClickMove move;
-
+    private TypeScene typeSc;
     private void Awake()
     {
         gUI = FindObjectOfType<GUIScript>();
@@ -36,6 +36,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
+        typeSc = FindObjectOfType<TypeScene>();
         if (PropertyPlayer.property.inv != null)
             slots = PropertyPlayer.property.inv;
         else
@@ -111,6 +112,47 @@ public class Inventory : MonoBehaviour
         return result;
     }
 
+    public bool AddOne(Slot _slot)
+    {
+        bool result = true;
+        if (!isEmpty())
+        {
+            Slot exist = slots.Find(s => s.itemElement == _slot.itemElement);
+            if (exist != null)
+            {
+                if (_slot.itemElement.GetItemType() != ItemType.Weapon)
+                {
+                    exist.amountItem += 1;
+                }
+                else
+                {
+                    exist.ammo += _slot.ammo;
+                }
+            }
+            else
+            {
+                if (!IsFull())
+                {
+                    slots.Add(new Slot(_slot.itemElement, 1, _slot.ammo));
+                    Sort();
+                }
+                else
+                {
+                    gUI.AddText("Inventory is Full");
+                    result = false;
+                }
+            }
+
+            SetItems();
+        }
+        else
+        {
+            slots.Add(new Slot(_slot.itemElement, 1, _slot.ammo));
+            SetItems();
+        }
+        return result;
+    }
+
     public Slot FindItem(int id)
     {
         return slots.Find(x => x.itemElement.idItem == id);
@@ -118,7 +160,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveOne(Slot _slot)
     {
-        if (_slot.itemElement.GetItemType() != ItemType.Weapon)
+        if (_slot.itemElement.GetItemType() != ItemType.Weapon || typeSc.inBox) 
         {
             if (_slot.amountItem > 1)
             {
@@ -141,13 +183,22 @@ public class Inventory : MonoBehaviour
 
     public void RemoveAll(Slot _slot)
     {
-        Slot newslot = new Slot(_slot.itemElement, _slot.amountItem, _slot.ammo);
-        slots.Remove(_slot);
-        SetItems();
-        Sort();
-        GameObject obj = Instantiate(bag, move.GetPosPlayer(), Quaternion.identity);
-        ItemElement itemElement = obj.GetComponent<ItemElement>();
-        if (itemElement != null) itemElement.item = newslot;
+        if (!typeSc.inBox)
+        {
+            Slot newslot = new Slot(_slot.itemElement, _slot.amountItem, _slot.ammo);
+            slots.Remove(_slot);
+            SetItems();
+            Sort();
+            GameObject obj = Instantiate(bag, move.GetPosPlayer(), Quaternion.identity);
+            ItemElement itemElement = obj.GetComponent<ItemElement>();
+            if (itemElement != null) itemElement.item = newslot;
+        }
+        else
+        {
+            slots.Remove(_slot);
+            SetItems();
+            Sort();
+        }
     }
 
     private void Sort()

@@ -12,6 +12,8 @@ public class EqChestController : MonoBehaviour
     public SlotElement[] slotsInv;
     public string nameInvScene;
     public InventoryBox inventoryBox;
+    public List<Slot> slots;
+    private Inventory inv;
     private TypeScene typeSc;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class EqChestController : MonoBehaviour
         goEq.SetActive(active);
         inventoryBox = GameObject.Find(nameInvScene).GetComponent<InventoryBox>();
         typeSc = FindObjectOfType<TypeScene>();
+        inv = FindObjectOfType<Inventory>();
     }
 
     // Update is called once per frame
@@ -53,7 +56,7 @@ public class EqChestController : MonoBehaviour
 
     private void SetItems()
     {
-        List<Slot> slots = inventoryBox.boxes[currentIndex].eqSlots;
+        slots = inventoryBox.boxes[currentIndex].eqSlots;
         if (slots != null)
         {
             if (slots.Count > 0)
@@ -81,5 +84,150 @@ public class EqChestController : MonoBehaviour
             for (int i = 0; i < slotsInv.Length; i++) slotsInv[i].ClearSlot();
         }
         
+    }
+
+    public bool IsFull()
+    {
+        return slots.Count >= slotsInv.Length;
+    }
+
+    public bool isEmpty()
+    {
+        return slots.Count <= 0;
+    }
+
+    public bool Add(Slot _slot)
+    {
+        bool result = true;
+        if (!isEmpty())
+        {
+            Slot exist = slots.Find(s => s.itemElement == _slot.itemElement);
+            if (exist != null)
+            {
+                if (_slot.itemElement.GetItemType() != ItemType.Weapon)
+                {
+                    exist.amountItem += _slot.amountItem;
+                }
+                else
+                {
+                    exist.ammo += _slot.ammo;
+                }
+            }
+            else
+            {
+                if (!IsFull())
+                {
+                    slots.Add(new Slot(_slot.itemElement, _slot.amountItem, _slot.ammo));
+                }
+                else
+                {
+                    gUI.AddText("Container is Full");
+                    result = false;
+                }
+            }
+
+            SetItems();
+        }
+        else
+        {
+            slots.Add(new Slot(_slot.itemElement, _slot.amountItem, _slot.ammo));
+            SetItems();
+        }
+        return result;
+    }
+
+    public bool AddOne(Slot _slot)
+    {
+        bool result = true;
+        if (!isEmpty())
+        {
+            Slot exist = slots.Find(s => s.itemElement == _slot.itemElement);
+            if (exist != null)
+            {
+                if (_slot.itemElement.GetItemType() != ItemType.Weapon)
+                {
+                    exist.amountItem += 1;
+                }
+                else
+                {
+                    exist.ammo += _slot.ammo;
+                }
+            }
+            else
+            {
+                if (!IsFull())
+                {
+                    slots.Add(new Slot(_slot.itemElement, 1, _slot.ammo));
+                }
+                else
+                {
+                    gUI.AddText("Container is Full");
+                    result = false;
+                }
+            }
+
+            SetItems();
+        }
+        else
+        {
+            slots.Add(new Slot(_slot.itemElement, 1, _slot.ammo));
+            SetItems();
+        }
+        return result;
+    }
+
+    public void RemoveOne(Slot _slot)
+    {
+        if (_slot.amountItem > 1)
+        {
+             _slot.amountItem--;
+        }
+        else
+        {
+            slots.Remove(_slot);
+        }
+        SetItems();
+    }
+
+    public void RemoveAll(Slot _slot)
+    {
+        slots.Remove(_slot);
+        SetItems();
+    }
+
+    public void TakeOutOne(Slot _slot)
+    {
+        bool added = inv.AddOne(_slot);
+        if(added)
+        {
+            RemoveOne(_slot);
+        }
+    }
+
+    public void TakeOutAll(Slot _slot)
+    {
+        bool added = inv.Add(_slot);
+        if (added)
+        {
+            RemoveAll(_slot);
+        }
+    }
+
+    public void PutOnOne(Slot _slot)
+    {
+        bool added = AddOne(_slot);
+        if (added)
+        {
+            inv.RemoveOne(_slot);
+        }
+    }
+
+    public void PutOnAll(Slot _slot)
+    {
+        bool added = Add(_slot);
+        if (added)
+        {
+            inv.RemoveAll(_slot);
+        }
     }
 }

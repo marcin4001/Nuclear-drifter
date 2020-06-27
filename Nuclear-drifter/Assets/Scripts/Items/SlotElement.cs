@@ -12,6 +12,7 @@ public class SlotElement : MonoBehaviour
     private Inventory inv;
     public bool isBoxSlot = false;
     private TypeScene typeSc;
+    private EqChestController eqChest;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class SlotElement : MonoBehaviour
         }
         inv = GetComponentInParent<Inventory>();
         typeSc = FindObjectOfType<TypeScene>();
+        eqChest = FindObjectOfType<EqChestController>();
     }
 
     public void ClickSlot()
@@ -68,7 +70,14 @@ public class SlotElement : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Remove or add one");
+                        if(isBoxSlot)
+                        {
+                            eqChest.TakeOutOne(itemSlot);
+                        }
+                        else
+                        {
+                            eqChest.PutOnOne(itemSlot);
+                        }
                     }
                 }
                 if (gUI.GetInvMode() == inv_mode.remove)
@@ -79,7 +88,14 @@ public class SlotElement : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Remove or add all");
+                        if (isBoxSlot)
+                        {
+                            eqChest.TakeOutAll(itemSlot);
+                        }
+                        else
+                        {
+                            eqChest.PutOnAll(itemSlot);
+                        }
                     }
                 }
             }
