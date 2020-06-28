@@ -67,6 +67,10 @@ public class SlotElement : MonoBehaviour
                         {
                             if (!gUI.GetCombatState()) gUI.AddText("I'm not fighting anyone");
                         }
+                        else
+                        {
+                            itemSlot.itemElement.Use();
+                        }
                     }
                     else
                     {

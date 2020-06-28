@@ -8,6 +8,7 @@ public class Container : MonoBehaviour
     [Range(0,2)]
     public int indexBackground = 0;
     public string nameObj;
+    public bool isLocked = true;
     private EqChestController controller;
     private PlayerClickMove player;
     private GUIScript gUI;
@@ -21,9 +22,13 @@ public class Container : MonoBehaviour
 
     public void Use()
     {
-        if(player.ObjIsNearPlayer(transform.position, 1.1f))
-            controller.Open(indexEq, indexBackground);
-        else gUI.AddText("The "+ nameObj + " is too far");
+        if (!isLocked)
+        {
+            if (player.ObjIsNearPlayer(transform.position, 1.1f))
+                controller.Open(indexEq, indexBackground);
+            else gUI.AddText("The " + nameObj + " is too far");
+        }
+        else gUI.AddText("The " + nameObj + " is locked");
     }
 
 
