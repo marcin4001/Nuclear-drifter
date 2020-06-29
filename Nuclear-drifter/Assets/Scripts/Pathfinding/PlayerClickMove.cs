@@ -89,6 +89,11 @@ public class PlayerClickMove : MonoBehaviour
         }
         else
         {
+            if(hit.collider.tag == "WaterCol")
+            {
+                gUI.AddText("I can not swim!");
+                return;
+            }
             path = aStar.FindPath(transform.position, target.position);
             if(!checkNode.walkable) gUI.AddText("I can't go there!");
             if (path != null)
@@ -145,7 +150,7 @@ public class PlayerClickMove : MonoBehaviour
                     isWall = false;
                     Debug.Log("Obstacle");
                 }
-                if(n.collider.tag == "Item")
+                if(n.collider.tag == "Item" || n.collider.tag == "WaterCol")
                 {
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     return;
@@ -191,7 +196,7 @@ public class PlayerClickMove : MonoBehaviour
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 if (nodes.Length == 0) isObstacle = true;
                 foreach (RaycastHit2D n in nodes)
-                    if (n.collider.tag == "Obstacle" || n.collider.tag == "Wall" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Player" || n.collider.tag == "Item" || n.collider.tag == "Chest")
+                    if (n.collider.tag != "Untagged" && n.collider.tag != "Hero")
                         isObstacle = true;
                 if (isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);

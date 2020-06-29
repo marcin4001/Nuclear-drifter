@@ -28,6 +28,10 @@ public class EqChestController : MonoBehaviour
         inv = FindObjectOfType<Inventory>();
     }
 
+    public Inventory GetInvPlayer()
+    {
+        return inv;
+    }
     // Update is called once per frame
     void Update()
     {

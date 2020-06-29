@@ -9,6 +9,7 @@ public class Container : MonoBehaviour
     public int indexBackground = 0;
     public string nameObj;
     public bool isLocked = true;
+    public int keyId = -1;
     private EqChestController controller;
     private PlayerClickMove player;
     private GUIScript gUI;
@@ -24,12 +25,24 @@ public class Container : MonoBehaviour
     {
         if (!isLocked)
         {
-            if (player.ObjIsNearPlayer(transform.position, 1.1f))
-                controller.Open(indexEq, indexBackground);
-            else gUI.AddText("The " + nameObj + " is too far");
+            OpenBox();
         }
-        else gUI.AddText("The " + nameObj + " is locked");
+        else
+        {
+            bool playerHaveKey = controller.GetInvPlayer().FindItemB(keyId);
+            if(playerHaveKey)
+            {
+                OpenBox();
+                isLocked = false;
+            }
+            else gUI.AddText("The " + nameObj + " is locked");
+        }
     }
 
-
+    public void OpenBox()
+    {
+        if (player.ObjIsNearPlayer(transform.position, 1.1f))
+            controller.Open(indexEq, indexBackground);
+        else gUI.AddText("The " + nameObj + " is too far");
+    }
 }
