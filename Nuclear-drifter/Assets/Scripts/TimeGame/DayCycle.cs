@@ -21,7 +21,10 @@ public class DayCycle : MonoBehaviour
         time.day = _day;
         if (minutes > 30) time.hour = _hour + 1;
         else time.hour = _hour;
-        if (time.hour > 23) _hour = 0;
+        if (time.hour > 23) {
+            time.hour = 0;
+            time.day = time.day + 1;
+        }
         if(time.hour > 19 || time.hour < 5)
         {
             sun.transform.rotation = Quaternion.Euler(new Vector3(90f, 0f, 0f));

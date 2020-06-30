@@ -31,6 +31,7 @@ public class CarpetInterior : MonoBehaviour
             PropertyPlayer.property.minutes = time.minutes;
 
             PropertyPlayer.property.startPos = startPos;
+            PropertyPlayer.property.SaveInvBox();
             LoadingScreen loading = FindObjectOfType<LoadingScreen>();
             if (loading != null) loading.ShowLoading();
             Invoke("Load", 0.1f);

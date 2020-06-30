@@ -81,5 +81,6 @@ public class MessageBox : MonoBehaviour
 
         PropertyPlayer.property.startPos = playerPos;
         PropertyPlayer.property.posOutside = move.transform.position;
+        PropertyPlayer.property.SaveInvBox();
     }
 }

@@ -32,5 +32,9 @@ public class PropertyPlayer : MonoBehaviour
         
     }
 
-
+    public void SaveInvBox()
+    {
+        InventoryBox inv = FindObjectOfType<InventoryBox>();
+        if (inv != null) SaveAndLoad.SaveTemp(inv);
+    }
 }

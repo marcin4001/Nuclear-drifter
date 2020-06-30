@@ -47,5 +47,6 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.foundArea[0] = true;
 
         PropertyPlayer.property.inv = startSlots;
+        SaveAndLoad.NewGame();
     }
 }

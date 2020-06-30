@@ -9082,6 +9082,7 @@ GameObject:
   - component: {fileID: 4796775783076596543}
   - component: {fileID: 5862754551414627543}
   - component: {fileID: 93765565675538519}
+  - component: {fileID: 1569108431}
   m_Layer: 0
   m_Name: GUIobj
   m_TagString: Untagged
@@ -9219,6 +9220,18 @@ MonoBehaviour:
   geigerCounter: {fileID: 8300000, guid: b588499bc678ba94fbeee383cda40300, type: 3}
   openDoor: {fileID: 8300000, guid: d4c7bea8720b2674b9f46bf7663e2c7a, type: 3}
   closeDoor: {fileID: 8300000, guid: cac6fa9071dd3be4daeb6e4146fa245a, type: 3}
+--- !u!114 &1569108431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796775783076596540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0875dcee7fbc7b9418c2ee9bc42e5047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4796775783529893702
 GameObject:
   m_ObjectHideFlags: 0
