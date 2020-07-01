@@ -14,11 +14,15 @@ public class Container : MonoBehaviour
     private PlayerClickMove player;
     private GUIScript gUI;
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
         controller = FindObjectOfType<EqChestController>();
         player = FindObjectOfType<PlayerClickMove>();
         gUI = FindObjectOfType<GUIScript>();
+        if(keyId > -1)
+        {
+            isLocked = !controller.GetKeyUse(indexEq);
+        }
     }
 
     public void Use()
@@ -34,6 +38,7 @@ public class Container : MonoBehaviour
             {
                 OpenBox();
                 isLocked = false;
+                controller.SetKeyUse(indexEq);
             }
             else gUI.AddText("The " + nameObj + " is locked");
         }

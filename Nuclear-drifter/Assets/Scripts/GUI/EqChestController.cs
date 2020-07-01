@@ -41,7 +41,16 @@ public class EqChestController : MonoBehaviour
             //else Open(1, testIndex); //test
         }
     }
+    public bool GetKeyUse(int index)
+    {
+        if(inventoryBox == null)inventoryBox = FindObjectOfType<InventoryBox>();
+        return inventoryBox.boxes[index].useKey;
+    }
 
+    public void SetKeyUse(int index)
+    {
+        inventoryBox.boxes[index].useKey = true;
+    }
     public void Close()
     {
         active = false;
