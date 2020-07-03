@@ -14,7 +14,7 @@ public class SaveAndLoad : MonoBehaviour
 
     public static void NewGame()
     {
-        string path = Application.persistentDataPath + @"\saveTemp";
+        string path = Path.Combine(Application.persistentDataPath,"saveTemp");
         if (Directory.Exists(path))
         {
             Directory.Delete(path, true);
@@ -24,12 +24,13 @@ public class SaveAndLoad : MonoBehaviour
 
     public static void SaveTemp(InventoryBox inv)
     {
-        string path = Application.persistentDataPath + @"\saveTemp";
+        string path = Path.Combine(Application.persistentDataPath, "saveTemp");
         if (!Directory.Exists(path))
         {
             Directory.CreateDirectory(path);
         }
-        string savePath = path + @"\" + SceneManager.GetActiveScene().name + @"InvBox.json";
+        string fileName = SceneManager.GetActiveScene().name + "InvBox.json";
+        string savePath = Path.Combine(path, fileName);
         string write = JsonUtility.ToJson(inv);
         //Debug.Log(write);
         File.WriteAllText(savePath, write);
@@ -37,11 +38,13 @@ public class SaveAndLoad : MonoBehaviour
 
     public static void LoadTemp(InventoryBox inv)
     {
-        string path = Application.persistentDataPath + @"\saveTemp\" + SceneManager.GetActiveScene().name + @"InvBox.json";
-        if (File.Exists(path))
+        string path = Path.Combine(Application.persistentDataPath, "saveTemp");
+        string fileName = SceneManager.GetActiveScene().name + "InvBox.json";
+        string loadPath = Path.Combine(path, fileName);
+        if (File.Exists(loadPath))
         {
             Debug.Log("Save Exist");
-            string read = File.ReadAllText(path);
+            string read = File.ReadAllText(loadPath);
             JsonUtility.FromJsonOverwrite(read, inv);
         }
     }
