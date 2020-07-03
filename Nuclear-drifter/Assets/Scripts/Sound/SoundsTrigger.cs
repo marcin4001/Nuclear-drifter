@@ -7,12 +7,20 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip geigerCounter;
     public AudioClip openDoor;
     public AudioClip closeDoor;
+    public AudioClip stove;
+    public AudioClip sheep;
     private AudioSource sr;
+   
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<AudioSource>();
         sr.loop = true;
+    }
+
+    public void Cook()
+    {
+        sr.PlayOneShot(stove);
     }
 
     public void OpenDoor()
@@ -31,10 +39,16 @@ public class SoundsTrigger : MonoBehaviour
         sr.Play();
     }
 
-    public void StopGeiger()
+    public void Stop()
     {
         sr.Stop();
         sr.clip = null;
+    }
+
+    public void StartBleat()
+    {
+        sr.clip = sheep;
+        sr.Play();
     }
 
     public bool isPlayed()

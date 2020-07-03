@@ -36,7 +36,7 @@ public class RadTrigger : MonoBehaviour
         {
             health.isRad = true;
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
-            if (st != null) st.StopGeiger();
+            if (st != null) st.Stop();
         }
     }
 }

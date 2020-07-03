@@ -13,6 +13,7 @@ public class Stove : MonoBehaviour
     private PlayerClickMove player;
     private Slot meat;
     private FadePanel fade;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class Stove : MonoBehaviour
         gUI = FindObjectOfType<GUIScript>();
         player = FindObjectOfType<PlayerClickMove>();
         fade = FindObjectOfType<FadePanel>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     // Update is called once per frame
@@ -61,7 +63,8 @@ public class Stove : MonoBehaviour
             render.sprite = stoveOn;
             inv.RemoveOne(meat);
             fade.EnableImg(true);
-            Invoke("Cook", 2f);
+            sound.Cook();
+            Invoke("Cook", 2.3f);
         }
         else gUI.AddText("Stove is too far");
     }
