@@ -12,7 +12,6 @@ public class RadTrigger : MonoBehaviour
         health = collision.GetComponentInParent<Health>();
         if (health != null)
         {
-            health.isRad = true;
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
             if (st != null) st.StartGeiger();
         }
@@ -23,7 +22,7 @@ public class RadTrigger : MonoBehaviour
         health = collision.GetComponentInParent<Health>();
         if (health != null)
         {
-            health.isRad = true;
+            health.SetRad(true);
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
             if (st != null) if(!st.isPlayed()) st.StartGeiger();
         }
@@ -34,7 +33,6 @@ public class RadTrigger : MonoBehaviour
         health = collision.GetComponentInParent<Health>();
         if (health != null)
         {
-            health.isRad = true;
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
             if (st != null) st.Stop();
         }

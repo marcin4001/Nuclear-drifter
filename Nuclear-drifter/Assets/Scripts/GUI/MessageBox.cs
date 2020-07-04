@@ -71,7 +71,7 @@ public class MessageBox : MonoBehaviour
     private void SetProperty()
     {
         PropertyPlayer.property.currentHealth = playerHP.currentHealth;
-        PropertyPlayer.property.maxHealth = playerHP.maxHealth;
+        PropertyPlayer.property.maxHealth = playerHP.maxAfterRad;
         PropertyPlayer.property.isPoison = playerHP.isPoison;
         PropertyPlayer.property.isRad = playerHP.isRad;
 

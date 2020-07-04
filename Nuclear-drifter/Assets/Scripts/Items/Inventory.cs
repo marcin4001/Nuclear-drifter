@@ -194,9 +194,18 @@ public class Inventory : MonoBehaviour
             slots.Remove(_slot);
             SetItems();
             Sort();
+            bool isBag = false;
+            Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)move.GetPosPlayer(), 0.5f);
+            foreach(Collider2D c in col)
+            {
+                isBag = c.gameObject.name.StartsWith("bag") || isBag;
+            }
+            
             GameObject obj = Instantiate(bag, move.GetPosPlayer(), Quaternion.identity);
             ItemElement itemElement = obj.GetComponent<ItemElement>();
             if (itemElement != null) itemElement.item = newslot;
+            SpriteRenderer r = obj.GetComponent<SpriteRenderer>();
+            if (r != null) r.enabled = !isBag;
         }
         else
         {

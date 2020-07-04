@@ -9,9 +9,31 @@ public class Health : MonoBehaviour
 
     public bool isRad = false;
     public bool isPoison = false;
+    public int maxAfterRad = 0;
+
+
     public bool isFull()
     {
         return (currentHealth >= maxHealth);
+    }
+
+    public void SetRad(bool value)
+    {
+        
+        if(value)
+        {
+            if (!isRad)
+            {
+                maxAfterRad = maxHealth;
+                maxHealth = (int)(0.8f * maxHealth);
+                if (currentHealth > maxHealth) currentHealth = maxHealth;
+            }
+        }
+        else
+        {
+            maxHealth = maxAfterRad;
+        }
+        isRad = value;
     }
 
     public bool isDead()
@@ -45,6 +67,9 @@ public class Health : MonoBehaviour
         {
             maxHealth = points;
             currentHealth = maxHealth;
+            maxAfterRad = maxHealth;
+            isRad = false;
+            isPoison = false;
         }
 
     }

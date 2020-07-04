@@ -22,7 +22,7 @@ public class CarpetInterior : MonoBehaviour
         if (collision.tag == "Hero")
         {
             PropertyPlayer.property.currentHealth = playerHP.currentHealth;
-            PropertyPlayer.property.maxHealth = playerHP.maxHealth;
+            PropertyPlayer.property.maxHealth = playerHP.maxAfterRad;
             PropertyPlayer.property.isPoison = playerHP.isPoison;
             PropertyPlayer.property.isRad = playerHP.isRad;
 

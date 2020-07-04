@@ -29,9 +29,9 @@ public class FoodItem : Item
         {
             hp.AddHealth(addHP);
             if (healsPoison) hp.isPoison = false;
-            if (healsRad) hp.isRad = false;
+            if (healsRad) hp.SetRad(false);
             if (isPoison) hp.isPoison = true;
-            if (addRad) hp.isRad = true;
+            if (addRad) hp.SetRad(true);
         }
     }
 }
