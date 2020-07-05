@@ -19,7 +19,8 @@ public class SpawnPlayer : MonoBehaviour
         playerHP.maxHealth = PropertyPlayer.property.maxHealth;
         playerHP.maxAfterRad = PropertyPlayer.property.maxHealth;
         playerHP.SetRad(PropertyPlayer.property.isRad);
-        playerHP.isPoison = PropertyPlayer.property.isPoison;
+        playerHP.isPoison = false;
+        playerHP.SetPoison(PropertyPlayer.property.isPoison);
         //Debug.Log(PropertyPlayer.property.day);
         time.SetTime(PropertyPlayer.property.day, PropertyPlayer.property.hour, PropertyPlayer.property.minutes);
     }

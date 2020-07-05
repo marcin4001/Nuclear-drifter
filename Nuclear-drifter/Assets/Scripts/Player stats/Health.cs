@@ -36,6 +36,28 @@ public class Health : MonoBehaviour
         isRad = value;
     }
 
+    public void SetPoison(bool value)
+    {
+        if (value)
+        {
+            if (value != isPoison) StartCoroutine("Poisoned");
+        }
+        else
+        {
+            if (value != isPoison) StopCoroutine("Poisoned");
+        }
+        isPoison = value;
+    }
+
+    private IEnumerator Poisoned()
+    {
+        while (true)
+        {
+            if (currentHealth > 20) currentHealth -= 1;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
     public bool isDead()
     {
         return (currentHealth <= 0);

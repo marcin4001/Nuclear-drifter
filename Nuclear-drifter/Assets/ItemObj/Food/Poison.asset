@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Poison
   image: {fileID: -3889726742079457253, guid: fc9aff2a090f58141a8fb95c7af1b289, type: 3}
-  description: -50 HP, + Poison
+  description: + Poison
   value: 50
   idItem: 209
-  addHP: -50
+  addHP: 0
   healsPoison: 0
   healsRad: 0
   isPoison: 1
