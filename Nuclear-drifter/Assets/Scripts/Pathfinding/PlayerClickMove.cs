@@ -45,6 +45,7 @@ public class PlayerClickMove : MonoBehaviour
     private GUIScript gUI;
     public Node checkNode;
     private TypeScene typeSc;
+    private Health hp;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +58,7 @@ public class PlayerClickMove : MonoBehaviour
         gUI = FindObjectOfType<GUIScript>();
         Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
         typeSc = FindObjectOfType<TypeScene>();
+        hp = GetComponent<Health>();
     }
 
     public bool ObjIsNear(string tag, float r)
@@ -176,7 +178,7 @@ public class PlayerClickMove : MonoBehaviour
                 target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
                 checkNode = grid.NodeFromPoint(target.position);
 
-                if (checkNode.walkable) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
+                if (checkNode.walkable && !grid.isPlayerNode(target.position)) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(noWay, Vector2.one, CursorMode.ForceSoftware);
             }
             if(mode == Mouse_mode.use)
@@ -243,7 +245,7 @@ public class PlayerClickMove : MonoBehaviour
         else
         {
             Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
-            if (gUI.CursorOnSlot())
+            if (gUI.CursorOnSlot() && !hp.isDead())
             {
                 switch(modeGui)
                 {
@@ -304,5 +306,11 @@ public class PlayerClickMove : MonoBehaviour
         }
         anim.SetBool("walk", !stop);
 
+    }
+
+    public void Deathanim()
+    {
+        stop = true;
+        anim.SetTrigger("death");
     }
 }

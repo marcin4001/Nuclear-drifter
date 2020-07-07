@@ -30,6 +30,17 @@ public class FadePanel : MonoBehaviour
         if (imgOpacity != null) imgOpacity.enabled = value;
     }
 
+    public void EnableEndImg()
+    {
+        if (imgOpacity != null)
+        {
+            imgOpacity.enabled = true;
+            menu.activeEsc = false;
+            map.keyActive = false;
+            if (map.GetActive()) map.OpenMap();
+        }
+    }
+
     public void Fade(string method, GameObject obj)
     {
         objMethod = obj;

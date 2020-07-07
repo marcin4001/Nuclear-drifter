@@ -7,6 +7,15 @@ public class RadTrigger : MonoBehaviour
     public Health health;
     private SoundsTrigger st;
     public bool playerIsNear = false;
+    public float counter = 0.0f;
+    private float counterMax = 2.0f;
+    private bool death = false;
+    private TypeScene typeSc;
+
+    void Start()
+    {
+        typeSc = FindObjectOfType<TypeScene>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,6 +23,7 @@ public class RadTrigger : MonoBehaviour
         if (health != null)
         {
             playerIsNear = true;
+            typeSc.radZone = true;
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
             if (st != null) st.StartGeiger();
         }
@@ -21,11 +31,13 @@ public class RadTrigger : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        Debug.Log("Stay");
         health = collision.GetComponentInParent<Health>();
         if (health != null)
         {
             playerIsNear = true;
-            Invoke("SetRad", 2.5f);
+            if(!health.isRad)Invoke("SetRad", 2.5f);
+            typeSc.radZone = true;
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
             if (st != null) if(!st.isPlayed()) st.StartGeiger();
         }
@@ -36,6 +48,7 @@ public class RadTrigger : MonoBehaviour
         health = collision.GetComponentInParent<Health>();
         if (health != null)
         {
+            typeSc.radZone = false;
             playerIsNear = false;
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
             if (st != null) st.Stop();
@@ -45,5 +58,30 @@ public class RadTrigger : MonoBehaviour
     private void SetRad()
     {
         if(playerIsNear)health.SetRad(true);
+    }
+
+    void Update()
+    {
+        if(health != null)
+        {
+            if(playerIsNear && health.isRad && !health.isDead())
+            {
+                if(counter >= counterMax)
+                {
+                    health.Damage(20);
+                    counter = 0.0f;
+                }
+                else
+                {
+                    counter += Time.deltaTime;
+                }
+            }
+            if(health.isDead() && !death)
+            {
+                BadEnding ending = health.GetComponent<BadEnding>();
+                if (ending != null) ending.End();
+                death = true;
+            }
+        }
     }
 }

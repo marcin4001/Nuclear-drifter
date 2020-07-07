@@ -86,6 +86,13 @@ public class GridNode : MonoBehaviour
         }
     }
 
+    public bool isPlayerNode(Vector3 point)
+    {
+        playerN = NodeFromPoint(player.position);
+        Node n = NodeFromPoint(point);
+        return (playerN == n);
+    }
+
     private void OnDrawGizmos()
     {
         

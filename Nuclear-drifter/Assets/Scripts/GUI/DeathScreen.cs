@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class DeathScreen : MonoBehaviour
 {
     public bool active = false;
+    public Texture2D cursor;
     // Start is called before the first frame update
     void Start()
     {
         active = false;
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
         Invoke("SetActive", 1.5f);
     }
 

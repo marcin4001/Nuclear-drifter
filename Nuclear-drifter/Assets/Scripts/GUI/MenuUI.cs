@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class MenuUI : MonoBehaviour
 {
     public List<Slot> startSlots;
+    public Texture2D cursor;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     // Update is called once per frame

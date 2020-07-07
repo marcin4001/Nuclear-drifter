@@ -36,4 +36,9 @@ public class MapControl : MonoBehaviour
         gUI.blockGUI = actveMap;
         player.active = !actveMap;
     }
+
+    public bool GetActive()
+    {
+        return actveMap;
+    }
 }
