@@ -9,8 +9,12 @@ public class NPCBasic : MonoBehaviour
     public string city;
     [TextArea(2,3)]
     public string firstReply;
+    [TextArea(2, 3)]
+    public string cbReply;
+    private bool init = true;
     public DialogueModule[] modules;
     private DialogueController controller;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +33,15 @@ public class NPCBasic : MonoBehaviour
     public void Use()
     {
         controller.OpenDialogue(this);
+    }
+
+    public void SetInit()
+    {
+        init = false;
+    }
+
+    public bool GetInit()
+    {
+        return init;
     }
 }

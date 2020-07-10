@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogues:
   - choice: How are you?
     reply: Good. And you?
-    nextModule: 0
+    nextModule: 1
     mission: 0
   - choice: "\rWhere am I now?"
     reply: Now you are in Woodhill.
@@ -29,7 +29,7 @@ MonoBehaviour:
     reply: I'm a lumberjack
     nextModule: 0
     mission: 0
-  - choice: Do you have a wife?
-    reply: No, I'm a bachelor
-    nextModule: 0
+  - choice: Bye
+    reply: 
+    nextModule: -1
     mission: 0

@@ -8,4 +8,5 @@ public class TypeScene : MonoBehaviour
     public bool combatState = false;
     public bool inBox = false;
     public bool radZone = false;
+    public bool inMenu = false;
 }

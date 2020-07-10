@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     private GUIScript gUI;
     private PlayerClickMove player;
     public bool activeEsc = true;
+    private TypeScene typeSc;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class PauseMenu : MonoBehaviour
         player = FindObjectOfType<PlayerClickMove>();
         exitMsgCanvas.enabled = false;
         Time.timeScale = 1.0f;
+        typeSc = FindObjectOfType<TypeScene>();
     }
 
     // Update is called once per frame
@@ -45,8 +47,16 @@ public class PauseMenu : MonoBehaviour
             gUI.blockGUI = activeMenu;
             mc.keyActive = !activeMenu;
             player.active = !activeMenu;
-            if (activeMenu) Time.timeScale = 0.0f;
-            else Time.timeScale = 1.0f;
+            if (activeMenu)
+            {
+                Time.timeScale = 0.0f;
+                //typeSc.inMenu = true;
+            }
+            else
+            {
+                Time.timeScale = 1.0f;
+                //typeSc.inMenu = false;
+            }
         }
     }
 

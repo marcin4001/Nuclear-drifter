@@ -62,7 +62,16 @@ public class DialogueController : MonoBehaviour
             nameText.text = npc.nameNPC;
             jobText.text = npc.job;
             cityText.text = npc.city;
-            replyText.text = npc.firstReply;
+            if(npc.GetInit())
+            {
+                replyText.text = npc.firstReply;
+                npc.SetInit();
+            }
+            else
+            {
+                replyText.text = npc.cbReply;
+            }
+            
             DialogueModule module = npc.modules[0];
             for(int i = 0; i < choices.Length; i++)
             {
@@ -82,6 +91,11 @@ public class DialogueController : MonoBehaviour
     {
         if (npc != null)
         {
+            if(d.nextModule >= npc.modules.Length  || d.nextModule < 0)
+            {
+                Close();
+                return;
+            }
             replyText.text = d.reply;
             DialogueModule module = npc.modules[d.nextModule];
             for (int i = 0; i < choices.Length; i++)

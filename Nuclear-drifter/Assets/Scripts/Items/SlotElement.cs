@@ -58,14 +58,16 @@ public class SlotElement : MonoBehaviour
                     {
                         if (itemSlot.itemElement.GetItemType() == ItemType.Food)
                         {
-                            if (!typeSc.radZone)
+                            if(typeSc.radZone && itemSlot.itemElement.idItem == 211)
                             {
-                                FoodItem food = (FoodItem)itemSlot.itemElement;
-                                food.SetHP(gUI.playerHealth);
-                                itemSlot.itemElement.Use();
-                                inv.RemoveOne(itemSlot);
+                                gUI.AddText("It won't help me now");
+                                return;
                             }
-                            else gUI.AddText("It won't help me now");
+                            FoodItem food = (FoodItem)itemSlot.itemElement;
+                            food.SetHP(gUI.playerHealth);
+                            itemSlot.itemElement.Use();
+                            inv.RemoveOne(itemSlot);
+
                         }
                         else if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
                         {

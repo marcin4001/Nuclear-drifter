@@ -76,6 +76,10 @@ public class RadTrigger : MonoBehaviour
                     counter += Time.deltaTime;
                 }
             }
+            else
+            {
+                counter = 0.0f;
+            }
             if(health.isDead() && !death)
             {
                 BadEnding ending = health.GetComponent<BadEnding>();
