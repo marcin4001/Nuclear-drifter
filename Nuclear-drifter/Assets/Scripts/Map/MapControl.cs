@@ -10,12 +10,15 @@ public class MapControl : MonoBehaviour
     private GUIScript gUI;
     private PlayerClickMove player;
     public bool keyActive = true;
+    private TypeScene typeSc;
+
     // Start is called before the first frame update
     void Start()
     {
         mapCanvas.enabled = false;
         mapCam.enabled = false;
         gUI = FindObjectOfType<GUIScript>();
+        typeSc = FindObjectOfType<TypeScene>();
         player = FindObjectOfType<PlayerClickMove>();
     }
 
@@ -35,6 +38,7 @@ public class MapControl : MonoBehaviour
         mapCanvas.enabled = actveMap;
         gUI.blockGUI = actveMap;
         player.active = !actveMap;
+        typeSc.SetInMenu();
     }
 
     public bool GetActive()

@@ -18,6 +18,7 @@ public class DialogueController : MonoBehaviour
     public Text replyText;
     public DialChoice[] choices;
     public bool active = false;
+    private TypeScene typeSc;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class DialogueController : MonoBehaviour
         map = FindObjectOfType<MapControl>();
         menu = FindObjectOfType<PauseMenu>();
         dialCanvas.enabled = false;
+        typeSc = FindObjectOfType<TypeScene>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class DialogueController : MonoBehaviour
         map.keyActive = true;
         menu.activeEsc = true;
         active = false;
+        typeSc.SetInMenu();
     }
 
     public void OpenDialogue(NPCBasic _NPC)
@@ -51,8 +54,9 @@ public class DialogueController : MonoBehaviour
         map.keyActive = false;
         menu.activeEsc = false;
         active = true;
+        typeSc.SetInMenu();
         SetDialogueStart();
-
+        
     }
 
     private void SetDialogueStart()

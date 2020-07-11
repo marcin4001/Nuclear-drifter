@@ -57,6 +57,7 @@ public class PauseMenu : MonoBehaviour
                 Time.timeScale = 1.0f;
                 //typeSc.inMenu = false;
             }
+            typeSc.SetInMenu();
         }
     }
 
@@ -77,4 +78,8 @@ public class PauseMenu : MonoBehaviour
         exitMsgCanvas.enabled = false;
     }
 
+    public bool GetActive()
+    {
+        return activeMenu;
+    }
 }
