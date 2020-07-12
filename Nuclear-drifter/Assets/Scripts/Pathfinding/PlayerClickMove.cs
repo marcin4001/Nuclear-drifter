@@ -62,6 +62,12 @@ public class PlayerClickMove : MonoBehaviour
         hp = GetComponent<Health>();
     }
 
+    public void SetDir(Vector2 pos)
+    {
+        anim.SetFloat("moveX", pos.x);
+        anim.SetFloat("moveY", pos.y);
+    }
+
     public bool ObjIsNear(string tag, float r)
     {
         bool result = false;

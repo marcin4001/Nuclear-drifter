@@ -44,6 +44,7 @@ public class DialogueController : MonoBehaviour
         map.keyActive = true;
         menu.activeEsc = true;
         active = false;
+        
         typeSc.SetInMenu();
     }
 
@@ -76,7 +77,7 @@ public class DialogueController : MonoBehaviour
                 replyText.text = npc.cbReply;
             }
             
-            DialogueModule module = npc.modules[0];
+            DialogueModule module = npc.modules[npc.startIndex];
             for(int i = 0; i < choices.Length; i++)
             {
                 if(i < module.dialogues.Length)
@@ -100,8 +101,10 @@ public class DialogueController : MonoBehaviour
                 Close();
                 return;
             }
+            int index = d.nextModule;
+            if (index == 0) index = npc.startIndex;
             replyText.text = d.reply;
-            DialogueModule module = npc.modules[d.nextModule];
+            DialogueModule module = npc.modules[index];
             for (int i = 0; i < choices.Length; i++)
             {
                 if (i < module.dialogues.Length)
