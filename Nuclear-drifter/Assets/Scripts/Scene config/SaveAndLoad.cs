@@ -48,5 +48,32 @@ public class SaveAndLoad : MonoBehaviour
             JsonUtility.FromJsonOverwrite(read, inv);
         }
     }
-    
+
+    public static void SaveTemp(NPCList listNPC)
+    {
+        string path = Path.Combine(Application.persistentDataPath, "saveTemp");
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+        string fileName = SceneManager.GetActiveScene().name + "NPC.json";
+        string savePath = Path.Combine(path, fileName);
+        string write = JsonUtility.ToJson(listNPC);
+        //Debug.Log(write);
+        File.WriteAllText(savePath, write);
+    }
+
+    public static void LoadTemp(NPCList listNPC)
+    {
+        string path = Path.Combine(Application.persistentDataPath, "saveTemp");
+        string fileName = SceneManager.GetActiveScene().name + "NPC.json";
+        string loadPath = Path.Combine(path, fileName);
+        if (File.Exists(loadPath))
+        {
+            Debug.Log("Save Exist");
+            string read = File.ReadAllText(loadPath);
+            JsonUtility.FromJsonOverwrite(read, listNPC);
+        }
+    }
+
 }

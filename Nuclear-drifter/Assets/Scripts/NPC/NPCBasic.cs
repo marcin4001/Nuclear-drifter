@@ -19,6 +19,8 @@ public class NPCBasic : MonoBehaviour
     
     private GUIScript gUI;
     private ChangeDirectionNPC dir;
+    private NPCList listNPC;
+    public int indexNPC;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,14 @@ public class NPCBasic : MonoBehaviour
         player = FindObjectOfType<PlayerClickMove>();
         gUI = FindObjectOfType<GUIScript>();
         dir = GetComponent<ChangeDirectionNPC>();
+        listNPC = FindObjectOfType<NPCList>();
+        if(listNPC != null)
+        {
+            NPCElement data = listNPC.GetNPC(indexNPC);
+            init = data.init;
+            startIndex = data.startIndex;
+            data.npcName = nameNPC;
+        }
     }
 
     public void ShowText()
@@ -36,9 +46,9 @@ public class NPCBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.O) && !controller.active)
+        //if (Input.GetKeyDown(KeyCode.O) && !controller.active)
         //{
-        //    Use();
+        //    SetStartIndex(1);
         //}
     }
 
@@ -68,6 +78,13 @@ public class NPCBasic : MonoBehaviour
     public void SetInit()
     {
         init = false;
+        if (listNPC != null) listNPC.SetNPC(indexNPC, init, startIndex);
+    }
+
+    public void SetStartIndex(int index)
+    {
+        startIndex = index;
+        if (listNPC != null) listNPC.SetNPC(indexNPC, init, index);
     }
 
     public bool GetInit()
