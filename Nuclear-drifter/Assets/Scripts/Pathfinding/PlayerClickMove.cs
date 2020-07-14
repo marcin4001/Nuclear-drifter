@@ -47,6 +47,8 @@ public class PlayerClickMove : MonoBehaviour
     public Node checkNode;
     private TypeScene typeSc;
     private Health hp;
+    public GameObject sqrLocPref;
+    private GameObject sqrLoc;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,10 @@ public class PlayerClickMove : MonoBehaviour
         Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
         typeSc = FindObjectOfType<TypeScene>();
         hp = GetComponent<Health>();
+        if(sqrLocPref != null)
+        {
+            sqrLoc = Instantiate(sqrLocPref);
+        }
     }
 
     public void SetDir(Vector2 pos)
@@ -183,6 +189,10 @@ public class PlayerClickMove : MonoBehaviour
             if (mode == Mouse_mode.move)
             {
                 target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
+                if (sqrLoc != null) {
+                    sqrLoc.transform.position = target.position;
+                    sqrLoc.SetActive(true);
+                }
                 checkNode = grid.NodeFromPoint(target.position);
 
                 if (checkNode.walkable && !grid.isPlayerNode(target.position)) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
@@ -190,6 +200,7 @@ public class PlayerClickMove : MonoBehaviour
             }
             if(mode == Mouse_mode.use)
             {
+                if (sqrLoc != null) sqrLoc.SetActive(false);
                 bool isItems = false;
                 bool isNPC = false;
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
@@ -204,6 +215,7 @@ public class PlayerClickMove : MonoBehaviour
             }
             if (mode == Mouse_mode.look)
             {
+                if (sqrLoc != null) sqrLoc.SetActive(false);
                 bool isObstacle = false;
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 if (nodes.Length == 0) isObstacle = true;
@@ -254,6 +266,7 @@ public class PlayerClickMove : MonoBehaviour
         }
         else
         {
+            if (sqrLoc != null) sqrLoc.SetActive(false);
             Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
             if (gUI.CursorOnSlot() && !hp.isDead() && !typeSc.inMenu)
             {
