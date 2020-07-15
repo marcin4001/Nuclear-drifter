@@ -16,20 +16,35 @@ MonoBehaviour:
   - choice: How are you?
     reply: Good. And you?
     nextModule: 1
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
   - choice: "\rWhere am I now?"
     reply: Now you are in Woodhill.
     nextModule: 0
-    mission: 0
-  - choice: How old are you?
-    reply: I am 45 years old.
-    nextModule: 0
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+  - choice: Do you have any job for me?
+    reply: Yes, I need 12 logs of wood. Can you bring them to me?
+    nextModule: 2
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
   - choice: "\rWhat is your job?"
     reply: I'm a lumberjack
     nextModule: 0
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
   - choice: Bye
     reply: 
     nextModule: -1
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0

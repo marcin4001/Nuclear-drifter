@@ -10,6 +10,7 @@ public class DialogueController : MonoBehaviour
     private MapControl map;
     private PauseMenu menu;
     public NPCBasic npc;
+    public MissionNPC mission;
 
     public Text nameText;
     public Text jobText;
@@ -51,6 +52,7 @@ public class DialogueController : MonoBehaviour
     public void OpenDialogue(NPCBasic _NPC)
     {
         npc = _NPC;
+        mission = _NPC.GetMission();
         dialCanvas.enabled = true;
         map.keyActive = false;
         menu.activeEsc = false;
@@ -100,6 +102,11 @@ public class DialogueController : MonoBehaviour
             {
                 Close();
                 return;
+            }
+            if(d.missionStart)
+            {
+                npc.SetStartIndex(d.nextModule);
+                if (mission != null) mission.StartMission(d.startIdMission);
             }
             int index = d.nextModule;
             if (index == 0) index = npc.startIndex;

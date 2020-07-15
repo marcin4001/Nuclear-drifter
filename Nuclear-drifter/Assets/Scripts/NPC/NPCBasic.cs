@@ -21,6 +21,7 @@ public class NPCBasic : MonoBehaviour
     private ChangeDirectionNPC dir;
     private NPCList listNPC;
     public int indexNPC;
+    private MissionNPC mission;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class NPCBasic : MonoBehaviour
             startIndex = data.startIndex;
             data.npcName = nameNPC;
         }
+        mission = GetComponent<MissionNPC>();
     }
 
     public void ShowText()
@@ -90,5 +92,10 @@ public class NPCBasic : MonoBehaviour
     public bool GetInit()
     {
         return init;
+    }
+
+    public MissionNPC GetMission()
+    {
+        return mission;
     }
 }

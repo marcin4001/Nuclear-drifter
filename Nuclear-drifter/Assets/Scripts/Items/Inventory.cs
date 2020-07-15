@@ -158,6 +158,45 @@ public class Inventory : MonoBehaviour
         return slots.Find(x => x.itemElement.idItem == id);
     }
 
+    public bool CheckAccessItem(Slot _slot)
+    {
+        Slot temp = FindItem(_slot.itemElement.idItem);
+        if(temp != null)
+        {
+            if(temp.amountItem >= _slot.amountItem)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void RemoveFew(Slot _slot)
+    {
+        Slot temp = FindItem(_slot.itemElement.idItem);
+        if (temp != null)
+        {
+            int sub = temp.amountItem - _slot.amountItem;
+            if(sub <= 0)
+            {
+                RemoveAll(temp);
+            }
+            else
+            {
+                Slot newItem = new Slot(temp.itemElement, sub, temp.ammo);
+                RemoveAll(temp);
+                Add(newItem);
+            }
+        }
+    }
+
     public bool FindItemB(int id)
     {
         return slots.Exists(x => x.itemElement.idItem == id);
@@ -247,12 +286,18 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            Add(testSlot);
-            Debug.Log("IsFull: " + IsFull());
-            Debug.Log("IsEmpty: " + isEmpty());
+        //if(Input.GetKeyDown(KeyCode.S))
+        //{
+        //    Add(testSlot);
+        //    Debug.Log("IsFull: " + IsFull());
+        //    Debug.Log("IsEmpty: " + isEmpty());
             
-        }
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.B))
+        //{
+        //    Debug.Log(CheckAccessItem(testSlot));
+        //    RemoveFew(testSlot);
+        //}
     }
 }

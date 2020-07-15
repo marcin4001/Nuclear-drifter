@@ -10,4 +10,10 @@ public class MissionObj
     public string location;
     public bool start;
     public bool complete;
+
+    public void ResetObj()
+    {
+        start = false;
+        complete = false;
+    }
 }

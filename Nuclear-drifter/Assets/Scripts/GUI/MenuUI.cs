@@ -48,6 +48,12 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.foundArea[0] = true;
 
         PropertyPlayer.property.inv = startSlots;
+
+        foreach(MissionObj mission in MissionList.global.missions)
+        {
+            mission.ResetObj();
+        }
+
         SaveAndLoad.NewGame();
     }
 }
