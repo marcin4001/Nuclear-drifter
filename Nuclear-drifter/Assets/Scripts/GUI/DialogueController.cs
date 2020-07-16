@@ -78,7 +78,7 @@ public class DialogueController : MonoBehaviour
             {
                 replyText.text = npc.cbReply;
             }
-            
+            if (mission != null) mission.CheckMission();
             DialogueModule module = npc.modules[npc.startIndex];
             for(int i = 0; i < choices.Length; i++)
             {
@@ -105,8 +105,11 @@ public class DialogueController : MonoBehaviour
             }
             if(d.missionStart)
             {
-                npc.SetStartIndex(d.nextModule);
                 if (mission != null) mission.StartMission(d.startIdMission);
+            }
+            if (d.missionEnd)
+            {
+                if (mission != null) mission.CompleteMission(d.endIdMission);
             }
             int index = d.nextModule;
             if (index == 0) index = npc.startIndex;

@@ -186,12 +186,12 @@ public class Inventory : MonoBehaviour
             int sub = temp.amountItem - _slot.amountItem;
             if(sub <= 0)
             {
-                RemoveAll(temp);
+                RemoveAllUni(temp);
             }
             else
             {
                 Slot newItem = new Slot(temp.itemElement, sub, temp.ammo);
-                RemoveAll(temp);
+                RemoveAllUni(temp);
                 Add(newItem);
             }
         }
@@ -223,6 +223,13 @@ public class Inventory : MonoBehaviour
             if (_slot.ammo > 0) _slot.ammo--;
             else gUI.AddText("Ammo is over!");
         }
+    }
+
+    public void RemoveAllUni(Slot _slot)
+    {
+        slots.Remove(_slot);
+        SetItems();
+        Sort();
     }
 
     public void RemoveAll(Slot _slot)

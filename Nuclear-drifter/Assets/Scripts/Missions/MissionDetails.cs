@@ -7,6 +7,7 @@ public class MissionDetails
     public int id;
     public int dialogSuccess;
     public int dialogNormal;
+    public int dialogComplete;
 
     public Slot slotItem;
     public bool needItem;
