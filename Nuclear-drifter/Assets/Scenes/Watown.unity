@@ -5185,6 +5185,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 93d7c9df72267d14ca06b38da63941f0,
         type: 2}
+    - target: {fileID: 4474145739301599492, guid: 9b45753961987974b821aa89d2d43c09,
+        type: 3}
+      propertyPath: saveItem
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4474145739301599494, guid: 9b45753961987974b821aa89d2d43c09,
         type: 3}
       propertyPath: m_Sprite
@@ -6908,6 +6913,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}
+      propertyPath: freeItems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
+        type: 3}
       propertyPath: boxes.Array.data[0].eqSlots.Array.data[0].itemElement
       value: 
       objectReference: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0,
@@ -7058,6 +7068,17 @@ PrefabInstance:
         type: 3}
       propertyPath: boxes.Array.data[0].eqSlots.Array.data[1].ammo
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
+        type: 3}
+      propertyPath: freeItems.Array.data[0].itemElement
+      value: 
+      objectReference: {fileID: 11400000, guid: 93d7c9df72267d14ca06b38da63941f0,
+        type: 2}
+    - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
+        type: 3}
+      propertyPath: freeItems.Array.data[0].amountItem
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7553442579539617957, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}

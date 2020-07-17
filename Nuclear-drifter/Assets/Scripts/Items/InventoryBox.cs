@@ -5,20 +5,23 @@ using UnityEngine;
 public class InventoryBox : MonoBehaviour
 {
     public EqBox[] boxes;
+    public Slot[] freeItems;
 
     void Awake()
     {
         SaveAndLoad.LoadTemp(this);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public Slot GetFreeItem(int index)
     {
-        
+        if(freeItems.Length > 0)
+        {
+            if (index >= 0 && index < freeItems.Length)
+            {
+                return freeItems[index];
+            }
+            else return null;
+        }
+        else return null;
     }
 }

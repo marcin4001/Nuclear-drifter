@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class ItemElement : MonoBehaviour
 {
+    public bool saveItem = false;
+    public int indexItem = 0;
     public Slot item;
     private GUIScript gUI;
     private Inventory inv;
     private PlayerClickMove player;
+    private InventoryBox invBox;
     // Start is called before the first frame update
     void Start()
     {
         gUI = FindObjectOfType<GUIScript>();
         inv = FindObjectOfType<Inventory>();
         player = FindObjectOfType<PlayerClickMove>();
+        invBox = FindObjectOfType<InventoryBox>();
+        if(saveItem)
+        {
+            item = invBox.GetFreeItem(indexItem);
+            if(item != null)
+            {
+                if (item.amountItem <= 0) Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void ShowText()
@@ -35,6 +51,7 @@ public class ItemElement : MonoBehaviour
                     bool result = inv.Add(item);
                     if (result)
                     {
+                        item.amountItem = 0;
                         Destroy(gameObject);
                     }
                 }
