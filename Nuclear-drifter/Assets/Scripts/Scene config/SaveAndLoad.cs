@@ -76,4 +76,13 @@ public class SaveAndLoad : MonoBehaviour
         }
     }
 
+    public static void CloseGame()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "saveTemp");
+        if (Directory.Exists(path))
+        {
+            Directory.Delete(path, true);
+        }
+    }
+
 }

@@ -69,6 +69,7 @@ public class PauseMenu : MonoBehaviour
 
     public void YesButton()
     {
+        SaveAndLoad.CloseGame();
         SceneManager.LoadScene(0);
     }
 

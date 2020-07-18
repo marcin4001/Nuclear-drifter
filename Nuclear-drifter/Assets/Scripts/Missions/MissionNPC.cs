@@ -7,11 +7,13 @@ public class MissionNPC : MonoBehaviour
     public MissionDetails[] mission;
     private Inventory inv;
     private NPCBasic npc;
+    private MissionPrize prize;
     // Start is called before the first frame update
     void Start()
     {
         inv = FindObjectOfType<Inventory>();
         npc = GetComponent<NPCBasic>();
+        prize = GetComponent<MissionPrize>();
     }
 
     public MissionDetails GetMission(int id)
@@ -40,6 +42,10 @@ public class MissionNPC : MonoBehaviour
                 inv.RemoveFew(m.slotItem);
                 npc.SetStartIndex(m.dialogComplete);
             }
+        }
+        if(prize != null)
+        {
+            prize.GivePrize(id);
         }
     }
 
