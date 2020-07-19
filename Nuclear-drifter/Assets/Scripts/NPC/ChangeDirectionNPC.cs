@@ -14,13 +14,14 @@ public class ChangeDirectionNPC : MonoBehaviour
     void Start()
     {
         renderSp = GetComponent<SpriteRenderer>();
+        prevState = renderSp.sprite;
     }
 
     public void SetDir(Vector2 pos)
     {
         int x = Mathf.RoundToInt(pos.x);
         int y = Mathf.RoundToInt(pos.y);
-        prevState = renderSp.sprite;
+        
         Debug.Log("x: " + x + " y: " + y);
 
         if(x > 0)
