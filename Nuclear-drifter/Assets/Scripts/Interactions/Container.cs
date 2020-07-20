@@ -50,4 +50,10 @@ public class Container : MonoBehaviour
             controller.Open(indexEq, indexBackground);
         else gUI.AddText("The " + nameObj + " is too far");
     }
+
+    public void LockOpen()
+    {
+        isLocked = false;
+        controller.SetKeyUse(indexEq);
+    }
 }

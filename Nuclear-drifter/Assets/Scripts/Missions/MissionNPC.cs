@@ -8,12 +8,14 @@ public class MissionNPC : MonoBehaviour
     private Inventory inv;
     private NPCBasic npc;
     private MissionPrize prize;
+    private MissionStart startM;
     // Start is called before the first frame update
     void Start()
     {
         inv = FindObjectOfType<Inventory>();
         npc = GetComponent<NPCBasic>();
         prize = GetComponent<MissionPrize>();
+        startM = GetComponent<MissionStart>();
     }
 
     public MissionDetails GetMission(int id)
@@ -29,6 +31,10 @@ public class MissionNPC : MonoBehaviour
     {
         MissionList.global.missions[id].start = true;
         CheckMission();
+        if(startM != null)
+        {
+            startM.Init(id);
+        }
     }
 
     public void CompleteMission(int id)

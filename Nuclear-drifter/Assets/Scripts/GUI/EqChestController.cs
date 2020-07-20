@@ -49,7 +49,7 @@ public class EqChestController : MonoBehaviour
 
     public void SetKeyUse(int index)
     {
-        inventoryBox.boxes[index].useKey = true;
+       if(index >= 0 && index < inventoryBox.boxes.Length) inventoryBox.boxes[index].useKey = true;
     }
     public void Close()
     {
