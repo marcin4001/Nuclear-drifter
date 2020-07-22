@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Sarah2
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: Where is New Tolham?
+    reply: New Tolham is a few hours north of Woodhill. My older brother Joshua is
+      the ruler of this settlement.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: Where is Watown?
+    reply: Watown is northeast of here. It's a little further than New Tolham. The
+      settlement is ruled by my eldest brother Michael. Between Watown and Woodhill
+      is The Stone Earl Inn. You can eat well there.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: How long have you ruled the settlement?
+    reply: I've been in charge of the settlement for over 40 years since my father
+      went south. So far I have been doing well despite my age.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: Goodbye
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0

@@ -14,4 +14,5 @@ public class Dialogue
     public int startIdMission = 0;
     public bool missionEnd = false;
     public int endIdMission = 0;
+    public bool changeStartIndex;
 }
