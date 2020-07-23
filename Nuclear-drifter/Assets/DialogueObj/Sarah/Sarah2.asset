@@ -41,6 +41,15 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+  - choice: Do you have any work for me?
+    reply: No, but ask the other settlers. Maybe they will find something to do for
+      you.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
   - choice: Goodbye
     reply: 
     nextModule: -1

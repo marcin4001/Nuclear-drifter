@@ -103,6 +103,10 @@ public class DialogueController : MonoBehaviour
                 Close();
                 return;
             }
+            if(d.changeStartIndex)
+            {
+                npc.SetStartIndex(d.nextModule);
+            }
             if(d.missionStart)
             {
                 if (mission != null) mission.StartMission(d.startIdMission);

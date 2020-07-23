@@ -5067,6 +5067,9 @@ MonoBehaviour:
   - npcName: 
     init: 1
     startIndex: 0
+  - npcName: 
+    init: 1
+    startIndex: 0
 --- !u!4 &541945119
 Transform:
   m_ObjectHideFlags: 0
@@ -10100,7 +10103,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 96fe936ae8447dd42aa1d7c61118dcb2, type: 2}
   - {fileID: 11400000, guid: 261912a9809acad4b8a6239770d98bba, type: 2}
   startIndex: 0
-  indexNPC: 0
+  indexNPC: 1
 --- !u!114 &1455124840630142186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10513,6 +10516,7 @@ GameObject:
   - component: {fileID: 3514208034024519770}
   - component: {fileID: 4868275026358363796}
   - component: {fileID: 8865784879873131033}
+  - component: {fileID: 6713070094242291068}
   m_Layer: 0
   m_Name: Sarah_78
   m_TagString: NPC
@@ -10520,6 +10524,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6713070094242291068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6713070094242291067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309b51a9f3c1a5c44a61e96a33dbb795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameNPC: Sarah
+  job: Woodhill elder
+  city: Woodhill
+  firstReply: Hello traveler. Everyone in the settlement is talking about your arrival.
+    I'm Sarah, I'm Woodhill elder. Woodhill was founded 60 years ago by my father.
+    After my father left the settlement, I started to rule Woodhill. What brings
+    you to the me?
+  cbReply: Welcome back my son. What brings you to the me?
+  modules:
+  - {fileID: 11400000, guid: df220f9f3e2fd1a4390876f4acf688f1, type: 2}
+  - {fileID: 11400000, guid: 885fe8c58997f0447aeaaa58f3acf11f, type: 2}
+  startIndex: 0
+  indexNPC: 0
 --- !u!4 &6724402953380441748
 Transform:
   m_ObjectHideFlags: 0
