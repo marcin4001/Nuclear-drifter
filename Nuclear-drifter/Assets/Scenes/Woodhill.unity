@@ -10438,6 +10438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission:
   - id: 1
+    type: 0
     dialogSuccess: 2
     dialogNormal: 2
     dialogComplete: 2
@@ -10446,7 +10447,9 @@ MonoBehaviour:
       amountItem: 0
       ammo: 0
     needItem: 0
+    indexDevice: 0
   - id: 2
+    type: 0
     dialogSuccess: 3
     dialogNormal: 2
     dialogComplete: 2
@@ -10455,6 +10458,7 @@ MonoBehaviour:
       amountItem: 10
       ammo: 0
     needItem: 1
+    indexDevice: 0
 --- !u!114 &1455124840630142187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10635,6 +10639,7 @@ GameObject:
   - component: {fileID: 158102873737954599}
   - component: {fileID: 2599056883823974983}
   - component: {fileID: 2599056883823974982}
+  - component: {fileID: 2599056883823974984}
   m_Layer: 0
   m_Name: Noah_52
   m_TagString: NPC
@@ -10656,6 +10661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission:
   - id: 3
+    type: 0
     dialogSuccess: 2
     dialogNormal: 1
     dialogComplete: 3
@@ -10664,15 +10670,18 @@ MonoBehaviour:
       amountItem: 1
       ammo: 0
     needItem: 1
+    indexDevice: 0
   - id: 4
-    dialogSuccess: 3
+    type: 1
+    dialogSuccess: 4
     dialogNormal: 3
-    dialogComplete: 3
+    dialogComplete: 5
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
     needItem: 0
+    indexDevice: 0
 --- !u!114 &2599056883823974983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10695,8 +10704,31 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed989a4876d6bed47b38bf2a3123a402, type: 2}
   - {fileID: 11400000, guid: 95affd5a1c536474c883a07975764258, type: 2}
   - {fileID: 11400000, guid: cf383ad4589fd704c90c43023afb669d, type: 2}
+  - {fileID: 11400000, guid: 84ea50092dc118946b49e5e19dc8fcdc, type: 2}
+  - {fileID: 11400000, guid: ea51a67b65b28a84b9b1bdf030afc392, type: 2}
   startIndex: 0
   indexNPC: 2
+--- !u!114 &2599056883823974984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599056883823974981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c51dbb3ded77f498711cb54b5027c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizes:
+  - idMission: 4
+    itemPrize:
+      itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
+      amountItem: 50
+      ammo: 0
+    spawnPos: {x: 27, y: 11}
+    prefItem: {fileID: 7123670530575232170, guid: 786492bc87cb25e4aa460537d3c4f211,
+      type: 3}
 --- !u!4 &2623849268784703914
 Transform:
   m_ObjectHideFlags: 0

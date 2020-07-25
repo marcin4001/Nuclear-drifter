@@ -43,10 +43,10 @@ public class MissionNPC : MonoBehaviour
         MissionDetails m = GetMission(id);
         if(m != null)
         {
-            if(m.needItem)
+            npc.SetStartIndex(m.dialogComplete);
+            if (m.needItem)
             {
                 inv.RemoveFew(m.slotItem);
-                npc.SetStartIndex(m.dialogComplete);
             }
         }
         if(prize != null)
@@ -64,24 +64,65 @@ public class MissionNPC : MonoBehaviour
                 MissionObj m_obj = MissionList.global.missions[m.id];
                 if(m_obj.start && !m_obj.complete)
                 {
-                    if(m.needItem)
-                    {
-                        if(inv.CheckAccessItem(m.slotItem))
-                        {
-                            npc.SetStartIndex(m.dialogSuccess);
-                        }
-                        else
-                        {
-                            npc.SetStartIndex(m.dialogNormal);
-                        }
-                    }
-                    else
-                    {
-                        npc.SetStartIndex(m.dialogSuccess);
+                    switch(m.type){
+                        case MissionType.item:
+                            {
+                                ItemMission(m);
+                                break;
+                            }
+                        case MissionType.device:
+                            {
+                                DeviceMission(m);
+                                break;
+                            }
+                        default:
+                            {
+                                npc.SetStartIndex(m.dialogSuccess);
+                                break;
+                            }
                     }
                 }
             }
         }
     }
 
+    private void ItemMission(MissionDetails m)
+    {
+        if (m.needItem)
+        {
+            if (inv.CheckAccessItem(m.slotItem))
+            {
+                npc.SetStartIndex(m.dialogSuccess);
+            }
+            else
+            {
+                npc.SetStartIndex(m.dialogNormal);
+            }
+        }
+        else
+        {
+            npc.SetStartIndex(m.dialogSuccess);
+        }
+    }
+
+    private void DeviceMission(MissionDetails m)
+    {
+        DeviceElement device = DeviceList.global.GetDevice(m.indexDevice);
+        if(device != null)
+        {
+            if (device.repair)
+            {
+                npc.SetStartIndex(m.dialogSuccess);
+                Debug.Log("REPAIR");
+            }
+            else
+            {
+                npc.SetStartIndex(m.dialogNormal);
+            }
+        }
+        else
+        {
+            npc.SetStartIndex(m.dialogNormal);
+        }
+    }
 }

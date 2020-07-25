@@ -19,4 +19,14 @@ public class DeviceList : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public DeviceElement GetDevice(int index)
+    {
+        if (devices.Length == 0) return null;
+        if (index >= 0 && index < devices.Length)
+        {
+            return devices[index];
+        }
+        else return null;
+    }
 }
