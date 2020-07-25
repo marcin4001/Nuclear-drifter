@@ -42,6 +42,7 @@ public class PlayerClickMove : MonoBehaviour
     public Texture2D bin;
     public Texture2D all;
     public Texture2D head;
+    public Texture2D tool;
     public bool active = true;
     private GUIScript gUI;
     public Node checkNode;
@@ -136,7 +137,7 @@ public class PlayerClickMove : MonoBehaviour
         
         foreach(RaycastHit2D n in nodes)
         {
-            if(n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest" || n.collider.tag == "NPC")
+            if(n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest" || n.collider.tag == "NPC" || n.collider.tag == "Device")
             {
                 n.collider.SendMessage("Use", SendMessageOptions.DontRequireReceiver);
                 return;
@@ -203,14 +204,17 @@ public class PlayerClickMove : MonoBehaviour
                 if (sqrLoc != null) sqrLoc.SetActive(false);
                 bool isItems = false;
                 bool isNPC = false;
+                bool isDevice = false;
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 foreach(RaycastHit2D n in nodes)
                 {
                     if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest") isItems = true;
                     if (n.collider.tag == "NPC") isNPC = true;
+                    if (n.collider.tag == "Device") isDevice = true;
                 }
                 if (isItems) Cursor.SetCursor(hand, Vector2.zero, CursorMode.ForceSoftware);
                 else if(isNPC) Cursor.SetCursor(head, Vector2.zero, CursorMode.ForceSoftware);
+                else if(isDevice) Cursor.SetCursor(tool, Vector2.zero, CursorMode.ForceSoftware);
                 else Cursor.SetCursor(noUse, Vector2.zero, CursorMode.ForceSoftware);
             }
             if (mode == Mouse_mode.look)

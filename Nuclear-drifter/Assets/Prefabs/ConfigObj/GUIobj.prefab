@@ -1929,7 +1929,11 @@ MonoBehaviour:
     choice: 
     reply: 
     nextModule: 0
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
   textCh: {fileID: 654123369}
 --- !u!1 &487764286
 GameObject:
@@ -2323,7 +2327,11 @@ MonoBehaviour:
     choice: 
     reply: 
     nextModule: 0
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
   textCh: {fileID: 993214058}
 --- !u!1 &553781675
 GameObject:
@@ -3358,7 +3366,11 @@ MonoBehaviour:
     choice: 
     reply: 
     nextModule: 0
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
   textCh: {fileID: 2041500575}
 --- !u!1 &776640341
 GameObject:
@@ -4788,7 +4800,11 @@ MonoBehaviour:
     choice: 
     reply: 
     nextModule: 0
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
   textCh: {fileID: 1410284344}
 --- !u!1 &968450028
 GameObject:
@@ -9008,6 +9024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc: {fileID: 0}
+  mission: {fileID: 0}
   nameText: {fileID: 1078080639}
   jobText: {fileID: 155317988}
   cityText: {fileID: 956699641}
@@ -9730,7 +9747,7 @@ MonoBehaviour:
   testSlot:
     itemElement: {fileID: 11400000, guid: 3cbf4ca6fcdbff245a8c3c1d1ba08140, type: 2}
     amountItem: 1
-    ammo: 5
+    ammo: 0
   bag: {fileID: 5106078883047150909, guid: 43b10f9cbef987b428e1d519a18cfe29, type: 3}
 --- !u!1 &1921239842
 GameObject:
@@ -10975,7 +10992,11 @@ MonoBehaviour:
     choice: 
     reply: 
     nextModule: 0
-    mission: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
   textCh: {fileID: 616831325}
 --- !u!1 &4796775783076596540
 GameObject:
@@ -11129,6 +11150,7 @@ MonoBehaviour:
   closeDoor: {fileID: 8300000, guid: cac6fa9071dd3be4daeb6e4146fa245a, type: 3}
   stove: {fileID: 8300000, guid: 169584e7f5b849c41b986ff4c8bf5c01, type: 3}
   sheep: {fileID: 8300000, guid: 041af9d5e06acbb428da36998f7f73b7, type: 3}
+  tool: {fileID: 8300000, guid: 781ab862c2cefc4418e910d953458ee7, type: 3}
 --- !u!114 &1569108431
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip closeDoor;
     public AudioClip stove;
     public AudioClip sheep;
+    public AudioClip tool;
     private AudioSource sr;
    
     // Start is called before the first frame update
@@ -31,6 +32,11 @@ public class SoundsTrigger : MonoBehaviour
     public void CloseDoor()
     {
         sr.PlayOneShot(closeDoor);
+    }
+
+    public void UseTool()
+    {
+        sr.PlayOneShot(tool);
     }
 
     public void StartGeiger()

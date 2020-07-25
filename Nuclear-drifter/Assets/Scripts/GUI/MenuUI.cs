@@ -54,6 +54,11 @@ public class MenuUI : MonoBehaviour
             mission.ResetObj();
         }
 
+        foreach(DeviceElement device in DeviceList.global.devices)
+        {
+            device.Reset();
+        }
+
         SaveAndLoad.NewGame();
     }
 }
