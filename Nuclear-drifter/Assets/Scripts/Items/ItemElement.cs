@@ -7,6 +7,7 @@ public class ItemElement : MonoBehaviour
     public bool saveItem = false;
     public int indexItem = 0;
     public Slot item;
+    public float distance = 1.1f;
     private GUIScript gUI;
     private Inventory inv;
     private PlayerClickMove player;
@@ -46,7 +47,7 @@ public class ItemElement : MonoBehaviour
         {
             if (item.itemElement != null && item.amountItem > 0) {
 
-                if (player.ObjIsNearPlayer(transform.position, 1.1f))
+                if (player.ObjIsNearPlayer(transform.position, distance))
                 {
                     bool result = inv.Add(item);
                     if (result)
