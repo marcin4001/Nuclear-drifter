@@ -46,7 +46,8 @@ public class MissionNPC : MonoBehaviour
             npc.SetStartIndex(m.dialogComplete);
             if (m.needItem)
             {
-                inv.RemoveFew(m.slotItem);
+                if(!m.removeAll)inv.RemoveFew(m.slotItem);
+                else inv.RemoveAllId(m.slotItem.itemElement.idItem);
             }
         }
         if(prize != null)
@@ -113,7 +114,6 @@ public class MissionNPC : MonoBehaviour
             if (device.repair)
             {
                 npc.SetStartIndex(m.dialogSuccess);
-                Debug.Log("REPAIR");
             }
             else
             {

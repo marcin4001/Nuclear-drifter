@@ -197,6 +197,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveAllId(int id)
+    {
+        Slot temp = FindItem(id);
+        if (temp != null)
+        {
+            RemoveAllUni(temp);
+        }
+    }
     public bool FindItemB(int id)
     {
         return slots.Exists(x => x.itemElement.idItem == id);

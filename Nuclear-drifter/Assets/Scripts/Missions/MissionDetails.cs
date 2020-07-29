@@ -20,6 +20,7 @@ public class MissionDetails
 
     public Slot slotItem;
     public bool needItem;
-
+    public bool removeAll;
     public int indexDevice;
+    
 }
