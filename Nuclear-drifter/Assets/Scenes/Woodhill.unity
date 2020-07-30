@@ -9181,6 +9181,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6314170833527940842, guid: 47e0a6c0bf743eb4ca1dc1d4f1cc1a03,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6314170833551803208, guid: 47e0a6c0bf743eb4ca1dc1d4f1cc1a03,
         type: 3}
       propertyPath: m_Mesh
@@ -10859,6 +10864,7 @@ MonoBehaviour:
       amountItem: 0
       ammo: 0
     needItem: 0
+    removeAll: 0
     indexDevice: 0
   - id: 2
     type: 0
@@ -10870,6 +10876,7 @@ MonoBehaviour:
       amountItem: 10
       ammo: 0
     needItem: 1
+    removeAll: 0
     indexDevice: 0
 --- !u!114 &1455124840630142187
 MonoBehaviour:
@@ -11082,6 +11089,7 @@ MonoBehaviour:
       amountItem: 1
       ammo: 0
     needItem: 1
+    removeAll: 0
     indexDevice: 0
   - id: 4
     type: 1
@@ -11093,6 +11101,7 @@ MonoBehaviour:
       amountItem: 0
       ammo: 0
     needItem: 0
+    removeAll: 0
     indexDevice: 0
 --- !u!114 &2599056883823974983
 MonoBehaviour:

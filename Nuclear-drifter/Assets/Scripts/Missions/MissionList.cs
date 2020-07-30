@@ -19,4 +19,17 @@ public class MissionList : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public MissionObj GetMission(int id)
+    {
+        if (missions.Length == 0) return null;
+        if(id >= 0 && id < missions.Length)
+        {
+            return missions[id];
+        }
+        else
+        {
+            return null;
+        }
+    }
 }

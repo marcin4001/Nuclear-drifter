@@ -17,7 +17,7 @@ public class GridNode : MonoBehaviour
     private GameObject testGO;
     public List<Node> path;
     public Node playerN;
-    private void Start()
+    private void Awake()
     {
         nodeDiameter = nodeRadius * 2;
         gridSizeX = Mathf.RoundToInt(gridSize.x / nodeDiameter);
@@ -34,6 +34,12 @@ public class GridNode : MonoBehaviour
         //fourDirection[5] = new Vector2(-1, 1);
         //fourDirection[6] = new Vector2(-1, -1);
         //fourDirection[7] = new Vector2(1, -1);
+    }
+
+    public void SetWalkable(Vector3 point, bool value)
+    {
+        Node n = NodeFromPoint(point);
+        n.walkable = value;
     }
 
     public Node NodeFromPoint(Vector3 point)
