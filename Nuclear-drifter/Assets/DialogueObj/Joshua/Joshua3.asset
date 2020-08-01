@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Joshua3
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: Of course I'll do it for you!
+    reply: The contract is on the table. Just be nice to Jaxon. This guy doesn't
+      like strangers. He's a very busy man. Tell him I sent you to him. Then he'll
+      definitely want to talk to you.
+    nextModule: 0
+    missionStart: 1
+    startIdMission: 8
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: I don't have time for this right now. I'm sorry.
+    reply: Okay. I'll find myself another delivery man.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
