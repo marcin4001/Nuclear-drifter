@@ -21,6 +21,7 @@ public class NPCBasic : MonoBehaviour
     private ChangeDirectionNPC dir;
     private NPCList listNPC;
     public int indexNPC;
+    public float distance = 1.1f;
     private MissionNPC mission;
 
     // Start is called before the first frame update
@@ -62,7 +63,7 @@ public class NPCBasic : MonoBehaviour
     public void Use()
     {
         
-        if (player.ObjIsNearPlayer(transform.parent.position, 1.1f)) {
+        if (player.ObjIsNearPlayer(transform.parent.position, distance)) {
             if (dir != null)
             {
                 Vector3 dirNPC = player.transform.position - transform.parent.position;

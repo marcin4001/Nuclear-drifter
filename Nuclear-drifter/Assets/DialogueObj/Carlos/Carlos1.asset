@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Carlos1
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: How much is it per night?
+    reply: "The night is free in our hotel. Everything is paid for by the leader
+      of the settlement, Ashemo. Our hotel is the only hotel in this part of the
+      continent and there are few travellers. \rIt pays off for us. Choose your bed. "
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: Where did you get this suit?
+    reply: I found it in one of the suitcases. Before the war, there was a hotel
+      here, and suitcases with clothes were hidden in the ruins of the hotel. I found
+      it there.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: How old is this hotel?
+    reply: This hotel was founded 20 years ago by my father. After his death, I took
+      over the business.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: Goodbye
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
