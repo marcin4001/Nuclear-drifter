@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Tyler3
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: "\rYour wife is worried about you! Come back home!"
+    reply: "\rI don't give a shit! Get outta here."
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: "\rGo home and don't piss me off!"
+    reply: "\rI'm not staying here! Get outta here."
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: Come home or I'll hit you.
+    reply: "\rOk! Ok! I don't want to fight! I'm coming home already!"
+    nextModule: 0
+    missionStart: 1
+    startIdMission: 11
+    missionEnd: 1
+    endIdMission: 10
+    changeStartIndex: 0
