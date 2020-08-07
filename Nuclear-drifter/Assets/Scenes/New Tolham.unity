@@ -3432,6 +3432,9 @@ MonoBehaviour:
   - npcName: 
     init: 1
     startIndex: 0
+  - npcName: 
+    init: 1
+    startIndex: 0
 --- !u!4 &221965070
 Transform:
   m_ObjectHideFlags: 0
@@ -11136,6 +11139,8 @@ GameObject:
   - component: {fileID: 3058071636240153710}
   - component: {fileID: 6429763897429762720}
   - component: {fileID: 7042805205142750765}
+  - component: {fileID: 5160306912818649424}
+  - component: {fileID: 5160306912818649425}
   m_Layer: 0
   m_Name: Ashemo_78
   m_TagString: NPC
@@ -11143,6 +11148,57 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5160306912818649424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160306912818649423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309b51a9f3c1a5c44a61e96a33dbb795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameNPC: Ashemo
+  job: Leader
+  city: New Tolham
+  firstReply: Welcome a stranger to my house. My name is Ashemo. I am the leader
+    of this small settlement. How can I help you?
+  cbReply: Welcome back, stranger. How can I help you now?
+  modules:
+  - {fileID: 11400000, guid: 8cf278bafb1695a4486131132ff2fe55, type: 2}
+  - {fileID: 11400000, guid: 1caf240e105a6c344828cf68118161ed, type: 2}
+  - {fileID: 11400000, guid: 1ad156029a71cd444a091863ff2c94e7, type: 2}
+  - {fileID: 11400000, guid: 060c60f76172edd48aa6b5fc137e8c0a, type: 2}
+  startIndex: 0
+  indexNPC: 4
+  distance: 1.1
+--- !u!114 &5160306912818649425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160306912818649423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716f8e6e95694fb4ea12710b3abe6e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mission:
+  - id: 12
+    type: 0
+    dialogSuccess: 3
+    dialogNormal: 3
+    dialogComplete: 3
+    slotItem:
+      itemElement: {fileID: 0}
+      amountItem: 0
+      ammo: 0
+    needItem: 0
+    removeAll: 0
+    indexDevice: 0
 --- !u!4 &5180664314054601376
 Transform:
   m_ObjectHideFlags: 0

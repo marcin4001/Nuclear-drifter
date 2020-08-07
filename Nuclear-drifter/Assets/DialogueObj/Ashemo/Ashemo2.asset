@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Ashemo2
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: "\rWhere is Watown?"
+    reply: The Watown settlement is east of here. It's the largest settlement on
+      the continent. I'm sure you'll find it. The settlement is ruled by my brother
+      Joshua. He's gonna help you.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: Where is Yorkset?
+    reply: "The Yorkset settlement is northeast of here. It's a settlement by the
+      ocean. The arrogant Jaxon is the leader of this settlement. I advise you to
+      avoid this place for now. \rYou'd better go to Watown, young man.\n"
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: "\rTell me about New Tolham."
+    reply: New Tolham is a settlement by the ocean, which I founded many years ago.
+      Here you'll find a hotel with free rooms, a food market and the jason shepherd's
+      house. Besides, there's nothing interesting about it. If you want more attractions,
+      go to Watown.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: "\rCan I do something for you?"
+    reply: I have a job for a traveler. A month ago I ordered anti-radiation masks
+      from Moolow Isles. I need them for my people and guards because there's radiation
+      area north of here. I have to take care of the health of the people. Can you
+      get me that package?
+    nextModule: 2
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+  - choice: Goodbye
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
