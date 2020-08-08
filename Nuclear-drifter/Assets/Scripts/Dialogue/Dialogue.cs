@@ -15,4 +15,6 @@ public class Dialogue
     public bool missionEnd = false;
     public int endIdMission = 0;
     public bool changeStartIndex;
+    public bool isWorker = false;
+    public int workOpt = 0;
 }

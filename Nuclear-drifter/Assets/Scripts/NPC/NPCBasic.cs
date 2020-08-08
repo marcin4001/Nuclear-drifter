@@ -22,6 +22,7 @@ public class NPCBasic : MonoBehaviour
     private NPCList listNPC;
     public int indexNPC;
     public float distance = 1.1f;
+    public Job nPCJob;
     private MissionNPC mission;
 
     // Start is called before the first frame update
@@ -40,6 +41,7 @@ public class NPCBasic : MonoBehaviour
             data.npcName = nameNPC;
         }
         mission = GetComponent<MissionNPC>();
+        nPCJob = GetComponent<Job>();
     }
 
     public void ShowText()

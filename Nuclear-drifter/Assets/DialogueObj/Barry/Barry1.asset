@@ -21,6 +21,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 0
   - choice: A bottle of wine, please. ($20)
     reply: Please, your wine!
     nextModule: 0
@@ -29,6 +31,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 1
   - choice: "\rCan you give me information?"
     reply: Yes, what do you want to know?
     nextModule: 1
@@ -37,6 +41,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -45,3 +51,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

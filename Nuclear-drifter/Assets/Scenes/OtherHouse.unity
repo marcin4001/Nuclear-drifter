@@ -7488,6 +7488,7 @@ GameObject:
   - component: {fileID: 895868551460206393}
   - component: {fileID: 3812523054510789556}
   - component: {fileID: 1353551909358161111}
+  - component: {fileID: 1353551909358161112}
   m_Layer: 0
   m_Name: Barry_78
   m_TagString: NPC
@@ -7518,6 +7519,30 @@ MonoBehaviour:
   startIndex: 0
   indexNPC: 1
   distance: 1.6
+  nPCJob: {fileID: 0}
+--- !u!114 &1353551909358161112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353551909358161110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fba349bc9ffa204c9f0969a418f243d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - itemElement: {fileID: 11400000, guid: 1787d4aa3c1cadc45b56e5241d551b33, type: 2}
+    amountItem: 1
+    ammo: 0
+  - itemElement: {fileID: 11400000, guid: d6c65ffc3e656c74a8b094814263e5b8, type: 2}
+    amountItem: 1
+    ammo: 0
+  currency:
+    itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
+    amountItem: 1
+    ammo: 0
 --- !u!1001 &1544097684345113857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7839,6 +7864,7 @@ MonoBehaviour:
   startIndex: 0
   indexNPC: 0
   distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!114 &4130022295413045300
 MonoBehaviour:
   m_ObjectHideFlags: 0
