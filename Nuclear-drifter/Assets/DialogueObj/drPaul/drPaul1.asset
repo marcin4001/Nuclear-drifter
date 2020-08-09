@@ -22,6 +22,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Do you have a job for me?
     reply: Yeah, one of my patients was heavily irradiated.  Normal Rad Killers don't
       help him. He needs a special Rad Killer from type B mushrooms. Could you bring
@@ -32,6 +34,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Can you help me? I'm injured!
     reply: You don't overdo it. It's just a scratch. Nothing bad will happen to you.
     nextModule: 0
@@ -40,6 +44,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -48,3 +54,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

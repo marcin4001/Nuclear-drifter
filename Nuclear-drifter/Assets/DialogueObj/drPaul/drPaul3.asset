@@ -22,6 +22,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: "\rWhat are you doing here?"
     reply: I run a clinic in Watown. I treat people bitten by wild creatures and
       suffering from radiation sickness. If you need medical help, come to me.
@@ -31,6 +33,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Can you help me? I'm injured!
     reply: You don't overdo it. It's just a scratch. Nothing bad will happen to you.
     nextModule: 0
@@ -39,6 +43,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -47,3 +53,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

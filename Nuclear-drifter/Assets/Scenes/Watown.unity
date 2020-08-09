@@ -7115,7 +7115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1496783520
 PrefabInstance:
@@ -7841,7 +7841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1752368880
 GameObject:
@@ -10497,6 +10497,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 88e769df77360d442b874dce62a55dae, type: 2}
   startIndex: 0
   indexNPC: 0
+  distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!114 &264782672364617758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10556,7 +10558,7 @@ Transform:
   m_Children:
   - {fileID: 1679262717818256169}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &294978930953756181
 MonoBehaviour:
@@ -10701,6 +10703,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 90485761ec271e647add9bed2d81b801, type: 2}
   startIndex: 0
   indexNPC: 2
+  distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!114 &1379918386635726814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10782,7 +10786,7 @@ PrefabInstance:
     - target: {fileID: 4626959042944415531, guid: 46c08f4adc0985c4c8d92f88e3c67100,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4626959042944415531, guid: 46c08f4adc0985c4c8d92f88e3c67100,
         type: 3}
@@ -10959,6 +10963,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f04e229587b2b214baaeb1131846b839, type: 2}
   startIndex: 0
   indexNPC: 3
+  distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!114 &2465716435116818809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11062,6 +11068,7 @@ GameObject:
   - component: {fileID: 2831665677689674462}
   - component: {fileID: 2831665677689674464}
   - component: {fileID: 2831665677689674463}
+  - component: {fileID: 2831665677689674465}
   m_Layer: 0
   m_Name: drPaul_69
   m_TagString: NPC
@@ -11094,6 +11101,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 16fca9995dc16cb4f856955173865e69, type: 2}
   startIndex: 0
   indexNPC: 1
+  distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!114 &2831665677689674463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11140,6 +11149,18 @@ MonoBehaviour:
     needItem: 1
     removeAll: 1
     indexDevice: 0
+--- !u!114 &2831665677689674465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831665677689674461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2062cac2650a9049bb804bbf16a7da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3387922807635627444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11467,7 +11488,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5651581346873595982
 MonoBehaviour:

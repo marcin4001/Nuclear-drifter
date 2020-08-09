@@ -17,6 +17,18 @@ public class Health : MonoBehaviour
         return (currentHealth >= maxHealth);
     }
 
+    public bool isFullHealth()
+    {
+        return (isFull() && !isRad && !isPoison);
+    }
+
+    public void SetFullHP()
+    {
+        SetRad(false);
+        SetPoison(false);
+        SetFull();
+    }
+
     public void SetRad(bool value)
     {
         
