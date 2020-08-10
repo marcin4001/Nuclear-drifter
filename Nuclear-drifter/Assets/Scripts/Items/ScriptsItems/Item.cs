@@ -35,7 +35,7 @@ public abstract class Item : ScriptableObject
             gUI.ClearText();
             gUI.AddText("Item: " + nameItem);
             gUI.AddText(description);
-            gUI.AddText("Value: " + value + "$");
+            gUI.AddText("Value: $" + value);
         }
     }
 
