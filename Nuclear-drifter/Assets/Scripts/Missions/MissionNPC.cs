@@ -56,6 +56,20 @@ public class MissionNPC : MonoBehaviour
         }
     }
 
+    public void CompleteMissionNoCond(int id)
+    {
+        MissionList.global.missions[id].complete = true;
+        MissionDetails m = GetMission(id);
+        if (m != null)
+        {
+            npc.SetStartIndex(m.dialogComplete);
+        }
+        if (prize != null)
+        {
+            prize.GivePrize(id);
+        }
+    }
+
     public void CheckMission()
     {
         if(mission.Length > 0)
