@@ -8,5 +8,6 @@ public class Prize
     public Slot itemPrize;
     public Vector2 spawnPos;
     public GameObject prefItem;
+    public Container chest;
     //public int idFree;
 }

@@ -115,13 +115,13 @@ public class DialogueController : MonoBehaviour
             {
                 if (mission != null) mission.CompleteMission(d.endIdMission);
             }
-            int index = d.nextModule;
-            if (index == 0) index = npc.startIndex;
             if(d.isWorker && npc.nPCJob != null)
             {
                 replyText.text = npc.nPCJob.Work(d.workOpt);
             }
             else replyText.text = d.reply;
+            int index = d.nextModule;
+            if (index == 0) index = npc.startIndex;
             DialogueModule module = npc.modules[index];
             for (int i = 0; i < choices.Length; i++)
             {

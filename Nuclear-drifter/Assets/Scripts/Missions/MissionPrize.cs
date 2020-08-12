@@ -17,15 +17,22 @@ public class MissionPrize : MonoBehaviour
         Prize p = prizes.Find(x => x.idMission == idMission);
         if(p != null)
         {
-            if(!inv.IsFull())
+            if (p.chest == null)
             {
-                inv.Add(p.itemPrize);
+                if (!inv.IsFull())
+                {
+                    inv.Add(p.itemPrize);
+                }
+                else
+                {
+                    GameObject obj = Instantiate(p.prefItem, p.spawnPos, Quaternion.identity);
+                    ItemElement item = obj.GetComponent<ItemElement>();
+                    if (item != null) item.item = p.itemPrize;
+                }
             }
             else
             {
-                GameObject obj = Instantiate(p.prefItem, p.spawnPos, Quaternion.identity);
-                ItemElement item = obj.GetComponent<ItemElement>();
-                if (item != null) item.item = p.itemPrize;
+                p.chest.LockOpen();
             }
         }
     }

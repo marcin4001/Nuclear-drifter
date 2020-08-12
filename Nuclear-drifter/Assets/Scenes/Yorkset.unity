@@ -6834,7 +6834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
+      propertyPath: keyId
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3586829579763930176, guid: 69e21ab94fdf6bc499cc795c743cebc8,
         type: 3}
@@ -6898,6 +6902,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
+--- !u!114 &1549910994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1549910993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42e26ab8f9dcb468b247ac6e235b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1570307209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10068,6 +10084,8 @@ GameObject:
   - component: {fileID: 2782369665795120287}
   - component: {fileID: 53185262251426814}
   - component: {fileID: 53185262251426815}
+  - component: {fileID: 53185262251426816}
+  - component: {fileID: 53185262251426817}
   m_Layer: 0
   m_Name: Roy_78
   m_TagString: NPC
@@ -10128,6 +10146,41 @@ MonoBehaviour:
     needItem: 1
     removeAll: 0
     indexDevice: 0
+--- !u!114 &53185262251426816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53185262251426813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c51dbb3ded77f498711cb54b5027c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizes:
+  - idMission: 13
+    itemPrize:
+      itemElement: {fileID: 0}
+      amountItem: 0
+      ammo: 0
+    spawnPos: {x: 0, y: 0}
+    prefItem: {fileID: 0}
+    chest: {fileID: 1549910994}
+--- !u!114 &53185262251426817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53185262251426813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b4bcad52d798547b3433b799fc5254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 500
+  idMission: 13
 --- !u!4 &55326067539341330
 Transform:
   m_ObjectHideFlags: 0
