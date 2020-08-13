@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Jaxon2
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: I was sent here by Joshua.  I have a cigarette delivery contract.
+    reply: Show me that paper. Okay. Tell him I agree to his terms. Here is the first
+      delivery of cigarettes. 20 packs of cigarettes from the last subway stock.
+      Now we can talk about the award. What do you want?
+    nextModule: 0
+    missionStart: 1
+    startIdMission: 15
+    missionEnd: 1
+    endIdMission: 8
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: "\rI come from the far south! My well is dry! My sheep are dying of thirst!"
+    reply: I don't care. I don't help the poor. Get outta here.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Goodbye
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
