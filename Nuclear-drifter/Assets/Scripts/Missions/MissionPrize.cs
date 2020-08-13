@@ -33,6 +33,19 @@ public class MissionPrize : MonoBehaviour
             else
             {
                 p.chest.LockOpen();
+                if(p.itemPrize.itemElement != null)
+                {
+                    if (!inv.IsFull())
+                    {
+                        inv.Add(p.itemPrize);
+                    }
+                    else
+                    {
+                        GameObject obj = Instantiate(p.prefItem, p.spawnPos, Quaternion.identity);
+                        ItemElement item = obj.GetComponent<ItemElement>();
+                        if (item != null) item.item = p.itemPrize;
+                    }
+                }
             }
         }
     }

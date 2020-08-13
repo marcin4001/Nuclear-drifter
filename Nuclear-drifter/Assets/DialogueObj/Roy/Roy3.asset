@@ -36,6 +36,18 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 0
+  - choice: How do I get Steve's machete?
+    reply: It's simple. Ask Steve about the job. He'll ask you to take the fish to
+      another settlement and he'll open the wardrobe. There's a machete in the wardrobe.
+      Take it away when he can't see.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
