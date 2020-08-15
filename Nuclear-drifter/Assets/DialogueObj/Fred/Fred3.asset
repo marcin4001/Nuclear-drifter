@@ -34,6 +34,18 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 0
+  - choice: How do you know where I live?
+    reply: I have a map where all locations are marked. You told Jaxon that you live
+      in the far south. Your house is the only house in the far south. We located
+      you a few months ago.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Bye
     reply: 
     nextModule: -1

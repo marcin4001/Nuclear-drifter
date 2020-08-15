@@ -10593,6 +10593,8 @@ GameObject:
   - component: {fileID: 4404299033259522612}
   - component: {fileID: 1963344502551061848}
   - component: {fileID: 1963344502551061847}
+  - component: {fileID: 1963344502551061850}
+  - component: {fileID: 1963344502551061849}
   m_Layer: 0
   m_Name: Fred_52
   m_TagString: NPC
@@ -10639,10 +10641,59 @@ MonoBehaviour:
   cbReply: Hello again. How can I help you now?
   modules:
   - {fileID: 11400000, guid: 4b52ea13d68d9e841a31df25b805c0c4, type: 2}
+  - {fileID: 11400000, guid: 05b7b24d8db971c41833fc2d525d28d1, type: 2}
+  - {fileID: 11400000, guid: 4acbf2a37edf68a47a13acc3adfee1d2, type: 2}
   startIndex: 0
   indexNPC: 3
   distance: 1.1
   nPCJob: {fileID: 0}
+--- !u!114 &1963344502551061849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963344502551061846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c51dbb3ded77f498711cb54b5027c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizes:
+  - idMission: 14
+    itemPrize:
+      itemElement: {fileID: 11400000, guid: ccdf4ae659ad6b64fa522bc150614846, type: 2}
+      amountItem: 1
+      ammo: 0
+    spawnPos: {x: 26, y: 10}
+    prefItem: {fileID: 5939853908576559589, guid: 79cb92972f3a869449c6c9155e180ed2,
+      type: 3}
+    chest: {fileID: 0}
+--- !u!114 &1963344502551061850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963344502551061846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716f8e6e95694fb4ea12710b3abe6e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mission:
+  - id: 14
+    type: 0
+    dialogSuccess: 1
+    dialogNormal: 1
+    dialogComplete: 2
+    slotItem:
+      itemElement: {fileID: 0}
+      amountItem: 0
+      ammo: 0
+    needItem: 0
+    removeAll: 0
+    indexDevice: 0
 --- !u!4 &1965625631702881977
 Transform:
   m_ObjectHideFlags: 0

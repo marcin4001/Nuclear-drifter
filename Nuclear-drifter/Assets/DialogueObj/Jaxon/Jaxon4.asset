@@ -24,6 +24,30 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+  - choice: When and how was this settlement established?
+    reply: Yorkset is a young settlement that I founded. I was the richest man in
+      New Tolham and could not communicate with Ashemo, the leader of the settlement,
+      on management matters. Ten years ago I took a few people and we built this
+      settlement together. Since then, Ashemo hates me. That's the whole story.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Is there anything interesting in Yorkset.
+    reply: There are several places in Yorkset that may interest you. There is the
+      Dr. Ryan Medical Clinic, the home of the water supplier and the passport office.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
