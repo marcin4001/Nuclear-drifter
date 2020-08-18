@@ -22,5 +22,5 @@ public class MissionDetails
     public bool needItem;
     public bool removeAll;
     public int indexDevice;
-    
+    public bool noRemove;
 }

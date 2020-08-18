@@ -106,11 +106,24 @@ public class PlayerClickMove : MonoBehaviour
         }
         else
         {
-            if(hit.collider.tag == "WaterCol")
+            foreach (RaycastHit2D n in nodes)
             {
-                gUI.AddText("I can not swim!");
-                return;
+                if (n.collider.tag == "Border")
+                {
+                    gUI.ClearText();
+                    gUI.AddText("You can't cross the");
+                    gUI.AddText("bridge because you don't");
+                    gUI.AddText("have a passport!");//
+                    gUI.AddText("US territory");
+                    return;
+                }
+                if (n.collider.tag == "WaterCol")
+                {
+                    gUI.AddText("I can not swim!");
+                    return;
+                }
             }
+            
             path = aStar.FindPath(transform.position, target.position);
             if(!checkNode.walkable) gUI.AddText("I can't go there!");
             if (path != null)
@@ -188,6 +201,7 @@ public class PlayerClickMove : MonoBehaviour
         if (active)
         {
             mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
             if (mode == Mouse_mode.move)
             {
                 target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));

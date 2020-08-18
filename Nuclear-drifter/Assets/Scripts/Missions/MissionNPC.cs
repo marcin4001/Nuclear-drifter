@@ -44,7 +44,7 @@ public class MissionNPC : MonoBehaviour
         if(m != null)
         {
             npc.SetStartIndex(m.dialogComplete);
-            if (m.needItem)
+            if (m.needItem && !m.noRemove)
             {
                 if(!m.removeAll)inv.RemoveFew(m.slotItem);
                 else inv.RemoveAllId(m.slotItem.itemElement.idItem);
