@@ -5,20 +5,11 @@ using UnityEngine;
 public class Border : MonoBehaviour
 {
     public int idMission = 0;
-    private PlayerClickMove move;
-    private GUIScript gUI;
     // Start is called before the first frame update
     void Start()
     {
-        move = FindObjectOfType<PlayerClickMove>();
-        gUI = FindObjectOfType<GUIScript>();
+        MissionObj mission = MissionList.global.GetMission(idMission);
+        if (mission == null) Destroy(this);
+        if (mission.complete) Destroy(gameObject);
     }
-
-    private void OnMouseDown()
-    {
-        move.SetStop(true);
-        gUI.AddText("Border");
-        Debug.Log("FFF");
-    }
-    
 }
