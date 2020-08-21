@@ -10368,6 +10368,7 @@ MonoBehaviour:
   startIndex: 0
   indexNPC: 3
   distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!61 &1642016587652977119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10561,6 +10562,7 @@ MonoBehaviour:
   startIndex: 0
   indexNPC: 0
   distance: 1.75
+  nPCJob: {fileID: 0}
 --- !u!1 &3355480370907696905
 GameObject:
   m_ObjectHideFlags: 0
@@ -10849,6 +10851,7 @@ MonoBehaviour:
   startIndex: 0
   indexNPC: 2
   distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!114 &4213168225642067305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10874,6 +10877,7 @@ MonoBehaviour:
     needItem: 0
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
   - id: 11
     type: 0
     dialogSuccess: 3
@@ -10886,6 +10890,7 @@ MonoBehaviour:
     needItem: 0
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
 --- !u!114 &4213168225642067306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10907,6 +10912,7 @@ MonoBehaviour:
     spawnPos: {x: 28, y: 13}
     prefItem: {fileID: 3053897365620121941, guid: a20dd55d702d2fe4fa80dec102623baa,
       type: 3}
+    chest: {fileID: 0}
 --- !u!212 &4617071687326532823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11060,6 +11066,7 @@ MonoBehaviour:
     spawnPos: {x: 32, y: 29}
     prefItem: {fileID: 6950010426369201945, guid: c2d1207eb4b785c4f9e5ab17a3cc1c2d,
       type: 3}
+    chest: {fileID: 0}
 --- !u!114 &4851366042062167479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11085,6 +11092,7 @@ MonoBehaviour:
     needItem: 1
     removeAll: 1
     indexDevice: 0
+    noRemove: 0
 --- !u!114 &4851366042062167480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11110,6 +11118,7 @@ MonoBehaviour:
   startIndex: 0
   indexNPC: 1
   distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!1 &4968137041480644528
 GameObject:
   m_ObjectHideFlags: 0
@@ -11141,6 +11150,7 @@ GameObject:
   - component: {fileID: 7042805205142750765}
   - component: {fileID: 5160306912818649424}
   - component: {fileID: 5160306912818649425}
+  - component: {fileID: 5160306912818649426}
   m_Layer: 0
   m_Name: Ashemo_78
   m_TagString: NPC
@@ -11171,9 +11181,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1caf240e105a6c344828cf68118161ed, type: 2}
   - {fileID: 11400000, guid: 1ad156029a71cd444a091863ff2c94e7, type: 2}
   - {fileID: 11400000, guid: 060c60f76172edd48aa6b5fc137e8c0a, type: 2}
+  - {fileID: 11400000, guid: 0709d0fe43348f74d84444e18acafb65, type: 2}
+  - {fileID: 11400000, guid: 94e3691a27118c84aab46200d6478c90, type: 2}
   startIndex: 0
   indexNPC: 4
   distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!114 &5160306912818649425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11199,6 +11212,42 @@ MonoBehaviour:
     needItem: 0
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
+  - id: 17
+    type: 0
+    dialogSuccess: 4
+    dialogNormal: 3
+    dialogComplete: 5
+    slotItem:
+      itemElement: {fileID: 11400000, guid: 5aba59239a654924b9dd0e8e592bd2f1, type: 2}
+      amountItem: 1
+      ammo: 0
+    needItem: 1
+    removeAll: 1
+    indexDevice: 0
+    noRemove: 0
+--- !u!114 &5160306912818649426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160306912818649423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c51dbb3ded77f498711cb54b5027c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizes:
+  - idMission: 17
+    itemPrize:
+      itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
+      amountItem: 200
+      ammo: 0
+    spawnPos: {x: 11, y: 10}
+    prefItem: {fileID: 7123670530575232170, guid: 786492bc87cb25e4aa460537d3c4f211,
+      type: 3}
+    chest: {fileID: 0}
 --- !u!4 &5180664314054601376
 Transform:
   m_ObjectHideFlags: 0

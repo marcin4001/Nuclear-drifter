@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Ashemo5
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: Here's your package of masks, please.
+    reply: 'Thank you very much, young man. Now the people of my settlement will
+      be safe. Here''s your reward - $200 for your effort. '
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 1
+    endIdMission: 17
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: "\rWhere is Watown?"
+    reply: The Watown settlement is east of here. It's the largest settlement on
+      the continent. I'm sure you'll find it. The settlement is ruled by my brother
+      Joshua. He's gonna help you.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Where is Yorkset?
+    reply: "The Yorkset settlement is northeast of here. It's a settlement by the
+      ocean. The arrogant Jaxon is the leader of this settlement. I advise you to
+      avoid this place for now. \rYou'd better go to Watown, young man."
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: "\r\rTell me about New Tolham."
+    reply: New Tolham is a settlement by the ocean, which I founded many years ago.
+      Here you'll find a hotel with free rooms, a food market and the Jason shepherd's
+      house. Besides, there's nothing interesting about it. If you want more attractions,
+      go to Watown.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Goodbye
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
