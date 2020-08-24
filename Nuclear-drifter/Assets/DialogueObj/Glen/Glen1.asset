@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Glen1
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: What happened to you, soldier?
+    reply: I was on a wolf hunt and was caught by mutant flies. Unfortunately, local
+      flies are venomous, so they poisoned me.  I almost didn't come back home, because
+      the flies bit me so much. I need the Antidote, and there is not a doctor in
+      this settlement. If you could, bring me the Antidote from the continent.
+    nextModule: 0
+    missionStart: 1
+    startIdMission: 19
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Take care!
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

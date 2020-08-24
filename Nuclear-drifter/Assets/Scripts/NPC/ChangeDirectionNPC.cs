@@ -17,6 +17,17 @@ public class ChangeDirectionNPC : MonoBehaviour
         prevState = renderSp.sprite;
     }
 
+    public void SetSprite(Sprite _back, Sprite _forward, Sprite _left, Sprite _right, Sprite init)
+    {
+        back = _back;
+        forward = _forward;
+        left = _left;
+        right = _right;
+        prevState = init;
+        renderSp = GetComponent<SpriteRenderer>();
+        renderSp.sprite = init;
+    }
+
     public void SetDir(Vector2 pos)
     {
         int x = Mathf.RoundToInt(pos.x);
