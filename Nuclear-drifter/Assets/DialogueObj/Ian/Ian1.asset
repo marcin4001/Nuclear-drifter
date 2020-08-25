@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Ian1
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: "\rWhat's your job, soldier?"
+    reply: I have to patrol the settlement area, stranger. I have been doing this
+      myself for several days, because my friend has gone missing. It is a terribly
+      boring job.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Can I do something for you?
+    reply: If you can, find my friend alive or dead. My friend went to look for treasures
+      in the south of here. He said something about the Woodhill settlement and the
+      radiation area next door. You should be looking for him there. If he's dead,
+      bring me his soldier tag. My friend's name is Ted.
+    nextModule: 0
+    missionStart: 1
+    startIdMission: 20
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Goodbye, soldier.
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
