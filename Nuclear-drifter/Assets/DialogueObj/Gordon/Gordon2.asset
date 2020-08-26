@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Gordon2
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: What happened to the people of this island?
+    reply: There were no fatalities on the Moolow Islands. The only bomb that hit
+      the island didn't explode. All the people you see here are the great-grandchildren
+      of the US soldiers who conquered this island. The island was conquered in 2087.
+    nextModule: 1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: What happened to the people of Old Zeland?
+    reply: On the continent, only people who have hidden in the subway survived.
+      Other people died or turned into zombies. In 2229 people left the subway and
+      started to build their settlements.
+    nextModule: 1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: What was the reason for the beginning of the war?
+    reply: The main cause of the war was the dispute over the last uranium deposits
+      in the world. The United States discovered a large deposit of this material
+      on the continent. The government of Old Zealand did not want to agree to the
+      extraction. And so this 30-year conflict began.
+    nextModule: 1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: This is all I wanted to know.
+    reply: Ok. What else do you want from me?
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
