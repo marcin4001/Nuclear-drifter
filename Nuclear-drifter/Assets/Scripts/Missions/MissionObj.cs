@@ -10,6 +10,7 @@ public class MissionObj
     public string location;
     public bool start;
     public bool complete;
+    public int idSort;
 
     public void ResetObj()
     {
