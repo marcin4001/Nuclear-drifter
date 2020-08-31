@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class MissionList : MonoBehaviour
 {
@@ -31,5 +32,16 @@ public class MissionList : MonoBehaviour
         {
             return null;
         }
+    }
+
+    public List<MissionObj> GetListMission()
+    {
+        List<MissionObj> list = missions.ToList();
+        list.Sort(delegate (MissionObj m1, MissionObj m2)
+        {
+            return m2.idSort.CompareTo(m1.idSort);
+        });
+
+        return list;
     }
 }
