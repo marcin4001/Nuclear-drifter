@@ -10,6 +10,7 @@ public class GUIScript : MonoBehaviour
     public Text consoleLabel;
     public Text expLabel;
 
+    
     public Image radImg;
     public Image bioImg;
 
@@ -24,6 +25,8 @@ public class GUIScript : MonoBehaviour
 
     public bool blockGUI = false;
 
+    public Button pauseBtn;
+    public Button missionBtn;
     private GraphicRaycaster raycaster;
     private EventSystem system;
     private PointerEventData data;
@@ -86,6 +89,12 @@ public class GUIScript : MonoBehaviour
             consoleText.Clear();
             consoleLabel.text = "";
         }
+    }
+
+    public void DeactiveButtons(bool value)
+    {
+        pauseBtn.enabled = value;
+        missionBtn.enabled = value;
     }
     // Update is called once per frame
     void Update()

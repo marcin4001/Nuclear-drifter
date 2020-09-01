@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public Button mapBtn;
+    public Button missionBtn;
     private MapControl mc;
     private Canvas pouseCanvas;
     public Canvas exitMsgCanvas;
     private bool activeMenu = false;
     private GUIScript gUI;
-    private PlayerClickMove player;
     public bool activeEsc = true;
     private TypeScene typeSc;
     // Start is called before the first frame update
@@ -22,7 +22,6 @@ public class PauseMenu : MonoBehaviour
         pouseCanvas = GetComponent<Canvas>();
         pouseCanvas.enabled = activeMenu;
         gUI = FindObjectOfType<GUIScript>();
-        player = FindObjectOfType<PlayerClickMove>();
         exitMsgCanvas.enabled = false;
         Time.timeScale = 1.0f;
         typeSc = FindObjectOfType<TypeScene>();
@@ -43,10 +42,10 @@ public class PauseMenu : MonoBehaviour
         {
             activeMenu = !activeMenu;
             mapBtn.enabled = !activeMenu;
+            missionBtn.enabled = !activeMenu;
             pouseCanvas.enabled = activeMenu;
             gUI.blockGUI = activeMenu;
             mc.keyActive = !activeMenu;
-            player.active = !activeMenu;
             if (activeMenu)
             {
                 Time.timeScale = 0.0f;

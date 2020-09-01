@@ -13,15 +13,17 @@ public class TypeScene : MonoBehaviour
     private PauseMenu pause;
     private MapControl map;
     private DialogueController dial;
+    private MissionListGUI mission;
     void Start()
     {
         pause = FindObjectOfType<PauseMenu>();
         map = FindObjectOfType<MapControl>();
         dial = FindObjectOfType<DialogueController>();
+        mission = FindObjectOfType<MissionListGUI>();
     }
 
     public void SetInMenu()
     {
-        inMenu = (pause.GetActive() || map.GetActive() || dial.active);
+        inMenu = (pause.GetActive() || map.GetActive() || dial.active || mission.GetActive());
     }
 }
