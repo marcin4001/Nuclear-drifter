@@ -2672,6 +2672,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 358826694, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 358826694, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 366704276, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -3149,6 +3157,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1634321191, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787498275, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -9689,7 +9701,7 @@ PrefabInstance:
     - target: {fileID: 2151669712176894990, guid: b1a2f6063bd5fd54a911bd2f8cb609a9,
         type: 3}
       propertyPath: foundArea.Array.data[0]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2151669712176894991, guid: b1a2f6063bd5fd54a911bd2f8cb609a9,
         type: 3}
@@ -10131,6 +10143,7 @@ MonoBehaviour:
     needItem: 1
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
 --- !u!114 &53185262251426816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10673,6 +10686,7 @@ MonoBehaviour:
     needItem: 0
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
 --- !u!4 &1965625631702881977
 Transform:
   m_ObjectHideFlags: 0
@@ -10969,6 +10983,7 @@ MonoBehaviour:
     needItem: 1
     removeAll: 1
     indexDevice: 0
+    noRemove: 0
   - id: 14
     type: 0
     dialogSuccess: 3
@@ -10981,6 +10996,7 @@ MonoBehaviour:
     needItem: 0
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
 --- !u!114 &5003252822895679701
 MonoBehaviour:
   m_ObjectHideFlags: 0

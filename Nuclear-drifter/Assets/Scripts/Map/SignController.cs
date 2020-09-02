@@ -48,7 +48,7 @@ public class SignController : MonoBehaviour
             }
             for(int i = 0; i < areas.Length; i++)
             {
-                if (PropertyPlayer.property.foundArea[i])
+                if (PropertyPlayer.property.foundArea[i] == 2)
                     areas[i].ActiveText();
                 else
                     areas[i].DeactiveText();
@@ -62,7 +62,7 @@ public class SignController : MonoBehaviour
         {
             areas[index].ActiveText();
             gUI.AddText("You found " + areas[index].text.text);
-            PropertyPlayer.property.foundArea[index] = true;
+            PropertyPlayer.property.foundArea[index] = 2;
         }
     }
 }

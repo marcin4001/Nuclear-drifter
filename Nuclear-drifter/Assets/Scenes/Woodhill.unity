@@ -3140,6 +3140,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 358826694, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 358826694, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 366704276, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -3626,6 +3634,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1776689721, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787498275, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1825255011, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
@@ -10464,7 +10476,7 @@ PrefabInstance:
     - target: {fileID: 2151669712176894990, guid: b1a2f6063bd5fd54a911bd2f8cb609a9,
         type: 3}
       propertyPath: foundArea.Array.data[0]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2151669712176894991, guid: b1a2f6063bd5fd54a911bd2f8cb609a9,
         type: 3}
@@ -10937,6 +10949,7 @@ MonoBehaviour:
     needItem: 0
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
   - id: 2
     type: 0
     dialogSuccess: 3
@@ -10949,6 +10962,7 @@ MonoBehaviour:
     needItem: 1
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
 --- !u!114 &1455124840630142187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11162,6 +11176,7 @@ MonoBehaviour:
     needItem: 1
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
   - id: 4
     type: 1
     dialogSuccess: 4
@@ -11174,6 +11189,7 @@ MonoBehaviour:
     needItem: 0
     removeAll: 0
     indexDevice: 0
+    noRemove: 0
 --- !u!114 &2599056883823974983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11223,6 +11239,7 @@ MonoBehaviour:
     spawnPos: {x: 27, y: 11}
     prefItem: {fileID: 7123670530575232170, guid: 786492bc87cb25e4aa460537d3c4f211,
       type: 3}
+    chest: {fileID: 0}
 --- !u!4 &2623849268784703914
 Transform:
   m_ObjectHideFlags: 0
