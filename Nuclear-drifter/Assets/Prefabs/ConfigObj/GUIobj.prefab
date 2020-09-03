@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 35967926}
   - component: {fileID: 35967928}
   - component: {fileID: 35967927}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TitleListText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1544,7 +1544,7 @@ GameObject:
   - component: {fileID: 310591666}
   - component: {fileID: 310591665}
   - component: {fileID: 310591664}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scrollbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 358826694}
   - component: {fileID: 358826696}
   - component: {fileID: 358826695}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5736,7 +5736,7 @@ GameObject:
   - component: {fileID: 1064783460}
   - component: {fileID: 1064783462}
   - component: {fileID: 1064783461}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ListBackImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7361,7 +7361,7 @@ GameObject:
   - component: {fileID: 1310197457}
   - component: {fileID: 1310197456}
   - component: {fileID: 1310197455}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CurrentMissionBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8408,7 +8408,7 @@ GameObject:
   - component: {fileID: 1435676879}
   - component: {fileID: 1435676878}
   - component: {fileID: 1435676881}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MissionListCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8509,6 +8509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: {fileID: 35967927}
   textList: {fileID: 1787498277}
+  scroll: {fileID: 2137572196}
 --- !u!1 &1446190896
 GameObject:
   m_ObjectHideFlags: 0
@@ -9196,7 +9197,7 @@ GameObject:
   - component: {fileID: 1575046995}
   - component: {fileID: 1575046994}
   - component: {fileID: 1575046996}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ExitBtnList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9572,7 +9573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1659348483}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sliding Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10073,7 +10074,7 @@ GameObject:
   - component: {fileID: 1787498278}
   - component: {fileID: 1787498277}
   - component: {fileID: 1787498276}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextMission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10096,7 +10097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0.00012207031}
   m_SizeDelta: {x: 467.99884, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1787498278
@@ -10168,7 +10169,7 @@ GameObject:
   - component: {fileID: 1799905665}
   - component: {fileID: 1799905667}
   - component: {fileID: 1799905666}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BtnCurrentText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10968,7 +10969,7 @@ GameObject:
   - component: {fileID: 1911410570}
   - component: {fileID: 1911410569}
   - component: {fileID: 1911410568}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ' CompletedMissionBtn'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12208,7 +12209,7 @@ GameObject:
   - component: {fileID: 2115403724}
   - component: {fileID: 2115403726}
   - component: {fileID: 2115403725}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BtnCompletedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12447,7 +12448,7 @@ GameObject:
   - component: {fileID: 2137572198}
   - component: {fileID: 2137572197}
   - component: {fileID: 2137572196}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BGMissionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}

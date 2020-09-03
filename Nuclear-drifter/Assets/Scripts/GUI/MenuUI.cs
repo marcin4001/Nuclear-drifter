@@ -46,6 +46,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.posOutside = Vector2.zero;
         PropertyPlayer.property.foundArea = new int[9];
         PropertyPlayer.property.foundArea[0] = 2;
+        PropertyPlayer.property.foundArea[3] = 1;
 
         PropertyPlayer.property.inv = startSlots;
 

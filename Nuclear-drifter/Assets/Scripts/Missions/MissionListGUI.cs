@@ -7,6 +7,7 @@ public class MissionListGUI : MonoBehaviour
 {
     public Text titleText;
     public Text textList;
+    public ScrollRect scroll;
     private string separator = "##########################################################";
     private Canvas listCanvas;
     private bool active = false;
@@ -47,6 +48,7 @@ public class MissionListGUI : MonoBehaviour
 
     public void CurrentMissionShow()
     {
+        scroll.verticalNormalizedPosition = 1.0f;
         titleText.text = "Current missions";
         List<MissionObj> list = MissionList.global.GetListMission();
         string content = "";
@@ -64,11 +66,13 @@ public class MissionListGUI : MonoBehaviour
             }
         }
         if (content != "") content = separator + "\n" + content;
+        else content = "no mission\n";
         textList.text = content;
     }
 
     public void CompletedMissionShow()
     {
+        scroll.verticalNormalizedPosition = 1.0f;
         titleText.text = "Completed missions";
         List<MissionObj> list = MissionList.global.GetListMission();
         string content = "";
@@ -86,6 +90,7 @@ public class MissionListGUI : MonoBehaviour
             }
         }
         if (content != "") content = separator + "\n" + content;
+        else content = "no mission\n";
         textList.text = content;
     }
 

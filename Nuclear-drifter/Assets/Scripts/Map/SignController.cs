@@ -7,17 +7,26 @@ using TMPro;
 public class Area
 {
     public TextMeshPro text;
+    public SpriteRenderer cross;
     public GameObject col;
 
     public void ActiveText()
     {
         text.enabled = true;
+        cross.enabled = false;
         GameObject.Destroy(col);
     }
 
     public void DeactiveText()
     {
         text.enabled = false;
+        cross.enabled = false;
+    }
+
+    public void ActiveCross()
+    {
+        text.enabled = false;
+        cross.enabled = true;
     }
 
     public void ColliderOff()
@@ -50,6 +59,8 @@ public class SignController : MonoBehaviour
             {
                 if (PropertyPlayer.property.foundArea[i] == 2)
                     areas[i].ActiveText();
+                else if (PropertyPlayer.property.foundArea[i] == 1)
+                    areas[i].ActiveCross();
                 else
                     areas[i].DeactiveText();
             }
@@ -63,6 +74,18 @@ public class SignController : MonoBehaviour
             areas[index].ActiveText();
             gUI.AddText("You found " + areas[index].text.text);
             PropertyPlayer.property.foundArea[index] = 2;
+        }
+    }
+
+    public void FindArea(int index)
+    {
+        if (index >= 0 && index < areas.Length)
+        {
+            if(PropertyPlayer.property.foundArea[index] != 2)
+            {
+                areas[index].ActiveCross();
+                PropertyPlayer.property.foundArea[index] = 1;
+            }
         }
     }
 }
