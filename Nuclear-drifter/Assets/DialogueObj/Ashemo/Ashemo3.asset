@@ -23,6 +23,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 8
   - choice: I can't do it. This island is too far away.
     reply: Okay. Maybe the package will be delivered one day.
     nextModule: 0
@@ -31,3 +33,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

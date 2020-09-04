@@ -10830,6 +10830,7 @@ GameObject:
   - component: {fileID: 4213168225642067304}
   - component: {fileID: 4213168225642067305}
   - component: {fileID: 4213168225642067306}
+  - component: {fileID: 4213168225642067307}
   m_Layer: 0
   m_Name: Mary_78
   m_TagString: NPC
@@ -10925,6 +10926,18 @@ MonoBehaviour:
     prefItem: {fileID: 3053897365620121941, guid: a20dd55d702d2fe4fa80dec102623baa,
       type: 3}
     chest: {fileID: 0}
+--- !u!114 &4213168225642067307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213168225642067303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f3eb6677d0d92428a4ba255eae4077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &4617071687326532823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11163,6 +11176,7 @@ GameObject:
   - component: {fileID: 5160306912818649424}
   - component: {fileID: 5160306912818649425}
   - component: {fileID: 5160306912818649426}
+  - component: {fileID: 5160306912818649427}
   m_Layer: 0
   m_Name: Ashemo_78
   m_TagString: NPC
@@ -11260,6 +11274,18 @@ MonoBehaviour:
     prefItem: {fileID: 7123670530575232170, guid: 786492bc87cb25e4aa460537d3c4f211,
       type: 3}
     chest: {fileID: 0}
+--- !u!114 &5160306912818649427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160306912818649423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f3eb6677d0d92428a4ba255eae4077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5180664314054601376
 Transform:
   m_ObjectHideFlags: 0

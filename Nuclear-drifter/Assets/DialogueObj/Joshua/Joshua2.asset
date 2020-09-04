@@ -22,6 +22,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 5
   - choice: How long ago was this settlement established?
     reply: I founded Watown 40 years ago, after I got my father's inheritance. My
       father was a Overseer of the main station of the subway station in Old Zealand
@@ -33,6 +35,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Do you have something for me to do?
     reply: Yes. I want to sign a deal with Jaxon to supply cigarettes. I need cigarettes
       for my employees and guards as payment for their work. Could you go to Yorkset
@@ -43,6 +47,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -51,3 +57,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

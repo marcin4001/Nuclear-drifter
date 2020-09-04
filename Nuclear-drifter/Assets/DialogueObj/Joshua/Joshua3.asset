@@ -23,6 +23,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 5
   - choice: I don't have time for this right now. I'm sorry.
     reply: Okay. I'll find myself another delivery man.
     nextModule: 0
@@ -31,3 +33,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

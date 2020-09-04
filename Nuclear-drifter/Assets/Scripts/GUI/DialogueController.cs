@@ -118,6 +118,7 @@ public class DialogueController : MonoBehaviour
             if(d.isWorker && npc.nPCJob != null)
             {
                 replyText.text = npc.nPCJob.Work(d.workOpt);
+                if (replyText.text == "") replyText.text = d.reply;
             }
             else replyText.text = d.reply;
             int index = d.nextModule;

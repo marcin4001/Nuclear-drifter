@@ -22,6 +22,9 @@ MonoBehaviour:
     startIdMission: 1
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 1
+    workOpt: 1
   - choice: I can not do that. Watown is too far.
     reply: Ok if you think so.
     nextModule: 0
@@ -29,3 +32,6 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

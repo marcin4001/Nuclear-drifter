@@ -34,8 +34,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
-    isWorker: 0
-    workOpt: 0
+    isWorker: 1
+    workOpt: 1
   - choice: Where is Yorkset?
     reply: "The Yorkset settlement is northeast of here. It's a settlement by the
       ocean. The arrogant Jaxon is the leader of this settlement. I advise you to
@@ -46,8 +46,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
-    isWorker: 0
-    workOpt: 0
+    isWorker: 1
+    workOpt: 5
   - choice: "\r\rTell me about New Tolham."
     reply: New Tolham is a settlement by the ocean, which I founded many years ago.
       Here you'll find a hotel with free rooms, a food market and the Jason shepherd's

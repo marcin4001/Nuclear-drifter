@@ -22,6 +22,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 4
   - choice: Where is Watown?
     reply: Watown is northeast of here. It's a little further than New Tolham. The
       settlement is ruled by my eldest brother Joshua. Between Watown and Woodhill
@@ -32,6 +34,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 1
+    workOpt: 1
   - choice: How long have you ruled the settlement?
     reply: I've been in charge of the settlement for over 40 years since my father
       went south. So far I have been doing well despite my age.
@@ -41,6 +45,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Do you have any work for me?
     reply: No, but ask the other settlers. Maybe they will find something to do for
       you.
@@ -50,6 +56,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -58,3 +66,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

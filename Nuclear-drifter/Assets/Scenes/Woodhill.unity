@@ -10891,6 +10891,7 @@ GameObject:
   - component: {fileID: 1455124840630142185}
   - component: {fileID: 1455124840630142186}
   - component: {fileID: 1455124840630142187}
+  - component: {fileID: 1455124840630142188}
   m_Layer: 0
   m_Name: Steve_69
   m_TagString: NPC
@@ -10978,6 +10979,18 @@ MonoBehaviour:
   inits:
   - id: 1
     box: {fileID: 1405085232}
+--- !u!114 &1455124840630142188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455124840630142184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f3eb6677d0d92428a4ba255eae4077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1461938285534476039
 Transform:
   m_ObjectHideFlags: 0
@@ -12373,6 +12386,7 @@ GameObject:
   - component: {fileID: 4868275026358363796}
   - component: {fileID: 8865784879873131033}
   - component: {fileID: 6713070094242291068}
+  - component: {fileID: 6713070094242291069}
   m_Layer: 0
   m_Name: Sarah_78
   m_TagString: NPC
@@ -12407,6 +12421,18 @@ MonoBehaviour:
   indexNPC: 0
   distance: 1.1
   nPCJob: {fileID: 0}
+--- !u!114 &6713070094242291069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6713070094242291067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f3eb6677d0d92428a4ba255eae4077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6724402953380441748
 Transform:
   m_ObjectHideFlags: 0
