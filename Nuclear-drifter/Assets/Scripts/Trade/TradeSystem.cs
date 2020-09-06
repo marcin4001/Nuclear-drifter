@@ -6,6 +6,7 @@ public class TradeSystem : MonoBehaviour
 {
     public List<Slot> slots;
     public TradeSlot[] tradeSlots;
+    public Slot money;
     private GUIScript gUI;
     private PlayerClickMove move;
     private TypeScene typeSc;
