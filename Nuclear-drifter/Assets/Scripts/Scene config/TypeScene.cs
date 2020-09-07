@@ -6,7 +6,7 @@ public class TypeScene : MonoBehaviour
 {
     public bool isInterior = false;
     public bool combatState = false;
-    public bool inBox = false;
+    public int inBox = 0;
     public bool radZone = false;
     public bool inMenu = false;
 

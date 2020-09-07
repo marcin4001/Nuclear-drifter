@@ -228,7 +228,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveOne(Slot _slot)
     {
-        if (_slot.itemElement.GetItemType() != ItemType.Weapon || typeSc.inBox) 
+        if (_slot.itemElement.GetItemType() != ItemType.Weapon || typeSc.inBox > 0) 
         {
             if (_slot.amountItem > 1)
             {
@@ -258,7 +258,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveAll(Slot _slot)
     {
-        if (!typeSc.inBox)
+        if (typeSc.inBox == 0)
         {
             if (!_slot.itemElement.noRemove)
             { 

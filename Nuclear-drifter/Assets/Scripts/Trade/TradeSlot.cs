@@ -40,43 +40,58 @@ public class TradeSlot : MonoBehaviour
                 }
                 if (gUI.GetInvMode() == inv_mode.use)
                 {
-                    Slot temp = new Slot(itemSlot.itemElement, 1, itemSlot.ammo);
-                    if(inv.CanBuy(temp))
+                    if (trade.SellSlotIsEmpty())
                     {
-                        if(inv.Add(temp))
+                        Slot temp = new Slot(itemSlot.itemElement, 1, itemSlot.ammo);
+                        if (inv.CanBuy(temp))
                         {
-                            trade.money.amountItem = temp.itemElement.value;
-                            inv.RemoveFew(trade.money);
+                            if (inv.Add(temp))
+                            {
+                                trade.money.amountItem = temp.itemElement.value;
+                                inv.RemoveFew(trade.money);
+                            }
+                            else
+                            {
+                                gUI.AddText("Inventory is full");
+                            }
                         }
                         else
                         {
-                            gUI.AddText("Inventory is full");
+                            gUI.AddText("You don't have");
+                            gUI.AddText("enough money");
                         }
                     }
                     else
                     {
-                        gUI.AddText("You don't have");
-                        gUI.AddText("enough money");
+                        gUI.AddText("Sell ​​Slot is not empty");
                     }
                 }
+                
                 if(gUI.GetInvMode() == inv_mode.remove)
                 {
-                    if (inv.CanBuy(itemSlot))
+                    if (trade.SellSlotIsEmpty())
                     {
-                        if (inv.Add(itemSlot))
+                        if (inv.CanBuy(itemSlot))
                         {
-                            trade.money.amountItem = itemSlot.itemElement.value * itemSlot.amountItem;
-                            inv.RemoveFew(trade.money);
+                            if (inv.Add(itemSlot))
+                            {
+                                trade.money.amountItem = itemSlot.itemElement.value * itemSlot.amountItem;
+                                inv.RemoveFew(trade.money);
+                            }
+                            else
+                            {
+                                gUI.AddText("Inventory is full");
+                            }
                         }
                         else
                         {
-                            gUI.AddText("Inventory is full");
+                            gUI.AddText("You don't have");
+                            gUI.AddText("enough money");
                         }
                     }
                     else
                     {
-                        gUI.AddText("You don't have");
-                        gUI.AddText("enough money");
+                        gUI.AddText("Sell ​​Slot is not empty");
                     }
                 }
             }

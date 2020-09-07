@@ -57,7 +57,7 @@ public class EqChestController : MonoBehaviour
         goEq.SetActive(active);
         gUI.move.active = !active;
         gUI.blockGUI = active;
-        typeSc.inBox = active;
+        typeSc.inBox = 0;
     }
 
     public void Open(int id, int indexBack)
@@ -68,7 +68,7 @@ public class EqChestController : MonoBehaviour
         goEq.SetActive(active);
         gUI.move.active = !active;
         gUI.blockGUI = active;
-        typeSc.inBox = active;
+        typeSc.inBox = 1;
         SetItems();
     }
 

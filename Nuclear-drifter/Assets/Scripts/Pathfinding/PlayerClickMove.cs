@@ -298,7 +298,7 @@ public class PlayerClickMove : MonoBehaviour
                         Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
                         break;
                     case inv_mode.remove:
-                        if(!typeSc.inBox)Cursor.SetCursor(bin, Vector2.zero, CursorMode.ForceSoftware);
+                        if(typeSc.inBox == 0)Cursor.SetCursor(bin, Vector2.zero, CursorMode.ForceSoftware);
                         else Cursor.SetCursor(all, Vector2.zero, CursorMode.ForceSoftware);
                         break;
                 }

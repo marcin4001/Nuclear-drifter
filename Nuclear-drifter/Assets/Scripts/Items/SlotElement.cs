@@ -54,7 +54,7 @@ public class SlotElement : MonoBehaviour
                 }
                 if(gUI.GetInvMode() == inv_mode.use)
                 {
-                    if (!typeSc.inBox)
+                    if (typeSc.inBox == 0)
                     {
                         if (itemSlot.itemElement.GetItemType() == ItemType.Food)
                         {
@@ -78,7 +78,7 @@ public class SlotElement : MonoBehaviour
                             itemSlot.itemElement.Use();
                         }
                     }
-                    else
+                    else if (typeSc.inBox == 1)
                     {
                         if(isBoxSlot)
                         {
@@ -89,14 +89,19 @@ public class SlotElement : MonoBehaviour
                             eqChest.PutOnOne(itemSlot);
                         }
                     }
+                    else
+                    {
+                        TradeSystem trade = FindObjectOfType<TradeSystem>();
+                        trade.AddOne(itemSlot);
+                    }
                 }
                 if (gUI.GetInvMode() == inv_mode.remove)
                 {
-                    if (!typeSc.inBox)
+                    if (typeSc.inBox == 0)
                     {
                         inv.RemoveAll(itemSlot);
                     }
-                    else
+                    else if (typeSc.inBox == 1)
                     {
                         if (isBoxSlot)
                         {
@@ -106,6 +111,11 @@ public class SlotElement : MonoBehaviour
                         {
                             eqChest.PutOnAll(itemSlot);
                         }
+                    }
+                    else
+                    {
+                        TradeSystem trade = FindObjectOfType<TradeSystem>();
+                        trade.AddAll(itemSlot);
                     }
                 }
             }
