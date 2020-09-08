@@ -8,6 +8,7 @@ public class WeaponItem : Item
     public int ammoAmount = 0;
     public int damage = 0;
     public bool isMeleeWeapon = false;
+    public bool isBomb = false;
 
     private void Awake()
     {

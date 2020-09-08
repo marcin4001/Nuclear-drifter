@@ -15,6 +15,7 @@ public class TradeSystem : MonoBehaviour
     private PlayerClickMove move;
     private TypeScene typeSc;
     private Inventory inv;
+    private Offer offer;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,8 @@ public class TradeSystem : MonoBehaviour
         move = FindObjectOfType<PlayerClickMove>();
         typeSc = FindObjectOfType<TypeScene>();
         inv = FindObjectOfType<Inventory>();
+        offer = FindObjectOfType<Offer>();
+        if (offer != null) slots = offer.slots;
         if (slots == null) slots = new List<Slot>();
         else
         {
@@ -135,9 +138,16 @@ public class TradeSystem : MonoBehaviour
     {
         if (!SellSlotIsEmpty())
         {
-            money.amountItem = sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem;
-            inv.Add(money);
-            sellSlot.ClearSlot();
+            if (!sellSlot.itemSlot.itemElement.noSell)
+            {
+                money.amountItem = sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem;
+                if (money.amountItem > 0) inv.Add(money);
+                sellSlot.ClearSlot();
+            }
+            else
+            {
+                gUI.AddText("It cannot be sold!");
+            }
         }
     }
 

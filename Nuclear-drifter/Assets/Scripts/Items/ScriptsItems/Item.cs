@@ -19,6 +19,7 @@ public abstract class Item : ScriptableObject
     public int value;
     public int idItem;
     public bool noRemove;
+    public bool noSell;
     protected ItemType type;
     protected GUIScript gUI;
 

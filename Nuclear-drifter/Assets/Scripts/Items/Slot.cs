@@ -43,4 +43,24 @@ public class Slot
         }
         return ammo + "";
     }
+
+    public bool isGun()
+    {
+        if(itemElement.GetItemType() == ItemType.Weapon)
+        {
+            WeaponItem weapon = (WeaponItem)itemElement;
+            if(!weapon.isBomb && !weapon.isMeleeWeapon)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

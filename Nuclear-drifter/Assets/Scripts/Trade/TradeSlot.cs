@@ -57,8 +57,8 @@ public class TradeSlot : MonoBehaviour
                         }
                         else
                         {
-                            gUI.AddText("You don't have");
-                            gUI.AddText("enough money");
+                            gUI.AddText("You don't have enough");
+                            gUI.AddText("money");
                         }
                     }
                     else
@@ -85,8 +85,8 @@ public class TradeSlot : MonoBehaviour
                         }
                         else
                         {
-                            gUI.AddText("You don't have");
-                            gUI.AddText("enough money");
+                            gUI.AddText("You don't have enough");
+                            gUI.AddText("money");
                         }
                     }
                     else

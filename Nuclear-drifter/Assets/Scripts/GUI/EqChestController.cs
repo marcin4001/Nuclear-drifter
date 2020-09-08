@@ -122,7 +122,7 @@ public class EqChestController : MonoBehaviour
             Slot exist = slots.Find(s => s.itemElement == _slot.itemElement);
             if (exist != null)
             {
-                if (_slot.itemElement.GetItemType() != ItemType.Weapon)
+                if (!_slot.isGun())
                 {
                     exist.amountItem += _slot.amountItem;
                 }
@@ -162,7 +162,7 @@ public class EqChestController : MonoBehaviour
             Slot exist = slots.Find(s => s.itemElement == _slot.itemElement);
             if (exist != null)
             {
-                if (_slot.itemElement.GetItemType() != ItemType.Weapon)
+                if (!_slot.isGun())
                 {
                     exist.amountItem += 1;
                 }
