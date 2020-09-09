@@ -27,10 +27,12 @@ public class GUIScript : MonoBehaviour
 
     public Button pauseBtn;
     public Button missionBtn;
+    public Button mapBtn;
     private GraphicRaycaster raycaster;
     private EventSystem system;
     private PointerEventData data;
     private TypeScene typeScene;
+    private PauseMenu pause;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,7 @@ public class GUIScript : MonoBehaviour
         raycaster = GetComponent<GraphicRaycaster>();
         system = FindObjectOfType<EventSystem>();
         typeScene = FindObjectOfType<TypeScene>();
+        pause = FindObjectOfType<PauseMenu>();
     }
 
     public inv_mode GetInvMode()
@@ -96,6 +99,14 @@ public class GUIScript : MonoBehaviour
         pauseBtn.enabled = value;
         missionBtn.enabled = value;
     }
+
+    public void DeactiveBtn(bool value)
+    {
+        pauseBtn.enabled = value;
+        missionBtn.enabled = value;
+        mapBtn.enabled = value;
+        pause.activeEsc = value;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -129,6 +140,10 @@ public class GUIScript : MonoBehaviour
             {
                 move.active = true;
             }
+        }
+        else
+        {
+            move.active = false;
         }
     }
 }

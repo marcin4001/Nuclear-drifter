@@ -10,7 +10,8 @@ public class TradeSystem : MonoBehaviour
     public Slot money;
 
     public SellSlot sellSlot;
-
+    public bool active = false;
+    public GameObject tradeGO;
     private GUIScript gUI;
     private PlayerClickMove move;
     private TypeScene typeSc;
@@ -43,6 +44,28 @@ public class TradeSystem : MonoBehaviour
                 }
             }
         }
+        tradeGO.SetActive(active);
+    }
+
+    public void Close()
+    {
+        active = false;
+        tradeGO.SetActive(active);
+        gUI.move.active = !active;
+        gUI.blockGUI = active;
+        gUI.DeactiveBtn(!active);
+        RemoveAll();
+        typeSc.inBox = 0;
+    }
+
+    public void Open()
+    {
+        active = true;
+        tradeGO.SetActive(active);
+        gUI.move.active = !active;
+        gUI.blockGUI = active;
+        gUI.DeactiveBtn(!active);
+        typeSc.inBox = 2;
     }
 
     public bool SellSlotIsEmpty()
@@ -154,6 +177,10 @@ public class TradeSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if(Input.GetKeyDown(KeyCode.T))
+        //{
+        //    if (active) Close();
+        //    else Open();
+        //}
     }
 }

@@ -15,7 +15,7 @@ public class MissionListGUI : MonoBehaviour
     private TypeScene typeSc;
     private MapControl map;
     private FadePanel fade;
-    private PauseMenu pause;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class MissionListGUI : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
         map = FindObjectOfType<MapControl>();
         fade = FindObjectOfType<FadePanel>();
-        pause = FindObjectOfType<PauseMenu>();
+        
     }
 
     public void OpenList()
@@ -35,7 +35,7 @@ public class MissionListGUI : MonoBehaviour
         listCanvas.enabled = active;
         gUI.blockGUI = active;
         map.keyActive = !active;
-        pause.activeEsc = !active;
+        gUI.DeactiveBtn(!active);
         fade.EnableImg(active);
         typeSc.SetInMenu();
         if (active) CurrentMissionShow();

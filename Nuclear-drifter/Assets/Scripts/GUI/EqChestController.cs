@@ -57,6 +57,7 @@ public class EqChestController : MonoBehaviour
         goEq.SetActive(active);
         gUI.move.active = !active;
         gUI.blockGUI = active;
+        gUI.DeactiveBtn(!active);
         typeSc.inBox = 0;
     }
 
@@ -69,6 +70,7 @@ public class EqChestController : MonoBehaviour
         gUI.move.active = !active;
         gUI.blockGUI = active;
         typeSc.inBox = 1;
+        gUI.DeactiveBtn(!active);
         SetItems();
     }
 
