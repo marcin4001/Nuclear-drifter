@@ -164,6 +164,7 @@ public class TradeSystem : MonoBehaviour
             if (!sellSlot.itemSlot.itemElement.noSell)
             {
                 money.amountItem = sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem;
+                gUI.AddText("You got $" + money.amountItem);
                 if (money.amountItem > 0) inv.Add(money);
                 sellSlot.ClearSlot();
             }

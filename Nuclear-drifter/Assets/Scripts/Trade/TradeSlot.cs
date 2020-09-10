@@ -48,6 +48,7 @@ public class TradeSlot : MonoBehaviour
                             if (inv.Add(temp))
                             {
                                 trade.money.amountItem = temp.itemElement.value;
+                                gUI.AddText("You spent $" + trade.money.amountItem);
                                 inv.RemoveFew(trade.money);
                             }
                             else
@@ -76,6 +77,7 @@ public class TradeSlot : MonoBehaviour
                             if (inv.Add(itemSlot))
                             {
                                 trade.money.amountItem = itemSlot.itemElement.value * itemSlot.amountItem;
+                                gUI.AddText("You spent $" + trade.money.amountItem);
                                 inv.RemoveFew(trade.money);
                             }
                             else
