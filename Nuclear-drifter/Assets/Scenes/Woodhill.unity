@@ -7837,7 +7837,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1496783520
 PrefabInstance:
@@ -11314,6 +11314,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 152daff89c8afcb4e9a30991674e914d, type: 2}
   - {fileID: 11400000, guid: 96fe936ae8447dd42aa1d7c61118dcb2, type: 2}
   - {fileID: 11400000, guid: 261912a9809acad4b8a6239770d98bba, type: 2}
+  - {fileID: 11400000, guid: 354ad4218b4ca8a498d46f6aac4315c3, type: 2}
   startIndex: 0
   indexNPC: 1
   distance: 1.1
@@ -11347,8 +11348,8 @@ MonoBehaviour:
   - id: 2
     type: 0
     dialogSuccess: 3
-    dialogNormal: 2
-    dialogComplete: 2
+    dialogNormal: 4
+    dialogComplete: 4
     slotItem:
       itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
       amountItem: 10
@@ -11397,7 +11398,7 @@ Transform:
   m_Children:
   - {fileID: 58800431253340125}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1544097684345113857
 PrefabInstance:
@@ -11937,7 +11938,7 @@ Transform:
   m_Children:
   - {fileID: 4243466123167671186}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4243466122818002557
 BoxCollider2D:
@@ -12950,7 +12951,7 @@ Transform:
   m_Children:
   - {fileID: 5316744918750324302}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6724402954111046056
 Transform:

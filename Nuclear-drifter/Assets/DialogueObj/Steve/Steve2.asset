@@ -20,6 +20,20 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Can you remind me where Bruce is?
+    reply: Bruce lives in Watown. He usually stands in front of his house. Watown
+      is a settlement northeast of here.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -27,3 +41,6 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
