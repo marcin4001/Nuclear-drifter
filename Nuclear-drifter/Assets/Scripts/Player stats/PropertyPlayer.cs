@@ -19,6 +19,9 @@ public class PropertyPlayer : MonoBehaviour
     public Vector2 posOutside;
     public int[] foundArea;
     public List<Slot> inv;
+    public int currentExp = 0;
+    public int level = 1;
+    public int prevTh = 0;
 
     // Start is called before the first frame update
     void Awake()

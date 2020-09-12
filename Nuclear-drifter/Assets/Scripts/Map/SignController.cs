@@ -9,6 +9,7 @@ public class Area
     public TextMeshPro text;
     public SpriteRenderer cross;
     public GameObject col;
+    
 
     public void ActiveText()
     {
@@ -41,11 +42,13 @@ public class SignController : MonoBehaviour
     public Area[] areas;
     private GUIScript gUI;
     private TypeScene scene;
+    private Experience exp;
     // Start is called before the first frame update
     void Start()
     {
         scene = FindObjectOfType<TypeScene>();
         gUI = FindObjectOfType<GUIScript>();
+        exp = FindObjectOfType<Experience>();
         if(areas.Length > 0)
         {
             if(scene.isInterior)
@@ -73,6 +76,7 @@ public class SignController : MonoBehaviour
         {
             areas[index].ActiveText();
             gUI.AddText("You found " + areas[index].text.text);
+            exp.AddExp(100);
             PropertyPlayer.property.foundArea[index] = 2;
         }
     }

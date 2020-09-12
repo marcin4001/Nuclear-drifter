@@ -39,13 +39,17 @@ public class GUIScript : MonoBehaviour
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         time = FindObjectOfType<TimeGame>();
         move = FindObjectOfType<PlayerClickMove>();
-        expLabel.text = "lvl:1 exp:0/500";
         consoleLabel.text = "";
         consoleText = new Queue<string>();
         raycaster = GetComponent<GraphicRaycaster>();
         system = FindObjectOfType<EventSystem>();
         typeScene = FindObjectOfType<TypeScene>();
         pause = FindObjectOfType<PauseMenu>();
+    }
+
+    public void ShowExp(int lvl, int exp, int nextTh)
+    {
+        expLabel.text = "lvl:" + lvl + " exp:" + exp + "/" + nextTh;
     }
 
     public inv_mode GetInvMode()

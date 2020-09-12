@@ -50,6 +50,10 @@ public class MenuUI : MonoBehaviour
 
         PropertyPlayer.property.inv = startSlots;
 
+        PropertyPlayer.property.currentExp = 0;
+        PropertyPlayer.property.level = 1;
+        PropertyPlayer.property.prevTh = 0;
+
         foreach(MissionObj mission in MissionList.global.missions)
         {
             mission.ResetObj();

@@ -9,6 +9,7 @@ public class MissionNPC : MonoBehaviour
     private NPCBasic npc;
     private MissionPrize prize;
     private MissionStart startM;
+    private Experience exp;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class MissionNPC : MonoBehaviour
         npc = GetComponent<NPCBasic>();
         prize = GetComponent<MissionPrize>();
         startM = GetComponent<MissionStart>();
+        exp = FindObjectOfType<Experience>();
     }
 
     public MissionDetails GetMission(int id)
@@ -40,6 +42,8 @@ public class MissionNPC : MonoBehaviour
     public void CompleteMission(int id)
     {
         MissionList.global.missions[id].complete = true;
+        int amountExp = MissionList.global.missions[id].exp;
+        exp.AddExp(amountExp);
         MissionDetails m = GetMission(id);
         if(m != null)
         {
