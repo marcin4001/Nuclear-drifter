@@ -34,6 +34,37 @@ public class MissionList : MonoBehaviour
         }
     }
 
+    public void StartMission(int id)
+    {
+        if (missions.Length == 0) return;
+        if (id >= 0 && id < missions.Length)
+        {
+            missions[id].start = true;
+        }
+    }
+
+    public void CompleteMission(int id)
+    {
+        if (missions.Length == 0) return;
+        if (id >= 0 && id < missions.Length)
+        {
+            missions[id].complete = true;
+        }
+    }
+
+    public int GetExp(int id)
+    {
+        if (missions.Length == 0) return 0;
+        if (id >= 0 && id < missions.Length)
+        {
+            return missions[id].exp;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     public List<MissionObj> GetListMission()
     {
         List<MissionObj> list = missions.ToList();

@@ -31,7 +31,7 @@ public class MissionNPC : MonoBehaviour
 
     public void StartMission(int id)
     {
-        MissionList.global.missions[id].start = true;
+        MissionList.global.StartMission(id);
         CheckMission();
         if(startM != null)
         {
@@ -41,8 +41,8 @@ public class MissionNPC : MonoBehaviour
 
     public void CompleteMission(int id)
     {
-        MissionList.global.missions[id].complete = true;
-        int amountExp = MissionList.global.missions[id].exp;
+        MissionList.global.CompleteMission(id);
+        int amountExp = MissionList.global.GetExp(id);
         exp.AddExp(amountExp);
         MissionDetails m = GetMission(id);
         if(m != null)
@@ -62,7 +62,9 @@ public class MissionNPC : MonoBehaviour
 
     public void CompleteMissionNoCond(int id)
     {
-        MissionList.global.missions[id].complete = true;
+        MissionList.global.CompleteMission(id);
+        int amountExp = MissionList.global.GetExp(id);
+        exp.AddExp(amountExp);
         MissionDetails m = GetMission(id);
         if (m != null)
         {

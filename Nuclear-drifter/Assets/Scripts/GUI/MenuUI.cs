@@ -7,6 +7,7 @@ public class MenuUI : MonoBehaviour
 {
     public List<Slot> startSlots;
     public Texture2D cursor;
+    public int idStartMission = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,13 +54,14 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.currentExp = 0;
         PropertyPlayer.property.level = 1;
         PropertyPlayer.property.prevTh = 0;
+        MissionList.global.StartMission(idStartMission);
 
         foreach(MissionObj mission in MissionList.global.missions)
         {
             mission.ResetObj();
         }
-
-        foreach(DeviceElement device in DeviceList.global.devices)
+        MissionList.global.StartMission(idStartMission);
+        foreach (DeviceElement device in DeviceList.global.devices)
         {
             device.Reset();
         }
