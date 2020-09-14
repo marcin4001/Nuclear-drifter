@@ -37,7 +37,7 @@ public class MissionListGUI : MonoBehaviour
         map.keyActive = !active;
         gUI.DeactiveBtn(!active);
         fade.EnableImg(active);
-        typeSc.SetInMenu();
+        typeSc.inMenu = active;
         if (active) CurrentMissionShow();
     }
 

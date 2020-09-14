@@ -41,7 +41,7 @@ public class MapControl : MonoBehaviour
         mapCanvas.enabled = actveMap;
         gUI.blockGUI = actveMap;
         player.active = !actveMap;
-        typeSc.SetInMenu();
+        typeSc.inMenu = actveMap;
         gUI.DeactiveButtons(!actveMap);
         pause.activeEsc = !actveMap;
     }

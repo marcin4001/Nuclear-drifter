@@ -46,7 +46,7 @@ public class DialogueController : MonoBehaviour
         menu.activeEsc = true;
         active = false;
         
-        typeSc.SetInMenu();
+        typeSc.inMenu = false;
     }
 
     public void OpenDialogue(NPCBasic _NPC)
@@ -57,7 +57,7 @@ public class DialogueController : MonoBehaviour
         map.keyActive = false;
         menu.activeEsc = false;
         active = true;
-        typeSc.SetInMenu();
+        typeSc.inMenu = true;
         SetDialogueStart();
         
     }

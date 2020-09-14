@@ -16,10 +16,12 @@ public class MissionDoor : MonoBehaviour
             if (!mission.complete)
             {
                 door.isLock = true;
+                door.closeInNight = false;
             }
             else
             {
                 door.isLock = false;
+                door.closeInNight = true;
             }
         }
         Destroy(gameObject);

@@ -38,7 +38,7 @@ public class SlotElement : MonoBehaviour
     public void ClickSlot()
     {
         if(typeSc == null) typeSc = FindObjectOfType<TypeScene>();
-        if (itemSlot != null)
+        if (itemSlot != null && !typeSc.inMenu)
         {
             if (itemSlot.itemElement != null && itemSlot.amountItem > 0)
             {
