@@ -55,7 +55,7 @@ public class DayCycle : MonoBehaviour
             counter += Time.deltaTime;
             float alfa = counter / 30f; //(float) time.minutes / 59f;
             float x = Mathf.Lerp(0f, 90f, alfa);
-            Debug.Log(alfa);
+            //Debug.Log(alfa);
             sun.transform.rotation = Quaternion.Euler(new Vector3(x, 0f, 0f));
             if (time.minutes > 40 && lightPlayer != null) lightPlayer.enabled = true;
         }
