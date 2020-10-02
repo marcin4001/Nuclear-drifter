@@ -226,6 +226,20 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public bool HaveMoney(int cost)
+    {
+        Slot money = FindItem(300);
+        if (money != null)
+        {
+            if (money.amountItem >= cost) return true;
+            else return false;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public void RemoveOne(Slot _slot)
     {
         if (_slot.itemElement.GetItemType() != ItemType.Weapon || typeSc.inBox > 0) 

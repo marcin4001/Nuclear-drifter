@@ -42,24 +42,13 @@ public class TradeSlot : MonoBehaviour
                 {
                     if (trade.SellSlotIsEmpty())
                     {
-                        Slot temp = new Slot(itemSlot.itemElement, 1, itemSlot.ammo);
-                        if (inv.CanBuy(temp))
+                        if (itemSlot.isGun() && inv.FindItemB(itemSlot.itemElement.idItem))
                         {
-                            if (inv.Add(temp))
-                            {
-                                trade.money.amountItem = temp.itemElement.value;
-                                gUI.AddText("You spent $" + trade.money.amountItem);
-                                inv.RemoveFew(trade.money);
-                            }
-                            else
-                            {
-                                gUI.AddText("Inventory is full");
-                            }
+                            BuyAmmo();
                         }
                         else
                         {
-                            gUI.AddText("You don't have enough");
-                            gUI.AddText("money");
+                            BuyOne();
                         }
                     }
                     else
@@ -72,23 +61,13 @@ public class TradeSlot : MonoBehaviour
                 {
                     if (trade.SellSlotIsEmpty())
                     {
-                        if (inv.CanBuy(itemSlot))
+                        if (itemSlot.isGun() && inv.FindItemB(itemSlot.itemElement.idItem))
                         {
-                            if (inv.Add(itemSlot))
-                            {
-                                trade.money.amountItem = itemSlot.itemElement.value * itemSlot.amountItem;
-                                gUI.AddText("You spent $" + trade.money.amountItem);
-                                inv.RemoveFew(trade.money);
-                            }
-                            else
-                            {
-                                gUI.AddText("Inventory is full");
-                            }
+                            BuyAmmo();
                         }
                         else
                         {
-                            gUI.AddText("You don't have enough");
-                            gUI.AddText("money");
+                            BuyAll();
                         }
                     }
                     else
@@ -97,6 +76,78 @@ public class TradeSlot : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void BuyOne()
+    {
+        Slot temp = new Slot(itemSlot.itemElement, 1, itemSlot.ammo);
+        if (inv.CanBuy(temp))
+        {
+            if (inv.Add(temp))
+            {
+                trade.money.amountItem = temp.itemElement.value;
+                gUI.AddText("You spent $" + trade.money.amountItem);
+                inv.RemoveFew(trade.money);
+            }
+            else
+            {
+                gUI.AddText("Inventory is full");
+            }
+        }
+        else
+        {
+            gUI.AddText("You don't have enough");
+            gUI.AddText("money");
+        }
+    }
+
+    private void BuyAll()
+    {
+        if (inv.CanBuy(itemSlot))
+        {
+            if (inv.Add(itemSlot))
+            {
+                trade.money.amountItem = itemSlot.itemElement.value * itemSlot.amountItem;
+                gUI.AddText("You spent $" + trade.money.amountItem);
+                inv.RemoveFew(trade.money);
+            }
+            else
+            {
+                gUI.AddText("Inventory is full");
+            }
+        }
+        else
+        {
+            gUI.AddText("You don't have enough");
+            gUI.AddText("money");
+        }
+    }
+
+    private void BuyAmmo()
+    {
+        int cost = Mathf.CeilToInt(itemSlot.itemElement.value * 0.01f) - 1;
+        if (cost <= 0) cost = 1;
+        Debug.Log(cost);
+        cost *= itemSlot.ammo;
+        Debug.Log(cost);
+        if (inv.HaveMoney(cost))
+        {
+            if (inv.Add(itemSlot))
+            {
+                trade.money.amountItem = cost;
+                gUI.AddText("You spent $" + trade.money.amountItem);
+                inv.RemoveFew(trade.money);
+            }
+            else
+            {
+                gUI.AddText("Inventory is full");
+            }
+        }
+        else
+        {
+            gUI.AddText("You don't have enough");
+            gUI.AddText("money");
         }
     }
 
