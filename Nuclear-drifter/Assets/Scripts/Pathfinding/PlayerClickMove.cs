@@ -43,6 +43,7 @@ public class PlayerClickMove : MonoBehaviour
     public Texture2D all;
     public Texture2D head;
     public Texture2D tool;
+    public Texture2D gunpoint;
     public bool active = true;
     private GUIScript gUI;
     public Node checkNode;
@@ -200,51 +201,73 @@ public class PlayerClickMove : MonoBehaviour
     {
         if (active)
         {
-            mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
-            if (mode == Mouse_mode.move)
-            {
-                target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
-                if (sqrLoc != null) {
-                    sqrLoc.transform.position = target.position;
-                    sqrLoc.SetActive(true);
-                }
-                checkNode = grid.NodeFromPoint(target.position);
 
-                if (checkNode.walkable && !grid.isPlayerNode(target.position)) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
-                else Cursor.SetCursor(noWay, Vector2.one, CursorMode.ForceSoftware);
-            }
-            if(mode == Mouse_mode.use)
+            if (!typeSc.combatState)
             {
-                if (sqrLoc != null) sqrLoc.SetActive(false);
-                bool isItems = false;
-                bool isNPC = false;
-                bool isDevice = false;
+                mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
-                foreach(RaycastHit2D n in nodes)
+                if (mode == Mouse_mode.move)
                 {
-                    if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest") isItems = true;
-                    if (n.collider.tag == "NPC") isNPC = true;
-                    if (n.collider.tag == "Device") isDevice = true;
+                    target.position = new Vector3(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
+                    if (sqrLoc != null)
+                    {
+                        sqrLoc.transform.position = target.position;
+                        sqrLoc.SetActive(true);
+                    }
+                    checkNode = grid.NodeFromPoint(target.position);
+
+                    if (checkNode.walkable && !grid.isPlayerNode(target.position)) Cursor.SetCursor(goodWay, Vector2.one, CursorMode.ForceSoftware);
+                    else Cursor.SetCursor(noWay, Vector2.one, CursorMode.ForceSoftware);
                 }
-                if (isItems) Cursor.SetCursor(hand, Vector2.zero, CursorMode.ForceSoftware);
-                else if(isNPC) Cursor.SetCursor(head, Vector2.zero, CursorMode.ForceSoftware);
-                else if(isDevice) Cursor.SetCursor(tool, Vector2.zero, CursorMode.ForceSoftware);
-                else Cursor.SetCursor(noUse, Vector2.zero, CursorMode.ForceSoftware);
+                if (mode == Mouse_mode.use)
+                {
+                    if (sqrLoc != null) sqrLoc.SetActive(false);
+                    bool isItems = false;
+                    bool isNPC = false;
+                    bool isDevice = false;
+                    nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
+                    foreach (RaycastHit2D n in nodes)
+                    {
+                        if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest") isItems = true;
+                        if (n.collider.tag == "NPC") isNPC = true;
+                        if (n.collider.tag == "Device") isDevice = true;
+                    }
+                    if (isItems) Cursor.SetCursor(hand, Vector2.zero, CursorMode.ForceSoftware);
+                    else if (isNPC) Cursor.SetCursor(head, Vector2.zero, CursorMode.ForceSoftware);
+                    else if (isDevice) Cursor.SetCursor(tool, Vector2.zero, CursorMode.ForceSoftware);
+                    else Cursor.SetCursor(noUse, Vector2.zero, CursorMode.ForceSoftware);
+                }
+                if (mode == Mouse_mode.look)
+                {
+                    if (sqrLoc != null) sqrLoc.SetActive(false);
+                    bool isObstacle = false;
+                    nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
+                    if (nodes.Length == 0) isObstacle = true;
+                    foreach (RaycastHit2D n in nodes)
+                        if (n.collider.tag != "Untagged" && n.collider.tag != "Hero")
+                            isObstacle = true;
+                    if (isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
+                    else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+                }
             }
-            if (mode == Mouse_mode.look)
+            else
             {
-                if (sqrLoc != null) sqrLoc.SetActive(false);
-                bool isObstacle = false;
+                mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
-                if (nodes.Length == 0) isObstacle = true;
+                bool isEnemy = false;
+                if (nodes.Length == 0) isEnemy = false;
                 foreach (RaycastHit2D n in nodes)
-                    if (n.collider.tag != "Untagged" && n.collider.tag != "Hero")
-                        isObstacle = true;
-                if (isObstacle) Cursor.SetCursor(look, Vector2.zero, CursorMode.ForceSoftware);
-                else Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+                    if (n.collider.tag == "Enemy") isEnemy = true;
+
+                if (isEnemy)
+                {
+                    Cursor.SetCursor(gunpoint, Vector2.zero, CursorMode.ForceSoftware);
+                }
+                else
+                {
+                    Cursor.SetCursor(arrow, Vector2.zero, CursorMode.ForceSoftware);
+                }
             }
-            
 
 
 
@@ -253,21 +276,27 @@ public class PlayerClickMove : MonoBehaviour
             {
 
                 RaycastHit2D node = Physics2D.Raycast(mousePos, Vector2.zero);
-
-                switch (mode)
+                if (!typeSc.combatState)
                 {
-                    case Mouse_mode.move:
-                        Move(node);
-                        break;
-                    case Mouse_mode.use:
-                        Use();
-                        break;
-                    case Mouse_mode.look:
-                        Look(node);
-                        break;
+                    switch (mode)
+                    {
+                        case Mouse_mode.move:
+                            Move(node);
+                            break;
+                        case Mouse_mode.use:
+                            Use();
+                            break;
+                        case Mouse_mode.look:
+                            Look(node);
+                            break;
+                    }
+                }
+                else
+                {
+                    //attack
                 }
             }
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && !typeSc.combatState)
             {
                 if (!stop) stop = true;
                 else
@@ -319,7 +348,7 @@ public class PlayerClickMove : MonoBehaviour
                 }
             }
         }
-
+        //Move 
         if (path != null && !stop)
         {
             if (path.Count > 0)
@@ -332,7 +361,7 @@ public class PlayerClickMove : MonoBehaviour
                         currentIndexPoint++;
                         direct = path[currentIndexPoint].pos - transform.position;
                         anim.SetFloat("moveX", direct.x);
-                         anim.SetFloat("moveY", direct.y);
+                        anim.SetFloat("moveY", direct.y);
                     }
                     else
                     {
