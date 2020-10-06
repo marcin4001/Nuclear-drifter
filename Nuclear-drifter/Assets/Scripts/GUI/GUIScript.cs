@@ -28,6 +28,7 @@ public class GUIScript : MonoBehaviour
     public Button pauseBtn;
     public Button missionBtn;
     public Button mapBtn;
+    public GameObject optBtnPanel;
     private GraphicRaycaster raycaster;
     private EventSystem system;
     private PointerEventData data;
@@ -50,6 +51,12 @@ public class GUIScript : MonoBehaviour
     public void ShowExp(int lvl, int exp, int nextTh)
     {
         expLabel.text = "lvl:" + lvl + " exp:" + exp + "/" + nextTh;
+    }
+
+    public void ActiveBtnPanel(bool value)
+    {
+        optBtnPanel.SetActive(value);
+        pause.activeEsc = value;
     }
 
     public inv_mode GetInvMode()
