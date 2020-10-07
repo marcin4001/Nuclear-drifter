@@ -293,7 +293,8 @@ public class PlayerClickMove : MonoBehaviour
                 }
                 else
                 {
-                    //attack
+                    //Debug.Log(node.collider);
+                    if(node.collider != null) node.collider.SendMessage("Damage");
                 }
             }
             if (Input.GetMouseButtonDown(1) && !typeSc.combatState)

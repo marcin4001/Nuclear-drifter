@@ -14,15 +14,83 @@ public class CombatSystem : MonoBehaviour
     public Transform[] enemyPoints;
     public List<GameObject> enemysObjs;
     public List<Enemy> enemies;
+    public GameObject rootBloodSc;
+    public Animator animBlood;
+    private bool playerRound = true;
+    private bool isAttack = false;
+    public int currentIndex = 0;
+    private Health hpPlayer;
+    private BadEnding ending;
+    private MapControl map;
     // Start is called before the first frame update
     void Start()
     {
         typeSc = FindObjectOfType<TypeScene>();
         player = FindObjectOfType<PlayerClickMove>();
         gUI = FindObjectOfType<GUIScript>();
+        hpPlayer = FindObjectOfType<Health>();
+        ending = player.GetComponent<BadEnding>();
+        map = FindObjectOfType<MapControl>();
         battleCanvas.enabled = false;
         enemysObjs = new List<GameObject>();
         enemies = new List<Enemy>();
+        BlockPlayer(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(!playerRound)
+        {
+            if(!isAttack)
+            {
+                if(currentIndex < enemies.Count)
+                {
+                    enemies[currentIndex].Attack();
+                    currentIndex += 1;
+                    isAttack = true;
+                }
+                else
+                {
+                    currentIndex = 0;
+                    playerRound = true;
+                    BlockPlayer(false);
+                }
+            }
+        }
+    }
+
+    public void EndAttack()
+    {
+        if(!hpPlayer.isDead()) isAttack = false;
+        else
+        {
+            SkipFight();
+            ending.End();
+        }
+        
+    }
+
+    public void EnemyRound()
+    {
+        playerRound = false;
+    }
+
+    public bool Damage(Enemy _enemy)
+    {
+        float rngChance = Random.Range(0.0f, 1.0f);
+        if(rngChance <= _enemy.dmgChance)
+        {
+            gUI.AddText("The " + _enemy.nameEnemy + " bit you!");
+            gUI.AddText("You lost " + _enemy.damageMax + "HP!");
+            hpPlayer.Damage(_enemy.damageMax);
+            return true;
+        }
+        else
+        {
+            gUI.AddText("The " + _enemy.nameEnemy + " missed!");
+            return false;
+        }
     }
 
 
@@ -35,6 +103,8 @@ public class CombatSystem : MonoBehaviour
         enemyTr = trigger;
         battleCanvas.enabled = true;
         gUI.ActiveBtnPanel(false);
+        map.keyActive = false;
+        if (map.GetActive()) map.OpenMap();
         SetEnemys();
     }
 
@@ -80,11 +150,19 @@ public class CombatSystem : MonoBehaviour
         typeSc.combatState = false;
         battleCanvas.enabled = false;
         gUI.ActiveBtnPanel(true);
+        map.keyActive = true;
         ClearArea();
     }
-    // Update is called once per frame
-    void Update()
+
+    public void BlockPlayer(bool value)
     {
-        
+        typeSc.inMenu = value;
+        rootBloodSc.SetActive(value);
     }
+
+    public void ShowBlood()
+    {
+        animBlood.SetTrigger("Attack");
+    }
+ 
 }

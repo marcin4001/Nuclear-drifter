@@ -347,9 +347,9 @@ public class Inventory : MonoBehaviour
 
         //}
 
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Debug.Log(CanBuy(testSlot));
-        }
+        //if (Input.GetKeyDown(KeyCode.B))
+        //{
+        //    Debug.Log(CanBuy(testSlot));
+        //}
     }
 }

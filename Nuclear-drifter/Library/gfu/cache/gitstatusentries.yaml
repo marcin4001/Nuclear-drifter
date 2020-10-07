@@ -13,18 +13,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-10-06T18:47:42.396+02:00
-  initializedAtString: 2020-10-06T15:04:50.428+02:00
+  lastUpdatedAtString: 2020-10-07T18:30:19.577+02:00
+  initializedAtString: 2020-10-07T13:53:52.636+02:00
   entries:
-  - path: Nuclear-drifter\Assets\Prefabs\ConfigObj\GUIobj.prefab
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Prefabs\ConfigObj\GUIobj.prefab
-    projectPath: Assets\Prefabs\ConfigObj\GUIobj.prefab
+  - path: Nuclear-drifter\Assets\Animations\BloodScreen.meta
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Animations\BloodScreen.meta
+    projectPath: Assets\Animations\BloodScreen.meta
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Nuclear-drifter\Assets\Prefabs\Enemy.meta
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Prefabs\Enemy.meta
-    projectPath: Assets\Prefabs\Enemy.meta
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Assets\Animations\BloodScreen\Attack.anim
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Animations\BloodScreen\Attack.anim
+    projectPath: Assets\Animations\BloodScreen\Attack.anim
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Assets\Animations\BloodScreen\Attack.anim.meta
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Animations\BloodScreen\Attack.anim.meta
+    projectPath: Assets\Animations\BloodScreen\Attack.anim.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Assets\Animations\BloodScreen\BllodScreen.controller
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Animations\BloodScreen\BllodScreen.controller
+    projectPath: Assets\Animations\BloodScreen\BllodScreen.controller
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Assets\Animations\BloodScreen\BllodScreen.controller.meta
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Animations\BloodScreen\BllodScreen.controller.meta
+    projectPath: Assets\Animations\BloodScreen\BllodScreen.controller.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Assets\Animations\BloodScreen\Idle.anim
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Animations\BloodScreen\Idle.anim
+    projectPath: Assets\Animations\BloodScreen\Idle.anim
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Assets\Animations\BloodScreen\Idle.anim.meta
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Animations\BloodScreen\Idle.anim.meta
+    projectPath: Assets\Animations\BloodScreen\Idle.anim.meta
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -32,96 +62,49 @@ MonoBehaviour:
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Prefabs\Enemy\ratEnemy.prefab
     projectPath: Assets\Prefabs\Enemy\ratEnemy.prefab
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Prefabs\Enemy\ratEnemy.prefab.meta
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Prefabs\Enemy\ratEnemy.prefab.meta
-    projectPath: Assets\Prefabs\Enemy\ratEnemy.prefab.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Nuclear-drifter\Assets\Scenes\MainWorld.unity
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scenes\MainWorld.unity
     projectPath: Assets\Scenes\MainWorld.unity
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Nuclear-drifter\Assets\Scripts\GUI\GUIScript.cs
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\GUI\GUIScript.cs
-    projectPath: Assets\Scripts\GUI\GUIScript.cs
+  - path: Nuclear-drifter\Assets\Scripts\Items\Inventory.cs
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Items\Inventory.cs
+    projectPath: Assets\Scripts\Items\Inventory.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Nuclear-drifter\Assets\Scripts\Turn-based combat system.meta
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Turn-based
-      combat system.meta
-    projectPath: Assets\Scripts\Turn-based combat system.meta
+  - path: Nuclear-drifter\Assets\Scripts\Pathfinding\PlayerClickMove.cs
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Pathfinding\PlayerClickMove.cs
+    projectPath: Assets\Scripts\Pathfinding\PlayerClickMove.cs
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Nuclear-drifter\Assets\Scripts\Turn-based combat system\CombatSystem.cs
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Turn-based
       combat system\CombatSystem.cs
     projectPath: Assets\Scripts\Turn-based combat system\CombatSystem.cs
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Scripts\Turn-based combat system\CombatSystem.cs.meta
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Turn-based
-      combat system\CombatSystem.cs.meta
-    projectPath: Assets\Scripts\Turn-based combat system\CombatSystem.cs.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Nuclear-drifter\Assets\Scripts\Turn-based combat system\Enemy.cs
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Turn-based
       combat system\Enemy.cs
     projectPath: Assets\Scripts\Turn-based combat system\Enemy.cs
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Scripts\Turn-based combat system\Enemy.cs.meta
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Turn-based
-      combat system\Enemy.cs.meta
-    projectPath: Assets\Scripts\Turn-based combat system\Enemy.cs.meta
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Nuclear-drifter\Assets\Texture\BloodScreen.png
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Texture\BloodScreen.png
+    projectPath: Assets\Texture\BloodScreen.png
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Scripts\Turn-based combat system\EnemyTrigger.cs
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Turn-based
-      combat system\EnemyTrigger.cs
-    projectPath: Assets\Scripts\Turn-based combat system\EnemyTrigger.cs
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Scripts\Turn-based combat system\EnemyTrigger.cs.meta
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Scripts\Turn-based
-      combat system\EnemyTrigger.cs.meta
-    projectPath: Assets\Scripts\Turn-based combat system\EnemyTrigger.cs.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Texture\Escbutton.png
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Texture\Escbutton.png
-    projectPath: Assets\Texture\Escbutton.png
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Texture\Escbutton.png.meta
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Texture\Escbutton.png.meta
-    projectPath: Assets\Texture\Escbutton.png.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Texture\ratPa.png
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Texture\ratPa.png
-    projectPath: Assets\Texture\ratPa.png
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Assets\Texture\ratPa.png.meta
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Texture\ratPa.png.meta
-    projectPath: Assets\Texture\ratPa.png.meta
+  - path: Nuclear-drifter\Assets\Texture\BloodScreen.png.meta
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Assets\Texture\BloodScreen.png.meta
+    projectPath: Assets\Texture\BloodScreen.png.meta
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -131,87 +114,141 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Nuclear-drifter\Library\Artifacts\05\05c405ecdd5042261db7d6838cd8edd5
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\05\05c405ecdd5042261db7d6838cd8edd5
-    projectPath: Library\Artifacts\05\05c405ecdd5042261db7d6838cd8edd5
+  - path: Nuclear-drifter\Library\Artifacts\04\0488c1865c188908f542c90fa3e8dcdb
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\04\0488c1865c188908f542c90fa3e8dcdb
+    projectPath: Library\Artifacts\04\0488c1865c188908f542c90fa3e8dcdb
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\0f\0f738bc1e22afb25bb04eb76e979ec53
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\0f\0f738bc1e22afb25bb04eb76e979ec53
-    projectPath: Library\Artifacts\0f\0f738bc1e22afb25bb04eb76e979ec53
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\13\13ad88c99c93ca1290be43068fee72e5
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\13\13ad88c99c93ca1290be43068fee72e5
-    projectPath: Library\Artifacts\13\13ad88c99c93ca1290be43068fee72e5
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\17\177f6ce8379356d753a5021c273bfebe
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\17\177f6ce8379356d753a5021c273bfebe
-    projectPath: Library\Artifacts\17\177f6ce8379356d753a5021c273bfebe
+  - path: Nuclear-drifter\Library\Artifacts\04\04c4426cc9a24c00b2a9eaba81038982
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\04\04c4426cc9a24c00b2a9eaba81038982
+    projectPath: Library\Artifacts\04\04c4426cc9a24c00b2a9eaba81038982
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\21\212a35763994c6e3530d01b82418eda3
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\21\212a35763994c6e3530d01b82418eda3
-    projectPath: Library\Artifacts\21\212a35763994c6e3530d01b82418eda3
+  - path: Nuclear-drifter\Library\Artifacts\0b\0b16ba35ea7fa8a121e479ef77edfe5b
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\0b\0b16ba35ea7fa8a121e479ef77edfe5b
+    projectPath: Library\Artifacts\0b\0b16ba35ea7fa8a121e479ef77edfe5b
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\0c\0c835c780086d33c97e620c703de98dd
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\0c\0c835c780086d33c97e620c703de98dd
+    projectPath: Library\Artifacts\0c\0c835c780086d33c97e620c703de98dd
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\19\19c6a7049a909706e1b2f70a3596458a
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\19\19c6a7049a909706e1b2f70a3596458a
+    projectPath: Library\Artifacts\19\19c6a7049a909706e1b2f70a3596458a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\23\232e42ba3589470aaf1f9dca925544fb
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\23\232e42ba3589470aaf1f9dca925544fb
+    projectPath: Library\Artifacts\23\232e42ba3589470aaf1f9dca925544fb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\28\28649c394fe3b9bb59314ca848ab3a65
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\28\28649c394fe3b9bb59314ca848ab3a65
+    projectPath: Library\Artifacts\28\28649c394fe3b9bb59314ca848ab3a65
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\2c\2c56dc14106af631922322097dbaadcf
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\2c\2c56dc14106af631922322097dbaadcf
+    projectPath: Library\Artifacts\2c\2c56dc14106af631922322097dbaadcf
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\2c\2c6b605bb49beef10e46b99121875590
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\2c\2c6b605bb49beef10e46b99121875590
+    projectPath: Library\Artifacts\2c\2c6b605bb49beef10e46b99121875590
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\2e\2e6f78d7eeb9e4df1112f72f44a08baa
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\2e\2e6f78d7eeb9e4df1112f72f44a08baa
+    projectPath: Library\Artifacts\2e\2e6f78d7eeb9e4df1112f72f44a08baa
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\36\36734fac80d65401a216732307e4274e
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\36\36734fac80d65401a216732307e4274e
+    projectPath: Library\Artifacts\36\36734fac80d65401a216732307e4274e
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Nuclear-drifter\Library\Artifacts\36\36df98f829d6920280e9a5d1b9a71333
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\36\36df98f829d6920280e9a5d1b9a71333
     projectPath: Library\Artifacts\36\36df98f829d6920280e9a5d1b9a71333
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\37\371c3174888d4a3542cdbbba9f7a913b
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\37\371c3174888d4a3542cdbbba9f7a913b
-    projectPath: Library\Artifacts\37\371c3174888d4a3542cdbbba9f7a913b
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\3b\3b5020cc9e8268ec3bdc772a14a3b5d1
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\3b\3b5020cc9e8268ec3bdc772a14a3b5d1
+    projectPath: Library\Artifacts\3b\3b5020cc9e8268ec3bdc772a14a3b5d1
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\42\42583cfc9e8ddc47fd7cd43e2f4dd081
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\42\42583cfc9e8ddc47fd7cd43e2f4dd081
-    projectPath: Library\Artifacts\42\42583cfc9e8ddc47fd7cd43e2f4dd081
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\46\46e2e037d72b7146c37e446148097bd4
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\46\46e2e037d72b7146c37e446148097bd4
-    projectPath: Library\Artifacts\46\46e2e037d72b7146c37e446148097bd4
+  - path: Nuclear-drifter\Library\Artifacts\3b\3b90f43f044f1eb9fe09d3ffff71d13b
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\3b\3b90f43f044f1eb9fe09d3ffff71d13b
+    projectPath: Library\Artifacts\3b\3b90f43f044f1eb9fe09d3ffff71d13b
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\4c\4c4ee298df289cb384f59979ed0a873f
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\4c\4c4ee298df289cb384f59979ed0a873f
-    projectPath: Library\Artifacts\4c\4c4ee298df289cb384f59979ed0a873f
+  - path: Nuclear-drifter\Library\Artifacts\4f\4f4dc06a14c98338df33b97a9dbc3f3b
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\4f\4f4dc06a14c98338df33b97a9dbc3f3b
+    projectPath: Library\Artifacts\4f\4f4dc06a14c98338df33b97a9dbc3f3b
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\53\53bc0dfd911c35bf0f02e7d23266b734
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\53\53bc0dfd911c35bf0f02e7d23266b734
+    projectPath: Library\Artifacts\53\53bc0dfd911c35bf0f02e7d23266b734
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Nuclear-drifter\Library\Artifacts\56\565957f6b37f9f3e518f35565c8899e8
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\56\565957f6b37f9f3e518f35565c8899e8
     projectPath: Library\Artifacts\56\565957f6b37f9f3e518f35565c8899e8
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Nuclear-drifter\Library\Artifacts\58\5863a3135640b8d1f0e8c25579bff7f2
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\58\5863a3135640b8d1f0e8c25579bff7f2
     projectPath: Library\Artifacts\58\5863a3135640b8d1f0e8c25579bff7f2
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\59\5914b396532060e1a20c5dbd5ee5be67
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\59\5914b396532060e1a20c5dbd5ee5be67
-    projectPath: Library\Artifacts\59\5914b396532060e1a20c5dbd5ee5be67
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\5c\5c8ebc44850c9280815e21d371c31d20
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\5c\5c8ebc44850c9280815e21d371c31d20
+    projectPath: Library\Artifacts\5c\5c8ebc44850c9280815e21d371c31d20
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Nuclear-drifter\Library\Artifacts\5c\5cfe7bc64a6a412cbc89e950f1f7adb2
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\5c\5cfe7bc64a6a412cbc89e950f1f7adb2
     projectPath: Library\Artifacts\5c\5cfe7bc64a6a412cbc89e950f1f7adb2
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\60\60a9b941aae5bbcbc6b0078f2f05a0c3
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\60\60a9b941aae5bbcbc6b0078f2f05a0c3
+    projectPath: Library\Artifacts\60\60a9b941aae5bbcbc6b0078f2f05a0c3
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\61\6117cba8130d8089f64cec75f48977c7
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\61\6117cba8130d8089f64cec75f48977c7
+    projectPath: Library\Artifacts\61\6117cba8130d8089f64cec75f48977c7
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\65\652d5e5cfa9dfe00a01d2558e2c9d40f
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\65\652d5e5cfa9dfe00a01d2558e2c9d40f
+    projectPath: Library\Artifacts\65\652d5e5cfa9dfe00a01d2558e2c9d40f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -219,83 +256,53 @@ MonoBehaviour:
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\67\677d5fa8d2a8b707c592a67402332f8c
     projectPath: Library\Artifacts\67\677d5fa8d2a8b707c592a67402332f8c
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\6b\6b29e725bfc51efe17a76a1a97ca8bfa
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\6b\6b29e725bfc51efe17a76a1a97ca8bfa
-    projectPath: Library\Artifacts\6b\6b29e725bfc51efe17a76a1a97ca8bfa
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\6b\6b9276628aa68c5045c9af3c02a633ec
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\6b\6b9276628aa68c5045c9af3c02a633ec
-    projectPath: Library\Artifacts\6b\6b9276628aa68c5045c9af3c02a633ec
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\67\67fdd5fc0a5ace128695e472efe5764a
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\67\67fdd5fc0a5ace128695e472efe5764a
+    projectPath: Library\Artifacts\67\67fdd5fc0a5ace128695e472efe5764a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\6e\6e81504af3ccea77e0e1689b5df03e4f
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\6e\6e81504af3ccea77e0e1689b5df03e4f
-    projectPath: Library\Artifacts\6e\6e81504af3ccea77e0e1689b5df03e4f
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\6e\6ecfda9aff5635c3453ee2647cc14894
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\6e\6ecfda9aff5635c3453ee2647cc14894
-    projectPath: Library\Artifacts\6e\6ecfda9aff5635c3453ee2647cc14894
+  - path: Nuclear-drifter\Library\Artifacts\69\6927d0fefef8cd1e12305dab7d7daca8
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\69\6927d0fefef8cd1e12305dab7d7daca8
+    projectPath: Library\Artifacts\69\6927d0fefef8cd1e12305dab7d7daca8
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\71\7130316eaa91d74e62d03bef6dc9ac7a
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\71\7130316eaa91d74e62d03bef6dc9ac7a
-    projectPath: Library\Artifacts\71\7130316eaa91d74e62d03bef6dc9ac7a
+  - path: Nuclear-drifter\Library\Artifacts\78\780b5574fc0aabe3110b9cc2c6f43097
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\78\780b5574fc0aabe3110b9cc2c6f43097
+    projectPath: Library\Artifacts\78\780b5574fc0aabe3110b9cc2c6f43097
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\75\75a207c71ff151921693d15f86bc0748
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\75\75a207c71ff151921693d15f86bc0748
-    projectPath: Library\Artifacts\75\75a207c71ff151921693d15f86bc0748
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\79\799916723fd2043490c7d88bfa84e0b7
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\79\799916723fd2043490c7d88bfa84e0b7
-    projectPath: Library\Artifacts\79\799916723fd2043490c7d88bfa84e0b7
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Nuclear-drifter\Library\Artifacts\79\79ec8f05e3337f48d9486e520451ec82
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\79\79ec8f05e3337f48d9486e520451ec82
     projectPath: Library\Artifacts\79\79ec8f05e3337f48d9486e520451ec82
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Nuclear-drifter\Library\Artifacts\7d\7dc9eb4b6d45aa84c195a1d976b49a15
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\7d\7dc9eb4b6d45aa84c195a1d976b49a15
     projectPath: Library\Artifacts\7d\7dc9eb4b6d45aa84c195a1d976b49a15
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\7e\7e179afa4073fb056ca84cdb7d290dc0
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\7e\7e179afa4073fb056ca84cdb7d290dc0
-    projectPath: Library\Artifacts\7e\7e179afa4073fb056ca84cdb7d290dc0
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\80\80fabb8d79d1e769856d021d93572d44
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\80\80fabb8d79d1e769856d021d93572d44
-    projectPath: Library\Artifacts\80\80fabb8d79d1e769856d021d93572d44
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\7e\7e16d4cb8b3cfc33cd1a42d71176959c
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\7e\7e16d4cb8b3cfc33cd1a42d71176959c
+    projectPath: Library\Artifacts\7e\7e16d4cb8b3cfc33cd1a42d71176959c
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\7e\7e677144fdcaf241d5d85b17a4ea6e26
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\7e\7e677144fdcaf241d5d85b17a4ea6e26
+    projectPath: Library\Artifacts\7e\7e677144fdcaf241d5d85b17a4ea6e26
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Nuclear-drifter\Library\Artifacts\81\81cbd7c0d33eda063e7b88eb71f91327
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\81\81cbd7c0d33eda063e7b88eb71f91327
     projectPath: Library\Artifacts\81\81cbd7c0d33eda063e7b88eb71f91327
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\84\84b26813ece19450d6e685e49656f357
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\84\84b26813ece19450d6e685e49656f357
-    projectPath: Library\Artifacts\84\84b26813ece19450d6e685e49656f357
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
@@ -303,11 +310,17 @@ MonoBehaviour:
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\86\86dd3e77070177294df2831c5227c57d
     projectPath: Library\Artifacts\86\86dd3e77070177294df2831c5227c57d
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Nuclear-drifter\Library\Artifacts\89\89149810939d738ae2b045284ac04905
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\89\89149810939d738ae2b045284ac04905
     projectPath: Library\Artifacts\89\89149810939d738ae2b045284ac04905
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\92\929f597f44dd06f6ae6547febc71e365
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\92\929f597f44dd06f6ae6547febc71e365
+    projectPath: Library\Artifacts\92\929f597f44dd06f6ae6547febc71e365
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -315,17 +328,23 @@ MonoBehaviour:
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\93\931dedd212f3aa6e27d0e3f07db78450
     projectPath: Library\Artifacts\93\931dedd212f3aa6e27d0e3f07db78450
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Nuclear-drifter\Library\Artifacts\99\99a6eabcb88cc1f2501d4311355e51e8
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\99\99a6eabcb88cc1f2501d4311355e51e8
     projectPath: Library\Artifacts\99\99a6eabcb88cc1f2501d4311355e51e8
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Nuclear-drifter\Library\Artifacts\9e\9e73b4e958f30126b537ccbf2c4899b9
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\9e\9e73b4e958f30126b537ccbf2c4899b9
     projectPath: Library\Artifacts\9e\9e73b4e958f30126b537ccbf2c4899b9
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\a5\a5dcc96e4e9c3ce182fcf46b0105884c
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\a5\a5dcc96e4e9c3ce182fcf46b0105884c
+    projectPath: Library\Artifacts\a5\a5dcc96e4e9c3ce182fcf46b0105884c
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -333,23 +352,23 @@ MonoBehaviour:
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\a6\a60edb130e345ca0379c92fe69b7b977
     projectPath: Library\Artifacts\a6\a60edb130e345ca0379c92fe69b7b977
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Nuclear-drifter\Library\Artifacts\a6\a6c9431e2ec351ccd330cc910515712f
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\a6\a6c9431e2ec351ccd330cc910515712f
     projectPath: Library\Artifacts\a6\a6c9431e2ec351ccd330cc910515712f
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\ae\ae1b5959fb41a6b90b51eb805381ad9b
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\ae\ae1b5959fb41a6b90b51eb805381ad9b
-    projectPath: Library\Artifacts\ae\ae1b5959fb41a6b90b51eb805381ad9b
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\af\afb7484c17c94b69ee683212883d280b
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\af\afb7484c17c94b69ee683212883d280b
-    projectPath: Library\Artifacts\af\afb7484c17c94b69ee683212883d280b
+  - path: Nuclear-drifter\Library\Artifacts\a7\a7553157f655c2185f137e35bd0ee0a6
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\a7\a7553157f655c2185f137e35bd0ee0a6
+    projectPath: Library\Artifacts\a7\a7553157f655c2185f137e35bd0ee0a6
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\ae\ae86100f03ecf3cb19de33dfba8c6e7c
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\ae\ae86100f03ecf3cb19de33dfba8c6e7c
+    projectPath: Library\Artifacts\ae\ae86100f03ecf3cb19de33dfba8c6e7c
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -357,41 +376,53 @@ MonoBehaviour:
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\b8\b81c90435fe9036dc31b67ceedb6f3ec
     projectPath: Library\Artifacts\b8\b81c90435fe9036dc31b67ceedb6f3ec
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\b9\b97007e492f9584badaf6a58a97c3f37
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\b9\b97007e492f9584badaf6a58a97c3f37
-    projectPath: Library\Artifacts\b9\b97007e492f9584badaf6a58a97c3f37
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\bd\bd650d113f6594af3b3b6d3793da949b
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\bd\bd650d113f6594af3b3b6d3793da949b
-    projectPath: Library\Artifacts\bd\bd650d113f6594af3b3b6d3793da949b
-    originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\c7\c73dd918a4c0c8f7ca8c10f97b4338cd
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\c7\c73dd918a4c0c8f7ca8c10f97b4338cd
-    projectPath: Library\Artifacts\c7\c73dd918a4c0c8f7ca8c10f97b4338cd
+  - path: Nuclear-drifter\Library\Artifacts\bb\bb3232556cd78536bd94f4e68d84424f
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\bb\bb3232556cd78536bd94f4e68d84424f
+    projectPath: Library\Artifacts\bb\bb3232556cd78536bd94f4e68d84424f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\c9\c9857d885cb09c987268d9e33e057164
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\c9\c9857d885cb09c987268d9e33e057164
-    projectPath: Library\Artifacts\c9\c9857d885cb09c987268d9e33e057164
+  - path: Nuclear-drifter\Library\Artifacts\be\be1a1b5fc3ccb442d9103390b1e05032
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\be\be1a1b5fc3ccb442d9103390b1e05032
+    projectPath: Library\Artifacts\be\be1a1b5fc3ccb442d9103390b1e05032
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\d3\d38eea40aa01024c0451d25e18dca1db
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\d3\d38eea40aa01024c0451d25e18dca1db
-    projectPath: Library\Artifacts\d3\d38eea40aa01024c0451d25e18dca1db
+  - path: Nuclear-drifter\Library\Artifacts\be\be52cab6bf6f6090a56f153bcf7d7b9a
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\be\be52cab6bf6f6090a56f153bcf7d7b9a
+    projectPath: Library\Artifacts\be\be52cab6bf6f6090a56f153bcf7d7b9a
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\c8\c82be2450ea8bd3f6c5263daeb83150c
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\c8\c82be2450ea8bd3f6c5263daeb83150c
+    projectPath: Library\Artifacts\c8\c82be2450ea8bd3f6c5263daeb83150c
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\cb\cb9354a1c7cb3c4afb354fadb61b3148
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\cb\cb9354a1c7cb3c4afb354fadb61b3148
+    projectPath: Library\Artifacts\cb\cb9354a1c7cb3c4afb354fadb61b3148
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\ce\ceea52a2a1b52a107d81b51b8def1f48
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\ce\ceea52a2a1b52a107d81b51b8def1f48
+    projectPath: Library\Artifacts\ce\ceea52a2a1b52a107d81b51b8def1f48
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Nuclear-drifter\Library\Artifacts\d4\d4209c6b236b382d4ef3893f965131be
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\d4\d4209c6b236b382d4ef3893f965131be
     projectPath: Library\Artifacts\d4\d4209c6b236b382d4ef3893f965131be
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\d5\d581ead0b62dab34f1bc6dd121f71ebf
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\d5\d581ead0b62dab34f1bc6dd121f71ebf
+    projectPath: Library\Artifacts\d5\d581ead0b62dab34f1bc6dd121f71ebf
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -399,23 +430,35 @@ MonoBehaviour:
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\da\daf0184cb249ddb330c670c21a0c1448
     projectPath: Library\Artifacts\da\daf0184cb249ddb330c670c21a0c1448
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\e0\e036c7c6945e6b97f98dcdb382c6e791
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\e0\e036c7c6945e6b97f98dcdb382c6e791
+    projectPath: Library\Artifacts\e0\e036c7c6945e6b97f98dcdb382c6e791
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\e1\e1bdf5603a35f9e7baec90f341a4cf64
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\e1\e1bdf5603a35f9e7baec90f341a4cf64
-    projectPath: Library\Artifacts\e1\e1bdf5603a35f9e7baec90f341a4cf64
+  - path: Nuclear-drifter\Library\Artifacts\e8\e87a84bc92637d12dcc738cc4f3d9ac8
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\e8\e87a84bc92637d12dcc738cc4f3d9ac8
+    projectPath: Library\Artifacts\e8\e87a84bc92637d12dcc738cc4f3d9ac8
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\eb\eb1e75fbe84dcad7f2585d286a609f12
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\eb\eb1e75fbe84dcad7f2585d286a609f12
-    projectPath: Library\Artifacts\eb\eb1e75fbe84dcad7f2585d286a609f12
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\ec\ecb5cb6b4de36ca9e7f6809efa08ecb7
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\ec\ecb5cb6b4de36ca9e7f6809efa08ecb7
+    projectPath: Library\Artifacts\ec\ecb5cb6b4de36ca9e7f6809efa08ecb7
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Nuclear-drifter\Library\Artifacts\f3\f3a03adc80d1d53dd53574228839be79
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\f3\f3a03adc80d1d53dd53574228839be79
     projectPath: Library\Artifacts\f3\f3a03adc80d1d53dd53574228839be79
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\f4\f415ad288d74596e3bdf0cdb65607095
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\f4\f415ad288d74596e3bdf0cdb65607095
+    projectPath: Library\Artifacts\f4\f415ad288d74596e3bdf0cdb65607095
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -423,32 +466,44 @@ MonoBehaviour:
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\f4\f4fe3a65b111bcd21a87ce92f1f73fb7
     projectPath: Library\Artifacts\f4\f4fe3a65b111bcd21a87ce92f1f73fb7
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\fa\faac418843d1352dc5fec267b99c2469
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\fa\faac418843d1352dc5fec267b99c2469
+    projectPath: Library\Artifacts\fa\faac418843d1352dc5fec267b99c2469
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Nuclear-drifter\Library\Artifacts\fb\fb348b57373c9ae7b83a75ba2b40df4c
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\fb\fb348b57373c9ae7b83a75ba2b40df4c
+    projectPath: Library\Artifacts\fb\fb348b57373c9ae7b83a75ba2b40df4c
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\f5\f52c9f9b9f7a1c28c82923422e9841a3
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\f5\f52c9f9b9f7a1c28c82923422e9841a3
-    projectPath: Library\Artifacts\f5\f52c9f9b9f7a1c28c82923422e9841a3
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\fb\fb172daa99d3fe00ec260a9d781c6a7b
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\fb\fb172daa99d3fe00ec260a9d781c6a7b
-    projectPath: Library\Artifacts\fb\fb172daa99d3fe00ec260a9d781c6a7b
+  - path: Nuclear-drifter\Library\Artifacts\fb\fb40c5312ee9079005a0f94571bef3eb
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\fb\fb40c5312ee9079005a0f94571bef3eb
+    projectPath: Library\Artifacts\fb\fb40c5312ee9079005a0f94571bef3eb
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Library\Artifacts\fb\fbf531b5c99117ca5ba940a225f68bb9
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\fb\fbf531b5c99117ca5ba940a225f68bb9
-    projectPath: Library\Artifacts\fb\fbf531b5c99117ca5ba940a225f68bb9
+  - path: Nuclear-drifter\Library\Artifacts\fc\fc40d9580b7a6032eddc1fe3cbef3a59
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\fc\fc40d9580b7a6032eddc1fe3cbef3a59
+    projectPath: Library\Artifacts\fc\fc40d9580b7a6032eddc1fe3cbef3a59
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Nuclear-drifter\Library\Artifacts\ff\ff4b6cbb4ab1fd9745d78043186a7dd7
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\ff\ff4b6cbb4ab1fd9745d78043186a7dd7
-    projectPath: Library\Artifacts\ff\ff4b6cbb4ab1fd9745d78043186a7dd7
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\fc\fce87971b702fa6508f379e0a0cc7f9d
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\fc\fce87971b702fa6508f379e0a0cc7f9d
+    projectPath: Library\Artifacts\fc\fce87971b702fa6508f379e0a0cc7f9d
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Library\Artifacts\ff\fff2630aa1d27b8cdb0d53434adedb6e
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\Artifacts\ff\fff2630aa1d27b8cdb0d53434adedb6e
+    projectPath: Library\Artifacts\ff\fff2630aa1d27b8cdb0d53434adedb6e
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Nuclear-drifter\Library\CurrentMaximizeLayout.dwlt
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\CurrentMaximizeLayout.dwlt
     projectPath: Library\CurrentMaximizeLayout.dwlt
@@ -491,12 +546,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Nuclear-drifter\Library\InspectorExpandedItems.asset
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\InspectorExpandedItems.asset
-    projectPath: Library\InspectorExpandedItems.asset
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Nuclear-drifter\Library\SceneVisibilityState.asset
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\SceneVisibilityState.asset
     projectPath: Library\SceneVisibilityState.asset
@@ -509,15 +558,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Nuclear-drifter\Library\shadercompiler-UnityShaderCompiler.exe0.log
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\shadercompiler-UnityShaderCompiler.exe0.log
-    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Nuclear-drifter\Library\SourceAssetDB
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Nuclear-drifter\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
+    projectPath: Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -530,12 +579,6 @@ MonoBehaviour:
   - path: Nuclear-drifter\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
     fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
     projectPath: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Nuclear-drifter\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
-    projectPath: obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -2201,363 +2244,429 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-0462f208b6cda2240986c5708a76d687
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-0462f208b6cda2240986c5708a76d687
-    projectPath: Temp\UnityTempFile-0462f208b6cda2240986c5708a76d687
+  - path: Nuclear-drifter\Temp\UnityTempFile-04c8f16538b8491409819b0abae2436f
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-04c8f16538b8491409819b0abae2436f
+    projectPath: Temp\UnityTempFile-04c8f16538b8491409819b0abae2436f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-04fd7475c1bffe748aa96f48170dc97a
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-04fd7475c1bffe748aa96f48170dc97a
-    projectPath: Temp\UnityTempFile-04fd7475c1bffe748aa96f48170dc97a
+  - path: Nuclear-drifter\Temp\UnityTempFile-05fe2d1ac99164b4e804b789c66b5125
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-05fe2d1ac99164b4e804b789c66b5125
+    projectPath: Temp\UnityTempFile-05fe2d1ac99164b4e804b789c66b5125
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-061db654c439ab540bd5588b4b29c978
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-061db654c439ab540bd5588b4b29c978
-    projectPath: Temp\UnityTempFile-061db654c439ab540bd5588b4b29c978
+  - path: Nuclear-drifter\Temp\UnityTempFile-08899353835d2624eaf62ae68af7fe2c
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-08899353835d2624eaf62ae68af7fe2c
+    projectPath: Temp\UnityTempFile-08899353835d2624eaf62ae68af7fe2c
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-098f8ee485089284d9db1283c7fbd34d
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-098f8ee485089284d9db1283c7fbd34d
-    projectPath: Temp\UnityTempFile-098f8ee485089284d9db1283c7fbd34d
+  - path: Nuclear-drifter\Temp\UnityTempFile-0e1108d6f752e10489e85e99cd0e6d28
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-0e1108d6f752e10489e85e99cd0e6d28
+    projectPath: Temp\UnityTempFile-0e1108d6f752e10489e85e99cd0e6d28
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-129295ed5e548ec459bfb4742b93002d
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-129295ed5e548ec459bfb4742b93002d
-    projectPath: Temp\UnityTempFile-129295ed5e548ec459bfb4742b93002d
+  - path: Nuclear-drifter\Temp\UnityTempFile-15aca9583be8db747b81f8c91b7d1623
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-15aca9583be8db747b81f8c91b7d1623
+    projectPath: Temp\UnityTempFile-15aca9583be8db747b81f8c91b7d1623
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-19c0a37ab54b52a48a4b81f44f282127
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-19c0a37ab54b52a48a4b81f44f282127
-    projectPath: Temp\UnityTempFile-19c0a37ab54b52a48a4b81f44f282127
+  - path: Nuclear-drifter\Temp\UnityTempFile-200d23f6bfd7d974c86c0b3df41f3a2e
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-200d23f6bfd7d974c86c0b3df41f3a2e
+    projectPath: Temp\UnityTempFile-200d23f6bfd7d974c86c0b3df41f3a2e
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-1fa7fb8d74ffed64bb544a7dbaedfbac
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-1fa7fb8d74ffed64bb544a7dbaedfbac
-    projectPath: Temp\UnityTempFile-1fa7fb8d74ffed64bb544a7dbaedfbac
+  - path: Nuclear-drifter\Temp\UnityTempFile-239f43f9a67b2f5448cb7c2f46322317
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-239f43f9a67b2f5448cb7c2f46322317
+    projectPath: Temp\UnityTempFile-239f43f9a67b2f5448cb7c2f46322317
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-21e97d0ab9203b24096eea71e48e26c7
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-21e97d0ab9203b24096eea71e48e26c7
-    projectPath: Temp\UnityTempFile-21e97d0ab9203b24096eea71e48e26c7
+  - path: Nuclear-drifter\Temp\UnityTempFile-29f93df2086b3b54fbdbdcb24ba7eca8
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-29f93df2086b3b54fbdbdcb24ba7eca8
+    projectPath: Temp\UnityTempFile-29f93df2086b3b54fbdbdcb24ba7eca8
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-2505183ac9c8aa8408f7b0fb6392ce73
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-2505183ac9c8aa8408f7b0fb6392ce73
-    projectPath: Temp\UnityTempFile-2505183ac9c8aa8408f7b0fb6392ce73
+  - path: Nuclear-drifter\Temp\UnityTempFile-317dc0d5a6c7f184781a6e74cc7dde9d
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-317dc0d5a6c7f184781a6e74cc7dde9d
+    projectPath: Temp\UnityTempFile-317dc0d5a6c7f184781a6e74cc7dde9d
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-28a0e63ccaf0d084f984b6853f53ac2f
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-28a0e63ccaf0d084f984b6853f53ac2f
-    projectPath: Temp\UnityTempFile-28a0e63ccaf0d084f984b6853f53ac2f
+  - path: Nuclear-drifter\Temp\UnityTempFile-3ccdb37eb90f71041bbab9fd3cd8d2e7
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-3ccdb37eb90f71041bbab9fd3cd8d2e7
+    projectPath: Temp\UnityTempFile-3ccdb37eb90f71041bbab9fd3cd8d2e7
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-2b3480ebf463fc84e938c0fd2c709618
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-2b3480ebf463fc84e938c0fd2c709618
-    projectPath: Temp\UnityTempFile-2b3480ebf463fc84e938c0fd2c709618
+  - path: Nuclear-drifter\Temp\UnityTempFile-3d6b5bd9016abef428e1af9a9c6d5b81
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-3d6b5bd9016abef428e1af9a9c6d5b81
+    projectPath: Temp\UnityTempFile-3d6b5bd9016abef428e1af9a9c6d5b81
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-3b9e0d4769aec544ea33c64a42525b3f
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-3b9e0d4769aec544ea33c64a42525b3f
-    projectPath: Temp\UnityTempFile-3b9e0d4769aec544ea33c64a42525b3f
+  - path: Nuclear-drifter\Temp\UnityTempFile-3e88330cd3cd602449b22bfe8586ffed
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-3e88330cd3cd602449b22bfe8586ffed
+    projectPath: Temp\UnityTempFile-3e88330cd3cd602449b22bfe8586ffed
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-3efc301115c57274eab06e56818d2035
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-3efc301115c57274eab06e56818d2035
-    projectPath: Temp\UnityTempFile-3efc301115c57274eab06e56818d2035
+  - path: Nuclear-drifter\Temp\UnityTempFile-415184e6c32712e4bb68bd486cb63619
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-415184e6c32712e4bb68bd486cb63619
+    projectPath: Temp\UnityTempFile-415184e6c32712e4bb68bd486cb63619
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-43af9f3942be2604891f218706d7739b
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-43af9f3942be2604891f218706d7739b
-    projectPath: Temp\UnityTempFile-43af9f3942be2604891f218706d7739b
+  - path: Nuclear-drifter\Temp\UnityTempFile-424c0061f09ee9746bc25340d25d6af8
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-424c0061f09ee9746bc25340d25d6af8
+    projectPath: Temp\UnityTempFile-424c0061f09ee9746bc25340d25d6af8
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-4721220e89f9cfb4d94d64de0202ede4
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-4721220e89f9cfb4d94d64de0202ede4
-    projectPath: Temp\UnityTempFile-4721220e89f9cfb4d94d64de0202ede4
+  - path: Nuclear-drifter\Temp\UnityTempFile-4372bff829db6d14eb22afb229668d8a
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-4372bff829db6d14eb22afb229668d8a
+    projectPath: Temp\UnityTempFile-4372bff829db6d14eb22afb229668d8a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-47c173d9fa688d241a1c897ca0f74448
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-47c173d9fa688d241a1c897ca0f74448
-    projectPath: Temp\UnityTempFile-47c173d9fa688d241a1c897ca0f74448
+  - path: Nuclear-drifter\Temp\UnityTempFile-47b772c8e72775e489d992aea9f63ab0
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-47b772c8e72775e489d992aea9f63ab0
+    projectPath: Temp\UnityTempFile-47b772c8e72775e489d992aea9f63ab0
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-4d06e33cb2604a641a955b395b1bdd85
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-4d06e33cb2604a641a955b395b1bdd85
-    projectPath: Temp\UnityTempFile-4d06e33cb2604a641a955b395b1bdd85
+  - path: Nuclear-drifter\Temp\UnityTempFile-482ce02feeb922444a824e8870df2b05
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-482ce02feeb922444a824e8870df2b05
+    projectPath: Temp\UnityTempFile-482ce02feeb922444a824e8870df2b05
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-4fc77f0504366914f92befc27443526d
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-4fc77f0504366914f92befc27443526d
-    projectPath: Temp\UnityTempFile-4fc77f0504366914f92befc27443526d
+  - path: Nuclear-drifter\Temp\UnityTempFile-4a88b50c6a7264f4eabce85f63cc1172
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-4a88b50c6a7264f4eabce85f63cc1172
+    projectPath: Temp\UnityTempFile-4a88b50c6a7264f4eabce85f63cc1172
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-500d200efcca14f4ea6a6de99004bdb7
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-500d200efcca14f4ea6a6de99004bdb7
-    projectPath: Temp\UnityTempFile-500d200efcca14f4ea6a6de99004bdb7
+  - path: Nuclear-drifter\Temp\UnityTempFile-59b0f4e75efc7774688eec52543734ef
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-59b0f4e75efc7774688eec52543734ef
+    projectPath: Temp\UnityTempFile-59b0f4e75efc7774688eec52543734ef
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-538520dc2be5dce44bf2600b1db08b30
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-538520dc2be5dce44bf2600b1db08b30
-    projectPath: Temp\UnityTempFile-538520dc2be5dce44bf2600b1db08b30
+  - path: Nuclear-drifter\Temp\UnityTempFile-5cfc39011af6cc54abd9bdccfc1d6efc
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-5cfc39011af6cc54abd9bdccfc1d6efc
+    projectPath: Temp\UnityTempFile-5cfc39011af6cc54abd9bdccfc1d6efc
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-55a9bba79ec61c74f966441d42a409d4
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-55a9bba79ec61c74f966441d42a409d4
-    projectPath: Temp\UnityTempFile-55a9bba79ec61c74f966441d42a409d4
+  - path: Nuclear-drifter\Temp\UnityTempFile-5eb3bc21ab6b6a947853ca95526013b3
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-5eb3bc21ab6b6a947853ca95526013b3
+    projectPath: Temp\UnityTempFile-5eb3bc21ab6b6a947853ca95526013b3
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-5fc52768c2de5c9499628229fffecd43
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-5fc52768c2de5c9499628229fffecd43
-    projectPath: Temp\UnityTempFile-5fc52768c2de5c9499628229fffecd43
+  - path: Nuclear-drifter\Temp\UnityTempFile-609ef9a85f61787469add3106bdef55a
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-609ef9a85f61787469add3106bdef55a
+    projectPath: Temp\UnityTempFile-609ef9a85f61787469add3106bdef55a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-67cf133b9c2e91348be016ddec9139bd
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-67cf133b9c2e91348be016ddec9139bd
-    projectPath: Temp\UnityTempFile-67cf133b9c2e91348be016ddec9139bd
+  - path: Nuclear-drifter\Temp\UnityTempFile-61d7eedc0de48d64cb7776897391bf51
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-61d7eedc0de48d64cb7776897391bf51
+    projectPath: Temp\UnityTempFile-61d7eedc0de48d64cb7776897391bf51
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-6b0e227fdd6fceb4688d427e0ec17c5e
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-6b0e227fdd6fceb4688d427e0ec17c5e
-    projectPath: Temp\UnityTempFile-6b0e227fdd6fceb4688d427e0ec17c5e
+  - path: Nuclear-drifter\Temp\UnityTempFile-65da0e3f12953434492c7c0c6e9a7988
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-65da0e3f12953434492c7c0c6e9a7988
+    projectPath: Temp\UnityTempFile-65da0e3f12953434492c7c0c6e9a7988
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-6e0ddae1a93eccf41aade09d1fceba34
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-6e0ddae1a93eccf41aade09d1fceba34
-    projectPath: Temp\UnityTempFile-6e0ddae1a93eccf41aade09d1fceba34
+  - path: Nuclear-drifter\Temp\UnityTempFile-67509259921d0f649a6ee23439fa15e3
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-67509259921d0f649a6ee23439fa15e3
+    projectPath: Temp\UnityTempFile-67509259921d0f649a6ee23439fa15e3
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-6e2cd50af746eda4197d182e9085eb88
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-6e2cd50af746eda4197d182e9085eb88
-    projectPath: Temp\UnityTempFile-6e2cd50af746eda4197d182e9085eb88
+  - path: Nuclear-drifter\Temp\UnityTempFile-68a73458ca3d91146abb416564d9e5ad
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-68a73458ca3d91146abb416564d9e5ad
+    projectPath: Temp\UnityTempFile-68a73458ca3d91146abb416564d9e5ad
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-6eb1ebc4d752b014194d77818635cd35
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-6eb1ebc4d752b014194d77818635cd35
-    projectPath: Temp\UnityTempFile-6eb1ebc4d752b014194d77818635cd35
+  - path: Nuclear-drifter\Temp\UnityTempFile-6b3bd174a91571046adaa7ff00a5a325
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-6b3bd174a91571046adaa7ff00a5a325
+    projectPath: Temp\UnityTempFile-6b3bd174a91571046adaa7ff00a5a325
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-71ed4bdb2a5927c44a1a92cba3ccadd3
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-71ed4bdb2a5927c44a1a92cba3ccadd3
-    projectPath: Temp\UnityTempFile-71ed4bdb2a5927c44a1a92cba3ccadd3
+  - path: Nuclear-drifter\Temp\UnityTempFile-703ed02baac4d994c901ee79876e5292
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-703ed02baac4d994c901ee79876e5292
+    projectPath: Temp\UnityTempFile-703ed02baac4d994c901ee79876e5292
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-7239a5ff1fb02f544a004a76e110818d
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-7239a5ff1fb02f544a004a76e110818d
-    projectPath: Temp\UnityTempFile-7239a5ff1fb02f544a004a76e110818d
+  - path: Nuclear-drifter\Temp\UnityTempFile-715c5484d34544f4496579c59bc8dd43
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-715c5484d34544f4496579c59bc8dd43
+    projectPath: Temp\UnityTempFile-715c5484d34544f4496579c59bc8dd43
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-7c09dd9fef60fb04d8f94c6892a27ef9
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-7c09dd9fef60fb04d8f94c6892a27ef9
-    projectPath: Temp\UnityTempFile-7c09dd9fef60fb04d8f94c6892a27ef9
+  - path: Nuclear-drifter\Temp\UnityTempFile-72b58ac378a4aeb43b8f5605afd93edf
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-72b58ac378a4aeb43b8f5605afd93edf
+    projectPath: Temp\UnityTempFile-72b58ac378a4aeb43b8f5605afd93edf
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-8149d9c51472b794dbc490064e203704
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-8149d9c51472b794dbc490064e203704
-    projectPath: Temp\UnityTempFile-8149d9c51472b794dbc490064e203704
+  - path: Nuclear-drifter\Temp\UnityTempFile-73b49cefb5dbea44e8c5a139c6b79869
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-73b49cefb5dbea44e8c5a139c6b79869
+    projectPath: Temp\UnityTempFile-73b49cefb5dbea44e8c5a139c6b79869
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-81f0e6e9bc61e8146b7a34bf0fc023f7
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-81f0e6e9bc61e8146b7a34bf0fc023f7
-    projectPath: Temp\UnityTempFile-81f0e6e9bc61e8146b7a34bf0fc023f7
+  - path: Nuclear-drifter\Temp\UnityTempFile-7c3fa0ef8b518914ebe0e0421778df02
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-7c3fa0ef8b518914ebe0e0421778df02
+    projectPath: Temp\UnityTempFile-7c3fa0ef8b518914ebe0e0421778df02
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-82f1bd59f12cae148897bdaa13f40298
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-82f1bd59f12cae148897bdaa13f40298
-    projectPath: Temp\UnityTempFile-82f1bd59f12cae148897bdaa13f40298
+  - path: Nuclear-drifter\Temp\UnityTempFile-7ca6782b2f77b804e88cd7377d518bf3
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-7ca6782b2f77b804e88cd7377d518bf3
+    projectPath: Temp\UnityTempFile-7ca6782b2f77b804e88cd7377d518bf3
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-840425752ceec5645990495b3d191629
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-840425752ceec5645990495b3d191629
-    projectPath: Temp\UnityTempFile-840425752ceec5645990495b3d191629
+  - path: Nuclear-drifter\Temp\UnityTempFile-80260f66995c26e43a22910cfb0a2984
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-80260f66995c26e43a22910cfb0a2984
+    projectPath: Temp\UnityTempFile-80260f66995c26e43a22910cfb0a2984
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-87851c1c75b32a84fa53c124af068db8
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-87851c1c75b32a84fa53c124af068db8
-    projectPath: Temp\UnityTempFile-87851c1c75b32a84fa53c124af068db8
+  - path: Nuclear-drifter\Temp\UnityTempFile-88ed45d577fb0f64bb9e591508040a52
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-88ed45d577fb0f64bb9e591508040a52
+    projectPath: Temp\UnityTempFile-88ed45d577fb0f64bb9e591508040a52
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-87cc9acbd83a6964bb5e557043bbbebe
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-87cc9acbd83a6964bb5e557043bbbebe
-    projectPath: Temp\UnityTempFile-87cc9acbd83a6964bb5e557043bbbebe
+  - path: Nuclear-drifter\Temp\UnityTempFile-893fe700667b24e48af880d035962073
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-893fe700667b24e48af880d035962073
+    projectPath: Temp\UnityTempFile-893fe700667b24e48af880d035962073
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-8def0b2eea3698b4e81d93ba63456e7a
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-8def0b2eea3698b4e81d93ba63456e7a
-    projectPath: Temp\UnityTempFile-8def0b2eea3698b4e81d93ba63456e7a
+  - path: Nuclear-drifter\Temp\UnityTempFile-8de436e16a83d95449c1d66ed3bf2f6d
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-8de436e16a83d95449c1d66ed3bf2f6d
+    projectPath: Temp\UnityTempFile-8de436e16a83d95449c1d66ed3bf2f6d
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-8e2523314f746d040b63ba6b54f77dd5
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-8e2523314f746d040b63ba6b54f77dd5
-    projectPath: Temp\UnityTempFile-8e2523314f746d040b63ba6b54f77dd5
+  - path: Nuclear-drifter\Temp\UnityTempFile-934b8404e8be133478d578fec88dcd09
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-934b8404e8be133478d578fec88dcd09
+    projectPath: Temp\UnityTempFile-934b8404e8be133478d578fec88dcd09
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-9771e948c8dc9c844b57559979338014
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-9771e948c8dc9c844b57559979338014
-    projectPath: Temp\UnityTempFile-9771e948c8dc9c844b57559979338014
+  - path: Nuclear-drifter\Temp\UnityTempFile-94ed2678b19a074439e50068ae4f55b1
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-94ed2678b19a074439e50068ae4f55b1
+    projectPath: Temp\UnityTempFile-94ed2678b19a074439e50068ae4f55b1
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-982adaacdc4004a4bae7988c260a7e8a
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-982adaacdc4004a4bae7988c260a7e8a
-    projectPath: Temp\UnityTempFile-982adaacdc4004a4bae7988c260a7e8a
+  - path: Nuclear-drifter\Temp\UnityTempFile-9660a8e6acfb8ea4e99dab36f86f7f32
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-9660a8e6acfb8ea4e99dab36f86f7f32
+    projectPath: Temp\UnityTempFile-9660a8e6acfb8ea4e99dab36f86f7f32
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-9f1dd8653464f8149a770b95fe023424
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-9f1dd8653464f8149a770b95fe023424
-    projectPath: Temp\UnityTempFile-9f1dd8653464f8149a770b95fe023424
+  - path: Nuclear-drifter\Temp\UnityTempFile-97898f31bcc1a334f9a6991574d674d9
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-97898f31bcc1a334f9a6991574d674d9
+    projectPath: Temp\UnityTempFile-97898f31bcc1a334f9a6991574d674d9
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-a279ce9f942731c42b1b1ce61e65a405
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-a279ce9f942731c42b1b1ce61e65a405
-    projectPath: Temp\UnityTempFile-a279ce9f942731c42b1b1ce61e65a405
+  - path: Nuclear-drifter\Temp\UnityTempFile-98a6ba99905607042973c07300bc1aad
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-98a6ba99905607042973c07300bc1aad
+    projectPath: Temp\UnityTempFile-98a6ba99905607042973c07300bc1aad
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-a840e300d4d123d4ea385b42d316788e
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-a840e300d4d123d4ea385b42d316788e
-    projectPath: Temp\UnityTempFile-a840e300d4d123d4ea385b42d316788e
+  - path: Nuclear-drifter\Temp\UnityTempFile-9e93225c582f3ca4b955f338a8bc044b
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-9e93225c582f3ca4b955f338a8bc044b
+    projectPath: Temp\UnityTempFile-9e93225c582f3ca4b955f338a8bc044b
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-acb40c344a1966941b8451306fdccd12
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-acb40c344a1966941b8451306fdccd12
-    projectPath: Temp\UnityTempFile-acb40c344a1966941b8451306fdccd12
+  - path: Nuclear-drifter\Temp\UnityTempFile-9ee62494135d5a84db97e3ed16d5d419
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-9ee62494135d5a84db97e3ed16d5d419
+    projectPath: Temp\UnityTempFile-9ee62494135d5a84db97e3ed16d5d419
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-ad52e9e97772a4045bec92edc2c83592
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ad52e9e97772a4045bec92edc2c83592
-    projectPath: Temp\UnityTempFile-ad52e9e97772a4045bec92edc2c83592
+  - path: Nuclear-drifter\Temp\UnityTempFile-a4dff90a6dadecf4faf2a7937ae048f2
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-a4dff90a6dadecf4faf2a7937ae048f2
+    projectPath: Temp\UnityTempFile-a4dff90a6dadecf4faf2a7937ae048f2
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-ade29223d0d91c743b0004ac38a37ee8
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ade29223d0d91c743b0004ac38a37ee8
-    projectPath: Temp\UnityTempFile-ade29223d0d91c743b0004ac38a37ee8
+  - path: Nuclear-drifter\Temp\UnityTempFile-a5bf48019e728324abab92ec885ea057
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-a5bf48019e728324abab92ec885ea057
+    projectPath: Temp\UnityTempFile-a5bf48019e728324abab92ec885ea057
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-b1e67029d88d4324c9fee4f633adee78
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-b1e67029d88d4324c9fee4f633adee78
-    projectPath: Temp\UnityTempFile-b1e67029d88d4324c9fee4f633adee78
+  - path: Nuclear-drifter\Temp\UnityTempFile-ad2a969ef9844a545bef3e7eab7ad7aa
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ad2a969ef9844a545bef3e7eab7ad7aa
+    projectPath: Temp\UnityTempFile-ad2a969ef9844a545bef3e7eab7ad7aa
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-b953513ad16d8314e910b7a51e464503
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-b953513ad16d8314e910b7a51e464503
-    projectPath: Temp\UnityTempFile-b953513ad16d8314e910b7a51e464503
+  - path: Nuclear-drifter\Temp\UnityTempFile-ae05496401f847346a7cf144da682bf7
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ae05496401f847346a7cf144da682bf7
+    projectPath: Temp\UnityTempFile-ae05496401f847346a7cf144da682bf7
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-bb0c4e279c6b4024e8abdb35e8cad335
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-bb0c4e279c6b4024e8abdb35e8cad335
-    projectPath: Temp\UnityTempFile-bb0c4e279c6b4024e8abdb35e8cad335
+  - path: Nuclear-drifter\Temp\UnityTempFile-afb4153e1169d3647b727b74fd12988f
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-afb4153e1169d3647b727b74fd12988f
+    projectPath: Temp\UnityTempFile-afb4153e1169d3647b727b74fd12988f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-bbd7fce2bfffca84dad5e9bbbbf3b127
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-bbd7fce2bfffca84dad5e9bbbbf3b127
-    projectPath: Temp\UnityTempFile-bbd7fce2bfffca84dad5e9bbbbf3b127
+  - path: Nuclear-drifter\Temp\UnityTempFile-b16978f6dd44bc740a47ce4c7f66f5f0
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-b16978f6dd44bc740a47ce4c7f66f5f0
+    projectPath: Temp\UnityTempFile-b16978f6dd44bc740a47ce4c7f66f5f0
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-c56187c6f895e9a4db867d7a3b2dcfeb
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-c56187c6f895e9a4db867d7a3b2dcfeb
-    projectPath: Temp\UnityTempFile-c56187c6f895e9a4db867d7a3b2dcfeb
+  - path: Nuclear-drifter\Temp\UnityTempFile-b21854db1195eb84c99a0c7fd99d565a
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-b21854db1195eb84c99a0c7fd99d565a
+    projectPath: Temp\UnityTempFile-b21854db1195eb84c99a0c7fd99d565a
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-c8648e9502a4fc44baa0c4b7e01c4073
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-c8648e9502a4fc44baa0c4b7e01c4073
-    projectPath: Temp\UnityTempFile-c8648e9502a4fc44baa0c4b7e01c4073
+  - path: Nuclear-drifter\Temp\UnityTempFile-b3b8d595f078417479d7cd22faad91f9
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-b3b8d595f078417479d7cd22faad91f9
+    projectPath: Temp\UnityTempFile-b3b8d595f078417479d7cd22faad91f9
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-cb42f26f31c74014497990fd45e04fbf
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-cb42f26f31c74014497990fd45e04fbf
-    projectPath: Temp\UnityTempFile-cb42f26f31c74014497990fd45e04fbf
+  - path: Nuclear-drifter\Temp\UnityTempFile-b88e0c28a5c89c748976409fe5a79e76
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-b88e0c28a5c89c748976409fe5a79e76
+    projectPath: Temp\UnityTempFile-b88e0c28a5c89c748976409fe5a79e76
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-ce78a0c86c358734f97acabbd73b582e
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ce78a0c86c358734f97acabbd73b582e
-    projectPath: Temp\UnityTempFile-ce78a0c86c358734f97acabbd73b582e
+  - path: Nuclear-drifter\Temp\UnityTempFile-ba9ef964ef776054e87f8f70cb939a60
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ba9ef964ef776054e87f8f70cb939a60
+    projectPath: Temp\UnityTempFile-ba9ef964ef776054e87f8f70cb939a60
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-d5258f1387ab0574a95cb844fd4c8adb
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-d5258f1387ab0574a95cb844fd4c8adb
-    projectPath: Temp\UnityTempFile-d5258f1387ab0574a95cb844fd4c8adb
+  - path: Nuclear-drifter\Temp\UnityTempFile-bdc91e5907348f44b9f4377a6b42e637
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-bdc91e5907348f44b9f4377a6b42e637
+    projectPath: Temp\UnityTempFile-bdc91e5907348f44b9f4377a6b42e637
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-dd027e8814d6e064584533722175fee5
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-dd027e8814d6e064584533722175fee5
-    projectPath: Temp\UnityTempFile-dd027e8814d6e064584533722175fee5
+  - path: Nuclear-drifter\Temp\UnityTempFile-bde06dcc3d49e8341ba6acc99456d046
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-bde06dcc3d49e8341ba6acc99456d046
+    projectPath: Temp\UnityTempFile-bde06dcc3d49e8341ba6acc99456d046
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-dd9f3e0534d5b15418e5fbbf52543b0f
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-dd9f3e0534d5b15418e5fbbf52543b0f
-    projectPath: Temp\UnityTempFile-dd9f3e0534d5b15418e5fbbf52543b0f
+  - path: Nuclear-drifter\Temp\UnityTempFile-c800f09170ae04344b4b25e7a7b9720e
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-c800f09170ae04344b4b25e7a7b9720e
+    projectPath: Temp\UnityTempFile-c800f09170ae04344b4b25e7a7b9720e
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-eb18ab2bc34436c428e2c75c9e823c25
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-eb18ab2bc34436c428e2c75c9e823c25
-    projectPath: Temp\UnityTempFile-eb18ab2bc34436c428e2c75c9e823c25
+  - path: Nuclear-drifter\Temp\UnityTempFile-ca04d795905ecfe4d825b7a6b2abc534
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ca04d795905ecfe4d825b7a6b2abc534
+    projectPath: Temp\UnityTempFile-ca04d795905ecfe4d825b7a6b2abc534
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-ee1bc53d7f01b2541ad91c80c6ba32aa
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ee1bc53d7f01b2541ad91c80c6ba32aa
-    projectPath: Temp\UnityTempFile-ee1bc53d7f01b2541ad91c80c6ba32aa
+  - path: Nuclear-drifter\Temp\UnityTempFile-cb6ff6751c7bd7e4ea6588272e98d50f
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-cb6ff6751c7bd7e4ea6588272e98d50f
+    projectPath: Temp\UnityTempFile-cb6ff6751c7bd7e4ea6588272e98d50f
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Nuclear-drifter\Temp\UnityTempFile-f8cd0e4db5d560246a4e0710158066b1
-    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-f8cd0e4db5d560246a4e0710158066b1
-    projectPath: Temp\UnityTempFile-f8cd0e4db5d560246a4e0710158066b1
+  - path: Nuclear-drifter\Temp\UnityTempFile-cbddfa5de6f5d8540ad8acab889aa5d6
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-cbddfa5de6f5d8540ad8acab889aa5d6
+    projectPath: Temp\UnityTempFile-cbddfa5de6f5d8540ad8acab889aa5d6
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-d00538209305f2049821dae671bc4def
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-d00538209305f2049821dae671bc4def
+    projectPath: Temp\UnityTempFile-d00538209305f2049821dae671bc4def
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-d6b1b7686ed97954dbd24c6418274a05
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-d6b1b7686ed97954dbd24c6418274a05
+    projectPath: Temp\UnityTempFile-d6b1b7686ed97954dbd24c6418274a05
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-d753dd3785ae62540b19bdcd25b6f14a
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-d753dd3785ae62540b19bdcd25b6f14a
+    projectPath: Temp\UnityTempFile-d753dd3785ae62540b19bdcd25b6f14a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-d78f674617f166647b59bd66f0272890
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-d78f674617f166647b59bd66f0272890
+    projectPath: Temp\UnityTempFile-d78f674617f166647b59bd66f0272890
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-db7d820323b1d234b99ef516d713bbde
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-db7d820323b1d234b99ef516d713bbde
+    projectPath: Temp\UnityTempFile-db7d820323b1d234b99ef516d713bbde
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-dcdefdc576385b64b87d4eb9fea14492
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-dcdefdc576385b64b87d4eb9fea14492
+    projectPath: Temp\UnityTempFile-dcdefdc576385b64b87d4eb9fea14492
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-e2deff042b9a91d4a9b5518a207c95ac
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-e2deff042b9a91d4a9b5518a207c95ac
+    projectPath: Temp\UnityTempFile-e2deff042b9a91d4a9b5518a207c95ac
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-ef8a881dfa3190b419bab02622055c42
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ef8a881dfa3190b419bab02622055c42
+    projectPath: Temp\UnityTempFile-ef8a881dfa3190b419bab02622055c42
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-f2707ae423d85da4797db058796c4c4d
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-f2707ae423d85da4797db058796c4c4d
+    projectPath: Temp\UnityTempFile-f2707ae423d85da4797db058796c4c4d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-f49d8c6584fb8e8448c097cff8e939b4
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-f49d8c6584fb8e8448c097cff8e939b4
+    projectPath: Temp\UnityTempFile-f49d8c6584fb8e8448c097cff8e939b4
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Nuclear-drifter\Temp\UnityTempFile-ffdd9f7184a63d54bacc0c715f929ad0
+    fullPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter\Temp\UnityTempFile-ffdd9f7184a63d54bacc0c715f929ad0
+    projectPath: Temp\UnityTempFile-ffdd9f7184a63d54bacc0c715f929ad0
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
