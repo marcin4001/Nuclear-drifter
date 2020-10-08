@@ -17,6 +17,8 @@ public class WeaponItem : Item
 
     public override void Use()
     {
+        CombatSystem combat = FindObjectOfType<CombatSystem>();
+        if (combat != null) combat.SelectWeapon(this);
         Debug.Log("Use: " + name);
     }
 }

@@ -17,8 +17,12 @@ public class CombatSystem : MonoBehaviour
     public GameObject rootBloodSc;
     public Animator animBlood;
     private bool playerRound = true;
-    private bool isAttack = false;
+    public bool isAttack = false;
     public int currentIndex = 0;
+    public WeaponItem currentWeapon;
+    public int handDamage = 2;
+    public Slot weaponSlot;
+    private Inventory inv;
     private Health hpPlayer;
     private BadEnding ending;
     private MapControl map;
@@ -31,12 +35,106 @@ public class CombatSystem : MonoBehaviour
         hpPlayer = FindObjectOfType<Health>();
         ending = player.GetComponent<BadEnding>();
         map = FindObjectOfType<MapControl>();
+        inv = FindObjectOfType<Inventory>();
         battleCanvas.enabled = false;
         enemysObjs = new List<GameObject>();
         enemies = new List<Enemy>();
         BlockPlayer(false);
     }
 
+    public void ClearWeapon()
+    {
+        weaponSlot = null;
+        currentWeapon = null;
+    }
+
+    public void SelectHand()
+    {
+        ClearWeapon();
+        ShowWeaponStat();
+    }
+
+    public void UseWeapon(Enemy enemy)
+    {
+        gUI.ClearText();
+        if(currentWeapon == null)
+        {
+            enemy.Shot(handDamage);
+            gUI.AddText(enemy.nameEnemy + " was hit!");
+            gUI.AddText(enemy.nameEnemy + " lost " + handDamage + "hp");
+        }
+        else
+        {
+            if(weaponSlot.isGun())
+            {
+                enemy.Shot(currentWeapon.damage);
+                inv.RemoveOne(weaponSlot);
+                gUI.AddText(enemy.nameEnemy + " was hit!");
+                gUI.AddText(enemy.nameEnemy + " lost " + currentWeapon.damage + "hp");
+            }
+            else if(weaponSlot.isBomb())
+            {
+                //boomb
+            }
+            else
+            {
+                enemy.Shot(currentWeapon.damage);
+                gUI.AddText(enemy.nameEnemy + " was hit!");
+                gUI.AddText(enemy.nameEnemy + " lost " + currentWeapon.damage + "hp");
+            }
+        }
+    }
+
+    public void SelectWeapon(WeaponItem weapon)
+    {
+        Slot temp = inv.FindItem(weapon.idItem);
+        if (temp != null)
+        {
+            if(temp.isGun() && temp.ammo <= 0)
+            {
+                gUI.AddText("Out of ammo!");
+                return;
+            }
+            weaponSlot = temp;
+            currentWeapon = weapon;
+            ShowWeaponStat();
+        }
+    }
+
+    public void ShowWeaponDeafault()
+    {
+        gUI.ClearText();
+        gUI.AddText("Current weapon:");
+        gUI.AddText("Name: Hand");
+        gUI.AddText("Default");
+        gUI.AddText("Damage: " + handDamage);
+    }
+
+    public void ShowWeaponStat()
+    {
+        gUI.ClearText();
+        gUI.AddText("Your choice:");
+        if(currentWeapon != null)
+        {
+            gUI.AddText("Name: " + currentWeapon.nameItem);
+            gUI.AddText(currentWeapon.description);
+            gUI.AddText("Damage: " + currentWeapon.damage);
+            if (weaponSlot.isGun())
+            {
+                gUI.AddText("Ammo: " + weaponSlot.ammo);
+            }
+            else
+            {
+                gUI.AddText("Amount: " + weaponSlot.amountItem);
+            }
+        }
+        else
+        {
+            gUI.AddText("Name: Hand");
+            gUI.AddText("Default");
+            gUI.AddText("Damage: " + handDamage);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -55,8 +153,30 @@ public class CombatSystem : MonoBehaviour
                     currentIndex = 0;
                     playerRound = true;
                     BlockPlayer(false);
+                    ShowWeaponDeafault();
                 }
             }
+        }
+    }
+
+    public bool isWin()
+    {
+        bool allDead = true;
+        foreach(Enemy n in enemies)
+        {
+            allDead = allDead & n.isDead();
+        }
+        if (allDead)
+        {
+            gUI.ClearText();
+            gUI.AddText("You win!");
+            BlockPlayer(false);
+            SkipFight();
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -73,6 +193,7 @@ public class CombatSystem : MonoBehaviour
 
     public void EnemyRound()
     {
+        ClearWeapon();
         playerRound = false;
     }
 
@@ -81,14 +202,14 @@ public class CombatSystem : MonoBehaviour
         float rngChance = Random.Range(0.0f, 1.0f);
         if(rngChance <= _enemy.dmgChance)
         {
-            gUI.AddText("The " + _enemy.nameEnemy + " bit you!");
+            gUI.AddText("You were hit!");
             gUI.AddText("You lost " + _enemy.damageMax + "HP!");
             hpPlayer.Damage(_enemy.damageMax);
             return true;
         }
         else
         {
-            gUI.AddText("The " + _enemy.nameEnemy + " missed!");
+            gUI.AddText(_enemy.nameEnemy + " missed!");
             return false;
         }
     }
@@ -106,6 +227,10 @@ public class CombatSystem : MonoBehaviour
         map.keyActive = false;
         if (map.GetActive()) map.OpenMap();
         SetEnemys();
+        ShowWeaponDeafault();
+        BlockPlayer(false);
+        playerRound = true;
+        isAttack = false;
     }
 
     private void SetEnemys()

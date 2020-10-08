@@ -72,6 +72,7 @@ public class SlotElement : MonoBehaviour
                         else if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
                         {
                             if (!gUI.GetCombatState()) gUI.AddText("I'm not fighting anyone");
+                            else itemSlot.itemElement.Use();
                         }
                         else
                         {
@@ -99,7 +100,8 @@ public class SlotElement : MonoBehaviour
                 {
                     if (typeSc.inBox == 0)
                     {
-                        inv.RemoveAll(itemSlot);
+                        if (!typeSc.combatState) inv.RemoveAll(itemSlot);
+                        else gUI.AddText("You can't do it now!");
                     }
                     else if (typeSc.inBox == 1)
                     {

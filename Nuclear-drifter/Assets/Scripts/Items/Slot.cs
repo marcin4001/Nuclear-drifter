@@ -63,4 +63,24 @@ public class Slot
             return false;
         }
     }
+
+    public bool isBomb()
+    {
+        if (itemElement.GetItemType() == ItemType.Weapon)
+        {
+            WeaponItem weapon = (WeaponItem)itemElement;
+            if (weapon.isBomb)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

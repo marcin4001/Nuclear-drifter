@@ -7,19 +7,40 @@ public class Enemy : MonoBehaviour
     public string nameEnemy;
     public int damageMax = 0;
     public float dmgChance = 0.5f;
+    public int hp;
+    public Animator anim;
 
     private CombatSystem system;
+    private Collider2D col;
+    private GUIScript gUI;
+    public bool isDead()
+    {
+        return hp <= 0;
+    }
 
+    public void Shot(int point)
+    {
+        hp = hp - point;
+    }
     public void Init(CombatSystem sys)
     {
         system = sys;
+        col = GetComponent<Collider2D>();
+        gUI = FindObjectOfType<GUIScript>();
     }
 
     public void Attack()
     {
-        bool isHurt = system.Damage(this);
-        if(isHurt) system.ShowBlood();
-        Invoke("AfterAttack", 1.1f);
+        if (!isDead())
+        {
+            bool isHurt = system.Damage(this);
+            if (isHurt) system.ShowBlood();
+            Invoke("AfterAttack", 1.1f);
+        }
+        else
+        {
+            Invoke("AfterAttack", 0.1f);
+        }
     }
 
     private void AfterAttack()
@@ -30,13 +51,18 @@ public class Enemy : MonoBehaviour
     public void Damage()
     {
         system.BlockPlayer(true);
-        //WeaponUse
-        //Sound
-        Invoke("AfterDamage", 1.1f);
+        system.UseWeapon(this);
+        if (isDead())
+        {
+            gUI.AddText(nameEnemy + " was killed!");
+            col.enabled = false;
+            anim.SetTrigger("Dead");
+        }
+        Invoke("AfterDamage", 1.5f);
     }
 
     private void AfterDamage()
     {
-        system.EnemyRound();
+        if(!system.isWin()) system.EnemyRound();
     }
 }
