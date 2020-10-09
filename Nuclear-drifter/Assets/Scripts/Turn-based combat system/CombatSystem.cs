@@ -22,6 +22,9 @@ public class CombatSystem : MonoBehaviour
     public WeaponItem currentWeapon;
     public int handDamage = 2;
     public Slot weaponSlot;
+    public int actionPoint = 2;
+    public int maxAP = 2;
+    public GameObject lightNight;
     private Inventory inv;
     private Health hpPlayer;
     private BadEnding ending;
@@ -40,6 +43,62 @@ public class CombatSystem : MonoBehaviour
         enemysObjs = new List<GameObject>();
         enemies = new List<Enemy>();
         BlockPlayer(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (typeSc.combatState)
+        {
+            if (!playerRound)
+            {
+                if (!isAttack)
+                {
+                    if (currentIndex < enemies.Count)
+                    {
+                        enemies[currentIndex].Attack();
+                        currentIndex += 1;
+                        isAttack = true;
+                    }
+                    else
+                    {
+                        currentIndex = 0;
+                        playerRound = true;
+                        ResetAP();
+                        BlockPlayer(false);
+                        ShowWeaponCurrent();
+                    }
+                }
+            }
+            lightNight.SetActive(typeSc.lightNight);
+        }
+    }
+
+    public void ResetAP()
+    {
+        actionPoint = maxAP;
+    }
+
+    public void UseAP()
+    {
+        actionPoint -= 1;
+        if(actionPoint <= 0)
+        {
+            gUI.ClearText();
+            gUI.AddText("End of your round");
+            BlockPlayer(true);
+            Invoke("AfterEat", 1.5f);
+        }
+        else
+        {
+            gUI.AddText("You have " + actionPoint + " more action");
+            gUI.AddText("point!");
+        }
+    }
+
+    private void AfterEat()
+    {
+        EnemyRound();
     }
 
     public void ClearWeapon()
@@ -71,6 +130,11 @@ public class CombatSystem : MonoBehaviour
                 inv.RemoveOne(weaponSlot);
                 gUI.AddText(enemy.nameEnemy + " was hit!");
                 gUI.AddText(enemy.nameEnemy + " lost " + currentWeapon.damage + "hp");
+                if(weaponSlot.isOutOfAmmo())
+                {
+                    gUI.AddText("Out of ammo!");
+                    ClearWeapon();
+                }
             }
             else if(weaponSlot.isBomb())
             {
@@ -101,13 +165,30 @@ public class CombatSystem : MonoBehaviour
         }
     }
 
-    public void ShowWeaponDeafault()
+    public void ShowWeaponCurrent()
     {
         gUI.ClearText();
         gUI.AddText("Current weapon:");
-        gUI.AddText("Name: Hand");
-        gUI.AddText("Default");
-        gUI.AddText("Damage: " + handDamage);
+        if (currentWeapon != null)
+        {
+            gUI.AddText("Name: " + currentWeapon.nameItem);
+            gUI.AddText(currentWeapon.description);
+            gUI.AddText("Damage: " + currentWeapon.damage);
+            if (weaponSlot.isGun())
+            {
+                gUI.AddText("Ammo: " + weaponSlot.ammo);
+            }
+            else
+            {
+                gUI.AddText("Amount: " + weaponSlot.amountItem);
+            }
+        }
+        else
+        {
+            gUI.AddText("Name: Hand");
+            gUI.AddText("Default");
+            gUI.AddText("Damage: " + handDamage);
+        }
     }
 
     public void ShowWeaponStat()
@@ -135,29 +216,7 @@ public class CombatSystem : MonoBehaviour
             gUI.AddText("Damage: " + handDamage);
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if(!playerRound)
-        {
-            if(!isAttack)
-            {
-                if(currentIndex < enemies.Count)
-                {
-                    enemies[currentIndex].Attack();
-                    currentIndex += 1;
-                    isAttack = true;
-                }
-                else
-                {
-                    currentIndex = 0;
-                    playerRound = true;
-                    BlockPlayer(false);
-                    ShowWeaponDeafault();
-                }
-            }
-        }
-    }
+    
 
     public bool isWin()
     {
@@ -193,7 +252,7 @@ public class CombatSystem : MonoBehaviour
 
     public void EnemyRound()
     {
-        ClearWeapon();
+        //ClearWeapon();
         playerRound = false;
     }
 
@@ -227,7 +286,7 @@ public class CombatSystem : MonoBehaviour
         map.keyActive = false;
         if (map.GetActive()) map.OpenMap();
         SetEnemys();
-        ShowWeaponDeafault();
+        ShowWeaponCurrent();
         BlockPlayer(false);
         playerRound = true;
         isAttack = false;
@@ -271,6 +330,7 @@ public class CombatSystem : MonoBehaviour
     }
     public void SkipFight()
     {
+        ClearWeapon();
         camBattlepos.position = currentCamPos;
         typeSc.combatState = false;
         battleCanvas.enabled = false;

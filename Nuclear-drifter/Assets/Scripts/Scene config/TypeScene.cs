@@ -9,7 +9,7 @@ public class TypeScene : MonoBehaviour
     public int inBox = 0;
     public bool radZone = false;
     public bool inMenu = false;
-
+    public bool lightNight = false;
     private PauseMenu pause;
     private MapControl map;
     private DialogueController dial;

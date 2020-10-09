@@ -64,6 +64,18 @@ public class Slot
         }
     }
 
+    public bool isOutOfAmmo()
+    {
+        if(isGun())
+        {
+            return ammo <= 0;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public bool isBomb()
     {
         if (itemElement.GetItemType() == ItemType.Weapon)

@@ -67,6 +67,7 @@ public class SlotElement : MonoBehaviour
                             food.SetHP(gUI.playerHealth);
                             itemSlot.itemElement.Use();
                             inv.RemoveOne(itemSlot);
+                            if (typeSc.combatState) EatCombatAction();
 
                         }
                         else if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
@@ -124,19 +125,15 @@ public class SlotElement : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.I) && itemSlot != null)
-    //    {
-    //        if (itemSlot.itemElement != null && itemSlot.amountItem > 0)
-    //        {
+    public void EatCombatAction()
+    {
+        CombatSystem combat = FindObjectOfType<CombatSystem>();
+        if(combat != null)
+        {
+            combat.UseAP();
+        }
+    }
 
-    //            imgSlot.enabled = true;
-    //            imgSlot.overrideSprite = itemSlot.itemElement.image;
-    //            labelSlot.text = itemSlot.GetAmount();
-    //        }
-    //    }
-    //}
     public void SetSlotStart(Slot newSlot)
     {
         itemSlot = newSlot;
