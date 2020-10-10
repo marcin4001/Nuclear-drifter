@@ -226,7 +226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameEnemy: Rat
-  damageMax: 10
+  damageMax: 5
   dmgChance: 0.5
   hp: 40
   anim: {fileID: 1969061375}
+  isPoisons: 1
+  poisonChance: 0.1

@@ -242,7 +242,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveOne(Slot _slot)
     {
-        if (_slot.itemElement.GetItemType() != ItemType.Weapon || typeSc.inBox > 0) 
+        if (!_slot.isGun() || typeSc.inBox > 0) 
         {
             if (_slot.amountItem > 1)
             {

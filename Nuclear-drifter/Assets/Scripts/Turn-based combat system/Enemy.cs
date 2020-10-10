@@ -9,7 +9,8 @@ public class Enemy : MonoBehaviour
     public float dmgChance = 0.5f;
     public int hp;
     public Animator anim;
-
+    public bool isPoisons = false;
+    public float poisonChance = 0.2f;
     private CombatSystem system;
     private Collider2D col;
     private GUIScript gUI;
@@ -52,13 +53,26 @@ public class Enemy : MonoBehaviour
     {
         system.BlockPlayer(true);
         system.UseWeapon(this);
+        if (!system.WeaponIsBomb())
+        {
+            if (isDead())
+            {
+                gUI.AddText(nameEnemy + " was killed!");
+                col.enabled = false;
+                anim.SetTrigger("Dead");
+            }
+            Invoke("AfterDamage", 2f);
+        }
+    }
+
+    public void Bomb()
+    {
         if (isDead())
         {
             gUI.AddText(nameEnemy + " was killed!");
             col.enabled = false;
             anim.SetTrigger("Dead");
         }
-        Invoke("AfterDamage", 1.5f);
     }
 
     private void AfterDamage()

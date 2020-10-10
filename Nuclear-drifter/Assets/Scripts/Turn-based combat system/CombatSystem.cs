@@ -25,6 +25,7 @@ public class CombatSystem : MonoBehaviour
     public int actionPoint = 2;
     public int maxAP = 2;
     public GameObject lightNight;
+    public Animator animBomb;
     private Inventory inv;
     private Health hpPlayer;
     private BadEnding ending;
@@ -43,6 +44,25 @@ public class CombatSystem : MonoBehaviour
         enemysObjs = new List<GameObject>();
         enemies = new List<Enemy>();
         BlockPlayer(false);
+    }
+
+    public bool WeaponIsBomb()
+    {
+        if(currentWeapon != null)
+        {
+            if(weaponSlot.isBomb())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
     }
 
     // Update is called once per frame
@@ -138,7 +158,9 @@ public class CombatSystem : MonoBehaviour
             }
             else if(weaponSlot.isBomb())
             {
-                //boomb
+                animBomb.SetTrigger("Boom");
+                Invoke("BombDamage", 1.1f);
+                Invoke("RemoveBomb", 0.1f);
             }
             else
             {
@@ -147,6 +169,31 @@ public class CombatSystem : MonoBehaviour
                 gUI.AddText(enemy.nameEnemy + " lost " + currentWeapon.damage + "hp");
             }
         }
+    }
+
+    private void RemoveBomb()
+    {
+        inv.RemoveOne(weaponSlot);
+    }
+    private void BombDamage()
+    {
+        foreach(Enemy e in enemies)
+        {
+            if (!e.isDead())
+            {
+                e.Shot(currentWeapon.damage);
+                gUI.AddText(e.nameEnemy + " was hit!");
+                gUI.AddText(e.nameEnemy + " lost " + currentWeapon.damage + "hp");
+                e.Bomb();
+            }
+        }
+        ClearWeapon();
+        Invoke("AfterBomb", 2f);
+    }
+
+    private void AfterBomb()
+    {
+        if (!isWin()) EnemyRound();
     }
 
     public void SelectWeapon(WeaponItem weapon)
@@ -259,11 +306,16 @@ public class CombatSystem : MonoBehaviour
     public bool Damage(Enemy _enemy)
     {
         float rngChance = Random.Range(0.0f, 1.0f);
+        Debug.Log(rngChance);
         if(rngChance <= _enemy.dmgChance)
         {
             gUI.AddText("You were hit!");
             gUI.AddText("You lost " + _enemy.damageMax + "HP!");
             hpPlayer.Damage(_enemy.damageMax);
+            if (_enemy.isPoisons && rngChance <= _enemy.poisonChance)
+            {
+                hpPlayer.SetPoison(true);
+            }
             return true;
         }
         else
