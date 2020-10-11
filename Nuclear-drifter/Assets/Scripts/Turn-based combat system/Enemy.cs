@@ -11,9 +11,11 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public bool isPoisons = false;
     public float poisonChance = 0.2f;
+    public int expEnemy;
     private CombatSystem system;
     private Collider2D col;
     private GUIScript gUI;
+    
     public bool isDead()
     {
         return hp <= 0;
@@ -59,6 +61,7 @@ public class Enemy : MonoBehaviour
             {
                 gUI.AddText(nameEnemy + " was killed!");
                 col.enabled = false;
+                system.AddExp(expEnemy);
                 anim.SetTrigger("Dead");
             }
             Invoke("AfterDamage", 2f);
@@ -71,6 +74,7 @@ public class Enemy : MonoBehaviour
         {
             gUI.AddText(nameEnemy + " was killed!");
             col.enabled = false;
+            system.AddExp(expEnemy);
             anim.SetTrigger("Dead");
         }
     }

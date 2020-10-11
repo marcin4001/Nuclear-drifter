@@ -24,6 +24,8 @@ public class CombatSystem : MonoBehaviour
     public Slot weaponSlot;
     public int actionPoint = 2;
     public int maxAP = 2;
+    public int sumExp;
+    private Experience experience;
     public GameObject lightNight;
     public Animator animBomb;
     private Inventory inv;
@@ -40,30 +42,14 @@ public class CombatSystem : MonoBehaviour
         ending = player.GetComponent<BadEnding>();
         map = FindObjectOfType<MapControl>();
         inv = FindObjectOfType<Inventory>();
+        experience = FindObjectOfType<Experience>();
         battleCanvas.enabled = false;
         enemysObjs = new List<GameObject>();
         enemies = new List<Enemy>();
         BlockPlayer(false);
     }
 
-    public bool WeaponIsBomb()
-    {
-        if(currentWeapon != null)
-        {
-            if(weaponSlot.isBomb())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return false;
-        }
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -91,6 +77,25 @@ public class CombatSystem : MonoBehaviour
                 }
             }
             lightNight.SetActive(typeSc.lightNight);
+        }
+    }
+
+    public bool WeaponIsBomb()
+    {
+        if (currentWeapon != null)
+        {
+            if (weaponSlot.isBomb())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -169,6 +174,11 @@ public class CombatSystem : MonoBehaviour
                 gUI.AddText(enemy.nameEnemy + " lost " + currentWeapon.damage + "hp");
             }
         }
+    }
+
+    public void AddExp(int point)
+    {
+        sumExp += point;
     }
 
     private void RemoveBomb()
@@ -277,7 +287,9 @@ public class CombatSystem : MonoBehaviour
             gUI.ClearText();
             gUI.AddText("You win!");
             BlockPlayer(false);
+            enemyTr.GiveReward();
             SkipFight();
+
             return true;
         }
         else
@@ -383,11 +395,14 @@ public class CombatSystem : MonoBehaviour
     public void SkipFight()
     {
         ClearWeapon();
+        experience.AddExp(sumExp);
+        sumExp = 0;
         camBattlepos.position = currentCamPos;
         typeSc.combatState = false;
         battleCanvas.enabled = false;
         gUI.ActiveBtnPanel(true);
         map.keyActive = true;
+        enemyTr = null;
         ClearArea();
     }
 

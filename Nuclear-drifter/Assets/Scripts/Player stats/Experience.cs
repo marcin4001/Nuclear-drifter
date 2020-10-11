@@ -21,7 +21,7 @@ public class Experience : MonoBehaviour
 
     public void AddExp(int exp)
     {
-        if (exp > 0) gUI.AddText("You get " + exp + " exp");
+        if (exp > 0) gUI.AddText("You got " + exp + " exp");
         currentExp = currentExp + exp;
         while(currentExp >= level * constExp + prevTh)
         {
