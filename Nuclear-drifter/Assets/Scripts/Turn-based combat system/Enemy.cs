@@ -12,9 +12,11 @@ public class Enemy : MonoBehaviour
     public bool isPoisons = false;
     public float poisonChance = 0.2f;
     public int expEnemy;
+    public Sprite deathSprite;
     private CombatSystem system;
     private Collider2D col;
     private GUIScript gUI;
+    private SpriteRenderer render;
     
     public bool isDead()
     {
@@ -30,6 +32,18 @@ public class Enemy : MonoBehaviour
         system = sys;
         col = GetComponent<Collider2D>();
         gUI = FindObjectOfType<GUIScript>();
+        render = GetComponent<SpriteRenderer>();
+    }
+
+    private void Death()
+    {
+        if(deathSprite != null)
+        {
+            render.sprite = deathSprite;
+        }
+        col.enabled = false;
+        system.AddExp(expEnemy);
+        anim.SetTrigger("Dead");
     }
 
     public void Attack()
@@ -60,9 +74,7 @@ public class Enemy : MonoBehaviour
             if (isDead())
             {
                 gUI.AddText(nameEnemy + " was killed!");
-                col.enabled = false;
-                system.AddExp(expEnemy);
-                anim.SetTrigger("Dead");
+                Death();
             }
             Invoke("AfterDamage", 2f);
         }
@@ -73,9 +85,7 @@ public class Enemy : MonoBehaviour
         if (isDead())
         {
             gUI.AddText(nameEnemy + " was killed!");
-            col.enabled = false;
-            system.AddExp(expEnemy);
-            anim.SetTrigger("Dead");
+            Death();
         }
     }
 
