@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 613}
   m_MaxSize: {x: 18004, y: 18063}
   vertical: 0
-  controlID: 130
+  controlID: 4774
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,8 +46,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 428
-    y: 73
+    x: 429
+    y: 19
     width: 1035
     height: 632
   m_ViewDataDictionary: {fileID: 0}
@@ -84,7 +84,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 433, y: 613}
   m_MaxSize: {x: 14003, y: 18063}
   vertical: 1
-  controlID: 131
+  controlID: 4734
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 433, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
-  controlID: 132
+  controlID: 4735
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 133
+  controlID: 4736
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,10 +244,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 6476}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 24fbffff
+      m_ExpandedIDs: 9cc0ffffeae3ffffd8e9fffff2e9ffff5efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -347,10 +347,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 270}
-    m_SelectedIDs: c45a0000
-    m_LastClickedID: 23236
-    m_ExpandedIDs: 00000000965a0000b85a000000ca9a3b
+    scrollPos: {x: 0, y: 222}
+    m_SelectedIDs: c85a0000
+    m_LastClickedID: 23240
+    m_ExpandedIDs: 00000000925a0000bc5a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000965a0000
+    m_ExpandedIDs: 00000000925a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,9 +403,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: f6410000
+    m_LastClickedInstanceID: 16886
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000014520000fa5000005af8000068a8000042ccffff6a4a000000cf0300
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 24}
     m_GridSize: 74
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -499,9 +499,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 229.03438, y: 22.576067, z: -7.6937466}
+    m_Target: {x: 232.273, y: 23.836245, z: -59.01327}
     speed: 2
-    m_Value: {x: 229.03438, y: 22.576067, z: -7.6937466}
+    m_Value: {x: 232.273, y: 23.836245, z: -59.01327}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -552,9 +552,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.0650864
+    m_Target: 3.1130455
     speed: 2
-    m_Value: 4.0650864
+    m_Value: 3.1130455
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -600,9 +600,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 420
+    x: 428
     y: 73
-    width: 1043
+    width: 1035
     height: 632
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
@@ -611,6 +611,7 @@ MonoBehaviour:
     - {fileID: 6582232459980573905, guid: d8d3b1150e5a89a4fa40fd6d1e942a66, type: 2}
     - {fileID: -1567999486217103493, guid: 624e59fc569a0054fbff5cca69d1215f, type: 2}
     - {fileID: -4809792817872415605, guid: b95d53ffa8bd7d84d805a238182e9744, type: 2}
+    - {fileID: 6514998344251104877, guid: 3838929407015d543a395839c923187e, type: 2}
     m_ValueSerializationHelper:
     - e00: 1.2352247
       e01: 0
@@ -676,11 +677,27 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 0.9425665
+      e01: 0
+      e02: 0
+      e03: 55.864872
+      e10: 0
+      e11: 0.9425665
+      e12: 0
+      e13: 84.517296
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: b95d53ffa8bd7d84d805a238182e9744,
+  m_AnimatorController: {fileID: 9100000, guid: 3838929407015d543a395839c923187e,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -4809792817872415605, guid: b95d53ffa8bd7d84d805a238182e9744,
+  - m_Target: {fileID: 6514998344251104877, guid: 3838929407015d543a395839c923187e,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -713,8 +730,8 @@ MonoBehaviour:
     y: 653
     width: 1465
     height: 294
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 14}
@@ -775,7 +792,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 399802
+  m_LastSelectedObjectID: 16886
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -836,7 +853,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 16886
   m_LastVerticalScrollValue: 0
   m_AssetGUID: 
   m_InstanceID: 0
@@ -1437,7 +1454,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2020-10-12T19:23:36.902+02:00
+      updatedTimeString: 2020-10-13T19:12:40.337+02:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1451,7 +1468,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2020-10-12T19:23:38.567+02:00
+        updatedTimeString: 2020-10-13T21:44:04.550+02:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000
