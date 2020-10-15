@@ -328,6 +328,11 @@ public class CombatSystem : MonoBehaviour
             {
                 hpPlayer.SetPoison(true);
             }
+            if(_enemy.isRad && rngChance <= _enemy.radChance)
+            {
+                Debug.Log("Rad");
+                hpPlayer.SetRad(true);
+            }
             return true;
         }
         else
@@ -404,6 +409,13 @@ public class CombatSystem : MonoBehaviour
         map.keyActive = true;
         enemyTr = null;
         ClearArea();
+    }
+
+    public void SkipBtn()
+    {
+        gUI.ClearText();
+        gUI.AddText("You escaped the fight!");
+        SkipFight();
     }
 
     public void BlockPlayer(bool value)

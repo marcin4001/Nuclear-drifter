@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public bool isPoisons = false;
     public float poisonChance = 0.2f;
+    public bool isRad = false;
+    public float radChance = 0.2f;
     public int expEnemy;
     public Sprite deathSprite;
     private CombatSystem system;

@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 613}
   m_MaxSize: {x: 18004, y: 18063}
   vertical: 0
-  controlID: 5290
+  controlID: 5123
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 433, y: 613}
   m_MaxSize: {x: 14003, y: 18063}
   vertical: 1
-  controlID: 5137
+  controlID: 5080
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 433, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
-  controlID: 5138
+  controlID: 5081
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 5245
+  controlID: 5038
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -452,9 +452,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 44e1ffffd8e9fffff2e9ffff5efbffff
+      m_SelectedIDs: 5efbffff
+      m_LastClickedID: -1186
+      m_ExpandedIDs: d8e9fffff2e9ffff5efbfffffa43000008440000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -517,21 +517,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations/Blood
+    - Assets/Prefabs/Enemy
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 74
   m_LastFolders:
-  - Assets/Animations/Blood
+  - Assets/Prefabs/Enemy
   m_LastFoldersGridSize: 74
   m_LastProjectPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1a5b0000
-    m_LastClickedID: 23322
-    m_ExpandedIDs: 00000000a25a0000be5a000000ca9a3b
+    scrollPos: {x: 0, y: 180}
+    m_SelectedIDs: ea5b0000
+    m_LastClickedID: 23530
+    m_ExpandedIDs: 00000000ba5a0000e45a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,7 +559,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a25a000000ca9a3b
+    m_ExpandedIDs: 00000000ba5a0000e45a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -611,7 +611,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 333}
+    m_ScrollPosition: {x: 0, y: 127}
     m_GridSize: 74
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -652,9 +652,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 229.58203, y: 25.241072, z: -63.088367}
+    m_Target: {x: 259.6665, y: 127.465904, z: -184.90875}
     speed: 2
-    m_Value: {x: 229.58203, y: 25.241072, z: -63.088367}
+    m_Value: {x: 259.6665, y: 127.465904, z: -184.90875}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -705,9 +705,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.446833
+    m_Target: 102.04912
     speed: 2
-    m_Value: 6.446833
+    m_Value: 102.04912
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -918,7 +918,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -5646
+  m_LastSelectedObjectID: 17034
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -952,7 +952,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 304
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
@@ -1552,7 +1552,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2020-10-14T20:58:19.583+02:00
+      updatedTimeString: 2020-10-15T13:52:59.414+02:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1566,7 +1566,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2020-10-14T21:39:59.845+02:00
+        updatedTimeString: 2020-10-15T14:51:42.907+02:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000
