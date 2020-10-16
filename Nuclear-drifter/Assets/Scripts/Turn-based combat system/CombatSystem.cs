@@ -28,10 +28,12 @@ public class CombatSystem : MonoBehaviour
     private Experience experience;
     public GameObject lightNight;
     public Animator animBomb;
+    private FightSound fightSound;
     private Inventory inv;
     private Health hpPlayer;
     private BadEnding ending;
     private MapControl map;
+    private SoundsTrigger soundsMain;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,9 @@ public class CombatSystem : MonoBehaviour
         ending = player.GetComponent<BadEnding>();
         map = FindObjectOfType<MapControl>();
         inv = FindObjectOfType<Inventory>();
+        fightSound = GetComponent<FightSound>();
         experience = FindObjectOfType<Experience>();
+        soundsMain = FindObjectOfType<SoundsTrigger>();
         battleCanvas.enabled = false;
         enemysObjs = new List<GameObject>();
         enemies = new List<Enemy>();
@@ -359,6 +363,7 @@ public class CombatSystem : MonoBehaviour
         BlockPlayer(false);
         playerRound = true;
         isAttack = false;
+        soundsMain.Mute(true);
     }
 
     private void SetEnemys()
@@ -383,7 +388,7 @@ public class CombatSystem : MonoBehaviour
         foreach(GameObject e in enemysObjs)
         {
             Enemy enemy = e.GetComponent<Enemy>();
-            enemy.Init(this);
+            enemy.Init(this, fightSound);
             enemies.Add(enemy);
         }
     }
@@ -408,6 +413,7 @@ public class CombatSystem : MonoBehaviour
         gUI.ActiveBtnPanel(true);
         map.keyActive = true;
         enemyTr = null;
+        soundsMain.Mute(false);
         ClearArea();
     }
 

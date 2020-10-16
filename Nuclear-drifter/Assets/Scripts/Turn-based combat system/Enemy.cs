@@ -15,10 +15,12 @@ public class Enemy : MonoBehaviour
     public float radChance = 0.2f;
     public int expEnemy;
     public Sprite deathSprite;
+    public int soundIndex = -1;
     private CombatSystem system;
     private Collider2D col;
     private GUIScript gUI;
     private SpriteRenderer render;
+    private FightSound sound;
     
     public bool isDead()
     {
@@ -29,9 +31,10 @@ public class Enemy : MonoBehaviour
     {
         hp = hp - point;
     }
-    public void Init(CombatSystem sys)
+    public void Init(CombatSystem sys, FightSound _sound)
     {
         system = sys;
+        sound = _sound;
         col = GetComponent<Collider2D>();
         gUI = FindObjectOfType<GUIScript>();
         render = GetComponent<SpriteRenderer>();
@@ -52,6 +55,7 @@ public class Enemy : MonoBehaviour
     {
         if (!isDead())
         {
+            sound.PlaySound(soundIndex);
             bool isHurt = system.Damage(this);
             if (isHurt) system.ShowBlood();
             Invoke("AfterAttack", 1.1f);
@@ -78,7 +82,7 @@ public class Enemy : MonoBehaviour
                 gUI.AddText(nameEnemy + " was killed!");
                 Death();
             }
-            Invoke("AfterDamage", 2f);
+            Invoke("AfterDamage", 1.5f);
         }
     }
 

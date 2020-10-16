@@ -19,6 +19,11 @@ public class SoundsTrigger : MonoBehaviour
         sr.loop = true;
     }
 
+    public void Mute(bool value)
+    {
+        sr.mute = value;
+    }
+
     public void Cook()
     {
         sr.PlayOneShot(stove);

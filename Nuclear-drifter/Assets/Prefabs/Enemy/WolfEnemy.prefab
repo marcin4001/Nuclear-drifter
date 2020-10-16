@@ -131,9 +131,12 @@ MonoBehaviour:
   anim: {fileID: 2583845400078594781}
   isPoisons: 0
   poisonChance: 0.2
+  isRad: 0
+  radChance: 0.2
   expEnemy: 150
   deathSprite: {fileID: -6800264685773234984, guid: e4b800062e4e0e44d8ee41cf854f7ac8,
     type: 3}
+  soundIndex: 3
 --- !u!1 &2611208178412327224
 GameObject:
   m_ObjectHideFlags: 0
