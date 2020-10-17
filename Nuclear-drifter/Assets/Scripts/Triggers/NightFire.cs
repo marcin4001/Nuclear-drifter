@@ -6,13 +6,13 @@ public class NightFire : MonoBehaviour
 {
     private Animator anim;
     private TimeGame time;
-    public Light light;
+    public Light lightNight;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         time = FindObjectOfType<TimeGame>();
-        if (light != null) light.enabled = false;
+        if (lightNight != null) lightNight.enabled = false;
     }
 
     private void OnWillRenderObject()
@@ -21,12 +21,12 @@ public class NightFire : MonoBehaviour
         if(time.hour >= 5 && time.hour < 20)
         {
             anim.SetBool("Burn", false);
-            if (light != null) light.enabled = false;
+            if (lightNight != null) lightNight.enabled = false;
         }
         else
         {
             anim.SetBool("Burn", true);
-            if (light != null) light.enabled = true;
+            if (lightNight != null) lightNight.enabled = true;
         }
     }
 }

@@ -21,6 +21,7 @@ public class CombatSystem : MonoBehaviour
     public int currentIndex = 0;
     public WeaponItem currentWeapon;
     public int handDamage = 2;
+    public int soundHand = 0;
     public Slot weaponSlot;
     public int actionPoint = 2;
     public int maxAP = 2;
@@ -147,6 +148,7 @@ public class CombatSystem : MonoBehaviour
         gUI.ClearText();
         if(currentWeapon == null)
         {
+            fightSound.PlayWeapon(soundHand);
             enemy.Shot(handDamage);
             gUI.AddText(enemy.nameEnemy + " was hit!");
             gUI.AddText(enemy.nameEnemy + " lost " + handDamage + "hp");
@@ -155,6 +157,7 @@ public class CombatSystem : MonoBehaviour
         {
             if(weaponSlot.isGun())
             {
+                fightSound.PlayWeapon(currentWeapon.soundId);
                 enemy.Shot(currentWeapon.damage);
                 inv.RemoveOne(weaponSlot);
                 gUI.AddText(enemy.nameEnemy + " was hit!");
@@ -167,12 +170,14 @@ public class CombatSystem : MonoBehaviour
             }
             else if(weaponSlot.isBomb())
             {
+                fightSound.PlayWeapon(currentWeapon.soundId);
                 animBomb.SetTrigger("Boom");
                 Invoke("BombDamage", 1.1f);
                 Invoke("RemoveBomb", 0.1f);
             }
             else
             {
+                fightSound.PlayWeapon(currentWeapon.soundId);
                 enemy.Shot(currentWeapon.damage);
                 gUI.AddText(enemy.nameEnemy + " was hit!");
                 gUI.AddText(enemy.nameEnemy + " lost " + currentWeapon.damage + "hp");

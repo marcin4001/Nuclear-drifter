@@ -17,6 +17,10 @@ MonoBehaviour:
   description: 'Type: Melee'
   value: 45
   idItem: 50
+  noRemove: 0
+  noSell: 0
   ammoAmount: 0
-  damage: 15
+  damage: 10
   isMeleeWeapon: 1
+  isBomb: 0
+  soundId: 6

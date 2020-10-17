@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FightSound : MonoBehaviour
 {
-    public AudioClip[] sounds;
+    public AudioClip[] soundsEnemy;
+    public AudioClip[] soundsWeapon;
     private AudioSource source;
     // Start is called before the first frame update
     void Start()
@@ -12,14 +13,24 @@ public class FightSound : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    public void PlaySound(int index)
+    public void PlayEnemy(int index)
     {
-        if(sounds.Length > 0)
+        if(soundsEnemy.Length > 0)
         {
-            if(index >= 0 && index < sounds.Length)
+            if(index >= 0 && index < soundsEnemy.Length)
             {
-                Debug.Log("sound");
-                source.PlayOneShot(sounds[index]);
+                source.PlayOneShot(soundsEnemy[index]);
+            }
+        }
+    }
+
+    public void PlayWeapon(int index)
+    {
+        if (soundsWeapon.Length > 0)
+        {
+            if (index >= 0 && index < soundsWeapon.Length)
+            {
+                source.PlayOneShot(soundsWeapon[index]);
             }
         }
     }

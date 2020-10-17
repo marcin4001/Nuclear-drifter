@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
     {
         if (!isDead())
         {
-            sound.PlaySound(soundIndex);
+            sound.PlayEnemy(soundIndex);
             bool isHurt = system.Damage(this);
             if (isHurt) system.ShowBlood();
             Invoke("AfterAttack", 1.1f);
