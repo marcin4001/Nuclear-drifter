@@ -297,6 +297,7 @@ public class CombatSystem : MonoBehaviour
             gUI.AddText("You win!");
             BlockPlayer(false);
             enemyTr.GiveReward();
+            enemyTr.Deactive();
             SkipFight();
 
             return true;
@@ -354,6 +355,7 @@ public class CombatSystem : MonoBehaviour
 
     public void StartFight(EnemyTrigger trigger)
     {
+        if (map.GetActive()) map.OpenMap();
         currentCamPos = camBattlepos.position;
         camBattlepos.position = transform.position;
         player.SetStop(true);
@@ -362,7 +364,6 @@ public class CombatSystem : MonoBehaviour
         battleCanvas.enabled = true;
         gUI.ActiveBtnPanel(false);
         map.keyActive = false;
-        if (map.GetActive()) map.OpenMap();
         SetEnemys();
         ShowWeaponCurrent();
         BlockPlayer(false);

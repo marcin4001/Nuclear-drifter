@@ -38,6 +38,14 @@ public class MissionListGUI : MonoBehaviour
         gUI.DeactiveBtn(!active);
         fade.EnableImg(active);
         typeSc.inMenu = active;
+        if (active)
+        {
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
         if (active) CurrentMissionShow();
     }
 

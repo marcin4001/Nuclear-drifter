@@ -30,4 +30,9 @@ public class EnemyTrigger : MonoBehaviour
             
         }
     }
+
+    public void Deactive()
+    {
+        Destroy(gameObject);
+    }
 }
