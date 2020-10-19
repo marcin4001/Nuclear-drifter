@@ -35,6 +35,7 @@ public class CombatSystem : MonoBehaviour
     private BadEnding ending;
     private MapControl map;
     private SoundsTrigger soundsMain;
+    private DayCycle cycle;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +49,7 @@ public class CombatSystem : MonoBehaviour
         fightSound = GetComponent<FightSound>();
         experience = FindObjectOfType<Experience>();
         soundsMain = FindObjectOfType<SoundsTrigger>();
+        cycle = FindObjectOfType<DayCycle>();
         battleCanvas.enabled = false;
         enemysObjs = new List<GameObject>();
         enemies = new List<Enemy>();
@@ -340,7 +342,6 @@ public class CombatSystem : MonoBehaviour
             }
             if(_enemy.isRad && rngChance <= _enemy.radChance)
             {
-                Debug.Log("Rad");
                 hpPlayer.SetRad(true);
             }
             return true;
@@ -370,6 +371,7 @@ public class CombatSystem : MonoBehaviour
         playerRound = true;
         isAttack = false;
         soundsMain.Mute(true);
+        cycle.SetSlowTime();
     }
 
     private void SetEnemys()
@@ -421,6 +423,7 @@ public class CombatSystem : MonoBehaviour
         enemyTr = null;
         soundsMain.Mute(false);
         ClearArea();
+        cycle.SetNormalTime();
     }
 
     public void SkipBtn()

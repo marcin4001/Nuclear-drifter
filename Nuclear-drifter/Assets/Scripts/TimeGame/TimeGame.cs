@@ -16,6 +16,16 @@ public class TimeGame : MonoBehaviour
         
     }
     
+    public void SetCounterMax(float value)
+    {
+        counter = 0.0f;
+        counterMax = value;
+    }
+
+    public float GetCounterMax()
+    {
+        return counterMax;
+    }
     
     // Update is called once per frame
     void Update()
