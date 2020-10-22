@@ -17,8 +17,10 @@ MonoBehaviour:
   description: '"Old Jack"'
   value: 5
   idItem: 201
+  noRemove: 0
+  noSell: 0
   addHP: 0
-  healsPoison: 0
+  healsPoison: 1
   healsRad: 0
   isPoison: 0
   addRad: 0
