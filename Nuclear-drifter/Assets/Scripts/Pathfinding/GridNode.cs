@@ -99,6 +99,24 @@ public class GridNode : MonoBehaviour
         return (playerN == n);
     }
 
+    public void UpdateGrid()
+    {
+        for (int x = 0; x < gridSizeX; x++)
+        {
+            for (int y = 0; y < gridSizeY; y++)
+            {
+                Vector3 pos = nodes[x, y].pos;
+                bool walkable = (Physics2D.OverlapCircle((Vector2)pos, nodeRadius - 0.3f) != null);
+                if (walkable)
+                {
+                    Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)pos, nodeRadius - 0.3f);
+                    foreach (Collider2D c in col) if (c.tag == "Obstacle" || c.tag == "Wall" || c.tag == "Chest" || c.tag == "WaterCol") walkable = false;
+                }
+                nodes[x, y].walkable = walkable;
+            }
+        }
+    }
+
     private void OnDrawGizmos()
     {
         

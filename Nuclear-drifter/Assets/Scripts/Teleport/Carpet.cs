@@ -35,6 +35,7 @@ public class Carpet : MonoBehaviour
             else
             {
                 gUI.AddText("The door is locked!");
+                if(closeInNight) gUI.AddText("Opening at 6 am");
             }
         }
     }

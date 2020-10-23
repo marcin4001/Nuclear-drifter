@@ -36,6 +36,7 @@ public class CombatSystem : MonoBehaviour
     private MapControl map;
     private SoundsTrigger soundsMain;
     private DayCycle cycle;
+    private GridNode grid;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +50,7 @@ public class CombatSystem : MonoBehaviour
         fightSound = GetComponent<FightSound>();
         experience = FindObjectOfType<Experience>();
         soundsMain = FindObjectOfType<SoundsTrigger>();
+        grid = FindObjectOfType<GridNode>();
         cycle = FindObjectOfType<DayCycle>();
         battleCanvas.enabled = false;
         enemysObjs = new List<GameObject>();
@@ -300,6 +302,7 @@ public class CombatSystem : MonoBehaviour
             BlockPlayer(false);
             enemyTr.GiveReward();
             enemyTr.Deactive();
+            grid.UpdateGrid();
             SkipFight();
 
             return true;
