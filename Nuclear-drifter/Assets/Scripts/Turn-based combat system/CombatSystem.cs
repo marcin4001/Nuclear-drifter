@@ -374,6 +374,7 @@ public class CombatSystem : MonoBehaviour
         playerRound = true;
         isAttack = false;
         soundsMain.Mute(true);
+        ResetAP();
         cycle.SetSlowTime();
     }
 
