@@ -6,6 +6,7 @@ public class RewardEnemy : MonoBehaviour
 {
     public Slot item;
     public GameObject itemPref;
+    private int moneyId = 300;
     private Inventory inv;
     private GUIScript gUI;
     
@@ -20,7 +21,8 @@ public class RewardEnemy : MonoBehaviour
     {
         if(!inv.IsFull())
         {
-            gUI.AddText("You got " + item.itemElement.name + " x" + item.amountItem);
+           if(item.itemElement.idItem != moneyId) gUI.AddText("You got " + item.itemElement.nameItem + " x" + item.amountItem);
+           else gUI.AddText("You got $" + item.amountItem);
             inv.Add(item);
         }
         else
