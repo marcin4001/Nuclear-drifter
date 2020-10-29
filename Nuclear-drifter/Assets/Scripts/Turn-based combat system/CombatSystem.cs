@@ -376,6 +376,7 @@ public class CombatSystem : MonoBehaviour
         soundsMain.Mute(true);
         ResetAP();
         cycle.SetSlowTime();
+        player.RoundPosPlayer();
     }
 
     private void SetEnemys()
@@ -420,6 +421,7 @@ public class CombatSystem : MonoBehaviour
         experience.AddExp(sumExp);
         sumExp = 0;
         camBattlepos.position = currentCamPos;
+        player.SetLocalPosCamera();
         typeSc.combatState = false;
         battleCanvas.enabled = false;
         gUI.ActiveBtnPanel(true);

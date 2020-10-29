@@ -50,6 +50,8 @@ public class PlayerClickMove : MonoBehaviour
     private TypeScene typeSc;
     private Health hp;
     public GameObject sqrLocPref;
+    public Camera mainCam;
+    private Vector3 localPosCam;
     private GameObject sqrLoc;
     // Start is called before the first frame update
     void Start()
@@ -68,6 +70,22 @@ public class PlayerClickMove : MonoBehaviour
         {
             sqrLoc = Instantiate(sqrLocPref);
         }
+        mainCam = GetComponentInChildren<Camera>();
+        localPosCam = mainCam.transform.localPosition;
+        
+    }
+
+    public void RoundPosPlayer()
+    {
+        float x_pos = Mathf.Floor(transform.position.x);
+        float y_pos = Mathf.Floor(transform.position.y);
+
+        transform.position = new Vector3(x_pos, y_pos, transform.position.z);
+    }
+
+    public void SetLocalPosCamera()
+    {
+        mainCam.transform.localPosition = localPosCam;
     }
 
     public void SetDir(Vector2 pos)
