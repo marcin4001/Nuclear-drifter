@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 5551
+  controlID: 1990
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,10 +244,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 720}
-      m_SelectedIDs: 5efbffff
-      m_LastClickedID: -1186
-      m_ExpandedIDs: 7eceffffa2cfffffbccfffffd2ddfffff6ddffff18deffff5efbffff423d0000f04300002c470000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: a2620000
+      m_LastClickedID: 0
+      m_ExpandedIDs: b2c4ffffdaddffff20fbffff6c3c00006a43000026460000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -324,7 +324,7 @@ MonoBehaviour:
     height: 286
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: menu
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -336,21 +336,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Texture
+    - Assets/ItemObj/Document
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 74
   m_LastFolders:
-  - Assets/Texture
+  - Assets/ItemObj/Document
   m_LastFoldersGridSize: 74
   m_LastProjectPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 250}
-    m_SelectedIDs: 70600000
-    m_LastClickedID: 24688
-    m_ExpandedIDs: 00000000266000002860000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000546000005660000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000266000002860000000ca9a3b
+    m_ExpandedIDs: 00000000546000005660000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,9 +403,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5efbffff
-    m_LastClickedInstanceID: -1186
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: a2620000
+    m_LastClickedInstanceID: 25250
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000145200005af8000068a8000042ccffff6a4a000000cf0300a4a80000624c000094a100002e570000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 2547}
+    m_ScrollPosition: {x: 0, y: 297}
     m_GridSize: 74
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 110
@@ -499,9 +499,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 696.0666, y: 407.6436, z: -180.82426}
+    m_Target: {x: 707.67206, y: 409.39682, z: -210.40678}
     speed: 2
-    m_Value: {x: 696.0666, y: 407.6436, z: -180.82426}
+    m_Value: {x: 707.67206, y: 409.39682, z: -210.40678}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -552,9 +552,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 311.0163
+    m_Target: 437.52957
     speed: 2
-    m_Value: 311.0163
+    m_Value: 437.52957
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -730,8 +730,8 @@ MonoBehaviour:
     y: 652
     width: 1314
     height: 295
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 14}
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -12674
+  m_LastSelectedObjectID: -8742
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1454,7 +1454,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2020-11-07T19:33:31.097+01:00
+      updatedTimeString: 2020-11-08T22:53:25.518+01:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1468,7 +1468,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2020-11-07T21:07:23.911+01:00
+        updatedTimeString: 2020-11-08T23:31:57.075+01:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000

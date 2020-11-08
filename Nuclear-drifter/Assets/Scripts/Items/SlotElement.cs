@@ -75,6 +75,11 @@ public class SlotElement : MonoBehaviour
                             if (!gUI.GetCombatState()) gUI.AddText("I'm not fighting anyone");
                             else itemSlot.itemElement.Use();
                         }
+                        else if(itemSlot.itemElement.GetItemType() == ItemType.Document)
+                        {
+                            if (!gUI.GetCombatState()) itemSlot.itemElement.Use();
+                            else gUI.AddText("You can't read now");
+                        }
                         else
                         {
                             itemSlot.itemElement.Use();

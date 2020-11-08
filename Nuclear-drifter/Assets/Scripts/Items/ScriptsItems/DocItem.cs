@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewDocument", menuName = "Item/DocItem")]
 public class DocItem : Item
 {
-    public string idDoc = "";
+    public int idDoc;
 
     private void Awake()
     {
@@ -15,5 +15,7 @@ public class DocItem : Item
     public override void Use()
     {
         Debug.Log("Use: " + name);
+        DocumentController doc = FindObjectOfType<DocumentController>();
+        if (doc != null) doc.OpenDoc(idDoc);
     }
 }
