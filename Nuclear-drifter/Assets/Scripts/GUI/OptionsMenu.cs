@@ -48,7 +48,6 @@ public class OptionsMenu : MonoBehaviour
 
     public void ChangeResolution(int value)
     {
-        Debug.Log(value);
         Screen.SetResolution(resolutions[value].width, resolutions[value].height, fullscreen);
         currentResolution = value;
     }

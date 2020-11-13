@@ -12,6 +12,7 @@ public class MissionObj
     public bool complete;
     public int idSort;
     public int exp = 300;
+    public int respect = 0;
 
     public void ResetObj()
     {

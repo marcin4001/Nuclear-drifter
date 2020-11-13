@@ -75,7 +75,7 @@ public class MissionListGUI : MonoBehaviour
         }
         if (content != "") content = separator + "\n" + content;
         else content = "no mission\n";
-        textList.text = content;
+        textList.text = ShowRespect() + content;
     }
 
     public void CompletedMissionShow()
@@ -99,7 +99,15 @@ public class MissionListGUI : MonoBehaviour
         }
         if (content != "") content = separator + "\n" + content;
         else content = "no mission\n";
-        textList.text = content;
+        textList.text = ShowRespect() + content;
+    }
+
+    public string ShowRespect()
+    {
+        string respectText = separator;
+        respectText += "Respect in Old Zealand settlements: " + MissionList.global.PercentRespect() + "%\n";
+        respectText += separator;
+        return respectText;
     }
 
 }

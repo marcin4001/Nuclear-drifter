@@ -75,4 +75,43 @@ public class MissionList : MonoBehaviour
 
         return list;
     }
+
+    public int GetFullRespect()
+    {
+        if (missions.Length == 0) return 0;
+        int fullRespect = 0;
+        foreach(MissionObj m in missions)
+        {
+            fullRespect += m.respect;
+        }
+        return fullRespect;
+    }
+
+    public int GetCurrentRespect()
+    {
+        if (missions.Length == 0) return 0;
+        int respect = 0;
+        foreach (MissionObj m in missions)
+        {
+           if(m.complete) respect += m.respect;
+        }
+        return respect;
+    }
+
+    public int PercentRespect()
+    {
+        int percent = 0;
+        float respectPercent = (float)GetCurrentRespect() / (float)GetFullRespect();
+        percent = (int)(respectPercent * 100);
+        return percent;
+    }
+
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.R))
+    //    {
+    //        Debug.Log(GetCurrentRespect());
+    //        Debug.Log(PercentRespect() + "%");
+    //    }
+    //}
 }
