@@ -25,7 +25,7 @@ public class OptionsMenu : MonoBehaviour
         int i = 0;
         foreach(Resolution res in resolutions)
         {
-            string currentRes = res.width + "x" + res.height + " (" +res.refreshRate + "Hz)";
+            string currentRes = res.width + "x" + res.height;
             resText.Add(currentRes);
             if(res.width == Screen.width && res.height == Screen.height)
             {
