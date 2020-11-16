@@ -9,17 +9,16 @@ public class MenuUI : MonoBehaviour
     public Texture2D cursor;
     public int idStartMission = 0;
     public OptionsMenu options;
+    public CreditsCanvas credits;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
         options = FindObjectOfType<OptionsMenu>();
+        credits = FindObjectOfType<CreditsCanvas>();
     }
 
-    public void OpenOptions()
-    {
-        options.OpenOptions();
-    }
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +29,16 @@ public class MenuUI : MonoBehaviour
     {
         ResetProperty();
         SceneManager.LoadScene(1);
+    }
+
+    public void OpenOptions()
+    {
+        options.OpenOptions();
+    }
+
+    public void OpenCredits()
+    {
+        credits.Open();
     }
 
     public void Exit()

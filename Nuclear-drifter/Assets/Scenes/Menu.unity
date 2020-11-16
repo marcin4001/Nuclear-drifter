@@ -123,6 +123,165 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1133175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 198079636496076054, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_Name
+      value: CreditsCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5610879743815238390, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5610879743815238390, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556853291565821461, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556853291565821461, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556853291565821461, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751282404529122209, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_Text
+      value: "##########################################################\nNuclear
+        drifter\nby marcin4001\nCopyright 2020\n#########################################################\n\nMain
+        developer:\nMarcin Jachymczyk\n\n##########################################################\n\nGraphics:\nMarcin
+        Jachymczyk\nREFMAP\nAyene\nLanea Zimmerman (AKA Sharm)\nStephen Challener
+        (AKA Redshrike)\n\rManuel Riecke (AKA MrBeast)\nDaniel Armstrong (AKA HughSpectrum)\nLeonard
+        Pabin, Ali-G\naweryn\n\n##########################################################"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751282404529122209, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6cd513d49ff64f34798e3aef060f5395, type: 3}
 --- !u!1001 &46359715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1136,7 +1295,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 482816339}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 558392524}
+        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
+        m_MethodName: OpenCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &482816339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,6 +1474,7 @@ MonoBehaviour:
   cursor: {fileID: 2800000, guid: e858a20bff74fc545814da858daec668, type: 3}
   idStartMission: 21
   options: {fileID: 0}
+  credits: {fileID: 0}
 --- !u!114 &558392525
 MonoBehaviour:
   m_ObjectHideFlags: 0
