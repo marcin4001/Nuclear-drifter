@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PropertyPlayer : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PropertyPlayer : MonoBehaviour
     public int currentExp = 0;
     public int level = 1;
     public int prevTh = 0;
+    public string currentScene;
 
     // Start is called before the first frame update
     void Awake()
@@ -33,6 +35,27 @@ public class PropertyPlayer : MonoBehaviour
         }
         else Destroy(gameObject);
         
+    }
+
+    public void SetCurrentState()
+    {
+        PlayerClickMove move = FindObjectOfType<PlayerClickMove>();
+        Health playerHP = move.GetComponent<Health>();
+        TimeGame time = FindObjectOfType<TimeGame>();
+        currentScene = SceneManager.GetActiveScene().name;
+
+        currentHealth = playerHP.currentHealth;
+        property.maxHealth = playerHP.maxAfterRad;
+        property.isPoison = playerHP.isPoison;
+        property.isRad = playerHP.isRad;
+
+        property.day = time.day;
+        property.hour = time.hour;
+        property.minutes = time.minutes;
+
+        property.startPos = move.GetPosPlayer();
+        property.posOutside = move.transform.position;
+        property.SaveTemp();
     }
 
     public void SaveTemp()

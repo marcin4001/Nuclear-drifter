@@ -36,6 +36,15 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void SaveBtn()
+    {
+        InventoryBox inv = FindObjectOfType<InventoryBox>();
+        NPCList npc = FindObjectOfType<NPCList>();
+        SaveAndLoad.SaveTemp(inv);
+        SaveAndLoad.SaveTemp(npc);
+        SaveAndLoad.HardSave();
+    }
+
     public void ActivePouseMenu()
     {
         if (activeEsc)

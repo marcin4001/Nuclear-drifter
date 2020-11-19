@@ -85,4 +85,27 @@ public class SaveAndLoad : MonoBehaviour
         }
     }
 
+    public static void HardSave()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "saveTemp");
+        string savePath = Path.Combine(Application.persistentDataPath, "save");
+        string saveToTemp = Path.Combine(savePath, "saveTemp");
+        if (Directory.Exists(path))
+        {
+            string[] files = Directory.GetFiles(path);
+            if (Directory.Exists(savePath))
+            {
+                Directory.Delete(savePath, true);
+            }
+            Directory.CreateDirectory(savePath);
+            Directory.CreateDirectory(saveToTemp);
+            foreach (string file in files)
+            {
+                Debug.Log(Path.GetFileName(file));
+                File.Copy(file, Path.Combine(saveToTemp, Path.GetFileName(file)));
+            }
+        }
+        
+    }
+
 }
