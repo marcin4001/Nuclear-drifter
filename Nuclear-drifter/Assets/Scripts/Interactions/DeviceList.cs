@@ -29,4 +29,10 @@ public class DeviceList : MonoBehaviour
         }
         else return null;
     }
+
+    public static string GetJson()
+    {
+        string json = JsonUtility.ToJson(global);
+        return json;
+    }
 }

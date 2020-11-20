@@ -32,4 +32,10 @@ public class EnemyMissionList : MonoBehaviour
             return null;
         } 
     }
+
+    public static string GetJson()
+    {
+        string json = JsonUtility.ToJson(global);
+        return json;
+    }
 }

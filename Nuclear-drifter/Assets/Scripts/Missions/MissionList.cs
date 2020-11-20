@@ -106,6 +106,11 @@ public class MissionList : MonoBehaviour
         return percent;
     }
 
+    public static string GetJson()
+    {
+        string json = JsonUtility.ToJson(global);
+        return json;
+    }
     //private void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.R))

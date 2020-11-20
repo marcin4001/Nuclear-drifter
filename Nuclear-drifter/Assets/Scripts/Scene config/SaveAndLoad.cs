@@ -99,13 +99,20 @@ public class SaveAndLoad : MonoBehaviour
             }
             Directory.CreateDirectory(savePath);
             Directory.CreateDirectory(saveToTemp);
+            string player = PropertyPlayer.GetJson();
+            File.WriteAllText(Path.Combine(savePath, "Player.json"), player);
+            string mission = MissionList.GetJson();
+            File.WriteAllText(Path.Combine(savePath, "Mission.json"), mission);
+            string devices = DeviceList.GetJson();
+            File.WriteAllText(Path.Combine(savePath, "Devices.json"), devices);
+            string enemy = EnemyMissionList.GetJson();
+            File.WriteAllText(Path.Combine(savePath, "Enemies.json"), enemy);
             foreach (string file in files)
             {
                 Debug.Log(Path.GetFileName(file));
                 File.Copy(file, Path.Combine(saveToTemp, Path.GetFileName(file)));
             }
         }
-        
     }
 
 }

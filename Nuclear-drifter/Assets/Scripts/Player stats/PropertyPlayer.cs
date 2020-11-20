@@ -54,7 +54,6 @@ public class PropertyPlayer : MonoBehaviour
         property.minutes = time.minutes;
 
         property.startPos = move.GetPosPlayer();
-        property.posOutside = move.transform.position;
         property.SaveTemp();
     }
 
@@ -64,5 +63,12 @@ public class PropertyPlayer : MonoBehaviour
         NPCList nPC = FindObjectOfType<NPCList>();
         if (inv != null) SaveAndLoad.SaveTemp(inv);
         if(nPC != null) SaveAndLoad.SaveTemp(nPC);
+    }
+
+    public static string GetJson()
+    {
+        property.SetCurrentState();
+        string json = JsonUtility.ToJson(property);
+        return json;
     }
 }
