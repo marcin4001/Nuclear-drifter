@@ -31,6 +31,12 @@ public class MenuUI : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void LoadBtn()
+    {
+        SaveAndLoad.Load();
+        SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+    }
+
     public void OpenOptions()
     {
         options.OpenOptions();

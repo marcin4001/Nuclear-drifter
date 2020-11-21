@@ -71,4 +71,9 @@ public class PropertyPlayer : MonoBehaviour
         string json = JsonUtility.ToJson(property);
         return json;
     }
+
+    public static void JsonToObj(string json)
+    {
+        JsonUtility.FromJsonOverwrite(json, property);
+    }
 }

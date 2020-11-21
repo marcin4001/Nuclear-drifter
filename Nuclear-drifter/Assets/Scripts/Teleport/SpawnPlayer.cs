@@ -15,6 +15,11 @@ public class SpawnPlayer : MonoBehaviour
         time = FindObjectOfType<DayCycle>();
 
         player.position = PropertyPlayer.property.startPos;
+        Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)player.position, 0.5f);
+        foreach(Collider2D c in col)
+        {
+            if (c.tag == "EnemyTr") Destroy(c.gameObject);
+        }
         playerHP.currentHealth = PropertyPlayer.property.currentHealth;
         playerHP.maxHealth = PropertyPlayer.property.maxHealth;
         playerHP.maxAfterRad = PropertyPlayer.property.maxHealth;

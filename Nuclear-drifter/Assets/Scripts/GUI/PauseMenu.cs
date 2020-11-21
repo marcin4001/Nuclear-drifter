@@ -45,6 +45,12 @@ public class PauseMenu : MonoBehaviour
         SaveAndLoad.HardSave();
     }
 
+    public void LoadBtn()
+    {
+        SaveAndLoad.Load();
+        SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+    }
+
     public void ActivePouseMenu()
     {
         if (activeEsc)

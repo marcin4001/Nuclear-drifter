@@ -35,4 +35,9 @@ public class DeviceList : MonoBehaviour
         string json = JsonUtility.ToJson(global);
         return json;
     }
+
+    public static void JsonToObj(string json)
+    {
+        JsonUtility.FromJsonOverwrite(json, global);
+    }
 }

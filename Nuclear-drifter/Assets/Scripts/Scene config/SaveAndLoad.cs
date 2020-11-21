@@ -115,4 +115,34 @@ public class SaveAndLoad : MonoBehaviour
         }
     }
 
+    public static void Load()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "saveTemp");
+        string savePath = Path.Combine(Application.persistentDataPath, "save");
+        string saveToTemp = Path.Combine(savePath, "saveTemp");
+        if (Directory.Exists(savePath))
+        {
+            string player = File.ReadAllText(Path.Combine(savePath, "Player.json"));
+            PropertyPlayer.JsonToObj(player);
+            string mission = File.ReadAllText(Path.Combine(savePath, "Mission.json"));
+            MissionList.JsonToObj(mission);
+            string devices = File.ReadAllText(Path.Combine(savePath, "Devices.json"));
+            DeviceList.JsonToObj(devices);
+            string enemy = File.ReadAllText(Path.Combine(savePath, "Enemies.json"));
+            EnemyMissionList.JsonToObj(enemy);
+
+            string[] files = Directory.GetFiles(saveToTemp);
+            if (Directory.Exists(path))
+            {
+                Directory.Delete(path, true);
+            }
+            Directory.CreateDirectory(path);
+            foreach (string file in files)
+            {
+                Debug.Log(Path.GetFileName(file));
+                File.Copy(file, Path.Combine(path, Path.GetFileName(file)));
+            }
+        }
+    }
+
 }
