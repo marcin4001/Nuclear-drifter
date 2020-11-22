@@ -36,7 +36,7 @@ public class SaveAndLoad : MonoBehaviour
         File.WriteAllText(savePath, write);
     }
 
-    public static void LoadTemp(InventoryBox inv)
+    public static bool LoadTemp(InventoryBox inv)
     {
         string path = Path.Combine(Application.persistentDataPath, "saveTemp");
         string fileName = SceneManager.GetActiveScene().name + "InvBox.json";
@@ -46,7 +46,10 @@ public class SaveAndLoad : MonoBehaviour
             Debug.Log("Save Exist");
             string read = File.ReadAllText(loadPath);
             JsonUtility.FromJsonOverwrite(read, inv);
+            return true;
         }
+        else
+            return false;
     }
 
     public static void SaveTemp(NPCList listNPC)
@@ -139,7 +142,6 @@ public class SaveAndLoad : MonoBehaviour
             Directory.CreateDirectory(path);
             foreach (string file in files)
             {
-                Debug.Log(Path.GetFileName(file));
                 File.Copy(file, Path.Combine(path, Path.GetFileName(file)));
             }
         }

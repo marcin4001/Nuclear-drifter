@@ -16,6 +16,10 @@ public class MenuUI : MonoBehaviour
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
         options = FindObjectOfType<OptionsMenu>();
         credits = FindObjectOfType<CreditsCanvas>();
+        foreach(Slot slot in startSlots)
+        {
+            slot.SetId();
+        }
     }
 
 

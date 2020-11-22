@@ -75,5 +75,10 @@ public class PropertyPlayer : MonoBehaviour
     public static void JsonToObj(string json)
     {
         JsonUtility.FromJsonOverwrite(json, property);
+        ItemDB dB = FindObjectOfType<ItemDB>();
+        foreach(Slot slot in property.inv)
+        {
+            slot.SetItemElement(dB);
+        }
     }
 }

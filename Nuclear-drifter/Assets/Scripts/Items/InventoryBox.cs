@@ -9,7 +9,27 @@ public class InventoryBox : MonoBehaviour
 
     void Awake()
     {
-        SaveAndLoad.LoadTemp(this);
+        foreach (EqBox box in boxes)
+        {
+            box.SetIDs();
+        }
+        foreach (Slot slot in freeItems)
+        {
+            slot.SetId();
+        }
+        bool isLoad = SaveAndLoad.LoadTemp(this);
+        if (isLoad)
+        {
+            ItemDB dB = FindObjectOfType<ItemDB>();
+            foreach (EqBox box in boxes)
+            {
+                box.SetItemElement(dB);
+            }
+            foreach (Slot slot in freeItems)
+            {
+                slot.SetItemElement(dB);
+            }
+        }
     }
 
     public Slot GetFreeItem(int index)

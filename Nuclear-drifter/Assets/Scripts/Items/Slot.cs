@@ -8,12 +8,13 @@ public class Slot
     public Item itemElement;
     public int amountItem = 0;
     public int ammo = 0;
-
+    public int id = -1;
     public Slot()
     {
         itemElement = null;
         amountItem = 0;
         ammo = 0;
+        id = -1;
     }
 
     public Slot(Item item, int amount, int _ammo)
@@ -21,6 +22,23 @@ public class Slot
         itemElement = item;
         amountItem = amount;
         ammo = _ammo;
+        if (itemElement != null) id = itemElement.idItem;
+        else id = -1;
+    }
+
+    public void SetId()
+    {
+        if (itemElement != null) id = itemElement.idItem;
+        else id = -1;
+    }
+
+    public void SetItemElement(ItemDB dB)
+    {
+        if(itemElement == null && id >= 0)
+        {
+            itemElement = dB.GetItem(id);
+            Debug.Log(id);
+        }
     }
 
     public string GetAmount()
