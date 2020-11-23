@@ -23,14 +23,17 @@ public class DayCycle : MonoBehaviour
 
     public void SetTime(int _day, int _hour, int minutes)
     {
+        Debug.Log(_hour + ":" + minutes);
         typeSc = FindObjectOfType<TypeScene>();
         time = FindObjectOfType<TimeGame>();
         time.day = _day;
-        if (minutes > 30) time.hour = _hour + 1;
-        else time.hour = _hour;
-        if (time.hour > 23) {
-            time.hour = 0;
-            time.day = time.day + 1;
+        time.hour = _hour;
+        time.minutes = minutes;
+        if(time.hour == 19 || time.hour == 4)
+        {
+            if (minutes > 30) time.hour = _hour + 1;
+            else time.hour = _hour;
+            time.minutes = 0;
         }
         if(time.hour > 19 || time.hour < 5)
         {
@@ -44,7 +47,6 @@ public class DayCycle : MonoBehaviour
             if (lightPlayer != null) lightPlayer.enabled = false;
             typeSc.lightNight = false;
         }
-        time.minutes = 0;
     }
 
     public void SetSlowTime()
