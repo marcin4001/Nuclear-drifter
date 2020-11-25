@@ -52,6 +52,7 @@ MonoBehaviour:
     idSort: 3
     exp: 300
     respect: 1
+    idHelp: 0
   - task: Take 10 fish to Bruce in Watown
     ownerName: Steve
     location: Woodhill
@@ -60,6 +61,7 @@ MonoBehaviour:
     idSort: 4
     exp: 250
     respect: 1
+    idHelp: 1
   - task: Pay Steve $10 for the fish
     ownerName: Bruce
     location: Woodhill
@@ -68,6 +70,7 @@ MonoBehaviour:
     idSort: 5
     exp: 150
     respect: 1
+    idHelp: 2
   - task: Bring Noah a bottle of clean water
     ownerName: Noah
     location: Woodhill
@@ -76,6 +79,7 @@ MonoBehaviour:
     idSort: 6
     exp: 150
     respect: 1
+    idHelp: 3
   - task: Repairing the central purifier
     ownerName: Noah
     location: Woodhill
@@ -84,6 +88,7 @@ MonoBehaviour:
     idSort: 7
     exp: 500
     respect: 2
+    idHelp: 4
   - task: Bring the wreath to your husband's grave.
     ownerName: Karen
     location: Watown
@@ -92,6 +97,7 @@ MonoBehaviour:
     idSort: 8
     exp: 300
     respect: 1
+    idHelp: 5
   - task: Bring at least 5 mushroom type B for the doctor.
     ownerName: dr Paul
     location: Watown
@@ -100,6 +106,7 @@ MonoBehaviour:
     idSort: 9
     exp: 400
     respect: 1
+    idHelp: 6
   - task: Heal Dr Paul's patient. (Rad Killer Duo)
     ownerName: dr Paul
     location: Watown
@@ -108,6 +115,7 @@ MonoBehaviour:
     idSort: 10
     exp: 300
     respect: 1
+    idHelp: 7
   - task: Bring the contract to Jaxon in Yorkset.
     ownerName: Joshua
     location: Watown
@@ -116,6 +124,7 @@ MonoBehaviour:
     idSort: 11
     exp: 500
     respect: 2
+    idHelp: 8
   - task: Kill Wolves wild wolves and bring back their meat.
     ownerName: Jason
     location: New Tolham
@@ -124,6 +133,7 @@ MonoBehaviour:
     idSort: 13
     exp: 450
     respect: 1
+    idHelp: 9
   - task: Look for Tyler at the inn.
     ownerName: Mary
     location: New Tolham
@@ -132,6 +142,7 @@ MonoBehaviour:
     idSort: 14
     exp: 150
     respect: 1
+    idHelp: 10
   - task: See if Tyler's back home.
     ownerName: Mary
     location: New Tolham
@@ -140,6 +151,7 @@ MonoBehaviour:
     idSort: 15
     exp: 150
     respect: 1
+    idHelp: 11
   - task: A pack of masks from Moolow Isles
     ownerName: Ashemo
     location: New Tolham
@@ -148,6 +160,7 @@ MonoBehaviour:
     idSort: 16
     exp: 500
     respect: 2
+    idHelp: 12
   - task: 'Bring $500 or Steve''s machete for a passport '
     ownerName: Roy
     location: Yorkset
@@ -156,6 +169,7 @@ MonoBehaviour:
     idSort: 18
     exp: 700
     respect: 2
+    idHelp: 13
   - task: Supply of water from Fred
     ownerName: Jaxon
     location: Yorkset
@@ -164,6 +178,7 @@ MonoBehaviour:
     idSort: 2
     exp: 150
     respect: 0
+    idHelp: 14
   - task: 20 packs of cigarettes for Joshua
     ownerName: Jaxon
     location: Yorkset
@@ -172,6 +187,7 @@ MonoBehaviour:
     idSort: 12
     exp: 500
     respect: 1
+    idHelp: 15
   - task: Get your Old Zealand passport
     ownerName: Rick
     location: Moolow Isles
@@ -180,6 +196,7 @@ MonoBehaviour:
     idSort: 19
     exp: 500
     respect: 2
+    idHelp: 16
   - task: Bring the package to Ashemo
     ownerName: Thomas
     location: Moolow Isles
@@ -188,6 +205,7 @@ MonoBehaviour:
     idSort: 17
     exp: 500
     respect: 1
+    idHelp: 17
   - task: Disarm the bomb on the island.
     ownerName: Larry
     location: Moolow Isles
@@ -196,6 +214,7 @@ MonoBehaviour:
     idSort: 20
     exp: 400
     respect: 2
+    idHelp: 18
   - task: Bring Glen the antidote from the continent.
     ownerName: Glen
     location: Moolow Isles
@@ -204,6 +223,7 @@ MonoBehaviour:
     idSort: 21
     exp: 150
     respect: 1
+    idHelp: 19
   - task: Find Ted alive or dead on the radiation area next to Woodhill
     ownerName: Ian
     location: Moolow Isles
@@ -212,6 +232,7 @@ MonoBehaviour:
     idSort: 22
     exp: 400
     respect: 1
+    idHelp: 20
   - task: Get water for your sheep
     ownerName: Me
     location: Home
@@ -220,3 +241,4 @@ MonoBehaviour:
     idSort: 1
     exp: 1000
     respect: 0
+    idHelp: 21

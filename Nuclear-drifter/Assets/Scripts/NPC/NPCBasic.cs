@@ -24,6 +24,7 @@ public class NPCBasic : MonoBehaviour
     public float distance = 1.1f;
     public Job nPCJob;
     private MissionNPC mission;
+    private bool haveRespect = false;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class NPCBasic : MonoBehaviour
         {
             NPCElement data = listNPC.GetNPC(indexNPC);
             init = data.init;
+            haveRespect = data.haveRespect;
             startIndex = data.startIndex;
             data.npcName = nameNPC;
         }
@@ -90,6 +92,17 @@ public class NPCBasic : MonoBehaviour
     {
         startIndex = index;
         if (listNPC != null) listNPC.SetNPC(indexNPC, init, index);
+    }
+
+    public void SetHaveRespect()
+    {
+        haveRespect = true;
+        if (listNPC != null) listNPC.SetHaveRespect(indexNPC);
+    }
+
+    public bool GetHaveRespect()
+    {
+        return haveRespect;
     }
 
     public bool GetInit()

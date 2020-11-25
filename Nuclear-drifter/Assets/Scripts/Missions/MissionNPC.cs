@@ -10,6 +10,7 @@ public class MissionNPC : MonoBehaviour
     private MissionPrize prize;
     private MissionStart startM;
     private Experience exp;
+    private RespectMission respectM;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class MissionNPC : MonoBehaviour
         prize = GetComponent<MissionPrize>();
         startM = GetComponent<MissionStart>();
         exp = FindObjectOfType<Experience>();
+        respectM = GetComponent<RespectMission>();
     }
 
     public MissionDetails GetMission(int id)
@@ -58,6 +60,7 @@ public class MissionNPC : MonoBehaviour
         {
             prize.GivePrize(id);
         }
+        if (respectM != null) respectM.CheckRespect();
     }
 
     public void CompleteMissionNoCond(int id)
@@ -74,6 +77,7 @@ public class MissionNPC : MonoBehaviour
         {
             prize.GivePrize(id);
         }
+        if (respectM != null) respectM.CheckRespect();
     }
 
     public void CheckMission()
@@ -105,6 +109,7 @@ public class MissionNPC : MonoBehaviour
                 }
             }
         }
+        if (respectM != null) respectM.CheckRespect();
     }
 
     private void ItemMission(MissionDetails m)

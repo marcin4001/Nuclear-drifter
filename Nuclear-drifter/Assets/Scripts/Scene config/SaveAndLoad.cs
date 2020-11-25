@@ -118,7 +118,7 @@ public class SaveAndLoad : MonoBehaviour
         }
     }
 
-    public static void Load()
+    public static bool Load()
     {
         string path = Path.Combine(Application.persistentDataPath, "saveTemp");
         string savePath = Path.Combine(Application.persistentDataPath, "save");
@@ -144,7 +144,9 @@ public class SaveAndLoad : MonoBehaviour
             {
                 File.Copy(file, Path.Combine(path, Path.GetFileName(file)));
             }
+            return true;
         }
+        return false;
     }
 
 }

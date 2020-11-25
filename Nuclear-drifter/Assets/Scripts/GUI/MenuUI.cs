@@ -37,8 +37,8 @@ public class MenuUI : MonoBehaviour
 
     public void LoadBtn()
     {
-        SaveAndLoad.Load();
-        SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+        bool isLoad = SaveAndLoad.Load();
+        if (isLoad) SceneManager.LoadScene(PropertyPlayer.property.currentScene);
     }
 
     public void OpenOptions()

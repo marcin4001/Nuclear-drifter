@@ -8,4 +8,5 @@ public class NPCElement
     public string npcName;
     public bool init = true;
     public int startIndex = 0;
+    public bool haveRespect = false;
 }

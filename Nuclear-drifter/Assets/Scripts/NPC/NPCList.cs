@@ -20,4 +20,9 @@ public class NPCList : MonoBehaviour
         nPCs[index].init = _init;
         nPCs[index].startIndex = _startIndex;
     }
+
+    public void SetHaveRespect(int index)
+    {
+        nPCs[index].haveRespect = true;
+    }
 }
