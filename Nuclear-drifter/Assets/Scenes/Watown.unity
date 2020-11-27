@@ -11490,6 +11490,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 97ba35f8efe78d34594152082df2b113, type: 2}
   - {fileID: 11400000, guid: 3bb0ed173c950fa44b53cfc976925148, type: 2}
   - {fileID: 11400000, guid: 696d9af5b5a6a1949b25ed214da57ff3, type: 2}
+  - {fileID: 11400000, guid: 3a9b45b1d3fcac24e8801bd29f421ece, type: 2}
   startIndex: 0
   indexNPC: 3
   distance: 1.1
@@ -11537,9 +11538,9 @@ MonoBehaviour:
     noRemove: 0
   - id: 22
     type: 0
-    dialogSuccess: 6
-    dialogNormal: 6
-    dialogComplete: 6
+    dialogSuccess: 7
+    dialogNormal: 7
+    dialogComplete: 7
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -12003,6 +12004,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 597928959919313792, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: distance
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 597928959919313794, guid: 3252a18feb4e81243804671a418defda,
         type: 3}
       propertyPath: m_SortingOrder

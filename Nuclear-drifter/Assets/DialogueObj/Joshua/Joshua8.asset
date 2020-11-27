@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Joshua8
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: Why are these uranium deposits so important?
+    reply: These are the last uranium deposits in the world. We must protect it because
+      it is a valuable energy resource. These deposits will help us to rebuild the
+      country one day.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Where is this subway?
+    reply: The subway is located east of the settlement near the cemetery.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Do I need to know anything else about the subway?
+    reply: Before entering the subway, get yourself a rope and a gas mask. This place
+      may be heavily contaminated. You can get the mask from American Army on Moolow
+      Isles.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+  - choice: Goodbye
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

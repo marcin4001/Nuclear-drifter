@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - choice: Do you have anything else to do?
-    reply: As you are a well-known person in Old Zealand, I have an important task
+    reply: "As you are a well-known person in Old Zealand, I have an important task
       for you. The subway is occupied by the Cyclops. You must kill all Cyclops and
-      protect the last uranium deposits. Here is the key to the subway.
+      protect the last uranium deposits.\r The key to the subway is on the table
+      The subway is located east of the settlement near the cemetery."
     nextModule: 0
     missionStart: 1
     startIdMission: 22
