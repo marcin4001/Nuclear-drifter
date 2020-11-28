@@ -170,7 +170,7 @@ public class PlayerClickMove : MonoBehaviour
         
         foreach(RaycastHit2D n in nodes)
         {
-            if(n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest" || n.collider.tag == "NPC" || n.collider.tag == "Device")
+            if(n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest" || n.collider.tag == "NPC" || n.collider.tag == "Device" || n.collider.tag == "Trapdoor")
             {
                 n.collider.SendMessage("Use", SendMessageOptions.DontRequireReceiver);
                 return;
@@ -192,7 +192,7 @@ public class PlayerClickMove : MonoBehaviour
             bool isWall = true;
             foreach (RaycastHit2D n in nodes)
             {
-                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Chest")
+                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Chest" || n.collider.tag == "Trapdoor")
                 {
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     wall = null;
@@ -246,7 +246,8 @@ public class PlayerClickMove : MonoBehaviour
                     nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                     foreach (RaycastHit2D n in nodes)
                     {
-                        if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest") isItems = true;
+                        if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest" || n.collider.tag == "Trapdoor")
+                            isItems = true;
                         if (n.collider.tag == "NPC") isNPC = true;
                         if (n.collider.tag == "Device") isDevice = true;
                     }
