@@ -20,7 +20,7 @@ public class RadTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         health = collision.GetComponentInParent<Health>();
-        if (health != null)
+        if (health != null && !typeSc.combatState)
         {
             playerIsNear = true;
             typeSc.radZone = true;
@@ -33,7 +33,7 @@ public class RadTrigger : MonoBehaviour
     {
         Debug.Log("Stay");
         health = collision.GetComponentInParent<Health>();
-        if (health != null)
+        if (health != null && !typeSc.combatState)
         {
             playerIsNear = true;
             if(!health.isRad)Invoke("SetRad", 2.5f);
@@ -46,7 +46,7 @@ public class RadTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         health = collision.GetComponentInParent<Health>();
-        if (health != null)
+        if (health != null && !typeSc.combatState)
         {
             typeSc.radZone = false;
             playerIsNear = false;
@@ -62,7 +62,7 @@ public class RadTrigger : MonoBehaviour
 
     void Update()
     {
-        if(health != null)
+        if(health != null && !typeSc.combatState)
         {
             if(playerIsNear && health.isRad && !health.isDead())
             {

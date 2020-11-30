@@ -3723,18 +3723,23 @@ MonoBehaviour:
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
 --- !u!4 &221965070
 Transform:
   m_ObjectHideFlags: 0
@@ -5233,36 +5238,47 @@ MonoBehaviour:
   - itemElement: {fileID: 11400000, guid: 8c38b27a32bfdbe4aa9b2868db4a4fe7, type: 2}
     amountItem: 10
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 61ba5a6a015f5974eba63f69f32eee8c, type: 2}
     amountItem: 10
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: c095aacffed462644ba51de3016d5b07, type: 2}
     amountItem: 5
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 7c049909721085248b2fe695b926b58c, type: 2}
     amountItem: 5
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 952aef16d6e8e5d44a43e264aa8c6e73, type: 2}
     amountItem: 10
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: b2dad4eafb847ac418146d77c7c87335, type: 2}
     amountItem: 10
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 9b9a1dffe0fbdf044bb39aabdc4970cb, type: 2}
     amountItem: 10
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 548e6b2614c53cc4b8850ddb82d04cf3, type: 2}
     amountItem: 10
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 35a9db37c2f39e24e861e75312cb8596, type: 2}
     amountItem: 6
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 1787d4aa3c1cadc45b56e5241d551b33, type: 2}
     amountItem: 6
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 4b38b4ca29dc1b1428efec71317c850e, type: 2}
     amountItem: 3
     ammo: 0
+    id: -1
 --- !u!4 &485249317
 Transform:
   m_ObjectHideFlags: 0
@@ -11399,6 +11415,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0
@@ -11412,6 +11429,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0
@@ -11434,6 +11452,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: d6c65ffc3e656c74a8b094814263e5b8, type: 2}
       amountItem: 1
       ammo: 0
+      id: -1
     spawnPos: {x: 28, y: 13}
     prefItem: {fileID: 3053897365620121941, guid: a20dd55d702d2fe4fa80dec102623baa,
       type: 3}
@@ -11666,6 +11685,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 61ba5a6a015f5974eba63f69f32eee8c, type: 2}
       amountItem: 10
       ammo: 0
+      id: -1
     spawnPos: {x: 32, y: 29}
     prefItem: {fileID: 6950010426369201945, guid: c2d1207eb4b785c4f9e5ab17a3cc1c2d,
       type: 3}
@@ -11692,6 +11712,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 5394e89acb804ce46954b0670455f34f, type: 2}
       amountItem: 6
       ammo: 0
+      id: -1
     needItem: 1
     removeAll: 1
     indexDevice: 0
@@ -11813,6 +11834,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0
@@ -11826,6 +11848,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 5aba59239a654924b9dd0e8e592bd2f1, type: 2}
       amountItem: 1
       ammo: 0
+      id: -1
     needItem: 1
     removeAll: 1
     indexDevice: 0
@@ -11848,6 +11871,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
       amountItem: 200
       ammo: 0
+      id: -1
     spawnPos: {x: 11, y: 10}
     prefItem: {fileID: 7123670530575232170, guid: 786492bc87cb25e4aa460537d3c4f211,
       type: 3}

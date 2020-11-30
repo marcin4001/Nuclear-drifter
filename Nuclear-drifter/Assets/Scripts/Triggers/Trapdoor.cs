@@ -16,12 +16,14 @@ public class Trapdoor : MonoBehaviour
 
     private GUIScript gUI;
     private Inventory inv;
+    private PlayerClickMove player;
     // Start is called before the first frame update
     void Start()
     {
         holeTrapdoor = GetComponent<SpriteRenderer>();
         gUI = FindObjectOfType<GUIScript>();
         inv = FindObjectOfType<Inventory>();
+        player = FindObjectOfType<PlayerClickMove>();
         holeTrapdoor.enabled = false;
         upTrapdoor.enabled = false;
     }
@@ -41,12 +43,24 @@ public class Trapdoor : MonoBehaviour
             result.Add("- " + rope.nameItem);
             open = false;
         }
+        if (!inv.FindItemB(gasMask.idItem))
+        {
+            result.Add("- " + gasMask.nameItem);
+            open = false;
+        }
 
         if (open)
         {
-            holeTrapdoor.enabled = true;
-            upTrapdoor.enabled = true;
-            downTrapdoor.enabled = false;
+            if (player.ObjIsNearPlayer(transform.position, 1.1f))
+            {
+                holeTrapdoor.enabled = true;
+                upTrapdoor.enabled = true;
+                downTrapdoor.enabled = false;
+            }
+            else
+            {
+                gUI.AddText("Trapdoor is too far");
+            }
         }
         else
         {
