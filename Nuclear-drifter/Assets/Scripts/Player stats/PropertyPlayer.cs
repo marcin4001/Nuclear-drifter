@@ -24,6 +24,7 @@ public class PropertyPlayer : MonoBehaviour
     public int level = 1;
     public int prevTh = 0;
     public string currentScene;
+    public bool trapdoorOpened = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -55,6 +56,11 @@ public class PropertyPlayer : MonoBehaviour
 
         property.startPos = move.GetPosPlayer();
         property.SaveTemp();
+    }
+
+    public void SetTrapdoorOpened()
+    {
+        trapdoorOpened = true;
     }
 
     public void SaveTemp()

@@ -33,12 +33,12 @@ public class Trapdoor : MonoBehaviour
         bool open = true;
         result = new List<string>();
         result.Add("Items needed to open:");
-        if (!inv.FindItemB(key.idItem))
+        if (!inv.FindItemB(key.idItem) && !PropertyPlayer.property.trapdoorOpened)
         {
             result.Add("- " + key.nameItem);
             open = false;
         }
-        if (!inv.FindItemB(rope.idItem))
+        if (!inv.FindItemB(rope.idItem) && !PropertyPlayer.property.trapdoorOpened)
         {
             result.Add("- " + rope.nameItem);
             open = false;
@@ -53,6 +53,12 @@ public class Trapdoor : MonoBehaviour
         {
             if (player.ObjIsNearPlayer(transform.position, 1.1f))
             {
+                if (!PropertyPlayer.property.trapdoorOpened)
+                {
+                    Slot ropeItem = inv.FindItem(rope.idItem);
+                    inv.RemoveOne(ropeItem);
+                    PropertyPlayer.property.SetTrapdoorOpened();
+                }
                 holeTrapdoor.enabled = true;
                 upTrapdoor.enabled = true;
                 downTrapdoor.enabled = false;
