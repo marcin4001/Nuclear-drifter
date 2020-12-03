@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - choice: Is there anything interesting about this settlement?
-    reply: Watown is the largest settlement in Old Zealand. You will find a food
-      market, Dr. Paul's clinic and a warehouse. Besides, there's nothing interesting
+    reply: Watown is the largest settlement in Old Zealand. You will find a grocery
+      store, Dr. Paul's clinic and a warehouse. Besides, there's nothing interesting
       here.
     nextModule: 0
     missionStart: 0
@@ -23,6 +23,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Who's Watown's Elder?
     reply: The Watown's Elder is Joshua. He founded this settlement with the money
       he got from his father. The settlement was founded when I was still a teenager.
@@ -32,6 +34,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: How old are you, Shepherd?
     reply: I don't remember. But I think I'm 80 or 85. That time flies so fast in
       the wilderness.
@@ -41,6 +45,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: How are your sheep?
     reply: They're fine. They eat grass all day and are still alive. Hahahaha!
     nextModule: 0
@@ -49,6 +55,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -57,3 +65,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

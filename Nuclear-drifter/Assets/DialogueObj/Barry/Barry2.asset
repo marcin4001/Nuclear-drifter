@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Barry2
   m_EditorClassIdentifier: 
   dialogues:
-  - choice: Where is the nearest Food Market?
-    reply: There are two Food Markets in the area. One of them is northwest of here
-      in New Tolham. The other Food Market is northeast of here in Watown.
+  - choice: Where is the nearest Grocery store?
+    reply: There are two Grocery stores in the area. One of them is northwest of
+      here in New Tolham. The other Grocery store is northeast of here in Watown.
     nextModule: 1
     missionStart: 0
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Where is the nearest Gun shop?
     reply: The nearest gun shop is southwest of here in Woodhill.
     nextModule: 1
@@ -30,6 +32,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Where is the nearest Doctor?
     reply: The nearest doctor is Dr.Paul. He lives in Watown. Watown is a settlement
       to the northeast of here.
@@ -39,6 +43,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Thank you! That's all I wanted to know.
     reply: Can I help you with anything else?
     nextModule: 0
@@ -47,3 +53,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
