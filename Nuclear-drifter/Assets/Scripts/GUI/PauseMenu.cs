@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     private GUIScript gUI;
     public bool activeEsc = true;
     private TypeScene typeSc;
+    private OptionsMenu options;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class PauseMenu : MonoBehaviour
         exitMsgCanvas.enabled = false;
         Time.timeScale = 1.0f;
         typeSc = FindObjectOfType<TypeScene>();
+        options = FindObjectOfType<OptionsMenu>();
     }
 
     // Update is called once per frame
@@ -49,6 +51,18 @@ public class PauseMenu : MonoBehaviour
     {
         bool isLoad = SaveAndLoad.Load();
         if(isLoad)SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+    }
+
+    public void OptionBtn()
+    {
+        activeEsc = false;
+        options.OpenOptions();
+    }
+
+    public void CloseOptionMenu()
+    {
+        activeEsc = true;
+        options.CloseOptions();
     }
 
     public void ActivePouseMenu()

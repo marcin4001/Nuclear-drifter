@@ -11,6 +11,8 @@ public class OptionsMenu : MonoBehaviour
     public List<string> resText;
     public int currentResolution = 0;
     public bool fullscreen = true;
+    public Scrollbar musicScroll;
+    public Scrollbar sfxScroll;
     private Resolution[] resolutions;
     private Canvas canvasOpt;
     // Start is called before the first frame update
@@ -38,6 +40,18 @@ public class OptionsMenu : MonoBehaviour
         resDropdown.value = currentResolution;
         resDropdown.RefreshShownValue();
         canvasOpt.enabled = false;
+        musicScroll.value = PlayerPrefs.GetFloat("mainMusic", 1.0f);
+        sfxScroll.value = PlayerPrefs.GetFloat("sfxSound", 1.0f);
+    }
+
+    public void ChangeVolumeMusic()
+    {
+        PlayerPrefs.SetFloat("mainMusic", musicScroll.value);
+    }
+
+    public void ChangeVolumeSFX()
+    {
+        PlayerPrefs.SetFloat("sfxSound", sfxScroll.value);
     }
 
     public void ChangeFullscreen(bool value)
