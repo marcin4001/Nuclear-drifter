@@ -8,9 +8,14 @@ public class FightSound : MonoBehaviour
     public AudioClip[] soundsWeapon;
     private AudioSource source;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         source = GetComponent<AudioSource>();
+    }
+
+    public void SetVolume(float value)
+    {
+        source.volume = value;
     }
 
     public void PlayEnemy(int index)

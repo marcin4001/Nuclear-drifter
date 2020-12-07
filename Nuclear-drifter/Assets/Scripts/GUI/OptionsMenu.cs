@@ -15,6 +15,9 @@ public class OptionsMenu : MonoBehaviour
     public Scrollbar sfxScroll;
     private Resolution[] resolutions;
     private Canvas canvasOpt;
+    private MusicController music;
+    private SoundsTrigger sfxSound;
+    private FightSound fightSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,16 +45,32 @@ public class OptionsMenu : MonoBehaviour
         canvasOpt.enabled = false;
         musicScroll.value = PlayerPrefs.GetFloat("mainMusic", 1.0f);
         sfxScroll.value = PlayerPrefs.GetFloat("sfxSound", 1.0f);
+
+        music = FindObjectOfType<MusicController>();
+        if (music != null)
+            music.SetVolume(musicScroll.value);
+        sfxSound = FindObjectOfType<SoundsTrigger>();
+        if (sfxSound != null)
+            sfxSound.SetVolume(sfxScroll.value);
+        fightSound = FindObjectOfType<FightSound>();
+        if (fightSound != null)
+            fightSound.SetVolume(sfxScroll.value);
     }
 
     public void ChangeVolumeMusic()
     {
         PlayerPrefs.SetFloat("mainMusic", musicScroll.value);
+        if (music != null)
+            music.SetVolume(musicScroll.value);
     }
 
     public void ChangeVolumeSFX()
     {
         PlayerPrefs.SetFloat("sfxSound", sfxScroll.value);
+        if (sfxSound != null)
+            sfxSound.SetVolume(sfxScroll.value);
+        if (fightSound != null)
+            fightSound.SetVolume(sfxScroll.value);
     }
 
     public void ChangeFullscreen(bool value)

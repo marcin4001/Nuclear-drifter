@@ -13,10 +13,15 @@ public class SoundsTrigger : MonoBehaviour
     private AudioSource sr;
    
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         sr = GetComponent<AudioSource>();
         sr.loop = true;
+    }
+
+    public void SetVolume(float value)
+    {
+        sr.volume = value;
     }
 
     public void Mute(bool value)
