@@ -16,20 +16,21 @@ public class Experience : MonoBehaviour
         level = PropertyPlayer.property.level;
         prevTh = PropertyPlayer.property.prevTh;
         gUI = FindObjectOfType<GUIScript>();
-        gUI.ShowExp(level, currentExp, (level * constExp + prevTh));
+        gUI.ShowExp(level, currentExp, (25 * (5 * (level + 1) + 4) * level));
     }
 
     public void AddExp(int exp)
     {
         if (exp > 0) gUI.AddText("You got " + exp + " exp");
         currentExp = currentExp + exp;
-        while(currentExp >= level * constExp + prevTh)
+        while(currentExp >= 25 * (5 * (level + 1) + 4) * level)
         {
-            prevTh = level * constExp + prevTh;
+            prevTh = 25 * (5 * (level + 1) + 4) * level;
             level = level + 1;
+            gUI.ShowNextLvl();
         }
         UpdateProperty();
-        gUI.ShowExp(level, currentExp, (level * constExp + prevTh));
+        gUI.ShowExp(level, currentExp, (25 * (5 * (level + 1) + 4) * level));
     }
 
     private void UpdateProperty()

@@ -29,6 +29,7 @@ public class GUIScript : MonoBehaviour
     public Button missionBtn;
     public Button mapBtn;
     public GameObject optBtnPanel;
+    public Image newLvlLabel;
     private GraphicRaycaster raycaster;
     private EventSystem system;
     private PointerEventData data;
@@ -46,6 +47,8 @@ public class GUIScript : MonoBehaviour
         system = FindObjectOfType<EventSystem>();
         typeScene = FindObjectOfType<TypeScene>();
         pause = FindObjectOfType<PauseMenu>();
+        if (newLvlLabel != null)
+            newLvlLabel.enabled = false;
     }
 
     public void ShowExp(int lvl, int exp, int nextTh)
@@ -75,6 +78,17 @@ public class GUIScript : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
         raycaster.Raycast(data, results);
         return results.Exists(s => s.gameObject.tag == "Slot");
+    }
+
+    public void ShowNextLvl()
+    {
+        if (newLvlLabel != null)
+            newLvlLabel.enabled = true;
+    }
+
+    public void CloseNextLvl()
+    {
+        newLvlLabel.enabled = false;
     }
 
     public void AddText(string _text)
