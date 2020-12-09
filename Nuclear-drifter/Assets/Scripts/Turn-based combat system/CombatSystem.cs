@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CombatSystem : MonoBehaviour
 {
-    public Transform camBattlepos;
+    public Camera camMain;
+    public Camera camBattle;
     public Canvas battleCanvas;
     private TypeScene typeSc;
     private PlayerClickMove player;
@@ -56,6 +57,7 @@ public class CombatSystem : MonoBehaviour
         enemysObjs = new List<GameObject>();
         enemies = new List<Enemy>();
         BlockPlayer(false);
+        camBattle.enabled = false;
     }
 
 
@@ -359,10 +361,10 @@ public class CombatSystem : MonoBehaviour
 
     public void StartFight(EnemyTrigger trigger)
     {
-        if (map.GetActive()) map.OpenMap();
-        currentCamPos = camBattlepos.position;
-        camBattlepos.position = transform.position;
         player.SetStop(true);
+        if (map.GetActive()) map.OpenMap();
+        camMain.enabled = false;
+        camBattle.enabled = true;
         typeSc.combatState = true;
         enemyTr = trigger;
         battleCanvas.enabled = true;
@@ -420,7 +422,8 @@ public class CombatSystem : MonoBehaviour
         ClearWeapon();
         experience.AddExp(sumExp);
         sumExp = 0;
-        camBattlepos.position = currentCamPos;
+        camMain.enabled = true;
+        camBattle.enabled = false;
         player.SetLocalPosCamera();
         typeSc.combatState = false;
         battleCanvas.enabled = false;

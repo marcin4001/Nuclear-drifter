@@ -53,6 +53,7 @@ public class PlayerClickMove : MonoBehaviour
     public Camera mainCam;
     private Vector3 localPosCam;
     private GameObject sqrLoc;
+    private CombatSystem combat;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,7 +73,7 @@ public class PlayerClickMove : MonoBehaviour
         }
         mainCam = GetComponentInChildren<Camera>();
         localPosCam = mainCam.transform.localPosition;
-        
+        combat = FindObjectOfType<CombatSystem>();
     }
 
     public void RoundPosPlayer()
@@ -271,7 +272,7 @@ public class PlayerClickMove : MonoBehaviour
             }
             else
             {
-                mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mousePos = (Vector2)combat.camBattle.ScreenToWorldPoint(Input.mousePosition);
                 nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                 bool isEnemy = false;
                 if (nodes.Length == 0) isEnemy = false;

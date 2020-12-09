@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
+    x: -5
+    y: 81
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 663}
+  m_MinSize: {x: 875, y: 642}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 663}
+  m_MinSize: {x: 875, y: 642}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 608, y: 613}
-  m_MaxSize: {x: 18003, y: 18063}
+  m_MinSize: {x: 608, y: 592}
+  m_MaxSize: {x: 18003, y: 18042}
   vertical: 0
-  controlID: 4566
+  controlID: 11676
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 1314
     height: 947
-  m_MinSize: {x: 333, y: 613}
-  m_MaxSize: {x: 14003, y: 18063}
+  m_MinSize: {x: 333, y: 592}
+  m_MaxSize: {x: 14003, y: 18042}
   vertical: 1
-  controlID: 4642
+  controlID: 11677
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,10 +169,10 @@ MonoBehaviour:
     y: 0
     width: 1314
     height: 652
-  m_MinSize: {x: 333, y: 492}
-  m_MaxSize: {x: 14003, y: 14042}
+  m_MinSize: {x: 333, y: 471}
+  m_MaxSize: {x: 14003, y: 14021}
   vertical: 0
-  controlID: 4643
+  controlID: 11632
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,10 +194,10 @@ MonoBehaviour:
     y: 0
     width: 507
     height: 652
-  m_MinSize: {x: 231, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 231, y: 471}
+  m_MaxSize: {x: 10001, y: 14021}
   vertical: 1
-  controlID: 4524
+  controlID: 11633
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -445,16 +445,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 73
+    y: 19
     width: 506
     height: 324
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 20fbffff
-      m_LastClickedID: -1248
-      m_ExpandedIDs: 1a59feff045efeff1c5efefff85efeffa868feff4072feffee7bfeffa685feff628ffeffce98feff3899feffb69afeff20fbffff467f0800308208004a860800
+      m_SelectedIDs: d670ffff
+      m_LastClickedID: -36650
+      m_ExpandedIDs: 9a70ffffa270ffffb870ffffd470ffffd670ffff84ddffff94ddffffdcddffffbadeffff20fbfffffc3c0000603d00002444000060470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -500,12 +500,12 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 418
+    y: 364
     width: 506
     height: 286
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: menu
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -517,21 +517,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Texture
+    - Assets/Scripts/Turn-based combat system
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 74
   m_LastFolders:
-  - Assets/Texture
+  - Assets/Scripts/Turn-based combat system
   m_LastFoldersGridSize: 74
   m_LastProjectPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 1082}
-    m_SelectedIDs: b0620000
-    m_LastClickedID: 25264
-    m_ExpandedIDs: 00000000fe610000006200000262000004620000066200000862000000ca9a3b
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 000000000c6200000e6200001062000012620000146200001662000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,7 +559,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fe610000006200000262000004620000066200000862000000ca9a3b
+    m_ExpandedIDs: 000000000c6200000e6200001062000012620000146200001662000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -611,7 +611,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 2007}
+    m_ScrollPosition: {x: 0, y: 297}
     m_GridSize: 74
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 110
@@ -636,8 +636,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 507
-    y: 73
+    x: 508
+    y: 19
     width: 805
     height: 631
   m_ViewDataDictionary: {fileID: 0}
@@ -652,9 +652,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 260.53537, y: 775.4443, z: -1118.651}
+    m_Target: {x: 540.819, y: 398.09186, z: -3073.8604}
     speed: 2
-    m_Value: {x: 268.04984, y: 775.1015, z: -1118.0099}
+    m_Value: {x: 540.819, y: 398.09186, z: -3073.8604}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -705,9 +705,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 170.10547
+    m_Target: 407.31442
     speed: 2
-    m_Value: 178.12091
+    m_Value: 407.31442
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -885,8 +885,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 725
+    x: -5
+    y: 763
     width: 1313
     height: 274
   m_ViewDataDictionary: {fileID: 0}
@@ -918,7 +918,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -108262
+  m_LastSelectedObjectID: 15612
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -940,8 +940,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1314
-    y: 73
+    x: 1315
+    y: 19
     width: 605
     height: 926
   m_ViewDataDictionary: {fileID: 0}
@@ -1552,7 +1552,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2020-12-08T22:23:52.063+01:00
+      updatedTimeString: 2020-12-09T22:11:36.017+01:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1566,7 +1566,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 0001-01-01T00:00:00.000+00:00
+        updatedTimeString: 2020-12-09T22:53:09.346+01:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000
