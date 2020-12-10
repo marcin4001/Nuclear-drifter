@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogues:
   - choice: Okay, I can go there and bring the package.
     reply: Okay. Moolow Isles is north of here. Find a guy on the island named Thomas.
-      I ordered masks from him. Just take care of yourself. There's a radiation area
+      I ordered masks from him. You take care of yourself. There's a radiation area
       on the way to the island.
     nextModule: 0
     missionStart: 1
@@ -26,7 +26,7 @@ MonoBehaviour:
     isWorker: 1
     workOpt: 8
   - choice: I can't do it. This island is too far away.
-    reply: Okay. Maybe the package will be delivered one day.
+    reply: Okay. Maybe someone else will bring this package.
     nextModule: 0
     missionStart: 0
     startIdMission: 0

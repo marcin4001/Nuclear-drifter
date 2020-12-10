@@ -15,13 +15,15 @@ MonoBehaviour:
   dialogues:
   - choice: I took the wreath to the cemetery. Here is an old wreath.
     reply: Thank you very much for that. I will never forget what you did for me.
-      Here's your $ 20 a favor.
+      Here's your $20 a favor.
     nextModule: 0
     missionStart: 0
     startIdMission: 0
     missionEnd: 1
     endIdMission: 5
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: What are you doing here?
     reply: I am a widow. I have lived in Watown since I was born. My husband died
       from radiation sickness 2 years ago. I earn my living sewing clothes.
@@ -31,6 +33,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Take care!
     reply: 
     nextModule: -1
@@ -39,3 +43,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

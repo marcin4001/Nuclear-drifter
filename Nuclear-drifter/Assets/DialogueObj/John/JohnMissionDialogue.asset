@@ -22,10 +22,16 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: "\rI don't have time for this right now"
-    reply: "\rWell. You come when you have time."
+    reply: "\rWell. Come when you have time."
     nextModule: 0
     missionStart: 0
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
