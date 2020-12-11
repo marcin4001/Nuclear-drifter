@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - choice: "\rI fixed the Central Purifier."
-    reply: Great. Thanks to you, we will finally have clean water. Here's $ 50 for
+    reply: Great. Thanks to you, we will finally have clean water. Here's $50 for
       what you did for us, brother.
     nextModule: 0
     missionStart: 0
@@ -22,6 +22,8 @@ MonoBehaviour:
     missionEnd: 1
     endIdMission: 4
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: How do you feel now?
     reply: I'm better now. My stomach doesn't hurt anymore.
     nextModule: 0
@@ -30,6 +32,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Bye
     reply: 
     nextModule: -1
@@ -38,3 +42,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

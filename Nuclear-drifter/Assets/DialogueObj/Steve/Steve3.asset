@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Steve3
   m_EditorClassIdentifier: 
   dialogues:
-  - choice: Bruce paid me $ 10 for the fish.
+  - choice: Bruce paid me $10 for the fish.
     reply: Great job. You are an honest man.The people of the settlement will hear
       only good things about you
     nextModule: 0
@@ -21,6 +21,9 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 1
     endIdMission: 2
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Who you are?
     reply: I'm Steve. I am engaged in fishing and delivering fish to other settlements
     nextModule: 0
@@ -28,6 +31,9 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -35,3 +41,6 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

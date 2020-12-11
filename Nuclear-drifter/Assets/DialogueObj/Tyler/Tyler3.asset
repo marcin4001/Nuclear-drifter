@@ -21,14 +21,18 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: "\rGo home and don't piss me off!"
-    reply: "\rI'm not staying here! Get outta here."
+    reply: No, I'll stay here! Get outta here.
     nextModule: 0
     missionStart: 0
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Come home or I'll hit you.
     reply: "\rOk! Ok! I don't want to fight! I'm coming home already!"
     nextModule: 0
@@ -37,3 +41,5 @@ MonoBehaviour:
     missionEnd: 1
     endIdMission: 10
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
