@@ -3998,6 +3998,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134872636017924015, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872636017924015, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872637428523723, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872637428523723, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
 --- !u!1 &224294610
@@ -6813,12 +6833,15 @@ MonoBehaviour:
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
 --- !u!4 &1212953893
 Transform:
   m_ObjectHideFlags: 0
@@ -7449,39 +7472,51 @@ MonoBehaviour:
   - itemElement: {fileID: 11400000, guid: a7d039bdb71f64f46a04822948772004, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: 2bf278af5b5a9a6459e05f19b221987b, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: 76eeae42fa06d524b999128e997522e8, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: c322fe7f821885543886723b2dea70d4, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: 3b9a1657590fb8d4aba76c7d1e74042f, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: aa9378ba9fb7acd49a693eff56b509ef, type: 2}
     amountItem: 10
     ammo: 1
+    id: -1
   - itemElement: {fileID: 11400000, guid: 36b41837f529c674185eb5bca87193ec, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: a879cceac246f9e45b791858507231d7, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 793329d1ae9d65441b5277fab0cc8940, type: 2}
     amountItem: 5
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 5ccbf484dff9c6045abd38e2667593c1, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: a0c23b71407359744badf18729cc122a, type: 2}
     amountItem: 2
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: c7478fab6ed52a54d8d82a5f38303ae1, type: 2}
     amountItem: 2
     ammo: 0
+    id: -1
 --- !u!4 &1356975660
 Transform:
   m_ObjectHideFlags: 0
@@ -10894,6 +10929,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0
@@ -10942,6 +10978,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     spawnPos: {x: 0, y: 0}
     prefItem: {fileID: 0}
     chest: {fileID: 912686856}
@@ -10961,10 +10998,12 @@ MonoBehaviour:
     itemElement: {fileID: 11400000, guid: 439449e0446c2e345a8222517778c485, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   currency:
     itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   moduleStart: 0
 --- !u!61 &332471126075985368
 BoxCollider2D:
@@ -11048,6 +11087,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     spawnPos: {x: 0, y: 0}
     prefItem: {fileID: 0}
     chest: {fileID: 803278038}
@@ -11073,6 +11113,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 5c1cdcd2a5429ee4ab5726f7024dd584, type: 2}
       amountItem: 1
       ammo: 0
+      id: -1
     needItem: 1
     removeAll: 0
     indexDevice: 0
@@ -11764,7 +11805,7 @@ MonoBehaviour:
   nameNPC: Gordon
   job: Colonel
   city: Moolow Isles
-  firstReply: Welcome a stranger to my office. I am Col. Gordon. I command the soldiers
+  firstReply: Welcome stranger to my office. I am Col. Gordon. I command the soldiers
     on this island. How can I help you?
   cbReply: Hello again. What do you want from me this time?
   modules:

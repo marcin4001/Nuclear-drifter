@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - choice: Is there something wrong with you? Do you need something?
-    reply: Bring me some clean water. Ugh! This dirty water makes me feel bad. Ugh!
+    reply: Bring me some clean water. Agh! This dirty water makes me feel bad. Ugh!
       When you bring it to me then we'll talk.
     nextModule: 0
     missionStart: 1
@@ -22,6 +22,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Bye
     reply: 
     nextModule: -1
@@ -30,3 +32,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

@@ -3608,6 +3608,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134872636017924015, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872636017924015, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872637428523723, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872637428523723, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
 --- !u!1001 &207138775
@@ -6320,15 +6340,19 @@ MonoBehaviour:
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
 --- !u!4 &1191372724
 Transform:
   m_ObjectHideFlags: 0
@@ -10462,7 +10486,7 @@ MonoBehaviour:
   nameNPC: Roy
   job: Passport officer
   city: Yorkset
-  firstReply: Welcome to the Passport office. My name is for Roy. I am issuing passports
+  firstReply: Welcome to the Passport office. My name is Roy. I am issuing passports
     in Old Zealand. How can I help you?
   cbReply: "\rWelcome back to my office. How can I help you now?"
   modules:
@@ -10497,6 +10521,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: c3b8e7c76d208c444a0d727c21de4c87, type: 2}
       amountItem: 1
       ammo: 0
+      id: -1
     needItem: 1
     removeAll: 0
     indexDevice: 0
@@ -10519,6 +10544,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     spawnPos: {x: 0, y: 0}
     prefItem: {fileID: 0}
     chest: {fileID: 1549910994}
@@ -10645,16 +10671,20 @@ MonoBehaviour:
   - itemElement: {fileID: 11400000, guid: 4b38b4ca29dc1b1428efec71317c850e, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 3cbf4ca6fcdbff245a8c3c1d1ba08140, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 5c1cdcd2a5429ee4ab5726f7024dd584, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   currency:
     itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
 --- !u!61 &403415854481891001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10967,10 +10997,12 @@ MonoBehaviour:
   - itemElement: {fileID: 11400000, guid: 04321e29875881347bcb1d463cd7bbdb, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   currency:
     itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
 --- !u!114 &1963344502551061848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11014,6 +11046,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: ccdf4ae659ad6b64fa522bc150614846, type: 2}
       amountItem: 1
       ammo: 0
+      id: -1
     spawnPos: {x: 26, y: 10}
     prefItem: {fileID: 5939853908576559589, guid: 79cb92972f3a869449c6c9155e180ed2,
       type: 3}
@@ -11040,6 +11073,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0
@@ -11311,6 +11345,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 793329d1ae9d65441b5277fab0cc8940, type: 2}
       amountItem: 20
       ammo: 0
+      id: -1
     spawnPos: {x: 8, y: 10}
     prefItem: {fileID: 4179958248851052756, guid: 735ea9f0b462b674fbd14964caad14a8,
       type: 3}
@@ -11337,6 +11372,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: dadb200220626a84eb633fc6dd6a15d8, type: 2}
       amountItem: 1
       ammo: 0
+      id: -1
     needItem: 1
     removeAll: 1
     indexDevice: 0
@@ -11350,6 +11386,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0

@@ -3630,6 +3630,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134872636017924015, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872636017924015, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872637428523723, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872637428523723, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
 --- !u!1 &224294610
@@ -11731,7 +11751,7 @@ MonoBehaviour:
   nameNPC: dr Paul
   job: Doctor
   city: Watown
-  firstReply: Welcome a stranger to my clinic. I'm Dr. Paul.
+  firstReply: Welcome stranger to my clinic. I'm Dr. Paul.
   cbReply: Welcome back, stranger.
   modules:
   - {fileID: 11400000, guid: c278f2ad297591b4785e55eee57c52b5, type: 2}

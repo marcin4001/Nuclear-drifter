@@ -4093,6 +4093,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134872636017924015, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872636017924015, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872637428523723, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134872637428523723, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
 --- !u!1 &224294610
@@ -5458,12 +5478,15 @@ MonoBehaviour:
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
   - npcName: 
     init: 1
     startIndex: 0
+    haveRespect: 0
 --- !u!4 &541945119
 Transform:
   m_ObjectHideFlags: 0
@@ -6072,24 +6095,31 @@ MonoBehaviour:
   - itemElement: {fileID: 11400000, guid: a7d039bdb71f64f46a04822948772004, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: 2bf278af5b5a9a6459e05f19b221987b, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: 76eeae42fa06d524b999128e997522e8, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: c322fe7f821885543886723b2dea70d4, type: 2}
     amountItem: 1
     ammo: 10
+    id: -1
   - itemElement: {fileID: 11400000, guid: aa9378ba9fb7acd49a693eff56b509ef, type: 2}
     amountItem: 10
     ammo: 1
+    id: -1
   - itemElement: {fileID: 11400000, guid: 36b41837f529c674185eb5bca87193ec, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   - itemElement: {fileID: 11400000, guid: 78ddf49d435464749ae064d35d8c6947, type: 2}
     amountItem: 2
     ammo: 0
+    id: -1
 --- !u!4 &876790106
 Transform:
   m_ObjectHideFlags: 0
@@ -11410,6 +11440,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0
@@ -11423,6 +11454,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
       amountItem: 10
       ammo: 0
+      id: -1
     needItem: 1
     removeAll: 0
     indexDevice: 0
@@ -11442,6 +11474,7 @@ MonoBehaviour:
   inits:
   - id: 1
     box: {fileID: 1405085232}
+  missionItems: []
 --- !u!114 &1455124840630142188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11649,6 +11682,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 04321e29875881347bcb1d463cd7bbdb, type: 2}
       amountItem: 1
       ammo: 0
+      id: -1
     needItem: 1
     removeAll: 0
     indexDevice: 0
@@ -11662,6 +11696,7 @@ MonoBehaviour:
       itemElement: {fileID: 0}
       amountItem: 0
       ammo: 0
+      id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0
@@ -11681,7 +11716,7 @@ MonoBehaviour:
   nameNPC: Noah
   job: Settler
   city: Woodhill
-  firstReply: Hi! Ugh! What are you looking for here?
+  firstReply: Hi! Agh! What are you looking for here?
   cbReply: What do you want again?
   modules:
   - {fileID: 11400000, guid: 57e4419ca7e319b4ab89cffa50394a11, type: 2}
@@ -11712,6 +11747,7 @@ MonoBehaviour:
       itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
       amountItem: 50
       ammo: 0
+      id: -1
     spawnPos: {x: 27, y: 11}
     prefItem: {fileID: 7123670530575232170, guid: 786492bc87cb25e4aa460537d3c4f211,
       type: 3}
