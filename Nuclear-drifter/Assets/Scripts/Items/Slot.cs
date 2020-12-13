@@ -37,7 +37,15 @@ public class Slot
         if(itemElement == null && id >= 0)
         {
             itemElement = dB.GetItem(id);
-            Debug.Log(id);
+            //Debug.Log(id);
+        }
+        if(itemElement != null && id >= 0)
+        {
+            if(itemElement.idItem != id)
+            {
+                itemElement = dB.GetItem(id);
+                Debug.Log("Error");
+            }
         }
     }
 
