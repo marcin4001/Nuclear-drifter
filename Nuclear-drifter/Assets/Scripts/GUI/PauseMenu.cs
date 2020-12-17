@@ -45,12 +45,16 @@ public class PauseMenu : MonoBehaviour
         SaveAndLoad.SaveTemp(inv);
         SaveAndLoad.SaveTemp(npc);
         SaveAndLoad.HardSave();
+        gUI.AddText("The game has been saved!");
     }
 
     public void LoadBtn()
     {
         bool isLoad = SaveAndLoad.Load();
-        if(isLoad)SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+        if (isLoad)
+            SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+        else
+            gUI.AddText("Save doesn't exist!");
     }
 
     public void OptionBtn()

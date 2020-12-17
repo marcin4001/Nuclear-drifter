@@ -23,6 +23,7 @@ public class PropertyPlayer : MonoBehaviour
     public int currentExp = 0;
     public int level = 1;
     public int prevTh = 0;
+    public int lvlPoint = 0;
     public string currentScene;
     public bool trapdoorOpened = false;
 
