@@ -21,8 +21,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 609, y: 613}
-  m_MaxSize: {x: 18004, y: 18063}
+  m_MinSize: {x: 608, y: 592}
+  m_MaxSize: {x: 18003, y: 18042}
   vertical: 0
   controlID: -1
 --- !u!114 &2
@@ -136,8 +136,8 @@ MonoBehaviour:
     y: 0
     width: 1314
     height: 947
-  m_MinSize: {x: 333, y: 613}
-  m_MaxSize: {x: 14003, y: 18063}
+  m_MinSize: {x: 333, y: 592}
+  m_MaxSize: {x: 14003, y: 18042}
   vertical: 1
   controlID: -1
 --- !u!114 &4
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 1435
+  controlID: 29944
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,8 +209,8 @@ MonoBehaviour:
     y: 0
     width: 507
     height: 341
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -244,10 +244,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 08ebffff26ebffff94ebffff5efbffff
+      scrollPos: {x: 0, y: 5596}
+      m_SelectedIDs: d4d1ffff
+      m_LastClickedID: -11820
+      m_ExpandedIDs: c6cbffff90d1ffffd4d1ffff6ad3ffff1cd4ffff6edaffffdcdaffff06dbffff16dbffff1cdbffff28dbffff38dbffff40dbffff44dbffff4adbffff4edbffff52dbffff5adbffff80dbffffc6f8ffff5efbfffffe53000018540000f6580000e65a0000205e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -324,7 +324,7 @@ MonoBehaviour:
     height: 398
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: WATO
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -335,7 +335,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Texture
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 74
@@ -346,10 +347,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 970}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be500000c0500000c2500000c4500000c6500000c850000000ca9a3b
+    scrollPos: {x: 0, y: 934}
+    m_SelectedIDs: 46460000
+    m_LastClickedID: 17990
+    m_ExpandedIDs: 000000008e450000904500009245000094450000964500009845000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be500000c0500000c2500000c4500000c6500000c850000000ca9a3b
+    m_ExpandedIDs: 000000008e450000904500009245000094450000964500009845000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -402,10 +403,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: d4d1ffff
+    m_LastClickedInstanceID: -11820
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000145200005af8000068a8000042ccffff6a4a000000cf0300a4a80000624c000094a100002e570000045f0000000000003c440000da9800004e4e0000
+    m_ExpandedInstanceIDs: c6230000145200005af8000068a8000042ccffff6a4a000000cf0300a4a80000624c000094a100002e570000045f0000000000003c440000da9800004e4e00004c3f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -429,7 +430,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 395}
     m_GridSize: 74
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 110
@@ -498,9 +499,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 49.71164, y: 30.415741, z: -11.698839}
+    m_Target: {x: 742.18085, y: 465.93857, z: -664.1648}
     speed: 2
-    m_Value: {x: 49.71164, y: 30.415741, z: -11.698839}
+    m_Value: {x: 742.18085, y: 465.93857, z: -664.1648}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -551,9 +552,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.356628
+    m_Target: 364.23505
     speed: 2
-    m_Value: 4.356628
+    m_Value: 364.23505
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -693,10 +694,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 3838929407015d543a395839c923187e,
+  m_AnimatorController: {fileID: 9100000, guid: 3362342aeb7b7874ca86f841ba90c753,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 6514998344251104877, guid: 3838929407015d543a395839c923187e,
+  - m_Target: {fileID: 4696835503298752401, guid: 3362342aeb7b7874ca86f841ba90c753,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -729,8 +730,8 @@ MonoBehaviour:
     y: 760
     width: 1314
     height: 187
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -791,7 +792,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -48032
+  m_LastSelectedObjectID: 22240
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -811,8 +812,8 @@ MonoBehaviour:
     y: 0
     width: 606
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -1453,7 +1454,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2020-12-19T18:36:31.385+01:00
+      updatedTimeString: 2020-12-27T18:35:34.509+01:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1467,7 +1468,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 0001-01-01T00:00:00.000+00:00
+        updatedTimeString: 2020-12-27T18:42:06.916+01:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000
