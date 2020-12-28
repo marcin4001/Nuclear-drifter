@@ -28,6 +28,7 @@ public class GUIScript : MonoBehaviour
     public Button pauseBtn;
     public Button missionBtn;
     public Button mapBtn;
+    public Button perksBtn;
     public GameObject optBtnPanel;
     public Image newLvlLabel;
     private GraphicRaycaster raycaster;
@@ -123,6 +124,7 @@ public class GUIScript : MonoBehaviour
     {
         pauseBtn.enabled = value;
         missionBtn.enabled = value;
+        perksBtn.enabled = value;
     }
 
     public void DeactiveBtn(bool value)
@@ -130,6 +132,7 @@ public class GUIScript : MonoBehaviour
         pauseBtn.enabled = value;
         missionBtn.enabled = value;
         mapBtn.enabled = value;
+        perksBtn.enabled = value;
         pause.activeEsc = value;
     }
     // Update is called once per frame

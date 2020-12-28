@@ -90,6 +90,7 @@ public class PauseMenu : MonoBehaviour
                 //typeSc.inMenu = false;
             }
             typeSc.inMenu = activeMenu;
+            gUI.perksBtn.enabled = !activeMenu;
         }
     }
 
