@@ -7096,6 +7096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad87b08d4676b5409bb96166e25d1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consoleDesc: {fileID: 1376092358}
+  currentPerk: {fileID: 0}
 --- !u!1 &893134447
 GameObject:
   m_ObjectHideFlags: 0
@@ -7323,6 +7325,7 @@ GameObject:
   - component: {fileID: 931460728}
   - component: {fileID: 931460727}
   - component: {fileID: 931460726}
+  - component: {fileID: 8714730394420410487}
   m_Layer: 0
   m_Name: perkBtnMain (3)
   m_TagString: Untagged
@@ -7431,7 +7434,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 931460727}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8714730394420410487}
+        m_TargetAssemblyTypeName: PerkElement, Assembly-CSharp
+        m_MethodName: ClickBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8714730394420410487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931460724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251a180a317e7114bb52053e96ea575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lamp: {fileID: 780042393}
+  levelCounter: {fileID: 0}
+  namePerk: Large Gun
+  description: A player with this skill can use large pistols - Ak 47 and shotgun.
+  indexPerk: 3
+  cost: 2
 --- !u!1 &935220569
 GameObject:
   m_ObjectHideFlags: 0
@@ -10296,6 +10329,7 @@ GameObject:
   - component: {fileID: 1180853054}
   - component: {fileID: 1180853053}
   - component: {fileID: 1180853052}
+  - component: {fileID: 6843181832395526914}
   m_Layer: 0
   m_Name: perkBtnMain (4)
   m_TagString: Untagged
@@ -10404,7 +10438,38 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1180853053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6843181832395526914}
+        m_TargetAssemblyTypeName: PerkElement, Assembly-CSharp
+        m_MethodName: ClickBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6843181832395526914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180853050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251a180a317e7114bb52053e96ea575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lamp: {fileID: 978745032}
+  levelCounter: {fileID: 0}
+  namePerk: Rad Resistance
+  description: This perk adds resistance to radiation. Contaminated food and enemies
+    will not give the effect of radiation. You can stay longer in an irradiated area.
+  indexPerk: 4
+  cost: 2
 --- !u!1 &1219990514
 GameObject:
   m_ObjectHideFlags: 0
@@ -11686,6 +11751,7 @@ GameObject:
   - component: {fileID: 1364435166}
   - component: {fileID: 1364435165}
   - component: {fileID: 1364435164}
+  - component: {fileID: 875994010}
   m_Layer: 0
   m_Name: perkBtnMain
   m_TagString: Untagged
@@ -11795,7 +11861,38 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1364435165}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 875994010}
+        m_TargetAssemblyTypeName: PerkElement, Assembly-CSharp
+        m_MethodName: ClickBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &875994010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364435162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251a180a317e7114bb52053e96ea575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lamp: {fileID: 1934967482}
+  levelCounter: {fileID: 689519878}
+  namePerk: Extra HP
+  description: Then profit gives you an additional 10 health points. Immediately
+    after adding a perk, your character will be completely healed.
+  indexPerk: 0
+  cost: 1
 --- !u!1 &1365708855
 GameObject:
   m_ObjectHideFlags: 0
@@ -11961,7 +12058,7 @@ GameObject:
   - component: {fileID: 1376092359}
   - component: {fileID: 1376092358}
   m_Layer: 0
-  m_Name: Text
+  m_Name: ConsoleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12545,6 +12642,7 @@ GameObject:
   - component: {fileID: 1425548319}
   - component: {fileID: 1425548318}
   - component: {fileID: 1425548317}
+  - component: {fileID: 7338180813103502151}
   m_Layer: 0
   m_Name: perkBtnMain (2)
   m_TagString: Untagged
@@ -12654,7 +12752,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1425548318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7338180813103502151}
+        m_TargetAssemblyTypeName: PerkElement, Assembly-CSharp
+        m_MethodName: ClickBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7338180813103502151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425548315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251a180a317e7114bb52053e96ea575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lamp: {fileID: 308312138}
+  levelCounter: {fileID: 878208984}
+  namePerk: Extra Gun Damage
+  description: This profit increases the damage from the shot by 2 points of damage.
+  indexPerk: 2
+  cost: 1
 --- !u!1 &1430907148
 GameObject:
   m_ObjectHideFlags: 0
@@ -17282,6 +17410,7 @@ GameObject:
   - component: {fileID: 1931593081}
   - component: {fileID: 1931593080}
   - component: {fileID: 1931593079}
+  - component: {fileID: 352597566}
   m_Layer: 0
   m_Name: perkBtnMain (1)
   m_TagString: Untagged
@@ -17391,7 +17520,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1931593080}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 352597566}
+        m_TargetAssemblyTypeName: PerkElement, Assembly-CSharp
+        m_MethodName: ClickBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &352597566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931593077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251a180a317e7114bb52053e96ea575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lamp: {fileID: 1992125851}
+  levelCounter: {fileID: 1046389393}
+  namePerk: Extra Hand Damage
+  description: This profit increases the damage from a fist blow by 2 points of damage.
+  indexPerk: 1
+  cost: 1
 --- !u!1 &1934967480
 GameObject:
   m_ObjectHideFlags: 0
