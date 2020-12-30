@@ -7,6 +7,7 @@ public class PerksPanel : MonoBehaviour
 {
     public Text consoleDesc;
     public PerkElement currentPerk;
+    public Sprite lampOn;
 
     private Canvas perksCanvas;
     private GUIScript gUI;
@@ -47,6 +48,7 @@ public class PerksPanel : MonoBehaviour
         {
             Time.timeScale = 1.0f;
             consoleDesc.text = "";
+            currentPerk = null;
         }
     }
 
@@ -60,5 +62,23 @@ public class PerksPanel : MonoBehaviour
         descText += "Your point: " + exp.lvlPoint + " LP\n";
         consoleDesc.text = descText;
         currentPerk = perk;
+    }
+
+    public void AddBtn()
+    {
+        if(currentPerk != null)
+        {
+            SwichOnLight();
+        }
+        else
+        {
+            consoleDesc.text = "No perk have been selected!\n";
+            consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+        }
+    }
+
+    public void SwichOnLight()
+    {
+        currentPerk.lamp.overrideSprite = lampOn;
     }
 }

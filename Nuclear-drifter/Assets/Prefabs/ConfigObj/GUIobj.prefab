@@ -5199,7 +5199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 731657183}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4531377542604165244}
+        m_TargetAssemblyTypeName: PerksPanel, Assembly-CSharp
+        m_MethodName: AddBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &746944825
 GameObject:
   m_ObjectHideFlags: 0
@@ -7098,6 +7110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   consoleDesc: {fileID: 1376092358}
   currentPerk: {fileID: 0}
+  lampOn: {fileID: 1095517901329658084, guid: 0313a6910a7fe35448204a0de10988d0, type: 3}
 --- !u!1 &893134447
 GameObject:
   m_ObjectHideFlags: 0
@@ -7110,6 +7123,7 @@ GameObject:
   - component: {fileID: 893134451}
   - component: {fileID: 893134450}
   - component: {fileID: 893134449}
+  - component: {fileID: 6136891187240033021}
   m_Layer: 0
   m_Name: perkBtnMain (5)
   m_TagString: Untagged
@@ -7217,7 +7231,38 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 893134450}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6136891187240033021}
+        m_TargetAssemblyTypeName: PerkElement, Assembly-CSharp
+        m_MethodName: ClickBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6136891187240033021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893134447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251a180a317e7114bb52053e96ea575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lamp: {fileID: 510618227}
+  levelCounter: {fileID: 0}
+  namePerk: Poison Resistance
+  description: This perk adds resistance to poisoning.  Enemies will not give the
+    effect of poisoning.
+  indexPerk: 5
+  cost: 2
 --- !u!1 &902013063
 GameObject:
   m_ObjectHideFlags: 0
@@ -12234,6 +12279,7 @@ GameObject:
   - component: {fileID: 1385907436}
   - component: {fileID: 1385907435}
   - component: {fileID: 1385907434}
+  - component: {fileID: 7804258769344014704}
   m_Layer: 0
   m_Name: perkBtnMain (6)
   m_TagString: Untagged
@@ -12342,7 +12388,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1385907435}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7804258769344014704}
+        m_TargetAssemblyTypeName: PerkElement, Assembly-CSharp
+        m_MethodName: ClickBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7804258769344014704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385907432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251a180a317e7114bb52053e96ea575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lamp: {fileID: 1899121683}
+  levelCounter: {fileID: 0}
+  namePerk: Damage Resistance
+  description: A player with this perk receives 20 percent less damage from enemies.
+  indexPerk: 6
+  cost: 2
 --- !u!1 &1402111620
 GameObject:
   m_ObjectHideFlags: 0
@@ -18057,6 +18133,7 @@ GameObject:
   - component: {fileID: 2001966439}
   - component: {fileID: 2001966438}
   - component: {fileID: 2001966437}
+  - component: {fileID: 4782661113835491495}
   m_Layer: 0
   m_Name: perkBtnMain (7)
   m_TagString: Untagged
@@ -18165,7 +18242,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2001966438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4782661113835491495}
+        m_TargetAssemblyTypeName: PerkElement, Assembly-CSharp
+        m_MethodName: ClickBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4782661113835491495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001966435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251a180a317e7114bb52053e96ea575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lamp: {fileID: 2039076944}
+  levelCounter: {fileID: 0}
+  namePerk: Repair
+  description: This perk allows you to repair devices and carefully disarm bombs.
+  indexPerk: 7
+  cost: 2
 --- !u!1 &2011123665
 GameObject:
   m_ObjectHideFlags: 0
