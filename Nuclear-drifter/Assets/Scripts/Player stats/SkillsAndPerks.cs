@@ -26,4 +26,12 @@ public class SkillsAndPerks : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    public Perk GetPerk(int id)
+    {
+        if (id >= 0 && id < perks.Length)
+            return perks[id];
+        else
+            return null;
+    }
+
 }

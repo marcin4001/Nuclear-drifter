@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,6 +28,23 @@ public class PerksPanel : MonoBehaviour
         perksCanvas = GetComponent<Canvas>();
         exp = FindObjectOfType<Experience>();
         perksCanvas.enabled = false;
+
+        PerkElement[] perks = FindObjectsOfType<PerkElement>();
+        if(perks.Length > 0)
+        {
+            foreach(PerkElement perk in perks)
+            {
+                Perk tempPerk = SkillsAndPerks.playerSkill.GetPerk(perk.indexPerk);
+                if(tempPerk != null)
+                {
+                    if (tempPerk.playerHas)
+                    {
+                        SwichOnLight(perk);
+                        perk.ChangeTextLevel(tempPerk.level);
+                    }
+                }
+            }
+        }
     }
 
     public void Open()
@@ -68,7 +86,19 @@ public class PerksPanel : MonoBehaviour
     {
         if(currentPerk != null)
         {
-            SwichOnLight();
+            Perk perkObj = SkillsAndPerks.playerSkill.GetPerk(currentPerk.indexPerk);
+            if (perkObj != null)
+            {
+                if (!currentPerk.isDisposable)
+                {
+                    IncCounterPerk(perkObj);
+                }
+                else
+                {
+                    perkObj.AddPerk();
+                }
+                SwichOnLight(currentPerk);
+            }
         }
         else
         {
@@ -77,8 +107,22 @@ public class PerksPanel : MonoBehaviour
         }
     }
 
-    public void SwichOnLight()
+    private void IncCounterPerk(Perk perkObj)
     {
-        currentPerk.lamp.overrideSprite = lampOn;
+        if(perkObj.level < currentPerk. maxLevelPerk)
+        {
+            perkObj.AddPerk(true);
+            currentPerk.ChangeTextLevel(perkObj.level);
+        }
+        else
+        {
+            consoleDesc.text = "Max level of this perk has been achieved!\n";
+            consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+        }
+    }
+
+    public void SwichOnLight(PerkElement _perk)
+    {
+        _perk.lamp.overrideSprite = lampOn;
     }
 }
