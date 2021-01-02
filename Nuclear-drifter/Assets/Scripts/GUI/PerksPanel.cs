@@ -98,6 +98,7 @@ public class PerksPanel : MonoBehaviour
                     perkObj.AddPerk();
                 }
                 SwichOnLight(currentPerk);
+                AddSkill();
             }
         }
         else
@@ -124,5 +125,54 @@ public class PerksPanel : MonoBehaviour
     public void SwichOnLight(PerkElement _perk)
     {
         _perk.lamp.overrideSprite = lampOn;
+    }
+
+    private void AddSkill()
+    {
+        switch (currentPerk.type)
+        {
+            case TypePerk.hp:
+                {
+                    Debug.Log("hp");
+                    break;
+                }
+            case TypePerk.handDmg:
+                {
+                    Debug.Log("handDmg");
+                    break;
+                }
+            case TypePerk.gunDmg:
+                {
+                    Debug.Log("gunDmg");
+                    break;
+                }
+            case TypePerk.largeGun:
+                {
+                    Debug.Log("LargeGun");
+                    break;
+                }
+            case TypePerk.radRes:
+                {
+                    Debug.Log("radRes");
+                    break;
+                }
+            case TypePerk.poisonRes:
+                {
+                    Debug.Log("PoisonRes");
+                    break;
+                }
+            case TypePerk.damageRes:
+                {
+                    Debug.Log("damageRes");
+                    break;
+                }
+            case TypePerk.repair:
+                {
+                    Debug.Log("repair");
+                    break;
+                }
+            default:
+                break;
+        }
     }
 }

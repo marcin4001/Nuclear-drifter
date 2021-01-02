@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum TypePerk
+{
+    hp, handDmg, gunDmg, largeGun,
+    radRes, poisonRes, damageRes, repair
+}
+
 public class PerkElement : MonoBehaviour
 {
     public Image lamp;
@@ -15,6 +21,9 @@ public class PerkElement : MonoBehaviour
     public int cost;
     public bool isDisposable = false;
     public int maxLevelPerk = 5;
+
+    public TypePerk type;
+    public int value = 0;
 
     private PerksPanel panel;
 

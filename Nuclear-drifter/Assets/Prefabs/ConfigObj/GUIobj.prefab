@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 358826694}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7263,6 +7263,10 @@ MonoBehaviour:
     effect of poisoning.
   indexPerk: 5
   cost: 2
+  isDisposable: 0
+  maxLevelPerk: 5
+  type: 5
+  value: 0
 --- !u!1 &902013063
 GameObject:
   m_ObjectHideFlags: 0
@@ -7510,6 +7514,10 @@ MonoBehaviour:
   description: A player with this skill can use large pistols - Ak 47 and shotgun.
   indexPerk: 3
   cost: 2
+  isDisposable: 0
+  maxLevelPerk: 5
+  type: 3
+  value: 0
 --- !u!1 &935220569
 GameObject:
   m_ObjectHideFlags: 0
@@ -10515,6 +10523,10 @@ MonoBehaviour:
     will not give the effect of radiation. You can stay longer in an irradiated area.
   indexPerk: 4
   cost: 2
+  isDisposable: 0
+  maxLevelPerk: 5
+  type: 4
+  value: 0
 --- !u!1 &1219990514
 GameObject:
   m_ObjectHideFlags: 0
@@ -11938,6 +11950,10 @@ MonoBehaviour:
     after adding a perk, your character will be completely healed.
   indexPerk: 0
   cost: 1
+  isDisposable: 0
+  maxLevelPerk: 5
+  type: 0
+  value: 10
 --- !u!1 &1365708855
 GameObject:
   m_ObjectHideFlags: 0
@@ -12419,6 +12435,10 @@ MonoBehaviour:
   description: A player with this perk receives 20 percent less damage from enemies.
   indexPerk: 6
   cost: 2
+  isDisposable: 0
+  maxLevelPerk: 5
+  type: 6
+  value: 20
 --- !u!1 &1402111620
 GameObject:
   m_ObjectHideFlags: 0
@@ -12859,6 +12879,10 @@ MonoBehaviour:
   description: This profit increases the damage from the shot by 2 points of damage.
   indexPerk: 2
   cost: 1
+  isDisposable: 0
+  maxLevelPerk: 5
+  type: 2
+  value: 2
 --- !u!1 &1430907148
 GameObject:
   m_ObjectHideFlags: 0
@@ -17627,6 +17651,10 @@ MonoBehaviour:
   description: This profit increases the damage from a fist blow by 2 points of damage.
   indexPerk: 1
   cost: 1
+  isDisposable: 0
+  maxLevelPerk: 5
+  type: 1
+  value: 2
 --- !u!1 &1934967480
 GameObject:
   m_ObjectHideFlags: 0
@@ -18273,6 +18301,10 @@ MonoBehaviour:
   description: This perk allows you to repair devices and carefully disarm bombs.
   indexPerk: 7
   cost: 2
+  isDisposable: 0
+  maxLevelPerk: 5
+  type: 7
+  value: 0
 --- !u!1 &2011123665
 GameObject:
   m_ObjectHideFlags: 0
