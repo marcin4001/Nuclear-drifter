@@ -102,10 +102,21 @@ public class Health : MonoBehaviour
             maxHealth = points;
             currentHealth = maxHealth;
             maxAfterRad = maxHealth;
-            isRad = false;
-            isPoison = false;
+            SetRad(false);
+            SetPoison(false);
         }
 
     }
 
+    public void AddToMaxHealth(int points)
+    {
+        if (isRad)
+        {
+            SetMaxHealth(maxAfterRad + points);
+        }
+        else
+        {
+            SetMaxHealth(maxHealth + points);
+        }
+    }
 }

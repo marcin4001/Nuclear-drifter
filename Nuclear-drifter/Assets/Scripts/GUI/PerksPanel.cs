@@ -89,6 +89,20 @@ public class PerksPanel : MonoBehaviour
             Perk perkObj = SkillsAndPerks.playerSkill.GetPerk(currentPerk.indexPerk);
             if (perkObj != null)
             {
+                if (perkObj.level >= currentPerk.maxLevelPerk && !currentPerk.isDisposable)
+                {
+                    consoleDesc.text = "Max level of this perk has been achieved!\n";
+                    consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+                    currentPerk = null;
+                    return;
+                }
+                if(currentPerk.isDisposable && perkObj.playerHas)
+                {
+                    consoleDesc.text = "You already own this perk!\n";
+                    consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+                    currentPerk = null;
+                    return;
+                }
                 if (!currentPerk.isDisposable)
                 {
                     IncCounterPerk(perkObj);
@@ -110,16 +124,8 @@ public class PerksPanel : MonoBehaviour
 
     private void IncCounterPerk(Perk perkObj)
     {
-        if(perkObj.level < currentPerk. maxLevelPerk)
-        {
-            perkObj.AddPerk(true);
-            currentPerk.ChangeTextLevel(perkObj.level);
-        }
-        else
-        {
-            consoleDesc.text = "Max level of this perk has been achieved!\n";
-            consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
-        }
+        perkObj.AddPerk(true);
+        currentPerk.ChangeTextLevel(perkObj.level);
     }
 
     public void SwichOnLight(PerkElement _perk)
@@ -133,44 +139,31 @@ public class PerksPanel : MonoBehaviour
         {
             case TypePerk.hp:
                 {
-                    Debug.Log("hp");
+                    Health playerHP = FindObjectOfType<Health>();
+                    playerHP.AddToMaxHealth(currentPerk.value);
                     break;
                 }
             case TypePerk.handDmg:
-                {
-                    Debug.Log("handDmg");
-                    break;
-                }
+                SkillsAndPerks.playerSkill.handDamage += currentPerk.value;
+                break;
             case TypePerk.gunDmg:
-                {
-                    Debug.Log("gunDmg");
-                    break;
-                }
+                SkillsAndPerks.playerSkill.additionalGunDamage += currentPerk.value;
+                break;
             case TypePerk.largeGun:
-                {
-                    Debug.Log("LargeGun");
-                    break;
-                }
+                SkillsAndPerks.playerSkill.largeGun = true;
+                break;
             case TypePerk.radRes:
-                {
-                    Debug.Log("radRes");
-                    break;
-                }
+                SkillsAndPerks.playerSkill.radResistance = true;
+                break;
             case TypePerk.poisonRes:
-                {
-                    Debug.Log("PoisonRes");
-                    break;
-                }
+                SkillsAndPerks.playerSkill.poisonResistance = true;
+                break;
             case TypePerk.damageRes:
-                {
-                    Debug.Log("damageRes");
-                    break;
-                }
+                SkillsAndPerks.playerSkill.damageResistance = currentPerk.value;
+                break;
             case TypePerk.repair:
-                {
-                    Debug.Log("repair");
-                    break;
-                }
+                SkillsAndPerks.playerSkill.repair = true;
+                break;
             default:
                 break;
         }
