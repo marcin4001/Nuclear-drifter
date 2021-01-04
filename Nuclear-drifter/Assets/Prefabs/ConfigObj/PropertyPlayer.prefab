@@ -43,11 +43,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b92aaabc951a64c923b12a9d06409a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
-  maxHealth: 100
+  currentHealth: 80
+  maxHealth: 80
   isRad: 0
   isPoison: 0
   day: 1
   hour: 5
   minutes: 0
   startPos: {x: 235, y: 24}
+  posOutside: {x: 0, y: 0}
+  foundArea: 
+  inv: []
+  currentExp: 0
+  level: 1
+  prevTh: 0
+  lvlPoint: 0
+  currentScene: 
+  trapdoorOpened: 0

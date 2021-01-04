@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CombatSystem : MonoBehaviour
@@ -164,10 +165,11 @@ public class CombatSystem : MonoBehaviour
             if(weaponSlot.isGun())
             {
                 fightSound.PlayWeapon(currentWeapon.soundId);
-                enemy.Shot(currentWeapon.damage);
+                int finalDamage = currentWeapon.damage + SkillsAndPerks.playerSkill.additionalGunDamage;
+                enemy.Shot(finalDamage);
                 inv.RemoveOne(weaponSlot);
                 gUI.AddText(enemy.nameEnemy + " was hit!");
-                gUI.AddText(enemy.nameEnemy + " lost " + currentWeapon.damage + "hp");
+                gUI.AddText(enemy.nameEnemy + " lost " + finalDamage + "hp");
                 if(weaponSlot.isOutOfAmmo())
                 {
                     gUI.AddText("Out of ammo!");
@@ -223,12 +225,19 @@ public class CombatSystem : MonoBehaviour
 
     public void SelectWeapon(WeaponItem weapon)
     {
+        bool largeGun = new[] { 0, 4 }.Contains(weapon.idItem);
         Slot temp = inv.FindItem(weapon.idItem);
         if (temp != null)
         {
             if(temp.isGun() && temp.ammo <= 0)
             {
                 gUI.AddText("Out of ammo!");
+                return;
+            }
+            if (largeGun && !SkillsAndPerks.playerSkill.largeGun)
+            {
+                gUI.AddText("It's a large gun!");
+                gUI.AddText("You can't use it now!");
                 return;
             }
             weaponSlot = temp;
@@ -371,6 +380,7 @@ public class CombatSystem : MonoBehaviour
         gUI.ActiveBtnPanel(false);
         map.keyActive = false;
         SetEnemys();
+        handDamage = SkillsAndPerks.playerSkill.handDamage;
         ShowWeaponCurrent();
         BlockPlayer(false);
         playerRound = true;

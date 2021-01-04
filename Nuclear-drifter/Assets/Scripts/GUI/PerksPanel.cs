@@ -49,24 +49,31 @@ public class PerksPanel : MonoBehaviour
 
     public void Open()
     {
-        active = !active;
-        perksCanvas.enabled = active;
-        gUI.blockGUI = active;
-        map.keyActive = !active;
-        gUI.DeactiveBtn(!active);
-        fade.EnableImg(active);
-        typeSc.inMenu = active;
-        if (active)
+        if (!typeSc.combatState)
         {
-            Time.timeScale = 0.0f;
-            consoleDesc.text = "Welcome to the perks system!\n";
-            consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+            active = !active;
+            perksCanvas.enabled = active;
+            gUI.blockGUI = active;
+            map.keyActive = !active;
+            gUI.DeactiveBtn(!active);
+            fade.EnableImg(active);
+            typeSc.inMenu = active;
+            if (active)
+            {
+                Time.timeScale = 0.0f;
+                consoleDesc.text = "Welcome to the perks system!\n";
+                consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+            }
+            else
+            {
+                Time.timeScale = 1.0f;
+                consoleDesc.text = "";
+                currentPerk = null;
+            }
         }
         else
         {
-            Time.timeScale = 1.0f;
-            consoleDesc.text = "";
-            currentPerk = null;
+            gUI.AddText("Perks unavailable now.");
         }
     }
 
