@@ -17,7 +17,9 @@ MonoBehaviour:
   description: +5 HP, + Rad
   value: 5
   idItem: 205
-  addHP: 0
+  noRemove: 0
+  noSell: 0
+  addHP: 5
   healsPoison: 0
   healsRad: 0
   isPoison: 0

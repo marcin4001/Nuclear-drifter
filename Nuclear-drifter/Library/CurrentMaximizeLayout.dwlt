@@ -21,8 +21,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 609, y: 571}
-  m_MaxSize: {x: 18004, y: 18021}
+  m_MinSize: {x: 606, y: 613}
+  m_MaxSize: {x: 18001, y: 18063}
   vertical: 0
   controlID: -1
 --- !u!114 &2
@@ -84,7 +84,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -136,8 +136,8 @@ MonoBehaviour:
     y: 0
     width: 1313
     height: 947
-  m_MinSize: {x: 333, y: 571}
-  m_MaxSize: {x: 14003, y: 18021}
+  m_MinSize: {x: 331, y: 613}
+  m_MaxSize: {x: 14001, y: 18063}
   vertical: 1
   controlID: -1
 --- !u!114 &4
@@ -161,8 +161,8 @@ MonoBehaviour:
     y: 0
     width: 1313
     height: 760
-  m_MinSize: {x: 333, y: 471}
-  m_MaxSize: {x: 14003, y: 14021}
+  m_MinSize: {x: 331, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
   controlID: -1
 --- !u!114 &5
@@ -186,10 +186,10 @@ MonoBehaviour:
     y: 0
     width: 520
     height: 760
-  m_MinSize: {x: 231, y: 471}
-  m_MaxSize: {x: 10001, y: 14021}
+  m_MinSize: {x: 231, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 4696
+  controlID: 3099
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,8 +209,8 @@ MonoBehaviour:
     y: 0
     width: 520
     height: 341
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -245,9 +245,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c80fdff
-      m_LastClickedID: -163716
-      m_ExpandedIDs: 7c80fdffc80affff3a2affff8447ffff56d0ffff5efbffff9c270100
+      m_SelectedIDs: 1a4e0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 20fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -324,7 +324,7 @@ MonoBehaviour:
     height: 398
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: main
+    m_NameFilter: fish
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -349,7 +349,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 970}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000686300006a6300006c6300006e63000070630000726300007463000000ca9a3b
+    m_ExpandedIDs: 000000006a6300006c6300006e6300007063000072630000746300007663000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000686300006a6300006c6300006e63000070630000726300007463000000ca9a3b
+    m_ExpandedIDs: 000000006a6300006c6300006e6300007063000072630000746300007663000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -402,8 +402,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7c80fdff
-    m_LastClickedInstanceID: -163716
+    m_SelectedInstanceIDs: 1a4e0000
+    m_LastClickedInstanceID: 19994
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000145200005af8000068a8000042ccffff6a4a000000cf0300a4a80000624c000094a100002e570000045f0000000000003c440000da9800004e4e00004c3f00002e5a0000
     m_RenameOverlay:
@@ -429,7 +429,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 82}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 74
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 110
@@ -498,9 +498,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 236.49217, y: 167.21031, z: -2207.6816}
+    m_Target: {x: 652.5746, y: 446.3159, z: -2349.7703}
     speed: 2
-    m_Value: {x: 236.49217, y: 167.21031, z: -2207.6816}
+    m_Value: {x: 652.5746, y: 446.3159, z: -2349.7703}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -551,9 +551,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 175.16248
+    m_Target: 573.5278
     speed: 2
-    m_Value: 175.16248
+    m_Value: 573.5278
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -729,8 +729,8 @@ MonoBehaviour:
     y: 760
     width: 1313
     height: 187
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -1453,7 +1453,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2021-01-04T20:45:53.963+01:00
+      updatedTimeString: 2021-01-05T22:48:42.890+01:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1467,7 +1467,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2021-01-04T21:38:21.966+01:00
+        updatedTimeString: 2021-01-05T23:20:47.837+01:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000

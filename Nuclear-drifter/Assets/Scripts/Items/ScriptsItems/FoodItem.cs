@@ -31,7 +31,7 @@ public class FoodItem : Item
             if (healsPoison) hp.SetPoison(false);
             if (healsRad) hp.SetRad(false);
             if (isPoison) hp.SetPoison(true);
-            if (addRad) hp.SetRad(true);
+            if (addRad && !SkillsAndPerks.playerSkill.radResistance) hp.SetRad(true);
         }
     }
 }

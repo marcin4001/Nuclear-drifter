@@ -11,6 +11,7 @@ public class RadTrigger : MonoBehaviour
     private float counterMax = 2.0f;
     private bool death = false;
     private TypeScene typeSc;
+    private bool radRes = false;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class RadTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        radRes = SkillsAndPerks.playerSkill.radResistance;
         health = collision.GetComponentInParent<Health>();
         if (health != null && !typeSc.combatState)
         {
@@ -31,12 +33,11 @@ public class RadTrigger : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Stay");
         health = collision.GetComponentInParent<Health>();
         if (health != null && !typeSc.combatState)
         {
             playerIsNear = true;
-            if(!health.isRad)Invoke("SetRad", 2.5f);
+            if(!health.isRad)Invoke("SetRad", radRes ? 3.5f : 2.5f);
             typeSc.radZone = true;
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
             if (st != null) if(!st.isPlayed()) st.StartGeiger();
@@ -68,7 +69,7 @@ public class RadTrigger : MonoBehaviour
             {
                 if(counter >= counterMax)
                 {
-                    health.Damage(20);
+                    health.Damage(radRes ? 10 : 20);
                     counter = 0.0f;
                 }
                 else

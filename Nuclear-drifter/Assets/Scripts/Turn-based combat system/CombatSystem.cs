@@ -343,18 +343,21 @@ public class CombatSystem : MonoBehaviour
 
     public bool Damage(Enemy _enemy)
     {
+        bool isRad = SkillsAndPerks.playerSkill.radResistance ? false : _enemy.isRad;
+        bool isPoisons = SkillsAndPerks.playerSkill.poisonResistance ? false : _enemy.isPoisons;
         float rngChance = Random.Range(0.0f, 1.0f);
         Debug.Log(rngChance);
         if(rngChance <= _enemy.dmgChance)
         {
+            int resistance = Mathf.RoundToInt((float)_enemy.damageMax * (float)SkillsAndPerks.playerSkill.damageResistance / 100f);
             gUI.AddText("You were hit!");
-            gUI.AddText("You lost " + _enemy.damageMax + "HP!");
-            hpPlayer.Damage(_enemy.damageMax);
-            if (_enemy.isPoisons && rngChance <= _enemy.poisonChance)
+            gUI.AddText("You lost " + (_enemy.damageMax - resistance) + "HP!");
+            hpPlayer.Damage(_enemy.damageMax - resistance);
+            if (isPoisons && rngChance <= _enemy.poisonChance)
             {
                 hpPlayer.SetPoison(true);
             }
-            if(_enemy.isRad && rngChance <= _enemy.radChance)
+            if(isRad && rngChance <= _enemy.radChance)
             {
                 hpPlayer.SetRad(true);
             }
