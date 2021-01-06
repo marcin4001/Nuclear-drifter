@@ -61,8 +61,7 @@ public class PerksPanel : MonoBehaviour
             if (active)
             {
                 Time.timeScale = 0.0f;
-                consoleDesc.text = "Welcome to the perks system!\n";
-                consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+                ShowInfoConsole("Welcome to the perks system!");
             }
             else
             {
@@ -98,15 +97,19 @@ public class PerksPanel : MonoBehaviour
             {
                 if (perkObj.level >= currentPerk.maxLevelPerk && !currentPerk.isDisposable)
                 {
-                    consoleDesc.text = "Max level of this perk has been achieved!\n";
-                    consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+                    ShowInfoConsole("Max level of this perk has been achieved!");
                     currentPerk = null;
                     return;
                 }
                 if(currentPerk.isDisposable && perkObj.playerHas)
                 {
-                    consoleDesc.text = "You already own this perk!\n";
-                    consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+                    ShowInfoConsole("You already own this perk!");
+                    currentPerk = null;
+                    return;
+                }
+                if (!exp.RemoveLevelPoints(currentPerk.cost))
+                {
+                    ShowInfoConsole("You don't have enough LP!");
                     currentPerk = null;
                     return;
                 }
@@ -120,12 +123,12 @@ public class PerksPanel : MonoBehaviour
                 }
                 SwichOnLight(currentPerk);
                 AddSkill();
+                ShowInfoConsole("Perk added!");
             }
         }
         else
         {
-            consoleDesc.text = "No perk have been selected!\n";
-            consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+            ShowInfoConsole("No perk have been selected!");
         }
     }
 
@@ -174,5 +177,11 @@ public class PerksPanel : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void ShowInfoConsole(string info)
+    {
+        consoleDesc.text = info + "\n";
+        consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
     }
 }

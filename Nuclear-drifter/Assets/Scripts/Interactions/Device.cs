@@ -38,6 +38,11 @@ public class Device : MonoBehaviour
         }
         else
         {
+            if (!SkillsAndPerks.playerSkill.repair)
+            {
+                gUI.AddText("You can't repair devices!");
+                return;
+            }
             bool canFix = true;
             result = new List<string>();
             result.Add(nameDevice + " is broken");

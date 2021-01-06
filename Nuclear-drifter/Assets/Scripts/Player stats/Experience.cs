@@ -35,6 +35,19 @@ public class Experience : MonoBehaviour
         gUI.ShowExp(level, currentExp, (25 * (5 * (level + 1) + 4) * level));
     }
 
+    public bool RemoveLevelPoints(int point)
+    {
+        int temp = lvlPoint - point;
+        if(temp >= 0)
+        {
+            lvlPoint = temp;
+            UpdateProperty();
+            return true;
+        }
+        else
+            return false;
+    }
+
     private void UpdateProperty()
     {
         PropertyPlayer.property.currentExp = currentExp;
