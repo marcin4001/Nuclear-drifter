@@ -65,7 +65,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 1
   m_Gizmos: 0
-  m_Stats: 0
+  m_Stats: 1
   m_SelectedSizes: 09000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 471}
   m_MaxSize: {x: 10001, y: 14021}
   vertical: 1
-  controlID: 3121
+  controlID: 961
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,9 +245,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: bcdeffff
-      m_LastClickedID: -8516
-      m_ExpandedIDs: 185fffff20fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 20fbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -324,7 +324,7 @@ MonoBehaviour:
     height: 398
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: exp
+    m_NameFilter: save
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -402,8 +402,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: bcdeffff
-    m_LastClickedInstanceID: -8516
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000145200005af8000068a8000042ccffff6a4a000000cf0300a4a80000624c000094a100002e570000045f0000000000003c440000da9800004e4e00004c3f00002e5a0000
     m_RenameOverlay:
@@ -791,7 +791,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -7540
+  m_LastSelectedObjectID: -8516
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1453,7 +1453,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2021-01-06T21:38:57.292+01:00
+      updatedTimeString: 2021-01-07T23:40:59.072+01:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git

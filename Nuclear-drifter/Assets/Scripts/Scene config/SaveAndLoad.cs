@@ -110,6 +110,8 @@ public class SaveAndLoad : MonoBehaviour
             File.WriteAllText(Path.Combine(savePath, "Devices.json"), devices);
             string enemy = EnemyMissionList.GetJson();
             File.WriteAllText(Path.Combine(savePath, "Enemies.json"), enemy);
+            string skills = SkillsAndPerks.GetJson();
+            File.WriteAllText(Path.Combine(savePath, "Skills.json"), skills);
             foreach (string file in files)
             {
                 Debug.Log(Path.GetFileName(file));
@@ -133,6 +135,8 @@ public class SaveAndLoad : MonoBehaviour
             DeviceList.JsonToObj(devices);
             string enemy = File.ReadAllText(Path.Combine(savePath, "Enemies.json"));
             EnemyMissionList.JsonToObj(enemy);
+            string skills = File.ReadAllText(Path.Combine(savePath, "Skills.json"));
+            SkillsAndPerks.JsonToObj(skills);
 
             string[] files = Directory.GetFiles(saveToTemp);
             if (Directory.Exists(path))

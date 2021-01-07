@@ -34,4 +34,14 @@ public class SkillsAndPerks : MonoBehaviour
             return null;
     }
 
+    public static string GetJson()
+    {
+        string json = JsonUtility.ToJson(playerSkill);
+        return json;
+    }
+
+    public static void JsonToObj(string json)
+    {
+        JsonUtility.FromJsonOverwrite(json, playerSkill);
+    }
 }
