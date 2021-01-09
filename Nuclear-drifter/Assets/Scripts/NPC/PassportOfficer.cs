@@ -33,7 +33,7 @@ public class PassportOfficer : Job
                 inv.RemoveFew(tempMoney);
             }
             mission.CompleteMissionNoCond(idMission);
-            return "Okay. Your passport is in my wardrobe. Thank you for using our services. We recommend ourselves for the future.";
+            return "Okay. Your passport is in my closet. Thank you for using our services. We recommend ourselves for the future.";
         }
         else
         {
