@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 7279
+  controlID: 467
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,8 +209,8 @@ MonoBehaviour:
     y: 0
     width: 520
     height: 341
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -247,7 +247,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f069fdff186afdff726afdff709bffff0ea7ffff36a7ffff90a7ffffd8bbffff00bcffff5abcffff5cc8ffff24d2ffff4cd2ffffa0d2ffff20fbffff10f80000d6aa0100
+      m_ExpandedIDs: 5efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -324,7 +324,7 @@ MonoBehaviour:
     height: 398
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: yo
+    m_NameFilter: wato
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -335,8 +335,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/DialogueObj/Roy
+    m_Folders: []
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 74
@@ -350,7 +349,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 206}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a6300006c6300006e6300007063000072630000746300007663000000ca9a3b
+    m_ExpandedIDs: 000000005a5200005c5200005e5200006052000062520000645200006652000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a6300006c6300006e6300007063000072630000746300007663000000ca9a3b
+    m_ExpandedIDs: 000000005a5200005c5200005e5200006052000062520000645200006652000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -405,7 +404,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000145200005af8000068a8000042ccffff6a4a000000cf0300a4a80000624c000094a100002e570000045f0000000000003c440000da9800004e4e00004c3f00002e5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -499,9 +498,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 51.666, y: 12.174944, z: -2717.7932}
+    m_Target: {x: 7.833761, y: 12.807271, z: -2728.9927}
     speed: 2
-    m_Value: {x: 51.666, y: 12.174944, z: -2717.7932}
+    m_Value: {x: 7.833761, y: 12.807271, z: -2728.9927}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -552,9 +551,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.1120605
+    m_Target: 4.5217514
     speed: 2
-    m_Value: 2.1120605
+    m_Value: 4.5217514
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -854,7 +853,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 1167
+  m_LastVerticalScrollValue: 0
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
@@ -1454,7 +1453,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2021-01-09T17:53:20.615+01:00
+      updatedTimeString: 2021-01-10T21:28:55.686+01:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1468,7 +1467,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2021-01-09T18:08:01.714+01:00
+        updatedTimeString: 2021-01-10T21:28:56.105+01:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000
