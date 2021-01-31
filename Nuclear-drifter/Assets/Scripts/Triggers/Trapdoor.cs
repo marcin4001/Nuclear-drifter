@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Trapdoor : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Trapdoor : MonoBehaviour
     public Item gasMask;
 
     public List<string> result;
-
+    public string nextScene;
     private GUIScript gUI;
     private Inventory inv;
     private PlayerClickMove player;
@@ -62,6 +63,10 @@ public class Trapdoor : MonoBehaviour
                 holeTrapdoor.enabled = true;
                 upTrapdoor.enabled = true;
                 downTrapdoor.enabled = false;
+                player.active = false;
+                player.SetStop(true);
+                gUI.blockGUI = true;
+                Invoke("LoadScene", 1.0f);
             }
             else
             {
@@ -75,6 +80,11 @@ public class Trapdoor : MonoBehaviour
                 gUI.AddText(res);
             }
         }
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 
     public void ShowText()
