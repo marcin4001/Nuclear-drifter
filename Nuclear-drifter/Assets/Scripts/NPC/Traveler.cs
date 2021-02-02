@@ -13,7 +13,10 @@ public class Traveler : Job
 
     public override string Work(int opt)
     {
-        sign.FindArea(opt);
+        if(opt == -1)
+            FindObjectOfType<SubwayIcon>().SetIconActive();
+        else
+            sign.FindArea(opt);
         return "";
     }
 }

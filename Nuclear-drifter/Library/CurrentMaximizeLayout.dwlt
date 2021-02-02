@@ -21,8 +21,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 609, y: 571}
-  m_MaxSize: {x: 18004, y: 18021}
+  m_MinSize: {x: 608, y: 592}
+  m_MaxSize: {x: 18003, y: 18042}
   vertical: 0
   controlID: -1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 520
+    x: 1800
     y: 73
     width: 790
     height: 739
@@ -136,8 +136,8 @@ MonoBehaviour:
     y: 0
     width: 1312
     height: 947
-  m_MinSize: {x: 333, y: 571}
-  m_MaxSize: {x: 14003, y: 18021}
+  m_MinSize: {x: 333, y: 592}
+  m_MaxSize: {x: 14003, y: 18042}
   vertical: 1
   controlID: -1
 --- !u!114 &4
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 471}
   m_MaxSize: {x: 10001, y: 14021}
   vertical: 1
-  controlID: 3866
+  controlID: 11255
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -237,7 +237,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1280
     y: 73
     width: 519
     height: 320
@@ -245,9 +245,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 62d50000
-      m_LastClickedID: 54626
-      m_ExpandedIDs: 0294ffff7695ffff70beffff1ed1ffff5efbffffa2b40000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: b2f9faff06cdfbff2ecdfbff82eafbff229bffff4a9bffffb09bffff88d5ffff5efbffff222802002a29020078a70700
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -318,7 +318,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1280
     y: 414
     width: 519
     height: 398
@@ -336,20 +336,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Scene config
+    - Assets/Texture
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 74
   m_LastFolders:
-  - Assets/Scripts/Scene config
+  - Assets/Texture
   m_LastFoldersGridSize: 74
   m_LastProjectPath: C:\Users\Marcin\Documents\Nuclear-drifter\Nuclear-drifter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 986}
-    m_SelectedIDs: 1a640000
-    m_LastClickedID: 25626
+    m_SelectedIDs: 84630000
+    m_LastClickedID: 25476
     m_ExpandedIDs: 00000000786300007a6300007c6300007e63000080630000826300008463000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -403,8 +403,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 62d50000
-    m_LastClickedInstanceID: 54626
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000145200005af8000068a8000042ccffff6a4a000000cf0300a4a80000624c000094a100002e570000045f0000000000003c440000da9800004e4e00004c3f00002e5a0000
     m_RenameOverlay:
@@ -430,7 +430,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 3018}
     m_GridSize: 74
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 110
@@ -483,7 +483,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 520
+    x: 1800
     y: 73
     width: 790
     height: 739
@@ -499,9 +499,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 238.87054, y: 25.18804, z: -1398.9736}
+    m_Target: {x: 242.09367, y: 107.38285, z: -11.50059}
     speed: 2
-    m_Value: {x: 238.87054, y: 25.18804, z: -1398.9736}
+    m_Value: {x: 242.09367, y: 107.38285, z: -11.50059}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -552,9 +552,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.0346656
+    m_Target: 35.860947
     speed: 2
-    m_Value: 4.0346656
+    m_Value: 35.860947
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -759,7 +759,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1280
     y: 833
     width: 1311
     height: 166
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 54626
+  m_LastSelectedObjectID: 141612
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -842,7 +842,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1312
+    x: 2592
     y: 73
     width: 607
     height: 926
@@ -854,7 +854,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 191
+  m_LastVerticalScrollValue: 0
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
@@ -1454,7 +1454,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2021-01-31T14:02:03.491+01:00
+      updatedTimeString: 2021-02-02T21:18:32.407+01:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1468,7 +1468,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2021-01-31T15:07:36.695+01:00
+        updatedTimeString: 2021-02-02T21:18:32.379+01:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000
