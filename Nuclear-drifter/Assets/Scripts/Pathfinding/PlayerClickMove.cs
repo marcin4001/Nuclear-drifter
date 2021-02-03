@@ -143,8 +143,8 @@ public class PlayerClickMove : MonoBehaviour
                     return;
                 }
             }
-            
-            path = aStar.FindPath(transform.position, target.position);
+            Vector3 player_pos = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
+            path = aStar.FindPath(player_pos, target.position);
             if(!checkNode.walkable) gUI.AddText("I can't go there!");
             if (path != null)
             {
