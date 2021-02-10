@@ -21,8 +21,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 608, y: 613}
-  m_MaxSize: {x: 18003, y: 18063}
+  m_MinSize: {x: 609, y: 613}
+  m_MaxSize: {x: 18004, y: 18063}
   vertical: 0
   controlID: -1
 --- !u!114 &2
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 1412
+  controlID: 245
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,9 +245,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fe380000
+      m_SelectedIDs: fc390000
       m_LastClickedID: 0
-      m_ExpandedIDs: bec0ffff20fbffff
+      m_ExpandedIDs: 18fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -324,7 +324,7 @@ MonoBehaviour:
     height: 398
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: move
+    m_NameFilter: asta
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -335,8 +335,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Texture
+    m_Folders: []
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 74
@@ -350,7 +349,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 986}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005c5200005e520000605200006252000064520000665200006852000000ca9a3b
+    m_ExpandedIDs: 000000009a4200009c4200009e420000a0420000a2420000a4420000a642000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005c5200005e520000605200006252000064520000665200006852000000ca9a3b
+    m_ExpandedIDs: 000000009a4200009c4200009e420000a0420000a2420000a4420000a642000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,9 +402,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fe380000
-    m_LastClickedInstanceID: 14590
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: fc390000
+    m_LastClickedInstanceID: 14844
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000145200005af8000068a8000042ccffff6a4a000000cf0300a4a80000624c000094a100002e570000045f0000000000003c440000da9800004e4e00004c3f00002e5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -631,9 +630,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 90.92039, y: 171.01251, z: -61.171947}
+    m_Target: {x: 94.34948, y: 172.0128, z: -61.61803}
     speed: 2
-    m_Value: {x: 90.92039, y: 171.01251, z: -61.171947}
+    m_Value: {x: 94.34948, y: 172.0128, z: -61.61803}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -684,9 +683,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 23.168036
+    m_Target: 27.628315
     speed: 2
-    m_Value: 23.168036
+    m_Value: 27.628315
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -730,8 +729,8 @@ MonoBehaviour:
     y: 760
     width: 1312
     height: 187
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -812,8 +811,8 @@ MonoBehaviour:
     y: 0
     width: 608
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -1454,7 +1453,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2021-02-03T19:07:38.583+01:00
+      updatedTimeString: 2021-02-10T10:50:02.052+01:00
       cacheType: 1
     metricsEnabled: 1
     newRepositoryRemoteUrl: https://github.com/marcin4001/Nuclear-drifter.git
@@ -1468,7 +1467,7 @@ MonoBehaviour:
       newGitEmail: marcinjachymczyk96@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2021-02-03T19:51:56.952+01:00
+        updatedTimeString: 0001-01-01T00:00:00.000+00:00
         cacheType: 8
     webTimeout: 3000
     gitTimeout: 5000

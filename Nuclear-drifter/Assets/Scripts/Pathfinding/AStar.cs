@@ -1,26 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AStar : MonoBehaviour
 {
     GridNode grid;
 
-    //public Transform player, target;
+    private Vector3 playerPos;
     private void Awake()
     {
         grid = GetComponent<GridNode>();
     }
 
-    //private void Update()
-    //{
-    //    if(player != null && target != null)
-    //    {
-    //        FindPath(player.position, target.position);
-    //    }
-    //}
-    public List<Node> FindPath(Vector3 start, Vector3 end)
+    public List<Node> FindPath(Vector3 start, Vector3 end, Vector3 posPlayer)
     {
+        playerPos = posPlayer;
         Node startNode = grid.NodeFromPoint(start);
         Node endNode = grid.NodeFromPoint(end);
         if (startNode == endNode) return null;
@@ -87,9 +82,22 @@ public class AStar : MonoBehaviour
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
-        //path.Add(currentNode);
+        Node last = path.Last();
+        if(AngleLastNodeIsNotZero(currentNode, last))
+            path.Add(currentNode);
         path.Reverse();
         grid.path = path;
         return path;
+    }
+
+    private bool AngleLastNodeIsNotZero(Node current, Node last)
+    {
+        Vector2 vecPlayerToLast = last.pos - playerPos;
+        Vector2 vecCurrentNodeToLast = last.pos - current.pos;
+        Debug.Log(Vector2.Angle(vecPlayerToLast, vecCurrentNodeToLast));
+        if (Vector2.Angle(vecPlayerToLast, vecCurrentNodeToLast) > 0.1)
+            return true;
+        else
+            return false;
     }
 }
