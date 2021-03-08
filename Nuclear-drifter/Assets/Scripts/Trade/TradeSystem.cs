@@ -12,6 +12,7 @@ public class TradeSystem : MonoBehaviour
     public SellSlot sellSlot;
     public bool active = false;
     public GameObject tradeGO;
+    private float sellPercent = 0.75f;
     private GUIScript gUI;
     private PlayerClickMove move;
     private TypeScene typeSc;
@@ -163,8 +164,9 @@ public class TradeSystem : MonoBehaviour
         {
             if (!sellSlot.itemSlot.itemElement.noSell)
             {
-                money.amountItem = sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem;
-                gUI.AddText("You got $" + money.amountItem);
+                money.amountItem = Mathf.RoundToInt((sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem) * sellPercent);
+                int percentText = (int)(sellPercent * 100f);
+                gUI.AddText("You got $" + money.amountItem + " (" + percentText + "% value)");
                 if (money.amountItem > 0) inv.Add(money);
                 sellSlot.ClearSlot();
             }
