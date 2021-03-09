@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bomb : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Bomb : MonoBehaviour
     public bool stateInit = true;
     public int indexDevice = -1;
     public bool isDismantled;
+    public float chanceExplosion = 0.5f;
+    public string explosionScene;
     private Inventory inv;
     private PlayerClickMove player;
     private GUIScript gUI;
@@ -45,6 +48,16 @@ public class Bomb : MonoBehaviour
             }
             if (player.ObjIsNearPlayer(transform.position, 1.1f))
             {
+                if (!SkillsAndPerks.playerSkill.repair)
+                {
+                    float chance = Random.Range(0.0f, 1.0f);
+                    Debug.Log(chance);
+                    if (chance < chanceExplosion)
+                    {
+                        SceneManager.LoadScene(explosionScene);
+                        return;
+                    }
+                }
                 sound.UseTool();
                 fade.EnableImg(true);
                 Invoke("Disarming", 1.0f);

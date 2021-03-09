@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2021-03-08T20:30:35.462+01:00
-  initializedAtString: 2021-03-08T20:28:00.503+01:00
-  localBranches:
-  - name: master
-    tracking: origin/master
+  lastUpdatedAtString: 2021-03-09T23:09:44.551+01:00
+  initializedAtString: 2021-03-09T23:01:07.447+01:00
+  localBranches: []
   remoteBranches:
   - name: origin/HEAD
     tracking: '[None]'
@@ -32,14 +30,8 @@ MonoBehaviour:
     function: 0
     token: 
   localConfigBranches:
-    keys:
-    - master
-    values:
-    - name: master
-      remote:
-        name: origin
-        url: https://github.com/marcin4001/Nuclear-drifter.git
-      trackingBranch: master
+    keys: []
+    values: []
   remoteConfigBranches:
     keys:
     - origin

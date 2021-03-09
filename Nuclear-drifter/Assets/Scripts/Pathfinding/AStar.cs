@@ -94,7 +94,6 @@ public class AStar : MonoBehaviour
     {
         Vector2 vecPlayerToLast = last.pos - playerPos;
         Vector2 vecCurrentNodeToLast = last.pos - current.pos;
-        Debug.Log(Vector2.Angle(vecPlayerToLast, vecCurrentNodeToLast));
         if (Vector2.Angle(vecPlayerToLast, vecCurrentNodeToLast) > 0.1)
             return true;
         else

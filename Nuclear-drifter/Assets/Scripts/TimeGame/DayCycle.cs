@@ -23,7 +23,6 @@ public class DayCycle : MonoBehaviour
 
     public void SetTime(int _day, int _hour, int minutes)
     {
-        Debug.Log(_hour + ":" + minutes);
         typeSc = FindObjectOfType<TypeScene>();
         time = FindObjectOfType<TimeGame>();
         time.day = _day;
