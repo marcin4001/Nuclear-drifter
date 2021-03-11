@@ -32,8 +32,6 @@ public class ChangeDirectionNPC : MonoBehaviour
     {
         int x = Mathf.RoundToInt(pos.x);
         int y = Mathf.RoundToInt(pos.y);
-        
-        Debug.Log("x: " + x + " y: " + y);
 
         if(x > 0)
         {

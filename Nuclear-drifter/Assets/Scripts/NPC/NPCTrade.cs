@@ -33,11 +33,9 @@ public class NPCTrade : MonoBehaviour
             if (dir != null)
             {
                 Vector3 dirNPC = player.transform.position - transform.parent.position;
-                Debug.Log(dirNPC);
                 dir.SetDir((Vector2)dirNPC);
                 Vector3 dirPlayer = transform.parent.position - player.transform.position;
                 player.SetDir((Vector2)dirPlayer);
-                Debug.Log(dirPlayer);
             }
             trade.Open();
         }
