@@ -24,6 +24,17 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+  - choice: I want to buy a passport. ($500)
+    reply: Okay. Your passport is in my closet. Thank you for using our services.
+      We recommend ourselves for the future.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 1
+    workOpt: 0
   - choice: Why do I need a passport?
     reply: You need a passport when you want to leave Old Zealand and go to Moolow
       Isles, for example. This island is part of the United States. This is the 51st
