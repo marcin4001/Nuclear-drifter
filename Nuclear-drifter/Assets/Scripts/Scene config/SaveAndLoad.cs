@@ -6,6 +6,7 @@ using System.IO;
 
 public class SaveAndLoad : MonoBehaviour
 {
+    private static string saveDir = "save_05a";
     // Start is called before the first frame update
     void Start()
     {
@@ -91,7 +92,7 @@ public class SaveAndLoad : MonoBehaviour
     public static void HardSave()
     {
         string path = Path.Combine(Application.persistentDataPath, "saveTemp");
-        string savePath = Path.Combine(Application.persistentDataPath, "save");
+        string savePath = Path.Combine(Application.persistentDataPath, saveDir);
         string saveToTemp = Path.Combine(savePath, "saveTemp");
         if (Directory.Exists(path))
         {
@@ -123,7 +124,7 @@ public class SaveAndLoad : MonoBehaviour
     public static bool Load()
     {
         string path = Path.Combine(Application.persistentDataPath, "saveTemp");
-        string savePath = Path.Combine(Application.persistentDataPath, "save");
+        string savePath = Path.Combine(Application.persistentDataPath, saveDir);
         string saveToTemp = Path.Combine(savePath, "saveTemp");
         if (Directory.Exists(savePath))
         {
