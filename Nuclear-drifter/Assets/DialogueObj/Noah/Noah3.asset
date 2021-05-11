@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - choice: I have clean water!
-    reply: Thank you! Mmm delicious! I haven't had clean water in my mouth for 3
+    reply: Thank you! Mmm, delicious! I haven't had clean water in my mouth for 3
       days. All thanks to the central purifier in the water treatment plant. It broke
       a week ago. If you can, fix it.
     nextModule: 0
@@ -23,6 +23,8 @@ MonoBehaviour:
     missionEnd: 1
     endIdMission: 3
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Bye
     reply: 
     nextModule: -1
@@ -31,3 +33,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

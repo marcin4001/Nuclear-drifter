@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - choice: I came from the south. My well is dry!
-    reply: Not good! Unfortunately I can not help you. But you can go to Watown or
-      New Tolham. These are my brothers' settlements. Maybe they will help you.
+    reply: Not good! Unfortunately, I can not help you. But you can go to Watown
+      or New Tolham. These are my brothers' settlements. Maybe they will help you.
     nextModule: 1
     missionStart: 0
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 1
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -30,3 +32,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
