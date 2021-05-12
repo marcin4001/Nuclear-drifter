@@ -54,8 +54,8 @@ MonoBehaviour:
     respect: 1
     idHelp: 0
   - task: Take 10 fish to Bruce in Watown
-    ownerName: Steve
-    location: Woodhill
+    ownerName: Steve & Bruce
+    location: Woodhill & Watown
     start: 0
     complete: 0
     idSort: 4
@@ -63,8 +63,8 @@ MonoBehaviour:
     respect: 1
     idHelp: 1
   - task: Pay Steve $10 for the fish
-    ownerName: Bruce
-    location: Woodhill
+    ownerName: Bruce &  Steve
+    location: Watown & Woodhill
     start: 0
     complete: 0
     idSort: 5
@@ -91,7 +91,7 @@ MonoBehaviour:
     idHelp: 4
   - task: Bring the wreath to your husband's grave.
     ownerName: Karen
-    location: Watown
+    location: Watown & Cemetery
     start: 0
     complete: 0
     idSort: 8
@@ -108,7 +108,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 6
   - task: Heal Dr Paul's patient. (Rad Killer Duo)
-    ownerName: dr Paul
+    ownerName: dr Paul & Gary
     location: Watown
     start: 0
     complete: 0
@@ -117,8 +117,8 @@ MonoBehaviour:
     respect: 1
     idHelp: 7
   - task: Bring the contract to Jaxon in Yorkset.
-    ownerName: Joshua
-    location: Watown
+    ownerName: Joshua & Jaxon
+    location: Watown & Yorkset
     start: 0
     complete: 0
     idSort: 11
@@ -135,8 +135,8 @@ MonoBehaviour:
     respect: 1
     idHelp: 9
   - task: Look for Tyler at the inn.
-    ownerName: Mary
-    location: New Tolham
+    ownerName: Mary & Tyler
+    location: New Tolham & Inn
     start: 0
     complete: 0
     idSort: 14
@@ -153,8 +153,8 @@ MonoBehaviour:
     respect: 1
     idHelp: 11
   - task: A pack of masks from Moolow Isles
-    ownerName: Ashemo
-    location: New Tolham
+    ownerName: Ashemo & Thomas
+    location: New Tolham & Moolow Isles
     start: 0
     complete: 0
     idSort: 16
@@ -163,7 +163,7 @@ MonoBehaviour:
     idHelp: 12
   - task: 'Bring $500 or Steve''s machete for a passport '
     ownerName: Roy
-    location: Yorkset
+    location: 'Yorkset & Woodhill '
     start: 0
     complete: 0
     idSort: 18
@@ -171,7 +171,7 @@ MonoBehaviour:
     respect: 2
     idHelp: 13
   - task: Supply of water from Fred
-    ownerName: Jaxon
+    ownerName: Jaxon & Fred
     location: Yorkset
     start: 0
     complete: 0
@@ -180,8 +180,8 @@ MonoBehaviour:
     respect: 0
     idHelp: 14
   - task: 20 packs of cigarettes for Joshua
-    ownerName: Jaxon
-    location: Yorkset
+    ownerName: Jaxon & Joshua
+    location: Yorkset & Watown
     start: 0
     complete: 0
     idSort: 12
@@ -198,8 +198,8 @@ MonoBehaviour:
     respect: 2
     idHelp: 16
   - task: Bring the package to Ashemo
-    ownerName: Thomas
-    location: Moolow Isles
+    ownerName: Ashemo & Thomas
+    location: New Tolham & Moolow Isles
     start: 0
     complete: 0
     idSort: 17
@@ -244,7 +244,7 @@ MonoBehaviour:
     idHelp: 21
   - task: Kill the cyclops and secure the uranium deposits in the subway
     ownerName: Joshua
-    location: Watown
+    location: Watown & Subway
     start: 0
     complete: 0
     idSort: 23
