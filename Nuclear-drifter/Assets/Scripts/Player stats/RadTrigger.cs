@@ -8,7 +8,9 @@ public class RadTrigger : MonoBehaviour
     private SoundsTrigger st;
     public bool playerIsNear = false;
     public float counter = 0.0f;
-    private float counterMax = 2.0f;
+    private float counterMaxCurrent= 2.5f;
+    private float counterMaxNoRes = 2.5f;
+    private float counterMaxRes = 3.5f;
     private bool death = false;
     private TypeScene typeSc;
     private bool radRes = false;
@@ -21,6 +23,10 @@ public class RadTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         radRes = SkillsAndPerks.playerSkill.radResistance;
+        if (radRes)
+            counterMaxCurrent = counterMaxRes;
+        else
+            counterMaxCurrent = counterMaxNoRes;
         health = collision.GetComponentInParent<Health>();
         if (health != null && !typeSc.combatState)
         {
@@ -37,7 +43,7 @@ public class RadTrigger : MonoBehaviour
         if (health != null && !typeSc.combatState)
         {
             playerIsNear = true;
-            if(!health.isRad)Invoke("SetRad", radRes ? 3.5f : 2.5f);
+            //if(!health.isRad)Invoke("SetRad", radRes ? 3.5f : 2.5f);
             typeSc.radZone = true;
             if (st == null) st = FindObjectOfType<SoundsTrigger>();
             if (st != null) if(!st.isPlayed()) st.StartGeiger();
@@ -65,11 +71,17 @@ public class RadTrigger : MonoBehaviour
     {
         if(health != null && !typeSc.combatState)
         {
-            if(playerIsNear && health.isRad && !health.isDead())
+            if(playerIsNear && !health.isDead())
             {
-                if(counter >= counterMax)
+                if(counter >= counterMaxCurrent)
                 {
-                    health.Damage(radRes ? 10 : 20);
+                    if(health.levelRad < 3)
+                        health.SetRad(true);
+                    else
+                    {
+                        if (!death) health.Damage(health.currentHealth);
+                    }
+                        
                     counter = 0.0f;
                 }
                 else

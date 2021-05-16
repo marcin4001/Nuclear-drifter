@@ -63,6 +63,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.maxHealth = 80;
         PropertyPlayer.property.isPoison = false;
         PropertyPlayer.property.isRad = false;
+        PropertyPlayer.property.levelRad = 0;
 
         PropertyPlayer.property.day = 1;
         PropertyPlayer.property.hour = 5;

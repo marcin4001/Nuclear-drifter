@@ -10,7 +10,13 @@ public class Health : MonoBehaviour
     public bool isRad = false;
     public bool isPoison = false;
     public int maxAfterRad = 0;
+    public int levelRad = 0;
+    private RadMeterUI radMeter;
 
+    private void Awake()
+    {
+        radMeter = FindObjectOfType<RadMeterUI>();
+    }
 
     public bool isFull()
     {
@@ -29,23 +35,55 @@ public class Health : MonoBehaviour
         SetFull();
     }
 
+    public void SetRadStart(bool value, int level)
+    {
+        isRad = value;
+        levelRad = level;
+        if (levelRad == 1)
+        {
+            maxAfterRad = maxHealth;
+            maxHealth = (int)(0.8f * maxHealth);
+        }
+        else if (levelRad == 2)
+        {
+            maxHealth = (int)(0.7f * maxAfterRad);
+        }
+        else if (levelRad == 3)
+        {
+            maxHealth = (int)(0.6f * maxAfterRad);
+        }
+        radMeter.SetRadLevel(levelRad);
+    }
+
     public void SetRad(bool value)
     {
-        
         if(value)
         {
-            if (!isRad)
+            int temp = levelRad + 1;
+            if (temp <= 3)
+                levelRad = temp;
+            if (levelRad == 1)
             {
                 maxAfterRad = maxHealth;
                 maxHealth = (int)(0.8f * maxHealth);
-                if (currentHealth > maxHealth) currentHealth = maxHealth;
             }
+            else if(levelRad == 2)
+            {
+                maxHealth = (int)(0.7f * maxAfterRad);
+            }
+            else if(levelRad == 3)
+            {
+                maxHealth = (int)(0.6f * maxAfterRad);
+            }
+            if (currentHealth > maxHealth) currentHealth = maxHealth;
         }
         else
         {
             maxHealth = maxAfterRad;
+            levelRad = 0;
         }
         isRad = value;
+        radMeter.SetRadLevel(levelRad);
     }
 
     public void SetPoison(bool value)

@@ -10,6 +10,7 @@ public class PropertyPlayer : MonoBehaviour
     public int currentHealth = 0;
     public int maxHealth = 0;
     public bool isRad = false;
+    public int levelRad = 0;
     public bool isPoison = false;
 
     public int day = 0;
@@ -50,6 +51,7 @@ public class PropertyPlayer : MonoBehaviour
         property.maxHealth = playerHP.maxAfterRad;
         property.isPoison = playerHP.isPoison;
         property.isRad = playerHP.isRad;
+        property.levelRad = playerHP.levelRad;
 
         property.day = time.day;
         property.hour = time.hour;

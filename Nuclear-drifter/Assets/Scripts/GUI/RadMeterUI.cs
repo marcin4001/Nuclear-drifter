@@ -14,10 +14,10 @@ public class RadMeterUI : MonoBehaviour
     public Image backgroundImg;
     public Image pointerImg;
     // Start is called before the first frame update
-    void Start()
-    {
-        SetRadLevel(test);
-    }
+    //void Start()
+    //{
+    //    SetRadLevel(test);
+    //}
 
     public void SetRadLevel(int level)
     {
@@ -47,16 +47,16 @@ public class RadMeterUI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            if (test >= 3)
-                test = 0;
-            else
-                test++;
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.X))
+    //    {
+    //        if (test >= 3)
+    //            test = 0;
+    //        else
+    //            test++;
 
-            SetRadLevel(test);
-        }
-    }
+    //        SetRadLevel(test);
+    //    }
+    //}
 }

@@ -25,6 +25,7 @@ public class CarpetInterior : MonoBehaviour
             PropertyPlayer.property.maxHealth = playerHP.maxAfterRad;
             PropertyPlayer.property.isPoison = playerHP.isPoison;
             PropertyPlayer.property.isRad = playerHP.isRad;
+            PropertyPlayer.property.levelRad = playerHP.levelRad;
 
             PropertyPlayer.property.day = time.day;
             PropertyPlayer.property.hour = time.hour;
