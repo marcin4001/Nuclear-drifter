@@ -85,7 +85,7 @@ public class GridNode : MonoBehaviour
                 if (walkable)
                 {
                     Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)pos, nodeRadius - 0.3f);
-                    foreach(Collider2D c in col) if (c.tag == "Obstacle" || c.tag == "Wall" || c.tag == "Chest" || c.tag == "WaterCol") walkable = false;
+                    foreach (Collider2D c in col) if (c.tag == "Obstacle" || c.tag == "Wall" || c.tag == "Chest" || c.tag == "WaterCol" || c.tag == "Well") walkable = false;
                 }
                 nodes[x, y] = new Node(walkable, pos, x, y);
             }
@@ -110,7 +110,7 @@ public class GridNode : MonoBehaviour
                 if (walkable)
                 {
                     Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)pos, nodeRadius - 0.3f);
-                    foreach (Collider2D c in col) if (c.tag == "Obstacle" || c.tag == "Wall" || c.tag == "Chest" || c.tag == "WaterCol") walkable = false;
+                    foreach (Collider2D c in col) if (c.tag == "Obstacle" || c.tag == "Wall" || c.tag == "Chest" || c.tag == "WaterCol" || c.tag == "Well") walkable = false;
                 }
                 nodes[x, y].walkable = walkable;
             }
