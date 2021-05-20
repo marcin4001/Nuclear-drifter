@@ -91,7 +91,7 @@ public class MenuUI : MonoBehaviour
         {
             device.Reset();
         }
-
+        PropertyPlayer.property.waterDay = 0;
         SaveAndLoad.NewGame();
     }
 }

@@ -5,13 +5,19 @@ using UnityEngine;
 public class Well : MonoBehaviour
 {
     public int id_mission = 0;
+    public Slot water;
     private GUIScript gUI;
     private PlayerClickMove move;
+    private Inventory inv;
+    private TimeGame time;
+
     // Start is called before the first frame update
     void Start()
     {
         gUI = FindObjectOfType<GUIScript>();
         move = FindObjectOfType<PlayerClickMove>();
+        inv = FindObjectOfType<Inventory>();
+        time = FindObjectOfType<TimeGame>();
     }
 
     public void ShowText()
@@ -21,21 +27,31 @@ public class Well : MonoBehaviour
 
     public void Use()
     {
-        MissionObj mission = MissionList.global.GetMission(id_mission);
-        if(mission.complete)
+        if(!move.ObjIsNear("Well", 1.0f))
         {
-            if(move.ObjIsNear("Well", 1.0f))
-            {
-                gUI.AddText("You got 1x Clean water");
-            }
-            else
-            {
-                gUI.AddText("The well is too far");
-            }
+            gUI.AddText("The well is too far");
+            return;
         }
-        else
+        MissionObj mission = MissionList.global.GetMission(id_mission);
+        if(!mission.complete)
         {
             gUI.AddText("The well is dry");
+            return;
         }
+        if(time.day == PropertyPlayer.property.waterDay)
+        {
+            gUI.AddText("End of water for today");
+            return;
+        }
+        Slot temp = inv.FindItem(water.id);
+        if(inv.IsFull() && temp == null)
+        {
+            gUI.AddText("Inventory is full");
+            return;
+        }
+
+        inv.Add(water);
+        PropertyPlayer.property.waterDay = time.day;
+        gUI.AddText("You got " + water.GetAmount() + "x " + water.itemElement.nameItem);
     }
 }

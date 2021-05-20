@@ -28,6 +28,8 @@ public class PropertyPlayer : MonoBehaviour
     public string currentScene;
     public bool trapdoorOpened = false;
 
+    public int waterDay = 0;
+
     // Start is called before the first frame update
     void Awake()
     {
