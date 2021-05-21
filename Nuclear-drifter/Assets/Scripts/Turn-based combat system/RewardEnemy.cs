@@ -19,17 +19,17 @@ public class RewardEnemy : MonoBehaviour
 
     public void GiveItem()
     {
-        if(!inv.IsFull())
-        {
-           if(item.itemElement.idItem != moneyId) gUI.AddText("You got " + item.itemElement.nameItem + " x" + item.amountItem);
-           else gUI.AddText("You got $" + item.amountItem);
-            inv.Add(item);
-        }
-        else
+        if(inv.IsFull() && !inv.FindItemB(item.itemElement.idItem))
         {
             GameObject obj = Instantiate(itemPref, transform.position, Quaternion.identity);
             ItemElement itemEl = obj.GetComponent<ItemElement>();
             if (itemEl != null) itemEl.item = item;
+        }
+        else
+        {
+            if (item.itemElement.idItem != moneyId) gUI.AddText("You got " + item.itemElement.nameItem + " x" + item.amountItem);
+            else gUI.AddText("You got $" + item.amountItem);
+            inv.Add(item);
         }
     }
 }

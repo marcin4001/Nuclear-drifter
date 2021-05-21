@@ -19,15 +19,15 @@ public class MissionPrize : MonoBehaviour
         {
             if (p.chest == null)
             {
-                if (!inv.IsFull())
-                {
-                    inv.Add(p.itemPrize);
-                }
-                else
+                if (inv.IsFull() && !inv.FindItemB(p.itemPrize.itemElement.idItem))
                 {
                     GameObject obj = Instantiate(p.prefItem, p.spawnPos, Quaternion.identity);
                     ItemElement item = obj.GetComponent<ItemElement>();
                     if (item != null) item.item = p.itemPrize;
+                }
+                else
+                {
+                    inv.Add(p.itemPrize);
                 }
             }
             else

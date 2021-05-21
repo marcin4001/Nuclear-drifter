@@ -52,6 +52,6 @@ public class Well : MonoBehaviour
 
         inv.Add(water);
         PropertyPlayer.property.waterDay = time.day;
-        gUI.AddText("You got " + water.GetAmount() + "x " + water.itemElement.nameItem);
+        gUI.AddText("You got " + water.amountItem + "x " + water.itemElement.nameItem);
     }
 }
