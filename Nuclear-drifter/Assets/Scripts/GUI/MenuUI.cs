@@ -10,6 +10,8 @@ public class MenuUI : MonoBehaviour
     public int idStartMission = 0;
     public OptionsMenu options;
     public CreditsCanvas credits;
+
+    public string urlHowToPlay;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +57,11 @@ public class MenuUI : MonoBehaviour
     {
         Application.Quit(0);
         Debug.Log("Exit");
+    }
+
+    public void HowToPlayOpen()
+    {
+        Application.OpenURL(urlHowToPlay);
     }
 
     private void ResetProperty()
