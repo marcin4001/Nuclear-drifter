@@ -33,6 +33,22 @@ public class EnemyMissionList : MonoBehaviour
         } 
     }
 
+    public int HowMunyAlive(int id_mission)
+    {
+        if (enemies.Length <= 0) return 0;
+        int count = 0;
+        foreach(EnemyMission enemy in enemies)
+        {
+            if (enemy.idMission == id_mission && !enemy.isKilled)
+                count += 1;
+        }
+        return count;
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+            Debug.Log(HowMunyAlive(23));
+    }
     public static string GetJson()
     {
         string json = JsonUtility.ToJson(global);
