@@ -11970,6 +11970,8 @@ GameObject:
   - component: {fileID: 332471126075985368}
   - component: {fileID: 4331093457963952469}
   - component: {fileID: 1890147639320098360}
+  - component: {fileID: 1890147639320098361}
+  - component: {fileID: 1890147639320098362}
   m_Layer: 0
   m_Name: Gordon_78
   m_TagString: NPC
@@ -11998,10 +12000,51 @@ MonoBehaviour:
   modules:
   - {fileID: 11400000, guid: 3d8112346a4cde64eaf16bf74e55d11f, type: 2}
   - {fileID: 11400000, guid: 8d69eaaa45062054db76992b1fbb9493, type: 2}
+  - {fileID: 11400000, guid: 4e8f5bbb9d46cb744b67f46cfb5d3c4f, type: 2}
+  - {fileID: 11400000, guid: 62901e30d98426540b7428d754ccdd1b, type: 2}
   startIndex: 0
   indexNPC: 2
   distance: 1.1
   nPCJob: {fileID: 0}
+--- !u!114 &1890147639320098361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890147639320098359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716f8e6e95694fb4ea12710b3abe6e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mission:
+  - id: 23
+    type: 0
+    dialogSuccess: 3
+    dialogNormal: 3
+    dialogComplete: 3
+    slotItem:
+      itemElement: {fileID: 0}
+      amountItem: 0
+      ammo: 0
+      id: -1
+    needItem: 0
+    removeAll: 0
+    indexDevice: 0
+    noRemove: 0
+--- !u!114 &1890147639320098362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890147639320098359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f3eb6677d0d92428a4ba255eae4077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1892455457675511256
 Transform:
   m_ObjectHideFlags: 0

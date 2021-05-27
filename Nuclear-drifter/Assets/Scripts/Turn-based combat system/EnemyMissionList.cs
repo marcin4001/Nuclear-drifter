@@ -44,11 +44,11 @@ public class EnemyMissionList : MonoBehaviour
         }
         return count;
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-            Debug.Log(HowMunyAlive(23));
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.H))
+    //        Debug.Log(HowMunyAlive(23));
+    //}
     public static string GetJson()
     {
         string json = JsonUtility.ToJson(global);

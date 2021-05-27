@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
-  m_Name: Gordon1
+  m_Name: Gordon4
   m_EditorClassIdentifier: 
   dialogues:
   - choice: Can you tell me something about nuclear war?
@@ -38,12 +38,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
-  - choice: Do you have a job for me, Colonel?
-    reply: I have one job that someone outside of my soldiers can do. A week ago,
-      a group of bandits from the north stole a shipment of weapons from our base
-      in Cuba. If you are strong enough, you can kill them. Do you accept this quest,
-      stranger?
-    nextModule: 2
+  - choice: Can you remind me where the Bandit Camp is?
+    reply: Ok. The Bandit camp is located northeast of Watown.
+    nextModule: 0
     missionStart: 0
     startIdMission: 0
     missionEnd: 0
