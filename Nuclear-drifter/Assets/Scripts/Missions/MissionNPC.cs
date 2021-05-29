@@ -100,6 +100,11 @@ public class MissionNPC : MonoBehaviour
                                 DeviceMission(m);
                                 break;
                             }
+                        case MissionType.kill:
+                            {
+                                KillMission(m);
+                                break;
+                            }
                         default:
                             {
                                 npc.SetStartIndex(m.dialogSuccess);
@@ -144,6 +149,19 @@ public class MissionNPC : MonoBehaviour
             {
                 npc.SetStartIndex(m.dialogNormal);
             }
+        }
+        else
+        {
+            npc.SetStartIndex(m.dialogNormal);
+        }
+    }
+
+    private void KillMission(MissionDetails m)
+    {
+        int enemiesAlive = EnemyMissionList.global.HowMunyAlive(m.id);
+        if(enemiesAlive <= 0)
+        {
+            npc.SetStartIndex(m.dialogSuccess);
         }
         else
         {

@@ -3893,6 +3893,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2020665432, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.010986328
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020665432, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.013000488
+      objectReference: {fileID: 0}
     - target: {fileID: 2053209060, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -11972,6 +11980,7 @@ GameObject:
   - component: {fileID: 1890147639320098360}
   - component: {fileID: 1890147639320098361}
   - component: {fileID: 1890147639320098362}
+  - component: {fileID: 1890147639320098363}
   m_Layer: 0
   m_Name: Gordon_78
   m_TagString: NPC
@@ -12002,6 +12011,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8d69eaaa45062054db76992b1fbb9493, type: 2}
   - {fileID: 11400000, guid: 4e8f5bbb9d46cb744b67f46cfb5d3c4f, type: 2}
   - {fileID: 11400000, guid: 62901e30d98426540b7428d754ccdd1b, type: 2}
+  - {fileID: 11400000, guid: eff2251d0ca776e48ab95d6a456e8e2a, type: 2}
+  - {fileID: 11400000, guid: e2b026ccd63b36246ada30aaf6d0e923, type: 2}
   startIndex: 0
   indexNPC: 2
   distance: 1.1
@@ -12020,10 +12031,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission:
   - id: 23
-    type: 0
-    dialogSuccess: 3
+    type: 2
+    dialogSuccess: 4
     dialogNormal: 3
-    dialogComplete: 3
+    dialogComplete: 5
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -12045,6 +12056,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f3eb6677d0d92428a4ba255eae4077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1890147639320098363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890147639320098359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c51dbb3ded77f498711cb54b5027c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizes:
+  - idMission: 23
+    itemPrize:
+      itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
+      amountItem: 250
+      ammo: 0
+      id: 0
+    spawnPos: {x: 8, y: 10}
+    prefItem: {fileID: 7123670530575232170, guid: 786492bc87cb25e4aa460537d3c4f211,
+      type: 3}
+    chest: {fileID: 0}
 --- !u!4 &1892455457675511256
 Transform:
   m_ObjectHideFlags: 0
