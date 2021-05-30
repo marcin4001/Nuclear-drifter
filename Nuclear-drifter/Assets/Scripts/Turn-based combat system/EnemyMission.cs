@@ -14,6 +14,11 @@ public class EnemyMission
         isKilled = true;
     }
 
+    public void Reset()
+    {
+        isKilled = false;
+    }
+
     public bool GetIsKilled()
     {
         return isKilled;

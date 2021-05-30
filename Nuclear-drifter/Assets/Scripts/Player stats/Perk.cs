@@ -15,4 +15,10 @@ public class Perk
         if (inc)
             level = level + 1;
     }
+
+    public void Reset()
+    {
+        playerHas = false;
+        level = 0;
+    }
 }

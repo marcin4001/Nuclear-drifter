@@ -87,6 +87,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.currentExp = 0;
         PropertyPlayer.property.level = 1;
         PropertyPlayer.property.prevTh = 0;
+        PropertyPlayer.property.lvlPoint = 0;
         MissionList.global.StartMission(idStartMission);
 
         foreach(MissionObj mission in MissionList.global.missions)
@@ -98,6 +99,12 @@ public class MenuUI : MonoBehaviour
         {
             device.Reset();
         }
+
+        foreach(EnemyMission enemy in EnemyMissionList.global.enemies)
+        {
+            enemy.Reset();
+        }
+        SkillsAndPerks.playerSkill.SetDefault();
         PropertyPlayer.property.waterDay = 0;
         SaveAndLoad.NewGame();
     }

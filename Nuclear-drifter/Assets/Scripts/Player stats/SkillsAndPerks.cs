@@ -34,6 +34,21 @@ public class SkillsAndPerks : MonoBehaviour
             return null;
     }
 
+    public void SetDefault()
+    {
+        foreach(Perk perk in perks)
+        {
+            perk.Reset();
+        }
+        handDamage = 5;
+        additionalGunDamage = 0;
+        largeGun = false;
+        radResistance = false;
+        poisonResistance = false;
+        damageResistance = 0;
+        repair = false;
+    }
+
     public static string GetJson()
     {
         string json = JsonUtility.ToJson(playerSkill);
