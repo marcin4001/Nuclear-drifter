@@ -16,6 +16,7 @@ public class PerksPanel : MonoBehaviour
     private MapControl map;
     private FadePanel fade;
     private Experience exp;
+    private Health playerHP;
     private bool active = false;
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class PerksPanel : MonoBehaviour
         fade = FindObjectOfType<FadePanel>();
         perksCanvas = GetComponent<Canvas>();
         exp = FindObjectOfType<Experience>();
+        playerHP = FindObjectOfType<Health>();
         perksCanvas.enabled = false;
 
         PerkElement[] perks = FindObjectsOfType<PerkElement>();
@@ -149,7 +151,6 @@ public class PerksPanel : MonoBehaviour
         {
             case TypePerk.hp:
                 {
-                    Health playerHP = FindObjectOfType<Health>();
                     playerHP.AddToMaxHealth(currentPerk.value);
                     break;
                 }
@@ -183,5 +184,6 @@ public class PerksPanel : MonoBehaviour
     {
         consoleDesc.text = info + "\n";
         consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+        consoleDesc.text += "Health: " + playerHP.currentHealth + "/" + playerHP.maxHealth + "\n";
     }
 }
