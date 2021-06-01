@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogues:
   - choice: Drink it! It will help you!
     reply: "Ouch. Thanks! I feel better already. \rI thought I was going to die.
-      Please take that $ 50 as a reward. If you ever look for me, I live in the house
+      Please take that $50 as a reward. If you ever look for me, I live in the house
       to the left of Karen's house."
     nextModule: 0
     missionStart: 0
@@ -23,6 +23,8 @@ MonoBehaviour:
     missionEnd: 1
     endIdMission: 7
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Take care!
     reply: 
     nextModule: -1
@@ -31,3 +33,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
