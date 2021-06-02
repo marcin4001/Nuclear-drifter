@@ -40,6 +40,7 @@ public class MessageBox : MonoBehaviour
         gUI.blockGUI = false;
         Time.timeScale = 1.0f;
         if (menu != null) menu.activeEsc = true;
+        door = null;
     }
 
     public void ButtonYes()
