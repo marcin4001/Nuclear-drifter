@@ -15,6 +15,7 @@ public class MenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
         options = FindObjectOfType<OptionsMenu>();
         credits = FindObjectOfType<CreditsCanvas>();
@@ -24,17 +25,10 @@ public class MenuUI : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void NewGame()
     {
         ResetProperty();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Prologue");
     }
 
     public void LoadBtn()

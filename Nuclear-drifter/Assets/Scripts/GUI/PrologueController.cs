@@ -13,11 +13,21 @@ public class PrologueController : MonoBehaviour
     public Animator anim;
     public bool activeEnter = true;
     public string sceneName;
+    private LoadingScreen loading;
     // Start is called before the first frame update
     void Start()
     {
+        loading = FindObjectOfType<LoadingScreen>();
         backgroundImg.overrideSprite = prologueObjs[currentIndex].backgroundImg;
         text.text = prologueObjs[currentIndex].text;
+        StartCoroutine(StartActiveEnter());
+    }
+
+    private IEnumerator StartActiveEnter()
+    {
+        activeEnter = false;
+        yield return new WaitForSeconds(1.5f);
+        activeEnter = true;
     }
 
     // Update is called once per frame
@@ -35,19 +45,19 @@ public class PrologueController : MonoBehaviour
         anim.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1.5f);
         currentIndex += 1;
-        if (currentIndex < prologueObjs.Length)
+        if(currentIndex >= prologueObjs.Length)
+        {
+            loading.ShowLoading();
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.LoadScene(sceneName);
+        }
+        else
         {
             backgroundImg.overrideSprite = prologueObjs[currentIndex].backgroundImg;
             text.text = prologueObjs[currentIndex].text;
         }
-        else
-        {
-            SceneManager.LoadScene(sceneName);
-        }
         anim.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
-        //if (currentIndex < prologueObjs.Length)
-        //    text.text = prologueObjs[currentIndex].text;
         activeEnter = true;
     }
 }
