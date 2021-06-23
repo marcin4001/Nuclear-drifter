@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7654490476112385808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7654490476112385810}
+  - component: {fileID: 7654490476112385809}
+  m_Layer: 0
+  m_Name: GunOffer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7654490476112385810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654490476112385808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.14583, y: 31.56037, z: -97.0506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7654490476112385809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654490476112385808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bccaea82e91e9a543bd88c382035e6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - itemElement: {fileID: 11400000, guid: a7d039bdb71f64f46a04822948772004, type: 2}
+    amountItem: 1
+    ammo: 10
+    id: -1
+  - itemElement: {fileID: 11400000, guid: 2bf278af5b5a9a6459e05f19b221987b, type: 2}
+    amountItem: 1
+    ammo: 10
+    id: -1
+  - itemElement: {fileID: 11400000, guid: 76eeae42fa06d524b999128e997522e8, type: 2}
+    amountItem: 1
+    ammo: 10
+    id: -1
+  - itemElement: {fileID: 11400000, guid: c322fe7f821885543886723b2dea70d4, type: 2}
+    amountItem: 1
+    ammo: 10
+    id: -1
+  - itemElement: {fileID: 11400000, guid: aa9378ba9fb7acd49a693eff56b509ef, type: 2}
+    amountItem: 10
+    ammo: 1
+    id: -1
+  - itemElement: {fileID: 11400000, guid: cb2f8c024e84ab24396ad945ad39a653, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
+  - itemElement: {fileID: 11400000, guid: 78ddf49d435464749ae064d35d8c6947, type: 2}
+    amountItem: 2
+    ammo: 0
+    id: -1
