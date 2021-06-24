@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
-  m_Name: Sheo1
+  m_Name: Sheo2
   m_EditorClassIdentifier: 
   dialogues:
   - choice: What are you doing here?
@@ -37,11 +37,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
-  - choice: Is there anything I can do for you?
-    reply: 'Yes, a few days ago I found a beautiful vase by one of those strange
-      statues. Unfortunately I don''t remember which statue the vase was by because
-      I was drunk at the time. Find that vase and bring it here.I''ll give you 100
-      dollars for it. '
+  - choice: Where should I look for this vase?
+    reply: I found the vase under one of the strange statues on the shore. There
+      are only 4 such statues on the continent and they are all by the shore.
     nextModule: 0
     missionStart: 0
     startIdMission: 0
