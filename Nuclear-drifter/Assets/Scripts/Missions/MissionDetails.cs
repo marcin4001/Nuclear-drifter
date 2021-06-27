@@ -17,10 +17,12 @@ public class MissionDetails
     public int dialogSuccess;
     public int dialogNormal;
     public int dialogComplete;
+    public int dialogAlt;
 
     public Slot slotItem;
     public bool needItem;
     public bool removeAll;
     public int indexDevice;
     public bool noRemove;
+    public bool killAlt;
 }

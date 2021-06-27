@@ -7,7 +7,7 @@ public class Dialogue
 {
     [TextArea(2,4)]
     public string choice = "";
-    [TextArea(2,4)]
+    [TextArea(2,6)]
     public string reply = "";
     public int nextModule = 0;
     public bool missionStart = false;

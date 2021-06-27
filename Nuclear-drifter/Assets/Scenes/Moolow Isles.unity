@@ -11137,6 +11137,7 @@ MonoBehaviour:
     dialogSuccess: 1
     dialogNormal: 1
     dialogComplete: 2
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -11146,6 +11147,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &179900299793879684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11321,6 +11324,7 @@ MonoBehaviour:
     dialogSuccess: 2
     dialogNormal: 1
     dialogComplete: 3
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: 5c1cdcd2a5429ee4ab5726f7024dd584, type: 2}
       amountItem: 1
@@ -11330,6 +11334,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &379503994594862610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12013,6 +12019,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 62901e30d98426540b7428d754ccdd1b, type: 2}
   - {fileID: 11400000, guid: eff2251d0ca776e48ab95d6a456e8e2a, type: 2}
   - {fileID: 11400000, guid: e2b026ccd63b36246ada30aaf6d0e923, type: 2}
+  - {fileID: 11400000, guid: 4848db31dbec70242ba48e824499f4bb, type: 2}
   startIndex: 0
   indexNPC: 2
   distance: 1.1
@@ -12035,15 +12042,18 @@ MonoBehaviour:
     dialogSuccess: 4
     dialogNormal: 3
     dialogComplete: 5
+    dialogAlt: 6
     slotItem:
-      itemElement: {fileID: 0}
-      amountItem: 0
+      itemElement: {fileID: 11400000, guid: 82fb28bd393eae44d852f78847bd33e3, type: 2}
+      amountItem: 6
       ammo: 0
       id: -1
     needItem: 0
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 1
+  doAlt: 0
 --- !u!114 &1890147639320098362
 MonoBehaviour:
   m_ObjectHideFlags: 0

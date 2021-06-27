@@ -5,6 +5,7 @@ using UnityEngine;
 public class MissionNPC : MonoBehaviour
 {
     public MissionDetails[] mission;
+    public bool doAlt = false;
     private Inventory inv;
     private NPCBasic npc;
     private MissionPrize prize;
@@ -45,7 +46,10 @@ public class MissionNPC : MonoBehaviour
     {
         MissionList.global.CompleteMission(id);
         int amountExp = MissionList.global.GetExp(id);
-        exp.AddExp(amountExp);
+        if(!doAlt)
+            exp.AddExp(amountExp);
+        else
+            exp.AddExp(amountExp/2);
         MissionDetails m = GetMission(id);
         if(m != null)
         {
@@ -55,6 +59,8 @@ public class MissionNPC : MonoBehaviour
                 if(!m.removeAll)inv.RemoveFew(m.slotItem);
                 else inv.RemoveAllId(m.slotItem.itemElement.idItem);
             }
+            if(m.killAlt)
+                inv.RemoveFew(m.slotItem);
         }
         if(prize != null)
         {
@@ -161,11 +167,31 @@ public class MissionNPC : MonoBehaviour
         int enemiesAlive = EnemyMissionList.global.HowMunyAlive(m.id);
         if(enemiesAlive <= 0)
         {
+            doAlt = false;
             npc.SetStartIndex(m.dialogSuccess);
         }
         else
         {
-            npc.SetStartIndex(m.dialogNormal);
+            if(m.killAlt)
+            {
+                if(inv.CheckAccessItem(m.slotItem))
+                {
+                    Debug.Log(inv.CheckAccessItem(m.slotItem));
+                    Debug.Log(m.slotItem.itemElement.nameItem);
+                    doAlt = true;
+                    npc.SetStartIndex(m.dialogAlt);
+                }
+                else
+                {
+                    doAlt = false;
+                    npc.SetStartIndex(m.dialogNormal);
+                }
+            }
+            else
+            {
+                doAlt = false;
+                npc.SetStartIndex(m.dialogNormal);
+            }
         }
     }
 }

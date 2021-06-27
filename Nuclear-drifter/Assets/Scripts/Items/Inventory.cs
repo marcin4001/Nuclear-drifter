@@ -161,10 +161,13 @@ public class Inventory : MonoBehaviour
 
     public bool CheckAccessItem(Slot _slot)
     {
+        Debug.Log(_slot.itemElement.idItem);
         Slot temp = FindItem(_slot.itemElement.idItem);
+        
         if(temp != null)
         {
-            if(temp.amountItem >= _slot.amountItem)
+            Debug.Log(temp.itemElement.name);
+            if (temp.amountItem >= _slot.amountItem)
             {
                 return true;
             }
