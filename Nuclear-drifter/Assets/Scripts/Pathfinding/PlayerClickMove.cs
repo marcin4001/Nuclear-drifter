@@ -194,7 +194,7 @@ public class PlayerClickMove : MonoBehaviour
             bool isWall = true;
             foreach (RaycastHit2D n in nodes)
             {
-                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Chest" || n.collider.tag == "Trapdoor" || n.collider.tag == "Well")
+                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Chest" || n.collider.tag == "Trapdoor" || n.collider.tag == "Well" || n.collider.tag == "EnemyInfo")
                 {
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     wall = null;
