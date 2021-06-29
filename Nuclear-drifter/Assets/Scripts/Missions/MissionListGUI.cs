@@ -67,6 +67,8 @@ public class MissionListGUI : MonoBehaviour
                 if (mission.start && !mission.complete)
                 {
                     content += mission.task + "\n";
+                    if(mission.alt != "")
+                        content += "Alternative: " + mission.alt + "\n";
                     content += "NPC: " + mission.ownerName + "\n";
                     content += "Location: " + mission.location + "\n";
                     content += separator;
@@ -91,6 +93,8 @@ public class MissionListGUI : MonoBehaviour
                 if (mission.complete)
                 {
                     content += mission.task + "\n";
+                    if (mission.alt != "")
+                        content += "Alternative: " + mission.alt + "\n";
                     content += "NPC: " + mission.ownerName + "\n";
                     content += "Location: " + mission.location + "\n";
                     content += separator;

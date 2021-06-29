@@ -33,7 +33,7 @@ public class PrologueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return) && activeEnter)
+        if((Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0)) && activeEnter)
         {
             StartCoroutine(ChangeBgImage());
         }

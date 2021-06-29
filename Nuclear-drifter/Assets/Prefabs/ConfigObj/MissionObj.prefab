@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missions:
   - task: Collect 12 wood logs
+    alt: 
     ownerName: John
     location: Woodhill
     start: 0
@@ -54,6 +55,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 0
   - task: Take 10 fish to Bruce in Watown
+    alt: 
     ownerName: Steve & Bruce
     location: Woodhill & Watown
     start: 0
@@ -63,6 +65,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 1
   - task: Pay Steve $10 for the fish
+    alt: 
     ownerName: Bruce &  Steve
     location: Watown & Woodhill
     start: 0
@@ -72,6 +75,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 2
   - task: Bring Noah a bottle of clean water
+    alt: 
     ownerName: Noah
     location: Woodhill
     start: 0
@@ -81,6 +85,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 3
   - task: Repairing the central purifier
+    alt: 
     ownerName: Noah
     location: Woodhill
     start: 0
@@ -90,6 +95,7 @@ MonoBehaviour:
     respect: 2
     idHelp: 4
   - task: Bring the wreath to your husband's grave.
+    alt: 
     ownerName: Karen
     location: Watown & Cemetery
     start: 0
@@ -99,6 +105,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 5
   - task: Bring at least 5 mushroom type B for the doctor.
+    alt: 
     ownerName: dr Paul
     location: Watown
     start: 0
@@ -108,6 +115,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 6
   - task: Heal Dr Paul's patient. (Rad Killer Duo)
+    alt: 
     ownerName: dr Paul & Gary
     location: Watown
     start: 0
@@ -117,6 +125,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 7
   - task: Bring the contract to Jaxon in Yorkset.
+    alt: 
     ownerName: Joshua & Jaxon
     location: Watown & Yorkset
     start: 0
@@ -126,6 +135,7 @@ MonoBehaviour:
     respect: 2
     idHelp: 8
   - task: Kill Wolves wild wolves and bring back their meat.
+    alt: 
     ownerName: Jason
     location: New Tolham
     start: 0
@@ -135,6 +145,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 9
   - task: Look for Tyler at the inn.
+    alt: 
     ownerName: Mary & Tyler
     location: New Tolham & Inn
     start: 0
@@ -144,6 +155,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 10
   - task: See if Tyler's back home.
+    alt: 
     ownerName: Mary
     location: New Tolham
     start: 0
@@ -153,6 +165,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 11
   - task: A pack of masks from Moolow Isles
+    alt: 
     ownerName: Ashemo & Thomas
     location: New Tolham & Moolow Isles
     start: 0
@@ -162,6 +175,7 @@ MonoBehaviour:
     respect: 2
     idHelp: 12
   - task: 'Bring $500 or Steve''s machete for a passport '
+    alt: 
     ownerName: Roy
     location: 'Yorkset & Woodhill '
     start: 0
@@ -171,6 +185,7 @@ MonoBehaviour:
     respect: 2
     idHelp: 13
   - task: Supply of water from Fred
+    alt: 
     ownerName: Jaxon & Fred
     location: Yorkset
     start: 0
@@ -180,6 +195,7 @@ MonoBehaviour:
     respect: 0
     idHelp: 14
   - task: 20 packs of cigarettes for Joshua
+    alt: 
     ownerName: Jaxon & Joshua
     location: Yorkset & Watown
     start: 0
@@ -189,6 +205,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 15
   - task: Get your Old Zealand passport
+    alt: 
     ownerName: Rick
     location: Moolow Isles
     start: 0
@@ -198,6 +215,7 @@ MonoBehaviour:
     respect: 2
     idHelp: 16
   - task: Bring the package to Ashemo
+    alt: 
     ownerName: Ashemo & Thomas
     location: New Tolham & Moolow Isles
     start: 0
@@ -207,6 +225,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 17
   - task: Disarm the bomb on the island.
+    alt: 
     ownerName: Larry
     location: Moolow Isles
     start: 0
@@ -216,6 +235,7 @@ MonoBehaviour:
     respect: 2
     idHelp: 18
   - task: Bring Glen the antidote from the continent.
+    alt: 
     ownerName: Glen
     location: Moolow Isles
     start: 0
@@ -225,6 +245,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 19
   - task: Find Ted alive or dead on the radiation area next to Woodhill
+    alt: 
     ownerName: Ian
     location: Moolow Isles
     start: 0
@@ -234,6 +255,7 @@ MonoBehaviour:
     respect: 1
     idHelp: 20
   - task: Get water for your sheep
+    alt: 
     ownerName: Me
     location: Home
     start: 0
@@ -243,6 +265,7 @@ MonoBehaviour:
     respect: 0
     idHelp: 21
   - task: Kill the cyclops and secure the uranium deposits in the subway
+    alt: 
     ownerName: Joshua
     location: Watown & Subway
     start: 0
@@ -252,6 +275,7 @@ MonoBehaviour:
     respect: 0
     idHelp: 22
   - task: Get rid of the Bandits from the North
+    alt: Bring 6 missiles
     ownerName: Gordon
     location: Moolow Isles & Bandit Camp
     start: 0
@@ -261,6 +285,7 @@ MonoBehaviour:
     respect: 2
     idHelp: 23
   - task: Find a vase by one of the strange statues
+    alt: 
     ownerName: Sheo
     location: Sheo tent
     start: 0

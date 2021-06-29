@@ -6,6 +6,7 @@ using UnityEngine;
 public class MissionObj
 {
     public string task;
+    public string alt;
     public string ownerName;
     public string location;
     public bool start;
