@@ -34,7 +34,14 @@ public class TradeSlot : MonoBehaviour
                     if (itemSlot.itemElement.GetItemType() == ItemType.Weapon)
                     {
                         WeaponItem weapon = (WeaponItem)itemSlot.itemElement;
-                        if (!weapon.isMeleeWeapon) gUI.AddText("Ammo amount: " + itemSlot.ammo);
+                        if (!weapon.isMeleeWeapon)
+                        {
+                            int cost = Mathf.CeilToInt(itemSlot.itemElement.value * 0.01f) - 1;
+                            if (cost <= 0) cost = 1;
+                            cost *= itemSlot.ammo;
+                            gUI.AddText("Ammo value(10): " + cost + "$");
+                            gUI.AddText("Ammo amount: " + itemSlot.ammo);
+                        }
                     }
                     gUI.AddText("Amount: " + itemSlot.amountItem);
                 }

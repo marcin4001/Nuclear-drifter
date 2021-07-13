@@ -106,6 +106,36 @@ public class MissionList : MonoBehaviour
         return percent;
     }
 
+    public int GetFullRespectUSA()
+    {
+        if (missions.Length == 0) return 0;
+        int fullRespect = 0;
+        foreach (MissionObj m in missions)
+        {
+            fullRespect += m.respectUSA;
+        }
+        return fullRespect;
+    }
+
+    public int GetCurrentRespectUSA()
+    {
+        if (missions.Length == 0) return 0;
+        int respect = 0;
+        foreach (MissionObj m in missions)
+        {
+            if (m.complete) respect += m.respectUSA;
+        }
+        return respect;
+    }
+
+    public int PercentRespectUSA()
+    {
+        int percent = 0;
+        float respectPercent = (float)GetCurrentRespectUSA() / (float)GetFullRespectUSA();
+        percent = (int)(respectPercent * 100);
+        return percent;
+    }
+
     public static string GetJson()
     {
         string json = JsonUtility.ToJson(global);
@@ -116,12 +146,12 @@ public class MissionList : MonoBehaviour
     {
         JsonUtility.FromJsonOverwrite(json, global);
     }
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.R))
-    //    {
-    //        Debug.Log(GetCurrentRespect());
-    //        Debug.Log(PercentRespect() + "%");
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log(GetCurrentRespectUSA());
+            Debug.Log(PercentRespectUSA() + "%");
+        }
+    }
 }

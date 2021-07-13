@@ -6,7 +6,7 @@ using System.IO;
 
 public class SaveAndLoad : MonoBehaviour
 {
-    private static string saveDir = "save_07a";
+    private static string saveDir = "save_08a";
     // Start is called before the first frame update
     void Start()
     {
