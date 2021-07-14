@@ -154,4 +154,10 @@ public class SaveAndLoad : MonoBehaviour
         return false;
     }
 
+    public static bool CanLoad()
+    {
+        string savePath = Path.Combine(Application.persistentDataPath, saveDir);
+        return Directory.Exists(savePath);
+    }
+
 }

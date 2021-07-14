@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     private MapControl mc;
     private Canvas pouseCanvas;
     public Canvas exitMsgCanvas;
+    public Canvas saveMsgCanvas;
+    public Canvas loadMsgCanvas;
     private bool activeMenu = false;
     private GUIScript gUI;
     public bool activeEsc = true;
@@ -24,6 +26,8 @@ public class PauseMenu : MonoBehaviour
         pouseCanvas.enabled = activeMenu;
         gUI = FindObjectOfType<GUIScript>();
         exitMsgCanvas.enabled = false;
+        saveMsgCanvas.enabled = false;
+        loadMsgCanvas.enabled = false;
         Time.timeScale = 1.0f;
         typeSc = FindObjectOfType<TypeScene>();
         options = FindObjectOfType<OptionsMenu>();
@@ -40,19 +44,18 @@ public class PauseMenu : MonoBehaviour
 
     public void SaveBtn()
     {
-        InventoryBox inv = FindObjectOfType<InventoryBox>();
-        NPCList npc = FindObjectOfType<NPCList>();
-        SaveAndLoad.SaveTemp(inv);
-        SaveAndLoad.SaveTemp(npc);
-        SaveAndLoad.HardSave();
-        gUI.AddText("The game has been saved!");
+        activeEsc = false;
+        saveMsgCanvas.enabled = true;
     }
 
     public void LoadBtn()
     {
-        bool isLoad = SaveAndLoad.Load();
+        bool isLoad = SaveAndLoad.CanLoad();
         if (isLoad)
-            SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+        {
+            activeEsc = false;
+            loadMsgCanvas.enabled = true;
+        }
         else
             gUI.AddText("Save doesn't exist!");
     }
@@ -111,6 +114,37 @@ public class PauseMenu : MonoBehaviour
         activeEsc = true;
         exitMsgCanvas.enabled = false;
     }
+
+    public void YesButtonSave()
+    {
+        InventoryBox inv = FindObjectOfType<InventoryBox>();
+        NPCList npc = FindObjectOfType<NPCList>();
+        SaveAndLoad.SaveTemp(inv);
+        SaveAndLoad.SaveTemp(npc);
+        SaveAndLoad.HardSave();
+        gUI.AddText("The game has been saved!");
+        activeEsc = true;
+        saveMsgCanvas.enabled = false;
+    }
+
+    public void NoButtonSave()
+    {
+        activeEsc = true;
+        saveMsgCanvas.enabled = false;
+    }
+
+    public void YesButtonLoad()
+    {
+        SaveAndLoad.Load();
+        SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+    }
+
+    public void NoButtonLoad()
+    {
+        activeEsc = true;
+        loadMsgCanvas.enabled = false;
+    }
+    
 
     public bool GetActive()
     {
