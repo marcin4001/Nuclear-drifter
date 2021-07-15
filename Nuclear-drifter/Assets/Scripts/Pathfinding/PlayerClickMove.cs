@@ -172,7 +172,7 @@ public class PlayerClickMove : MonoBehaviour
         foreach(RaycastHit2D n in nodes)
         {
             Collider2D n_col = n.collider;
-            if(n_col.tag == "Item" || n_col.tag == "Bed" || n_col.tag == "Stove" || n_col.tag == "Chest" || n_col.tag == "NPC" || n_col.tag == "Device" || n_col.tag == "Trapdoor" || n_col.tag == "Well")
+            if(n_col.tag == "Item" || n_col.tag == "Bed" || n_col.tag == "Stove" || n_col.tag == "Chest" || n_col.tag == "NPC" || n_col.tag == "Device" || n_col.tag == "Trapdoor" || n_col.tag == "Well" || n_col.tag == "FirePlace")
             {
                 n.collider.SendMessage("Use", SendMessageOptions.DontRequireReceiver);
                 return;
@@ -194,7 +194,7 @@ public class PlayerClickMove : MonoBehaviour
             bool isWall = true;
             foreach (RaycastHit2D n in nodes)
             {
-                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Chest" || n.collider.tag == "Trapdoor" || n.collider.tag == "Well" || n.collider.tag == "EnemyInfo")
+                if (n.collider.tag == "Obstacle" || n.collider.tag == "Bed" || n.collider.tag == "Info" || n.collider.tag == "Chest" || n.collider.tag == "Trapdoor" || n.collider.tag == "Well" || n.collider.tag == "EnemyInfo" || n.collider.tag == "FirePlace") 
                 {
                     n.collider.SendMessage("ShowText", SendMessageOptions.DontRequireReceiver);
                     wall = null;
@@ -247,7 +247,7 @@ public class PlayerClickMove : MonoBehaviour
                     nodes = Physics2D.RaycastAll(mousePos, Vector2.zero);
                     foreach (RaycastHit2D n in nodes)
                     {
-                        if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest" || n.collider.tag == "Trapdoor" || n.collider.tag == "Well")
+                        if (n.collider.tag == "Item" || n.collider.tag == "Bed" || n.collider.tag == "Stove" || n.collider.tag == "Chest" || n.collider.tag == "Trapdoor" || n.collider.tag == "Well" || n.collider.tag == "FirePlace")
                             isItems = true;
                         if (n.collider.tag == "NPC") isNPC = true;
                         if (n.collider.tag == "Device") isDevice = true;

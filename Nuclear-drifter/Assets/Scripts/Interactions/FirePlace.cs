@@ -1,0 +1,84 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FirePlace : MonoBehaviour
+{
+    private PlayerClickMove move;
+    private DayCycle cycle;
+    private GUIScript gUI;
+    private Inventory inv;
+    private Slot meat;
+    private FadePanel fade;
+    public Slot slot;
+    private SoundsTrigger sound;
+    // Start is called before the first frame update
+    void Start()
+    {
+        move = FindObjectOfType<PlayerClickMove>();
+        cycle = FindObjectOfType<DayCycle>();
+        gUI = FindObjectOfType<GUIScript>();
+        inv = FindObjectOfType<Inventory>();
+        fade = FindObjectOfType<FadePanel>();
+        sound = FindObjectOfType<SoundsTrigger>();
+    }
+
+    public void Use()
+    {
+        int hour = cycle.GetHour();
+        if(hour >= 20 || hour <= 3)
+        {
+            meat = inv.FindItem(212);
+            if(meat != null)
+            {
+                if(!inv.IsFull())
+                {
+                    SetCook();
+                }
+                else
+                {
+                    Slot r_meat = inv.FindItem(213);
+                    if (r_meat != null || meat.amountItem == 1)
+                    {
+                        SetCook();
+                    }
+                    else
+                    {
+                        gUI.AddText("Inventory is full");
+                    }
+                }
+            }
+            else
+            {
+                gUI.AddText("I don't have raw meat");
+            }
+        }
+        else
+        {
+            gUI.AddText("The fireplace can be used");
+            gUI.AddText("from 8 PM to 4 AM");
+        }
+    }
+
+    private void SetCook()
+    {
+        if (move.ObjIsNear("FirePlace", 1.0f))
+        {
+            inv.RemoveOne(meat);
+            fade.EnableImg(true);
+            sound.Cook();
+            Invoke("Cook", 2.3f);
+        }
+        else
+        {
+            gUI.AddText("The fireplace is too far");
+        }
+    }
+
+    private void Cook()
+    {
+        fade.EnableImg(false);
+        inv.Add(slot);
+    }
+}
