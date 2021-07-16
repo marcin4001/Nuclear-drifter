@@ -27,7 +27,17 @@ public class FirePlace : MonoBehaviour
     public void Use()
     {
         int hour = cycle.GetHour();
-        if(hour >= 20 || hour <= 3)
+        bool result = inv.FindItemB(54);
+        if(!result)
+            gUI.AddText("You don't have a pan");
+        result &= hour >= 20 || hour <= 3;
+        if(!result)
+        {
+            gUI.AddText("The fireplace can be used");
+            gUI.AddText("from 8 PM to 4 AM");
+        }
+
+        if (result)
         {
             meat = inv.FindItem(212);
             if(meat != null)
@@ -53,11 +63,6 @@ public class FirePlace : MonoBehaviour
             {
                 gUI.AddText("I don't have raw meat");
             }
-        }
-        else
-        {
-            gUI.AddText("The fireplace can be used");
-            gUI.AddText("from 8 PM to 4 AM");
         }
     }
 

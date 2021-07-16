@@ -2693,6 +2693,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 358826694, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 366704276, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -3424,6 +3428,10 @@ PrefabInstance:
     - target: {fileID: 1787498275, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787498275, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 1825255011, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_AnchorMin.y
@@ -5630,6 +5638,10 @@ MonoBehaviour:
     id: -1
   - itemElement: {fileID: 11400000, guid: 1787d4aa3c1cadc45b56e5241d551b33, type: 2}
     amountItem: 6
+    ammo: 0
+    id: -1
+  - itemElement: {fileID: 11400000, guid: 22aed72c1c4acf648a7de2fd02d422fe, type: 2}
+    amountItem: 1
     ammo: 0
     id: -1
 --- !u!4 &729451482
@@ -11019,6 +11031,7 @@ MonoBehaviour:
     dialogSuccess: 3
     dialogNormal: 2
     dialogComplete: 4
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: 4814329ca32845e4483e93225afe2c20, type: 2}
       amountItem: 1
@@ -11028,6 +11041,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &264782672364617760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11168,6 +11183,7 @@ MonoBehaviour:
     dialogSuccess: 1
     dialogNormal: 0
     dialogComplete: 2
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: 9b93036a583a9974cb93edda6f805415, type: 2}
       amountItem: 1
@@ -11177,6 +11193,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &1379918386635726813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11507,6 +11525,7 @@ MonoBehaviour:
     dialogSuccess: 3
     dialogNormal: 3
     dialogComplete: 3
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -11516,11 +11535,13 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
   - id: 15
     type: 0
     dialogSuccess: 4
     dialogNormal: 3
     dialogComplete: 5
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: 793329d1ae9d65441b5277fab0cc8940, type: 2}
       amountItem: 20
@@ -11530,11 +11551,13 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
   - id: 22
     type: 0
     dialogSuccess: 7
     dialogNormal: 7
     dialogComplete: 7
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -11544,6 +11567,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &2465716435116818810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11778,6 +11803,7 @@ MonoBehaviour:
     dialogSuccess: 3
     dialogNormal: 2
     dialogComplete: 4
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: b40224fc2b6197547a4e4bb26cc93aae, type: 2}
       amountItem: 5
@@ -11787,6 +11813,8 @@ MonoBehaviour:
     removeAll: 1
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &2831665677689674465
 MonoBehaviour:
   m_ObjectHideFlags: 0

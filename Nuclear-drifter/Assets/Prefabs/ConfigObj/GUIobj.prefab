@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 358826694}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.49203852
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -25530,6 +25530,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemDB
       objectReference: {fileID: 0}
+    - target: {fileID: 8509329185360371639, guid: c0f3327fec3d4464b836b2b6498999c2,
+        type: 3}
+      propertyPath: items.Array.data[52]
+      value: 
+      objectReference: {fileID: 11400000, guid: 22aed72c1c4acf648a7de2fd02d422fe,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0f3327fec3d4464b836b2b6498999c2, type: 3}
 --- !u!4 &2880910844215421291 stripped
