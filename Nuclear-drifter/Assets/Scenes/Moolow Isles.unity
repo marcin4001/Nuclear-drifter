@@ -11987,6 +11987,7 @@ GameObject:
   - component: {fileID: 1890147639320098361}
   - component: {fileID: 1890147639320098362}
   - component: {fileID: 1890147639320098363}
+  - component: {fileID: 1890147639320098364}
   m_Layer: 0
   m_Name: Gordon_78
   m_TagString: NPC
@@ -12020,6 +12021,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eff2251d0ca776e48ab95d6a456e8e2a, type: 2}
   - {fileID: 11400000, guid: e2b026ccd63b36246ada30aaf6d0e923, type: 2}
   - {fileID: 11400000, guid: 4848db31dbec70242ba48e824499f4bb, type: 2}
+  - {fileID: 11400000, guid: 53b5c5de10adde94ea49b8fe2ab56412, type: 2}
+  - {fileID: 11400000, guid: 71988278c38449a4099104663b33dc26, type: 2}
   startIndex: 0
   indexNPC: 2
   distance: 1.1
@@ -12053,6 +12056,22 @@ MonoBehaviour:
     indexDevice: 0
     noRemove: 0
     killAlt: 1
+  - id: 25
+    type: 0
+    dialogSuccess: 8
+    dialogNormal: 8
+    dialogComplete: 8
+    dialogAlt: 8
+    slotItem:
+      itemElement: {fileID: 0}
+      amountItem: 0
+      ammo: 0
+      id: -1
+    needItem: 0
+    removeAll: 0
+    indexDevice: 0
+    noRemove: 0
+    killAlt: 0
   doAlt: 0
 --- !u!114 &1890147639320098362
 MonoBehaviour:
@@ -12089,6 +12108,22 @@ MonoBehaviour:
     prefItem: {fileID: 7123670530575232170, guid: 786492bc87cb25e4aa460537d3c4f211,
       type: 3}
     chest: {fileID: 0}
+--- !u!114 &1890147639320098364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890147639320098359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bce87402c2e5fe4dbcab8ee9cb91af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionBefore: 23
+  respect: 75
+  dialogIndex: 7
+  respectUSA: 1
 --- !u!4 &1892455457675511256
 Transform:
   m_ObjectHideFlags: 0

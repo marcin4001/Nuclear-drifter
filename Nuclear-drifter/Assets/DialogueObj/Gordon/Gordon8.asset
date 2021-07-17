@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
-  m_Name: Gordon6
+  m_Name: Gordon8
   m_EditorClassIdentifier: 
   dialogues:
   - choice: Can you tell me something about nuclear war?
@@ -30,20 +30,6 @@ MonoBehaviour:
       over Moolow Isles. The continent called Old Zealand belongs to people living
       in settlements. Each of the settlements has its own leader. There is no single
       government there.
-    nextModule: 0
-    missionStart: 0
-    startIdMission: 0
-    missionEnd: 0
-    endIdMission: 0
-    changeStartIndex: 0
-    isWorker: 0
-    workOpt: 0
-  - choice: Is there anything else I can do for you, Colonel?
-    reply: 'I have one task, but it can only be done by a trusted person. Do something
-      useful for my soldiers and I will give you this task.
-
-      (You need a 75%
-      reputation with US soldiers)'
     nextModule: 0
     missionStart: 0
     startIdMission: 0

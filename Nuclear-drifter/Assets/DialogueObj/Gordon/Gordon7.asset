@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
-  m_Name: Gordon6
+  m_Name: Gordon7
   m_EditorClassIdentifier: 
   dialogues:
   - choice: Can you tell me something about nuclear war?
@@ -39,14 +39,13 @@ MonoBehaviour:
     isWorker: 0
     workOpt: 0
   - choice: Is there anything else I can do for you, Colonel?
-    reply: 'I have one task, but it can only be done by a trusted person. Do something
-      useful for my soldiers and I will give you this task.
-
-      (You need a 75%
-      reputation with US soldiers)'
+    reply: Yes, I have one task for a trusted person like you. Since the end of the
+      war, we have been searching for uranium deposits on the continent. If you can
+      find out where the uranium is, come to me and tell me. And bring a piece of
+      uranium ore as proof of the find.
     nextModule: 0
-    missionStart: 0
-    startIdMission: 0
+    missionStart: 1
+    startIdMission: 25
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
