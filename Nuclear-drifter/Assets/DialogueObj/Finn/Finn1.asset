@@ -47,11 +47,13 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
-  - choice: How are your sheep?
-    reply: They're fine. They eat grass all day and are still alive. Hahahaha!
+  - choice: Do you have a job for me?
+    reply: 'Yes, I recently got a pack of cigarettes from Joshua. Unfortunately,
+      I don''t have a lighter to light a cigarette. Bring me a lighter and I''ll
+      give you 2 beers. '
     nextModule: 0
-    missionStart: 0
-    startIdMission: 0
+    missionStart: 1
+    startIdMission: 26
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0

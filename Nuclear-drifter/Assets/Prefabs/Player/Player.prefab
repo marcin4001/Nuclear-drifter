@@ -381,7 +381,7 @@ MonoBehaviour:
   target: {fileID: 0}
   path: []
   currentIndexPoint: 0
-  speed: 1.5
+  speed: 1.75
   anim: {fileID: 2244689762262068068}
   direct: {x: 0, y: 0, z: 0}
   mode: 0
@@ -409,6 +409,7 @@ MonoBehaviour:
     y: 0
   sqrLocPref: {fileID: 4618548626787333696, guid: 432f6dca2338e0d43a696454d76df029,
     type: 3}
+  mainCam: {fileID: 0}
 --- !u!114 &2244689762286324216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +427,7 @@ MonoBehaviour:
   isRad: 0
   isPoison: 0
   maxAfterRad: 0
+  levelRad: 0
 --- !u!61 &1502527517
 BoxCollider2D:
   m_ObjectHideFlags: 0
