@@ -10,6 +10,7 @@ public class WeaponItem : Item
     public bool isMeleeWeapon = false;
     public bool isBomb = false;
     public int soundId = 0;
+    public float criticChance;
 
     private void Awake()
     {

@@ -166,6 +166,11 @@ public class CombatSystem : MonoBehaviour
             {
                 fightSound.PlayWeapon(currentWeapon.soundId);
                 int finalDamage = currentWeapon.damage + SkillsAndPerks.playerSkill.additionalGunDamage;
+                if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
+                {
+                    finalDamage = finalDamage * 2;
+                    gUI.AddText("Critical Shot!!!");
+                }
                 enemy.Shot(finalDamage);
                 inv.RemoveOne(weaponSlot);
                 gUI.AddText(enemy.nameEnemy + " was hit!");
@@ -185,10 +190,16 @@ public class CombatSystem : MonoBehaviour
             }
             else
             {
+                int hitDamage = currentWeapon.damage;
+                if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
+                {
+                    hitDamage = hitDamage * 2;
+                    gUI.AddText("Critical hit!!!");
+                }
                 fightSound.PlayWeapon(currentWeapon.soundId);
-                enemy.Shot(currentWeapon.damage);
+                enemy.Shot(hitDamage);
                 gUI.AddText(enemy.nameEnemy + " was hit!");
-                gUI.AddText(enemy.nameEnemy + " lost " + currentWeapon.damage + "hp");
+                gUI.AddText(enemy.nameEnemy + " lost " + hitDamage + "hp");
             }
         }
     }
