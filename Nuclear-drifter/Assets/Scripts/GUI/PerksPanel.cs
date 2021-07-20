@@ -185,5 +185,6 @@ public class PerksPanel : MonoBehaviour
         consoleDesc.text = info + "\n";
         consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
         consoleDesc.text += "Health: " + playerHP.currentHealth + "/" + playerHP.maxHealth + "\n";
+        consoleDesc.text += "Hand Damage: " + SkillsAndPerks.playerSkill.handDamage + "\n";
     }
 }

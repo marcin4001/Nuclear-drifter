@@ -4538,6 +4538,75 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &356973058
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5141788072661525800, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_Name
+      value: DevTools
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 244.86421
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30.962297
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -43.857548
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e37c5337b694c84ebc0ce2296514af2, type: 3}
 --- !u!1001 &406919743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10586,6 +10655,7 @@ MonoBehaviour:
     dialogSuccess: 3
     dialogNormal: 2
     dialogComplete: 4
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: c3b8e7c76d208c444a0d727c21de4c87, type: 2}
       amountItem: 1
@@ -10595,6 +10665,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &53185262251426816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11138,6 +11210,7 @@ MonoBehaviour:
     dialogSuccess: 1
     dialogNormal: 1
     dialogComplete: 2
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -11147,6 +11220,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!4 &1965625631702881977
 Transform:
   m_ObjectHideFlags: 0
@@ -11437,6 +11512,7 @@ MonoBehaviour:
     dialogSuccess: 1
     dialogNormal: 0
     dialogComplete: 2
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: dadb200220626a84eb633fc6dd6a15d8, type: 2}
       amountItem: 1
@@ -11446,11 +11522,13 @@ MonoBehaviour:
     removeAll: 1
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
   - id: 14
     type: 0
     dialogSuccess: 3
     dialogNormal: 3
     dialogComplete: 3
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -11460,6 +11538,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &5003252822895679701
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5661,6 +5661,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 876370976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &639026145
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5141788072661525800, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_Name
+      value: DevTools
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 244.86421
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30.962297
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -43.857548
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082857059658283519, guid: 2e37c5337b694c84ebc0ce2296514af2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e37c5337b694c84ebc0ce2296514af2, type: 3}
 --- !u!1 &656587143
 GameObject:
   m_ObjectHideFlags: 0
@@ -11488,6 +11557,7 @@ MonoBehaviour:
     dialogSuccess: 2
     dialogNormal: 2
     dialogComplete: 2
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -11497,11 +11567,13 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
   - id: 2
     type: 0
     dialogSuccess: 3
     dialogNormal: 4
     dialogComplete: 4
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
       amountItem: 10
@@ -11511,6 +11583,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &1455124840630142187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11730,6 +11804,7 @@ MonoBehaviour:
     dialogSuccess: 2
     dialogNormal: 1
     dialogComplete: 3
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 11400000, guid: 04321e29875881347bcb1d463cd7bbdb, type: 2}
       amountItem: 1
@@ -11739,11 +11814,13 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
   - id: 4
     type: 1
     dialogSuccess: 4
     dialogNormal: 3
     dialogComplete: 5
+    dialogAlt: 0
     slotItem:
       itemElement: {fileID: 0}
       amountItem: 0
@@ -11753,6 +11830,8 @@ MonoBehaviour:
     removeAll: 0
     indexDevice: 0
     noRemove: 0
+    killAlt: 0
+  doAlt: 0
 --- !u!114 &2599056883823974983
 MonoBehaviour:
   m_ObjectHideFlags: 0
