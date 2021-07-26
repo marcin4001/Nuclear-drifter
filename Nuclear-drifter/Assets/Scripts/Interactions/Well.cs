@@ -22,7 +22,7 @@ public class Well : MonoBehaviour
 
     public void ShowText()
     {
-        gUI.AddText("This is well");
+        gUI.AddText("This is the well");
     }
 
     public void Use()

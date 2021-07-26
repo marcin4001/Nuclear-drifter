@@ -10,6 +10,7 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip stove;
     public AudioClip sheep;
     public AudioClip tool;
+    public AudioClip vending_machine;
     private AudioSource sr;
    
     // Start is called before the first frame update
@@ -47,6 +48,11 @@ public class SoundsTrigger : MonoBehaviour
     public void UseTool()
     {
         sr.PlayOneShot(tool);
+    }
+
+    public void UseVendingMachine()
+    {
+        sr.PlayOneShot(vending_machine);
     }
 
     public void StartGeiger()
