@@ -31,6 +31,7 @@ public class CombatSystem : MonoBehaviour
     private Experience experience;
     public GameObject lightNight;
     public Animator animBomb;
+    public bool isDark = false;
     private FightSound fightSound;
     private Inventory inv;
     private Health hpPlayer;
@@ -88,7 +89,8 @@ public class CombatSystem : MonoBehaviour
                     }
                 }
             }
-            lightNight.SetActive(typeSc.lightNight);
+            if(!isDark)
+                lightNight.SetActive(typeSc.lightNight);
         }
     }
 

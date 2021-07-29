@@ -314,7 +314,7 @@ public class PlayerClickMove : MonoBehaviour
                 else
                 {
                     //Debug.Log(node.collider);
-                    if(node.collider != null) node.collider.SendMessage("Damage");
+                    if(node.collider != null) node.collider.SendMessage("Damage", SendMessageOptions.DontRequireReceiver);
                 }
             }
             if (Input.GetMouseButtonDown(1) && !typeSc.combatState)
