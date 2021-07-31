@@ -6,6 +6,9 @@ public class VendingMachine : MonoBehaviour
 {
     public Slot[] offer;
     public Slot cost;
+    public int idDevice;
+    public int maxUses;
+    public DeviceElement device;
     private Inventory inv;
     private GUIScript gUI;
     private PlayerClickMove player;
@@ -20,6 +23,7 @@ public class VendingMachine : MonoBehaviour
         gUI = FindObjectOfType<GUIScript>();
         player = FindObjectOfType<PlayerClickMove>();
         sounds = FindObjectOfType<SoundsTrigger>();
+        device = DeviceList.global.GetDevice(idDevice);
     }
 
     public void ShowText()
@@ -31,6 +35,13 @@ public class VendingMachine : MonoBehaviour
     // Update is called once per frame
     public void Use()
     {
+        if (maxUses <= device.uses)
+        {
+            gUI.AddText("The vending machine is");
+            gUI.AddText("empty");
+            return;
+        }
+
         money = inv.FindItem(cost.itemElement.idItem);
         if (money != null)
         {
@@ -78,6 +89,8 @@ public class VendingMachine : MonoBehaviour
             inv.RemoveFew(cost);
             inv.Add(offer[random_item]);
             sounds.UseVendingMachine();
+            if (device != null)
+                device.uses += 1;
         }
         else
         {

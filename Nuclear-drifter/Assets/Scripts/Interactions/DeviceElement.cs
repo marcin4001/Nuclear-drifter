@@ -8,6 +8,7 @@ public class DeviceElement
     public string nameDevice;
     public bool repair;
     public bool switchOn;
+    public int uses;
 
     public void Reset()
     {
