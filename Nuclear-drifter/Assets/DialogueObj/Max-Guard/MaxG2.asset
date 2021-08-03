@@ -15,13 +15,15 @@ MonoBehaviour:
   dialogues:
   - choice: Could you repeat where is Mrs. Sarah?
     reply: Ok. You will find her in the north of the settlement, next to the gun
-      shop.
+      store.
     nextModule: 0
     missionStart: 0
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Can I find something interesting here?
     reply: Woodhill is a fishing settlement. You'll find fisherman Steve, lumberjack
       John and a few other residents. We also have a water processing plant next
@@ -32,6 +34,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: How are the sheep?
     reply: All right. They're eating grass on the sand.
     nextModule: 0
@@ -40,6 +44,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Bye.
     reply: 
     nextModule: -1
@@ -48,3 +54,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0

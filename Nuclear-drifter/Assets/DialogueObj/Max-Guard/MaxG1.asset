@@ -16,13 +16,15 @@ MonoBehaviour:
   - choice: "\rI come from the south. My well is dry!"
     reply: Oh that's not good. Get in touch with Mrs. Sarah. She is the Elder of
       Woodhill. You will find her in the north of the settlement, next to the gun
-      shop.
+      store.
     nextModule: 1
     missionStart: 0
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 1
+    isWorker: 0
+    workOpt: 0
   - choice: Bye
     reply: 
     nextModule: -1
@@ -31,3 +33,5 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
