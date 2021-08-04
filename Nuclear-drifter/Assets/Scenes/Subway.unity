@@ -24487,9 +24487,11 @@ GameObject:
   m_Component:
   - component: {fileID: 599142854}
   - component: {fileID: 599142853}
+  - component: {fileID: 599142856}
+  - component: {fileID: 599142855}
   m_Layer: 0
   m_Name: subwaydoor (2)
-  m_TagString: Untagged
+  m_TagString: Info
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24559,6 +24561,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599142855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599142852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf631f2bb38ffb40a38f58b7855a0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - This is a locked toilet
+  - door
+--- !u!61 &599142856
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599142852}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.27}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.03125, y: 2}
+    newSize: {x: 3.03125, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.45}
+  m_EdgeRadius: 0
 --- !u!1001 &617872469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54145,6 +54188,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2244689762262068065, guid: 50be026967f9fd6498a8eb5ed125d78e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2244689762262068068, guid: 50be026967f9fd6498a8eb5ed125d78e,
         type: 3}
       propertyPath: m_Controller
@@ -58256,9 +58304,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1183217370}
   - component: {fileID: 1183217369}
+  - component: {fileID: 1183217372}
+  - component: {fileID: 1183217371}
   m_Layer: 0
   m_Name: subwaydoor
-  m_TagString: Untagged
+  m_TagString: Info
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58328,6 +58378,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183217371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183217368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf631f2bb38ffb40a38f58b7855a0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - This is a locked toilet
+  - door
+--- !u!61 &1183217372
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183217368}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.27}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.03125, y: 2}
+    newSize: {x: 3.03125, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.45}
+  m_EdgeRadius: 0
 --- !u!1001 &1223075816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62274,9 +62365,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1553525191}
   - component: {fileID: 1553525190}
+  - component: {fileID: 1553525193}
+  - component: {fileID: 1553525192}
   m_Layer: 0
   m_Name: subwaydoor (3)
-  m_TagString: Untagged
+  m_TagString: Info
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62346,6 +62439,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1553525192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553525189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf631f2bb38ffb40a38f58b7855a0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - This is a locked toilet
+  - door
+--- !u!61 &1553525193
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553525189}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.27}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.03125, y: 2}
+    newSize: {x: 3.03125, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.45}
+  m_EdgeRadius: 0
 --- !u!1001 &1559080524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62920,9 +63054,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1668754517}
   - component: {fileID: 1668754516}
+  - component: {fileID: 1668754519}
+  - component: {fileID: 1668754518}
   m_Layer: 0
   m_Name: subwaydoor (1)
-  m_TagString: Untagged
+  m_TagString: Info
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62992,6 +63128,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1668754518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668754515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf631f2bb38ffb40a38f58b7855a0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - This is a locked toilet
+  - door
+--- !u!61 &1668754519
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668754515}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.27}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.03125, y: 2}
+    newSize: {x: 3.03125, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.45}
+  m_EdgeRadius: 0
 --- !u!1 &1677640299
 GameObject:
   m_ObjectHideFlags: 0

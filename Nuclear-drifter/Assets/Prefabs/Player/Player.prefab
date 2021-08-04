@@ -172,6 +172,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &2244689762262068069
@@ -381,7 +382,7 @@ MonoBehaviour:
   target: {fileID: 0}
   path: []
   currentIndexPoint: 0
-  speed: 1.75
+  speed: 1.8
   anim: {fileID: 2244689762262068068}
   direct: {x: 0, y: 0, z: 0}
   mode: 0
