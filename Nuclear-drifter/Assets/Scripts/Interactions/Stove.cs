@@ -8,12 +8,14 @@ public class Stove : MonoBehaviour
     public Sprite stoveOff;
     public Sprite stoveOn;
     public Slot slot;
+    public int id_ach = 1;
     private Inventory inv;
     private GUIScript gUI;
     private PlayerClickMove player;
     private Slot meat;
     private FadePanel fade;
     private SoundsTrigger sound;
+    private Achievement achievement;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class Stove : MonoBehaviour
         player = FindObjectOfType<PlayerClickMove>();
         fade = FindObjectOfType<FadePanel>();
         sound = FindObjectOfType<SoundsTrigger>();
+        achievement = FindObjectOfType<Achievement>();
     }
 
     // Update is called once per frame
@@ -74,5 +77,6 @@ public class Stove : MonoBehaviour
         fade.EnableImg(false);
         render.sprite = stoveOff;
         inv.Add(slot);
+        achievement.SetAchievement(id_ach);
     }
 }

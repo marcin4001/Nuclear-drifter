@@ -12,7 +12,9 @@ public class FirePlace : MonoBehaviour
     private Slot meat;
     private FadePanel fade;
     public Slot slot;
+    public int id_ach = 2;
     private SoundsTrigger sound;
+    private Achievement achievement;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class FirePlace : MonoBehaviour
         inv = FindObjectOfType<Inventory>();
         fade = FindObjectOfType<FadePanel>();
         sound = FindObjectOfType<SoundsTrigger>();
+        achievement = FindObjectOfType<Achievement>();
     }
 
     public void Use()
@@ -85,5 +88,6 @@ public class FirePlace : MonoBehaviour
     {
         fade.EnableImg(false);
         inv.Add(slot);
+        achievement.SetAchievement(id_ach);
     }
 }

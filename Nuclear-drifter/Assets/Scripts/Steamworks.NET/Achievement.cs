@@ -18,11 +18,11 @@ public class Achievement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Tab))
-        //{
-        //    SteamUserStats.ResetAllStats(true);
-        //    SteamUserStats.StoreStats();
-        //}
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SteamUserStats.ResetAllStats(true);
+            SteamUserStats.StoreStats();
+        }
     }
 
     public void SetAchievement(int id)
