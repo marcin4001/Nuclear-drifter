@@ -9,13 +9,12 @@ public class Achievement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(!SteamManager.Initialized)
-        {
-            Destroy(gameObject);
-        }
+        //if(!SteamManager.Initialized)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -27,7 +26,7 @@ public class Achievement : MonoBehaviour
 
     public void SetAchievement(int id)
     {
-        if(names.Length != 0 && id < names.Length)
+        if(names.Length != 0 && id < names.Length && SteamManager.Initialized)
         {
             bool complete = false;
             SteamUserStats.GetAchievement(names[id], out complete);

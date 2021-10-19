@@ -12,6 +12,7 @@ public class MissionNPC : MonoBehaviour
     private MissionStart startM;
     private Experience exp;
     private RespectMission respectM;
+    private Achievement achievement;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class MissionNPC : MonoBehaviour
         startM = GetComponent<MissionStart>();
         exp = FindObjectOfType<Experience>();
         respectM = GetComponent<RespectMission>();
+        achievement = FindObjectOfType<Achievement>();
     }
 
     public MissionDetails GetMission(int id)
@@ -61,6 +63,8 @@ public class MissionNPC : MonoBehaviour
             }
             if(m.killAlt)
                 inv.RemoveFew(m.slotItem);
+            if (m.id_ach >= 0)
+                achievement.SetAchievement(m.id_ach);
         }
         if(prize != null)
         {
@@ -78,6 +82,8 @@ public class MissionNPC : MonoBehaviour
         if (m != null)
         {
             npc.SetStartIndex(m.dialogComplete);
+            if (m.id_ach >= 0)
+                achievement.SetAchievement(m.id_ach);
         }
         if (prize != null)
         {
