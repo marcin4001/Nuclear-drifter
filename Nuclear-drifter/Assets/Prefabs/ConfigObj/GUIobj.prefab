@@ -20446,6 +20446,7 @@ GameObject:
   - component: {fileID: 5699870298010875082}
   - component: {fileID: 6292307428786860482}
   - component: {fileID: 2985818836154476842}
+  - component: {fileID: 4163851709151505544}
   m_Layer: 5
   m_Name: DocumentCanvas
   m_TagString: Untagged
@@ -20551,6 +20552,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e33c652477a0e1d40964e30c7d39bfa5, type: 3}
   - {fileID: 21300000, guid: c768157011b3f9547a8283cd592404c5, type: 3}
   - {fileID: 21300000, guid: 9055e385c23fdc249ad5531fdb340aed, type: 3}
+--- !u!114 &4163851709151505544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578756132975248987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a425f27c87b30b4e91e5b2c3384c7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id_ach: 7
+  idItem: 100
 --- !u!1 &1941102818721933897
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class DocumentController : MonoBehaviour
     private MapControl map;
     private Canvas docCanvas;
     private TypeScene typeSc;
+    private AchievementDoc achievementDoc;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,10 @@ public class DocumentController : MonoBehaviour
         docCanvas = GetComponent<Canvas>();
         typeSc = FindObjectOfType<TypeScene>();
         docCanvas.enabled = false;
+        achievementDoc = GetComponent<AchievementDoc>();
     }
 
-    public void OpenDoc(int id)
+    public void OpenDoc(int id, int idItem)
     {
         if (docSprites.Length <= 0) return;
         if (id < 0 || id >= docSprites.Length) return;
@@ -32,6 +34,7 @@ public class DocumentController : MonoBehaviour
         gUI.DeactiveBtn(false);
         typeSc.inMenu = true;
         Time.timeScale = 0.0f;
+        achievementDoc.Check(idItem);
     }
 
     public void Close()
