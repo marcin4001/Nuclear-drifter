@@ -40,6 +40,7 @@ public class CombatSystem : MonoBehaviour
     private SoundsTrigger soundsMain;
     private DayCycle cycle;
     private GridNode grid;
+    private AchievementPoison achievementPoison;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +61,7 @@ public class CombatSystem : MonoBehaviour
         enemies = new List<Enemy>();
         BlockPlayer(false);
         camBattle.enabled = false;
+        achievementPoison = GetComponent<AchievementPoison>();
     }
 
 
@@ -369,6 +371,7 @@ public class CombatSystem : MonoBehaviour
             if (isPoisons && rngChance <= _enemy.poisonChance)
             {
                 hpPlayer.SetPoison(true);
+                achievementPoison.Check(_enemy.nameEnemy);
             }
             if(isRad && rngChance <= _enemy.radChance)
             {
