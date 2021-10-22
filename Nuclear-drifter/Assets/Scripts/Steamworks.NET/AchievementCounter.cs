@@ -6,7 +6,8 @@ public class AchievementCounter : MonoBehaviour
 {
     public static AchievementCounter global;
     public List<string> areas;
-
+    public int maxAreaCounter = 10;
+    public int ach_id_area = 9;
     private void Awake()
     {
         if (!global)
@@ -26,6 +27,11 @@ public class AchievementCounter : MonoBehaviour
             areas = new List<string>();
         if (!areas.Contains(area))
             areas.Add(area);
+        if(areas.Count >= maxAreaCounter)
+        {
+            Achievement achievement = FindObjectOfType<Achievement>();
+            achievement.SetAchievement(ach_id_area);
+        }
     }
 
 
