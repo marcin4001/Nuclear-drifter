@@ -44,3 +44,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areas: []
+  maxAreaCounter: 10
+  ach_id_area: 9
+  counters:
+  - name: Rhino
+    counter: 0
+    counterMax: 20
+    ach_id: 10
+  - name: Cyclop
+    counter: 0
+    counterMax: 20
+    ach_id: 11

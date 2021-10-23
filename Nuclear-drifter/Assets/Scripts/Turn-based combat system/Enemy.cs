@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour
         col.enabled = false;
         system.AddExp(expEnemy);
         anim.SetTrigger("Dead");
+        AchievementCounter.global.AddEnemies(nameEnemy);
     }
 
     public void Attack()

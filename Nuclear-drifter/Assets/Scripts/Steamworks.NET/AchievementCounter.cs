@@ -8,6 +8,7 @@ public class AchievementCounter : MonoBehaviour
     public List<string> areas;
     public int maxAreaCounter = 10;
     public int ach_id_area = 9;
+    public List<EnemyCounter> counters;
     private void Awake()
     {
         if (!global)
@@ -34,6 +35,25 @@ public class AchievementCounter : MonoBehaviour
         }
     }
 
+    public void AddEnemies(string nameEnemy)
+    {
+        EnemyCounter counter = counters.Find(e => e.name == nameEnemy);
+        if(counter != null)
+        {
+            Achievement achievement = FindObjectOfType<Achievement>();
+            counter.AddPoint(achievement);
+        }
+    }
+
+    public void Clear()
+    {
+        if (areas != null)
+            areas.Clear();
+        foreach(EnemyCounter counter in counters)
+        {
+            counter.Clear();
+        }
+    }
 
     public static string GetJson()
     {

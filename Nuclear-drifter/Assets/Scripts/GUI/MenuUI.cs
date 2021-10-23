@@ -99,6 +99,7 @@ public class MenuUI : MonoBehaviour
             enemy.Reset();
         }
         SkillsAndPerks.playerSkill.SetDefault();
+        AchievementCounter.global.Clear();
         PropertyPlayer.property.waterDay = 0;
         SaveAndLoad.NewGame();
     }
