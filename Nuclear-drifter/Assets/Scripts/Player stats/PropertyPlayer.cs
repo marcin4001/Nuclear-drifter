@@ -29,6 +29,7 @@ public class PropertyPlayer : MonoBehaviour
     public bool trapdoorOpened = false;
 
     public int waterDay = 0;
+    public bool gotMachete = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -66,6 +67,11 @@ public class PropertyPlayer : MonoBehaviour
     public void SetTrapdoorOpened()
     {
         trapdoorOpened = true;
+    }
+
+    public void SetGotMachete()
+    {
+        gotMachete = true;
     }
 
     public void SaveTemp()

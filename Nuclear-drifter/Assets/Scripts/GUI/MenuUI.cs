@@ -101,6 +101,8 @@ public class MenuUI : MonoBehaviour
         SkillsAndPerks.playerSkill.SetDefault();
         AchievementCounter.global.Clear();
         PropertyPlayer.property.waterDay = 0;
+        PropertyPlayer.property.trapdoorOpened = false;
+        PropertyPlayer.property.gotMachete = false;
         SaveAndLoad.NewGame();
     }
 }
