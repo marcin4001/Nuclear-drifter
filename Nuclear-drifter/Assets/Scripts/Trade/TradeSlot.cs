@@ -135,9 +135,9 @@ public class TradeSlot : MonoBehaviour
     {
         int cost = Mathf.CeilToInt(itemSlot.itemElement.value * 0.01f) - 1;
         if (cost <= 0) cost = 1;
-        Debug.Log(cost);
+        //Debug.Log(cost);
         cost *= itemSlot.ammo;
-        Debug.Log(cost);
+        //Debug.Log(cost);
         if (inv.HaveMoney(cost))
         {
             if (inv.Add(itemSlot))

@@ -13,7 +13,7 @@ public class StickSpawn : MonoBehaviour
         nodes = FindObjectOfType<GridNode>();
         if(!PropertyPlayer.property.trapdoorOpened)
         {
-            Debug.Log("stick");
+            //Debug.Log("stick");
             nodes.SetWalkable(stick.transform.position, true);
             stick.SetActive(false);
         }

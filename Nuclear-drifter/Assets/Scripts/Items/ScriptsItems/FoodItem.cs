@@ -24,7 +24,7 @@ public class FoodItem : Item
 
     public override void Use()
     {
-        Debug.Log("Use: " + name);
+        //Debug.Log("Use: " + name);
         if(hp != null)
         {
             hp.AddHealth(addHP);

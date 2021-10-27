@@ -166,20 +166,27 @@ public class CombatSystem : MonoBehaviour
         }
         else
         {
+            SkillsAndPerks.playerSkill.AddUses(currentWeapon);
             if(weaponSlot.isGun())
             {
                 fightSound.PlayWeapon(currentWeapon.soundId);
-                int finalDamage = currentWeapon.damage + SkillsAndPerks.playerSkill.additionalGunDamage;
-                if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
+                int randomNumber = Random.Range(0, 101);
+                if (randomNumber <= SkillsAndPerks.playerSkill.chanceToShot)
                 {
-                    finalDamage = finalDamage * 2;
-                    gUI.AddText("Critical Shot!!!");
+                    int finalDamage = currentWeapon.damage + SkillsAndPerks.playerSkill.additionalGunDamage;
+                    if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
+                    {
+                        finalDamage = finalDamage * 2;
+                        gUI.AddText("Critical Shot!!!");
+                    }
+                    enemy.Shot(finalDamage);
+                    gUI.AddText(enemy.nameEnemy + " was hit!");
+                    gUI.AddText(enemy.nameEnemy + " lost " + finalDamage + "hp");
                 }
-                enemy.Shot(finalDamage);
+                else
+                    gUI.AddText("You missed!");
                 inv.RemoveOne(weaponSlot);
-                gUI.AddText(enemy.nameEnemy + " was hit!");
-                gUI.AddText(enemy.nameEnemy + " lost " + finalDamage + "hp");
-                if(weaponSlot.isOutOfAmmo())
+                if (weaponSlot.isOutOfAmmo())
                 {
                     gUI.AddText("Out of ammo!");
                     ClearWeapon();
@@ -194,16 +201,23 @@ public class CombatSystem : MonoBehaviour
             }
             else
             {
-                int hitDamage = currentWeapon.damage;
-                if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
-                {
-                    hitDamage = hitDamage * 2;
-                    gUI.AddText("Critical hit!!!");
-                }
                 fightSound.PlayWeapon(currentWeapon.soundId);
-                enemy.Shot(hitDamage);
-                gUI.AddText(enemy.nameEnemy + " was hit!");
-                gUI.AddText(enemy.nameEnemy + " lost " + hitDamage + "hp");
+                int randomNumber = Random.Range(0, 101);
+                if (randomNumber <= SkillsAndPerks.playerSkill.chanceToHit)
+                {
+                    int hitDamage = currentWeapon.damage;
+                    if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
+                    {
+                        hitDamage = hitDamage * 2;
+                        gUI.AddText("Critical hit!!!");
+                    }
+
+                    enemy.Shot(hitDamage);
+                    gUI.AddText(enemy.nameEnemy + " was hit!");
+                    gUI.AddText(enemy.nameEnemy + " lost " + hitDamage + "hp");
+                }
+                else
+                    gUI.AddText("You missed!");
             }
         }
     }
@@ -361,7 +375,7 @@ public class CombatSystem : MonoBehaviour
         bool isRad = SkillsAndPerks.playerSkill.radResistance ? false : _enemy.isRad;
         bool isPoisons = SkillsAndPerks.playerSkill.poisonResistance ? false : _enemy.isPoisons;
         float rngChance = Random.Range(0.0f, 1.0f);
-        Debug.Log(rngChance);
+        //Debug.Log(rngChance);
         if(rngChance <= _enemy.dmgChance)
         {
             int resistance = Mathf.RoundToInt((float)_enemy.damageMax * (float)SkillsAndPerks.playerSkill.damageResistance / 100f);

@@ -21,6 +21,6 @@ public class WeaponItem : Item
     {
         CombatSystem combat = FindObjectOfType<CombatSystem>();
         if (combat != null) combat.SelectWeapon(this);
-        Debug.Log("Use: " + name);
+        //Debug.Log("Use: " + name);
     }
 }

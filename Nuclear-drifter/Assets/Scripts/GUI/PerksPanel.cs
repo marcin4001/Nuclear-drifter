@@ -186,5 +186,8 @@ public class PerksPanel : MonoBehaviour
         consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
         consoleDesc.text += "Health: " + playerHP.currentHealth + "/" + playerHP.maxHealth + "\n";
         consoleDesc.text += "Hand Damage: " + SkillsAndPerks.playerSkill.handDamage + "\n";
+        consoleDesc.text += "Chance of Hitting:" + "\n";
+        consoleDesc.text += "- Guns: " + SkillsAndPerks.playerSkill.chanceToShot + "%\n";
+        consoleDesc.text += "- Melee Weapons: " + SkillsAndPerks.playerSkill.chanceToHit + "%\n";
     }
 }

@@ -113,7 +113,7 @@ public class PlayerClickMove : MonoBehaviour
     public bool ObjIsNearPlayer(Vector3 pos, float dis)
     {
         float distance = Vector3.Distance(pos, transform.position);
-        Debug.Log(distance);
+        //Debug.Log(distance);
         return distance <= dis;
     }
 
