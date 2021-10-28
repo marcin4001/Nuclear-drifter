@@ -7,6 +7,7 @@ public class MissionList : MonoBehaviour
 {
     public static MissionList global;
     public MissionObj[] missions;
+    public NPCElement[] globalNPCs;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -146,12 +147,29 @@ public class MissionList : MonoBehaviour
     {
         JsonUtility.FromJsonOverwrite(json, global);
     }
-    private void Update()
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.R))
+    //    {
+    //        Debug.Log(GetCurrentRespectUSA());
+    //        Debug.Log(PercentRespectUSA() + "%");
+    //    }
+    //}
+
+    public void SetNPC(int index, bool _init, int _startIndex)
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Debug.Log(GetCurrentRespectUSA());
-            Debug.Log(PercentRespectUSA() + "%");
-        }
+        globalNPCs[index].init = _init;
+        globalNPCs[index].startIndex = _startIndex;
+    }
+
+    public void SetHaveRespect(int index)
+    {
+        globalNPCs[index].haveRespect = true;
+    }
+
+    public void ResetGlobalNPCs()
+    {
+        foreach (NPCElement element in globalNPCs)
+            element.Reset();
     }
 }

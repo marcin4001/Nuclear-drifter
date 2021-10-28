@@ -9,4 +9,12 @@ public class NPCElement
     public bool init = true;
     public int startIndex = 0;
     public bool haveRespect = false;
+    public int indexGlobal = -1;
+
+    public void Reset()
+    {
+        init = true;
+        startIndex = 0;
+        haveRespect = false;
+    }
 }

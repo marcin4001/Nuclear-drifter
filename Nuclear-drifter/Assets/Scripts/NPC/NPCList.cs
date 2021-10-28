@@ -19,10 +19,14 @@ public class NPCList : MonoBehaviour
     {
         nPCs[index].init = _init;
         nPCs[index].startIndex = _startIndex;
+        if (nPCs[index].indexGlobal >= 0)
+            MissionList.global.SetNPC(nPCs[index].indexGlobal, _init, _startIndex);
     }
 
     public void SetHaveRespect(int index)
     {
         nPCs[index].haveRespect = true;
+        if (nPCs[index].indexGlobal >= 0)
+            MissionList.global.SetHaveRespect(nPCs[index].indexGlobal);
     }
 }

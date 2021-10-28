@@ -82,7 +82,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.level = 1;
         PropertyPlayer.property.prevTh = 0;
         PropertyPlayer.property.lvlPoint = 0;
-        MissionList.global.StartMission(idStartMission);
+        MissionList.global.ResetGlobalNPCs();
 
         foreach(MissionObj mission in MissionList.global.missions)
         {
