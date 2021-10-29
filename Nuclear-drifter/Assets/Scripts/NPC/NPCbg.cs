@@ -67,6 +67,14 @@ public class NPCbg : MonoBehaviour
         }
     }
 
+    public void SetText(string _text)
+    {
+        active = true;
+        counter = 0.0f;
+        text.text = _text;
+        text.enabled = true;
+    }
+
     void Update()
     {
         if(active)

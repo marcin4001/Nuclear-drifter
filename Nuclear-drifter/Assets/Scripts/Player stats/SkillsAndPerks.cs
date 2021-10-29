@@ -85,12 +85,12 @@ public class SkillsAndPerks : MonoBehaviour
         if(chanceTo_ == chanceTo.hit)
         {
             if (chanceToHit < 100 && meleeWeaponUses % 10 == 0)
-                chanceToHit += 2;
+                chanceToHit += 1;
         }
         if(chanceTo_ == chanceTo.shot)
         {
             if (chanceToShot < 100 && gunUses % 10 == 0)
-                chanceToShot += 2;
+                chanceToShot += 1;
         }
     }
 

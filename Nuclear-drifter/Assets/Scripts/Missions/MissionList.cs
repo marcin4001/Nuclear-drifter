@@ -172,4 +172,14 @@ public class MissionList : MonoBehaviour
         foreach (NPCElement element in globalNPCs)
             element.Reset();
     }
+
+    public NPCElement GetNPC(int index)
+    {
+        if (globalNPCs.Length != 0 && index < globalNPCs.Length)
+        {
+            return globalNPCs[index];
+        }
+        else
+            return null;
+    }
 }
