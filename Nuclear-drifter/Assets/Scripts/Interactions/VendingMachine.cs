@@ -88,6 +88,7 @@ public class VendingMachine : MonoBehaviour
         {
             inv.RemoveFew(cost);
             inv.Add(offer[random_item]);
+            gUI.AddText("You got " + offer[random_item].amountItem + "x " + offer[random_item].itemElement.nameItem);
             sounds.UseVendingMachine();
             if (device != null)
                 device.uses += 1;
