@@ -41,6 +41,7 @@ public class CombatSystem : MonoBehaviour
     private DayCycle cycle;
     private GridNode grid;
     private AchievementPoison achievementPoison;
+    public int misses = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +63,7 @@ public class CombatSystem : MonoBehaviour
         BlockPlayer(false);
         camBattle.enabled = false;
         achievementPoison = GetComponent<AchievementPoison>();
+        misses = 0;
     }
 
 
@@ -163,6 +165,7 @@ public class CombatSystem : MonoBehaviour
             enemy.Shot(handDamage);
             gUI.AddText(enemy.nameEnemy + " was hit!");
             gUI.AddText(enemy.nameEnemy + " lost " + handDamage + "hp");
+            misses = 0;
         }
         else
         {
@@ -171,7 +174,7 @@ public class CombatSystem : MonoBehaviour
             {
                 fightSound.PlayWeapon(currentWeapon.soundId);
                 int randomNumber = Random.Range(0, 101);
-                if (randomNumber <= SkillsAndPerks.playerSkill.chanceToShot)
+                if ((randomNumber <= SkillsAndPerks.playerSkill.chanceToShot) || (misses >= 2))
                 {
                     int finalDamage = currentWeapon.damage + SkillsAndPerks.playerSkill.additionalGunDamage;
                     if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
@@ -182,9 +185,13 @@ public class CombatSystem : MonoBehaviour
                     enemy.Shot(finalDamage);
                     gUI.AddText(enemy.nameEnemy + " was hit!");
                     gUI.AddText(enemy.nameEnemy + " lost " + finalDamage + "hp");
+                    misses = 0;
                 }
                 else
+                {
                     gUI.AddText("You missed!");
+                    misses += 1;
+                }
                 inv.RemoveOne(weaponSlot);
                 if (weaponSlot.isOutOfAmmo())
                 {
@@ -203,7 +210,7 @@ public class CombatSystem : MonoBehaviour
             {
                 fightSound.PlayWeapon(currentWeapon.soundId);
                 int randomNumber = Random.Range(0, 101);
-                if (randomNumber <= SkillsAndPerks.playerSkill.chanceToHit)
+                if ((randomNumber <= SkillsAndPerks.playerSkill.chanceToHit) || (misses >= 2))
                 {
                     int hitDamage = currentWeapon.damage;
                     if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
@@ -215,9 +222,13 @@ public class CombatSystem : MonoBehaviour
                     enemy.Shot(hitDamage);
                     gUI.AddText(enemy.nameEnemy + " was hit!");
                     gUI.AddText(enemy.nameEnemy + " lost " + hitDamage + "hp");
+                    misses = 0;
                 }
                 else
+                {
                     gUI.AddText("You missed!");
+                    misses += 1;
+                }
             }
         }
     }
