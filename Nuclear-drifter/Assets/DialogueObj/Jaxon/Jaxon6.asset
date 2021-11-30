@@ -10,9 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
-  m_Name: Jaxon4
+  m_Name: Jaxon6
   m_EditorClassIdentifier: 
   dialogues:
+  - choice: I bring your old tomahawk
+    reply: "\rThank you so much. Yeah, that's it. My old tomahawk that I bought 10
+      years ago at Woodhill. As a reward, I'll give you my new tomahawk. It's a very
+      good weapon for the brave traveler.\r"
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 1
+    endIdMission: 27
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: What happens when the cigarettes run out?
     reply: Then we will start making the cigarettes ourselves. I bought 2 tons of
       tobacco from Americans. It will be enough for us for a long time.
@@ -48,19 +60,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
-  - choice: Can I do something for you?
-    reply: Yes, you can get my old tomahawk back for me. I lost it northeast of Yorkset
-      when I fought a rhino. It should still be lying next to that snarling beast.
-      If you can find it, it's very important to me.
-    nextModule: 0
-    missionStart: 1
-    startIdMission: 27
-    missionEnd: 0
-    endIdMission: 0
-    changeStartIndex: 0
-    isWorker: 0
-    workOpt: 0
-  - choice: "\rGoodbye"
+  - choice: Goodbye
     reply: 
     nextModule: -1
     missionStart: 0

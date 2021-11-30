@@ -12121,6 +12121,16 @@ MonoBehaviour:
     prefItem: {fileID: 4179958248851052756, guid: 735ea9f0b462b674fbd14964caad14a8,
       type: 3}
     chest: {fileID: 0}
+  - idMission: 27
+    itemPrize:
+      itemElement: {fileID: 11400000, guid: 8b761fb0435c38740be87889686805e0, type: 2}
+      amountItem: 1
+      ammo: 0
+      id: -1
+    spawnPos: {x: 8, y: 10}
+    prefItem: {fileID: 4127290864694655763, guid: 87742766afb8c9e4eb09aa6ae8c4c49d,
+      type: 3}
+    chest: {fileID: 0}
 --- !u!114 &5003252822895679700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12168,6 +12178,23 @@ MonoBehaviour:
     noRemove: 0
     killAlt: 0
     id_ach: -1
+  - id: 27
+    type: 0
+    dialogSuccess: 5
+    dialogNormal: 4
+    dialogComplete: 6
+    dialogAlt: 0
+    slotItem:
+      itemElement: {fileID: 11400000, guid: 52635f75ea61ff94a8121929d90d081a, type: 2}
+      amountItem: 1
+      ammo: 0
+      id: -1
+    needItem: 1
+    removeAll: 1
+    indexDevice: 0
+    noRemove: 0
+    killAlt: 0
+    id_ach: -1
   doAlt: 0
 --- !u!114 &5003252822895679701
 MonoBehaviour:
@@ -12192,6 +12219,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3bc5e53e41db7a941b824e3935ee67ee, type: 2}
   - {fileID: 11400000, guid: 35191694e1fb5634481fe6642c1eb79c, type: 2}
   - {fileID: 11400000, guid: 7a253cea2874b2547a46e2701fe3aeb4, type: 2}
+  - {fileID: 11400000, guid: 488e77aa2ab0e854ab198689413a8c9a, type: 2}
+  - {fileID: 11400000, guid: 608278c37a05af74e9b2c168b1fb4b4f, type: 2}
+  - {fileID: 11400000, guid: dd287142f24922646b5ed6756fe1d645, type: 2}
   startIndex: 0
   indexNPC: 2
   distance: 1.1

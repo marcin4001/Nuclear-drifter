@@ -124,6 +124,10 @@ public class MissionNPC : MonoBehaviour
                             }
                     }
                 }
+                if(m_obj.complete)
+                {
+                    npc.SetStartIndex(m.dialogComplete);
+                }
             }
         }
         if (respectM != null) respectM.CheckRespect();
