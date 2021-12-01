@@ -31,5 +31,8 @@ public class RewardEnemy : MonoBehaviour
             else gUI.AddText("You got $" + item.amountItem);
             inv.Add(item);
         }
+        Hunt hunt = GetComponent<Hunt>();
+        if (hunt != null)
+            hunt.GiveTrophy();
     }
 }

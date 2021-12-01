@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6563873802452630538}
   - component: {fileID: 6563873802452630539}
   - component: {fileID: 6563873802452630577}
+  - component: {fileID: 3081568045187860696}
   m_Layer: 0
   m_Name: EnemyTriggerRhino1
   m_TagString: EnemyTr
@@ -165,6 +166,7 @@ MonoBehaviour:
     itemElement: {fileID: 11400000, guid: 8c38b27a32bfdbe4aa9b2868db4a4fe7, type: 2}
     amountItem: 2
     ammo: 0
+    id: -1
   itemPref: {fileID: 8004479198464715184, guid: 1c2205c06db25da498cc22762ff678ef,
     type: 3}
 --- !u!212 &6563873802452630539
@@ -245,3 +247,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.375, y: 1.78125}
   m_EdgeRadius: 0
+--- !u!114 &3081568045187860696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563873802452630582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346797fcc72eb7046b8f84a4d21f152e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemElement: {fileID: 11400000, guid: 649f0add1488c494f9c0421c7bdbc010, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
+  offset: {x: 1, y: 0, z: 0}
+  itemPref: {fileID: 6595784779832994344, guid: f00f042264d1f234fb9bd3aaee4e1f9b,
+    type: 3}
+  idMission: 28
+  idTool: 52
