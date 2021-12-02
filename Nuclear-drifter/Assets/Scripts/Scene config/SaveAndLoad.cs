@@ -6,11 +6,11 @@ using System.IO;
 
 public class SaveAndLoad : MonoBehaviour
 {
-    private static string saveDir = "save_09a";
+    private static string saveDir = "saveAlpha";
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log(Application.persistentDataPath);
+        Debug.Log(Application.persistentDataPath); 
     }
 
     public static void NewGame()
@@ -91,6 +91,7 @@ public class SaveAndLoad : MonoBehaviour
 
     public static void HardSave()
     {
+        Debug.Log(saveDir);
         string path = Path.Combine(Application.persistentDataPath, "saveTemp");
         string savePath = Path.Combine(Application.persistentDataPath, saveDir);
         string saveToTemp = Path.Combine(savePath, "saveTemp");
