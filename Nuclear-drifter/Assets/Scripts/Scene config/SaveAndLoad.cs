@@ -10,7 +10,7 @@ public class SaveAndLoad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(Application.persistentDataPath); 
+        //Debug.Log(Application.persistentDataPath); 
     }
 
     public static void NewGame()
