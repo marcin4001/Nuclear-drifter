@@ -16,6 +16,7 @@ public class MessageBox : MonoBehaviour
     private GUIScript gUI;
     private PauseMenu menu;
     private SoundsTrigger st;
+    public bool inside = false;
 
     //public LoadingScreen loadingSc;
     // Start is called before the first frame update
@@ -82,7 +83,7 @@ public class MessageBox : MonoBehaviour
         PropertyPlayer.property.minutes = time.minutes;
 
         PropertyPlayer.property.startPos = playerPos;
-        PropertyPlayer.property.posOutside = move.transform.position;
+        if(!inside)PropertyPlayer.property.posOutside = move.transform.position;
         PropertyPlayer.property.SaveTemp();
     }
 }
