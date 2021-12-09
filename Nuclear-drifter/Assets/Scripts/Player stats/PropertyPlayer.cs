@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,7 +26,7 @@ public class PropertyPlayer : MonoBehaviour
     public int prevTh = 0;
     public int lvlPoint = 0;
     public string currentScene;
-    public bool trapdoorOpened = false;
+    public bool[] trapdoorOpened;
 
     public int waterDay = 0;
     public bool gotMachete = false;
@@ -64,9 +64,11 @@ public class PropertyPlayer : MonoBehaviour
         property.SaveTemp();
     }
 
-    public void SetTrapdoorOpened()
+    public void SetTrapdoorOpened(int index)
     {
-        trapdoorOpened = true;
+        if (index >= trapdoorOpened.Length || trapdoorOpened.Length == 0)
+            return;
+        trapdoorOpened[index] = true;
     }
 
     public void SetGotMachete()

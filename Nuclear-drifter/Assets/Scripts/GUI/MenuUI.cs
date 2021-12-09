@@ -10,6 +10,7 @@ public class MenuUI : MonoBehaviour
     public int idStartMission = 0;
     public OptionsMenu options;
     public CreditsCanvas credits;
+    public bool[] trapdoorsDefault;
 
     public string urlHowToPlay;
     // Start is called before the first frame update
@@ -101,7 +102,7 @@ public class MenuUI : MonoBehaviour
         SkillsAndPerks.playerSkill.SetDefault();
         AchievementCounter.global.Clear();
         PropertyPlayer.property.waterDay = 0;
-        PropertyPlayer.property.trapdoorOpened = false;
+        PropertyPlayer.property.trapdoorOpened = trapdoorsDefault;
         PropertyPlayer.property.gotMachete = false;
         SaveAndLoad.NewGame();
     }

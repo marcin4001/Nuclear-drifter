@@ -13,6 +13,8 @@ public class Trapdoor : MonoBehaviour
     public Item rope;
     public Item gasMask;
 
+    public int indexTrapdoor = 0;
+    public string[] texts;
     public List<string> result;
     public string nextScene;
     public Vector2 posInside;
@@ -21,6 +23,7 @@ public class Trapdoor : MonoBehaviour
     private PlayerClickMove player;
     private TimeGame time;
     private Health playerHP;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,23 +41,32 @@ public class Trapdoor : MonoBehaviour
     {
         bool open = true;
         result = new List<string>();
-        if (!PropertyPlayer.property.trapdoorOpened)
+        if (!PropertyPlayer.property.trapdoorOpened[indexTrapdoor])
         {
             result.Add("Items needed to open:");
-            if (!inv.FindItemB(key.idItem))
+            if (key != null)
             {
-                result.Add("- " + key.nameItem);
-                open = false;
+                if (!inv.FindItemB(key.idItem))
+                {
+                    result.Add("- " + key.nameItem);
+                    open = false;
+                }
             }
-            if (!inv.FindItemB(rope.idItem))
+            if (rope != null)
             {
-                result.Add("- " + rope.nameItem);
-                open = false;
+                if (!inv.FindItemB(rope.idItem))
+                {
+                    result.Add("- " + rope.nameItem);
+                    open = false;
+                }
             }
-            if (!inv.FindItemB(gasMask.idItem))
+            if (gasMask != null)
             {
-                result.Add("- " + gasMask.nameItem);
-                open = false;
+                if (!inv.FindItemB(gasMask.idItem))
+                {
+                    result.Add("- " + gasMask.nameItem);
+                    open = false;
+                }
             }
         }
 
@@ -62,13 +74,19 @@ public class Trapdoor : MonoBehaviour
         {
             if (player.ObjIsNearPlayer(transform.position, 1.1f))
             {
-                if (!PropertyPlayer.property.trapdoorOpened)
+                if (!PropertyPlayer.property.trapdoorOpened[indexTrapdoor])
                 {
-                    Slot ropeItem = inv.FindItem(rope.idItem);
-                    inv.RemoveOne(ropeItem);
-                    Slot maskItem = inv.FindItem(gasMask.idItem);
-                    inv.RemoveOne(maskItem);
-                    PropertyPlayer.property.SetTrapdoorOpened();
+                    if (rope != null)
+                    {
+                        Slot ropeItem = inv.FindItem(rope.idItem);
+                        inv.RemoveOne(ropeItem);
+                    }
+                    if (gasMask != null)
+                    {
+                        Slot maskItem = inv.FindItem(gasMask.idItem);
+                        inv.RemoveOne(maskItem);
+                    }
+                    PropertyPlayer.property.SetTrapdoorOpened(indexTrapdoor);
                 }
                 holeTrapdoor.enabled = true;
                 upTrapdoor.enabled = true;
@@ -103,8 +121,8 @@ public class Trapdoor : MonoBehaviour
         if (gUI == null) gUI = FindObjectOfType<GUIScript>();
         if (gUI != null)
         {
-            gUI.AddText("This is the subway");
-            gUI.AddText("entrance");
+            foreach (string text in texts)
+                gUI.AddText(text);
         }
     }
 

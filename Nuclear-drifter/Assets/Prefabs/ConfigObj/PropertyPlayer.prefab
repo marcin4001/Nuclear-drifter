@@ -46,6 +46,7 @@ MonoBehaviour:
   currentHealth: 80
   maxHealth: 80
   isRad: 0
+  levelRad: 0
   isPoison: 0
   day: 1
   hour: 5
@@ -59,4 +60,6 @@ MonoBehaviour:
   prevTh: 0
   lvlPoint: 0
   currentScene: 
-  trapdoorOpened: 0
+  trapdoorOpened: 0000
+  waterDay: 0
+  gotMachete: 0
