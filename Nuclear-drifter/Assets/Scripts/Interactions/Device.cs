@@ -11,21 +11,26 @@ public class Device : MonoBehaviour
     public bool stateInit = true;
     public int indexDevice = -1;
     public bool isFixed;
+    public float minDistance = 1.1f;
     private Inventory inv;
     private PlayerClickMove player;
     private GUIScript gUI;
     private FadePanel fade;
     private Slot _item;
     private SoundsTrigger sound;
+    private ChangeSpriteDevice changeSprite;
 
     // Start is called before the first frame update
     void Start()
     {
+        changeSprite = GetComponent<ChangeSpriteDevice>();
         inv = FindObjectOfType<Inventory>();
         player = FindObjectOfType<PlayerClickMove>();
         gUI = FindObjectOfType<GUIScript>();
         if (indexDevice < 0) isFixed = stateInit;
         else isFixed = DeviceList.global.devices[indexDevice].repair;
+        if (changeSprite != null)
+            changeSprite.Change(isFixed);
         fade = FindObjectOfType<FadePanel>();
         sound = FindObjectOfType<SoundsTrigger>();
     }
@@ -60,7 +65,7 @@ public class Device : MonoBehaviour
             }
             if(canFix)
             {
-                if(player.ObjIsNearPlayer(transform.position, 1.1f))
+                if(player.ObjIsNearPlayer(transform.position, minDistance))
                 {
                     inv.RemoveOne(_item);
                     sound.UseTool();
@@ -86,6 +91,8 @@ public class Device : MonoBehaviour
     {
         fade.EnableImg(false);
         isFixed = true;
+        if (changeSprite != null)
+            changeSprite.Change(isFixed);
         DeviceList.global.devices[indexDevice].repair = isFixed;
         gUI.AddText("Repair was successful!");
     }
