@@ -23,6 +23,8 @@ public class TerminalController : MonoBehaviour
     private bool addCR = false;
     private float counterF = 0f;
     public float counterFmax = 1f;
+    public Text timeText;
+    private TimeGame time;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class TerminalController : MonoBehaviour
         pause = FindObjectOfType<PauseMenu>();
         typeSc = FindObjectOfType<TypeScene>();
         sound = FindObjectOfType<SoundsTrigger>();
+        time = FindObjectOfType<TimeGame>();
         terminalCanvas.enabled = false;
         active = false;
     }
@@ -52,6 +55,21 @@ public class TerminalController : MonoBehaviour
                 mainText.text = text + "_";
             else
                 mainText.text = text;
+
+            int hour = 0;
+            string timeOfDay = "";
+            if (time.hour > 12)
+            {
+                hour = time.hour - 12;
+                timeOfDay = " PM";
+            }
+            else
+            {
+                hour = time.hour;
+                timeOfDay = " AM";
+            }
+            string timeStr = string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", time.minutes) + timeOfDay;
+            timeText.text = timeStr;
         }
     }
 
