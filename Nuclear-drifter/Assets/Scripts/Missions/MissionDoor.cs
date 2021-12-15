@@ -6,6 +6,7 @@ public class MissionDoor : MonoBehaviour
 {
     public Carpet door;
     public int idMission = 0;
+    public bool closeInNight = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class MissionDoor : MonoBehaviour
             else
             {
                 door.isLock = false;
-                door.closeInNight = true;
+                door.closeInNight = closeInNight;
             }
         }
         Destroy(gameObject);

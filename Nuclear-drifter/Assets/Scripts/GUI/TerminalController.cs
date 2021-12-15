@@ -12,6 +12,8 @@ public class TerminalController : MonoBehaviour
 {
     public Device[] devices;
     public TerminalState state = TerminalState.noWorking;
+    public int missionId;
+    public MissionObj mission;
     private Canvas terminalCanvas;
     public bool active = false;
     private PauseMenu pause;
@@ -36,6 +38,12 @@ public class TerminalController : MonoBehaviour
         time = FindObjectOfType<TimeGame>();
         terminalCanvas.enabled = false;
         active = false;
+        mission = MissionList.global.GetMission(missionId);
+        if(mission != null)
+        {
+            if (mission.complete)
+                state = TerminalState.end;
+        }
     }
 
     // Update is called once per frame
@@ -68,8 +76,17 @@ public class TerminalController : MonoBehaviour
                 hour = time.hour;
                 timeOfDay = " AM";
             }
-            string timeStr = string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", time.minutes) + timeOfDay;
+            string timeStr = hour + ":" + string.Format("{0:00}", time.minutes) + timeOfDay;
             timeText.text = timeStr;
+
+            if (Input.GetKeyDown(KeyCode.N))
+                NButton();
+            if (Input.GetKeyDown(KeyCode.Y))
+                YButton();
+            if (Input.GetKeyDown(KeyCode.Return))
+                EnterButton();
+            if (Input.GetKeyDown(KeyCode.End))
+                ExitButton();
         }
     }
 
@@ -94,7 +111,7 @@ public class TerminalController : MonoBehaviour
             {
                 text = "\n";
                 text += "The doors were opened...\n";
-                text += "B:\\>";
+                text += "B:\\Users\\Bunny>";
                 return;
             }
             float percent = ((float) counter / (float) devices.Length) * 100f;
@@ -105,7 +122,7 @@ public class TerminalController : MonoBehaviour
                 text += "System not working.\n";
                 text += "Server status: " + percent + "%\n";
                 text += "Contact the server administration or quit...\n";
-                text += "B:\\>";
+                text += "B:\\Users\\Bunny>";
                 state = TerminalState.noWorking;
             }
             else
@@ -177,8 +194,10 @@ public class TerminalController : MonoBehaviour
         {
             text = "\n";
             text += "The doors were opened...\n";
-            text += "B:\\>";
+            text += "B:\\Users\\Bunny>";
             state = TerminalState.end;
+            if (mission != null)
+                mission.complete = true;
         }
     }
 }
