@@ -27,6 +27,7 @@ public class TerminalController : MonoBehaviour
     public float counterFmax = 1f;
     public Text timeText;
     private TimeGame time;
+    private Experience exp;
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +40,13 @@ public class TerminalController : MonoBehaviour
         terminalCanvas.enabled = false;
         active = false;
         mission = MissionList.global.GetMission(missionId);
+        exp = FindObjectOfType<Experience>();
         if(mission != null)
         {
             if (mission.complete)
                 state = TerminalState.end;
         }
+
     }
 
     // Update is called once per frame
@@ -197,7 +200,11 @@ public class TerminalController : MonoBehaviour
             text += "B:\\Users\\Bunny>";
             state = TerminalState.end;
             if (mission != null)
+            {
                 mission.complete = true;
+                if (exp != null)
+                    exp.AddExp(mission.exp);
+            }
         }
     }
 }

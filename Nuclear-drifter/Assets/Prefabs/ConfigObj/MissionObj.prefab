@@ -293,7 +293,7 @@ MonoBehaviour:
     start: 0
     complete: 0
     idSort: 23
-    exp: 2500
+    exp: 1000
     respect: 0
     respectUSA: 0
     idHelp: 22
@@ -374,6 +374,17 @@ MonoBehaviour:
     respect: 0
     respectUSA: 0
     idHelp: 29
+  - task: Find a new storage site for uranium deposits
+    alt: 
+    ownerName: Me
+    location: Subway
+    start: 0
+    complete: 0
+    idSort: 30
+    exp: 1500
+    respect: 0
+    respectUSA: 0
+    idHelp: 30
   globalNPCs:
   - npcName: Sarah
     init: 1
