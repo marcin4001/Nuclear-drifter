@@ -8,6 +8,7 @@ public class Bed : MonoBehaviour
     private DayCycle cycle;
     private GUIScript gUI;
     private FadePanel fade;
+    private Health hpPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class Bed : MonoBehaviour
         cycle = FindObjectOfType<DayCycle>();
         gUI = FindObjectOfType<GUIScript>();
         fade = FindObjectOfType<FadePanel>();
+        hpPlayer = move.GetComponent<Health>();
     }
 
     public void Sleep()
@@ -26,6 +28,7 @@ public class Bed : MonoBehaviour
             day = day + 1;
         }
         cycle.SetTime(day, 7, 0);
+        hpPlayer.AddHalfHealth();
     }
     // Update is called once per frame
     public void Use()

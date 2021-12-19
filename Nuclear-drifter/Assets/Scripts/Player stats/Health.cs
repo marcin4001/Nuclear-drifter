@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -53,6 +54,13 @@ public class Health : MonoBehaviour
             maxHealth = (int)(0.6f * maxAfterRad);
         }
         radMeter.SetRadLevel(levelRad);
+    }
+
+    internal void AddHalfHealth()
+    {
+        int halfHP = maxHealth/2;
+        Debug.Log(halfHP);
+        AddHealth(halfHP);
     }
 
     public void SetRad(bool value)
