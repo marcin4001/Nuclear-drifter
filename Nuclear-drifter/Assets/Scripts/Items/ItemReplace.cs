@@ -59,6 +59,7 @@ public class ItemReplace : MonoBehaviour
                     inv.RemoveAllUni(_item);
                     inv.Add(currentItem);
                     currentItem.itemElement = itemReplace;
+                    currentItem.id = itemReplace.idItem;
                     isReplace = true;
                     render.sprite = itemReplace.image;
                 }
