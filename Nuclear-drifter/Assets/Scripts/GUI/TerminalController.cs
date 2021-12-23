@@ -187,10 +187,11 @@ public class TerminalController : MonoBehaviour
         }
         if (state == TerminalState.n)
         {
-            text = "\n";
-            text += "Welcome to the Uranium Deposit Door Control System!\n";
-            text += "Logged in as: AdminBunny\n";
-            text += "Do you want to open the door to the deposits? (Y/N): ";
+            //text = "\n";
+            //text += "Welcome to the Uranium Deposit Door Control System!\n";
+            //text += "Logged in as: AdminBunny\n";
+            //text += "Do you want to open the door to the deposits? (Y/N): ";
+            ExitButton();
             state = TerminalState.working;
         }
         if (state == TerminalState.y)
