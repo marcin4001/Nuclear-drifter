@@ -24,6 +24,7 @@ public class Trapdoor : MonoBehaviour
     private PlayerClickMove player;
     private TimeGame time;
     private Health playerHP;
+    private SoundsTrigger sound;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class Trapdoor : MonoBehaviour
         player = FindObjectOfType<PlayerClickMove>();
         time = FindObjectOfType<TimeGame>();
         playerHP = player.GetComponent<Health>();
+        sound = FindObjectOfType<SoundsTrigger>();
         holeTrapdoor.enabled = false;
         upTrapdoor.enabled = false;
     }
@@ -95,6 +97,7 @@ public class Trapdoor : MonoBehaviour
                 player.active = false;
                 player.SetStop(true);
                 gUI.blockGUI = true;
+                sound.UseTrapdoor();
                 Invoke("LoadScene", 1.0f);
             }
             else
