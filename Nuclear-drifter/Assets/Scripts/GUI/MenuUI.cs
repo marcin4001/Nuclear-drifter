@@ -104,6 +104,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.waterDay = 0;
         PropertyPlayer.property.trapdoorOpened = trapdoorsDefault;
         PropertyPlayer.property.gotMachete = false;
+        PropertyPlayer.property.backpackInv = new List<Slot>();
         SaveAndLoad.NewGame();
     }
 }

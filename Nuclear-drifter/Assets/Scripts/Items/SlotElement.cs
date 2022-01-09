@@ -80,9 +80,13 @@ public class SlotElement : MonoBehaviour
                             if (!gUI.GetCombatState()) itemSlot.itemElement.Use();
                             else gUI.AddText("You can't read now");
                         }
-                        else
+                        else if (itemSlot.itemElement.GetItemType() == ItemType.Misc)
                         {
-                            itemSlot.itemElement.Use();
+                            MiscItem misc = (MiscItem)itemSlot.itemElement;
+                            if (gUI.GetCombatState() && misc.isBackpack) 
+                                gUI.AddText("You can't use it now");
+                            else 
+                                itemSlot.itemElement.Use();
                         }
                     }
                     else if (typeSc.inBox == 1)

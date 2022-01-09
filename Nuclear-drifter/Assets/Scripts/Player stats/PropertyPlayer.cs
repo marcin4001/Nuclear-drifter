@@ -30,6 +30,7 @@ public class PropertyPlayer : MonoBehaviour
 
     public int waterDay = 0;
     public bool gotMachete = false;
+    public List<Slot> backpackInv;
 
     // Start is called before the first frame update
     void Awake()
@@ -84,6 +85,13 @@ public class PropertyPlayer : MonoBehaviour
         if(nPC != null) SaveAndLoad.SaveTemp(nPC);
     }
 
+    public void OpenBackpack()
+    {
+        EqChestController eqChestController = FindObjectOfType<EqChestController>();
+        if (eqChestController != null)
+            eqChestController.OpenBackpack();
+    }
+
     public static string GetJson()
     {
         property.SetCurrentState();
@@ -96,6 +104,11 @@ public class PropertyPlayer : MonoBehaviour
         JsonUtility.FromJsonOverwrite(json, property);
         ItemDB dB = FindObjectOfType<ItemDB>();
         foreach(Slot slot in property.inv)
+        {
+            slot.SetItemElement(dB);
+        }
+
+        foreach (Slot slot in property.backpackInv)
         {
             slot.SetItemElement(dB);
         }
