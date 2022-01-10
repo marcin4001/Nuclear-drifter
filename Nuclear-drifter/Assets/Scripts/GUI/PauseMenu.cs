@@ -50,7 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadBtn()
     {
-        bool isLoad = SaveAndLoad.CanLoad();
+        bool isLoad = SaveAndLoad.CanLoad(1);
         if (isLoad)
         {
             activeEsc = false;
@@ -121,7 +121,7 @@ public class PauseMenu : MonoBehaviour
         NPCList npc = FindObjectOfType<NPCList>();
         SaveAndLoad.SaveTemp(inv);
         SaveAndLoad.SaveTemp(npc);
-        SaveAndLoad.HardSave();
+        SaveAndLoad.HardSave(1);
         gUI.AddText("The game has been saved!");
         activeEsc = true;
         saveMsgCanvas.enabled = false;
@@ -135,7 +135,7 @@ public class PauseMenu : MonoBehaviour
 
     public void YesButtonLoad()
     {
-        SaveAndLoad.Load();
+        SaveAndLoad.Load(1);
         SceneManager.LoadScene(PropertyPlayer.property.currentScene);
     }
 

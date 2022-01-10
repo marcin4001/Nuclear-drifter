@@ -6,7 +6,7 @@ using System.IO;
 
 public class SaveAndLoad : MonoBehaviour
 {
-    private static string saveDir = "saveAlpha";
+    private static string saveDir = "Saves";
     // Start is called before the first frame update
     void Start()
     {
@@ -89,11 +89,11 @@ public class SaveAndLoad : MonoBehaviour
         }
     }
 
-    public static void HardSave()
+    public static void HardSave(int saveNo)
     {
         Debug.Log(saveDir);
         string path = Path.Combine(Application.persistentDataPath, "saveTemp");
-        string savePath = Path.Combine(Application.persistentDataPath, saveDir);
+        string savePath = Path.Combine(Application.persistentDataPath, saveDir, "save" + saveNo);
         string saveToTemp = Path.Combine(savePath, "saveTemp");
         if (Directory.Exists(path))
         {
@@ -121,13 +121,26 @@ public class SaveAndLoad : MonoBehaviour
                 Debug.Log(Path.GetFileName(file));
                 File.Copy(file, Path.Combine(saveToTemp, Path.GetFileName(file)));
             }
+            GUIScript gUI = FindObjectOfType<GUIScript>();
+            System.DateTime dateTime = System.DateTime.Now;
+            
+            string infoSave = "";
+            infoSave += "Save " + saveNo + " - " + dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString() + "\n";
+            infoSave += "Location: " + PropertyPlayer.property.location + "\n";
+            infoSave += "Level: " + PropertyPlayer.property.level + "\n";
+            infoSave += gUI != null ? gUI.GetTime() : "";
+            
+
+            
+            File.WriteAllText(Path.Combine(savePath, "InfoSave.txt"), infoSave);
+
         }
     }
 
-    public static bool Load()
+    public static bool Load(int saveNo)
     {
         string path = Path.Combine(Application.persistentDataPath, "saveTemp");
-        string savePath = Path.Combine(Application.persistentDataPath, saveDir);
+        string savePath = Path.Combine(Application.persistentDataPath, saveDir, "save" + saveNo);
         string saveToTemp = Path.Combine(savePath, "saveTemp");
         if (Directory.Exists(savePath))
         {
@@ -161,10 +174,31 @@ public class SaveAndLoad : MonoBehaviour
         return false;
     }
 
-    public static bool CanLoad()
+    public static bool CanLoad(int saveNo)
     {
-        string savePath = Path.Combine(Application.persistentDataPath, saveDir);
-        return Directory.Exists(savePath);
+        string savePathDir = Path.Combine(Application.persistentDataPath, saveDir, "save" + saveNo);
+        if (!Directory.Exists(savePathDir))
+            return false;
+        string infoSave = Path.Combine(savePathDir, "InfoSave.txt");
+        return File.Exists(infoSave);
     }
 
+    public static string GetSaveInfo(int saveNo)
+    {
+        string empty = "Save " + saveNo + " - Empty";
+        string savePathDir = Path.Combine(Application.persistentDataPath, saveDir, "save" + saveNo);
+        if (!Directory.Exists(savePathDir))
+            return empty;
+        string infoSave = Path.Combine(savePathDir, "InfoSave.txt");
+        if (File.Exists(infoSave))
+            return File.ReadAllText(infoSave);
+        else
+            return empty;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+            Debug.Log(GetSaveInfo(1));
+    }
 }

@@ -34,7 +34,7 @@ public class MenuUI : MonoBehaviour
 
     public void LoadBtn()
     {
-        bool isLoad = SaveAndLoad.Load();
+        bool isLoad = SaveAndLoad.Load(1);
         if (isLoad) SceneManager.LoadScene(PropertyPlayer.property.currentScene);
     }
 
@@ -105,6 +105,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.trapdoorOpened = trapdoorsDefault;
         PropertyPlayer.property.gotMachete = false;
         PropertyPlayer.property.backpackInv = new List<Slot>();
+        PropertyPlayer.property.location = "Wasteland";
         SaveAndLoad.NewGame();
     }
 }

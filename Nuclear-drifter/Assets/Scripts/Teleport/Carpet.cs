@@ -12,6 +12,7 @@ public class Carpet : MonoBehaviour
     private TimeGame time;
     public bool isLock = false;
     public bool closeInNight = false;
+    public string locationInside;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class Carpet : MonoBehaviour
                 if (door != null) box.door = door;
                 box.sceneName = sceneName;
                 box.playerPos = startPos;
+                box.location = locationInside;
                 box.ShowBox();
             }
             else

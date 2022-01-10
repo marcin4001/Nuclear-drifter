@@ -31,6 +31,7 @@ public class PropertyPlayer : MonoBehaviour
     public int waterDay = 0;
     public bool gotMachete = false;
     public List<Slot> backpackInv;
+    public string location;
 
     // Start is called before the first frame update
     void Awake()

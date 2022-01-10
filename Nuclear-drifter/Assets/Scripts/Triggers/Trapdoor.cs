@@ -19,6 +19,7 @@ public class Trapdoor : MonoBehaviour
     public string nextScene;
     public Vector2 posInside;
     public bool inside = false;
+    public string location;
     private GUIScript gUI;
     private Inventory inv;
     private PlayerClickMove player;
@@ -144,6 +145,8 @@ public class Trapdoor : MonoBehaviour
 
         PropertyPlayer.property.startPos = posInside;
         if(!inside)PropertyPlayer.property.posOutside = player.transform.position;
+        if (location != "")
+            PropertyPlayer.property.location = location;
         PropertyPlayer.property.SaveTemp();
     }
 }

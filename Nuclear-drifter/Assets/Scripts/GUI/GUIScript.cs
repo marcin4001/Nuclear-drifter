@@ -174,4 +174,11 @@ public class GUIScript : MonoBehaviour
             move.active = false;
         }
     }
+
+    public string GetTime()
+    {
+        if (timeLabel == null)
+            return "";
+        return timeLabel.text;
+    }
 }

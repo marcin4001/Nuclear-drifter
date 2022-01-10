@@ -17,6 +17,7 @@ public class MessageBox : MonoBehaviour
     private PauseMenu menu;
     private SoundsTrigger st;
     public bool inside = false;
+    public string location;
 
     //public LoadingScreen loadingSc;
     // Start is called before the first frame update
@@ -42,6 +43,7 @@ public class MessageBox : MonoBehaviour
         Time.timeScale = 1.0f;
         if (menu != null) menu.activeEsc = true;
         door = null;
+        location = "";
     }
 
     public void ButtonYes()
@@ -84,6 +86,8 @@ public class MessageBox : MonoBehaviour
 
         PropertyPlayer.property.startPos = playerPos;
         if(!inside)PropertyPlayer.property.posOutside = move.transform.position;
+        if (location != "")
+            PropertyPlayer.property.location = location;
         PropertyPlayer.property.SaveTemp();
     }
 }

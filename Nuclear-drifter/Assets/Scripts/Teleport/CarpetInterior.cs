@@ -8,6 +8,7 @@ public class CarpetInterior : MonoBehaviour
     public string sceneName;
     public Vector2 startPos;
     public bool withoutLoading = false;
+    public string location;
     private Health playerHP;
     private TimeGame time;
 
@@ -33,9 +34,13 @@ public class CarpetInterior : MonoBehaviour
             PropertyPlayer.property.minutes = time.minutes;
 
             PropertyPlayer.property.startPos = startPos;
+            if (location != "")
+                PropertyPlayer.property.location = location;
             PropertyPlayer.property.SaveTemp();
             LoadingScreen loading = FindObjectOfType<LoadingScreen>();
             if (loading != null && !withoutLoading) loading.ShowLoading();
+           
+
             Invoke("Load", 0.1f);
         }
     }
