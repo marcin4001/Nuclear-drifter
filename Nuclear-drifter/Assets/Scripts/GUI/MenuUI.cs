@@ -13,6 +13,8 @@ public class MenuUI : MonoBehaviour
     public bool[] trapdoorsDefault;
 
     public string urlHowToPlay;
+    public SaveTextInfo[] saveTextInfos;
+    public Canvas loadCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,11 @@ public class MenuUI : MonoBehaviour
         {
             slot.SetId();
         }
+        foreach(SaveTextInfo save in saveTextInfos)
+        {
+            save.SetText();
+        }
+        loadCanvas.enabled = false;
     }
 
     public void NewGame()
@@ -34,8 +41,22 @@ public class MenuUI : MonoBehaviour
 
     public void LoadBtn()
     {
-        bool isLoad = SaveAndLoad.Load(1);
-        if (isLoad) SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+        loadCanvas.enabled = true;
+        
+    }
+
+    public void CloseLoadPanel()
+    {
+        loadCanvas.enabled = false;
+    }
+
+    public void Load(int saveNo)
+    {
+        if(SaveAndLoad.CanLoad(saveNo))
+        {
+            bool isLoad = SaveAndLoad.Load(saveNo);
+            if (isLoad) SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+        }
     }
 
     public void OpenOptions()

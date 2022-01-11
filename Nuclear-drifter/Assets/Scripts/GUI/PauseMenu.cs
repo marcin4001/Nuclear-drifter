@@ -18,6 +18,11 @@ public class PauseMenu : MonoBehaviour
     public bool activeEsc = true;
     private TypeScene typeSc;
     private OptionsMenu options;
+    public Canvas saveCanvas;
+    public Canvas loadCanvas;
+    public SaveTextInfo[] saveInfos;
+    public SaveTextInfo[] loadInfos;
+    public int currentSaveNo = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +36,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1.0f;
         typeSc = FindObjectOfType<TypeScene>();
         options = FindObjectOfType<OptionsMenu>();
+        saveCanvas.enabled = false;
+        loadCanvas.enabled = false;
     }
 
     // Update is called once per frame
@@ -45,19 +52,57 @@ public class PauseMenu : MonoBehaviour
     public void SaveBtn()
     {
         activeEsc = false;
-        saveMsgCanvas.enabled = true;
+        saveCanvas.enabled = true;
+        foreach(SaveTextInfo save in saveInfos)
+        {
+            save.SetText();
+        }
     }
 
     public void LoadBtn()
     {
-        bool isLoad = SaveAndLoad.CanLoad(1);
+        activeEsc = false;
+        loadCanvas.enabled = true;
+        foreach (SaveTextInfo load in loadInfos)
+        {
+            load.SetText();
+        }
+    }
+
+    public void Save(int saveNo)
+    {
+        currentSaveNo = saveNo;
+        if (SaveAndLoad.CanLoad(saveNo))
+        {
+            saveMsgCanvas.enabled = true;
+        }
+        else
+        {
+            YesButtonSave();
+        }
+    }
+
+    public void Load(int saveNo)
+    {
+        bool isLoad = SaveAndLoad.CanLoad(saveNo);
         if (isLoad)
         {
-            activeEsc = false;
             loadMsgCanvas.enabled = true;
+            currentSaveNo = saveNo;
         }
         else
             gUI.AddText("Save doesn't exist!");
+    }
+    public void CloseSavePanel()
+    {
+        activeEsc = true;
+        saveCanvas.enabled = false;
+    }
+
+    public void CloseLoadPanel()
+    {
+        activeEsc = true;
+        loadCanvas.enabled = false;
     }
 
     public void OptionBtn()
@@ -121,27 +166,29 @@ public class PauseMenu : MonoBehaviour
         NPCList npc = FindObjectOfType<NPCList>();
         SaveAndLoad.SaveTemp(inv);
         SaveAndLoad.SaveTemp(npc);
-        SaveAndLoad.HardSave(1);
+        SaveAndLoad.HardSave(currentSaveNo);
         gUI.AddText("The game has been saved!");
-        activeEsc = true;
         saveMsgCanvas.enabled = false;
+        currentSaveNo = 0;
+        foreach (SaveTextInfo save in saveInfos)
+        {
+            save.SetText();
+        }
     }
 
     public void NoButtonSave()
     {
-        activeEsc = true;
         saveMsgCanvas.enabled = false;
     }
 
     public void YesButtonLoad()
     {
-        SaveAndLoad.Load(1);
+        SaveAndLoad.Load(currentSaveNo);
         SceneManager.LoadScene(PropertyPlayer.property.currentScene);
     }
 
     public void NoButtonLoad()
     {
-        activeEsc = true;
         loadMsgCanvas.enabled = false;
     }
     
