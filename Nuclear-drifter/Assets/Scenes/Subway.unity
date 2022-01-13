@@ -35966,6 +35966,7 @@ MonoBehaviour:
   startPos: {x: 33, y: 27}
   isLock: 0
   closeInNight: 0
+  locationInside: 
 --- !u!61 &345362783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92344,6 +92345,7 @@ MonoBehaviour:
   sceneName: MainWorld
   startPos: {x: 254, y: 109}
   withoutLoading: 0
+  location: Wasteland
 --- !u!61 &1132479467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94962,6 +94964,7 @@ MonoBehaviour:
   startPos: {x: 55, y: 27}
   isLock: 1
   closeInNight: 0
+  locationInside: 
 --- !u!61 &1305671254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -97331,6 +97334,7 @@ MonoBehaviour:
   startPos: {x: 10, y: 27}
   isLock: 0
   closeInNight: 0
+  locationInside: 
 --- !u!61 &1450301060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -102394,6 +102398,7 @@ MonoBehaviour:
   sceneName: Subway Interiors
   startPos: {x: 14, y: 31}
   withoutLoading: 0
+  location: 
 --- !u!61 &1887945638
 BoxCollider2D:
   m_ObjectHideFlags: 0
