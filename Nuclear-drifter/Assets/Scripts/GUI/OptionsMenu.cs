@@ -21,10 +21,12 @@ public class OptionsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Screen.currentResolution.width > 1920 && Screen.currentResolution.width > 1080)
+            Screen.SetResolution(1920, 1080, fullscreen);
         canvasOpt = GetComponent<Canvas>();
         resDropdown.ClearOptions();
         Resolution[] temp = Screen.resolutions;
-        resolutions = temp.Where(r => r.width >= 1024 && r.refreshRate >= 60).ToArray();
+        resolutions = temp.Where(r => r.width >= 1024 && r.width <= 1920 && r.refreshRate == 60).ToArray();
         fullscreen = Screen.fullScreen;
         fullScreenToggle.isOn = fullscreen;  
         int i = 0;

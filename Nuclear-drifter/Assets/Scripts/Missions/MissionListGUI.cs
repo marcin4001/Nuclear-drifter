@@ -108,10 +108,10 @@ public class MissionListGUI : MonoBehaviour
 
     public string ShowRespect()
     {
-        string respectText = separator;
+        string respectText = separator + "\n";
         respectText += "Respect in Old Zealand settlements: " + MissionList.global.PercentRespect() + "%\n";
         respectText += "Reputation in the United States Army: " + MissionList.global.PercentRespectUSA() + "%\n";
-        respectText += separator;
+        respectText += separator + "\n";
         return respectText;
     }
 
