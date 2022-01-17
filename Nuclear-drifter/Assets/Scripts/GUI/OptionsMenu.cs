@@ -18,6 +18,7 @@ public class OptionsMenu : MonoBehaviour
     private MusicController music;
     private SoundsTrigger sfxSound;
     private FightSound fightSound;
+    private CanvasScaler600p canvasScaler;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,9 @@ public class OptionsMenu : MonoBehaviour
             Screen.SetResolution(1920, 1080, fullscreen);
         canvasOpt = GetComponent<Canvas>();
         resDropdown.ClearOptions();
+        Debug.Log(Screen.width + "x" + Screen.height);
         Resolution[] temp = Screen.resolutions;
-        resolutions = temp.Where(r => r.width >= 1024 && r.width <= 1920 && r.refreshRate == 60).ToArray();
+        resolutions = temp.Where(r => r.width >= 800 && r.width <= 1920 && r.refreshRate == 60).ToArray();
         fullscreen = Screen.fullScreen;
         fullScreenToggle.isOn = fullscreen;  
         int i = 0;
@@ -57,6 +59,9 @@ public class OptionsMenu : MonoBehaviour
         fightSound = FindObjectOfType<FightSound>();
         if (fightSound != null)
             fightSound.SetVolume(sfxScroll.value);
+        canvasScaler = FindObjectOfType<CanvasScaler600p>();
+        if (canvasScaler != null)
+            canvasScaler.ChangeScale(new Vector2 (Screen.width, Screen.height));
     }
 
     public void ChangeVolumeMusic()
@@ -85,7 +90,11 @@ public class OptionsMenu : MonoBehaviour
     {
         Screen.SetResolution(resolutions[value].width, resolutions[value].height, fullscreen);
         currentResolution = value;
+        if(canvasScaler != null)
+            canvasScaler.ChangeScale(new Vector2 (resolutions[value].width, resolutions[value].height));
     }
+
+   
 
     public void OpenOptions()
     {

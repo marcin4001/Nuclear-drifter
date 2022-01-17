@@ -3673,6 +3673,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1787498275, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1825255011, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5891,6 +5895,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: MainWorld
   startPos: {x: 69, y: 41}
+  withoutLoading: 0
+  location: 
 --- !u!61 &656587145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6106,6 +6112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: MainWorld
   startPos: {x: 62, y: 124}
+  withoutLoading: 0
+  location: 
 --- !u!61 &991088109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6663,6 +6671,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: MainWorld
   startPos: {x: 63, y: 127}
+  withoutLoading: 0
+  location: 
 --- !u!61 &1132479467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8144,6 +8154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: MainWorld
   startPos: {x: 65, y: 114}
+  withoutLoading: 0
+  location: 
 --- !u!61 &1444097245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8674,6 +8686,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: MainWorld
   startPos: {x: 74, y: 126}
+  withoutLoading: 0
+  location: 
 --- !u!61 &1690470789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8815,6 +8829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: MainWorld
   startPos: {x: 83, y: 121}
+  withoutLoading: 0
+  location: 
 --- !u!61 &1738756887
 BoxCollider2D:
   m_ObjectHideFlags: 0

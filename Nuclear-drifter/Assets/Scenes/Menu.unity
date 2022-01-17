@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 558392520}
   - component: {fileID: 558392524}
   - component: {fileID: 558392525}
+  - component: {fileID: 558392526}
   m_Layer: 5
   m_Name: MenuCanvas
   m_TagString: Untagged
@@ -1038,6 +1039,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0875dcee7fbc7b9418c2ee9bc42e5047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &558392526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558392519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375e6d0893dcdc74488f7bca7ef6dd7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalers:
+  - {fileID: 1457368127}
+  - {fileID: 558392521}
+  minRes: {x: 1280, y: 720}
 --- !u!1 &608197194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,6 +1493,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f8b26dc5a9eb854992d91f1f9c9f9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1457368127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1707065110124447520, guid: 0bfc319ca9a82594b8d160e10b7770dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1707065108954700168}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1570876860 stripped
@@ -2327,7 +2356,12 @@ PrefabInstance:
     - target: {fileID: 1707065110124447520, guid: 0bfc319ca9a82594b8d160e10b7770dc,
         type: 3}
       propertyPath: m_UiScaleMode
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707065110124447520, guid: 0bfc319ca9a82594b8d160e10b7770dc,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1707065110124447520, guid: 0bfc319ca9a82594b8d160e10b7770dc,
         type: 3}
