@@ -47,7 +47,7 @@ public class Container : MonoBehaviour
     public void OpenBox()
     {
         if (player.ObjIsNearPlayer(transform.position, 1.1f))
-            controller.Open(indexEq, indexBackground);
+            controller.Open(indexEq, indexBackground, gameObject);
         else gUI.AddText("The " + nameObj + " is too far");
     }
 

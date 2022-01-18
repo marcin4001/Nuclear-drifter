@@ -19,6 +19,7 @@ public class EqChestController : MonoBehaviour
     private Inventory inv;
     private TypeScene typeSc;
     private bool inBackpack = false;
+    private GameObject boxObj;
     //public int testIndex = 0;
     // Start is called before the first frame update
     void Start()
@@ -63,9 +64,14 @@ public class EqChestController : MonoBehaviour
         gUI.DeactiveBtn(!active);
         typeSc.inBox = 0;
         inBackpack = false;
+        if (boxObj != null)
+        {
+            boxObj.SendMessage("Close", SendMessageOptions.DontRequireReceiver);
+            boxObj = null;
+        }
     }
 
-    public void Open(int id, int indexBack)
+    public void Open(int id, int indexBack, GameObject obj)
     {
         currentIndex = id;
         backImg.overrideSprite = backgrounds[indexBack];
@@ -75,6 +81,11 @@ public class EqChestController : MonoBehaviour
         gUI.blockGUI = active;
         typeSc.inBox = 1;
         gUI.DeactiveBtn(!active);
+        if (obj != null)
+        {
+            obj.SendMessage("Open", SendMessageOptions.DontRequireReceiver);
+            boxObj = obj;
+        }
         SetItems();
     }
 

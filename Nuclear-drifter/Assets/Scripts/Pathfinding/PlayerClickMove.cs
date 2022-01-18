@@ -54,6 +54,9 @@ public class PlayerClickMove : MonoBehaviour
     private Vector3 localPosCam;
     private GameObject sqrLoc;
     private CombatSystem combat;
+    private float defaultSpeed = 1.8f;
+    private float minSpeed = 1.5f;
+    private float maxSpeed = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -115,6 +118,12 @@ public class PlayerClickMove : MonoBehaviour
         float distance = Vector3.Distance(pos, transform.position);
         //Debug.Log(distance);
         return distance <= dis;
+    }
+
+    public void SetSpeed(float value)
+    {
+        speed = minSpeed + 0.5f * value;
+        speed = Mathf.Clamp(speed, minSpeed, maxSpeed);
     }
 
     private void Move(RaycastHit2D hit)

@@ -13,6 +13,7 @@ public class OptionsMenu : MonoBehaviour
     public bool fullscreen = true;
     public Scrollbar musicScroll;
     public Scrollbar sfxScroll;
+    public Scrollbar speedScroll;
     private Resolution[] resolutions;
     private Canvas canvasOpt;
     private MusicController music;
@@ -26,7 +27,6 @@ public class OptionsMenu : MonoBehaviour
             Screen.SetResolution(1920, 1080, fullscreen);
         canvasOpt = GetComponent<Canvas>();
         resDropdown.ClearOptions();
-        Debug.Log(Screen.width + "x" + Screen.height);
         Resolution[] temp = Screen.resolutions;
         resolutions = temp.Where(r => r.width >= 800 && r.width <= 1920 && r.refreshRate == 60).ToArray();
         fullscreen = Screen.fullScreen;
@@ -49,6 +49,13 @@ public class OptionsMenu : MonoBehaviour
         canvasOpt.enabled = false;
         musicScroll.value = PlayerPrefs.GetFloat("mainMusic", 1.0f);
         sfxScroll.value = PlayerPrefs.GetFloat("sfxSound", 1.0f);
+        if (speedScroll != null)
+        {
+            speedScroll.value = PlayerPrefs.GetFloat("moveSpeed", 0.6f);
+            PlayerClickMove move = FindObjectOfType<PlayerClickMove>();
+            if (move != null)
+                move.SetSpeed(speedScroll.value);
+        }
 
         music = FindObjectOfType<MusicController>();
         if (music != null)
@@ -94,7 +101,20 @@ public class OptionsMenu : MonoBehaviour
             canvasScaler.ChangeScale(new Vector2 (resolutions[value].width, resolutions[value].height));
     }
 
-   
+    public void ChangeSpeed()
+    {
+        double speed = speedScroll.value;
+        speed = System.Math.Floor(speed * 10);
+        if ((int)speed % 2 == 0)
+            speed = speed * 0.1;
+        else
+            speed = (speed + 1) * 0.1;
+        speedScroll.value = (float) speed;
+        PlayerClickMove move = FindObjectOfType<PlayerClickMove>();
+        if (move != null)
+            move.SetSpeed((float)speed);
+        PlayerPrefs.SetFloat("moveSpeed", (float)speed);
+    }
 
     public void OpenOptions()
     {

@@ -16,13 +16,11 @@ public class CanvasScaler600p : MonoBehaviour
         {
             foreach (CanvasScaler scaler in scalers)
                 scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            Debug.Log(2);
         }
         else
         {
             foreach (CanvasScaler scaler in scalers)
                 scaler.uiScaleMode = CanvasScaler.ScaleMode.ConstantPixelSize;
-            Debug.Log(1);
         }
     }
 }

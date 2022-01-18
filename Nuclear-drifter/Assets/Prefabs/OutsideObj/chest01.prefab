@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6290274829883231182}
   - component: {fileID: 8582570362091588391}
   - component: {fileID: 21783885}
+  - component: {fileID: 4597078931532884593}
   m_Layer: 0
   m_Name: chest01
   m_TagString: Chest
@@ -49,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -140,3 +142,20 @@ MonoBehaviour:
   indexBackground: 0
   nameObj: chest
   isLocked: 1
+  keyId: -1
+--- !u!114 &4597078931532884593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981604641875987938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8718668dd8b7b489535c80b37923e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openChest: {fileID: -4662479788944355303, guid: fff8f48d3c39ceb42b9279b8e5678fe1,
+    type: 3}
+  closeChest: {fileID: 8843687155819041016, guid: fff8f48d3c39ceb42b9279b8e5678fe1,
+    type: 3}
