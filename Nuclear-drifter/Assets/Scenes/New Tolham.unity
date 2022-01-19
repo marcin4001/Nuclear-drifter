@@ -3901,6 +3901,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7167855812914391083, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167855812914391083, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
 --- !u!1 &221965068
@@ -12202,7 +12212,7 @@ MonoBehaviour:
   prizes:
   - idMission: 11
     itemPrize:
-      itemElement: {fileID: 11400000, guid: d6c65ffc3e656c74a8b094814263e5b8, type: 2}
+      itemElement: {fileID: 11400000, guid: 36d0bee566823c144856c59ffe2350e8, type: 2}
       amountItem: 1
       ammo: 0
       id: -1

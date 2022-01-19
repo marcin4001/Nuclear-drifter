@@ -73,8 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 1471844711
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3653860328773459813, guid: b3691fdec32007e44af1592c242ea1d7,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c37a7aee7a4bf54498bf558e8973523, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +125,8 @@ MonoBehaviour:
   saveItem: 0
   indexItem: 0
   item:
-    itemElement: {fileID: 11400000, guid: d6c65ffc3e656c74a8b094814263e5b8, type: 2}
+    itemElement: {fileID: 11400000, guid: 36d0bee566823c144856c59ffe2350e8, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   distance: 1.1
