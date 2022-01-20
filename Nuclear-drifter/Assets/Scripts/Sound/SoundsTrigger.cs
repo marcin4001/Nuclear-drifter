@@ -13,6 +13,7 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip vending_machine;
     public AudioClip error;
     public AudioClip trapdoor;
+    public AudioClip electricShock;
     private AudioSource sr;
    
     // Start is called before the first frame update
@@ -65,6 +66,11 @@ public class SoundsTrigger : MonoBehaviour
     public void UseTrapdoor()
     {
         sr.PlayOneShot(trapdoor);
+    }
+
+    public void PlayElectricShock()
+    {
+        sr.PlayOneShot(electricShock);
     }
 
     public void StartGeiger()
