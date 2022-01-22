@@ -13,6 +13,7 @@ public class FirePlace : MonoBehaviour
     private FadePanel fade;
     public Slot slot;
     public int id_ach = 2;
+    public bool allTimeFire = false;
     private SoundsTrigger sound;
     private Achievement achievement;
     // Start is called before the first frame update
@@ -33,11 +34,14 @@ public class FirePlace : MonoBehaviour
         bool result = inv.FindItemB(54);
         if(!result)
             gUI.AddText("You don't have a pan");
-        result &= hour >= 20 || hour <= 3;
-        if(!result)
+        if (!allTimeFire)
         {
-            gUI.AddText("The fireplace can be used");
-            gUI.AddText("from 8 PM to 4 AM");
+            result &= hour >= 20 || hour <= 3;
+            if (!result)
+            {
+                gUI.AddText("The fireplace can be used");
+                gUI.AddText("from 8 PM to 4 AM");
+            }
         }
 
         if (result)
