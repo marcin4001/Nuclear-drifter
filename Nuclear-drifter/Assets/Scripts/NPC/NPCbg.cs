@@ -29,7 +29,7 @@ public class NPCbg : MonoBehaviour
 
     public void ShowText()
     {
-        gUI.AddText("This is " + nameNPC);
+        gUI.AddText("NPC: " + nameNPC);
     }
 
     public void Use()

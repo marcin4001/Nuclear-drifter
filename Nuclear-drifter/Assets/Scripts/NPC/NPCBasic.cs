@@ -48,7 +48,7 @@ public class NPCBasic : MonoBehaviour
 
     public void ShowText()
     {
-        gUI.AddText("This is " + nameNPC);
+        gUI.AddText("NPC: " + nameNPC);
     }
     // Update is called once per frame
     void Update()
