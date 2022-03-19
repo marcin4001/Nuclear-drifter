@@ -20,15 +20,6 @@ public class FastTravel : MonoBehaviour
         time = FindObjectOfType<TimeGame>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            Walk(3);
-        }
-    }
-
     public void Walk(int hour)
     {
         PropertyPlayer.property.currentHealth = playerHP.currentHealth;
