@@ -19,34 +19,6 @@ public class Carrier : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            WalkTo(0);
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            WalkTo(1);
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            WalkTo(2);
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            WalkTo(3);
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            WalkTo(4);
-        }
-        if(Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            WalkTo(5);
-        }
-    }
 
     public void WalkTo(int location)
     {
