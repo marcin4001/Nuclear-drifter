@@ -10,4 +10,5 @@ public class LocObj
     public float distance;
     public int hour;
     public int cost;
+    public bool unlocked;
 }

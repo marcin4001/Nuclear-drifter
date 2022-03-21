@@ -35,6 +35,16 @@ public class AchievementCounter : MonoBehaviour
         }
     }
 
+    public bool ContainsArea(string area)
+    {
+        if (areas == null)
+            return false;
+        if (areas.Count == 0)
+            return false;
+
+        return areas.Contains(area);
+    }
+
     public void AddEnemies(string nameEnemy)
     {
         EnemyCounter counter = counters.Find(e => e.name == nameEnemy);

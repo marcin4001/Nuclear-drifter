@@ -14,8 +14,9 @@ public class CarrierCanvas : MonoBehaviour
     private TypeScene typeSc;
     private PauseMenu pause;
     private MapControl map;
-    public GameObject buttons;
+    public GameObject[] buttons;
     public Carrier carrier;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,15 +28,6 @@ public class CarrierCanvas : MonoBehaviour
         player = FindObjectOfType<PlayerClickMove>();
         pause = FindObjectOfType<PauseMenu>();
         map = FindObjectOfType<MapControl>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            Open();
-        }
     }
 
     public void Open()
@@ -57,15 +49,36 @@ public class CarrierCanvas : MonoBehaviour
 
     private void SetTexts()
     {
+        carrier.UpdateLocObj();
         for(int i = 0; i < texts.Length; i++)
         {
-            texts[i].text = carrier.locObjs[i].name + "(" + carrier.locObjs[i].cost + "$)";
+            LocObj obj = carrier.locObjs[i];
+            if (obj.cost > 0)
+            {
+                if (obj.unlocked)
+                {
+                    texts[i].text = obj.name + "(" + obj.cost + "$)";
+                    buttons[i].SetActive(true);
+                }
+                else
+                {
+                    texts[i].text = "##################";
+                    buttons[i].SetActive(false);
+                }
+            }
+            else
+            {
+                texts[i].text = "##################";
+                buttons[i].SetActive(false);
+            }
         }
     }
 
     public void WalkTo(int location)
     {
         if (carrier != null)
+        {
             carrier.WalkTo(location);
+        }
     }
 }

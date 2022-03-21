@@ -39,6 +39,10 @@ public class NPCTrade : MonoBehaviour
             }
             trade.Open();
         }
-        else gUI.AddText(nameNPC + " is too far away");
+        else
+        {
+            gUI.AddText(nameNPC + " is too far");
+            gUI.AddText("away");
+        }
     }
 }
