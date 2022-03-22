@@ -10,7 +10,8 @@ public class FastTravel : MonoBehaviour
     private Health playerHP;
     private TimeGame time;
     public Vector2 playerPos;
-
+    private FadePanel fade;
+    private SoundsTrigger sound;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class FastTravel : MonoBehaviour
         move = FindObjectOfType<PlayerClickMove>();
         playerHP = move.GetComponent<Health>();
         time = FindObjectOfType<TimeGame>();
+        fade = FindObjectOfType<FadePanel>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public void Walk(int hour)
@@ -42,6 +45,20 @@ public class FastTravel : MonoBehaviour
         PropertyPlayer.property.minutes = time.minutes;
         PropertyPlayer.property.startPos = playerPos;
         PropertyPlayer.property.SaveTemp();
+        fade.FadeIn();
+        Invoke("PlaySound", 1.5f);
+    }
+
+    private void PlaySound()
+    {
+        sound.PlayDonkeyWalk();
+        Invoke("Load", 3.6f);
+    }
+
+    private void Load()
+    {
         SceneManager.LoadScene(sceneName);
     }
+
 }
+

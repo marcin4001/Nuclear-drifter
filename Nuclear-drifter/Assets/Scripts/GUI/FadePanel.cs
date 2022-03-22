@@ -73,6 +73,11 @@ public class FadePanel : MonoBehaviour
         map.keyActive = true;
     }
 
+    public void FadeIn()
+    {
+        anim.SetTrigger("FadeIn");
+    }
+
     //private void Test()
     //{
     //    Debug.Log("Change");
