@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Roasted meat
   image: {fileID: 1282879589454094578, guid: fc9aff2a090f58141a8fb95c7af1b289, type: 3}
-  description: +15 HP
-  value: 20
+  description: +17 HP
+  value: 12
   idItem: 213
-  addHP: 15
+  noRemove: 0
+  noSell: 0
+  addHP: 17
   healsPoison: 0
   healsRad: 0
   isPoison: 0

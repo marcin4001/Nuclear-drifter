@@ -15,6 +15,7 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip trapdoor;
     public AudioClip electricShock;
     public AudioClip donkeyWalk;
+    public AudioClip purifier;
     private AudioSource sr;
    
     // Start is called before the first frame update
@@ -77,6 +78,11 @@ public class SoundsTrigger : MonoBehaviour
     public void PlayDonkeyWalk()
     {
         sr.PlayOneShot(donkeyWalk);
+    }
+
+    public void PlayPurifier()
+    {
+        sr.PlayOneShot(purifier);
     }
 
     public void StartGeiger()

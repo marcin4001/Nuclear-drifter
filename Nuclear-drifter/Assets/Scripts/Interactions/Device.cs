@@ -19,6 +19,7 @@ public class Device : MonoBehaviour
     private Slot _item;
     private SoundsTrigger sound;
     private ChangeSpriteDevice changeSprite;
+    private JobDevice job;
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +34,19 @@ public class Device : MonoBehaviour
             changeSprite.Change(isFixed);
         fade = FindObjectOfType<FadePanel>();
         sound = FindObjectOfType<SoundsTrigger>();
+        job = GetComponent<JobDevice>();
+        if (isFixed)
+            tag = "Well";
     }
 
     public void Use()
     {
         if(isFixed)
         {
-            gUI.AddText(nameDevice + " is working");
+            if (job == null)
+                gUI.AddText(nameDevice + " is working");
+            else
+                job.Work();
         }
         else
         {
@@ -95,5 +102,6 @@ public class Device : MonoBehaviour
             changeSprite.Change(isFixed);
         DeviceList.global.devices[indexDevice].repair = isFixed;
         gUI.AddText("Repair was successful!");
+        tag = "Well";
     }
 }

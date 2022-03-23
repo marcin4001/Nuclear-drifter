@@ -4336,6 +4336,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7167855812914391083, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167855812914391083, guid: 4fbcc846c36a0dc42a42b101b0fdc93d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbcc846c36a0dc42a42b101b0fdc93d, type: 3}
 --- !u!1 &224294610
@@ -5715,6 +5725,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameNPC: Gun Dealer
   distance: 1.75
+--- !u!1 &529569942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529569944}
+  - component: {fileID: 529569943}
+  m_Layer: 0
+  m_Name: AddItem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &529569943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529569942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e18ec092f233f845a78ad77601c25e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemElement: {fileID: 11400000, guid: 35a9db37c2f39e24e861e75312cb8596, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
+  keyCode: 283
+--- !u!4 &529569944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529569942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 164.95041, y: 28.098856, z: -2.2703059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 57
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &541945117
 GameObject:
   m_ObjectHideFlags: 0
@@ -6262,6 +6321,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 789290980}
   m_maskType: 0
+  _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
 --- !u!23 &789290980
@@ -7323,6 +7383,7 @@ GameObject:
   - component: {fileID: 1149591599}
   - component: {fileID: 1149591598}
   - component: {fileID: 1149591597}
+  - component: {fileID: 1149591600}
   m_Layer: 0
   m_Name: RightPurifier
   m_TagString: Device
@@ -7390,6 +7451,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1149591600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149591596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b815b564ad9193c47a0aa8a9b63fc9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearWater:
+    itemElement: {fileID: 11400000, guid: 04321e29875881347bcb1d463cd7bbdb, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
 --- !u!1 &1249860596
 GameObject:
   m_ObjectHideFlags: 0
@@ -8520,6 +8598,7 @@ GameObject:
   - component: {fileID: 1545507295}
   - component: {fileID: 1545507294}
   - component: {fileID: 1545507293}
+  - component: {fileID: 1545507296}
   m_Layer: 0
   m_Name: LeftPurifier
   m_TagString: Device
@@ -8587,6 +8666,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1545507296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545507292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b815b564ad9193c47a0aa8a9b63fc9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearWater:
+    itemElement: {fileID: 11400000, guid: 04321e29875881347bcb1d463cd7bbdb, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
 --- !u!1001 &1549910993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8675,6 +8771,7 @@ GameObject:
   - component: {fileID: 1589076182}
   - component: {fileID: 1589076181}
   - component: {fileID: 1589076180}
+  - component: {fileID: 1589076183}
   m_Layer: 0
   m_Name: CentralPurifier
   m_TagString: Device
@@ -8742,6 +8839,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1589076183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589076179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b815b564ad9193c47a0aa8a9b63fc9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearWater:
+    itemElement: {fileID: 11400000, guid: 04321e29875881347bcb1d463cd7bbdb, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
 --- !u!1001 &1602710746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13075,6 +13189,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 4243466123972905442}
   m_maskType: 0
+  _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
 --- !u!23 &4243466123972905442
@@ -13422,6 +13537,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 5167672661043750288}
   m_maskType: 0
+  _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
 --- !u!224 &5167672661043750292

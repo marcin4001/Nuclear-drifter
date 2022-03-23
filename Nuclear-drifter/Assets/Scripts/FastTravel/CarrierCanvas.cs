@@ -57,7 +57,7 @@ public class CarrierCanvas : MonoBehaviour
             {
                 if (obj.unlocked)
                 {
-                    texts[i].text = obj.name + "(" + obj.cost + "$)";
+                    texts[i].text = obj.name + "($" + obj.cost + ")";
                     buttons[i].SetActive(true);
                 }
                 else
