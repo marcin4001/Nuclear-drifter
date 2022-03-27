@@ -32,6 +32,7 @@ public class PropertyPlayer : MonoBehaviour
     public bool gotMachete = false;
     public List<Slot> backpackInv;
     public string location;
+    public bool foodMartFound = false;
 
     // Start is called before the first frame update
     void Awake()
