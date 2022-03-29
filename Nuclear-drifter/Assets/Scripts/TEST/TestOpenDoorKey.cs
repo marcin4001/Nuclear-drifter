@@ -14,9 +14,9 @@ public class TestOpenDoorKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F))
             anim.SetTrigger("Open");
-        if (Input.GetKeyDown(KeyCode.F2))
+        if (Input.GetKeyDown(KeyCode.T))
             anim.SetTrigger("Reset");
     }
 }

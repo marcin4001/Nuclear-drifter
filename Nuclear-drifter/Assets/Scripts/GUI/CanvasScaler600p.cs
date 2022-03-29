@@ -7,7 +7,15 @@ public class CanvasScaler600p : MonoBehaviour
 {
     public CanvasScaler[] scalers;
     public Vector2 minRes;
+    public bool runOnStart = false;
 
+    private void Start()
+    {
+        if(runOnStart)
+        {
+            ChangeScale(new Vector2(Screen.width, Screen.height));
+        }
+    }
 
     public void ChangeScale(Vector2 res)
     {

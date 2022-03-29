@@ -18,6 +18,7 @@ public class MessageBox : MonoBehaviour
     private SoundsTrigger st;
     public bool inside = false;
     public string location;
+    public bool noSound = false;
 
     //public LoadingScreen loadingSc;
     // Start is called before the first frame update
@@ -50,9 +51,13 @@ public class MessageBox : MonoBehaviour
     {
         mbCanvas.enabled = false;
         if(door != null) door.SetTrigger("Open");
-        Invoke("Load", 1.5f);
+        float timeLoad = 1.5f;
+        if (noSound && door == null)
+            timeLoad = 0.5f;
+        Invoke("Load", timeLoad);
         Time.timeScale = 1.0f;
-        st.OpenDoor();
+        if(!noSound)
+            st.OpenDoor();
     }
 
     public void ShowBox()
