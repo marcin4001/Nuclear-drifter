@@ -296,7 +296,7 @@ PrefabInstance:
         (AKA Redshrike)\n\rManuel Riecke (AKA MrBeast)\nDaniel Armstrong (AKA HughSpectrum)\nLeonard
         Pabin, Ali-G\nHyptosis\ndaneeklu\nStephena \u201ERedshrike\u201D Challenera\nWilliama.Thompsonja\nbluecarrot16\nZhivko
         Minchev\r\nYodha Game Studio\nPIPOYA\ngdainti_c\nIlustracja 39703988 \xA9
-        Mike Taylor | Dreamstime.com\r\n123rf.com/profile_kmarfu\nNicnubill\nAukaiCraftLV\nVectorPixelStar
+        Mike Taylor | Dreamstime.com\r\n123rf.com/profile_kmarfu\nNicnubill\nAukaiCraftLV\n[VexedEnigma/PixelJustice]\nVectorPixelStar
         - shutterstock.com\nVachekin Anton - shutterstock.com\n\n##########################################################\n\nCharacter
         Creator:\nUniversal LPC Sprite Sheet Character Generator\n\n##########################################################\n\nMusic:\nDamian
         Major\nCryo Chamber - Atrium Carceri & Herbst9 - Ur Evighetens Pipa\nhttp://cryochamber.bandcamp.com\n\n##########################################################\n\nSFX
@@ -594,6 +594,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251968340}
   m_CullTransparentMesh: 0
+--- !u!1 &384472459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384472461}
+  - component: {fileID: 384472460}
+  m_Layer: 0
+  m_Name: PluginSave12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &384472460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384472459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1270bbd968267408d354c472f813ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &384472461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384472459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &430795936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1100,7 @@ MonoBehaviour:
   - {fileID: 1457368127}
   - {fileID: 558392521}
   minRes: {x: 1280, y: 720}
+  runOnStart: 0
 --- !u!114 &558392527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1079,6 +1123,8 @@ MonoBehaviour:
   error: {fileID: 8300000, guid: 7417ce3581c299b48a819229fc62bd94, type: 3}
   trapdoor: {fileID: 8300000, guid: 06b31ce5044453f4e9013033d08d5ab4, type: 3}
   electricShock: {fileID: 8300000, guid: f9dbf9de0c79d2249aef2af3da24b41b, type: 3}
+  donkeyWalk: {fileID: 0}
+  purifier: {fileID: 0}
 --- !u!82 &558392528
 AudioSource:
   m_ObjectHideFlags: 0

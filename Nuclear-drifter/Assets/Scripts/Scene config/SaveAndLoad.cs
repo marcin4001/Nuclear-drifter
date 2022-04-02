@@ -7,6 +7,7 @@ using System.IO;
 public class SaveAndLoad : MonoBehaviour
 {
     private static string saveDir = "Saves";
+    private static string versionText = "Save version: 0.12a";
     // Start is called before the first frame update
     void Start()
     {
@@ -133,7 +134,8 @@ public class SaveAndLoad : MonoBehaviour
 
             
             File.WriteAllText(Path.Combine(savePath, "InfoSave.txt"), infoSave);
-
+            string versionPath = Path.Combine(savePath, "version.txt");
+            File.WriteAllText(versionPath, versionText);
         }
     }
 
