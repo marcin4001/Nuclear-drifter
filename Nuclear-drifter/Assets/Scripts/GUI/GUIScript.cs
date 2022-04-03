@@ -31,6 +31,7 @@ public class GUIScript : MonoBehaviour
     public Button perksBtn;
     public GameObject optBtnPanel;
     public Image newLvlLabel;
+    public Image warningLabel;
     private GraphicRaycaster raycaster;
     private EventSystem system;
     private PointerEventData data;
@@ -50,6 +51,8 @@ public class GUIScript : MonoBehaviour
         pause = FindObjectOfType<PauseMenu>();
         if (newLvlLabel != null)
             newLvlLabel.enabled = false;
+        if (warningLabel != null)
+            warningLabel.enabled = false;
     }
 
     public void ShowExp(int lvl, int exp, int nextTh)
@@ -87,9 +90,20 @@ public class GUIScript : MonoBehaviour
             newLvlLabel.enabled = true;
     }
 
+    public void ShowWarning()
+    {
+        if (warningLabel != null)
+            warningLabel.enabled = true;
+    }
+
     public void CloseNextLvl()
     {
         newLvlLabel.enabled = false;
+    }
+
+    public void CloseWarning()
+    {
+        warningLabel.enabled = false;
     }
 
     public void AddText(string _text)
