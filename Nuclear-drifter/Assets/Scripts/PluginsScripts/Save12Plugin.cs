@@ -27,10 +27,6 @@ public class Save12Plugin : MonoBehaviour
 
                     File.WriteAllText(versionPath, versionText);
                 }
-                else
-                {
-                    Debug.Log(versionPath + " exist");
-                }
             }
         }
     }

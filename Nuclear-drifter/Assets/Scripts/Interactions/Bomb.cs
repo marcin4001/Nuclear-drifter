@@ -11,6 +11,7 @@ public class Bomb : MonoBehaviour
     public int indexDevice = -1;
     public bool isDismantled;
     public float chanceExplosion = 0.5f;
+    public float chanceExplosionWithRepair = 0.1f;
     public string explosionScene;
     private Inventory inv;
     private PlayerClickMove player;
@@ -48,11 +49,18 @@ public class Bomb : MonoBehaviour
             }
             if (player.ObjIsNearPlayer(transform.position, 1.1f))
             {
+                float chance = Random.Range(0.0f, 1.0f);
                 if (!SkillsAndPerks.playerSkill.repair)
                 {
-                    float chance = Random.Range(0.0f, 1.0f);
-                    Debug.Log(chance);
                     if (chance < chanceExplosion)
+                    {
+                        SceneManager.LoadScene(explosionScene);
+                        return;
+                    }
+                }
+                else
+                {
+                    if (chance < chanceExplosionWithRepair)
                     {
                         SceneManager.LoadScene(explosionScene);
                         return;
