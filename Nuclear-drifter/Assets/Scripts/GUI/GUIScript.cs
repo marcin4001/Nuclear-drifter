@@ -152,26 +152,32 @@ public class GUIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            radImg.enabled = playerHealth.isRad;
-            bioImg.enabled = playerHealth.isPoison;
 
-            float percentHealth = (float)playerHealth.currentHealth / (float)playerHealth.maxHealth;
-            percentHealth = Mathf.Clamp01(percentHealth);
-            hpBar.localScale = new Vector3(percentHealth, 1.0f, 1.0f);
-            int hour = 0;
-            string timeOfDay = "";
-            if(time.hour > 12)
-            {
-                hour = time.hour - 12;
-                timeOfDay = " PM";
-            }
-            else
-            {
-                hour = time.hour;
+        radImg.enabled = playerHealth.isRad;
+        bioImg.enabled = playerHealth.isPoison;
+
+        float percentHealth = (float)playerHealth.currentHealth / (float)playerHealth.maxHealth;
+        percentHealth = Mathf.Clamp01(percentHealth);
+        hpBar.localScale = new Vector3(percentHealth, 1.0f, 1.0f);
+        int hour = 0;
+        string timeOfDay = "";
+        if (time.hour > 12)
+            hour = time.hour - 12;
+        else
+            hour = time.hour;
+
+        if (time.hour > 11)
+        {
+            if(time.hour == 12 && time.minutes == 0)
                 timeOfDay = " AM";
-            }
-            string timeStr = "Day " + time.day + " Time " + string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", time.minutes) + timeOfDay;
-            timeLabel.text = timeStr;
+            else
+                timeOfDay = " PM";
+        }
+        else
+            timeOfDay = " AM";
+            
+        string timeStr = "Day " + time.day + " Time " + string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", time.minutes) + timeOfDay;
+        timeLabel.text = timeStr;
         if (!blockGUI)
         {
             if (EventSystem.current.IsPointerOverGameObject())
