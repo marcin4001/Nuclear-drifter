@@ -299,7 +299,8 @@ PrefabInstance:
         Mike Taylor | Dreamstime.com\r\n123rf.com/profile_kmarfu\nNicnubill\nAukaiCraftLV\n[VexedEnigma/PixelJustice]\nVectorPixelStar
         - shutterstock.com\nVachekin Anton - shutterstock.com\n\n##########################################################\n\nCharacter
         Creator:\nUniversal LPC Sprite Sheet Character Generator\n\n##########################################################\n\nMusic:\nDamian
-        Major\nCryo Chamber - Atrium Carceri & Herbst9 - Ur Evighetens Pipa\nhttp://cryochamber.bandcamp.com\n\n##########################################################\n\nSFX
+        Major\nCryo Chamber - Atrium Carceri & Herbst9 - Ur Evighetens Pipa\nCryo
+        Chamber - Atrium Carceri & Herbst9 - Den D\xF6da Trollkvinnan\nhttp://cryochamber.bandcamp.com\n\n##########################################################\n\nSFX
         audio source:\nhttps://freesound.org/\nhttps://www.epidemicsound.com/\n\n##########################################################\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6751282404529122209, guid: 6cd513d49ff64f34798e3aef060f5395,
@@ -1125,6 +1126,7 @@ MonoBehaviour:
   electricShock: {fileID: 8300000, guid: f9dbf9de0c79d2249aef2af3da24b41b, type: 3}
   donkeyWalk: {fileID: 0}
   purifier: {fileID: 0}
+  boat: {fileID: 0}
 --- !u!82 &558392528
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2345,7 +2347,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Marcin4001 \rAlpha v0.12"
+  m_Text: "Marcin4001 \rAlpha v0.13"
 --- !u!222 &2023045998
 CanvasRenderer:
   m_ObjectHideFlags: 0
