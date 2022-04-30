@@ -89,7 +89,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.levelRad = 0;
 
         PropertyPlayer.property.day = 1;
-        PropertyPlayer.property.hour = 5;
+        PropertyPlayer.property.hour = 6;
         PropertyPlayer.property.minutes = 0;
 
         PropertyPlayer.property.startPos = new Vector2(235f, 24f);

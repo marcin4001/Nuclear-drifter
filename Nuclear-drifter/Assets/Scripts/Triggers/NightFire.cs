@@ -18,7 +18,7 @@ public class NightFire : MonoBehaviour
     private void OnWillRenderObject()
     {
         //Debug.Log("Burn");
-        if(time.hour >= 5 && time.hour < 20)
+        if(time.hour >= 6 && time.hour < 21)
         {
             anim.SetBool("Burn", false);
             if (lightNight != null) lightNight.enabled = false;

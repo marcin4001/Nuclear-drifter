@@ -28,13 +28,13 @@ public class DayCycle : MonoBehaviour
         time.day = _day;
         time.hour = _hour;
         time.minutes = minutes;
-        if(time.hour == 19 || time.hour == 4)
+        if(time.hour == 20 || time.hour == 5)
         {
             if (minutes > 30) time.hour = _hour + 1;
             else time.hour = _hour;
             time.minutes = 0;
         }
-        if(time.hour > 19 || time.hour < 5)
+        if(time.hour > 20 || time.hour < 6)
         {
             sun.transform.rotation = Quaternion.Euler(new Vector3(90f, 0f, 0f));
             if (lightPlayer != null) lightPlayer.enabled = true;
@@ -76,7 +76,7 @@ public class DayCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (time.hour == 19)
+        if (time.hour == 20)
         {
             counter += Time.deltaTime;
             float alfa = counter / timeOneHour; //(float) time.minutes / 59f;
@@ -89,7 +89,7 @@ public class DayCycle : MonoBehaviour
                 lightPlayer.enabled = true;
             }
         }
-        else if (time.hour == 4)
+        else if (time.hour == 5)
         {
             counter += Time.deltaTime;
             float alfa = counter / timeOneHour; //(float) time.minutes / 59f;

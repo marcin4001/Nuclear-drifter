@@ -36,11 +36,11 @@ public class FirePlace : MonoBehaviour
             gUI.AddText("You don't have a pan");
         if (!allTimeFire)
         {
-            result &= hour >= 20 || hour <= 3;
+            result &= hour >= 21 || hour <= 5;
             if (!result)
             {
                 gUI.AddText("The fireplace can be used");
-                gUI.AddText("from 8 PM to 4 AM");
+                gUI.AddText("from 9 PM to 6 AM");
             }
         }
 
