@@ -58,18 +58,18 @@ public class CarrierCanvas : MonoBehaviour
                 if (obj.unlocked)
                 {
                     texts[i].text = obj.name + "($" + obj.cost + ")";
-                    buttons[i].SetActive(true);
+                    buttons[i].GetComponent<Button>().interactable = true;
                 }
                 else
                 {
                     texts[i].text = "##################";
-                    buttons[i].SetActive(false);
+                    buttons[i].GetComponent<Button>().interactable = false;
                 }
             }
             else
             {
                 texts[i].text = "##################";
-                buttons[i].SetActive(false);
+                buttons[i].GetComponent<Button>().interactable = false;
             }
         }
     }
