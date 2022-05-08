@@ -8,14 +8,17 @@ public class Stove : MonoBehaviour
     public Sprite stoveOff;
     public Sprite stoveOn;
     public Slot slot;
+    public Slot slotFish;
     public int id_ach = 1;
     private Inventory inv;
     private GUIScript gUI;
     private PlayerClickMove player;
-    private Slot meat;
+    private Slot meatOrFish;
     private FadePanel fade;
     private SoundsTrigger sound;
     private Achievement achievement;
+    private bool isFish = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +35,14 @@ public class Stove : MonoBehaviour
     // Update is called once per frame
     public void Use()
     {
-        meat = inv.FindItem(212);
-        if(meat != null)
+        isFish = false;
+        meatOrFish = inv.FindItem(212);
+        if(meatOrFish == null)
+        {
+            meatOrFish = inv.FindItem(206);
+            isFish = true;
+        }
+        if(meatOrFish != null)
         {
             if(!inv.IsFull())
             {
@@ -41,20 +50,36 @@ public class Stove : MonoBehaviour
             }
             else
             {
-                Slot r_meat = inv.FindItem(213);
-                if(r_meat != null || meat.amountItem == 1)
+                if (!isFish)
                 {
-                    SetCook();
+                    Slot r_meat = inv.FindItem(213);
+                    if (r_meat != null || meatOrFish.amountItem == 1)
+                    {
+                        SetCook();
+                    }
+                    else
+                    {
+                        gUI.AddText("Inventory is full");
+                    }
                 }
                 else
                 {
-                    gUI.AddText("Inventory is full");
+                    Slot f_meat = inv.FindItem(222);
+                    if (f_meat != null || meatOrFish.amountItem == 1)
+                    {
+                        SetCook();
+                    }
+                    else
+                    {
+                        gUI.AddText("Inventory is full");
+                    }
                 }
             }
         }
         else
         {
             gUI.AddText("I don't have raw meat");
+            gUI.AddText("or fish");
         }
     }
 
@@ -64,19 +89,30 @@ public class Stove : MonoBehaviour
         if (player.ObjIsNearPlayer(transform.position, 1.1f))
         {
             render.sprite = stoveOn;
-            inv.RemoveOne(meat);
+            inv.RemoveOne(meatOrFish);
             fade.EnableImg(true);
             sound.Cook();
-            Invoke("Cook", 2.3f);
+            if(!isFish)
+                Invoke("CookMeat", 2.3f);
+            else
+                Invoke("CookFish", 2.3f);
         }
         else gUI.AddText("Stove is too far");
     }
 
-    private void Cook()
+    private void CookMeat()
     {
         fade.EnableImg(false);
         render.sprite = stoveOff;
         inv.Add(slot);
+        achievement.SetAchievement(id_ach);
+    }
+
+    private void CookFish()
+    {
+        fade.EnableImg(false);
+        render.sprite = stoveOff;
+        inv.Add(slotFish);
         achievement.SetAchievement(id_ach);
     }
 }
