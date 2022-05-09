@@ -6,6 +6,7 @@ public class ConsoleTextTrig : MonoBehaviour
 {
     private GUIScript gUI;
     public string[] texts;
+    public bool noDestroy = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,8 @@ public class ConsoleTextTrig : MonoBehaviour
             {
                 gUI.AddText(text);
             }
-            Destroy(gameObject);
+            if(!noDestroy)
+                Destroy(gameObject);
         }
     }
 }
