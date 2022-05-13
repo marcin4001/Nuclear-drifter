@@ -90,7 +90,9 @@ MonoBehaviour:
     itemElement: {fileID: 11400000, guid: baa386202243b8042972bb658d476381, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   itemPref: {fileID: 210427443381698116, guid: 55aaa9e2df6a58749b72fadf4237ac57, type: 3}
+  chance: 40
 --- !u!1 &7410256006383096180
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +135,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

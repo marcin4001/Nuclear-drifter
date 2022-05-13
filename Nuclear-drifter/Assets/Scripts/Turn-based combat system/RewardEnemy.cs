@@ -9,7 +9,8 @@ public class RewardEnemy : MonoBehaviour
     private int moneyId = 300;
     private Inventory inv;
     private GUIScript gUI;
-    
+    public int chance = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,10 @@ public class RewardEnemy : MonoBehaviour
 
     public void GiveItem()
     {
+        int random = Random.Range(0, 100);
+        Debug.Log(random);
+        if (random > chance)
+            return;
         if(inv.IsFull() && !inv.FindItemB(item.itemElement.idItem))
         {
             GameObject obj = Instantiate(itemPref, transform.position, Quaternion.identity);

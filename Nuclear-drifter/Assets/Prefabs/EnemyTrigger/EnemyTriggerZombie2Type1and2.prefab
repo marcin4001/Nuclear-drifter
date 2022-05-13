@@ -116,6 +116,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -248,5 +249,7 @@ MonoBehaviour:
     itemElement: {fileID: 11400000, guid: 945047e41570b1a4e96e94475649bde0, type: 2}
     amountItem: 1
     ammo: 0
+    id: -1
   itemPref: {fileID: 1506507720858274992, guid: 6613ae9d8f925ae4dbfeced75790d42b,
     type: 3}
+  chance: 30
