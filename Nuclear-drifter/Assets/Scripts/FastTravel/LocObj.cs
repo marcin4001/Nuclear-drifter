@@ -11,4 +11,5 @@ public class LocObj
     public int hour;
     public int cost;
     public bool unlocked;
+    public string location;
 }

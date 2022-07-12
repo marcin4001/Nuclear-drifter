@@ -271,6 +271,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6556853291565821461, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.28997803
+      objectReference: {fileID: 0}
     - target: {fileID: 6663469402210089021, guid: 6cd513d49ff64f34798e3aef060f5395,
         type: 3}
       propertyPath: m_UiScaleMode
@@ -2351,7 +2356,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Marcin4001 \rAlpha v0.13"
+  m_Text: "Marcin4001 \rAlpha v0.14"
 --- !u!222 &2023045998
 CanvasRenderer:
   m_ObjectHideFlags: 0

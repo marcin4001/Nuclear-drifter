@@ -12,6 +12,7 @@ public class FastTravel : MonoBehaviour
     public Vector2 playerPos;
     private FadePanel fade;
     private SoundsTrigger sound;
+    public string location;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,8 @@ public class FastTravel : MonoBehaviour
         }
         PropertyPlayer.property.minutes = time.minutes;
         PropertyPlayer.property.startPos = playerPos;
+        if(location != "")
+            PropertyPlayer.property.location = location;
         PropertyPlayer.property.SaveTemp();
         fade.FadeIn();
         Invoke("PlaySound", 1.5f);

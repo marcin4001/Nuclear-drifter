@@ -108,6 +108,7 @@ public class Carrier : MonoBehaviour
                 return;
             }
             fastTravel.playerPos = obj.startPos;
+            fastTravel.location = obj.location;
             fastTravel.Walk(obj.hour);
         }
     }
