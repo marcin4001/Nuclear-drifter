@@ -124,6 +124,29 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4549091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944936889765474635, guid: 06eaf12013a7f4041bd6abecdfe9dad7,
+    type: 3}
+  m_PrefabInstance: {fileID: 196761060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4549092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218419690b9306049a13aa80a3bc59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idEnemy: 27
+  enemyMission:
+    nameEnemy: 
+    idMission: 0
+    isKilled: 0
 --- !u!1001 &11123595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15100,6 +15123,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2780892fd6c3eb4b874ec9f4d59fd04, type: 3}
+--- !u!1 &411253561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944936889765474635, guid: e0dc64774bec6ef45a5a719e150caec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1041281184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &411253562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411253561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218419690b9306049a13aa80a3bc59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idEnemy: 24
+  enemyMission:
+    nameEnemy: 
+    idMission: 0
+    isKilled: 0
 --- !u!1 &434016830
 GameObject:
   m_ObjectHideFlags: 0
@@ -19287,6 +19333,29 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0b6dbbd1b104f4e932e069ba1ee63a, type: 3}
+--- !u!1 &616142731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944936889765474635, guid: 8662133cf6f76f043be5795780fb00ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 28064819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &616142732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616142731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218419690b9306049a13aa80a3bc59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idEnemy: 30
+  enemyMission:
+    nameEnemy: 
+    idMission: 0
+    isKilled: 0
 --- !u!1001 &664295064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22221,6 +22290,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1449307051}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1526656286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526656288}
+  - component: {fileID: 1526656287}
+  - component: {fileID: 1526656289}
+  m_Layer: 0
+  m_Name: AddItems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1526656287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526656286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e18ec092f233f845a78ad77601c25e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemElement: {fileID: 11400000, guid: c322fe7f821885543886723b2dea70d4, type: 2}
+    amountItem: 1
+    ammo: 200
+    id: -1
+  keyCode: 284
+--- !u!4 &1526656288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526656286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526656289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526656286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e18ec092f233f845a78ad77601c25e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemElement: {fileID: 11400000, guid: 4b38b4ca29dc1b1428efec71317c850e, type: 2}
+    amountItem: 10
+    ammo: 0
+    id: -1
+  keyCode: 285
 --- !u!1001 &1540157874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23432,6 +23569,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1643506799}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1643506801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944936889765474635, guid: 06eaf12013a7f4041bd6abecdfe9dad7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1643506799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1643506802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643506801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218419690b9306049a13aa80a3bc59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idEnemy: 23
+  enemyMission:
+    nameEnemy: 
+    idMission: 0
+    isKilled: 0
 --- !u!1001 &1646854795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23507,6 +23667,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1646854795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1680144360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944936889765474635, guid: c44cba0ce8ae4b640be0dec17b1d7ccb,
+    type: 3}
+  m_PrefabInstance: {fileID: 52576077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1680144361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680144360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218419690b9306049a13aa80a3bc59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idEnemy: 29
+  enemyMission:
+    nameEnemy: 
+    idMission: 0
+    isKilled: 0
+--- !u!1 &1681262985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944936889765474635, guid: 8d76bd8e29dbba340a592d1b5fed186e,
+    type: 3}
+  m_PrefabInstance: {fileID: 540305950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1681262986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681262985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218419690b9306049a13aa80a3bc59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idEnemy: 28
+  enemyMission:
+    nameEnemy: 
+    idMission: 0
+    isKilled: 0
+--- !u!1 &1696703607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944936889765474635, guid: c44cba0ce8ae4b640be0dec17b1d7ccb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1163768112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1696703608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696703607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218419690b9306049a13aa80a3bc59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idEnemy: 25
+  enemyMission:
+    nameEnemy: 
+    idMission: 0
+    isKilled: 0
 --- !u!20 &1702125722 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2244689762883206568, guid: 50be026967f9fd6498a8eb5ed125d78e,
@@ -34208,6 +34437,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2075230470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944936889765474635, guid: 8662133cf6f76f043be5795780fb00ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132259952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2075230471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075230470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218419690b9306049a13aa80a3bc59a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idEnemy: 26
+  enemyMission:
+    nameEnemy: 
+    idMission: 0
+    isKilled: 0
 --- !u!1001 &2078779006
 PrefabInstance:
   m_ObjectHideFlags: 0
