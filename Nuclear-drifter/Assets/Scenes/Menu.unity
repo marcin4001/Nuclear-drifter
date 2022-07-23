@@ -295,7 +295,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "##########################################################\nNuclear
-        drifter\nby marcin4001\nCopyright 2020-2021\n#########################################################\n\nMain
+        drifter\nby marcin4001\nCopyright 2020-2022\n#########################################################\n\nMain
         developer:\nMarcin Jachymczyk\n\n##########################################################\n\nGraphics:\nMarcin
         Jachymczyk\nREFMAP\nAyene\nLanea Zimmerman (AKA Sharm)\nStephen Challener
         (AKA Redshrike)\n\rManuel Riecke (AKA MrBeast)\nDaniel Armstrong (AKA HughSpectrum)\nLeonard
@@ -306,11 +306,13 @@ PrefabInstance:
         by bluecarrot16, Guillaume Lecollinet, Johann Charlot, cynicmusic, Surt,
         vk, Yar, Buch, Jetrel, Zachariah Husiar aka (Zabin), Hyptosis, William Thompson,
         Frode Lindeijer aka (Modanung), Leonard Pabin, and Lanea Zimmerman aka (Sharm).\nCC-BY-SA
-        3.0\n\nBrowserQuest Sprites and Tiles\nGuillaume Lecollinet\nCC-BY-SA 3.0\nhttp://opengameart.org/content/browserquest-sprites-and-tiles\n\n##########################################################\n\nCharacter
+        3.0\n\nBrowserQuest Sprites and Tiles\nGuillaume Lecollinet\nCC-BY-SA 3.0\nhttp://opengameart.org/content/browserquest-sprites-and-tiles\n\nCraig
+        Smith\n\n##########################################################\n\nCharacter
         Creator:\nUniversal LPC Sprite Sheet Character Generator\n\n##########################################################\n\nMusic:\nDamian
         Major\nCryo Chamber - Atrium Carceri & Herbst9 - Ur Evighetens Pipa\nCryo
         Chamber - Atrium Carceri & Herbst9 - Den D\xF6da Trollkvinnan\nhttp://cryochamber.bandcamp.com\n\n##########################################################\n\nSFX
-        audio source:\nhttps://freesound.org/\nhttps://www.epidemicsound.com/\n\n##########################################################\n"
+        audio source:\nhttps://freesound.org/\nhttps://www.epidemicsound.com/\nYT:
+        Distorted Room \n\n##########################################################\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6751282404529122209, guid: 6cd513d49ff64f34798e3aef060f5395,
         type: 3}
@@ -1136,6 +1138,7 @@ MonoBehaviour:
   donkeyWalk: {fileID: 0}
   purifier: {fileID: 0}
   boat: {fileID: 0}
+  lockOpenDoor: {fileID: 0}
 --- !u!82 &558392528
 AudioSource:
   m_ObjectHideFlags: 0
