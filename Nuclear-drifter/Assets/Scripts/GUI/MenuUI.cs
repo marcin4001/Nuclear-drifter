@@ -15,6 +15,7 @@ public class MenuUI : MonoBehaviour
     public string urlHowToPlay;
     public SaveTextInfo[] saveTextInfos;
     public Canvas loadCanvas;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,28 +32,33 @@ public class MenuUI : MonoBehaviour
             save.SetText();
         }
         loadCanvas.enabled = false;
+        sound = GetComponent<SoundsTrigger>();
     }
 
     public void NewGame()
     {
         ResetProperty();
+        sound.PlayClickButton();
         SceneManager.LoadScene("Prologue");
     }
 
     public void LoadBtn()
     {
+        sound.PlayClickButton();
         loadCanvas.enabled = true;
         
     }
 
     public void CloseLoadPanel()
     {
+        sound.PlayClickButton();
         loadCanvas.enabled = false;
     }
 
     public void Load(int saveNo)
     {
-        if(SaveAndLoad.CanLoad(saveNo))
+        sound.PlayClickButton();
+        if (SaveAndLoad.CanLoad(saveNo))
         {
             bool isLoad = SaveAndLoad.Load(saveNo);
             if (isLoad) SceneManager.LoadScene(PropertyPlayer.property.currentScene);
@@ -61,22 +67,26 @@ public class MenuUI : MonoBehaviour
 
     public void OpenOptions()
     {
+        sound.PlayClickButton();
         options.OpenOptions();
     }
 
     public void OpenCredits()
     {
+        sound.PlayClickButton();
         credits.Open();
     }
 
     public void Exit()
     {
+        sound.PlayClickButton();
         Application.Quit(0);
         Debug.Log("Exit");
     }
 
     public void HowToPlayOpen()
     {
+        sound.PlayClickButton();
         Application.OpenURL(urlHowToPlay);
     }
 

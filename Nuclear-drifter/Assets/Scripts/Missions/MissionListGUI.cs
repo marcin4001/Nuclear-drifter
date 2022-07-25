@@ -15,7 +15,7 @@ public class MissionListGUI : MonoBehaviour
     private TypeScene typeSc;
     private MapControl map;
     private FadePanel fade;
-    
+    private SoundsTrigger sound;
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +26,12 @@ public class MissionListGUI : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
         map = FindObjectOfType<MapControl>();
         fade = FindObjectOfType<FadePanel>();
-        
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public void OpenList()
     {
+        sound.PlayClickButton();
         active = !active;
         listCanvas.enabled = active;
         gUI.blockGUI = active;
@@ -56,6 +57,7 @@ public class MissionListGUI : MonoBehaviour
 
     public void CurrentMissionShow()
     {
+        sound.PlayClickButton();
         scroll.verticalNormalizedPosition = 1.0f;
         titleText.text = "Current missions";
         List<MissionObj> list = MissionList.global.GetListMission();
@@ -82,6 +84,7 @@ public class MissionListGUI : MonoBehaviour
 
     public void CompletedMissionShow()
     {
+        sound.PlayClickButton();
         scroll.verticalNormalizedPosition = 1.0f;
         titleText.text = "Completed missions";
         List<MissionObj> list = MissionList.global.GetListMission();

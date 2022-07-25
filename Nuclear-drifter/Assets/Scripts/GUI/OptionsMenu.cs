@@ -91,6 +91,8 @@ public class OptionsMenu : MonoBehaviour
     {
         Screen.SetResolution(resolutions[currentResolution].width, resolutions[currentResolution].height, value);
         fullscreen = value;
+        if (sfxSound != null)
+            sfxSound.PlayClickButton();
     }
 
     public void ChangeResolution(int value)
@@ -124,5 +126,7 @@ public class OptionsMenu : MonoBehaviour
     public void CloseOptions()
     {
         canvasOpt.enabled = false;
+        if (sfxSound != null)
+            sfxSound.PlayClickButton();
     }
 }

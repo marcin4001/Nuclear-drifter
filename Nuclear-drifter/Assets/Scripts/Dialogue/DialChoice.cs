@@ -9,11 +9,13 @@ public class DialChoice : MonoBehaviour
     public Text textCh;
     private Button buttonCh;
     private DialogueController controller;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
         buttonCh = GetComponent<Button>();
         controller = FindObjectOfType<DialogueController>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
 
@@ -33,6 +35,7 @@ public class DialChoice : MonoBehaviour
 
     public void Click()
     {
+        sound.PlayClickButton();
         if(controller == null)controller = FindObjectOfType<DialogueController>();
         controller.SetDialogue(dial);
     }

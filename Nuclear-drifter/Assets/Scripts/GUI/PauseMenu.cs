@@ -23,6 +23,7 @@ public class PauseMenu : MonoBehaviour
     public SaveTextInfo[] saveInfos;
     public SaveTextInfo[] loadInfos;
     public int currentSaveNo = 0;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class PauseMenu : MonoBehaviour
         options = FindObjectOfType<OptionsMenu>();
         saveCanvas.enabled = false;
         loadCanvas.enabled = false;
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     // Update is called once per frame
@@ -45,7 +47,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape) && activeEsc)
         {
-            ActivePouseMenu();
+            ActivePouseEsc();
         }
     }
 
@@ -57,6 +59,7 @@ public class PauseMenu : MonoBehaviour
         {
             save.SetText();
         }
+        sound.PlayClickButton();
     }
 
     public void LoadBtn()
@@ -67,10 +70,12 @@ public class PauseMenu : MonoBehaviour
         {
             load.SetText();
         }
+        sound.PlayClickButton();
     }
 
     public void Save(int saveNo)
     {
+        sound.PlayClickButton();
         currentSaveNo = saveNo;
         if (SaveAndLoad.CanLoad(saveNo))
         {
@@ -84,6 +89,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Load(int saveNo)
     {
+        sound.PlayClickButton();
         bool isLoad = SaveAndLoad.CanLoad(saveNo);
         if (isLoad)
         {
@@ -97,18 +103,21 @@ public class PauseMenu : MonoBehaviour
     {
         activeEsc = true;
         saveCanvas.enabled = false;
+        sound.PlayClickButton();
     }
 
     public void CloseLoadPanel()
     {
         activeEsc = true;
         loadCanvas.enabled = false;
+        sound.PlayClickButton();
     }
 
     public void OptionBtn()
     {
         activeEsc = false;
         options.OpenOptions();
+        sound.PlayClickButton();
     }
 
     public void CloseOptionMenu()
@@ -118,6 +127,32 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void ActivePouseMenu()
+    {
+        sound.PlayClickButton();
+        if (activeEsc)
+        {
+            activeMenu = !activeMenu;
+            mapBtn.enabled = !activeMenu;
+            missionBtn.enabled = !activeMenu;
+            pouseCanvas.enabled = activeMenu;
+            gUI.blockGUI = activeMenu;
+            mc.keyActive = !activeMenu;
+            if (activeMenu)
+            {
+                Time.timeScale = 0.0f;
+                //typeSc.inMenu = true;
+            }
+            else
+            {
+                Time.timeScale = 1.0f;
+                //typeSc.inMenu = false;
+            }
+            typeSc.inMenu = activeMenu;
+            gUI.perksBtn.enabled = !activeMenu;
+        }
+    }
+
+    public void ActivePouseEsc()
     {
         if (activeEsc)
         {
@@ -146,18 +181,21 @@ public class PauseMenu : MonoBehaviour
     {
         activeEsc = false;
         exitMsgCanvas.enabled = true;
+        sound.PlayClickButton();
     }
 
     public void YesButton()
     {
         SaveAndLoad.CloseGame();
         SceneManager.LoadScene(0);
+        sound.PlayClickButton();
     }
 
     public void NoButton()
     {
         activeEsc = true;
         exitMsgCanvas.enabled = false;
+        sound.PlayClickButton();
     }
 
     public void YesButtonSave()
@@ -174,21 +212,25 @@ public class PauseMenu : MonoBehaviour
         {
             save.SetText();
         }
+        sound.PlayClickButton();
     }
 
     public void NoButtonSave()
     {
         saveMsgCanvas.enabled = false;
+        sound.PlayClickButton();
     }
 
     public void YesButtonLoad()
     {
+        sound.PlayClickButton();
         SaveAndLoad.Load(currentSaveNo);
         SceneManager.LoadScene(PropertyPlayer.property.currentScene);
     }
 
     public void NoButtonLoad()
     {
+        sound.PlayClickButton();
         loadMsgCanvas.enabled = false;
     }
     

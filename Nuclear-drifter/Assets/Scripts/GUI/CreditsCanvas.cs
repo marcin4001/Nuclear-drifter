@@ -7,11 +7,13 @@ public class CreditsCanvas : MonoBehaviour
 {
     public ScrollRect scroll;
     private Canvas canvasCredits;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
         canvasCredits = GetComponent<Canvas>();
         canvasCredits.enabled = false;
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public void Open()
@@ -23,5 +25,6 @@ public class CreditsCanvas : MonoBehaviour
     public void CloseCredits()
     {
         canvasCredits.enabled = false;
+        sound.PlayClickButton();
     }
 }

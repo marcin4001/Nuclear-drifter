@@ -20,6 +20,7 @@ public class EqChestController : MonoBehaviour
     private TypeScene typeSc;
     private bool inBackpack = false;
     private GameObject boxObj;
+    private SoundsTrigger sound;
     //public int testIndex = 0;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class EqChestController : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
         inv = FindObjectOfType<Inventory>();
         inBackpack = false;
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public Inventory GetInvPlayer()
@@ -69,6 +71,7 @@ public class EqChestController : MonoBehaviour
             boxObj.SendMessage("Close", SendMessageOptions.DontRequireReceiver);
             boxObj = null;
         }
+        sound.PlayClickButton();
     }
 
     public void Open(int id, int indexBack, GameObject obj)

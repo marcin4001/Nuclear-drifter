@@ -18,6 +18,7 @@ public class PerksPanel : MonoBehaviour
     private Experience exp;
     private Health playerHP;
     private bool active = false;
+    private SoundsTrigger sound;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class PerksPanel : MonoBehaviour
         perksCanvas = GetComponent<Canvas>();
         exp = FindObjectOfType<Experience>();
         playerHP = FindObjectOfType<Health>();
+        sound = FindObjectOfType<SoundsTrigger>();
         perksCanvas.enabled = false;
 
         PerkElement[] perks = FindObjectsOfType<PerkElement>();
@@ -76,6 +78,7 @@ public class PerksPanel : MonoBehaviour
         {
             gUI.AddText("Perks unavailable now.");
         }
+        sound.PlayClickButton();
     }
 
     public void ShowDesc(PerkElement perk)
@@ -88,11 +91,13 @@ public class PerksPanel : MonoBehaviour
         descText += "Your point: " + exp.lvlPoint + " LP\n";
         consoleDesc.text = descText;
         currentPerk = perk;
+        sound.PlayClickButton();
     }
 
     public void AddBtn()
     {
-        if(currentPerk != null)
+        sound.PlayClickButton();
+        if (currentPerk != null)
         {
             Perk perkObj = SkillsAndPerks.playerSkill.GetPerk(currentPerk.indexPerk);
             if (perkObj != null)
@@ -132,6 +137,7 @@ public class PerksPanel : MonoBehaviour
         {
             ShowInfoConsole("No perk have been selected!");
         }
+        
     }
 
     private void IncCounterPerk(Perk perkObj)

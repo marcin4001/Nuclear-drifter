@@ -1135,10 +1135,11 @@ MonoBehaviour:
   error: {fileID: 8300000, guid: 7417ce3581c299b48a819229fc62bd94, type: 3}
   trapdoor: {fileID: 8300000, guid: 06b31ce5044453f4e9013033d08d5ab4, type: 3}
   electricShock: {fileID: 8300000, guid: f9dbf9de0c79d2249aef2af3da24b41b, type: 3}
-  donkeyWalk: {fileID: 0}
-  purifier: {fileID: 0}
-  boat: {fileID: 0}
-  lockOpenDoor: {fileID: 0}
+  donkeyWalk: {fileID: 8300000, guid: 413ec1dc490d3d547bea7edf01fb67de, type: 3}
+  purifier: {fileID: 8300000, guid: d9e807dde302c6f44afeec2efd8f2f89, type: 3}
+  boat: {fileID: 8300000, guid: bca6910bbf15d7345bd289343efcfab2, type: 3}
+  lockOpenDoor: {fileID: 8300000, guid: 6006fee643710da4d8fed15b7cce255c, type: 3}
+  clickButton: {fileID: 8300000, guid: fa098cab9e143e14abab880fbcadf469, type: 3}
 --- !u!82 &558392528
 AudioSource:
   m_ObjectHideFlags: 0

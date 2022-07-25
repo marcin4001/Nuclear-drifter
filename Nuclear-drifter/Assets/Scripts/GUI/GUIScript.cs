@@ -37,9 +37,11 @@ public class GUIScript : MonoBehaviour
     private PointerEventData data;
     private TypeScene typeScene;
     private PauseMenu pause;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
+        sound = FindObjectOfType<SoundsTrigger>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         time = FindObjectOfType<TimeGame>();
         move = FindObjectOfType<PlayerClickMove>();
@@ -98,11 +100,13 @@ public class GUIScript : MonoBehaviour
 
     public void CloseNextLvl()
     {
+        sound.PlayClickButton();
         newLvlLabel.enabled = false;
     }
 
     public void CloseWarning()
     {
+        sound.PlayClickButton();
         warningLabel.enabled = false;
     }
 

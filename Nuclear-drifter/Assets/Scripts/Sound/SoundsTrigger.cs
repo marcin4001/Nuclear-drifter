@@ -18,6 +18,7 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip purifier;
     public AudioClip boat;
     public AudioClip lockOpenDoor;
+    public AudioClip clickButton;
     private AudioSource sr;
    
     // Start is called before the first frame update
@@ -95,6 +96,11 @@ public class SoundsTrigger : MonoBehaviour
     public void PlayOpenLockDoor()
     {
         sr.PlayOneShot(lockOpenDoor);
+    }
+
+    public void PlayClickButton()
+    {
+        sr.PlayOneShot(clickButton);
     }
 
     public void StartGeiger()

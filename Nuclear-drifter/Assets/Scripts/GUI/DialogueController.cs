@@ -20,6 +20,7 @@ public class DialogueController : MonoBehaviour
     public DialChoice[] choices;
     public bool active = false;
     private TypeScene typeSc;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class DialogueController : MonoBehaviour
         menu = FindObjectOfType<PauseMenu>();
         dialCanvas.enabled = false;
         typeSc = FindObjectOfType<TypeScene>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class DialogueController : MonoBehaviour
 
     public void Close()
     {
+        sound.PlayClickButton();
         dialCanvas.enabled = false;
         map.keyActive = true;
         menu.activeEsc = true;

@@ -13,6 +13,7 @@ public class MapControl : MonoBehaviour
     public bool keyActive = true;
     private TypeScene typeSc;
     private PauseMenu pause;
+    private SoundsTrigger sound;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class MapControl : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
         player = FindObjectOfType<PlayerClickMove>();
         pause = FindObjectOfType<PauseMenu>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     // Update is called once per frame
@@ -30,11 +32,24 @@ public class MapControl : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.M) && keyActive)
         {
-            OpenMap();
+            OpenMapEsc();
         }
     }
 
     public void OpenMap()
+    {
+        actveMap = !actveMap;
+        mapCam.enabled = actveMap;
+        mapCanvas.enabled = actveMap;
+        gUI.blockGUI = actveMap;
+        player.active = !actveMap;
+        typeSc.inMenu = actveMap;
+        gUI.DeactiveButtons(!actveMap);
+        pause.activeEsc = !actveMap;
+        sound.PlayClickButton();
+    }
+
+    public void OpenMapEsc()
     {
         actveMap = !actveMap;
         mapCam.enabled = actveMap;

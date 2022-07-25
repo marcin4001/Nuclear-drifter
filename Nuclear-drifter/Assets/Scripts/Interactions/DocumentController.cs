@@ -12,6 +12,7 @@ public class DocumentController : MonoBehaviour
     private Canvas docCanvas;
     private TypeScene typeSc;
     private AchievementDoc achievementDoc;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class DocumentController : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
         docCanvas.enabled = false;
         achievementDoc = GetComponent<AchievementDoc>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public void OpenDoc(int id, int idItem)
@@ -44,5 +46,6 @@ public class DocumentController : MonoBehaviour
         gUI.DeactiveBtn(true);
         typeSc.inMenu = false;
         Time.timeScale = 1.0f;
+        sound.PlayClickButton();
     }
 }
