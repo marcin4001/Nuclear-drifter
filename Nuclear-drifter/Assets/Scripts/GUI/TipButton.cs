@@ -6,10 +6,12 @@ public class TipButton : MonoBehaviour
 {
     public string[] tips;
     private GUIScript gUI;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
         gUI = FindObjectOfType<GUIScript>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public void ClickTip()
@@ -20,5 +22,6 @@ public class TipButton : MonoBehaviour
             foreach (string tip in tips)
                 gUI.AddText(tip);
         }
+        sound.PlayClickButton();
     }
 }

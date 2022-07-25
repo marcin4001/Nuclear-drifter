@@ -18,6 +18,7 @@ public class TradeSystem : MonoBehaviour
     private TypeScene typeSc;
     private Inventory inv;
     private Offer offer;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,7 @@ public class TradeSystem : MonoBehaviour
             }
         }
         tradeGO.SetActive(active);
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public void Close()
@@ -57,6 +59,7 @@ public class TradeSystem : MonoBehaviour
         gUI.DeactiveBtn(!active);
         RemoveAll();
         typeSc.inBox = 0;
+        sound.PlayClickButton();
     }
 
     public void Open()
@@ -175,6 +178,7 @@ public class TradeSystem : MonoBehaviour
                 gUI.AddText("It cannot be sold!");
             }
         }
+        sound.PlayClickButton();
     }
 
     // Update is called once per frame
