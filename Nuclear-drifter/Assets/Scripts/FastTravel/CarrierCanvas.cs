@@ -16,6 +16,7 @@ public class CarrierCanvas : MonoBehaviour
     private MapControl map;
     public GameObject[] buttons;
     public Carrier carrier;
+    private SoundsTrigger sound;
     
 
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class CarrierCanvas : MonoBehaviour
         player = FindObjectOfType<PlayerClickMove>();
         pause = FindObjectOfType<PauseMenu>();
         map = FindObjectOfType<MapControl>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public void Open()
@@ -44,6 +46,10 @@ public class CarrierCanvas : MonoBehaviour
         if(active)
         {
             SetTexts();
+        }
+        else
+        {
+            sound.PlayClickButton();
         }
     }
 
@@ -76,6 +82,7 @@ public class CarrierCanvas : MonoBehaviour
 
     public void WalkTo(int location)
     {
+        sound.PlayClickButton();
         if (carrier != null)
         {
             carrier.WalkTo(location);

@@ -6,6 +6,7 @@ public class FightSound : MonoBehaviour
 {
     public AudioClip[] soundsEnemy;
     public AudioClip[] soundsWeapon;
+    public AudioClip clickButton;
     private AudioSource source;
     // Start is called before the first frame update
     void Awake()
@@ -38,5 +39,10 @@ public class FightSound : MonoBehaviour
                 source.PlayOneShot(soundsWeapon[index]);
             }
         }
+    }
+
+    public void PlayClickButton()
+    {
+        source.PlayOneShot(clickButton);
     }
 }

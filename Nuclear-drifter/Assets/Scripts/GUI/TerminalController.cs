@@ -141,6 +141,7 @@ public class TerminalController : MonoBehaviour
 
     public void ExitButton()
     {
+        sound.PlayClickButton();
         terminalCanvas.enabled = false;
         active = false;
         pause.activeEsc = true;
@@ -160,6 +161,7 @@ public class TerminalController : MonoBehaviour
             text += "Logged in as: AdminBunny\n";
             text += "Do you want to open the door to the deposits? (Y/N): N";
             state = TerminalState.n;
+            sound.PlayClickButton();
         }
     }
 
@@ -176,6 +178,7 @@ public class TerminalController : MonoBehaviour
             text += "Logged in as: AdminBunny\n";
             text += "Do you want to open the door to the deposits? (Y/N): Y";
             state = TerminalState.y;
+            sound.PlayClickButton();
         }
     }
 
@@ -193,6 +196,7 @@ public class TerminalController : MonoBehaviour
             //text += "Do you want to open the door to the deposits? (Y/N): ";
             ExitButton();
             state = TerminalState.working;
+            sound.PlayClickButton();
         }
         if (state == TerminalState.y)
         {
@@ -206,6 +210,7 @@ public class TerminalController : MonoBehaviour
                 if (exp != null)
                     exp.AddExp(mission.exp);
             }
+            sound.PlayClickButton();
         }
     }
 }

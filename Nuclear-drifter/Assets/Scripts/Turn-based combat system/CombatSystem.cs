@@ -152,6 +152,7 @@ public class CombatSystem : MonoBehaviour
 
     public void SelectHand()
     {
+        fightSound.PlayClickButton();
         ClearWeapon();
         ShowWeaponStat();
     }
@@ -491,6 +492,7 @@ public class CombatSystem : MonoBehaviour
 
     public void SkipBtn()
     {
+        fightSound.PlayClickButton();
         gUI.ClearText();
         gUI.AddText("You escaped the fight!");
         SkipFight();

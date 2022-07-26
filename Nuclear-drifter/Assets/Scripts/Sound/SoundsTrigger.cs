@@ -20,6 +20,7 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip lockOpenDoor;
     public AudioClip clickButton;
     private AudioSource sr;
+    private bool blockClick = false;
    
     // Start is called before the first frame update
     void Awake()
@@ -100,7 +101,18 @@ public class SoundsTrigger : MonoBehaviour
 
     public void PlayClickButton()
     {
-        sr.PlayOneShot(clickButton);
+        if (!blockClick)
+        {
+            sr.PlayOneShot(clickButton);
+            StartCoroutine(Unblock());
+        }
+    }
+
+    public IEnumerator Unblock()
+    {
+        blockClick = true;
+        yield return new WaitForSecondsRealtime(0.1f);
+        blockClick = false;
     }
 
     public void StartGeiger()
