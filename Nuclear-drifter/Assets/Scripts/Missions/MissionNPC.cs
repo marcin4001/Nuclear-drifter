@@ -99,7 +99,7 @@ public class MissionNPC : MonoBehaviour
             foreach(MissionDetails m in mission)
             {
                 MissionObj m_obj = MissionList.global.missions[m.id];
-                if(m_obj.start && !m_obj.complete)
+                if(m_obj.start && !m_obj.complete && !m.noCheckStart)
                 {
                     switch(m.type){
                         case MissionType.item:

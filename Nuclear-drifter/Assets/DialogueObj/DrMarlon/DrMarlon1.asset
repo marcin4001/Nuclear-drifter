@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: DrMarlon1
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: Who are you and what are you doing here?
+    reply: I am Marlon I am a doctor of physics. Five years ago I found this nuclear
+      reactor and since then I've been trying to get it working to bring electricity
+      to the wastelands.
+    nextModule: 1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 1
+    isWorker: 0
+    workOpt: 0

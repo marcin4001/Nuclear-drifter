@@ -25,5 +25,6 @@ public class MissionDetails
     public int indexDevice;
     public bool noRemove;
     public bool killAlt;
+    public bool noCheckStart;
     public int id_ach = -1;
 }
