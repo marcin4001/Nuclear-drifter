@@ -16759,6 +16759,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e08a2d42001485a4badf1f48922682eb, type: 2}
   - {fileID: 11400000, guid: 46eaaba91f3577142939ee26c0c2d9d5, type: 2}
   - {fileID: 11400000, guid: c4ee8b2b55aa3fa43a3deedb53927d21, type: 2}
+  - {fileID: 11400000, guid: 2fd577dc111ffff42a36e2bab3268d15, type: 2}
+  - {fileID: 11400000, guid: d77ad482fbc5e624581df0ceb69e796b, type: 2}
   startIndex: 0
   indexNPC: 0
   distance: 1.1
@@ -16793,6 +16795,24 @@ MonoBehaviour:
     noRemove: 0
     killAlt: 0
     noCheckStart: 1
+    id_ach: 0
+  - id: 31
+    type: 0
+    dialogSuccess: 4
+    dialogNormal: 4
+    dialogComplete: 4
+    dialogAlt: 0
+    slotItem:
+      itemElement: {fileID: 0}
+      amountItem: 0
+      ammo: 0
+      id: 0
+    needItem: 0
+    removeAll: 0
+    indexDevice: 0
+    noRemove: 0
+    killAlt: 0
+    noCheckStart: 0
     id_ach: 0
   doAlt: 0
 --- !u!212 &6214340591051331907

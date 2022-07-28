@@ -13,6 +13,18 @@ MonoBehaviour:
   m_Name: DrMarlon3
   m_EditorClassIdentifier: 
   dialogues:
+  - choice: People from Old Zealand also want to create their power plant.
+    reply: 'Ha! After the war, everyone wants electricity. Nothing is free. I can
+      supply energy to settlements in Old Zealand. But you have to do something for
+      me, boy. '
+    nextModule: 3
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Take care!
     reply: 
     nextModule: -1
