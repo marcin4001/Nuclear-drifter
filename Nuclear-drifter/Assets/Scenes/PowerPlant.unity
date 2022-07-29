@@ -16731,6 +16731,7 @@ GameObject:
   - component: {fileID: 2157404686907548416}
   - component: {fileID: 4310122891860589667}
   - component: {fileID: 4310122891860589668}
+  - component: {fileID: 4310122891860589669}
   m_Layer: 0
   m_Name: DrMarlon_65
   m_TagString: NPC
@@ -16815,6 +16816,18 @@ MonoBehaviour:
     noCheckStart: 0
     id_ach: 0
   doAlt: 0
+--- !u!114 &4310122891860589669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310122891860589666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172851b57f559394496fb627b37f667f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &6214340591051331907
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -35,6 +35,19 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+  - choice: How did you find this hidden reactor?
+    reply: "\rSix years ago when I was still living in Watown I found an old newspaper
+      from 2077. In one of the articles there was a story about a new nuclear reactor.
+      After reading that article, I started wandering around Old Zeeland until I
+      found it under the FoodMart."
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Take care!
     reply: 
     nextModule: -1

@@ -17,6 +17,10 @@ public class MineStartTextMap : MonoBehaviour
         }
         if (!obj.start)
             textMine.SetActive(false);
+    }
 
+    public void SetActive()
+    {
+        textMine.SetActive(true);
     }
 }
