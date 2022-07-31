@@ -616,8 +616,9 @@ GameObject:
   m_Component:
   - component: {fileID: 384472461}
   - component: {fileID: 384472460}
+  - component: {fileID: 384472462}
   m_Layer: 0
-  m_Name: PluginSave12
+  m_Name: PluginSave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -649,6 +650,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &384472462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384472459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305468d331d846d43b78b1c916b7c958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mission:
+    task: Bring 12 boxes of graphite from the mine
+    alt: 
+    ownerName: dr Marlon
+    location: Power plant
+    start: 0
+    complete: 0
+    idSort: 31
+    exp: 1000
+    respect: 0
+    respectUSA: 0
+    idHelp: 31
+  enemies:
+  - nameEnemy: bandit6
+    idMission: 30
+    isKilled: 0
+  - nameEnemy: bandit7
+    idMission: 30
+    isKilled: 0
+  - nameEnemy: bandit8
+    idMission: 30
+    isKilled: 0
+  - nameEnemy: bandit9
+    idMission: 30
+    isKilled: 0
+  - nameEnemy: bandit10
+    idMission: 30
+    isKilled: 0
+  - nameEnemy: bandit11
+    idMission: 30
+    isKilled: 0
+  - nameEnemy: bandit12
+    idMission: 30
+    isKilled: 0
+  - nameEnemy: bandit13
+    idMission: 30
+    isKilled: 0
 --- !u!1 &430795936
 GameObject:
   m_ObjectHideFlags: 0
