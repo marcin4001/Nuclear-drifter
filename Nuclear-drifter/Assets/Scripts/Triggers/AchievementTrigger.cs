@@ -6,6 +6,7 @@ public class AchievementTrigger : MonoBehaviour
 {
     private Achievement controller;
     public int index;
+    public bool destructible = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,8 @@ public class AchievementTrigger : MonoBehaviour
         if (collision.tag == "Hero")
         {
             controller.SetAchievement(index);
+            if (destructible)
+                Destroy(gameObject);
         }
     }
 }

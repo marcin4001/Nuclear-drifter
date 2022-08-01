@@ -27,6 +27,7 @@ public class Achievement : MonoBehaviour
 #endif
     public void SetAchievement(int id)
     {
+        Debug.Log(id);
         if(names.Length != 0 && id < names.Length && SteamManager.Initialized)
         {
             bool complete = false;
@@ -37,6 +38,20 @@ public class Achievement : MonoBehaviour
                 SteamUserStats.SetAchievement(names[id]);
                 SteamUserStats.StoreStats();
             }
+        }
+    }
+
+    public bool GetComplete(int id)
+    {
+        if (names.Length != 0 && id < names.Length && SteamManager.Initialized)
+        {
+            bool complete = false;
+            SteamUserStats.GetAchievement(names[id], out complete);
+            return complete;
+        }
+        else
+        {
+            return false;
         }
     }
 }
