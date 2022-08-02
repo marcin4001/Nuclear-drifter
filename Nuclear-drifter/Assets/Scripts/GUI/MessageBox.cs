@@ -37,6 +37,7 @@ public class MessageBox : MonoBehaviour
 
     public void ButtonNo()
     {
+        st.PlayClickButton();
         mbCanvas.enabled = false;
         move.active = true;
         move.SetStop(false);
@@ -49,6 +50,8 @@ public class MessageBox : MonoBehaviour
 
     public void ButtonYes()
     {
+        if(noSound)
+            st.PlayClickButton();
         mbCanvas.enabled = false;
         if(door != null) door.SetTrigger("Open");
         float timeLoad = 1.5f;
