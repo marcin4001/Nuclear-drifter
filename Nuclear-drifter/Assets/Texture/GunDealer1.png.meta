@@ -537,7 +537,7 @@ TextureImporter:
       213: -1725985313251308733
     second: GunDealer1_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -567,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -589,11 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -609,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4370,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      GunDealer1_159: 2678537971517743009
+      GunDealer1_41: 2059764189658782976
+      GunDealer1_102: -7794076416191947241
+      GunDealer1_147: -8321745057147338938
+      GunDealer1_89: -8814013792857664585
+      GunDealer1_25: -3011153288633837470
+      GunDealer1_19: -657884008720110656
+      GunDealer1_152: -8059678598132305976
+      GunDealer1_78: 45000587642411214
+      GunDealer1_56: -8557475423802517769
+      GunDealer1_125: 4163683405218549892
+      GunDealer1_129: 2220691042293493683
+      GunDealer1_58: 8843019919612811621
+      GunDealer1_176: -4031982314738115093
+      GunDealer1_161: -4663847627868446146
+      GunDealer1_7: -825159572440158127
+      GunDealer1_135: -1232730010886429621
+      GunDealer1_2: 6955962231928347956
+      GunDealer1_111: -3684144721917538560
+      GunDealer1_66: 719546687601797206
+      GunDealer1_120: -4265280564116426433
+      GunDealer1_160: 451747205727904772
+      GunDealer1_52: 3433879665950179668
+      GunDealer1_95: 4460767268763284594
+      GunDealer1_98: 2799308830161227527
+      GunDealer1_94: -727455924538468286
+      GunDealer1_164: -3316106953373411937
+      GunDealer1_173: -3846927187673041934
+      GunDealer1_34: 1980334202844990581
+      GunDealer1_27: -4296376981165280479
+      GunDealer1_128: -7480638506238836040
+      GunDealer1_130: 4738763642093557764
+      GunDealer1_50: -4272854606119664258
+      GunDealer1_32: -2737581359130032236
+      GunDealer1_55: 5876181235338376881
+      GunDealer1_14: 6665293120832205055
+      GunDealer1_121: 9177673943269660018
+      GunDealer1_110: 5547514871364708857
+      GunDealer1_150: -152303537495642804
+      GunDealer1_81: 5829162963329024792
+      GunDealer1_82: -4364041851790154828
+      GunDealer1_42: -3959692670025721825
+      GunDealer1_142: -638091479447718817
+      GunDealer1_127: -4453418292087962132
+      GunDealer1_118: 1801148373441501689
+      GunDealer1_33: -3199448875094440044
+      GunDealer1_153: 537623727800549462
+      GunDealer1_45: 4859440223495546081
+      GunDealer1_162: 4502909260707307014
+      GunDealer1_88: 1215065747403062620
+      GunDealer1_109: 1135843013042188015
+      GunDealer1_84: -3233774097786385260
+      GunDealer1_107: -1261360717771138164
+      GunDealer1_166: 7710505828966207983
+      GunDealer1_28: -3020680091402634937
+      GunDealer1_97: -34942472310718790
+      GunDealer1_23: -4259379137393103884
+      GunDealer1_72: -6082229577223224457
+      GunDealer1_9: 8098332528483866787
+      GunDealer1_119: 4939495404781074465
+      GunDealer1_167: -8430089961979915723
+      GunDealer1_63: -6520439520987140384
+      GunDealer1_155: -8775263841031241965
+      GunDealer1_117: -4644406136490489567
+      GunDealer1_157: 1948856979147456966
+      GunDealer1_8: -833473210412213089
+      GunDealer1_106: -7560871893864874148
+      GunDealer1_115: 8100848352452311293
+      GunDealer1_61: 3304676552446075536
+      GunDealer1_149: -7236771038628390837
+      GunDealer1_156: -7124737861564259470
+      GunDealer1_103: 3653301446851628447
+      GunDealer1_123: -6629738670987750596
+      GunDealer1_171: -3812722011626905128
+      GunDealer1_168: -6737009802660860396
+      GunDealer1_69: -2288652667189137535
+      GunDealer1_31: 6003224233856884434
+      GunDealer1_83: -2512556104081949666
+      GunDealer1_91: -7054672651439659930
+      GunDealer1_16: -3666306717638656181
+      GunDealer1_174: 4992636519254742254
+      GunDealer1_172: -6803006467281189106
+      GunDealer1_13: -870294733433102097
+      GunDealer1_143: -7588672366127465574
+      GunDealer1_46: -3576752479743518865
+      GunDealer1_112: -2184952824153974819
+      GunDealer1_175: 4338154206515390813
+      GunDealer1_40: 8398255929588193529
+      GunDealer1_5: -8956725553359511441
+      GunDealer1_60: -1007121427000040670
+      GunDealer1_92: 6524571437695447935
+      GunDealer1_3: -7939196688277180943
+      GunDealer1_105: -8422523862756615442
+      GunDealer1_71: -6452960027619496907
+      GunDealer1_77: 5458170307199755153
+      GunDealer1_68: 8147230864563185721
+      GunDealer1_75: -1979717995811311267
+      GunDealer1_134: -2218546609943328465
+      GunDealer1_93: -7688983466775855037
+      GunDealer1_49: -4576374480737397548
+      GunDealer1_90: 6384845039078726195
+      GunDealer1_73: 1888194030212846728
+      GunDealer1_11: 1293950719789513534
+      GunDealer1_87: 3843825924368956516
+      GunDealer1_15: 8225520084799664932
+      GunDealer1_29: 109527559981593799
+      GunDealer1_37: -6353811174824800344
+      GunDealer1_0: 4657701604573607636
+      GunDealer1_145: -8977879974891574930
+      GunDealer1_158: -4906260557484033465
+      GunDealer1_48: 6412697137434972579
+      GunDealer1_101: -8942535828895865693
+      GunDealer1_139: 2393441542588950364
+      GunDealer1_104: 323067377100141298
+      GunDealer1_39: -3899441916682217723
+      GunDealer1_124: 5275239415830273377
+      GunDealer1_177: -1725985313251308733
+      GunDealer1_21: 437141150645277711
+      GunDealer1_24: 917853064174919468
+      GunDealer1_99: -661188302117760897
+      GunDealer1_12: 4380910308453500203
+      GunDealer1_6: 6124608777668819316
+      GunDealer1_132: 4246698999907190594
+      GunDealer1_74: -2566681850344820952
+      GunDealer1_138: 4956695991277892210
+      GunDealer1_44: 3916340493444297793
+      GunDealer1_126: 3502863755184995903
+      GunDealer1_20: -466203758751106913
+      GunDealer1_108: 1859913399484740485
+      GunDealer1_113: 5033674321231497473
+      GunDealer1_96: 2067309249096594163
+      GunDealer1_169: 2546550425839878970
+      GunDealer1_144: -875497974443323154
+      GunDealer1_76: -3172714029784410294
+      GunDealer1_38: 3704590187313321711
+      GunDealer1_17: 4399344656808133531
+      GunDealer1_151: -9079700605994570685
+      GunDealer1_131: -5272843896330997385
+      GunDealer1_26: 6884735491197034369
+      GunDealer1_57: -648346483569349409
+      GunDealer1_51: -7731575496918757695
+      GunDealer1_65: -8942217181899819565
+      GunDealer1_4: 6564846589638295908
+      GunDealer1_67: 101757968166006673
+      GunDealer1_165: -319177845542783430
+      GunDealer1_114: 5960928834968026291
+      GunDealer1_141: 4983091268080118077
+      GunDealer1_148: -2436563097467098901
+      GunDealer1_133: -6740376307869592490
+      GunDealer1_154: 657886394328273795
+      GunDealer1_59: -6403068962644943109
+      GunDealer1_79: -233260009701701783
+      GunDealer1_10: 6521148012540811122
+      GunDealer1_140: 8279130579123971661
+      GunDealer1_163: 2827586769799234024
+      GunDealer1_136: 5537446014104654976
+      GunDealer1_146: 475896774087394467
+      GunDealer1_43: 2906947818688864129
+      GunDealer1_18: 1863700734564345052
+      GunDealer1_53: 169898308216607211
+      GunDealer1_54: 5050518462543840692
+      GunDealer1_170: 4622444487480181198
+      GunDealer1_47: 8372924413313680649
+      GunDealer1_30: -7614895966049192075
+      GunDealer1_62: -1072819471068217918
+      GunDealer1_36: -7451288484452120729
+      GunDealer1_35: -3285391701060161201
+      GunDealer1_137: 8669231686514493467
+      GunDealer1_80: 4485540617495149646
+      GunDealer1_86: -508648926331339480
+      GunDealer1_100: 2037974724132661897
+      GunDealer1_116: 5088757557090311738
+      GunDealer1_70: 149670808157523353
+      GunDealer1_1: -6491510139230766815
+      GunDealer1_122: 1577354232489544785
+      GunDealer1_85: 1859400415519067869
+      GunDealer1_64: -4777436993405432343
+      GunDealer1_22: 3125456833777693912
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

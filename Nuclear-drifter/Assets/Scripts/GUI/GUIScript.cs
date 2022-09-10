@@ -32,6 +32,11 @@ public class GUIScript : MonoBehaviour
     public GameObject optBtnPanel;
     public Image newLvlLabel;
     public Image warningLabel;
+    public Image irrigationImg;
+
+    public Sprite irrigationUp;
+    public Sprite irrigationDown;
+
     private GraphicRaycaster raycaster;
     private EventSystem system;
     private PointerEventData data;
@@ -204,5 +209,17 @@ public class GUIScript : MonoBehaviour
         if (timeLabel == null)
             return "";
         return timeLabel.text;
+    }
+
+    public void SetIrrigation(bool irrigation)
+    {
+        if(irrigation)
+        {
+            irrigationImg.sprite = irrigationUp;
+        }
+        else
+        {
+            irrigationImg.sprite = irrigationDown;
+        }
     }
 }

@@ -33,6 +33,7 @@ public class PropertyPlayer : MonoBehaviour
     public List<Slot> backpackInv;
     public string location;
     public bool foodMartFound = false;
+    public int dehydration = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -92,6 +93,16 @@ public class PropertyPlayer : MonoBehaviour
         EqChestController eqChestController = FindObjectOfType<EqChestController>();
         if (eqChestController != null)
             eqChestController.OpenBackpack();
+    }
+
+    public void AddDehydration(int point)
+    {
+        dehydration = dehydration + point;
+    }
+
+    public void ResetDehydration()
+    {
+        dehydration = 0;
     }
 
     public static string GetJson()

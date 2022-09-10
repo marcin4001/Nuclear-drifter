@@ -23,10 +23,20 @@ public class Bed : MonoBehaviour
     {
         int hour = cycle.GetHour();
         int day = cycle.GetDay();
-        if(hour >= 20)
+        int minutes = cycle.GetMinutes();
+        int calculateHour = 0;
+        if (hour >= 20)
         {
             day = day + 1;
+            calculateHour = (24 - hour) + 7;
         }
+        if(hour < 7)
+        {
+            calculateHour = 7 - hour;
+        }
+
+        int dehydration = (calculateHour * 60) - minutes;
+        PropertyPlayer.property.AddDehydration(dehydration);
         cycle.SetTime(day, 7, 0);
         hpPlayer.AddHalfHealth();
     }

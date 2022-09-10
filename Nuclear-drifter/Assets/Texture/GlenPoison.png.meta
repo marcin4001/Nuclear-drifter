@@ -537,7 +537,7 @@ TextureImporter:
       213: 8580822700557775764
     second: GlenPoison_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -567,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -589,11 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -609,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4370,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      GlenPoison_59: -2967452013803433620
+      GlenPoison_137: -3615406272663610676
+      GlenPoison_38: -6210064613718768865
+      GlenPoison_74: -1943919652000334287
+      GlenPoison_152: -1596584498827588721
+      GlenPoison_11: 3814649731385775253
+      GlenPoison_105: 6824150536051103157
+      GlenPoison_57: -3327418996820129767
+      GlenPoison_155: 6428045651104756819
+      GlenPoison_159: -3516621904538547949
+      GlenPoison_10: 2967622600826733475
+      GlenPoison_32: 1478108402397235538
+      GlenPoison_21: 8681005627831078808
+      GlenPoison_83: 1239369865483270884
+      GlenPoison_167: 3720933811371476672
+      GlenPoison_121: 4802340383657322719
+      GlenPoison_64: -2938063705389165772
+      GlenPoison_8: -7533309259935309498
+      GlenPoison_66: 8429987904466400489
+      GlenPoison_144: 8564664589100392214
+      GlenPoison_115: -5650965113449768202
+      GlenPoison_92: 7852578013262384586
+      GlenPoison_82: 5114201517642619464
+      GlenPoison_17: -2695621382351767651
+      GlenPoison_176: -6417868725631548006
+      GlenPoison_112: 2130900902762537800
+      GlenPoison_106: -8974330249568667262
+      GlenPoison_40: -7001327955467070417
+      GlenPoison_102: -7955644433546805540
+      GlenPoison_90: 2345274989702919570
+      GlenPoison_65: -6015516365199169298
+      GlenPoison_61: -6711980561009244780
+      GlenPoison_3: -6141978980741866459
+      GlenPoison_0: -2056937984871596342
+      GlenPoison_6: -4474624846909581899
+      GlenPoison_68: -7719704321430505852
+      GlenPoison_60: -4894289916772176851
+      GlenPoison_151: 1217986614136884716
+      GlenPoison_50: 5722681908145316788
+      GlenPoison_116: 9191079888664381204
+      GlenPoison_42: 7236288963344946079
+      GlenPoison_71: -485347258536601817
+      GlenPoison_9: 770930623071650207
+      GlenPoison_131: 811041497155721259
+      GlenPoison_81: -3918348200331175643
+      GlenPoison_89: -3531532981876539971
+      GlenPoison_141: 7362753803906073652
+      GlenPoison_33: 4755548523511543726
+      GlenPoison_145: 6064344534631282849
+      GlenPoison_149: -8590630488481262095
+      GlenPoison_161: 8122183657323304868
+      GlenPoison_72: 6769735537515365579
+      GlenPoison_13: 8640463810060518292
+      GlenPoison_18: 7243113179533385368
+      GlenPoison_123: 6597048574992578222
+      GlenPoison_41: -255483492387957519
+      GlenPoison_98: 8501591159132435336
+      GlenPoison_30: 8072506217939829739
+      GlenPoison_19: 2118765033502788753
+      GlenPoison_31: -1714520143533351094
+      GlenPoison_80: 5334354906795640712
+      GlenPoison_110: -7714677401538079539
+      GlenPoison_133: 7776183848752405920
+      GlenPoison_29: 5455562982571396352
+      GlenPoison_143: 5915609166030421879
+      GlenPoison_79: -3932947907638696262
+      GlenPoison_157: 5620448602574163690
+      GlenPoison_117: 5525385257148940082
+      GlenPoison_4: -1919783298773057611
+      GlenPoison_93: 6723259723861897648
+      GlenPoison_166: -3206346066955052376
+      GlenPoison_75: 5284769351122074204
+      GlenPoison_39: 8238043505924166767
+      GlenPoison_122: 2091290981878330764
+      GlenPoison_12: -4504046067260296194
+      GlenPoison_26: -2564361648531680279
+      GlenPoison_43: 4843573885650445615
+      GlenPoison_84: -4584472838202125957
+      GlenPoison_153: -4657667992761154503
+      GlenPoison_67: 4275650360470930829
+      GlenPoison_138: 5445894866140771791
+      GlenPoison_91: -6257317888134588433
+      GlenPoison_96: 8308507303534079684
+      GlenPoison_113: -1078452670957791754
+      GlenPoison_129: -7465313300900548344
+      GlenPoison_139: 5350540050052966704
+      GlenPoison_162: 6865470578046828049
+      GlenPoison_54: 7397882035883899385
+      GlenPoison_2: -7700419696079570189
+      GlenPoison_35: -4453550265457376635
+      GlenPoison_85: -4778640154361095172
+      GlenPoison_150: 1187736024758746667
+      GlenPoison_114: -4505892655572452036
+      GlenPoison_22: -7750525734253313184
+      GlenPoison_77: 9025049773559883908
+      GlenPoison_169: -480270448538000365
+      GlenPoison_16: 1637484105118687798
+      GlenPoison_14: 4098709927888561837
+      GlenPoison_119: -6916780432363477077
+      GlenPoison_49: 8956371687161692298
+      GlenPoison_1: 1777258457204005748
+      GlenPoison_135: 328624547882244406
+      GlenPoison_53: -9001559118940944879
+      GlenPoison_34: -8450391665734891301
+      GlenPoison_158: 7518254842309390023
+      GlenPoison_87: -5500816476239806376
+      GlenPoison_130: 5898845425142320717
+      GlenPoison_126: -724451542405124741
+      GlenPoison_101: -6941936926436178474
+      GlenPoison_134: 3286506935160903270
+      GlenPoison_25: -4715509142986799911
+      GlenPoison_46: 5890863782046003012
+      GlenPoison_156: -5763473528971475501
+      GlenPoison_173: -6296449565273320758
+      GlenPoison_148: -1524152114692910688
+      GlenPoison_136: -1144438941724702635
+      GlenPoison_51: 1447468984750960321
+      GlenPoison_86: -2245962682529339909
+      GlenPoison_88: -349568222483966756
+      GlenPoison_154: 2149622038349354697
+      GlenPoison_27: -3516938112667247080
+      GlenPoison_109: 311240129861109257
+      GlenPoison_7: -3741541620107266270
+      GlenPoison_78: 1934659540139619977
+      GlenPoison_99: 3046597774579464425
+      GlenPoison_20: -684263860779302946
+      GlenPoison_108: -4940511621062887407
+      GlenPoison_97: 792788351058953087
+      GlenPoison_132: -6167928213137142290
+      GlenPoison_48: -4514711257911886642
+      GlenPoison_160: -5882279109767496490
+      GlenPoison_45: -6080949048664511489
+      GlenPoison_23: -8202041046483752205
+      GlenPoison_111: -2589342453163620773
+      GlenPoison_94: -6268248776006210941
+      GlenPoison_170: -1335941845360909830
+      GlenPoison_76: -2831184323978177342
+      GlenPoison_44: -1211271511386092849
+      GlenPoison_120: 7308436879225160923
+      GlenPoison_69: 6039337777028138704
+      GlenPoison_103: -3773508615902412877
+      GlenPoison_124: 8254857298520229500
+      GlenPoison_24: -2690462915258658234
+      GlenPoison_73: -6924850151335577235
+      GlenPoison_28: -1844614010623948867
+      GlenPoison_127: 7567346704933349243
+      GlenPoison_147: 6856663938290832720
+      GlenPoison_168: -2473897194286642755
+      GlenPoison_47: 8142598859028295443
+      GlenPoison_70: 8568885193134289163
+      GlenPoison_63: -1886388837146417908
+      GlenPoison_146: -9160239916498806497
+      GlenPoison_15: 1951290529506864079
+      GlenPoison_100: -5543578744243984124
+      GlenPoison_52: -4210607649183802941
+      GlenPoison_128: 4762048180811749223
+      GlenPoison_37: -8737252330555342292
+      GlenPoison_104: -3865263153230544512
+      GlenPoison_58: 4293701072211059691
+      GlenPoison_118: 6359619580353098167
+      GlenPoison_125: 5210145692910128781
+      GlenPoison_56: 3092349064244526659
+      GlenPoison_5: 1621382006830373268
+      GlenPoison_142: -5049323084241972156
+      GlenPoison_164: -1369278652937774504
+      GlenPoison_55: -437756929474051367
+      GlenPoison_140: 5546438249577479177
+      GlenPoison_36: 2784964192594217372
+      GlenPoison_165: 7216646010530432723
+      GlenPoison_107: -1994263819823992107
+      GlenPoison_175: 1639443873072529719
+      GlenPoison_95: -2604518006110161439
+      GlenPoison_163: 2229174362080280503
+      GlenPoison_171: 1061337665468443353
+      GlenPoison_172: -4820443704758010685
+      GlenPoison_174: -3656783383229239784
+      GlenPoison_177: 8580822700557775764
+      GlenPoison_62: -9197969412505517816
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

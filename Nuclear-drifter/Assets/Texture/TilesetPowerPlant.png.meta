@@ -291,7 +291,7 @@ TextureImporter:
       213: 3894676488825940285
     second: TilesetPowerPlant_95
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -312,6 +312,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -350,6 +351,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -365,6 +367,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2404,6 +2418,103 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TilesetPowerPlant_5: -6682385376606176748
+      TilesetPowerPlant_63: 4351576916801106334
+      TilesetPowerPlant_70: -3514736789340545170
+      TilesetPowerPlant_20: 573044771220172410
+      TilesetPowerPlant_8: -2008987048940237106
+      TilesetPowerPlant_21: -3828335615790529577
+      TilesetPowerPlant_65: 6982430772284149259
+      TilesetPowerPlant_94: 1482378856815699723
+      TilesetPowerPlant_85: 6711302440382551132
+      TilesetPowerPlant_17: 6606438304087129566
+      TilesetPowerPlant_78: 3297333239601754350
+      TilesetPowerPlant_92: -2420091218031530234
+      TilesetPowerPlant_89: 6209001855120936425
+      TilesetPowerPlant_69: 3561960462795827027
+      TilesetPowerPlant_88: 8647920152786482501
+      TilesetPowerPlant_37: 2655975140009916958
+      TilesetPowerPlant_60: -1044019527291872240
+      TilesetPowerPlant_16: -4973947662447278563
+      TilesetPowerPlant_12: -433050986951260465
+      TilesetPowerPlant_46: 5374042947975130730
+      TilesetPowerPlant_50: 142556627172134099
+      TilesetPowerPlant_71: 5791895016799558141
+      TilesetPowerPlant_22: -2907203053962712080
+      TilesetPowerPlant_24: 7652651236082715983
+      TilesetPowerPlant_91: -7546114694220183940
+      TilesetPowerPlant_49: 228865815719724688
+      TilesetPowerPlant_27: -6406499660156860596
+      TilesetPowerPlant_26: -1382253037841386290
+      TilesetPowerPlant_90: 8868747365646264295
+      TilesetPowerPlant_51: 7502536060748155702
+      TilesetPowerPlant_58: 520422116135697803
+      TilesetPowerPlant_56: 2543157542440440929
+      TilesetPowerPlant_67: -5765980772917151310
+      TilesetPowerPlant_39: 6430024904788416935
+      TilesetPowerPlant_68: -4242378302895606801
+      TilesetPowerPlant_80: 543168001137145328
+      TilesetPowerPlant_11: 889035678686223588
+      TilesetPowerPlant_14: -4818464827430131639
+      TilesetPowerPlant_64: -1625376690169357723
+      TilesetPowerPlant_59: -6396630066991107839
+      TilesetPowerPlant_57: 414082615664838606
+      TilesetPowerPlant_33: 7270422599820183446
+      TilesetPowerPlant_83: 1334777355825748939
+      TilesetPowerPlant_30: 2964990330117006943
+      TilesetPowerPlant_28: -6530755724154416133
+      TilesetPowerPlant_25: -2045731172789766874
+      TilesetPowerPlant_34: -7902751273186334814
+      TilesetPowerPlant_3: 5271727297989706710
+      TilesetPowerPlant_52: -1110123845585591822
+      TilesetPowerPlant_43: -823219029323418904
+      TilesetPowerPlant_9: 9040960741368604564
+      TilesetPowerPlant_42: 8335114722061964439
+      TilesetPowerPlant_79: -5684076977444203224
+      TilesetPowerPlant_38: -4337013428662821054
+      TilesetPowerPlant_72: -6806788767812135335
+      TilesetPowerPlant_44: 6505066170519036748
+      TilesetPowerPlant_93: -4493845522406502169
+      TilesetPowerPlant_15: 6201745703537867335
+      TilesetPowerPlant_95: 3894676488825940285
+      TilesetPowerPlant_23: 3146096234557843827
+      TilesetPowerPlant_81: 8605251947831018446
+      TilesetPowerPlant_0: 7075853151325081790
+      TilesetPowerPlant_41: 4921993398242547083
+      TilesetPowerPlant_73: 5222745181460767029
+      TilesetPowerPlant_74: -5992314032534702138
+      TilesetPowerPlant_35: 3216374224856643000
+      TilesetPowerPlant_87: 2864324906333633354
+      TilesetPowerPlant_84: 8533358943492265187
+      TilesetPowerPlant_18: 1450696470798014568
+      TilesetPowerPlant_55: 4097828212868107322
+      TilesetPowerPlant_40: 5633159068829923377
+      TilesetPowerPlant_76: 1081270118791654461
+      TilesetPowerPlant_6: 8403468357954367712
+      TilesetPowerPlant_31: -91233995979996535
+      TilesetPowerPlant_45: -543090648827359829
+      TilesetPowerPlant_7: -8811617145638736919
+      TilesetPowerPlant_77: -163967198967072279
+      TilesetPowerPlant_54: 5148189705799627309
+      TilesetPowerPlant_47: 459207226547811623
+      TilesetPowerPlant_66: 8164969486056718409
+      TilesetPowerPlant_29: 8045524061896898427
+      TilesetPowerPlant_48: 6763379077111359005
+      TilesetPowerPlant_36: 1493895320896787762
+      TilesetPowerPlant_82: 5490329811266106841
+      TilesetPowerPlant_62: -5933261208453671732
+      TilesetPowerPlant_75: 8244723588647652677
+      TilesetPowerPlant_86: 4990329107408680922
+      TilesetPowerPlant_13: 4707036693139644525
+      TilesetPowerPlant_32: -8656655287741930988
+      TilesetPowerPlant_1: 8426911950675323583
+      TilesetPowerPlant_10: -162382100669528348
+      TilesetPowerPlant_19: -4548488542798668650
+      TilesetPowerPlant_61: -3149877305029975887
+      TilesetPowerPlant_4: 5495685525131076541
+      TilesetPowerPlant_53: 1975972727158123373
+      TilesetPowerPlant_2: 3661151445438167442
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

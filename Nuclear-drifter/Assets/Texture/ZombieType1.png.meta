@@ -537,7 +537,7 @@ TextureImporter:
       213: 7108743375322526863
     second: ZombieType1_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -567,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -589,11 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -609,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4370,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      ZombieType1_101: 8435176050052136852
+      ZombieType1_77: 5841755440504162173
+      ZombieType1_49: 8904410343064685858
+      ZombieType1_114: -670451633230819002
+      ZombieType1_22: 840921573783587307
+      ZombieType1_19: -7862054784697451772
+      ZombieType1_9: 7279375672384228813
+      ZombieType1_39: -3829002383782347027
+      ZombieType1_127: 4166814826300399054
+      ZombieType1_8: -5754215908947725246
+      ZombieType1_97: 3143563270523686539
+      ZombieType1_173: -4623669479027136108
+      ZombieType1_136: 7664190990723197075
+      ZombieType1_44: 3896636534367490240
+      ZombieType1_48: 8182106225138024393
+      ZombieType1_69: 6048621485082921199
+      ZombieType1_126: -3340157189428676826
+      ZombieType1_93: 2531676216328913344
+      ZombieType1_13: -1830846408079562313
+      ZombieType1_15: 8602356177573132257
+      ZombieType1_11: -1298677976812328018
+      ZombieType1_145: -2676715538176142768
+      ZombieType1_166: 4073605194154981854
+      ZombieType1_156: -8702191614835945677
+      ZombieType1_33: 4899616254804919371
+      ZombieType1_87: 6972475842493335817
+      ZombieType1_5: -7884694035391947090
+      ZombieType1_112: -3822255617003779411
+      ZombieType1_141: -4750130652691650866
+      ZombieType1_116: -1369810637729714758
+      ZombieType1_104: 831869347694477827
+      ZombieType1_150: -521783487419718916
+      ZombieType1_125: 3133412645208073723
+      ZombieType1_177: 7108743375322526863
+      ZombieType1_148: 6567472122171406780
+      ZombieType1_140: 4892429384715533307
+      ZombieType1_172: 7758136211001833831
+      ZombieType1_168: 8040317449814938692
+      ZombieType1_174: -5562948298270304655
+      ZombieType1_73: -2520523769947229012
+      ZombieType1_129: -636168490193697208
+      ZombieType1_153: 8554388884693459121
+      ZombieType1_30: 6366471252983530841
+      ZombieType1_70: -4068450128901489648
+      ZombieType1_176: 4557533169344028296
+      ZombieType1_62: 3873079372413709955
+      ZombieType1_17: -7914692702622308771
+      ZombieType1_61: -4927081049239648540
+      ZombieType1_107: 7428893519563310563
+      ZombieType1_0: 8566511604748892525
+      ZombieType1_50: 1105191182699064135
+      ZombieType1_29: 5631240346172481421
+      ZombieType1_78: -7296060365110839499
+      ZombieType1_91: 5541266581264266643
+      ZombieType1_138: 5685564617853261967
+      ZombieType1_171: 7757013938825757896
+      ZombieType1_65: -1712893796108246815
+      ZombieType1_57: 4925575002955403545
+      ZombieType1_119: -4349368850316775761
+      ZombieType1_137: -7055003950071026222
+      ZombieType1_51: 228290149865562456
+      ZombieType1_90: 5635873029288364478
+      ZombieType1_106: 1239328872115660646
+      ZombieType1_130: 2558321358986753162
+      ZombieType1_21: -7624054243611951151
+      ZombieType1_63: 5962407225913327105
+      ZombieType1_118: -1989505830547667957
+      ZombieType1_26: 5308918870469209782
+      ZombieType1_45: -7921543856490413672
+      ZombieType1_94: -2616918220333937252
+      ZombieType1_142: -5417270979254229458
+      ZombieType1_157: -3328759394313892249
+      ZombieType1_108: -5193068658990538975
+      ZombieType1_60: -8455327382881376143
+      ZombieType1_109: 7502752613477685848
+      ZombieType1_100: -5742809339563283169
+      ZombieType1_58: 7162759059424684362
+      ZombieType1_155: -2532692276689737600
+      ZombieType1_75: -7438930430563358135
+      ZombieType1_82: 9042095107590297483
+      ZombieType1_99: -6885705627568757491
+      ZombieType1_71: -2748787164370395036
+      ZombieType1_28: -7762421995004695097
+      ZombieType1_46: 4770235798951879240
+      ZombieType1_18: 5048638204601714048
+      ZombieType1_81: -1007750011974996626
+      ZombieType1_34: -2645060721880896187
+      ZombieType1_59: -9183596326637587590
+      ZombieType1_139: 214559397904939359
+      ZombieType1_64: 406498979165099132
+      ZombieType1_52: 4655932922461533836
+      ZombieType1_37: -8184787415290493615
+      ZombieType1_102: -1570253208940636105
+      ZombieType1_167: -4918637981968368623
+      ZombieType1_40: 4748651492711786278
+      ZombieType1_170: -1036882366260105173
+      ZombieType1_67: 7405294143138568483
+      ZombieType1_123: -1919701847287430752
+      ZombieType1_53: 10197789132676396
+      ZombieType1_117: -5510972832768264120
+      ZombieType1_80: 971610847474515122
+      ZombieType1_161: -4568905574682422319
+      ZombieType1_133: -8747559285456244424
+      ZombieType1_36: -5399533272314686910
+      ZombieType1_35: 3259148206274709680
+      ZombieType1_23: -3029467334773413233
+      ZombieType1_124: 6433003994155582023
+      ZombieType1_43: -4021559343375928697
+      ZombieType1_72: 3246362894194031365
+      ZombieType1_6: 3165193726418171872
+      ZombieType1_56: -3008533119606346871
+      ZombieType1_55: 7823486702716913343
+      ZombieType1_146: -6434508205268576601
+      ZombieType1_113: -5711702185458091027
+      ZombieType1_68: -6627130902241705865
+      ZombieType1_164: 8559041011125511666
+      ZombieType1_92: 1041189716542006065
+      ZombieType1_76: 5757995339512489162
+      ZombieType1_31: 6363847838485456666
+      ZombieType1_115: -341930709820946398
+      ZombieType1_160: -102916002502752223
+      ZombieType1_20: 6522945136541281691
+      ZombieType1_79: 388411957911772717
+      ZombieType1_98: 1029748287019118172
+      ZombieType1_103: 7225804335036351150
+      ZombieType1_135: -1490801595776474306
+      ZombieType1_165: -4859093125186438537
+      ZombieType1_88: 3727001611300765642
+      ZombieType1_120: 5910389043993901249
+      ZombieType1_96: 5658796949286258327
+      ZombieType1_144: 3508237202727518856
+      ZombieType1_4: 2978592159612304584
+      ZombieType1_152: 7302609759522578758
+      ZombieType1_27: -4892808520290386351
+      ZombieType1_54: 6310494578478762946
+      ZombieType1_147: -899366565458026276
+      ZombieType1_89: 3357464389293237183
+      ZombieType1_3: -4194350301885090688
+      ZombieType1_38: 8682042967267392092
+      ZombieType1_47: 9222901475395380416
+      ZombieType1_128: -8027585543287100516
+      ZombieType1_16: -7764350076126914661
+      ZombieType1_41: 2667743665476176127
+      ZombieType1_111: 601418873814453582
+      ZombieType1_158: 5491592119709146519
+      ZombieType1_86: 870775652205581092
+      ZombieType1_162: 796153763790079299
+      ZombieType1_175: -8144830436388017851
+      ZombieType1_110: -3838000331599739943
+      ZombieType1_134: 2773074550694651576
+      ZombieType1_66: -7217274363121560561
+      ZombieType1_143: -2861573862952534164
+      ZombieType1_132: -4840265087469078416
+      ZombieType1_131: -8913112324040639805
+      ZombieType1_159: -8580610592013593671
+      ZombieType1_83: 6354947380397900281
+      ZombieType1_25: 4118914450916982801
+      ZombieType1_32: -3608363125620604199
+      ZombieType1_105: -669392455556665329
+      ZombieType1_121: -674069803124431208
+      ZombieType1_151: -1584779967258077326
+      ZombieType1_95: 5401727901539247885
+      ZombieType1_1: 5932818838938290046
+      ZombieType1_12: 8430351902225419856
+      ZombieType1_14: 273523985106554615
+      ZombieType1_122: 5519759090646628386
+      ZombieType1_10: 2532950295996843721
+      ZombieType1_169: -5301426190715000647
+      ZombieType1_42: 5600061406022486388
+      ZombieType1_2: 5431301312195194387
+      ZombieType1_84: -67343600289018744
+      ZombieType1_149: 7439764301294584125
+      ZombieType1_74: -1990351628715587920
+      ZombieType1_85: -5551229494202195481
+      ZombieType1_154: 4401420447533714356
+      ZombieType1_163: -2191011252572802564
+      ZombieType1_7: -7451871692842996052
+      ZombieType1_24: -2478387595657845206
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -47,6 +47,7 @@ public class TimeGame : MonoBehaviour
                 minutes++;
             }
             counter = 0f;
+            PropertyPlayer.property.AddDehydration(1);
         }
         else
         {

@@ -126,7 +126,7 @@ TextureImporter:
       213: 1137778584651969403
     second: FoodMartTileset_40
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -147,6 +147,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -185,6 +186,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -200,6 +202,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1084,6 +1098,48 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      FoodMartTileset_0: 5387494149016365955
+      FoodMartTileset_19: 8559704683320552966
+      FoodMartTileset_33: 9210127025115209257
+      FoodMartTileset_21: -2927788718645675265
+      FoodMartTileset_23: -7538974135425266067
+      FoodMartTileset_38: 6218076236857431759
+      FoodMartTileset_13: -6523694405104280918
+      FoodMartTileset_2: 6541925673655399494
+      FoodMartTileset_31: -7944259480818788840
+      FoodMartTileset_15: -5008281054568156913
+      FoodMartTileset_5: 5974317518762972801
+      FoodMartTileset_11: 7885666047616124877
+      FoodMartTileset_14: -7134425060112876938
+      FoodMartTileset_4: -6125816453619899162
+      FoodMartTileset_9: 2085899326818223379
+      FoodMartTileset_12: 7466785995748978468
+      FoodMartTileset_25: -765358102692235132
+      FoodMartTileset_40: 1137778584651969403
+      FoodMartTileset_24: -7811187738377924604
+      FoodMartTileset_39: 2404817388736387304
+      FoodMartTileset_37: -3382280474896457732
+      FoodMartTileset_26: 3243839794317421228
+      FoodMartTileset_35: -7733192011505839952
+      FoodMartTileset_8: -4465311683471260912
+      FoodMartTileset_28: 7469022254960389365
+      FoodMartTileset_17: -1679615949833201536
+      FoodMartTileset_30: 1702360917836368726
+      FoodMartTileset_7: -8593926227042754402
+      FoodMartTileset_34: -1274269945040559745
+      FoodMartTileset_18: 6131393889506837037
+      FoodMartTileset_22: 9212232604824145343
+      FoodMartTileset_29: -6501158348746237980
+      FoodMartTileset_1: -2773676236707834998
+      FoodMartTileset_36: -1062931279420662301
+      FoodMartTileset_6: 3838174228642757485
+      FoodMartTileset_10: 5302277601754473209
+      FoodMartTileset_3: 8420623097867056512
+      FoodMartTileset_16: -8230096245995905364
+      FoodMartTileset_32: -4000716659111154068
+      FoodMartTileset_27: 7267050558010109052
+      FoodMartTileset_20: 3587484915821323097
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

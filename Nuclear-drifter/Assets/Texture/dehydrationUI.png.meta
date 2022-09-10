@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: b7f61097cab0ecb4aad70b0d16ee0acb
+guid: a8aa49cb432b61c4d951a82f5f09b891
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 4024431146568461009
-    second: pipeOutlet_0
-  - first:
-      213: -4852873270283771639
-    second: pipeOutlet_1
-  - first:
-      213: -3674725391531774450
-    second: pipeOutlet_2
-  - first:
-      213: -7864513955861656118
-    second: pipeOutlet_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -45,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -59,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -94,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pipeOutlet_0
+      name: dehydrationUI_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
+        x: 16
+        y: 11
+        width: 28
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1da2b323ec6a9d730800000000000000
-      internalID: 4024431146568461009
+      spriteID: bc3bb0eb9f5c6274a90bdec1459d2992
+      internalID: 445098880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipeOutlet_1
+      name: dehydrationUI_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 49
+        y: 11
+        width: 28
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,50 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9016fb8e87127acb0800000000000000
-      internalID: -4852873270283771639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipeOutlet_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0ee3a6d9b0c00dc0800000000000000
-      internalID: -3674725391531774450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipeOutlet_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acd83c1a932abd290800000000000000
-      internalID: -7864513955861656118
+      spriteID: f937de986c26b704d9883cea49073fa7
+      internalID: -1952449720
       vertices: []
       indices: 
       edges: []
@@ -211,10 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pipeOutlet_3: -7864513955861656118
-      pipeOutlet_2: -3674725391531774450
-      pipeOutlet_1: -4852873270283771639
-      pipeOutlet_0: 4024431146568461009
+      dehydrationUI_1: -1952449720
+      dehydrationUI_0: 445098880
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

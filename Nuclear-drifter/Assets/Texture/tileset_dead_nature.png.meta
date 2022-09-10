@@ -81,7 +81,7 @@ TextureImporter:
       213: 1805117725812634351
     second: tileset_dead_nature_25
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -101,6 +101,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -110,8 +112,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -132,10 +134,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -173,6 +179,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -732,6 +750,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      tileset_dead_nature_5: -1241287969814403282
+      tileset_dead_nature_22: -3942413092388430524
+      tileset_dead_nature_16: -6684109557954194187
+      tileset_dead_nature_1: 8763321770119164076
+      tileset_dead_nature_19: 5127783753520345470
+      tileset_dead_nature_11: 2099915084095171845
+      tileset_dead_nature_6: -7342660154793854485
+      tileset_dead_nature_4: -2176335605633294437
+      tileset_dead_nature_12: 4684192830178066274
+      tileset_dead_nature_14: 1229383474877738642
+      tileset_dead_nature_18: 1975797943903928882
+      tileset_dead_nature_23: 2578898378252166924
+      tileset_dead_nature_7: 765389371926342121
+      tileset_dead_nature_9: -1963111083116528255
+      tileset_dead_nature_17: -2790555346691284426
+      tileset_dead_nature_15: -3291385030245916905
+      tileset_dead_nature_20: 6640471044235797397
+      tileset_dead_nature_2: 4364775440277562060
+      tileset_dead_nature_25: 1805117725812634351
+      tileset_dead_nature_21: 3884374062532027286
+      tileset_dead_nature_3: -5200735913620995986
+      tileset_dead_nature_13: -8288193090709069877
+      tileset_dead_nature_10: -5754011427245526306
+      tileset_dead_nature_8: 1230336412260227314
+      tileset_dead_nature_24: 1263733571167185630
+      tileset_dead_nature_0: 8817814724341021997
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

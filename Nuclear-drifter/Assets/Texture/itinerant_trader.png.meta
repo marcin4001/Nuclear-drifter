@@ -99,7 +99,7 @@ TextureImporter:
       213: -6722753795047258339
     second: itinerant_trader_31
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -120,6 +120,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -129,8 +130,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -151,11 +152,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -171,6 +175,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -866,6 +882,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      itinerant_trader_5: -7218287966201462785
+      itinerant_trader_15: 8173956857326895244
+      itinerant_trader_20: -2615326565692415457
+      itinerant_trader_26: 8393170776806871051
+      itinerant_trader_29: 88514066952410127
+      itinerant_trader_21: 2158942946770986755
+      itinerant_trader_6: -8292483059637509995
+      itinerant_trader_4: -6192621895353740729
+      itinerant_trader_2: 992587458449086293
+      itinerant_trader_7: -3252431646378461174
+      itinerant_trader_11: -6341589897512516767
+      itinerant_trader_3: 3604072153716589480
+      itinerant_trader_30: 6493760269129406417
+      itinerant_trader_8: 7629030541387633296
+      itinerant_trader_10: 1813636813719867403
+      itinerant_trader_1: -7947606081357947741
+      itinerant_trader_19: 5737058473322262899
+      itinerant_trader_9: -4754049158421460856
+      itinerant_trader_24: -8190946749589441110
+      itinerant_trader_31: -6722753795047258339
+      itinerant_trader_25: -1579820946129559168
+      itinerant_trader_16: 3446738326626217383
+      itinerant_trader_22: 6604863556040462656
+      itinerant_trader_27: -4355786503759418782
+      itinerant_trader_14: -4756040007883596675
+      itinerant_trader_28: -913267553651175222
+      itinerant_trader_17: -8989704713996221697
+      itinerant_trader_18: 3251657553889408066
+      itinerant_trader_13: -6563281116342746261
+      itinerant_trader_23: -4706588026765175057
+      itinerant_trader_0: 2484034520341181445
+      itinerant_trader_12: -5077219708354275111
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

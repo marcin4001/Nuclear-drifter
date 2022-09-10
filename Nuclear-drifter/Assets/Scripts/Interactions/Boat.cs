@@ -71,6 +71,7 @@ public class Boat : MonoBehaviour
             }
             PropertyPlayer.property.minutes = time.minutes;
             PropertyPlayer.property.startPos = playerPos;
+            PropertyPlayer.property.AddDehydration(hour * 60);
             PropertyPlayer.property.SaveTemp();
             if (location != "")
                 PropertyPlayer.property.location = location;

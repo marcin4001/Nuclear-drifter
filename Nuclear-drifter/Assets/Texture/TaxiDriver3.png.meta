@@ -537,7 +537,7 @@ TextureImporter:
       213: -2312979083751785194
     second: TaxiDriver3_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -596,6 +597,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -611,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4372,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TaxiDriver3_89: 3524116876472179096
+      TaxiDriver3_60: -8954141381136111635
+      TaxiDriver3_96: -7136975964283535171
+      TaxiDriver3_19: -87393614231274084
+      TaxiDriver3_127: 1792123694410325950
+      TaxiDriver3_53: 4237077090324479495
+      TaxiDriver3_171: 144553897717568693
+      TaxiDriver3_9: 2451069142722123795
+      TaxiDriver3_113: -8141438609979931916
+      TaxiDriver3_91: -83107435138381574
+      TaxiDriver3_131: 1806646193085840104
+      TaxiDriver3_88: 1081580985335002125
+      TaxiDriver3_119: -2994718327277671932
+      TaxiDriver3_100: 3396993965878545401
+      TaxiDriver3_45: -2767685005353674235
+      TaxiDriver3_173: 868045076421344774
+      TaxiDriver3_143: 4758389701000228434
+      TaxiDriver3_161: 2617679722926746100
+      TaxiDriver3_160: -4509716488725044817
+      TaxiDriver3_58: 2987436437732038667
+      TaxiDriver3_162: 2376932894301509329
+      TaxiDriver3_166: -5504685270152012150
+      TaxiDriver3_29: -4494119319454423261
+      TaxiDriver3_31: -1037044283622299079
+      TaxiDriver3_61: 6129045182270965817
+      TaxiDriver3_121: -7135045209387686556
+      TaxiDriver3_146: -8297035862416407047
+      TaxiDriver3_16: -2309240768970015230
+      TaxiDriver3_39: -3991381315165531348
+      TaxiDriver3_150: 1988700849638804443
+      TaxiDriver3_25: 2807844732171753731
+      TaxiDriver3_73: -2377687588555368565
+      TaxiDriver3_12: -7784725374362679898
+      TaxiDriver3_120: 9024841877312247056
+      TaxiDriver3_50: 835378206847225760
+      TaxiDriver3_154: -4134390263186657240
+      TaxiDriver3_124: 869005003796534780
+      TaxiDriver3_174: -5502392339016459875
+      TaxiDriver3_66: -8549525399486854462
+      TaxiDriver3_78: -1079699259444285876
+      TaxiDriver3_47: 5691583377394342694
+      TaxiDriver3_74: 830201594945574207
+      TaxiDriver3_82: 6560752046406737990
+      TaxiDriver3_63: -353455266517249713
+      TaxiDriver3_114: -4197276976511843503
+      TaxiDriver3_107: 6598357197467842348
+      TaxiDriver3_101: 8312573533761916887
+      TaxiDriver3_117: 3126920657862832578
+      TaxiDriver3_128: -913229253214489788
+      TaxiDriver3_168: -3455320195183750636
+      TaxiDriver3_15: 3233757388388187932
+      TaxiDriver3_70: 6513825792678158147
+      TaxiDriver3_51: -7224492749936143705
+      TaxiDriver3_157: -975369280775078386
+      TaxiDriver3_86: -70575261113384379
+      TaxiDriver3_112: 6574037632426075213
+      TaxiDriver3_83: 1026782259035644042
+      TaxiDriver3_159: -2423986590485268011
+      TaxiDriver3_40: 5499707878361571046
+      TaxiDriver3_98: 3887763903487239224
+      TaxiDriver3_99: 2701669231854988710
+      TaxiDriver3_122: -5640637255891918999
+      TaxiDriver3_130: 8827487073007437821
+      TaxiDriver3_27: -5626706074430194635
+      TaxiDriver3_1: -2910491169777318314
+      TaxiDriver3_8: -16282103938564224
+      TaxiDriver3_6: -8243400447099394401
+      TaxiDriver3_94: -1155810806203221521
+      TaxiDriver3_136: -401353507440437631
+      TaxiDriver3_148: 7209639196184370377
+      TaxiDriver3_3: -6953636036357587935
+      TaxiDriver3_17: -7030524303867408264
+      TaxiDriver3_20: 2191046298298998638
+      TaxiDriver3_65: -8607612927988389481
+      TaxiDriver3_90: -4721092241332640359
+      TaxiDriver3_132: -1356233919969953983
+      TaxiDriver3_95: -2628601524979125099
+      TaxiDriver3_139: 2915743360593057390
+      TaxiDriver3_18: -6844900684022463570
+      TaxiDriver3_32: 2995013874471368099
+      TaxiDriver3_22: 2007429068871275124
+      TaxiDriver3_169: -2446109128821434839
+      TaxiDriver3_43: -3123559937462795802
+      TaxiDriver3_54: -4448852409405419854
+      TaxiDriver3_0: 2115990713722079537
+      TaxiDriver3_149: -9203768562805809341
+      TaxiDriver3_105: -204714174509486292
+      TaxiDriver3_10: -4957520147882580891
+      TaxiDriver3_2: -8079085090053665212
+      TaxiDriver3_153: -5978178936680172793
+      TaxiDriver3_145: 262657155081070169
+      TaxiDriver3_23: -9048827464565724908
+      TaxiDriver3_37: 202506209964613461
+      TaxiDriver3_155: -4273342550074164133
+      TaxiDriver3_104: 102433600083000424
+      TaxiDriver3_137: 9084730270796386236
+      TaxiDriver3_176: 488943692450603729
+      TaxiDriver3_110: 6042747846649733734
+      TaxiDriver3_144: -9166291560768959886
+      TaxiDriver3_62: 7441086390593921634
+      TaxiDriver3_76: 7981206640706542618
+      TaxiDriver3_93: 8718927273450759416
+      TaxiDriver3_92: -8015217997987970188
+      TaxiDriver3_48: 5078459638065311734
+      TaxiDriver3_87: -3347973344325322079
+      TaxiDriver3_118: -4792968538457301843
+      TaxiDriver3_5: -7150805592101615986
+      TaxiDriver3_46: 9456394398360393
+      TaxiDriver3_111: -4619167914010214065
+      TaxiDriver3_102: 3313944886154455177
+      TaxiDriver3_108: -191169214621564867
+      TaxiDriver3_140: -7523821385230654145
+      TaxiDriver3_147: 6539615686494992530
+      TaxiDriver3_116: -7651071526878925531
+      TaxiDriver3_175: -6234819124662509929
+      TaxiDriver3_97: 3967143840866531695
+      TaxiDriver3_7: 6684741917322961169
+      TaxiDriver3_14: 2728079058051155578
+      TaxiDriver3_57: -3491388199086906654
+      TaxiDriver3_141: 1539790533903144826
+      TaxiDriver3_72: 8217340412050922355
+      TaxiDriver3_84: -4651464501192565847
+      TaxiDriver3_11: -4645043169760477468
+      TaxiDriver3_163: 7587147764245107048
+      TaxiDriver3_41: -3789498373101180613
+      TaxiDriver3_52: -227910351217674862
+      TaxiDriver3_129: 492518778825612666
+      TaxiDriver3_170: 2518205058279365820
+      TaxiDriver3_34: -4940394791597668051
+      TaxiDriver3_135: 219339103731524094
+      TaxiDriver3_28: 7185055413619880658
+      TaxiDriver3_42: 6500539677879394589
+      TaxiDriver3_75: 3861973484334834537
+      TaxiDriver3_44: 8316608444205895982
+      TaxiDriver3_156: -1048952341578168951
+      TaxiDriver3_164: 1877844117741305591
+      TaxiDriver3_138: -1778494145629376373
+      TaxiDriver3_115: -5388612237509718807
+      TaxiDriver3_49: -7080186387512536606
+      TaxiDriver3_4: -511789306266031225
+      TaxiDriver3_151: -3070827060658938443
+      TaxiDriver3_126: 1759535476824319514
+      TaxiDriver3_152: 1569071835973268007
+      TaxiDriver3_106: -8871863312772994813
+      TaxiDriver3_56: -6630570080308429455
+      TaxiDriver3_67: 3306997715524595066
+      TaxiDriver3_38: 151249640618931311
+      TaxiDriver3_36: 6540160737595756697
+      TaxiDriver3_24: 1021048118736565913
+      TaxiDriver3_71: -8304963811553133138
+      TaxiDriver3_81: -8344376325335032844
+      TaxiDriver3_26: 3012690232009750619
+      TaxiDriver3_13: -164741385553094166
+      TaxiDriver3_103: 2536947071395209377
+      TaxiDriver3_30: -3060271969890767196
+      TaxiDriver3_69: 2808069224084292445
+      TaxiDriver3_109: -5174479508433261679
+      TaxiDriver3_64: -1002202486163918037
+      TaxiDriver3_85: 132219063601031046
+      TaxiDriver3_125: -9085641368283283489
+      TaxiDriver3_59: 6784419595188937560
+      TaxiDriver3_172: -6722144989005029460
+      TaxiDriver3_35: 8162900043370542013
+      TaxiDriver3_55: -6431493546360127798
+      TaxiDriver3_123: 3200247920995329409
+      TaxiDriver3_80: 4041145096747842548
+      TaxiDriver3_33: 4160269918976316412
+      TaxiDriver3_177: -2312979083751785194
+      TaxiDriver3_133: 3945592853180537662
+      TaxiDriver3_167: -2990176965095964933
+      TaxiDriver3_158: -4902512702472410596
+      TaxiDriver3_134: 9028495061117487927
+      TaxiDriver3_77: -7904566704071863920
+      TaxiDriver3_79: 1079664048164354966
+      TaxiDriver3_165: -3477519953705337950
+      TaxiDriver3_21: 1908206244282319011
+      TaxiDriver3_68: 4953646727107344757
+      TaxiDriver3_142: 3971756475340723669
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

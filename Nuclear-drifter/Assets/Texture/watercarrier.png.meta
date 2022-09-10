@@ -537,7 +537,7 @@ TextureImporter:
       213: 4474291929453172757
     second: watercarrier_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -567,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -589,11 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -609,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4370,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      watercarrier_4: 7219777293986285724
+      watercarrier_112: 4544259473406902563
+      watercarrier_63: 2633959867864454946
+      watercarrier_103: 1035978788205063846
+      watercarrier_90: 8646772510601038728
+      watercarrier_106: -9159403821262118541
+      watercarrier_140: 5644842523169837328
+      watercarrier_10: -8547269981554220862
+      watercarrier_25: 6751997235038916872
+      watercarrier_142: -5016240413266530818
+      watercarrier_125: -3773190142991759768
+      watercarrier_119: 5675876001317784665
+      watercarrier_47: 5464532499737649951
+      watercarrier_144: -6552315163044957092
+      watercarrier_123: 3868295829182649364
+      watercarrier_11: -3211353431270897130
+      watercarrier_170: -789187476087574855
+      watercarrier_52: -6067917171449708239
+      watercarrier_9: 6941532001400239677
+      watercarrier_36: 5977747036850597550
+      watercarrier_169: 5921532815745497982
+      watercarrier_74: -7453245257281936476
+      watercarrier_135: -7557968085859795632
+      watercarrier_136: 6362904220502071044
+      watercarrier_70: 4867016174832688487
+      watercarrier_141: -3577674607048395289
+      watercarrier_80: -7973434009605426209
+      watercarrier_127: -5582833839436864063
+      watercarrier_28: -364950840366248687
+      watercarrier_122: -4527254166351674271
+      watercarrier_79: 3244794115820221243
+      watercarrier_3: 7336246368592306539
+      watercarrier_166: 3631821429183947837
+      watercarrier_96: 3539398099009203916
+      watercarrier_26: -1305185002668778127
+      watercarrier_164: 6124295787650718468
+      watercarrier_82: -6187042972507516292
+      watercarrier_89: 1682857296579724821
+      watercarrier_100: 4879662824125040915
+      watercarrier_85: -1517845204393773379
+      watercarrier_54: -8409245831852915111
+      watercarrier_86: 1180735102567080574
+      watercarrier_137: 7376130403952596931
+      watercarrier_158: -6158953418101213864
+      watercarrier_98: -5481936946929105822
+      watercarrier_78: -5197639955206444213
+      watercarrier_73: -185456721150588008
+      watercarrier_83: -3051251320009688661
+      watercarrier_150: 4460868384463072217
+      watercarrier_133: 3476892254236528036
+      watercarrier_93: 3839579657706536086
+      watercarrier_173: -2879483987022906335
+      watercarrier_57: -7741879285295304934
+      watercarrier_146: -6213609746608379269
+      watercarrier_16: -8170556896330781773
+      watercarrier_124: -127301109680681487
+      watercarrier_19: 1745261395732029813
+      watercarrier_117: -1141872031023421940
+      watercarrier_6: -4556628106376051070
+      watercarrier_94: -7633665178384108956
+      watercarrier_174: -4015116658708652851
+      watercarrier_13: 3243230579857484055
+      watercarrier_17: -8155674327903232256
+      watercarrier_177: 4474291929453172757
+      watercarrier_68: 5290481461980634227
+      watercarrier_2: 7780974390828201543
+      watercarrier_49: -6935922852051391742
+      watercarrier_87: -1510521171348897734
+      watercarrier_42: 8390372462292516214
+      watercarrier_84: -849365811731987563
+      watercarrier_128: -2548929478064261854
+      watercarrier_31: -8600312391813256870
+      watercarrier_50: 3204387419882703180
+      watercarrier_61: -7487117038393488665
+      watercarrier_120: 179752190914365843
+      watercarrier_101: -5111546760096581066
+      watercarrier_121: -509885042075905154
+      watercarrier_160: 1893540543926582249
+      watercarrier_0: -772450484329116865
+      watercarrier_21: 1146435971523168163
+      watercarrier_131: -7622353065520548262
+      watercarrier_153: 299655184596322582
+      watercarrier_22: 584402286261170737
+      watercarrier_62: -8624888515614627962
+      watercarrier_95: -581204136798980043
+      watercarrier_132: -2643138600866038326
+      watercarrier_113: 5172058786716921657
+      watercarrier_149: 3597115846360225034
+      watercarrier_34: 1922786892090034257
+      watercarrier_109: -5226761450407769380
+      watercarrier_176: -6795471734481901682
+      watercarrier_51: -11667597873898723
+      watercarrier_172: -3659415874430929954
+      watercarrier_66: -6141572832628552496
+      watercarrier_30: -5081780163110813972
+      watercarrier_165: 1296924657339027109
+      watercarrier_69: 5921363361631915168
+      watercarrier_71: 985351842569623632
+      watercarrier_162: -154161466805931799
+      watercarrier_138: -1073758719058778623
+      watercarrier_104: 7821168886836026443
+      watercarrier_14: 3002235666046387519
+      watercarrier_12: 1532788391921248948
+      watercarrier_23: -4743542301609174569
+      watercarrier_48: 6100302143108824092
+      watercarrier_40: -3380400555709455521
+      watercarrier_33: 7165515908335723386
+      watercarrier_157: -2701824237287808520
+      watercarrier_171: -8594277835268268819
+      watercarrier_77: -8855428543485995014
+      watercarrier_143: -2398384010172007803
+      watercarrier_108: -7114568378533325587
+      watercarrier_58: 2231750657113108909
+      watercarrier_24: 2719179572426009913
+      watercarrier_27: -3784019798890090145
+      watercarrier_163: 4294641570165851392
+      watercarrier_99: -5840340468426226618
+      watercarrier_154: 166190966199445697
+      watercarrier_147: 2848670580555100922
+      watercarrier_59: 2613620616691185819
+      watercarrier_159: 5637370114255132102
+      watercarrier_129: -2194828880222806667
+      watercarrier_29: 1392797658211982510
+      watercarrier_1: 1970677726263530302
+      watercarrier_32: 6128127867358098310
+      watercarrier_15: 8533706285073054595
+      watercarrier_145: 704342078128569467
+      watercarrier_37: -6554231370939792972
+      watercarrier_148: 2219877393922104197
+      watercarrier_155: -3944112618756220761
+      watercarrier_168: 1861938352335756
+      watercarrier_151: 2334177374279205655
+      watercarrier_18: -8958819788324537812
+      watercarrier_38: 6270534919509312515
+      watercarrier_44: 3251247094112234208
+      watercarrier_46: -6574867065004793446
+      watercarrier_118: 1312013296203383608
+      watercarrier_134: -8460533206824017528
+      watercarrier_53: -4261488463774253573
+      watercarrier_88: -8236259036470563112
+      watercarrier_126: 8511392290117016737
+      watercarrier_45: 5791477530592744260
+      watercarrier_152: -6797032488554755456
+      watercarrier_81: 948024327959103004
+      watercarrier_41: 6651370991044157114
+      watercarrier_167: 2961735839722158704
+      watercarrier_92: 3152643081866561708
+      watercarrier_102: -5587043926160890558
+      watercarrier_7: -5687115851594103713
+      watercarrier_110: 4869723288885315665
+      watercarrier_43: 1962831420124851141
+      watercarrier_72: -5772552108204021004
+      watercarrier_75: 4429527796484333725
+      watercarrier_105: -1317483136681907837
+      watercarrier_114: 2399602268344812839
+      watercarrier_39: 4622533620007598198
+      watercarrier_91: 6329963074169772319
+      watercarrier_156: 8366113261113979751
+      watercarrier_35: -3280944560184485609
+      watercarrier_115: -4951661202463301186
+      watercarrier_116: 4516820761619796392
+      watercarrier_161: 5576872391069151616
+      watercarrier_76: -982958688531087923
+      watercarrier_67: 4888755258368664456
+      watercarrier_175: 2137415960829387716
+      watercarrier_8: 5964565659913482658
+      watercarrier_55: -7220491043975795869
+      watercarrier_130: 5173996317999994376
+      watercarrier_139: 7010126724886729574
+      watercarrier_64: 6106725180147493217
+      watercarrier_60: -67838308759207861
+      watercarrier_5: -5897632255926070171
+      watercarrier_107: 6277032768162325188
+      watercarrier_65: -2671566556312328866
+      watercarrier_97: 636419583402795572
+      watercarrier_111: 8757397504673834542
+      watercarrier_20: 5693452123606297345
+      watercarrier_56: 5112025533322271083
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

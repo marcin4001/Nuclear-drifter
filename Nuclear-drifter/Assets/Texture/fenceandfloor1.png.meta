@@ -51,7 +51,7 @@ TextureImporter:
       213: -6149656912812608305
     second: fenceandfloor1_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -81,8 +82,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -103,11 +104,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -145,6 +149,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -494,6 +510,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      fenceandfloor1_3: 4663561881800835870
+      fenceandfloor1_13: -5741228077672669789
+      fenceandfloor1_6: 5671362824223450176
+      fenceandfloor1_11: -8059208802130172127
+      fenceandfloor1_2: -1336040465589169018
+      fenceandfloor1_15: -6149656912812608305
+      fenceandfloor1_14: -4939514705944953264
+      fenceandfloor1_10: 6509354476555895073
+      fenceandfloor1_0: 8014155309424494214
+      fenceandfloor1_1: 1956724374935295201
+      fenceandfloor1_4: -2196150196014789372
+      fenceandfloor1_8: -112453380183298809
+      fenceandfloor1_12: 8027507999203960424
+      fenceandfloor1_9: 8081033171134236137
+      fenceandfloor1_7: -1508399033042830602
+      fenceandfloor1_5: -9184402830989878957
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

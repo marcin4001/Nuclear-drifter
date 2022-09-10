@@ -537,7 +537,7 @@ TextureImporter:
       213: -8997692966523796176
     second: Grandfather_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -567,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -596,6 +597,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -611,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4372,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Grandfather_49: -3571427043422773390
+      Grandfather_166: -3112927956330045533
+      Grandfather_133: -1296178833349058849
+      Grandfather_47: -4080148086642410429
+      Grandfather_87: -6660105475329925330
+      Grandfather_91: 1432592082386837223
+      Grandfather_32: 1086062107101063728
+      Grandfather_173: -5239580614168494664
+      Grandfather_171: 1534569094690753487
+      Grandfather_23: -3165724283889758897
+      Grandfather_64: 8952762161481796708
+      Grandfather_128: -1941584637796319419
+      Grandfather_89: 2458069186274061671
+      Grandfather_42: 9172915867252279064
+      Grandfather_134: -4464274238989193967
+      Grandfather_77: 1720441102730007828
+      Grandfather_146: 8250958672481253602
+      Grandfather_156: 5068759348321350954
+      Grandfather_174: -8006562608738376418
+      Grandfather_98: 3170564387415546570
+      Grandfather_59: -3133244179897060481
+      Grandfather_0: -6403957506462850744
+      Grandfather_39: 777223031472000144
+      Grandfather_29: -2791064307069576117
+      Grandfather_9: 6035616985606037087
+      Grandfather_110: -2978676037103474240
+      Grandfather_126: -8704379210493200415
+      Grandfather_10: -8301423857541544022
+      Grandfather_52: -2794473215918807676
+      Grandfather_135: -8545279449379815888
+      Grandfather_34: -1812771275317173798
+      Grandfather_101: 3806649648163525103
+      Grandfather_15: 3173371338853954087
+      Grandfather_142: -5747096590077754157
+      Grandfather_155: -7626352212997979418
+      Grandfather_88: -3569584573842918687
+      Grandfather_117: -1646783565557941549
+      Grandfather_150: 5464211554898155158
+      Grandfather_54: -3828280762907258008
+      Grandfather_141: 1674626732459666530
+      Grandfather_74: -2483630928617617094
+      Grandfather_137: -1237266035144258059
+      Grandfather_169: -575596866852704098
+      Grandfather_152: 4989400178687550825
+      Grandfather_7: 1956054682734675525
+      Grandfather_30: -3797037611821901848
+      Grandfather_27: 4255855178908917436
+      Grandfather_94: -3359871517832775483
+      Grandfather_17: 3634291572595365916
+      Grandfather_5: -6864991186226048079
+      Grandfather_18: 8927522318579733769
+      Grandfather_122: -6981093828431271247
+      Grandfather_145: -4561900879525559345
+      Grandfather_40: 9295487156346147
+      Grandfather_24: -7695656721147886599
+      Grandfather_139: 8190446043662254601
+      Grandfather_113: -7974216052191208532
+      Grandfather_164: -1931465738354129242
+      Grandfather_53: 3787684049312221238
+      Grandfather_11: 6611702253372318386
+      Grandfather_4: 8486829277937880843
+      Grandfather_82: -1002415996610026237
+      Grandfather_44: -6584706221690760997
+      Grandfather_159: -8253498672583545241
+      Grandfather_92: 499847720328851265
+      Grandfather_43: 9126624676643716697
+      Grandfather_112: -5760088590484317075
+      Grandfather_127: 5329843133170048008
+      Grandfather_1: -4677709232038181489
+      Grandfather_35: 7488685655833983129
+      Grandfather_78: -8337056458664887500
+      Grandfather_19: 5303244045934821323
+      Grandfather_147: -8823600902364218771
+      Grandfather_81: -6767701667106433725
+      Grandfather_100: 6972707364860276651
+      Grandfather_129: -7636630911565899745
+      Grandfather_104: 114316675020251033
+      Grandfather_60: -2417274586069690326
+      Grandfather_125: 5333883898191934959
+      Grandfather_56: 757865018515775357
+      Grandfather_73: -5242274603276506869
+      Grandfather_20: -3835943193556928025
+      Grandfather_25: -6357342545195059780
+      Grandfather_163: 6681469950086021815
+      Grandfather_67: -7371531970906640408
+      Grandfather_31: 6507078899536739745
+      Grandfather_97: 928311890801950877
+      Grandfather_175: 5271805688848737534
+      Grandfather_95: -8705428596802820627
+      Grandfather_22: 2440874356373302358
+      Grandfather_61: 1912854553485189375
+      Grandfather_90: -3054060693030685013
+      Grandfather_70: -2939453713352561383
+      Grandfather_33: -4257463492708466999
+      Grandfather_93: 7764829249814464244
+      Grandfather_131: -435492207181692151
+      Grandfather_116: 4856889711995227831
+      Grandfather_168: -5797669350340317669
+      Grandfather_76: 987758233782484172
+      Grandfather_165: 3419806914359263979
+      Grandfather_167: 8569262441032108520
+      Grandfather_160: 8318622107920900787
+      Grandfather_114: 104410004092394150
+      Grandfather_151: 6568273171115499671
+      Grandfather_172: 8429615622643250550
+      Grandfather_71: -8915813361410328805
+      Grandfather_85: -8490164985036954962
+      Grandfather_14: 6011388714468493629
+      Grandfather_103: 1822997514636351640
+      Grandfather_136: 8484809158686365273
+      Grandfather_2: -5061616954223478985
+      Grandfather_45: -5062392597140503232
+      Grandfather_51: -4422263405411034179
+      Grandfather_124: -50975812919967676
+      Grandfather_161: -410972762537791363
+      Grandfather_12: 1499711691396746074
+      Grandfather_41: 9002436055759751747
+      Grandfather_86: 1590447539785415569
+      Grandfather_118: -6329554252755389148
+      Grandfather_154: 5728359523067664030
+      Grandfather_162: 2993254271664750650
+      Grandfather_123: -448638325459482391
+      Grandfather_105: 6958738281271973787
+      Grandfather_38: 6138483865941092069
+      Grandfather_48: 6835013942309616903
+      Grandfather_120: -6510339094651910500
+      Grandfather_62: 1785530757780319959
+      Grandfather_58: -3633112283538433498
+      Grandfather_21: -5554292765482915756
+      Grandfather_83: 98402836091981762
+      Grandfather_8: 4039510854436200527
+      Grandfather_28: 3140370546856968113
+      Grandfather_63: -8991738867997649731
+      Grandfather_46: -1717698675322597999
+      Grandfather_176: 5410138105414630404
+      Grandfather_140: 5536072693255565112
+      Grandfather_13: -1074955118449594723
+      Grandfather_80: -4801217069886894189
+      Grandfather_72: -3322783604671458713
+      Grandfather_107: 7482014902215189886
+      Grandfather_3: 7065558757061259122
+      Grandfather_102: 4015511867119621543
+      Grandfather_57: 177452215364533588
+      Grandfather_111: -6610747247558450974
+      Grandfather_16: 2878218558829235704
+      Grandfather_96: 7826381306387894512
+      Grandfather_99: -8903462034232399052
+      Grandfather_79: -2225780502863421409
+      Grandfather_84: 3669184994672691298
+      Grandfather_66: -3119943593377065945
+      Grandfather_121: 7405810813692036431
+      Grandfather_170: -6635448387478782660
+      Grandfather_26: 3617177000793494057
+      Grandfather_50: 8495980795610448827
+      Grandfather_109: -6839273673280482043
+      Grandfather_106: -2102808687571395958
+      Grandfather_108: 6935833854628499854
+      Grandfather_148: 5750438720299392850
+      Grandfather_132: -5563573571220016342
+      Grandfather_68: -4113050596820712815
+      Grandfather_119: -2166878622938806752
+      Grandfather_138: 6881220948724419775
+      Grandfather_36: -4389570037281025824
+      Grandfather_115: 8558333201330547924
+      Grandfather_75: -212895436075607045
+      Grandfather_157: 8544822816212049921
+      Grandfather_158: 4340025495006325306
+      Grandfather_65: -8189329615277230579
+      Grandfather_6: 4842588847262135721
+      Grandfather_177: -8997692966523796176
+      Grandfather_143: 3748848173873558519
+      Grandfather_130: -7683531085519394348
+      Grandfather_69: 112633149027233000
+      Grandfather_153: -2782369579395814477
+      Grandfather_55: 6703023826617742896
+      Grandfather_149: 2066251036797590334
+      Grandfather_144: -2855506551906759178
+      Grandfather_37: -5932744993227255
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

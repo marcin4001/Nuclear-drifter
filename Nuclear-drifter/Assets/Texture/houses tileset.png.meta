@@ -681,7 +681,7 @@ TextureImporter:
       213: -4916930410401500719
     second: houses tileset_209
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -701,6 +701,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -710,8 +712,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -732,10 +734,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -773,6 +779,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -5196,6 +5214,217 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      houses tileset_37: 7155692682202683399
+      houses tileset_112: -8730147839292246735
+      houses tileset_2: 8809493431771082856
+      houses tileset_17: -4360087523194608411
+      houses tileset_84: -2646108077618118440
+      houses tileset_110: -5756299675593653986
+      houses tileset_114: 7917673223160222102
+      houses tileset_127: -2752160037592806468
+      houses tileset_191: -5765597126801604723
+      houses tileset_36: 4090315048384253225
+      houses tileset_117: -1858361786393424320
+      houses tileset_69: -2111929494274275521
+      houses tileset_49: -7976787849694062860
+      houses tileset_81: -125869234599408340
+      houses tileset_96: 1005937179787024712
+      houses tileset_13: -6299896323746746738
+      houses tileset_70: -236217284198787340
+      houses tileset_126: 4028961714061089369
+      houses tileset_24: 7384926013915894075
+      houses tileset_67: -4333593698869276966
+      houses tileset_21: -886933123855745854
+      houses tileset_103: 5664374745310446877
+      houses tileset_147: -5345835378930315518
+      houses tileset_56: 2960866040470602257
+      houses tileset_174: 629397149473547252
+      houses tileset_26: -9080788880200830203
+      houses tileset_14: -532334890714242212
+      houses tileset_143: -438550582770400945
+      houses tileset_45: 5224753543225099145
+      houses tileset_141: 9087262466453204402
+      houses tileset_75: 4286065964138208111
+      houses tileset_113: -5286469795755311299
+      houses tileset_130: 4157634149469691308
+      houses tileset_151: -4887657581204432925
+      houses tileset_132: 6120342866411323028
+      houses tileset_160: 7111112148553268427
+      houses tileset_3: -1668490035412739110
+      houses tileset_93: -7578780356707478832
+      houses tileset_183: 8793807589127958126
+      houses tileset_4: 1976746473736026375
+      houses tileset_92: -7944064566760788154
+      houses tileset_176: -4979581125933026812
+      houses tileset_193: -2000876713116225725
+      houses tileset_190: -2712395308906664124
+      houses tileset_200: -4028297525643099474
+      houses tileset_136: 3993391275527748290
+      houses tileset_108: -235137475492278618
+      houses tileset_0: -6550837844854938706
+      houses tileset_73: -1035396775290623903
+      houses tileset_65: 8577930019623546876
+      houses tileset_109: -7890241861269754446
+      houses tileset_18: 2653302196032900043
+      houses tileset_59: -5447629228841467219
+      houses tileset_164: 1640646604483402770
+      houses tileset_83: 3984069970450886117
+      houses tileset_189: -1539653669125704063
+      houses tileset_185: 7203708321086545723
+      houses tileset_11: -6785573238078074668
+      houses tileset_125: 8956429280812335435
+      houses tileset_170: 7406475016084960199
+      houses tileset_133: -8004763236987676453
+      houses tileset_180: 5316490127586023518
+      houses tileset_181: -4424309607504296984
+      houses tileset_100: -8247572521195628079
+      houses tileset_38: -3864703827840389522
+      houses tileset_209: -4916930410401500719
+      houses tileset_6: -58745639466840562
+      houses tileset_194: 9014862703087547482
+      houses tileset_95: -7352691982604115542
+      houses tileset_128: -4163826519402002532
+      houses tileset_111: -3254394547029524704
+      houses tileset_149: 7586354425943818789
+      houses tileset_169: -2492472401681814375
+      houses tileset_55: -6891137791491103309
+      houses tileset_131: 4864019300979886815
+      houses tileset_119: 8300617617836053833
+      houses tileset_66: 2519290103399401797
+      houses tileset_63: 1124394668745845280
+      houses tileset_118: -7250581797883673293
+      houses tileset_165: -6600076043335159445
+      houses tileset_23: -6112303210674505265
+      houses tileset_29: 4469681808566510726
+      houses tileset_97: -8116959855823438756
+      houses tileset_25: -1801722538257910492
+      houses tileset_22: -2817057669124411432
+      houses tileset_82: -233076756495052876
+      houses tileset_88: -924332100312136370
+      houses tileset_101: 5954804704014414648
+      houses tileset_140: 4962964348763019882
+      houses tileset_116: -5572692862383121366
+      houses tileset_134: -3462507365526989034
+      houses tileset_137: 437540328248268396
+      houses tileset_144: -3511997899047225386
+      houses tileset_106: -3565693261331152610
+      houses tileset_146: 6143306670468507957
+      houses tileset_64: 9088650335535683806
+      houses tileset_171: -4730756257627233387
+      houses tileset_139: 5050267936396347745
+      houses tileset_186: 8369407240333599854
+      houses tileset_138: -7533855010928010344
+      houses tileset_16: -1162954670088144810
+      houses tileset_77: 866201226006723862
+      houses tileset_195: -4046366783955936580
+      houses tileset_175: 8895499058122847916
+      houses tileset_54: -7073614824564036181
+      houses tileset_5: 5689752364030100890
+      houses tileset_122: -5346779195605039991
+      houses tileset_80: 1551775011215752233
+      houses tileset_107: 6728786846995080129
+      houses tileset_124: 2803534765109215444
+      houses tileset_166: 3887833307060190093
+      houses tileset_168: 7579943356101103998
+      houses tileset_61: 1853937361470168337
+      houses tileset_182: -2696079505922927300
+      houses tileset_152: -9096579534235184616
+      houses tileset_148: -7313245684990384829
+      houses tileset_71: -6505161959496811651
+      houses tileset_68: 5727438529149091299
+      houses tileset_178: 4700889968637567187
+      houses tileset_158: 5821364212626418845
+      houses tileset_162: -6268538116998177044
+      houses tileset_204: 4240225009379456357
+      houses tileset_155: -1179526466426005026
+      houses tileset_58: -1750493044192543244
+      houses tileset_40: 5448409148091748742
+      houses tileset_43: 8749303582182067711
+      houses tileset_74: -8773882466371639877
+      houses tileset_27: -2570411914168498171
+      houses tileset_94: 515889959364974501
+      houses tileset_9: 4455904775292307037
+      houses tileset_33: -2962710072294586695
+      houses tileset_76: -5649441512573656596
+      houses tileset_156: 5368621292434769519
+      houses tileset_115: -6442334072429899284
+      houses tileset_199: 1178936972366014948
+      houses tileset_91: -5105584092107020499
+      houses tileset_15: 814084801903257261
+      houses tileset_51: -198363761043559373
+      houses tileset_177: -6356135463134798273
+      houses tileset_7: -8562356285945774751
+      houses tileset_62: 7688978613439717627
+      houses tileset_104: 4287462600629900392
+      houses tileset_48: -4663926148480843072
+      houses tileset_120: -6180826177175072316
+      houses tileset_31: -9088464111294402303
+      houses tileset_19: 7810572505511112143
+      houses tileset_35: -6384130614046758479
+      houses tileset_44: -8383362158582159568
+      houses tileset_87: 2795756134040484206
+      houses tileset_39: -5566886517283649246
+      houses tileset_78: 789328354646779426
+      houses tileset_60: -6792887961577136136
+      houses tileset_41: -8246603609522047544
+      houses tileset_206: -4891166123845127039
+      houses tileset_79: 7488720407196229728
+      houses tileset_50: 39256005446364973
+      houses tileset_196: -6530587291087911498
+      houses tileset_202: -4491563417355463498
+      houses tileset_32: -2957239703785838936
+      houses tileset_153: 8796888628204475874
+      houses tileset_102: -9077100775435497061
+      houses tileset_105: -2881267709741414287
+      houses tileset_1: 195860408012109675
+      houses tileset_12: 7466621626592164019
+      houses tileset_99: 9134838943350577991
+      houses tileset_57: 5265336687407412572
+      houses tileset_150: 6102296978671567368
+      houses tileset_10: 2871515379867203308
+      houses tileset_129: 5628534732607544025
+      houses tileset_28: 3741246628050800771
+      houses tileset_135: -8079930720510707752
+      houses tileset_192: -879621514576600535
+      houses tileset_172: 1656327473546065609
+      houses tileset_207: 4158267931423224884
+      houses tileset_203: 1965800996857081980
+      houses tileset_142: -6097147594874909658
+      houses tileset_34: 1598422354804831831
+      houses tileset_123: 2871181603082015166
+      houses tileset_201: 631169588286442381
+      houses tileset_52: 8380461671354616825
+      houses tileset_90: 5692409449788313038
+      houses tileset_145: 8243064759501905866
+      houses tileset_53: 4172571032982216684
+      houses tileset_173: -4688081063000246354
+      houses tileset_198: -8427142818869054628
+      houses tileset_30: 5477298199162084484
+      houses tileset_85: -5372945108084736473
+      houses tileset_188: 3563735185152530311
+      houses tileset_20: 5067043344265792821
+      houses tileset_154: 3054602610623004059
+      houses tileset_157: 4230443468908533554
+      houses tileset_163: 7206947707145274515
+      houses tileset_159: -2704596475198175754
+      houses tileset_167: 7791632212478895435
+      houses tileset_46: -2348138788629022140
+      houses tileset_8: 8440522088028767290
+      houses tileset_121: -3444856309566661460
+      houses tileset_208: 2239809097356168396
+      houses tileset_98: 4486522941014162446
+      houses tileset_47: 3023561621452554944
+      houses tileset_187: -6968035991885151152
+      houses tileset_179: -6852092438865917387
+      houses tileset_184: 8554458678084059359
+      houses tileset_89: 67932422620012131
+      houses tileset_197: 8788351897105361571
+      houses tileset_86: 5479107793759023980
+      houses tileset_42: 620174424297856334
+      houses tileset_205: 5486332132434759921
+      houses tileset_161: -8616751975266103632
+      houses tileset_72: -322944210247146923
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

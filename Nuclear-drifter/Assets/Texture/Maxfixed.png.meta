@@ -537,7 +537,7 @@ TextureImporter:
       213: 3571758974697791001
     second: Maxfixed_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -557,6 +557,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -566,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -588,10 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -619,6 +625,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4380,6 +4398,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Maxfixed_91: -3771886531984297511
+      Maxfixed_113: 5440931164032212711
+      Maxfixed_177: 3571758974697791001
+      Maxfixed_40: -7363680501828469195
+      Maxfixed_120: -4460614955768024884
+      Maxfixed_144: -2341404484856266271
+      Maxfixed_28: 1065971981829412235
+      Maxfixed_85: 7075112582889952081
+      Maxfixed_96: -4912771527373258433
+      Maxfixed_170: -6495482955159980610
+      Maxfixed_8: -7918148282665613292
+      Maxfixed_135: 8430819374961787531
+      Maxfixed_106: 1759670752608976787
+      Maxfixed_134: -380538256913356735
+      Maxfixed_68: 4694879652046752239
+      Maxfixed_89: -1266706606938356560
+      Maxfixed_25: -6000375674842523139
+      Maxfixed_100: 8119409979747586426
+      Maxfixed_136: -3176508060071183555
+      Maxfixed_33: 8799289674549922629
+      Maxfixed_109: -147503109346119086
+      Maxfixed_64: -8712688355805330739
+      Maxfixed_74: 6866104042742874336
+      Maxfixed_147: 5979081991805121717
+      Maxfixed_71: -5620427699049615242
+      Maxfixed_118: -5737710596663168668
+      Maxfixed_128: -2914652094110968228
+      Maxfixed_61: 2729315519749253443
+      Maxfixed_90: -6943308553561327426
+      Maxfixed_43: -7355916328205662640
+      Maxfixed_60: -2506906878744228904
+      Maxfixed_133: -930880220007849826
+      Maxfixed_103: 7523068514921105555
+      Maxfixed_16: -6532251888199408055
+      Maxfixed_63: 2268932860806149899
+      Maxfixed_14: 3863961957418673483
+      Maxfixed_49: -3069901301263762944
+      Maxfixed_66: -4490099512134207448
+      Maxfixed_169: -200638070885548537
+      Maxfixed_175: 997356565991560892
+      Maxfixed_102: -3090013050549680807
+      Maxfixed_54: -399676245955046166
+      Maxfixed_88: 7378638080279998887
+      Maxfixed_167: -5391242723459471670
+      Maxfixed_50: -4171000234491143875
+      Maxfixed_11: 948912296007367397
+      Maxfixed_46: 6040121641862003569
+      Maxfixed_81: -6418900580374692140
+      Maxfixed_124: 5999929954180855395
+      Maxfixed_34: -9020125220817527361
+      Maxfixed_53: -8640165969926402101
+      Maxfixed_115: -6681807941352322189
+      Maxfixed_165: -396560749172170811
+      Maxfixed_143: 2518989449783048728
+      Maxfixed_108: -7974937548573849287
+      Maxfixed_174: -2109937479420141184
+      Maxfixed_36: -6513637825015323417
+      Maxfixed_75: -6590065581848994290
+      Maxfixed_172: 3995376468457007000
+      Maxfixed_67: -8143307489662632916
+      Maxfixed_153: -3311886887813125580
+      Maxfixed_94: -641361970017259288
+      Maxfixed_145: 3773068560868161108
+      Maxfixed_149: -211877111272421759
+      Maxfixed_32: -2798689083418021725
+      Maxfixed_159: 1741089520566179119
+      Maxfixed_151: 1943674623228308235
+      Maxfixed_110: 6508815837663941283
+      Maxfixed_111: 3174473310907423999
+      Maxfixed_131: -6370700973377797910
+      Maxfixed_78: -5904546670002275868
+      Maxfixed_42: -4099290965204707057
+      Maxfixed_47: -1615461877290943231
+      Maxfixed_21: -8334819696920982015
+      Maxfixed_98: -441938714386784239
+      Maxfixed_93: -1375320866224726019
+      Maxfixed_168: -4087063063072648662
+      Maxfixed_173: 1771687904231425555
+      Maxfixed_121: 6687385556701649915
+      Maxfixed_157: 3476808887705414907
+      Maxfixed_56: 1941431166368471496
+      Maxfixed_101: 5531073152350748792
+      Maxfixed_163: -6781048248466180852
+      Maxfixed_38: -1815040391188110836
+      Maxfixed_48: 1487045132353671663
+      Maxfixed_51: -7796055148297980335
+      Maxfixed_162: -5823370152803151206
+      Maxfixed_18: 6647828724188519447
+      Maxfixed_148: -7417623087626878142
+      Maxfixed_171: 4736968507414941232
+      Maxfixed_95: -3709478742411931513
+      Maxfixed_23: -6233933239443356260
+      Maxfixed_69: 8253770741041481677
+      Maxfixed_31: -1620721643325063763
+      Maxfixed_126: 6805539851868226059
+      Maxfixed_9: -7051061569367480002
+      Maxfixed_45: 7050939824344720210
+      Maxfixed_107: -5050826045578114334
+      Maxfixed_150: 1295936096398834935
+      Maxfixed_84: -832461301153325012
+      Maxfixed_87: 5891809315659051427
+      Maxfixed_20: -725529880789799645
+      Maxfixed_65: 1443219268323101699
+      Maxfixed_19: 3198237604169921815
+      Maxfixed_77: 2487722180413433586
+      Maxfixed_122: 3411159207872486890
+      Maxfixed_29: -4682891194973691707
+      Maxfixed_112: 8801891582727249412
+      Maxfixed_116: -3769779438393385237
+      Maxfixed_117: 8549929396000739352
+      Maxfixed_160: 8951477137192596650
+      Maxfixed_5: -2846589869973260872
+      Maxfixed_92: 5020201237167263440
+      Maxfixed_130: 5113608769430004789
+      Maxfixed_176: 2521442197820701083
+      Maxfixed_83: 3908525136846736673
+      Maxfixed_30: 1052756988624906916
+      Maxfixed_26: -4613838426244048112
+      Maxfixed_41: -8509883304332815843
+      Maxfixed_119: 6578952102500277281
+      Maxfixed_123: -5981659009120618279
+      Maxfixed_24: -6531787828571600087
+      Maxfixed_1: -3217915594087220836
+      Maxfixed_132: -6488380024454772568
+      Maxfixed_57: 4726842599518380758
+      Maxfixed_73: 6319691167679830557
+      Maxfixed_62: -2932546740121264439
+      Maxfixed_105: 1034835950330528980
+      Maxfixed_79: 7885574382366805542
+      Maxfixed_158: 870289520843327983
+      Maxfixed_141: -618218491813329158
+      Maxfixed_80: -4741888065769371680
+      Maxfixed_99: 7919299588047174164
+      Maxfixed_70: -6977587364508878099
+      Maxfixed_97: 8244408032422909737
+      Maxfixed_86: -2755311014602482208
+      Maxfixed_15: -5206113376475077569
+      Maxfixed_139: -5334710931595236296
+      Maxfixed_76: 5221356457120804918
+      Maxfixed_12: -6372046476118834827
+      Maxfixed_22: -8922813946321819863
+      Maxfixed_138: 4658522570230146384
+      Maxfixed_17: -5521056614087729349
+      Maxfixed_156: 2785423533749594323
+      Maxfixed_155: -160862379428491905
+      Maxfixed_152: 253975199828362263
+      Maxfixed_72: 1577551557053504742
+      Maxfixed_137: 8810926151720154221
+      Maxfixed_82: -57774540387834759
+      Maxfixed_154: 1622931882546109681
+      Maxfixed_164: -3669308937883560117
+      Maxfixed_10: 435047368213599118
+      Maxfixed_55: 8501402776816629179
+      Maxfixed_35: 4306367294132556744
+      Maxfixed_2: 6621327109034040956
+      Maxfixed_125: -4908411098405917138
+      Maxfixed_52: -8175792081926716522
+      Maxfixed_37: -4699539790176520632
+      Maxfixed_129: 3343940845198076644
+      Maxfixed_59: -1861881445785843906
+      Maxfixed_146: -3807901350550521211
+      Maxfixed_0: -3067582621360572826
+      Maxfixed_39: -5580474395214179018
+      Maxfixed_6: 2593508737416759843
+      Maxfixed_114: 589006451384322110
+      Maxfixed_166: -730631579578625194
+      Maxfixed_4: -5012094137149271685
+      Maxfixed_3: -2671874000043104561
+      Maxfixed_140: -5937361110721538109
+      Maxfixed_27: 6385516337833625984
+      Maxfixed_142: 8459274591907896058
+      Maxfixed_127: 3200254659176184791
+      Maxfixed_161: -7224651571981561904
+      Maxfixed_13: 2237946058735224533
+      Maxfixed_44: 5364837039824189391
+      Maxfixed_7: 8117873009797718905
+      Maxfixed_104: 3272094506538641666
+      Maxfixed_58: -2817924058301926076
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

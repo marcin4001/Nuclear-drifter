@@ -99,7 +99,7 @@ TextureImporter:
       213: -6032727129971559994
     second: itemIcon_31
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -119,6 +119,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -128,8 +130,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 1
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 0
     wrapV: 0
     wrapW: 0
@@ -150,11 +152,16 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -165,7 +172,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -176,6 +184,19 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -861,6 +882,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      itemIcon_3: -4429169596036557893
+      itemIcon_12: 9162351888987327810
+      itemIcon_23: 7440360796770646535
+      itemIcon_25: 8863955115055149255
+      itemIcon_5: 7014100664730979281
+      itemIcon_22: -2271231422542097455
+      itemIcon_13: -3889726742079457253
+      itemIcon_17: 8622896601133717866
+      itemIcon_2: 3812773907732362644
+      itemIcon_28: -3731616440126667131
+      itemIcon_1: -4001657251097077254
+      itemIcon_11: 6252623153951705959
+      itemIcon_14: 2983843256139495522
+      itemIcon_8: 1282879589454094578
+      itemIcon_6: -6149765724476210891
+      itemIcon_24: 8477015623504622431
+      itemIcon_31: -6032727129971559994
+      itemIcon_18: 8977971903860265955
+      itemIcon_26: -1225975977048668150
+      itemIcon_7: -138451037593317472
+      itemIcon_15: -5102232046595028284
+      itemIcon_9: 4372586481449798452
+      itemIcon_21: -4241023496376006354
+      itemIcon_4: 3572718987459121405
+      itemIcon_16: 890003600862603019
+      itemIcon_0: -3774639638778622142
+      itemIcon_20: 956249275702049892
+      itemIcon_27: -8240540600857467761
+      itemIcon_30: 4839058086754307371
+      itemIcon_19: -26121520603711750
+      itemIcon_10: -1862835387933990315
+      itemIcon_29: 8514752434400957151
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

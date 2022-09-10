@@ -537,7 +537,7 @@ TextureImporter:
       213: 5692887354649337191
     second: itinerant_trader 1_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -567,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -589,11 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -609,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4370,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      itinerant_trader 1_133: 2129853007034109284
+      itinerant_trader 1_152: -9058615526330916399
+      itinerant_trader 1_173: -1924933840089927252
+      itinerant_trader 1_86: -3985186992733355123
+      itinerant_trader 1_172: 2998865626677817413
+      itinerant_trader 1_24: 3560920967691889305
+      itinerant_trader 1_33: 4243798277711790354
+      itinerant_trader 1_135: 6552923769002417411
+      itinerant_trader 1_167: -6343018210146975927
+      itinerant_trader 1_57: -4865775967714791382
+      itinerant_trader 1_139: 3823645317591916320
+      itinerant_trader 1_51: 1838619323167921610
+      itinerant_trader 1_22: 1693737021434422993
+      itinerant_trader 1_142: -3528523365192663117
+      itinerant_trader 1_43: 1787198842142609882
+      itinerant_trader 1_1: 865831189832731124
+      itinerant_trader 1_10: -8913023711024781670
+      itinerant_trader 1_17: 1323265991190752353
+      itinerant_trader 1_114: 7292602211317021551
+      itinerant_trader 1_26: 4492432505041897576
+      itinerant_trader 1_148: 370343782025903915
+      itinerant_trader 1_23: 5346357271254499979
+      itinerant_trader 1_169: 4068694161031950278
+      itinerant_trader 1_45: -2581472510531424577
+      itinerant_trader 1_9: 4349627384077360208
+      itinerant_trader 1_34: 9216325493883475076
+      itinerant_trader 1_160: 6086110988369898160
+      itinerant_trader 1_16: -6392367056216043799
+      itinerant_trader 1_84: 5933649074602075189
+      itinerant_trader 1_7: -1278765763482026677
+      itinerant_trader 1_102: 2917739582701900195
+      itinerant_trader 1_72: 643753602122698766
+      itinerant_trader 1_155: -3976123468609550600
+      itinerant_trader 1_77: -6320524171010341901
+      itinerant_trader 1_174: -8756511526408821607
+      itinerant_trader 1_124: 1963222299253272320
+      itinerant_trader 1_138: 9092040615415914149
+      itinerant_trader 1_140: -2130918288400678915
+      itinerant_trader 1_166: 2057182172855198183
+      itinerant_trader 1_101: 4212154732446656993
+      itinerant_trader 1_136: -8236233343165380156
+      itinerant_trader 1_83: -19533009335921036
+      itinerant_trader 1_50: 2960284367921903900
+      itinerant_trader 1_130: -5719804263750063167
+      itinerant_trader 1_70: -2744268415694053322
+      itinerant_trader 1_65: -3978756305342821885
+      itinerant_trader 1_62: 8616169535301466372
+      itinerant_trader 1_44: 6702460273666512368
+      itinerant_trader 1_171: -8113573164252397195
+      itinerant_trader 1_113: -6093386006331176641
+      itinerant_trader 1_118: -4748746923241881529
+      itinerant_trader 1_104: -3732969551167953557
+      itinerant_trader 1_94: 8309350065426589110
+      itinerant_trader 1_21: -6694322311376383691
+      itinerant_trader 1_79: -4280342826296739232
+      itinerant_trader 1_92: 1959343190934948486
+      itinerant_trader 1_153: 7108945648017575376
+      itinerant_trader 1_53: 567667363135160095
+      itinerant_trader 1_13: -5230610116595891828
+      itinerant_trader 1_18: 4921101815021687405
+      itinerant_trader 1_54: -1994139178867758905
+      itinerant_trader 1_168: -5050991847627081738
+      itinerant_trader 1_120: -4151250710469881171
+      itinerant_trader 1_12: 921188661098185130
+      itinerant_trader 1_25: 3340721476565255206
+      itinerant_trader 1_146: -3557965407083312798
+      itinerant_trader 1_42: -7986341943038824018
+      itinerant_trader 1_61: 7537734633570497504
+      itinerant_trader 1_41: -129878626032656454
+      itinerant_trader 1_47: -2292789746038677619
+      itinerant_trader 1_66: 5032414438205973471
+      itinerant_trader 1_170: 1098070307987120966
+      itinerant_trader 1_128: -8858912583274695428
+      itinerant_trader 1_144: -6317025795775124386
+      itinerant_trader 1_158: -121755109089573569
+      itinerant_trader 1_112: -2072522032100910049
+      itinerant_trader 1_108: 8291758834942296840
+      itinerant_trader 1_103: 1146653590414973233
+      itinerant_trader 1_149: 2809449837201719898
+      itinerant_trader 1_93: -5087703492734347179
+      itinerant_trader 1_165: 4583046001380794113
+      itinerant_trader 1_48: 8613050934482067479
+      itinerant_trader 1_11: 7687446263409428453
+      itinerant_trader 1_117: -611833179597714485
+      itinerant_trader 1_5: -5605216771908777815
+      itinerant_trader 1_28: 4880675198883433666
+      itinerant_trader 1_36: 1466292770352785884
+      itinerant_trader 1_49: 2840138937517622849
+      itinerant_trader 1_110: 2003320615209083756
+      itinerant_trader 1_156: -8983764154295942993
+      itinerant_trader 1_141: 7395384725363102277
+      itinerant_trader 1_67: -3635930926514280824
+      itinerant_trader 1_3: 818664403204767704
+      itinerant_trader 1_176: -3246130999415390354
+      itinerant_trader 1_32: 3281769464190985777
+      itinerant_trader 1_129: -6037982297475002062
+      itinerant_trader 1_20: -6476930945909298872
+      itinerant_trader 1_85: -2409043456877701705
+      itinerant_trader 1_59: 1409195137651599777
+      itinerant_trader 1_109: 3020021861857807832
+      itinerant_trader 1_143: -5602239969017023587
+      itinerant_trader 1_132: -6399297704364598566
+      itinerant_trader 1_161: -6817516635270809662
+      itinerant_trader 1_0: -969420492463230576
+      itinerant_trader 1_35: -8726836168504013071
+      itinerant_trader 1_55: 6212319950571548358
+      itinerant_trader 1_111: -7482529660861169435
+      itinerant_trader 1_76: -7317866468937091532
+      itinerant_trader 1_95: -72203993122456070
+      itinerant_trader 1_80: -4521570497405869143
+      itinerant_trader 1_100: -9132570970201625557
+      itinerant_trader 1_15: -9173387458122540479
+      itinerant_trader 1_97: 8254524370369829028
+      itinerant_trader 1_164: 3214748812829588383
+      itinerant_trader 1_107: 6982026326028919136
+      itinerant_trader 1_163: 222286473881740203
+      itinerant_trader 1_134: 189446186913571833
+      itinerant_trader 1_82: -6119444181048426887
+      itinerant_trader 1_39: 3234149115560488428
+      itinerant_trader 1_58: 372303124758850099
+      itinerant_trader 1_2: -2023431265695639014
+      itinerant_trader 1_89: -3496267521278813929
+      itinerant_trader 1_68: -4458878966021377104
+      itinerant_trader 1_137: -3428361001720266288
+      itinerant_trader 1_69: -390452187225995444
+      itinerant_trader 1_106: 3475496449005095009
+      itinerant_trader 1_75: -4013916748929793424
+      itinerant_trader 1_131: -1719838232063068530
+      itinerant_trader 1_157: -432269514794436147
+      itinerant_trader 1_121: 6526050079635323693
+      itinerant_trader 1_126: 2342725582819206622
+      itinerant_trader 1_73: -6164671253773647801
+      itinerant_trader 1_71: -8530382455595990605
+      itinerant_trader 1_74: -3966687013535977991
+      itinerant_trader 1_4: 1824945153412547020
+      itinerant_trader 1_30: 1361058667854571621
+      itinerant_trader 1_29: 8967533309691203369
+      itinerant_trader 1_37: 8687825278896383457
+      itinerant_trader 1_63: -2673645256683606260
+      itinerant_trader 1_145: 55279563342209365
+      itinerant_trader 1_27: -6082151031132715602
+      itinerant_trader 1_162: -4426290323194508463
+      itinerant_trader 1_88: 8783508171731936736
+      itinerant_trader 1_52: 7101292771814068662
+      itinerant_trader 1_78: 3077601025849855335
+      itinerant_trader 1_38: 5975143482184724360
+      itinerant_trader 1_151: 3779682929238426148
+      itinerant_trader 1_147: -4038634648675777865
+      itinerant_trader 1_56: -348843550216683630
+      itinerant_trader 1_40: -3319969511596400632
+      itinerant_trader 1_122: -4887329744251243445
+      itinerant_trader 1_99: 938942393810921358
+      itinerant_trader 1_119: -7206920472520605047
+      itinerant_trader 1_154: -7219051783828847185
+      itinerant_trader 1_46: 615279542392448840
+      itinerant_trader 1_96: -2060914089868615350
+      itinerant_trader 1_81: 6812475484936442332
+      itinerant_trader 1_14: 3420363973906734728
+      itinerant_trader 1_159: -1505926045687436539
+      itinerant_trader 1_175: 9103160365139914551
+      itinerant_trader 1_64: 3769413513886005767
+      itinerant_trader 1_127: -2533361296567618745
+      itinerant_trader 1_8: 4229552591166969057
+      itinerant_trader 1_123: -1617388768452912504
+      itinerant_trader 1_60: 4051937520309434877
+      itinerant_trader 1_177: 5692887354649337191
+      itinerant_trader 1_6: 2575576270588871256
+      itinerant_trader 1_19: -1636583325023332402
+      itinerant_trader 1_116: -6142373906215166746
+      itinerant_trader 1_91: -6843872525281995034
+      itinerant_trader 1_105: -4858647056178406442
+      itinerant_trader 1_90: 3579429342790697878
+      itinerant_trader 1_98: 1059331393337416673
+      itinerant_trader 1_87: 6662879572268064494
+      itinerant_trader 1_150: -2354109897036750389
+      itinerant_trader 1_31: -5972270929829795384
+      itinerant_trader 1_115: 7468391362750425348
+      itinerant_trader 1_125: -1931829901638035851
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

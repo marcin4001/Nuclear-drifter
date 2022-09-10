@@ -537,7 +537,7 @@ TextureImporter:
       213: 7627734584297515859
     second: EmmaTest_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -557,6 +557,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -566,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -588,10 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -619,6 +625,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4380,6 +4398,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      EmmaTest_36: -1415608157148951318
+      EmmaTest_54: 262157683894421758
+      EmmaTest_55: 2435712301882459700
+      EmmaTest_104: -7378280206829288121
+      EmmaTest_173: -8754403140318616809
+      EmmaTest_144: 2913475316058835121
+      EmmaTest_15: 3177668229191442476
+      EmmaTest_83: 4575584753293343456
+      EmmaTest_65: 6275076757600825812
+      EmmaTest_128: -2614175707059660875
+      EmmaTest_78: 2033536291220241873
+      EmmaTest_98: 4897731531890646922
+      EmmaTest_176: 5380793649486480368
+      EmmaTest_52: -6759156129717071351
+      EmmaTest_68: -2536493941744072948
+      EmmaTest_107: -6834581976892400074
+      EmmaTest_131: 5714725734153811678
+      EmmaTest_105: -2857063205265739210
+      EmmaTest_136: 6330520343396565994
+      EmmaTest_140: -1128520932304755505
+      EmmaTest_151: 5390776293951053595
+      EmmaTest_74: -2640134061173062554
+      EmmaTest_102: -1365887769238113036
+      EmmaTest_157: 2848645953155558416
+      EmmaTest_162: -1245664066281624518
+      EmmaTest_49: 7970657124119255650
+      EmmaTest_47: -2666970736400367577
+      EmmaTest_177: 7627734584297515859
+      EmmaTest_25: -880668898826520796
+      EmmaTest_5: 2342485999701821161
+      EmmaTest_158: 3755081781009875398
+      EmmaTest_51: 5306914208579910378
+      EmmaTest_155: 4802476347439379412
+      EmmaTest_37: -2512174874835658806
+      EmmaTest_2: -8597110747350938222
+      EmmaTest_7: 8934267051443772970
+      EmmaTest_23: 8356651270343140588
+      EmmaTest_97: 84157412141559366
+      EmmaTest_79: -762133528938482328
+      EmmaTest_126: 7281186514314135967
+      EmmaTest_170: -3576678009366811402
+      EmmaTest_48: -8293224888499256437
+      EmmaTest_101: 5215853846340657376
+      EmmaTest_62: -6194175397616850559
+      EmmaTest_10: 5178551888323201678
+      EmmaTest_44: -6075115032109705017
+      EmmaTest_77: -584676063801707005
+      EmmaTest_53: 764764182678427431
+      EmmaTest_26: 2143068901983994510
+      EmmaTest_110: -2890861704755677659
+      EmmaTest_88: -7540593932482988022
+      EmmaTest_133: -3086323356828418445
+      EmmaTest_34: -2542705838826132342
+      EmmaTest_149: -9075486870965108594
+      EmmaTest_6: -6937227011842187157
+      EmmaTest_154: 1855721169689417826
+      EmmaTest_60: -5217655308764160676
+      EmmaTest_161: -3476510550950890629
+      EmmaTest_69: -2046425949288135952
+      EmmaTest_130: -4312341234093436967
+      EmmaTest_153: 2082912302584236777
+      EmmaTest_175: 2043789156146703342
+      EmmaTest_32: 1433336739934602725
+      EmmaTest_124: 3501196135871485360
+      EmmaTest_125: 5750117980336339647
+      EmmaTest_96: -7757320483534232649
+      EmmaTest_174: -8133227363577839762
+      EmmaTest_71: -7782625882465123855
+      EmmaTest_84: -1416574157248501842
+      EmmaTest_59: -4193494504046274197
+      EmmaTest_80: 5252441776700329724
+      EmmaTest_137: 1319462210781277471
+      EmmaTest_106: -1644164833384414008
+      EmmaTest_121: 6631663572212858849
+      EmmaTest_120: 3634280141910966456
+      EmmaTest_139: -5693317178578451376
+      EmmaTest_66: -6022889444305388462
+      EmmaTest_86: 2679520337810004970
+      EmmaTest_12: -55502150667569492
+      EmmaTest_132: -8842679039975970399
+      EmmaTest_123: -7944782255646046597
+      EmmaTest_111: -8529761121269184412
+      EmmaTest_24: 8237960065681921442
+      EmmaTest_117: -8441772034457869959
+      EmmaTest_70: -932782315759415797
+      EmmaTest_20: 4932328896533728392
+      EmmaTest_76: 6940664353077040176
+      EmmaTest_87: -6727806067176413340
+      EmmaTest_64: -6302961565008054975
+      EmmaTest_160: 8630412365487816604
+      EmmaTest_134: 6244735226482714842
+      EmmaTest_46: -802786279701472810
+      EmmaTest_148: 5983110670504464520
+      EmmaTest_159: -3708705580300611150
+      EmmaTest_21: -2720722143047370573
+      EmmaTest_99: 8309063967166313840
+      EmmaTest_150: -3556207711010153673
+      EmmaTest_163: 4390364812776855508
+      EmmaTest_95: -3573092340917627331
+      EmmaTest_11: -2341560073092674956
+      EmmaTest_8: -3737013623863459420
+      EmmaTest_92: 8765055129978242338
+      EmmaTest_152: -2067492120106085013
+      EmmaTest_22: 1004085394557669772
+      EmmaTest_147: -4485324199713830139
+      EmmaTest_50: -7414779480917522261
+      EmmaTest_57: -8975075977225507308
+      EmmaTest_156: -4625535056512272200
+      EmmaTest_85: 4722701025329724022
+      EmmaTest_100: -1842770498307672411
+      EmmaTest_45: -1362810453043265389
+      EmmaTest_73: -1897766852444578296
+      EmmaTest_39: -2587867337977398503
+      EmmaTest_109: -1930813615559861384
+      EmmaTest_166: 990664316983334362
+      EmmaTest_112: -2026838317825419175
+      EmmaTest_28: -2278960747659938463
+      EmmaTest_61: 8939569626158142271
+      EmmaTest_67: 8304362411364095735
+      EmmaTest_43: 5816477481495089174
+      EmmaTest_113: -2262664179560940619
+      EmmaTest_1: 3170155322910122461
+      EmmaTest_19: 7608475960732175567
+      EmmaTest_35: -1145759401236195376
+      EmmaTest_93: 7454819495443471745
+      EmmaTest_122: 8152316293310962310
+      EmmaTest_172: -963599904612274478
+      EmmaTest_167: -6679502148507853586
+      EmmaTest_89: 7438284688411614281
+      EmmaTest_165: 1011910686896109496
+      EmmaTest_129: 2688688496664396321
+      EmmaTest_127: -876805211129181974
+      EmmaTest_41: -8990703839884606560
+      EmmaTest_146: -9167359947699352850
+      EmmaTest_91: 3193519027939325185
+      EmmaTest_145: -1046730528233676532
+      EmmaTest_75: -3863263915050133223
+      EmmaTest_115: -2865153509987184542
+      EmmaTest_16: -4573732827126005799
+      EmmaTest_31: 8456251881141672405
+      EmmaTest_103: -3404975204922992724
+      EmmaTest_40: 1505561261160422384
+      EmmaTest_171: -1984332561887164700
+      EmmaTest_118: 6663808145953285250
+      EmmaTest_82: -5950281017600458985
+      EmmaTest_142: 8998716439629789219
+      EmmaTest_42: 2013609856522960619
+      EmmaTest_63: 7063808712019253651
+      EmmaTest_27: -3639382105342574676
+      EmmaTest_108: -399632032582699089
+      EmmaTest_143: 3691849275046755046
+      EmmaTest_17: -6854604911696349209
+      EmmaTest_14: 3643189244106053630
+      EmmaTest_0: -4123522752609231835
+      EmmaTest_135: -2869395903965561315
+      EmmaTest_3: -7286350494542864865
+      EmmaTest_169: 4815156076084572934
+      EmmaTest_168: 1550976480568291156
+      EmmaTest_9: -2954240521068452752
+      EmmaTest_94: 6529074752913038702
+      EmmaTest_138: -1897422421412083454
+      EmmaTest_81: 3791881057891765302
+      EmmaTest_58: -4319520506206721352
+      EmmaTest_90: -362018346245432390
+      EmmaTest_56: -3022713852681649183
+      EmmaTest_72: 5208703244306283772
+      EmmaTest_114: -7140730996404662987
+      EmmaTest_30: 5442349116985228589
+      EmmaTest_116: 6029076237502242622
+      EmmaTest_18: -8720991133296845612
+      EmmaTest_4: 8123510033358061017
+      EmmaTest_164: -812882962431220794
+      EmmaTest_29: 6743454557986535904
+      EmmaTest_141: -1151764142863759016
+      EmmaTest_33: 2812333638011014491
+      EmmaTest_119: -5541731773670431697
+      EmmaTest_13: -4094894416892567116
+      EmmaTest_38: -6547295268631334029
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

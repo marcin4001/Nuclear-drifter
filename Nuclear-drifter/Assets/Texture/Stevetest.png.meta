@@ -537,7 +537,7 @@ TextureImporter:
       213: 5324465107403158822
     second: Stevetest_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -557,6 +557,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -566,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -588,10 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -619,6 +625,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4380,6 +4398,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Stevetest_158: 797054971625409170
+      Stevetest_160: 3234784816728058313
+      Stevetest_43: 4571132888195370173
+      Stevetest_39: 4126119558376124396
+      Stevetest_66: -4538146238877093407
+      Stevetest_106: -2292329665306906263
+      Stevetest_6: -5661490746686248677
+      Stevetest_20: 7491879144801784726
+      Stevetest_49: -5761049072565333727
+      Stevetest_19: 1837089570845393229
+      Stevetest_121: -2643431709885943527
+      Stevetest_76: -8642781399807780939
+      Stevetest_157: -6423639501846299450
+      Stevetest_114: -6620816890188094816
+      Stevetest_98: 1170438466670678142
+      Stevetest_74: 7593344342401969512
+      Stevetest_97: -6512498157291642521
+      Stevetest_153: -2432022497800166939
+      Stevetest_27: 7428355219361465002
+      Stevetest_34: 4523584063537059074
+      Stevetest_145: 6587225679050090675
+      Stevetest_17: 5745724235720164037
+      Stevetest_96: 4511932345651791971
+      Stevetest_83: 3982853095087575724
+      Stevetest_64: 6205755542573919910
+      Stevetest_50: 5562328608714185345
+      Stevetest_144: 5833794981299415792
+      Stevetest_5: -8248476064117593633
+      Stevetest_69: -2995607422428899945
+      Stevetest_132: -2254465506059287820
+      Stevetest_159: 8964382000167122161
+      Stevetest_73: 4979967751318274478
+      Stevetest_29: -3283885933338263930
+      Stevetest_56: 802515274159970349
+      Stevetest_154: -5382912860043958516
+      Stevetest_37: -8411364965471278176
+      Stevetest_18: 9132254570375144921
+      Stevetest_58: 8975578888790971792
+      Stevetest_123: -3829024246659110861
+      Stevetest_46: 7292916039912608219
+      Stevetest_130: -3948397638326461060
+      Stevetest_141: 119016246112536449
+      Stevetest_15: 5167332862560066043
+      Stevetest_99: 9102882674746735599
+      Stevetest_72: -9105817383991296731
+      Stevetest_176: 8960759213096539014
+      Stevetest_112: -6458323635924302226
+      Stevetest_119: 3040193309011256634
+      Stevetest_31: -7032333243522089267
+      Stevetest_175: -1830354098255058381
+      Stevetest_41: -258158784799907067
+      Stevetest_127: -8709029584246205315
+      Stevetest_40: 5460691142530965555
+      Stevetest_63: 6888827259562120142
+      Stevetest_8: -3773595838145527897
+      Stevetest_95: 6243627307641129331
+      Stevetest_156: 6642041405358940618
+      Stevetest_13: 5210811998593613668
+      Stevetest_174: 7640711134280954134
+      Stevetest_134: -7364151296614546073
+      Stevetest_53: -2930613642204738655
+      Stevetest_151: -4881828785293453477
+      Stevetest_30: 4053737580065942946
+      Stevetest_162: -4633920658491015723
+      Stevetest_103: -2335801484589130763
+      Stevetest_164: -7620006458734705955
+      Stevetest_126: -1768012796833764505
+      Stevetest_3: 5760980050255994432
+      Stevetest_75: -5883975445290466115
+      Stevetest_0: 5077791285532393214
+      Stevetest_88: 8624840392397979254
+      Stevetest_172: -482290207945833639
+      Stevetest_81: -5869426558632631002
+      Stevetest_117: 3799667385313591556
+      Stevetest_147: -8761057393710259822
+      Stevetest_148: 2309574540266679861
+      Stevetest_142: 3021161796432475619
+      Stevetest_11: -1518386761237202969
+      Stevetest_61: -7481085381388894791
+      Stevetest_33: -1810326747224073858
+      Stevetest_108: -1209735238609502413
+      Stevetest_133: -4087647946461260787
+      Stevetest_165: 3691142316949045280
+      Stevetest_101: 7373305746257228501
+      Stevetest_48: -2961067290364382103
+      Stevetest_2: -4760040205262098455
+      Stevetest_111: 2160627270006797824
+      Stevetest_14: 1831502349567281639
+      Stevetest_104: 8059335150137681825
+      Stevetest_85: -8144635708264442604
+      Stevetest_23: 3607559655356226815
+      Stevetest_55: -2049463923354000929
+      Stevetest_152: -5263123729952808386
+      Stevetest_91: -1359028335260242856
+      Stevetest_125: 1395778050906302989
+      Stevetest_47: 2318445517683362328
+      Stevetest_143: -8214325632411630806
+      Stevetest_70: 8827366702647938226
+      Stevetest_67: 5164711986199444486
+      Stevetest_100: -2803535140646874674
+      Stevetest_177: 5324465107403158822
+      Stevetest_10: 1237008855910419936
+      Stevetest_25: -3756867555920788162
+      Stevetest_84: -3774032571158419180
+      Stevetest_90: 7518136076006580120
+      Stevetest_92: -5388750158118275264
+      Stevetest_45: -6140735938692440469
+      Stevetest_51: 3740629912938236090
+      Stevetest_110: -809701284128533093
+      Stevetest_124: 1063862228220373623
+      Stevetest_86: 6745625246994984864
+      Stevetest_42: 9133310357888147670
+      Stevetest_24: 5030900154730288111
+      Stevetest_113: 1542896363540335196
+      Stevetest_150: 5845476802036630496
+      Stevetest_171: -3990125505204981892
+      Stevetest_62: -4348118897333744426
+      Stevetest_1: -7553612057633358257
+      Stevetest_173: 2816619300546885216
+      Stevetest_115: 1479347772243669378
+      Stevetest_118: 3286314228398252057
+      Stevetest_109: 3573618537706178198
+      Stevetest_80: 3717608566204220855
+      Stevetest_54: -5811072234944415681
+      Stevetest_78: -3797063211566030
+      Stevetest_107: 4423855296732261639
+      Stevetest_128: -7428710294088952588
+      Stevetest_139: 4173902136941404515
+      Stevetest_167: -2323735932410017228
+      Stevetest_60: -7524813850494808347
+      Stevetest_36: 2250014596033151450
+      Stevetest_120: -3828421212207494893
+      Stevetest_16: 4788675639027862361
+      Stevetest_135: 5121386358662709246
+      Stevetest_93: -6482576625116580564
+      Stevetest_168: -5882415363453780829
+      Stevetest_149: 3474152944020497414
+      Stevetest_32: 9036078994753774577
+      Stevetest_166: -5445809397900321642
+      Stevetest_146: -8131206796414660731
+      Stevetest_71: 7584265575405199868
+      Stevetest_102: 4127020149071379354
+      Stevetest_155: 8217837851996486454
+      Stevetest_131: -7292709455234000659
+      Stevetest_7: -8660173618916515022
+      Stevetest_4: -8372214993687568953
+      Stevetest_44: -7413366947736820895
+      Stevetest_12: -2819859713062660227
+      Stevetest_94: -7854745461547367686
+      Stevetest_21: -902040682613930897
+      Stevetest_59: 4079123178860017725
+      Stevetest_79: 3200297918667523660
+      Stevetest_38: -1032758618081677667
+      Stevetest_129: 5056678491003666407
+      Stevetest_65: -432434898498043141
+      Stevetest_136: 8426541776816640489
+      Stevetest_89: -6960157642484246194
+      Stevetest_68: -5108060803865926734
+      Stevetest_82: -308633560910865490
+      Stevetest_163: 3439920989080398084
+      Stevetest_22: 295188606660104150
+      Stevetest_140: -4172872304697332428
+      Stevetest_137: -8994865600548122121
+      Stevetest_170: 8783891011121147283
+      Stevetest_9: -2256020375441599064
+      Stevetest_57: 5557446364941691253
+      Stevetest_87: -7169754052821217984
+      Stevetest_105: 8234107044462725074
+      Stevetest_116: 2952954258567134563
+      Stevetest_122: -4982834670350594706
+      Stevetest_138: 9076396235753125656
+      Stevetest_169: 5723133210158807185
+      Stevetest_28: -340565912573348387
+      Stevetest_35: -6323493687692829123
+      Stevetest_77: -8562340489593092080
+      Stevetest_161: 5300687880127349908
+      Stevetest_52: 8760106377461411833
+      Stevetest_26: -9023447122542818790
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

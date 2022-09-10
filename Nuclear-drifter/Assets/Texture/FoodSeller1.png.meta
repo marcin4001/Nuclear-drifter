@@ -537,7 +537,7 @@ TextureImporter:
       213: 7611349715069655284
     second: FoodSeller1_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -567,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -589,11 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -609,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4370,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      FoodSeller1_67: 2164493087617243464
+      FoodSeller1_154: -8358412426111218443
+      FoodSeller1_138: 6340308508954186546
+      FoodSeller1_68: -4397243188075426860
+      FoodSeller1_78: -3649902222652743708
+      FoodSeller1_71: 5383812599718776988
+      FoodSeller1_143: -2691168441027601867
+      FoodSeller1_141: -1028227653265377080
+      FoodSeller1_87: -7873638066846870147
+      FoodSeller1_20: -1199326098561861902
+      FoodSeller1_174: -241985778196756728
+      FoodSeller1_19: 1437539358359197585
+      FoodSeller1_74: 7427157045878563578
+      FoodSeller1_135: -4821126004856770519
+      FoodSeller1_152: 7531799297219085580
+      FoodSeller1_100: 6705599010627599433
+      FoodSeller1_39: 4712904087034221277
+      FoodSeller1_167: 5652793623447411222
+      FoodSeller1_36: -5760279505787383553
+      FoodSeller1_56: 5771566427639554603
+      FoodSeller1_70: -2813054294298585449
+      FoodSeller1_136: 3852130312252885240
+      FoodSeller1_63: 1118799210853294019
+      FoodSeller1_50: -8044467699090643004
+      FoodSeller1_155: -1836541227558403277
+      FoodSeller1_60: 8648970276572356151
+      FoodSeller1_149: 2569813030656519309
+      FoodSeller1_95: -362264919889864257
+      FoodSeller1_121: 4962868754664502633
+      FoodSeller1_75: 3062419818015596584
+      FoodSeller1_132: -8274321334964620191
+      FoodSeller1_122: 7889615140202156875
+      FoodSeller1_171: 5749400251202689304
+      FoodSeller1_142: 277042798063560186
+      FoodSeller1_145: 5527034687662811216
+      FoodSeller1_8: -1425167512474163371
+      FoodSeller1_116: -8356870754692450965
+      FoodSeller1_48: -6146594625705075176
+      FoodSeller1_119: -8924548871428069830
+      FoodSeller1_91: -7672276900908706361
+      FoodSeller1_156: 7269840647354394531
+      FoodSeller1_22: 3487868734202003044
+      FoodSeller1_86: -5806089173336862133
+      FoodSeller1_17: 8477419929425745263
+      FoodSeller1_102: -8349509055096429887
+      FoodSeller1_133: -6235585489162758846
+      FoodSeller1_85: -7389435276145211977
+      FoodSeller1_4: -4096760118448467267
+      FoodSeller1_49: 2986939337248649586
+      FoodSeller1_14: 5560251809223450450
+      FoodSeller1_83: -8587589582179753445
+      FoodSeller1_30: -5206240670525601836
+      FoodSeller1_104: -3470921755308620179
+      FoodSeller1_37: 3378181499226061632
+      FoodSeller1_9: -393511074543307671
+      FoodSeller1_160: -7957820242772630878
+      FoodSeller1_32: 5241005673833250002
+      FoodSeller1_166: 1269971928315797065
+      FoodSeller1_92: 2708466616025176927
+      FoodSeller1_31: -8822166059630185232
+      FoodSeller1_105: 3461288505808279732
+      FoodSeller1_24: -3302441863241905740
+      FoodSeller1_21: 3103806208739053674
+      FoodSeller1_93: 193509684059283365
+      FoodSeller1_61: 7186349363666278997
+      FoodSeller1_94: -5399062584049364499
+      FoodSeller1_118: 864903327839441439
+      FoodSeller1_125: 7870376707654194434
+      FoodSeller1_123: 8180760394370077501
+      FoodSeller1_129: -1681137212573821180
+      FoodSeller1_33: -6939049573322567798
+      FoodSeller1_128: -7961843349516351757
+      FoodSeller1_25: -1748450129386268813
+      FoodSeller1_40: 7231425102933180769
+      FoodSeller1_173: -1936785622707715258
+      FoodSeller1_170: -9068686336631466289
+      FoodSeller1_163: -888363924170073261
+      FoodSeller1_144: 3441556171999071796
+      FoodSeller1_126: 1048493511285550826
+      FoodSeller1_2: 8932070907176180771
+      FoodSeller1_164: 1927492224551396765
+      FoodSeller1_150: 6639920527863931204
+      FoodSeller1_29: -4059878184161591069
+      FoodSeller1_52: 1389682109162021184
+      FoodSeller1_6: 7734967529654628549
+      FoodSeller1_42: 1583868360999971290
+      FoodSeller1_80: -4975358153504234940
+      FoodSeller1_13: -434603532821183029
+      FoodSeller1_69: -3255073153108758480
+      FoodSeller1_5: 6240296072124662018
+      FoodSeller1_53: 3952777859624046764
+      FoodSeller1_55: 6175527113042754001
+      FoodSeller1_1: 7645100433353485499
+      FoodSeller1_73: 588486446627062922
+      FoodSeller1_151: 1525291226283924295
+      FoodSeller1_77: 5371428856461891740
+      FoodSeller1_43: -4416078407305233096
+      FoodSeller1_99: -9220367031727328173
+      FoodSeller1_127: 753592591186053193
+      FoodSeller1_44: 9190948142566231505
+      FoodSeller1_172: 1698563389534618790
+      FoodSeller1_12: 4421945187149080045
+      FoodSeller1_11: -578475505231047997
+      FoodSeller1_65: 1291932863673175082
+      FoodSeller1_101: -2635397450328228832
+      FoodSeller1_26: 4161191320577555713
+      FoodSeller1_28: 731908919719865221
+      FoodSeller1_103: -3127982729193380903
+      FoodSeller1_175: -1861062540217609244
+      FoodSeller1_176: 1400906642671204025
+      FoodSeller1_51: -8096344167845378345
+      FoodSeller1_148: 3277739055780276074
+      FoodSeller1_82: 7334336179936708625
+      FoodSeller1_88: 2475845283246099101
+      FoodSeller1_16: -4797225103752166889
+      FoodSeller1_97: -3518557294174363854
+      FoodSeller1_130: 5072777293461733079
+      FoodSeller1_110: -8824252932105474511
+      FoodSeller1_90: 8771305883014057863
+      FoodSeller1_134: -8462819183749460395
+      FoodSeller1_7: 8236665912530062915
+      FoodSeller1_81: -7806879348202791528
+      FoodSeller1_124: -318516837725088875
+      FoodSeller1_3: -1226470597521304208
+      FoodSeller1_59: -8824880000838306027
+      FoodSeller1_111: -7012686087528061623
+      FoodSeller1_137: -8922287880099088485
+      FoodSeller1_35: -4133664091100805726
+      FoodSeller1_153: -7603110945843598036
+      FoodSeller1_15: 1651629151944113400
+      FoodSeller1_96: -2172655012897260351
+      FoodSeller1_161: 3730562582618486361
+      FoodSeller1_10: -151255395391293546
+      FoodSeller1_57: -6291468071271716043
+      FoodSeller1_38: 6215421264790854429
+      FoodSeller1_177: 7611349715069655284
+      FoodSeller1_89: -6428397443568794454
+      FoodSeller1_46: -3219474138296131113
+      FoodSeller1_62: -1810023928236731028
+      FoodSeller1_76: -3844111506534408101
+      FoodSeller1_131: -583574442720393244
+      FoodSeller1_64: -5421758365925099122
+      FoodSeller1_169: 2480007469147048516
+      FoodSeller1_34: -3319646099273962062
+      FoodSeller1_140: -1614442549654395771
+      FoodSeller1_146: 2814169317685331482
+      FoodSeller1_107: -7103158463424429851
+      FoodSeller1_18: 7636691417802537987
+      FoodSeller1_120: 3200882483609387019
+      FoodSeller1_98: -4900352610651294726
+      FoodSeller1_45: -3822176955887616968
+      FoodSeller1_165: 5937322483136184374
+      FoodSeller1_23: 7879443513258629601
+      FoodSeller1_115: -39828773185183405
+      FoodSeller1_162: 8645499619954280034
+      FoodSeller1_27: -9008608513835917891
+      FoodSeller1_47: 3077465498900827473
+      FoodSeller1_114: -6696424182315502832
+      FoodSeller1_159: -1536923711410789195
+      FoodSeller1_54: -8999338563198736343
+      FoodSeller1_66: -3570617321364846932
+      FoodSeller1_58: 8644192773666364914
+      FoodSeller1_108: -1949751187657492075
+      FoodSeller1_168: -3998135412415809295
+      FoodSeller1_157: 8740470624528172939
+      FoodSeller1_79: -2019821968904380145
+      FoodSeller1_158: 1127971844384579380
+      FoodSeller1_84: -8919746014270191079
+      FoodSeller1_139: -7268423557297866782
+      FoodSeller1_72: -7125230177050848670
+      FoodSeller1_109: 2694592061577768595
+      FoodSeller1_117: -3205471658960519168
+      FoodSeller1_106: -27611308170459462
+      FoodSeller1_0: 4044766558778795865
+      FoodSeller1_113: 448115774996981222
+      FoodSeller1_112: 2676248000802105126
+      FoodSeller1_41: 8691449866027983836
+      FoodSeller1_147: 1149687351047643596
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

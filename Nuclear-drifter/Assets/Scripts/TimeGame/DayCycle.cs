@@ -30,8 +30,16 @@ public class DayCycle : MonoBehaviour
         time.minutes = minutes;
         if(time.hour == 20 || time.hour == 5)
         {
-            if (minutes > 30) time.hour = _hour + 1;
-            else time.hour = _hour;
+            if (minutes > 30)
+            {
+                PropertyPlayer.property.AddDehydration(60 - minutes);
+                time.hour = _hour + 1;
+            }
+            else
+            {
+                PropertyPlayer.property.AddDehydration(-minutes);
+                time.hour = _hour;
+            }
             time.minutes = 0;
         }
         if(time.hour > 20 || time.hour < 6)
@@ -62,6 +70,11 @@ public class DayCycle : MonoBehaviour
         SetTime(time.day, time.hour, time.minutes);
         timeOneHour = 60 * time.GetCounterMax();
         counter = 0.0f;
+    }
+
+    public int GetMinutes()
+    {
+        return time.minutes;
     }
 
     public int GetHour()

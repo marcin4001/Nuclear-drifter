@@ -537,7 +537,7 @@ TextureImporter:
       213: -7318475987680692037
     second: guard1fixed_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -557,6 +557,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -566,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -588,10 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -619,6 +625,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4380,6 +4398,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      guard1fixed_84: -8555538262643718694
+      guard1fixed_106: 3646851601307929912
+      guard1fixed_22: 7515239049281413637
+      guard1fixed_76: -5304968175470610164
+      guard1fixed_83: 6647159356580280175
+      guard1fixed_59: 3461957240653828910
+      guard1fixed_116: 183321195289773494
+      guard1fixed_18: -7619863585188149201
+      guard1fixed_137: 1732049926262523390
+      guard1fixed_28: -2189574874809778549
+      guard1fixed_26: -8631242084986345245
+      guard1fixed_153: -3285599341546930289
+      guard1fixed_31: -4259763802915238151
+      guard1fixed_113: -5717344305330982598
+      guard1fixed_168: -6881900561916598375
+      guard1fixed_120: 4794334926021367023
+      guard1fixed_36: -2810174627131889297
+      guard1fixed_122: 8602744015165065278
+      guard1fixed_173: -2598770352827622224
+      guard1fixed_25: -7171802627107287564
+      guard1fixed_92: -2157915683447669645
+      guard1fixed_163: -5953475032500382948
+      guard1fixed_174: -2903799209057312246
+      guard1fixed_151: 3176059162998737810
+      guard1fixed_40: -6078448598022591101
+      guard1fixed_63: -7366687543299065848
+      guard1fixed_125: -4776014135709299379
+      guard1fixed_11: 8489028939034500480
+      guard1fixed_13: 420198946146567780
+      guard1fixed_114: -572081142051239806
+      guard1fixed_98: 7290579236562304550
+      guard1fixed_16: -2425558261849064691
+      guard1fixed_15: 2432698072552384356
+      guard1fixed_99: -2142100927856648710
+      guard1fixed_119: 5962018293412879315
+      guard1fixed_14: 8774242502110737352
+      guard1fixed_94: -1843933737776589966
+      guard1fixed_100: -8077682492026117409
+      guard1fixed_161: 6853428882364717862
+      guard1fixed_177: -7318475987680692037
+      guard1fixed_104: 871414064877504779
+      guard1fixed_136: 307532272897915255
+      guard1fixed_112: -8874236029996540139
+      guard1fixed_143: -3275352581829898470
+      guard1fixed_85: 3960841594971819228
+      guard1fixed_127: -4441077216762585395
+      guard1fixed_90: -6454030202962241500
+      guard1fixed_55: 3557828355329851420
+      guard1fixed_27: -653571861346843599
+      guard1fixed_10: 7353688597621575464
+      guard1fixed_34: 6006468578381846252
+      guard1fixed_51: -7065122677502470548
+      guard1fixed_129: -4637412583279340890
+      guard1fixed_167: 9090068940878887085
+      guard1fixed_74: 5687507771321370140
+      guard1fixed_88: -1628207744523222668
+      guard1fixed_8: 3126652488583708462
+      guard1fixed_118: 5076727368955091130
+      guard1fixed_48: -7852261974306100205
+      guard1fixed_58: 5065733486145091396
+      guard1fixed_6: -2304429421468429077
+      guard1fixed_111: -2340588604629234282
+      guard1fixed_20: 4062678427765820279
+      guard1fixed_157: 1789475757642775635
+      guard1fixed_140: -2758906583511775132
+      guard1fixed_101: 4481340041226151883
+      guard1fixed_43: -568055866565073434
+      guard1fixed_23: -7789093868131913859
+      guard1fixed_69: -2577764724190923786
+      guard1fixed_72: 7128836980686920084
+      guard1fixed_108: -4070482023274435033
+      guard1fixed_24: -5275838331440005718
+      guard1fixed_29: -4244598827571400965
+      guard1fixed_107: 8569244198004513563
+      guard1fixed_133: 5544779508949777728
+      guard1fixed_32: 2045282281524698628
+      guard1fixed_2: 7175716253737540590
+      guard1fixed_49: -6373219245595353857
+      guard1fixed_60: -3617184335695720498
+      guard1fixed_166: -2202952516655850333
+      guard1fixed_35: 5666005426672818521
+      guard1fixed_0: 2815014446943071268
+      guard1fixed_103: 6266832566583556592
+      guard1fixed_47: 4885723724426558009
+      guard1fixed_102: 7247496582344775073
+      guard1fixed_148: -3466138152871998506
+      guard1fixed_38: -2006751758297910534
+      guard1fixed_115: -2015077029441239225
+      guard1fixed_46: 4452416970110799239
+      guard1fixed_144: 9097503253761431201
+      guard1fixed_132: -5562079760667816456
+      guard1fixed_160: -2840907032431426408
+      guard1fixed_50: 3228817948149726782
+      guard1fixed_78: -1141295553764793032
+      guard1fixed_77: -2593635553387287634
+      guard1fixed_135: 3903141620084265673
+      guard1fixed_131: 8396984875939469830
+      guard1fixed_68: -1782596697859918512
+      guard1fixed_117: -1934207269322556295
+      guard1fixed_156: -6736958381023660774
+      guard1fixed_62: -4290517611265088387
+      guard1fixed_170: -2970736124451580701
+      guard1fixed_175: -4021070148798813226
+      guard1fixed_105: 773069898124691122
+      guard1fixed_109: 7009926363715548195
+      guard1fixed_81: -8254109097494469802
+      guard1fixed_9: 2991953192071135653
+      guard1fixed_158: 6235300479234820723
+      guard1fixed_141: 4543204269625035492
+      guard1fixed_42: -5102716732943822915
+      guard1fixed_64: 7709538347103761535
+      guard1fixed_37: -7387976939014391238
+      guard1fixed_56: 5835358661623231025
+      guard1fixed_165: 2952674102030331199
+      guard1fixed_96: 6184179106138318623
+      guard1fixed_54: 4388315108224940930
+      guard1fixed_164: -8676323292809209874
+      guard1fixed_75: 423052995990308177
+      guard1fixed_93: -284185678070438450
+      guard1fixed_176: 6178371772127087159
+      guard1fixed_152: -1185527920528976316
+      guard1fixed_45: 554112737397962915
+      guard1fixed_142: -1711579548407774738
+      guard1fixed_19: -4895272398308436819
+      guard1fixed_33: -7651612718775799603
+      guard1fixed_73: -731077241922894137
+      guard1fixed_3: -7871069870666397337
+      guard1fixed_172: -7414959336490900991
+      guard1fixed_126: 1583306527362897282
+      guard1fixed_7: 5469655442901001225
+      guard1fixed_149: 8064477376323274229
+      guard1fixed_124: 6002680261257068038
+      guard1fixed_97: 4193382409840254733
+      guard1fixed_21: -3214937801168191505
+      guard1fixed_138: -4126829811970290038
+      guard1fixed_171: 5749009993480390944
+      guard1fixed_53: 2166630244769606811
+      guard1fixed_110: 815469579538672368
+      guard1fixed_67: 616090597267258814
+      guard1fixed_159: -749419655731951148
+      guard1fixed_1: 950513721704177031
+      guard1fixed_162: 7436572067223383775
+      guard1fixed_82: -5837526898629091089
+      guard1fixed_39: 249859792423436242
+      guard1fixed_44: -8000937041477327242
+      guard1fixed_87: 3720499494555612732
+      guard1fixed_121: 7927573607773330463
+      guard1fixed_52: 8857946283386037710
+      guard1fixed_65: 6742284463237213859
+      guard1fixed_30: 3830792489442837281
+      guard1fixed_66: -5681597931052532202
+      guard1fixed_57: 1375672555529397594
+      guard1fixed_17: 2629247120035089275
+      guard1fixed_128: -3744723482646193599
+      guard1fixed_139: -2978170410506991459
+      guard1fixed_145: 9049905049079727743
+      guard1fixed_146: 98993883212712692
+      guard1fixed_89: 1688191028654727366
+      guard1fixed_5: 4958994378460284437
+      guard1fixed_86: -1447288628069851558
+      guard1fixed_4: 8922275653508607381
+      guard1fixed_130: -6101670667920764343
+      guard1fixed_169: -8352754579198719878
+      guard1fixed_91: 2172541238889989451
+      guard1fixed_70: -5586905622081343584
+      guard1fixed_95: -809010063073287730
+      guard1fixed_147: 4686571674749579804
+      guard1fixed_61: -5098231675018145002
+      guard1fixed_41: 3641824078650899625
+      guard1fixed_155: 7333849017964579936
+      guard1fixed_79: 106677420044526405
+      guard1fixed_134: 1012969733086093300
+      guard1fixed_123: 728795328960877538
+      guard1fixed_154: -859678119444688945
+      guard1fixed_150: 1350894977080802776
+      guard1fixed_71: 5522481456424314987
+      guard1fixed_12: -6947474896773638295
+      guard1fixed_80: -1608984934729366587
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

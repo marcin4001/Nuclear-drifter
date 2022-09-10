@@ -138,6 +138,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.backpackInv = new List<Slot>();
         PropertyPlayer.property.location = "Wasteland";
         PropertyPlayer.property.foodMartFound = false;
+        PropertyPlayer.property.ResetDehydration();
         SaveAndLoad.NewGame();
     }
 }

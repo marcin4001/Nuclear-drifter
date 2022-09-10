@@ -47,6 +47,7 @@ public class FastTravel : MonoBehaviour
         PropertyPlayer.property.startPos = playerPos;
         if(location != "")
             PropertyPlayer.property.location = location;
+        PropertyPlayer.property.AddDehydration(hour * 60);
         PropertyPlayer.property.SaveTemp();
         fade.FadeIn();
         Invoke("PlaySound", 1.5f);

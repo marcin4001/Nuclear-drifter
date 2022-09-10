@@ -174,7 +174,7 @@ TextureImporter:
       213: -7448771985116703262
     second: metrotileset_56
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -195,6 +195,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -204,8 +205,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -226,11 +227,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -246,6 +250,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1466,6 +1482,64 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      metrotileset_42: -4605909999232794691
+      metrotileset_24: 4091082346883023493
+      metrotileset_26: -2055153979317219293
+      metrotileset_30: 4692064214370956603
+      metrotileset_25: -3239775038524493798
+      metrotileset_27: -7756988844518374251
+      metrotileset_53: 685580665847505684
+      metrotileset_18: -8884697961691293785
+      metrotileset_45: 1737400191894655393
+      metrotileset_35: -4333130850080426231
+      metrotileset_22: 6965007762293135671
+      metrotileset_20: -5884149130330080191
+      metrotileset_40: 7292477276858693690
+      metrotileset_2: 6290200512676191684
+      metrotileset_49: -15814000345800088
+      metrotileset_4: -67348216383675686
+      metrotileset_13: 280700071674848382
+      metrotileset_6: -3888733675874060296
+      metrotileset_19: 3499086074109307633
+      metrotileset_39: -972454401510961708
+      metrotileset_44: -728525585665595223
+      metrotileset_9: -4223514411438411010
+      metrotileset_11: -550967181073078508
+      metrotileset_48: 4570277557785581777
+      metrotileset_52: 4432021332918104059
+      metrotileset_21: 2131129072900186938
+      metrotileset_17: -6804299078563619391
+      metrotileset_14: 540593809242243398
+      metrotileset_8: 3514941552327796695
+      metrotileset_34: 5337135190652675090
+      metrotileset_5: 785011453178554715
+      metrotileset_3: -568073831541328416
+      metrotileset_55: 3864985055293741746
+      metrotileset_32: -914388818737644349
+      metrotileset_23: 2001399692501746530
+      metrotileset_15: 7822247751975524445
+      metrotileset_38: 8842454111027127961
+      metrotileset_29: 2933341884353775444
+      metrotileset_41: -191026913590343116
+      metrotileset_7: 7412156363515348264
+      metrotileset_50: 8096490616187806455
+      metrotileset_36: 7227719129049522233
+      metrotileset_43: 3687520205953757557
+      metrotileset_56: -7448771985116703262
+      metrotileset_16: 1692608400726148142
+      metrotileset_33: -3234603610032589297
+      metrotileset_54: 2099559539037106167
+      metrotileset_0: -4077470875719529041
+      metrotileset_31: 3796353683141003580
+      metrotileset_51: -4497462540793614430
+      metrotileset_46: 2516922663534464715
+      metrotileset_37: 1706588099821768495
+      metrotileset_47: 4726545861712154725
+      metrotileset_10: 1741439260458364658
+      metrotileset_12: -1484271464164130982
+      metrotileset_28: 7635614035566662428
+      metrotileset_1: 2326661726046900377
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

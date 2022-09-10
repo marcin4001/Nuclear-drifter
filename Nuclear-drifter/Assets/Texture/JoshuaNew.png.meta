@@ -537,7 +537,7 @@ TextureImporter:
       213: -1185353330365192736
     second: JoshuaNew_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -558,6 +558,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -567,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -596,6 +597,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -611,6 +613,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4372,6 +4386,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      JoshuaNew_12: -7177843420945779256
+      JoshuaNew_84: 2651980729843805588
+      JoshuaNew_92: -2837972370695291376
+      JoshuaNew_32: -4995459330937681373
+      JoshuaNew_16: -8055152473042274107
+      JoshuaNew_11: 5963946839877970023
+      JoshuaNew_160: -7284919372561862742
+      JoshuaNew_88: 2710000211503934362
+      JoshuaNew_106: 408520849417546159
+      JoshuaNew_141: -8090015203239786771
+      JoshuaNew_124: 3305530826642525910
+      JoshuaNew_116: 1536320256380369031
+      JoshuaNew_118: 3201994062181395665
+      JoshuaNew_79: 2369231302023563663
+      JoshuaNew_172: -2871124978436605937
+      JoshuaNew_55: -4233431302320275568
+      JoshuaNew_57: 6117017565161271852
+      JoshuaNew_64: 2318206782102629241
+      JoshuaNew_1: 914565873922463575
+      JoshuaNew_105: 3454165525210527160
+      JoshuaNew_163: 641560252834181747
+      JoshuaNew_123: 7935258841477085174
+      JoshuaNew_13: -3867941990920878989
+      JoshuaNew_174: -2251854966405647414
+      JoshuaNew_129: 8555690012656200391
+      JoshuaNew_176: 1059678180984317325
+      JoshuaNew_76: 4006091801163771765
+      JoshuaNew_101: 6617117818723695845
+      JoshuaNew_58: 1074293735577160548
+      JoshuaNew_109: -1766409879973209409
+      JoshuaNew_48: -1849982352273461131
+      JoshuaNew_52: 8251995495438662846
+      JoshuaNew_97: -9032268978579138695
+      JoshuaNew_168: -7869241441732520681
+      JoshuaNew_25: -3892542396218848120
+      JoshuaNew_78: 1258978816685612644
+      JoshuaNew_144: 4632343956700913466
+      JoshuaNew_137: -5427466311608525488
+      JoshuaNew_149: 4549951942960497060
+      JoshuaNew_161: -5951377972048504935
+      JoshuaNew_61: -2210349270744964333
+      JoshuaNew_143: -3490808650860850925
+      JoshuaNew_173: -5840541479826000668
+      JoshuaNew_21: -1314052593614297535
+      JoshuaNew_30: -9117117931048582189
+      JoshuaNew_150: 7093280745565388209
+      JoshuaNew_167: 4845030204120358057
+      JoshuaNew_63: -1903103064660634080
+      JoshuaNew_153: -7626693729480825598
+      JoshuaNew_75: -6765250371050530230
+      JoshuaNew_9: -2985541893442515309
+      JoshuaNew_103: 1204567874701591464
+      JoshuaNew_154: -2130216891991497897
+      JoshuaNew_8: -6933401981794948638
+      JoshuaNew_151: -347593522281905502
+      JoshuaNew_177: -1185353330365192736
+      JoshuaNew_131: 7885025029069731705
+      JoshuaNew_74: -7788184618491455503
+      JoshuaNew_14: -65673029739613700
+      JoshuaNew_34: -2234563804475160753
+      JoshuaNew_83: -4732644539833976158
+      JoshuaNew_15: 6306521338254320321
+      JoshuaNew_125: -4106478451939374141
+      JoshuaNew_175: -4036810078971841934
+      JoshuaNew_23: 6418073791056598248
+      JoshuaNew_67: 4034961150833010486
+      JoshuaNew_29: -5514640805676552384
+      JoshuaNew_7: 8856429407138088301
+      JoshuaNew_26: 1836361208998998288
+      JoshuaNew_91: 6917667499093889987
+      JoshuaNew_77: -6480196155444880730
+      JoshuaNew_62: -2047783964487240383
+      JoshuaNew_108: 4774749110642810605
+      JoshuaNew_31: 118767622595888817
+      JoshuaNew_145: -2938243849498714729
+      JoshuaNew_65: -8584219922668770130
+      JoshuaNew_107: 3360868230221923636
+      JoshuaNew_98: 6497471532661437044
+      JoshuaNew_102: -5618337477668905119
+      JoshuaNew_66: -1545801962992035338
+      JoshuaNew_86: 9183514197347523092
+      JoshuaNew_60: 1389714730848905285
+      JoshuaNew_121: -7995668947066422308
+      JoshuaNew_0: -7772558841239976565
+      JoshuaNew_117: -6030570868975404947
+      JoshuaNew_132: -8441373919604878122
+      JoshuaNew_111: -3811369885708961869
+      JoshuaNew_112: 5397057585148356501
+      JoshuaNew_35: -7471497303269065947
+      JoshuaNew_71: -5307053024069857511
+      JoshuaNew_115: 8787688358111315278
+      JoshuaNew_119: 8587981466204577767
+      JoshuaNew_36: -8635570358215282174
+      JoshuaNew_165: 1901143320961771869
+      JoshuaNew_87: -1440077037457854066
+      JoshuaNew_39: 1563893318640692578
+      JoshuaNew_20: -5563677952170211144
+      JoshuaNew_10: 1302646700846809837
+      JoshuaNew_130: -3782135038299381274
+      JoshuaNew_148: 3414030095408821131
+      JoshuaNew_44: 5228492728018888759
+      JoshuaNew_157: -7524053619703610163
+      JoshuaNew_135: 967565101803270373
+      JoshuaNew_128: -4682169484376132138
+      JoshuaNew_41: 8298334925362615311
+      JoshuaNew_162: -1191319798280754197
+      JoshuaNew_27: 7377151890106516192
+      JoshuaNew_164: 5044741073225385869
+      JoshuaNew_69: 7567608375689906179
+      JoshuaNew_170: -8087939309751732912
+      JoshuaNew_159: 8150895323004323063
+      JoshuaNew_4: -4266496221599199440
+      JoshuaNew_146: 2104926298626706178
+      JoshuaNew_81: 1987065611543201529
+      JoshuaNew_95: 6821004777584679838
+      JoshuaNew_22: 4797787888730390834
+      JoshuaNew_99: -3921622400219585957
+      JoshuaNew_126: -1453098696020792880
+      JoshuaNew_169: -2052661193737360020
+      JoshuaNew_104: -2723375014404719479
+      JoshuaNew_72: -7989283559190585849
+      JoshuaNew_17: -8564296985837772651
+      JoshuaNew_127: -6846515192461013026
+      JoshuaNew_90: 3967615968903920486
+      JoshuaNew_139: -941213302749588210
+      JoshuaNew_56: 7475249787979893341
+      JoshuaNew_59: 1063336567761855738
+      JoshuaNew_54: 7434049771610446221
+      JoshuaNew_37: 7724189289914810660
+      JoshuaNew_152: -1141929717519762488
+      JoshuaNew_93: -1642179906787861692
+      JoshuaNew_5: 8956126246401263234
+      JoshuaNew_18: 6554021999522442682
+      JoshuaNew_120: 2177711539465819429
+      JoshuaNew_122: -3830928080412156215
+      JoshuaNew_45: -4568928042063305223
+      JoshuaNew_47: 4349997496962033973
+      JoshuaNew_51: -1049471204950370759
+      JoshuaNew_171: 4440623076908098638
+      JoshuaNew_166: 5756862281301201823
+      JoshuaNew_96: 2904638915984662814
+      JoshuaNew_138: 3946736108821965242
+      JoshuaNew_50: 4933217548939195501
+      JoshuaNew_49: -606226755679248077
+      JoshuaNew_73: 6398787761410722896
+      JoshuaNew_100: 2359596634940341946
+      JoshuaNew_19: 8043861427836897959
+      JoshuaNew_43: 75415081521668533
+      JoshuaNew_140: 3005124158152391097
+      JoshuaNew_134: -8774028703716719305
+      JoshuaNew_53: -8993620937665212196
+      JoshuaNew_155: -5085322929107978352
+      JoshuaNew_42: 4501091290581459514
+      JoshuaNew_46: 975083544144370854
+      JoshuaNew_80: 6577856428394236982
+      JoshuaNew_110: -43554740195095169
+      JoshuaNew_24: 3161438027917365529
+      JoshuaNew_89: -7593392878853456285
+      JoshuaNew_114: -5349750257846516887
+      JoshuaNew_28: 7037010113854589745
+      JoshuaNew_38: 1701085736965629238
+      JoshuaNew_2: 5491371407284312052
+      JoshuaNew_68: 4651264101339790533
+      JoshuaNew_85: -989802479088606950
+      JoshuaNew_147: 5765440542865424535
+      JoshuaNew_70: 9024349586378921414
+      JoshuaNew_113: -7047349175908650450
+      JoshuaNew_142: -5242167557845610566
+      JoshuaNew_33: -515297722140413817
+      JoshuaNew_133: -5804513880428692286
+      JoshuaNew_158: 1825353993485139599
+      JoshuaNew_82: 8359531018537374937
+      JoshuaNew_94: -8723531724136274402
+      JoshuaNew_156: 720484705185847761
+      JoshuaNew_3: 4412261727334128520
+      JoshuaNew_40: 7738436947782996131
+      JoshuaNew_6: -6742341774963706547
+      JoshuaNew_136: 4032788058074050990
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

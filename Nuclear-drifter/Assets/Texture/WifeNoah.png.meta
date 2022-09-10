@@ -537,7 +537,7 @@ TextureImporter:
       213: 6750545431362564138
     second: WifeNoah_177
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -557,6 +557,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -566,8 +568,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -588,10 +590,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -619,6 +625,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4380,6 +4398,185 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      WifeNoah_8: -1441159247410207287
+      WifeNoah_20: -8856962605898770808
+      WifeNoah_147: -608023515295217338
+      WifeNoah_73: -7203164872818170448
+      WifeNoah_19: -1809517905491989697
+      WifeNoah_102: 7667208373104553044
+      WifeNoah_92: -6915728878862717080
+      WifeNoah_98: -6722577662310549151
+      WifeNoah_81: -1346002305139240273
+      WifeNoah_6: -4772536679560979731
+      WifeNoah_46: 2936621383198334244
+      WifeNoah_163: 5181522566174622617
+      WifeNoah_11: 6779964723922174466
+      WifeNoah_89: -419516907423352692
+      WifeNoah_48: 6322919581486190139
+      WifeNoah_40: -8920685316116966373
+      WifeNoah_177: 6750545431362564138
+      WifeNoah_121: 2809535222040544231
+      WifeNoah_51: -7177485794185198078
+      WifeNoah_49: -5118849620740994843
+      WifeNoah_30: -1250277224212167070
+      WifeNoah_136: 3798686821776071739
+      WifeNoah_66: 689400293760232217
+      WifeNoah_172: 4986859817991723184
+      WifeNoah_159: 4866060245905286043
+      WifeNoah_166: -7791754159936257439
+      WifeNoah_155: 6094657455090159200
+      WifeNoah_170: 4902846029466850667
+      WifeNoah_62: 7669512894536597879
+      WifeNoah_91: 1827157062390677482
+      WifeNoah_70: -2229901499066574429
+      WifeNoah_33: -4466603182503222661
+      WifeNoah_22: -542732459121264731
+      WifeNoah_44: -3123631575109808732
+      WifeNoah_120: -3143185094800580227
+      WifeNoah_85: -1681567979679452336
+      WifeNoah_122: -7302450430218473075
+      WifeNoah_127: -6568019262383101215
+      WifeNoah_35: -455464402558825135
+      WifeNoah_86: 339600593688865016
+      WifeNoah_167: 1666881811079164612
+      WifeNoah_111: -524502730016183646
+      WifeNoah_47: -8493861620450038629
+      WifeNoah_13: 5279981182301860168
+      WifeNoah_36: -3990117494328283966
+      WifeNoah_146: -9190253638859234748
+      WifeNoah_4: 5431786926147597656
+      WifeNoah_153: -4311539118171999527
+      WifeNoah_90: -5149906009222683174
+      WifeNoah_138: -33102943721884374
+      WifeNoah_53: 240854878684973096
+      WifeNoah_135: -3934147161492129835
+      WifeNoah_59: 7088249215649925413
+      WifeNoah_34: -8479939057223559863
+      WifeNoah_18: -7918661655398337366
+      WifeNoah_75: 1189439064798162184
+      WifeNoah_79: -3431758345336033653
+      WifeNoah_96: 7679298548312752599
+      WifeNoah_174: 2518102181761627339
+      WifeNoah_78: -9157075983570217748
+      WifeNoah_173: -5845183290040782872
+      WifeNoah_169: -6078423741884324794
+      WifeNoah_107: -3197350742299436448
+      WifeNoah_108: -5460082037446799495
+      WifeNoah_41: 7023280296491975092
+      WifeNoah_128: -3562777714938814321
+      WifeNoah_14: 8380173081425340254
+      WifeNoah_157: -5186900909057966354
+      WifeNoah_176: 8099203559090837271
+      WifeNoah_80: -2723665855298439622
+      WifeNoah_150: 2391383025214819156
+      WifeNoah_45: -1678465363145895408
+      WifeNoah_76: -776465274855611849
+      WifeNoah_119: -1446525214199866863
+      WifeNoah_140: -7917791930468544079
+      WifeNoah_74: -4932714927539934987
+      WifeNoah_16: -4702305848274185909
+      WifeNoah_130: 7039833065224529640
+      WifeNoah_156: 298576082411895345
+      WifeNoah_151: -4720247561960304070
+      WifeNoah_26: -5565502188284429532
+      WifeNoah_72: 2204013266533490039
+      WifeNoah_101: -7270773042980992212
+      WifeNoah_131: -1109230376460766130
+      WifeNoah_115: 3929163392392656458
+      WifeNoah_38: 2386742779963292938
+      WifeNoah_0: 8581464711755639016
+      WifeNoah_114: -1114429249945420021
+      WifeNoah_57: -4286314385998764505
+      WifeNoah_55: 7212888518399255916
+      WifeNoah_129: 3662032611634816901
+      WifeNoah_94: 4618341337383665531
+      WifeNoah_161: 7714634786155545543
+      WifeNoah_25: 273472975685424870
+      WifeNoah_110: -6414235747976362816
+      WifeNoah_82: -646700048122565629
+      WifeNoah_87: -2849189884557382810
+      WifeNoah_137: 4189411676727447121
+      WifeNoah_3: 8166499040190000311
+      WifeNoah_116: -3956665502090711030
+      WifeNoah_24: -8177537763385828209
+      WifeNoah_15: 1658515475676687796
+      WifeNoah_165: 3903148443851660486
+      WifeNoah_88: 6858860433018562268
+      WifeNoah_93: 5917181532661200807
+      WifeNoah_60: 3769713586046715492
+      WifeNoah_2: 7321937474940722276
+      WifeNoah_124: -6453457949311688143
+      WifeNoah_23: -5968892665509786890
+      WifeNoah_31: 7000985869064240383
+      WifeNoah_99: 646453709856311784
+      WifeNoah_148: -8827296386977564667
+      WifeNoah_32: -5894483600892632062
+      WifeNoah_43: -1230008907795560065
+      WifeNoah_10: -142466371874694237
+      WifeNoah_164: -6282418737310040619
+      WifeNoah_105: -4864467514656298500
+      WifeNoah_56: 2465744080989182675
+      WifeNoah_158: 8206651133150517393
+      WifeNoah_112: -3984910525701140467
+      WifeNoah_162: 8748457037547504534
+      WifeNoah_39: 2629016573465441300
+      WifeNoah_68: 510942612963537241
+      WifeNoah_97: 2670457193679695488
+      WifeNoah_12: -1952676132627408150
+      WifeNoah_109: 4611494494377334115
+      WifeNoah_118: -4804855276227753061
+      WifeNoah_52: 6836728061189481532
+      WifeNoah_63: 4156796703078186059
+      WifeNoah_21: 568835622500462947
+      WifeNoah_134: 451078166409987848
+      WifeNoah_29: -7791690348804171034
+      WifeNoah_113: 2087659387739263225
+      WifeNoah_142: 4471662716496622278
+      WifeNoah_168: 4059911140980145761
+      WifeNoah_95: 5189959367160571296
+      WifeNoah_17: -8379198984425838484
+      WifeNoah_28: -3733273515465745995
+      WifeNoah_27: 334422825377085666
+      WifeNoah_125: 5808045184145541544
+      WifeNoah_37: 7597091530871956214
+      WifeNoah_50: -2090533841082941781
+      WifeNoah_54: -2480700868895964289
+      WifeNoah_67: 3081861293343093990
+      WifeNoah_144: -6428696964354466723
+      WifeNoah_100: -1281621468809233503
+      WifeNoah_84: -3850889229531510360
+      WifeNoah_71: -6693572272928203010
+      WifeNoah_154: 9119347911126517965
+      WifeNoah_126: 7441259325026377705
+      WifeNoah_132: 3977550785149768802
+      WifeNoah_133: 9095595286418339066
+      WifeNoah_171: -5203298411796363389
+      WifeNoah_65: -5720114216361823848
+      WifeNoah_9: 2446455701713546073
+      WifeNoah_69: 8347084956420841486
+      WifeNoah_145: -1072595705161486545
+      WifeNoah_152: 8024252663654222244
+      WifeNoah_1: 4261632095267907887
+      WifeNoah_7: -2158312683606895046
+      WifeNoah_143: 3277204537373495610
+      WifeNoah_123: 7980214768828957770
+      WifeNoah_160: 4126446775000940451
+      WifeNoah_83: -8474678916771591450
+      WifeNoah_175: -4926847104003309581
+      WifeNoah_149: 1440709757594845089
+      WifeNoah_5: 4894064209887427612
+      WifeNoah_61: 2355779442535512970
+      WifeNoah_77: -28192584086376674
+      WifeNoah_117: 6087091509022475478
+      WifeNoah_104: -8301148360138941963
+      WifeNoah_64: -7140812500855099189
+      WifeNoah_141: -4527827682935444239
+      WifeNoah_103: 9191528783188617109
+      WifeNoah_58: -5565463061538837226
+      WifeNoah_139: -8363070246187500438
+      WifeNoah_42: -474243730824498119
+      WifeNoah_106: 8407447645796980080
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
