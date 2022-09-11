@@ -74,6 +74,13 @@ public class EqChestController : MonoBehaviour
         sound.PlayClickButton();
     }
 
+    public void CloseCanvas()
+    {
+        active = false;
+        goEq.SetActive(active);
+        typeSc.inBox = 0;
+    }
+
     public void Open(int id, int indexBack, GameObject obj)
     {
         currentIndex = id;

@@ -34,6 +34,8 @@ public class PropertyPlayer : MonoBehaviour
     public string location;
     public bool foodMartFound = false;
     public int dehydration = 0;
+    public bool isDehydrated = false;
+    public int prevDehydration = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -103,6 +105,18 @@ public class PropertyPlayer : MonoBehaviour
     public void ResetDehydration()
     {
         dehydration = 0;
+        prevDehydration = 0;
+        isDehydrated = false;
+    }
+
+    public void SetIsDehydrated(bool value)
+    {
+        isDehydrated = value;
+    }
+
+    public void SavePrevDehydration()
+    {
+        prevDehydration = dehydration;
     }
 
     public static string GetJson()

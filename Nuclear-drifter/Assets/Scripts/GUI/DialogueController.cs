@@ -52,6 +52,13 @@ public class DialogueController : MonoBehaviour
         typeSc.inMenu = false;
     }
 
+    public void CloseCanvas()
+    {
+        dialCanvas.enabled = false;
+        active = false;
+        typeSc.inMenu = false;
+    }
+
     public void OpenDialogue(NPCBasic _NPC)
     {
         npc = _NPC;

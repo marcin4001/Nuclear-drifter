@@ -10,7 +10,9 @@ public class FoodItem : Item
     public bool healsRad = false;
     public bool isPoison = false;
     public bool addRad = false;
+    public bool isDrink = false;
     private Health hp;
+    private Irrigation irrigation;
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class FoodItem : Item
     public void SetHP(Health _hp)
     {
         hp = _hp;
+        irrigation = _hp.GetComponent<Irrigation>();
     }
 
     public override void Use()
@@ -32,6 +35,7 @@ public class FoodItem : Item
             if (healsRad) hp.SetRad(false);
             if (isPoison) hp.SetPoison(true);
             if (addRad && !SkillsAndPerks.playerSkill.radResistance) hp.SetRad(true);
+            if (isDrink) irrigation.Drink();
         }
     }
 }

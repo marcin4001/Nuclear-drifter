@@ -17,8 +17,11 @@ MonoBehaviour:
   description: '- Poison, +50 HP'
   value: 50
   idItem: 200
+  noRemove: 0
+  noSell: 0
   addHP: 50
   healsPoison: 1
   healsRad: 0
   isPoison: 0
   addRad: 0
+  isDrink: 1

@@ -400,8 +400,10 @@ public class PlayerClickMove : MonoBehaviour
                 }
                 else
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, path[currentIndexPoint].pos, Time.deltaTime * speed);
-                    
+                    if(!PropertyPlayer.property.isDehydrated)
+                        transform.position = Vector3.MoveTowards(transform.position, path[currentIndexPoint].pos, Time.deltaTime * speed);
+                    else
+                        transform.position = Vector3.MoveTowards(transform.position, path[currentIndexPoint].pos, Time.deltaTime * 1.2f);
                 }
             }
         }

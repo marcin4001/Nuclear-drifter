@@ -62,6 +62,14 @@ public class TradeSystem : MonoBehaviour
         sound.PlayClickButton();
     }
 
+    public void CloseCanvas()
+    {
+        active = false;
+        tradeGO.SetActive(active);
+        RemoveAll();
+        typeSc.inBox = 0;
+    }
+
     public void Open()
     {
         active = true;
