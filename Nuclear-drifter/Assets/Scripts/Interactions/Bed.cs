@@ -43,6 +43,12 @@ public class Bed : MonoBehaviour
     // Update is called once per frame
     public void Use()
     {
+        if (PropertyPlayer.property.isDehydrated)
+        {
+            gUI.AddText("You are dehydrated!");
+            gUI.AddText("You can't use it now!");
+            return;
+        }
         int hour = cycle.GetHour();
         if(hour >= 20 || hour <= 6)
         {

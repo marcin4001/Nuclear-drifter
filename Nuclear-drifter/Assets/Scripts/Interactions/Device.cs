@@ -55,6 +55,12 @@ public class Device : MonoBehaviour
                 gUI.AddText("You can't repair devices!");
                 return;
             }
+            if (PropertyPlayer.property.isDehydrated)
+            {
+                gUI.AddText("You are dehydrated!");
+                gUI.AddText("You can't use it now!");
+                return;
+            }
             bool canFix = true;
             result = new List<string>();
             result.Add(nameDevice + " is broken");

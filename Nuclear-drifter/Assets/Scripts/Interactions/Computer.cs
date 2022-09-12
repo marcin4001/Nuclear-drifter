@@ -18,7 +18,13 @@ public class Computer : MonoBehaviour
 
     public void Use()
     {
-        if(player.ObjIsNearPlayer(transform.position, minDistance))
+        if (PropertyPlayer.property.isDehydrated)
+        {
+            gUI.AddText("You are dehydrated!");
+            gUI.AddText("You can't use it now!");
+            return;
+        }
+        if (player.ObjIsNearPlayer(transform.position, minDistance))
         {
             terminal.StartTerminal();
         }

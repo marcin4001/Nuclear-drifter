@@ -32,6 +32,12 @@ public class FirePlace : MonoBehaviour
 
     public void Use()
     {
+        if (PropertyPlayer.property.isDehydrated)
+        {
+            gUI.AddText("You are dehydrated!");
+            gUI.AddText("You can't use it now!");
+            return;
+        }
         int hour = cycle.GetHour();
         bool result = inv.FindItemB(54);
         if(!result)
