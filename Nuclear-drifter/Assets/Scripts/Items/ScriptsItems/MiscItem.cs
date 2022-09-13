@@ -15,6 +15,8 @@ public class MiscItem : Item
     {
         if(isBackpack)
         {
+            SoundUse sound = FindObjectOfType<SoundUse>();
+            sound.PlayOpenBackpack();
             PropertyPlayer.property.OpenBackpack();
             return;
         }

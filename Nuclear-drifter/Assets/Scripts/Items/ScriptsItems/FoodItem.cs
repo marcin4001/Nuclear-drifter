@@ -36,6 +36,10 @@ public class FoodItem : Item
             if (isPoison) hp.SetPoison(true);
             if (addRad && !SkillsAndPerks.playerSkill.radResistance) hp.SetRad(true);
             if (isDrink) irrigation.Drink();
+
+            SoundUse sound = FindObjectOfType<SoundUse>();
+            if (isDrink) sound.PlayDrink();
+            else sound.PlayEat();
         }
     }
 }

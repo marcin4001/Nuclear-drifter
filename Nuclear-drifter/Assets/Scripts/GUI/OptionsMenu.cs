@@ -20,6 +20,7 @@ public class OptionsMenu : MonoBehaviour
     private SoundsTrigger sfxSound;
     private FightSound fightSound;
     private CanvasScaler600p canvasScaler;
+    private SoundUse soundUse;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +67,9 @@ public class OptionsMenu : MonoBehaviour
         fightSound = FindObjectOfType<FightSound>();
         if (fightSound != null)
             fightSound.SetVolume(sfxScroll.value);
+        soundUse = FindObjectOfType<SoundUse>();
+        if (soundUse != null)
+            soundUse.SetVolume(sfxScroll.value);
         canvasScaler = FindObjectOfType<CanvasScaler600p>();
         if (canvasScaler != null)
             canvasScaler.ChangeScale(new Vector2 (Screen.width, Screen.height));
@@ -85,6 +89,8 @@ public class OptionsMenu : MonoBehaviour
             sfxSound.SetVolume(sfxScroll.value);
         if (fightSound != null)
             fightSound.SetVolume(sfxScroll.value);
+        if (soundUse != null)
+            soundUse.SetVolume(sfxScroll.value);
     }
 
     public void ChangeFullscreen(bool value)

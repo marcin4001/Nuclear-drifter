@@ -17,5 +17,7 @@ public class DocItem : Item
         Debug.Log("Use: " + name);
         DocumentController doc = FindObjectOfType<DocumentController>();
         if (doc != null) doc.OpenDoc(idDoc, idItem);
+        SoundUse sound = FindObjectOfType<SoundUse>();
+        sound.PlayRead();
     }
 }
