@@ -9,6 +9,7 @@ public class Bed : MonoBehaviour
     private GUIScript gUI;
     private FadePanel fade;
     private Health hpPlayer;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class Bed : MonoBehaviour
         gUI = FindObjectOfType<GUIScript>();
         fade = FindObjectOfType<FadePanel>();
         hpPlayer = move.GetComponent<Health>();
+        sound = FindObjectOfType<SoundsTrigger>();
     }
 
     public void Sleep()
@@ -40,7 +42,7 @@ public class Bed : MonoBehaviour
         cycle.SetTime(day, 7, 0);
         hpPlayer.AddHalfHealth();
     }
-    // Update is called once per frame
+    
     public void Use()
     {
         if (PropertyPlayer.property.isDehydrated)
@@ -54,7 +56,7 @@ public class Bed : MonoBehaviour
         {
             if(move.ObjIsNear("Bed", 1.0f))
             {
-                fade.Fade("Sleep", gameObject);
+                fade.Fade("Sleep", gameObject, 3.6f, "PlaySound");
             }
             else
             {
@@ -65,5 +67,10 @@ public class Bed : MonoBehaviour
         {
             gUI.AddText("I can't go to sleep");
         }
+    }
+
+    public void PlaySound()
+    {
+        sound.PlaySleeping();
     }
 }

@@ -11,6 +11,7 @@ public class FadePanel : MonoBehaviour
     private GameObject objMethod;
     private PauseMenu menu;
     private MapControl map;
+    private string soundMethod = "";
     public Image imgOpacity;
     
     // Start is called before the first frame update
@@ -41,13 +42,16 @@ public class FadePanel : MonoBehaviour
         }
     }
 
-    public void Fade(string method, GameObject obj)
+    public void Fade(string method, GameObject obj, float time = 0.0f, string _soundMethod = "")
     {
         objMethod = obj;
         nameMethod = method;
+        soundMethod = _soundMethod;
         
         anim.SetTrigger("FadeIn");
-        Invoke("FadeOut", 1.4f);
+        if(soundMethod != "")
+            Invoke("SoundMethod", 1.5f);
+        Invoke("FadeOut", 1.5f + time);
         menu.activeEsc = false;
         map.keyActive = false;
     }
@@ -59,6 +63,11 @@ public class FadePanel : MonoBehaviour
     //        Fade("Test", gameObject);
     //    }
     //}
+
+    private void SoundMethod()
+    {
+        objMethod.SendMessage(soundMethod);
+    }
 
     private void FadeOut()
     {

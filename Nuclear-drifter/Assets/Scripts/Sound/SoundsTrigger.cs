@@ -19,6 +19,8 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip boat;
     public AudioClip lockOpenDoor;
     public AudioClip clickButton;
+    public AudioClip sleeping;
+    public AudioClip chestOpen;
     private AudioSource sr;
     private bool blockClick = false;
    
@@ -106,6 +108,16 @@ public class SoundsTrigger : MonoBehaviour
             sr.PlayOneShot(clickButton);
             StartCoroutine(Unblock());
         }
+    }
+
+    public void PlaySleeping()
+    {
+        sr.PlayOneShot(sleeping);
+    }
+
+    public void PlayOpenChest()
+    {
+        sr.PlayOneShot(chestOpen);
     }
 
     public IEnumerator Unblock()

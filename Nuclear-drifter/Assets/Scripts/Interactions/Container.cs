@@ -13,12 +13,14 @@ public class Container : MonoBehaviour
     private EqChestController controller;
     private PlayerClickMove player;
     private GUIScript gUI;
+    private SoundsTrigger sound;
     // Start is called before the first frame update
     void Start()
     {
         controller = FindObjectOfType<EqChestController>();
         player = FindObjectOfType<PlayerClickMove>();
         gUI = FindObjectOfType<GUIScript>();
+        sound = FindObjectOfType<SoundsTrigger>();
         if(keyId > -1)
         {
             isLocked = !controller.GetKeyUse(indexEq);
@@ -47,7 +49,11 @@ public class Container : MonoBehaviour
     public void OpenBox()
     {
         if (player.ObjIsNearPlayer(transform.position, 1.1f))
+        {
+            if (indexBackground == 0 || indexBackground == 1)
+                sound.PlayOpenChest();
             controller.Open(indexEq, indexBackground, gameObject);
+        }
         else gUI.AddText("The " + nameObj + " is too far");
     }
 
