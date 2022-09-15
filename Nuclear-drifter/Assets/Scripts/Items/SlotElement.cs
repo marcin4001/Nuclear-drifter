@@ -83,10 +83,17 @@ public class SlotElement : MonoBehaviour
                         else if (itemSlot.itemElement.GetItemType() == ItemType.Misc)
                         {
                             MiscItem misc = (MiscItem)itemSlot.itemElement;
-                            if (gUI.GetCombatState() && misc.isBackpack) 
+                            if (gUI.GetCombatState() && misc.isBackpack)
+                            {
                                 gUI.AddText("You can't use it now");
-                            else 
+                            }
+                            else
+                            {
+                                misc.SetHP(gUI.playerHealth);
                                 itemSlot.itemElement.Use();
+                                if(misc.isCigarette)
+                                    inv.RemoveOne(itemSlot);
+                            }
                         }
                     }
                     else if (typeSc.inBox == 1)

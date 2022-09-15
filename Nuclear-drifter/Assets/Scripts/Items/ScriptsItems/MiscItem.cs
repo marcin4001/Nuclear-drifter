@@ -6,21 +6,49 @@ using UnityEngine;
 public class MiscItem : Item
 {
     public bool isBackpack = false;
+    public bool isCigarette = false;
+    public int cigaretteDamage = 0;
+    private Health hp;
     private void Awake()
     {
         type = ItemType.Misc;
     }
 
+    public void SetHP(Health _hp)
+    {
+        hp = _hp;
+    }
+
     public override void Use()
     {
-        if(isBackpack)
+        SoundUse sound = FindObjectOfType<SoundUse>();
+        if (isBackpack)
         {
-            SoundUse sound = FindObjectOfType<SoundUse>();
             sound.PlayOpenBackpack();
             PropertyPlayer.property.OpenBackpack();
             return;
         }
         if (gUI == null) gUI = FindObjectOfType<GUIScript>();
+        if(isCigarette && hp != null)
+        {
+            hp.Damage(cigaretteDamage);
+            if(hp.isDead())
+            {
+                BadEnding ending = hp.GetComponent<BadEnding>();
+                ending.End();
+            }
+            else
+            {
+                sound.PlayCough();
+            }
+            if (gUI != null)
+            {
+                gUI.AddText("Don't smoke!");
+                gUI.AddText("Smoking kills!");
+            }
+            return;
+        }
+
         if (gUI != null) gUI.AddText("This cannot be used");
     }
 }

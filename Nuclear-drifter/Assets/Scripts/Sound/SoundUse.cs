@@ -8,6 +8,7 @@ public class SoundUse : MonoBehaviour
     public AudioClip drinkClip;
     public AudioClip documentClip;
     public AudioClip backpackClip;
+    public AudioClip coughClip;
     private AudioSource source;
 
     private void Awake()
@@ -38,5 +39,10 @@ public class SoundUse : MonoBehaviour
     public void PlayOpenBackpack()
     {
         source.PlayOneShot(backpackClip);
+    }
+
+    public void PlayCough()
+    {
+        source.PlayOneShot(coughClip);
     }
 }
