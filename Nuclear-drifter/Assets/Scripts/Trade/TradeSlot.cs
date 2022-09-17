@@ -12,6 +12,7 @@ public class TradeSlot : MonoBehaviour
     private Inventory inv;
     private TradeSystem trade;
     private TypeScene typeSc;
+    private SoundUse sound;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class TradeSlot : MonoBehaviour
         inv = FindObjectOfType<Inventory>();
         trade = FindObjectOfType<TradeSystem>();
         typeSc = FindObjectOfType<TypeScene>();
+        sound = FindObjectOfType<SoundUse>();
     }
 
     public void ClickSlot()
@@ -96,6 +98,7 @@ public class TradeSlot : MonoBehaviour
                 trade.money.amountItem = temp.itemElement.value;
                 gUI.AddText("You spent $" + trade.money.amountItem);
                 inv.RemoveFew(trade.money);
+                sound.PlayCash();
             }
             else
             {
@@ -118,6 +121,7 @@ public class TradeSlot : MonoBehaviour
                 trade.money.amountItem = itemSlot.itemElement.value * itemSlot.amountItem;
                 gUI.AddText("You spent $" + trade.money.amountItem);
                 inv.RemoveFew(trade.money);
+                sound.PlayCash();
             }
             else
             {

@@ -7,17 +7,20 @@ public class BadEnding : MonoBehaviour
 {
     private FadePanel fade;
     private PlayerClickMove move;
+    private SoundUse sound;
     // Start is called before the first frame update
     void Start()
     {
         fade = FindObjectOfType<FadePanel>();
         move = GetComponent<PlayerClickMove>();
+        sound = FindObjectOfType<SoundUse>();
     }
 
     public void End()
     {
         fade.EnableEndImg();
         move.Deathanim();
+        sound.PlayFallBody();
         Invoke("LoadScene", 3.0f);
     }
 
@@ -25,4 +28,10 @@ public class BadEnding : MonoBehaviour
     {
         SceneManager.LoadScene("DeathScene");
     }
+
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.X))
+    //        End();
+    //}
 }

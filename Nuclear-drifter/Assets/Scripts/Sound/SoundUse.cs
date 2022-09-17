@@ -9,6 +9,8 @@ public class SoundUse : MonoBehaviour
     public AudioClip documentClip;
     public AudioClip backpackClip;
     public AudioClip coughClip;
+    public AudioClip fallBodyClip;
+    public AudioClip cashClip;
     private AudioSource source;
 
     private void Awake()
@@ -44,5 +46,15 @@ public class SoundUse : MonoBehaviour
     public void PlayCough()
     {
         source.PlayOneShot(coughClip);
+    }
+
+    public void PlayFallBody()
+    {
+        source.PlayOneShot(fallBodyClip);
+    }
+
+    public void PlayCash()
+    {
+        source.PlayOneShot(cashClip);
     }
 }

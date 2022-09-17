@@ -81,7 +81,7 @@ public class GridNode : MonoBehaviour
             for (int y = 0; y < gridSizeY; y++)
             {
                 Vector3 pos = bottonLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.up * (y * nodeDiameter + nodeRadius);
-                bool walkable = (Physics2D.OverlapCircle((Vector2)pos, nodeRadius - 0.3f) != null);
+                bool walkable = (Physics2D.OverlapCircle((Vector2)pos, nodeRadius - 0.3f, ~(1 << 2)) != null);
                 if (walkable)
                 {
                     Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)pos, nodeRadius - 0.3f);
@@ -106,7 +106,7 @@ public class GridNode : MonoBehaviour
             for (int y = 0; y < gridSizeY; y++)
             {
                 Vector3 pos = nodes[x, y].pos;
-                bool walkable = (Physics2D.OverlapCircle((Vector2)pos, nodeRadius - 0.3f) != null);
+                bool walkable = (Physics2D.OverlapCircle((Vector2)pos, nodeRadius - 0.3f, ~(1 << 2)) != null);
                 if (walkable)
                 {
                     Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)pos, nodeRadius - 0.3f);
