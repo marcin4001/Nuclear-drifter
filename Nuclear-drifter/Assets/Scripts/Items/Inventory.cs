@@ -12,11 +12,13 @@ public class Inventory : MonoBehaviour
     public GameObject bag;
     private PlayerClickMove move;
     private TypeScene typeSc;
+    private SoundUse sound;
 
     private void Awake()
     {
         gUI = FindObjectOfType<GUIScript>();
         move = FindObjectOfType<PlayerClickMove>();
+        sound = FindObjectOfType<SoundUse>();
         if (slots == null) slots = new List<Slot>();
         else
         {
@@ -280,21 +282,22 @@ public class Inventory : MonoBehaviour
             if (!_slot.itemElement.noRemove)
             { 
                 Slot newslot = new Slot(_slot.itemElement, _slot.amountItem, _slot.ammo);
-            slots.Remove(_slot);
-            SetItems();
-            Sort();
-            bool isBag = false;
-            Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)move.GetPosPlayer(), 0.5f);
-            foreach (Collider2D c in col)
-            {
-                isBag = c.gameObject.name.StartsWith("bag") || isBag;
-            }
+                slots.Remove(_slot);
+                SetItems();
+                Sort();
+                bool isBag = false;
+                Collider2D[] col = Physics2D.OverlapCircleAll((Vector2)move.GetPosPlayer(), 0.5f);
+                foreach (Collider2D c in col)
+                {
+                    isBag = c.gameObject.name.StartsWith("bag") || isBag;
+                }
 
-            GameObject obj = Instantiate(bag, move.GetPosPlayer(), Quaternion.identity);
-            ItemElement itemElement = obj.GetComponent<ItemElement>();
-            if (itemElement != null) itemElement.item = newslot;
-            SpriteRenderer r = obj.GetComponent<SpriteRenderer>();
-            if (r != null) r.enabled = !isBag;
+                GameObject obj = Instantiate(bag, move.GetPosPlayer(), Quaternion.identity);
+                ItemElement itemElement = obj.GetComponent<ItemElement>();
+                if (itemElement != null) itemElement.item = newslot;
+                SpriteRenderer r = obj.GetComponent<SpriteRenderer>();
+                if (r != null) r.enabled = !isBag;
+                sound.PlayDrop();
             }
             else
             {

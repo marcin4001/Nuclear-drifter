@@ -13,6 +13,7 @@ public class ItemReplace : MonoBehaviour
     private Inventory inv;
     private PlayerClickMove player;
     private InventoryBox box;
+    private SoundUse sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class ItemReplace : MonoBehaviour
         inv = FindObjectOfType<Inventory>();
         player = FindObjectOfType<PlayerClickMove>();
         box = FindObjectOfType<InventoryBox>();
+        sound = FindObjectOfType<SoundUse>();
         currentItem = box.GetFreeItem(indexItem);
         render.sprite = currentItem.itemElement.image;
         if (itemReplace == currentItem.itemElement)
@@ -62,6 +64,7 @@ public class ItemReplace : MonoBehaviour
                     currentItem.id = itemReplace.idItem;
                     isReplace = true;
                     render.sprite = itemReplace.image;
+                    sound.PlayPickUp();
                 }
                 else
                 {

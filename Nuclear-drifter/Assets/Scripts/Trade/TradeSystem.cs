@@ -19,6 +19,8 @@ public class TradeSystem : MonoBehaviour
     private Inventory inv;
     private Offer offer;
     private SoundsTrigger sound;
+    private SoundUse soundUse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class TradeSystem : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
         inv = FindObjectOfType<Inventory>();
         offer = FindObjectOfType<Offer>();
+        soundUse = FindObjectOfType<SoundUse>();
         if (offer != null) slots = offer.slots;
         if (slots == null) slots = new List<Slot>();
         else
@@ -106,6 +109,7 @@ public class TradeSystem : MonoBehaviour
             Slot temp = new Slot(slot.itemElement, 1, slot.ammo);
             sellSlot.SetSlot(temp);
             inv.RemoveOne(slot);
+            soundUse.PlayPickUp();
         }
         else if(slot.itemElement == sellSlot.itemSlot.itemElement)
         {
@@ -113,6 +117,7 @@ public class TradeSystem : MonoBehaviour
             Slot temp = new Slot(slot.itemElement, amount, slot.ammo);
             sellSlot.SetSlot(temp);
             inv.RemoveOne(slot);
+            soundUse.PlayPickUp();
         }
         else
         {
@@ -127,6 +132,7 @@ public class TradeSystem : MonoBehaviour
             Slot temp = new Slot(slot.itemElement, slot.amountItem, slot.ammo);
             sellSlot.SetSlot(temp);
             inv.RemoveAllUni(slot);
+            soundUse.PlayPickUp();
         }
         else if (slot.itemElement == sellSlot.itemSlot.itemElement)
         {
@@ -134,6 +140,7 @@ public class TradeSystem : MonoBehaviour
             Slot temp = new Slot(slot.itemElement, amount, slot.ammo);
             sellSlot.SetSlot(temp);
             inv.RemoveAllUni(slot);
+            soundUse.PlayPickUp();
         }
         else
         {
@@ -157,6 +164,7 @@ public class TradeSystem : MonoBehaviour
                 inv.Add(new Slot(sellSlot.itemSlot.itemElement, 1, sellSlot.itemSlot.ammo));
                 sellSlot.ClearSlot();
             }
+            soundUse.PlayPickUp();
         }
     }
 
@@ -166,6 +174,7 @@ public class TradeSystem : MonoBehaviour
         {
             inv.Add(sellSlot.itemSlot);
             sellSlot.ClearSlot();
+            soundUse.PlayPickUp();
         }
     }
     
@@ -175,18 +184,33 @@ public class TradeSystem : MonoBehaviour
         {
             if (!sellSlot.itemSlot.itemElement.noSell)
             {
-                money.amountItem = Mathf.RoundToInt((sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem) * sellPercent);
-                int percentText = (int)(sellPercent * 100f);
-                gUI.AddText("You got $" + money.amountItem + " (" + percentText + "% value)");
-                if (money.amountItem > 0) inv.Add(money);
-                sellSlot.ClearSlot();
+                if (sellSlot.itemSlot.itemElement.idItem != 300)
+                {
+                    money.amountItem = Mathf.RoundToInt((sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem) * sellPercent);
+                    int percentText = (int)(sellPercent * 100f);
+                    gUI.AddText("You got $" + money.amountItem + " (" + percentText + "% value)");
+                    if (money.amountItem > 0) inv.Add(money);
+                    sellSlot.ClearSlot();
+                }
+                else
+                {
+                    money.amountItem = sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem;
+                    gUI.AddText("You got $" + money.amountItem);
+                    if (money.amountItem > 0) inv.Add(money);
+                    sellSlot.ClearSlot();
+                }
+                soundUse.PlayCash();
             }
             else
             {
                 gUI.AddText("It cannot be sold!");
-            }
+                sound.PlayClickButton();
+            } 
         }
-        sound.PlayClickButton();
+        else
+        {
+            sound.PlayClickButton();
+        }
     }
 
     // Update is called once per frame

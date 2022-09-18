@@ -11,6 +11,8 @@ public class SoundUse : MonoBehaviour
     public AudioClip coughClip;
     public AudioClip fallBodyClip;
     public AudioClip cashClip;
+    public AudioClip pickUpClip;
+    public AudioClip dropClip;
     private AudioSource source;
 
     private void Awake()
@@ -56,5 +58,15 @@ public class SoundUse : MonoBehaviour
     public void PlayCash()
     {
         source.PlayOneShot(cashClip);
+    }
+
+    public void PlayPickUp()
+    {
+        source.PlayOneShot(pickUpClip);
+    }
+
+    public void PlayDrop()
+    {
+        source.PlayOneShot(dropClip);
     }
 }

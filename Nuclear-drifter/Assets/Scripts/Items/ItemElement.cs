@@ -12,6 +12,7 @@ public class ItemElement : MonoBehaviour
     private Inventory inv;
     private PlayerClickMove player;
     private InventoryBox invBox;
+    private SoundUse sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class ItemElement : MonoBehaviour
         inv = FindObjectOfType<Inventory>();
         player = FindObjectOfType<PlayerClickMove>();
         invBox = FindObjectOfType<InventoryBox>();
+        sound = FindObjectOfType<SoundUse>();
         if(saveItem)
         {
             item = invBox.GetFreeItem(indexItem);
@@ -53,6 +55,7 @@ public class ItemElement : MonoBehaviour
                     if (result)
                     {
                         item.amountItem = 0;
+                        sound.PlayPickUp();
                         Destroy(gameObject);
                     }
                 }
