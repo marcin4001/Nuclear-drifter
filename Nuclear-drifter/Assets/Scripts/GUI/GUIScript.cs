@@ -43,6 +43,7 @@ public class GUIScript : MonoBehaviour
     private TypeScene typeScene;
     private PauseMenu pause;
     private SoundsTrigger sound;
+    private SoundUse soundUse;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +57,7 @@ public class GUIScript : MonoBehaviour
         system = FindObjectOfType<EventSystem>();
         typeScene = FindObjectOfType<TypeScene>();
         pause = FindObjectOfType<PauseMenu>();
+        soundUse = FindObjectOfType<SoundUse>();
         if (newLvlLabel != null)
             newLvlLabel.enabled = false;
         if (warningLabel != null)
@@ -94,7 +96,10 @@ public class GUIScript : MonoBehaviour
     public void ShowNextLvl()
     {
         if (newLvlLabel != null)
+        {
             newLvlLabel.enabled = true;
+            soundUse.PlayLevelUp();
+        }
     }
 
     public void ShowWarning()

@@ -14,12 +14,14 @@ public class Carpet : MonoBehaviour
     public bool closeInNight = false;
     public string locationInside;
     public bool noSound = false;
+    private SoundUse sound;
     // Start is called before the first frame update
     void Start()
     {
         box = FindObjectOfType<MessageBox>();
         gUI = FindObjectOfType<GUIScript>();
         time = FindObjectOfType<TimeGame>();
+        sound = FindObjectOfType<SoundUse>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,6 +42,7 @@ public class Carpet : MonoBehaviour
             {
                 gUI.AddText("The door is locked!");
                 if(closeInNight) gUI.AddText("Opening at 6 am");
+                sound.PlayLock();
             }
         }
     }

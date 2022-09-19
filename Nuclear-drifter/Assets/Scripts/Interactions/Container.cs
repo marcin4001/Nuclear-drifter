@@ -14,6 +14,7 @@ public class Container : MonoBehaviour
     private PlayerClickMove player;
     private GUIScript gUI;
     private SoundsTrigger sound;
+    private SoundUse soundUse;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class Container : MonoBehaviour
         player = FindObjectOfType<PlayerClickMove>();
         gUI = FindObjectOfType<GUIScript>();
         sound = FindObjectOfType<SoundsTrigger>();
+        soundUse = FindObjectOfType<SoundUse>();
         if(keyId > -1)
         {
             isLocked = !controller.GetKeyUse(indexEq);
@@ -36,13 +38,17 @@ public class Container : MonoBehaviour
         else
         {
             bool playerHaveKey = controller.GetInvPlayer().FindItemB(keyId);
-            if(playerHaveKey)
+            if (playerHaveKey)
             {
                 OpenBox();
                 isLocked = false;
                 controller.SetKeyUse(indexEq);
             }
-            else gUI.AddText("The " + nameObj + " is locked");
+            else
+            {
+                gUI.AddText("The " + nameObj + " is locked");
+                soundUse.PlayLock();
+            }
         }
     }
 

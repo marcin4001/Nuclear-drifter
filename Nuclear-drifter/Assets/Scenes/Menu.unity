@@ -619,6 +619,7 @@ GameObject:
   - component: {fileID: 384472461}
   - component: {fileID: 384472460}
   - component: {fileID: 384472462}
+  - component: {fileID: 384472463}
   m_Layer: 0
   m_Name: PluginSave
   m_TagString: Untagged
@@ -702,6 +703,18 @@ MonoBehaviour:
   - nameEnemy: bandit13
     idMission: 30
     isKilled: 0
+--- !u!114 &384472463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384472459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6366c621e3bbe5418ffc11ff05feeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &430795936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1210,8 @@ MonoBehaviour:
   boat: {fileID: 8300000, guid: bca6910bbf15d7345bd289343efcfab2, type: 3}
   lockOpenDoor: {fileID: 8300000, guid: 6006fee643710da4d8fed15b7cce255c, type: 3}
   clickButton: {fileID: 8300000, guid: fa098cab9e143e14abab880fbcadf469, type: 3}
+  sleeping: {fileID: 0}
+  chestOpen: {fileID: 0}
 --- !u!82 &558392528
 AudioSource:
   m_ObjectHideFlags: 0

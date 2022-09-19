@@ -139,6 +139,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.location = "Wasteland";
         PropertyPlayer.property.foodMartFound = false;
         PropertyPlayer.property.ResetDehydration();
+        PropertyPlayer.property.afterFoodmart = false;
         SaveAndLoad.NewGame();
     }
 }

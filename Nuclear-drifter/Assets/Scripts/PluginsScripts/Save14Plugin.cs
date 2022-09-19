@@ -28,6 +28,7 @@ public class Save14Plugin : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         for (int i = 1; i <= maxSave; i++)
         {
+            Debug.Log("Save14Plugin");
             string savePathDir = Path.Combine(Application.persistentDataPath, dir, "save" + i);
             if (Directory.Exists(savePathDir))
             {

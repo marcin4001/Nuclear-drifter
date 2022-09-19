@@ -3,22 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class Save12Plugin : MonoBehaviour
+public class Save15Plugin : MonoBehaviour
 {
     private string dir = "Saves";
-    private string versionText = "Save version: 0.12a";
+    private string versionText = "Save version: 0.15a";
+    private string preVersionText = "Save version: 0.14a";
     private int maxSave = 5;
+
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 1; i <= maxSave; i++)
+        StartCoroutine(ChangeSaveVersion());
+    }
+
+    private IEnumerator ChangeSaveVersion()
+    {
+        yield return new WaitForSeconds(0.3f);
+        for (int i = 1; i <= maxSave; i++)
         {
-            Debug.Log("Save12Plugin");
+            Debug.Log("Save15Plugin");
             string savePathDir = Path.Combine(Application.persistentDataPath, dir, "save" + i);
-            if(Directory.Exists(savePathDir))
+            if (Directory.Exists(savePathDir))
             {
                 string versionPath = Path.Combine(savePathDir, "version.txt");
-                if(!File.Exists(versionPath))
+                string textVerDoc = File.ReadAllText(versionPath);
+                if (textVerDoc == preVersionText)
                 {
                     PropertyPlayer property = new PropertyPlayer();
                     string player = File.ReadAllText(Path.Combine(savePathDir, "Player.json"));
@@ -31,5 +40,4 @@ public class Save12Plugin : MonoBehaviour
             }
         }
     }
-
 }
