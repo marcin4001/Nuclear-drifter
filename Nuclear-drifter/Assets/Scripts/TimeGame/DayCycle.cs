@@ -96,7 +96,7 @@ public class DayCycle : MonoBehaviour
             float x = Mathf.Lerp(0f, 90f, alfa);
             //Debug.Log(alfa);
             sun.transform.rotation = Quaternion.Euler(new Vector3(x, 0f, 0f));
-            if (time.minutes > 40 && lightPlayer != null)
+            if (time.minutes > 50 && lightPlayer != null)
             {
                 typeSc.lightNight = true;
                 lightPlayer.enabled = true;
@@ -108,7 +108,7 @@ public class DayCycle : MonoBehaviour
             float alfa = counter / timeOneHour; //(float) time.minutes / 59f;
             float x = Mathf.Lerp(90f, 0f, alfa);
             sun.rotation = Quaternion.Euler(new Vector3(x, 0f, 0f));
-            if (time.minutes > 25 && lightPlayer != null)
+            if (time.minutes > 10 && lightPlayer != null)
             {
                 typeSc.lightNight = false;
                 lightPlayer.enabled = false;
