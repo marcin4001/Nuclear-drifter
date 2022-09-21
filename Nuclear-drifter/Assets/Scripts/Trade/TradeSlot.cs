@@ -149,6 +149,7 @@ public class TradeSlot : MonoBehaviour
                 trade.money.amountItem = cost;
                 gUI.AddText("You spent $" + trade.money.amountItem);
                 inv.RemoveFew(trade.money);
+                sound.PlayCash();
             }
             else
             {
