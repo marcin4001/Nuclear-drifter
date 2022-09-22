@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour
     public SaveTextInfo[] loadInfos;
     public int currentSaveNo = 0;
     private SoundsTrigger sound;
+    private LoadingScreen loading;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,7 @@ public class PauseMenu : MonoBehaviour
         saveCanvas.enabled = false;
         loadCanvas.enabled = false;
         sound = FindObjectOfType<SoundsTrigger>();
+        loading = FindObjectOfType<LoadingScreen>();
     }
 
     // Update is called once per frame
@@ -224,6 +226,15 @@ public class PauseMenu : MonoBehaviour
     public void YesButtonLoad()
     {
         sound.PlayClickButton();
+        loadMsgCanvas.enabled = false;
+        loading.ShowLoading();
+        //Invoke("LoadAfterLoading", 0.1f);
+        SaveAndLoad.Load(currentSaveNo);
+        SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+    }
+
+    private void LoadAfterLoading()
+    {
         SaveAndLoad.Load(currentSaveNo);
         SceneManager.LoadScene(PropertyPlayer.property.currentScene);
     }

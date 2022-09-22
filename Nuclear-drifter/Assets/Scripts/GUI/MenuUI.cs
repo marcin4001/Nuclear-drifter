@@ -16,6 +16,7 @@ public class MenuUI : MonoBehaviour
     public SaveTextInfo[] saveTextInfos;
     public Canvas loadCanvas;
     private SoundsTrigger sound;
+    private LoadingScreen loading;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class MenuUI : MonoBehaviour
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
         options = FindObjectOfType<OptionsMenu>();
         credits = FindObjectOfType<CreditsCanvas>();
+        loading = FindObjectOfType<LoadingScreen>();
         foreach(Slot slot in startSlots)
         {
             slot.SetId();
@@ -61,7 +63,11 @@ public class MenuUI : MonoBehaviour
         if (SaveAndLoad.CanLoad(saveNo))
         {
             bool isLoad = SaveAndLoad.Load(saveNo);
-            if (isLoad) SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+            if (isLoad)
+            {
+                loading.ShowLoading();
+                SceneManager.LoadScene(PropertyPlayer.property.currentScene);
+            }
         }
     }
 
