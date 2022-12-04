@@ -21,6 +21,7 @@ public class SoundsTrigger : MonoBehaviour
     public AudioClip clickButton;
     public AudioClip sleeping;
     public AudioClip chestOpen;
+    public AudioClip refrigeratorOpen;
     private AudioSource sr;
     private bool blockClick = false;
    
@@ -118,6 +119,11 @@ public class SoundsTrigger : MonoBehaviour
     public void PlayOpenChest()
     {
         sr.PlayOneShot(chestOpen);
+    }
+
+    public void PlayRefrigeratorOpen()
+    {
+        sr.PlayOneShot(refrigeratorOpen);
     }
 
     public IEnumerator Unblock()
