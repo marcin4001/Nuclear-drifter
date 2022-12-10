@@ -7,7 +7,7 @@ using System.IO;
 public class SaveAndLoad : MonoBehaviour
 {
     private static string saveDir = "Saves";
-    private static string versionText = "Save version: 0.14a";
+    private static string versionText = "Save version: 1.0 Beta";
     // Start is called before the first frame update
     void Start()
     {
