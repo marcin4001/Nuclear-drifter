@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 232.13812, y: 23.849894, z: -221.08629}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -385,7 +386,7 @@ MonoBehaviour:
     respect: 0
     respectUSA: 0
     idHelp: 30
-  - task: Bring 12 boxes of graphite from the mine
+  - task: Bring 12 packages of graphite from the mine
     alt: 
     ownerName: dr Marlon
     location: Power plant
