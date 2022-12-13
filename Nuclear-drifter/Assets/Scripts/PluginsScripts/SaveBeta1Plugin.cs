@@ -6,6 +6,8 @@ using System.Linq;
 
 public class SaveBeta1Plugin : MonoBehaviour
 {
+    public MissionObj mission;
+    private int maxMissionIndex = 33;
 
     public EnemyMission[] enemies;
     private int maxEnemiesIndex = 37;
@@ -26,14 +28,26 @@ public class SaveBeta1Plugin : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         for (int i = 1; i <= maxSave; i++)
         {
-            Debug.Log("Save14Plugin");
+            Debug.Log("SaveBeta1Plugin");
             string savePathDir = Path.Combine(Application.persistentDataPath, dir, "save" + i);
             if (Directory.Exists(savePathDir))
             {
                 string versionPath = Path.Combine(savePathDir, "version.txt");
                 string textVerDoc = File.ReadAllText(versionPath);
                 if (textVerDoc == preVersionText)
-                { 
+                {
+                    MissionList missionList = new MissionList();
+                    string missionTxt = File.ReadAllText(Path.Combine(savePathDir, "Mission.json"));
+                    JsonUtility.FromJsonOverwrite(missionTxt, missionList);
+                    if (missionList.missions.Length < maxMissionIndex)
+                    {
+                        List<MissionObj> missions = missionList.missions.ToList();
+                        missions.Add(mission);
+                        missionList.missions = missions.ToArray();
+                        string json = JsonUtility.ToJson(missionList);
+                        File.WriteAllText(Path.Combine(savePathDir, "Mission.json"), json);
+                    }
+
                     EnemyMissionList enemyList = new EnemyMissionList();
                     string enemyTxt = File.ReadAllText(Path.Combine(savePathDir, "Enemies.json"));
                     JsonUtility.FromJsonOverwrite(enemyTxt, enemyList);

@@ -729,6 +729,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c838a122a3f08324a918b35bdfccd343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mission:
+    task: Return to Joshua and tell him about the power plant
+    alt: 
+    ownerName: Me & Joshua
+    location: Watown
+    start: 0
+    complete: 0
+    idSort: 32
+    exp: 0
+    respect: 0
+    respectUSA: 0
+    idHelp: 32
   enemies:
   - nameEnemy: cyclop16
     idMission: 31

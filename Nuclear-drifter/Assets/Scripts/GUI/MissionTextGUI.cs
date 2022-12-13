@@ -13,13 +13,15 @@ public class MissionTextGUI : MonoBehaviour
         textMission.enabled = false;
     }
 
-    public void Show()
+    public void Show(string text = "")
     {
-        StartCoroutine(ShowE());
+        StartCoroutine(ShowE(text));
     }
 
-    private IEnumerator ShowE()
+    private IEnumerator ShowE(string text)
     {
+        if (!string.IsNullOrEmpty(text))
+            textMission.text = text;
         textMission.enabled = true;
         yield return new WaitForSeconds(time);
         textMission.enabled = false;
