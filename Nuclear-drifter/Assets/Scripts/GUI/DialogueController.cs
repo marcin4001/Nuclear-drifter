@@ -108,6 +108,13 @@ public class DialogueController : MonoBehaviour
     {
         if (npc != null)
         {
+            if(d.nextModule == 100)
+            {
+                EndGameDialogue end = npc.GetComponent<EndGameDialogue>();
+                if (end != null)
+                    end.LoadEnd();
+                return;
+            }
             if(d.nextModule >= npc.modules.Length  || d.nextModule < 0)
             {
                 Close();

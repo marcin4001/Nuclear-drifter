@@ -13554,6 +13554,7 @@ GameObject:
   - component: {fileID: 2465716435116818811}
   - component: {fileID: 2465716435116818812}
   - component: {fileID: 2465716435116818813}
+  - component: {fileID: 5754078806763496535}
   m_Layer: 0
   m_Name: Joshua_78
   m_TagString: NPC
@@ -13588,6 +13589,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3bb0ed173c950fa44b53cfc976925148, type: 2}
   - {fileID: 11400000, guid: 696d9af5b5a6a1949b25ed214da57ff3, type: 2}
   - {fileID: 11400000, guid: 3a9b45b1d3fcac24e8801bd29f421ece, type: 2}
+  - {fileID: 11400000, guid: e25a90a08c9fe4746897a1c196078c6a, type: 2}
+  - {fileID: 11400000, guid: 0612a8b005f0f2e498600aff81769c76, type: 2}
+  - {fileID: 11400000, guid: 14d2721bef3b4334aaaf3a39e0c14cb4, type: 2}
   startIndex: 0
   indexNPC: 3
   distance: 1.1
@@ -13646,6 +13650,24 @@ MonoBehaviour:
     dialogSuccess: 7
     dialogNormal: 7
     dialogComplete: 7
+    dialogAlt: 0
+    slotItem:
+      itemElement: {fileID: 0}
+      amountItem: 0
+      ammo: 0
+      id: -1
+    needItem: 0
+    removeAll: 0
+    indexDevice: 0
+    noRemove: 0
+    killAlt: 0
+    noCheckStart: 0
+    id_ach: -1
+  - id: 32
+    type: 0
+    dialogSuccess: 8
+    dialogNormal: 8
+    dialogComplete: 10
     dialogAlt: 0
     slotItem:
       itemElement: {fileID: 0}
@@ -14535,6 +14557,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5754078806763496535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465716435116818807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da75f1acf13b684cbf1ec3ef9516155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: ThanksForPlaying
 --- !u!212 &5928705096263125448
 SpriteRenderer:
   m_ObjectHideFlags: 0

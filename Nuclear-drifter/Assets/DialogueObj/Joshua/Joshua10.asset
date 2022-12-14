@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: Joshua10
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: On the east shore under the FoodMart. Dr. Marlon works there.
+    reply: Dr. Marlon? I know him. He used to live in our settlement. This is a great
+      opportunity for us. With a constant source of electricity, we will be able
+      to develop faster. We will have to contact him as soon as possible.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 1
+    endIdMission: 32
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
