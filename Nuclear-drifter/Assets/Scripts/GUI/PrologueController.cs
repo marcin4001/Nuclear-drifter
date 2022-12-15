@@ -13,6 +13,7 @@ public class PrologueController : MonoBehaviour
     public Animator anim;
     public bool activeEnter = true;
     public string sceneName;
+    public bool showLoading = true;
     private LoadingScreen loading;
     // Start is called before the first frame update
     void Start()
@@ -47,7 +48,8 @@ public class PrologueController : MonoBehaviour
         currentIndex += 1;
         if(currentIndex >= prologueObjs.Length)
         {
-            loading.ShowLoading();
+            if(showLoading)
+                loading.ShowLoading();
             yield return new WaitForSeconds(0.1f);
             SceneManager.LoadScene(sceneName);
         }
