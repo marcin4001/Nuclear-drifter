@@ -6,6 +6,6 @@ using UnityEngine;
 public class PrologueObj 
 {
     public Sprite backgroundImg;
-    [TextArea(2,4)]
+    [TextArea(2,8)]
     public string text;
 }
