@@ -6,6 +6,7 @@ public class AchievementDoc : MonoBehaviour
 {
     public int id_ach = 7;
     public int idItem = 100;
+    public int secoundIdItem = 103;
     private Achievement achievement;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class AchievementDoc : MonoBehaviour
 
     public void Check(int _idItem)
     {
-        if (idItem == _idItem)
+        if (idItem == _idItem || secoundIdItem == _idItem)
             achievement.SetAchievement(id_ach);
     }
 }
