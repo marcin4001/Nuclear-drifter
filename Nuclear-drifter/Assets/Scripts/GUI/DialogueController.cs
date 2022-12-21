@@ -19,6 +19,8 @@ public class DialogueController : MonoBehaviour
     public Text replyText;
     public DialChoice[] choices;
     public bool active = false;
+    public GameObject blockEndButton;
+    public List<int> idMissionsEndGame;
     private TypeScene typeSc;
     private SoundsTrigger sound;
     // Start is called before the first frame update
@@ -30,12 +32,16 @@ public class DialogueController : MonoBehaviour
         dialCanvas.enabled = false;
         typeSc = FindObjectOfType<TypeScene>();
         sound = FindObjectOfType<SoundsTrigger>();
+        if(blockEndButton != null)
+        {
+            blockEndButton.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.D))
+        if(Input.GetKeyDown(KeyCode.D) && !blockEndButton.activeSelf)
         {
             Close();
         }
@@ -130,7 +136,12 @@ public class DialogueController : MonoBehaviour
             }
             if (d.missionEnd)
             {
-                if (mission != null) mission.CompleteMission(d.endIdMission);
+                if (mission != null)
+                {
+                    if(idMissionsEndGame.Contains(d.endIdMission))
+                        blockEndButton.SetActive(true);
+                    mission.CompleteMission(d.endIdMission);
+                }
             }
             if(d.isWorker && npc.nPCJob != null)
             {
