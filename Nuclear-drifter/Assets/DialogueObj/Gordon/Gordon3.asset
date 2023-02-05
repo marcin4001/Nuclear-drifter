@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gordon3
   m_EditorClassIdentifier: 
   dialogues:
-  - choice: Yes, I can do this for you, Colonel
+  - choice: Yes, I can do this for you, sir.
     reply: Good. The Bandit camp is located northeast of Yorkset. Just be well prepared
       these bandits are well armed.
     nextModule: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 6
-  - choice: Unfortunately, I can't do that. I'm too weak
+  - choice: Unfortunately, I can't do that. I'm too weak.
     reply: Ok, I'll delegate this task to someone else.
     nextModule: 0
     missionStart: 0
