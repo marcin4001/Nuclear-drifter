@@ -22,7 +22,7 @@ public class DialChoice : MonoBehaviour
     public void SetChoice(Dialogue d)
     {
         dial = d;
-        textCh.text = dial.choice;
+        textCh.text = controller.CheckDot(dial.choice);
         buttonCh.interactable = true;
     }
 

@@ -87,12 +87,12 @@ public class DialogueController : MonoBehaviour
             cityText.text = npc.city;
             if(npc.GetInit())
             {
-                replyText.text = npc.firstReply;
+                replyText.text = CheckDot(npc.firstReply); 
                 npc.SetInit();
             }
             else
             {
-                replyText.text = npc.cbReply;
+                replyText.text = CheckDot(npc.cbReply);
             }
             if (mission != null) mission.CheckMission();
             DialogueModule module = npc.modules[npc.startIndex];
@@ -143,12 +143,15 @@ public class DialogueController : MonoBehaviour
                     mission.CompleteMission(d.endIdMission);
                 }
             }
-            if(d.isWorker && npc.nPCJob != null)
+            if (d.isWorker && npc.nPCJob != null)
             {
-                replyText.text = npc.nPCJob.Work(d.workOpt);
-                if (replyText.text == "") replyText.text = d.reply;
+                replyText.text = CheckDot(npc.nPCJob.Work(d.workOpt));
+                if (replyText.text == "") replyText.text = CheckDot(d.reply);
             }
-            else replyText.text = d.reply;
+            else
+            {
+                replyText.text = CheckDot(d.reply);
+            }
             int index = d.nextModule;
             if (index == 0) index = npc.startIndex;
             DialogueModule module = npc.modules[index];
@@ -166,4 +169,13 @@ public class DialogueController : MonoBehaviour
         }
     }
 
+    public string CheckDot(string text)
+    {
+        if (text == "")
+            return text;
+        if (text.EndsWith('.') || text.EndsWith('!') || text.EndsWith('?'))
+            return text;
+        else
+            return text + ".";
+    }
 }

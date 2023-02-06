@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     public int expEnemy;
     public Sprite deathSprite;
     public int soundIndex = -1;
+    public GameObject redSqr;
     private CombatSystem system;
     private Collider2D col;
     private GUIScript gUI;
@@ -38,6 +39,8 @@ public class Enemy : MonoBehaviour
         col = GetComponent<Collider2D>();
         gUI = FindObjectOfType<GUIScript>();
         render = GetComponent<SpriteRenderer>();
+        if (redSqr != null)
+            redSqr.SetActive(false);
     }
 
     private void Death()
@@ -99,5 +102,11 @@ public class Enemy : MonoBehaviour
     private void AfterDamage()
     {
         if(!system.isWin()) system.EnemyRound();
+    }
+
+    public void ActiveRedSqr(bool value)
+    {
+        if(redSqr != null)
+            redSqr.SetActive(value);
     }
 }

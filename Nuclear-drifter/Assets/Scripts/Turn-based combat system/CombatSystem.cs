@@ -79,12 +79,17 @@ public class CombatSystem : MonoBehaviour
                 {
                     if (currentIndex < enemies.Count)
                     {
+                        if (currentIndex > 0)
+                            enemies[currentIndex - 1].ActiveRedSqr(false);
+                        if(!enemies[currentIndex].isDead())
+                            enemies[currentIndex].ActiveRedSqr(true);
                         enemies[currentIndex].Attack();
                         currentIndex += 1;
                         isAttack = true;
                     }
                     else
                     {
+                        enemies[currentIndex - 1].ActiveRedSqr(false);
                         currentIndex = 0;
                         playerRound = true;
                         ResetAP();
