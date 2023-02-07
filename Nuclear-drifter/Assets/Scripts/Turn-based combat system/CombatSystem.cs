@@ -396,14 +396,28 @@ public class CombatSystem : MonoBehaviour
         if(rngChance <= _enemy.dmgChance)
         {
             int resistance = Mathf.RoundToInt((float)_enemy.damageMax * (float)SkillsAndPerks.playerSkill.damageResistance / 100f);
-            gUI.AddText("You were hit!");
-            gUI.AddText("You lost " + (_enemy.damageMax - resistance) + "HP!");
-            hpPlayer.Damage(_enemy.damageMax - resistance);
+            
+            float rngChanceCritic = Random.Range(0.0f, 1.0f);
+            Debug.Log("rngChanceCritic: " + rngChanceCritic);
+            if(rngChanceCritic <= _enemy.chanceCritic)
+            {
+                gUI.AddText("YOU GET A CRITICAL HIT!");
+                gUI.AddText("You lost " + (2*(_enemy.damageMax - resistance)) + "HP!");
+                hpPlayer.Damage(2 * (_enemy.damageMax - resistance));
+            }
+            else
+            {
+                gUI.AddText("You were hit!");
+                gUI.AddText("You lost " + (_enemy.damageMax - resistance) + "HP!");
+                hpPlayer.Damage(_enemy.damageMax - resistance);
+            }
+            
             if (isPoisons && rngChance <= _enemy.poisonChance)
             {
                 hpPlayer.SetPoison(true);
                 achievementPoison.Check(_enemy.nameEnemy);
             }
+
             if(isRad && rngChance <= _enemy.radChance)
             {
                 hpPlayer.SetRad(true);

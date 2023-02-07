@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public Sprite deathSprite;
     public int soundIndex = -1;
     public GameObject redSqr;
+    public float chanceCritic = 0f;
     private CombatSystem system;
     private Collider2D col;
     private GUIScript gUI;
