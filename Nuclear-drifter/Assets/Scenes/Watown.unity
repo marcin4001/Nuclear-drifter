@@ -14371,6 +14371,37 @@ PrefabInstance:
       propertyPath: distance
       value: 1.25
       objectReference: {fileID: 0}
+    - target: {fileID: 597928959919313793, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 597928959919313793, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 597928959919313793, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 597928959919313793, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 597928959919313793, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 597928959919313794, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 587804018, guid: f5f54be6d92286b44830ac741ef79974,
+        type: 3}
     - target: {fileID: 597928959919313794, guid: 3252a18feb4e81243804671a418defda,
         type: 3}
       propertyPath: m_SortingOrder
@@ -14380,6 +14411,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 597928959919313795, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 597928959919313795, guid: 3252a18feb4e81243804671a418defda,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 597928959919313795, guid: 3252a18feb4e81243804671a418defda,
         type: 3}

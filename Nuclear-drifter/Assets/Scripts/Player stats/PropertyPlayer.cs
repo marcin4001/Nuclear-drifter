@@ -37,6 +37,7 @@ public class PropertyPlayer : MonoBehaviour
     public bool isDehydrated = false;
     public int prevDehydration = 0;
     public bool afterFoodmart = false;
+    public string[] consoleText;
 
     // Start is called before the first frame update
     void Awake()
@@ -56,6 +57,7 @@ public class PropertyPlayer : MonoBehaviour
         Health playerHP = move.GetComponent<Health>();
         TimeGame time = FindObjectOfType<TimeGame>();
         currentScene = SceneManager.GetActiveScene().name;
+        
 
         currentHealth = playerHP.currentHealth;
         property.maxHealth = playerHP.maxAfterRad;
@@ -68,6 +70,7 @@ public class PropertyPlayer : MonoBehaviour
         property.minutes = time.minutes;
 
         property.startPos = move.GetPosPlayer();
+        
         property.SaveTemp();
     }
 

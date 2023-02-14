@@ -62,6 +62,14 @@ public class GUIScript : MonoBehaviour
             newLvlLabel.enabled = false;
         if (warningLabel != null)
             warningLabel.enabled = false;
+        if(PropertyPlayer.property.consoleText != null)
+        {
+            foreach(string console_text in PropertyPlayer.property.consoleText)
+            {
+                AddText(console_text);
+            }
+            PropertyPlayer.property.consoleText = new string[0];
+        }
     }
 
     public void ShowExp(int lvl, int exp, int nextTh)

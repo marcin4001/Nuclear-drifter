@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: KeyToSubway
   m_EditorClassIdentifier: 
   nameItem: Key to subway
-  image: {fileID: 8514752434400957151, guid: fc9aff2a090f58141a8fb95c7af1b289, type: 3}
+  image: {fileID: 587804018, guid: f5f54be6d92286b44830ac741ef79974, type: 3}
   description: 'Type: Key'
   value: 0
   idItem: 351
   noRemove: 1
   noSell: 1
+  isBackpack: 0
+  isCigarette: 0
+  cigaretteDamage: 0

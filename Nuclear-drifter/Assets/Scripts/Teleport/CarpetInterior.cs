@@ -36,6 +36,9 @@ public class CarpetInterior : MonoBehaviour
             PropertyPlayer.property.startPos = startPos;
             if (location != "")
                 PropertyPlayer.property.location = location;
+            GUIScript gui = FindObjectOfType<GUIScript>();
+            PropertyPlayer.property.consoleText = gui.consoleText.ToArray();
+
             PropertyPlayer.property.SaveTemp();
             LoadingScreen loading = FindObjectOfType<LoadingScreen>();
             if (loading != null && !withoutLoading) loading.ShowLoading();

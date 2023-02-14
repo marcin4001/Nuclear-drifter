@@ -96,6 +96,8 @@ public class MessageBox : MonoBehaviour
         if(!inside)PropertyPlayer.property.posOutside = move.transform.position;
         if (location != "")
             PropertyPlayer.property.location = location;
+        GUIScript gui = FindObjectOfType<GUIScript>();
+        PropertyPlayer.property.consoleText = gui.consoleText.ToArray();
         PropertyPlayer.property.SaveTemp();
     }
 }
