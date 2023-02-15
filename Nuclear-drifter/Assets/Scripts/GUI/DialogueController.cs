@@ -173,7 +173,7 @@ public class DialogueController : MonoBehaviour
     {
         if (text == "")
             return text;
-        if (text.EndsWith('.') || text.EndsWith('!') || text.EndsWith('?'))
+        if (text.EndsWith('.') || text.EndsWith('!') || text.EndsWith('?') || text.EndsWith(')'))
             return text;
         else
             return text + ".";

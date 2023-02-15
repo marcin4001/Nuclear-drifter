@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bruce2
   m_EditorClassIdentifier: 
   dialogues:
-  - choice: 'Steve told me to bring you these fish. '
+  - choice: Steve told me to bring you these fish.
     reply: I'm glad you brought them. I was waiting for these fish. Here's $20 for
       these fish. Give Steve $10 and you can keep the rest.
     nextModule: 0
@@ -21,6 +21,9 @@ MonoBehaviour:
     startIdMission: 2
     missionEnd: 1
     endIdMission: 1
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: What is your occupation?
     reply: I'm quartermaster at Watown. I deal with food supplies and weapons in
       the settlement.
@@ -29,6 +32,9 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Can I buy anything from you?
     reply: I do not sell. If you need food, you can go to the store in the north
       of the settlement. And if you need treatment and medications, go to the doctor.
@@ -38,6 +44,9 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -45,3 +54,6 @@ MonoBehaviour:
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
