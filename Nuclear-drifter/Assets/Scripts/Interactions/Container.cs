@@ -10,11 +10,13 @@ public class Container : MonoBehaviour
     public string nameObj;
     public bool isLocked = true;
     public int keyId = -1;
+    public bool canUsePicklock = false;
     private EqChestController controller;
     private PlayerClickMove player;
     private GUIScript gUI;
     private SoundsTrigger sound;
     private SoundUse soundUse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,18 @@ public class Container : MonoBehaviour
                 OpenBox();
                 isLocked = false;
                 controller.SetKeyUse(indexEq);
+                gUI.AddText("Lock has been opened");
+                if (canUsePicklock)
+                {
+                    float randomNum = Random.Range(0f, 1f);
+                    if(randomNum < 0.6f)
+                    {
+                        Slot lockpick = controller.GetInvPlayer().FindItem(keyId);
+                        controller.GetInvPlayer().RemoveOne(lockpick);
+                        gUI.AddText("Your lockpick has been");
+                        gUI.AddText("broken");
+                    }
+                }
             }
             else
             {
@@ -54,6 +68,11 @@ public class Container : MonoBehaviour
                 else
                     gUI.AddText("The " + nameObj + " is locked");
                 soundUse.PlayLock();
+                if(canUsePicklock)
+                {
+                    gUI.AddText("You can use a lockpick");
+                    gUI.AddText("to open this lock");
+                }
             }
         }
     }
