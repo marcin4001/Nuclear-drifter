@@ -42,6 +42,17 @@ public class Container : MonoBehaviour
             bool playerHaveKey = controller.GetInvPlayer().FindItemB(keyId);
             if (playerHaveKey)
             {
+                if (!player.ObjIsNearPlayer(transform.position, 1.1f))
+                {
+                    if (indexBackground == 3)
+                    {
+                        gUI.AddText("The " + nameObj + " is too");
+                        gUI.AddText("far");
+                    }
+                    else
+                        gUI.AddText("The " + nameObj + " is too far");
+                    return;
+                }
                 OpenBox();
                 isLocked = false;
                 controller.SetKeyUse(indexEq);

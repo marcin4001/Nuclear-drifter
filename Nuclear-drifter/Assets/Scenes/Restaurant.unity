@@ -12817,13 +12817,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2676850385952224200, guid: 95c85bb4f47249149883f974966cee79,
         type: 3}
+      propertyPath: keyId
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676850385952224200, guid: 95c85bb4f47249149883f974966cee79,
+        type: 3}
       propertyPath: indexEq
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2676850385952224200, guid: 95c85bb4f47249149883f974966cee79,
         type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676850385952224200, guid: 95c85bb4f47249149883f974966cee79,
+        type: 3}
+      propertyPath: canUsePicklock
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8682200340417950054, guid: 95c85bb4f47249149883f974966cee79,
         type: 3}

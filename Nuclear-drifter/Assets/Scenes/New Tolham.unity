@@ -13080,12 +13080,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
+      propertyPath: keyId
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
       propertyPath: nameObj
       value: refrigerator
       objectReference: {fileID: 0}
     - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
+      propertyPath: canUsePicklock
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
       propertyPath: indexBackground

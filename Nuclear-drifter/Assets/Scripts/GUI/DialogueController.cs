@@ -146,7 +146,14 @@ public class DialogueController : MonoBehaviour
             if (d.isWorker && npc.nPCJob != null)
             {
                 replyText.text = CheckDot(npc.nPCJob.Work(d.workOpt));
-                if (replyText.text == "") replyText.text = CheckDot(d.reply);
+                if (replyText.text == "")
+                {
+                    replyText.text = CheckDot(d.reply);
+                    if(d.checkEmptyReplyWork)
+                    {
+                        npc.SetStartIndex(d.nextModuleWork);
+                    }
+                }
             }
             else
             {

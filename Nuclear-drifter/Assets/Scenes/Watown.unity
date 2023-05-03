@@ -9796,12 +9796,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
+      propertyPath: keyId
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
       propertyPath: indexEq
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
       propertyPath: isLocked
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
+      propertyPath: canUsePicklock
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586829579763930176, guid: 69e21ab94fdf6bc499cc795c743cebc8,
         type: 3}
@@ -10243,11 +10251,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
+      propertyPath: keyId
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
       propertyPath: indexEq
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
       propertyPath: isLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
+      propertyPath: canUsePicklock
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4981604641875987938, guid: 48632155b43612a429e59f0c92c116c3,

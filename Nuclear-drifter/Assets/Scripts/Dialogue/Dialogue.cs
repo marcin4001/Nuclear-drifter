@@ -17,4 +17,6 @@ public class Dialogue
     public bool changeStartIndex;
     public bool isWorker = false;
     public int workOpt = 0;
+    public bool checkEmptyReplyWork = false;
+    public int nextModuleWork = 0;
 }
