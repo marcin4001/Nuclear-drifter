@@ -10,12 +10,15 @@ public class RewardEnemy : MonoBehaviour
     private Inventory inv;
     private GUIScript gUI;
     public int chance = 100;
+    public bool giveRandomItem = false;
+    private ItemDB itemDB;
 
     // Start is called before the first frame update
     void Start()
     {
         inv = FindObjectOfType<Inventory>();
         gUI = FindObjectOfType<GUIScript>();
+        itemDB = FindObjectOfType<ItemDB>();
     }
 
     public void GiveItem()
@@ -24,6 +27,11 @@ public class RewardEnemy : MonoBehaviour
         Debug.Log(random);
         if (random > chance)
             return;
+        if(giveRandomItem)
+        {
+            GiveRandomItem();
+            return;
+        }
         if(inv.IsFull() && !inv.FindItemB(item.itemElement.idItem))
         {
             GameObject obj = Instantiate(itemPref, transform.position, Quaternion.identity);
@@ -39,5 +47,25 @@ public class RewardEnemy : MonoBehaviour
         Hunt hunt = GetComponent<Hunt>();
         if (hunt != null)
             hunt.GiveTrophy();
+    }
+
+    public void GiveRandomItem()
+    {
+        Slot randomItem = itemDB.GetRandomItem();
+        if (inv.IsFull() && !inv.FindItemB(randomItem.itemElement.idItem))
+        {
+            GameObject obj = Instantiate(itemPref, transform.position, Quaternion.identity);
+            ItemElement itemEl = obj.GetComponent<ItemElement>();
+            if (itemEl != null) itemEl.item = randomItem;
+            SpriteRenderer spriteItem = obj.GetComponent<SpriteRenderer>();
+            if (spriteItem != null)
+                spriteItem.sprite = randomItem.itemElement.image;
+        }
+        else
+        {
+            if (randomItem.itemElement.idItem != moneyId) gUI.AddText("You got " + randomItem.itemElement.nameItem + " x" + randomItem.amountItem);
+            else gUI.AddText("You got $" + randomItem.amountItem);
+            inv.Add(randomItem);
+        }
     }
 }

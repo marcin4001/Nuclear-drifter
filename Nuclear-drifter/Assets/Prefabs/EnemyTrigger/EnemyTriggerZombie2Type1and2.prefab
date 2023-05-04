@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 344806939390435195}
   m_Father: {fileID: 8633953056524936653}
@@ -101,6 +102,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.4403992, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 344806939223126966}
   m_RootOrder: 0
@@ -187,6 +189,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 214.68, y: 152, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 344806939223126966}
   m_Father: {fileID: 0}
@@ -253,3 +256,4 @@ MonoBehaviour:
   itemPref: {fileID: 1506507720858274992, guid: 6613ae9d8f925ae4dbfeced75790d42b,
     type: 3}
   chance: 30
+  giveRandomItem: 1
