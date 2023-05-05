@@ -26,6 +26,7 @@ public class SkillsAndPerks : MonoBehaviour
     public int chanceToShot = 70;
     public int chanceToHitDefault = 70;
     public int chanceToShotDefault = 70;
+    public List<string> otherSkills;
 
     void Awake()
     {
@@ -92,6 +93,23 @@ public class SkillsAndPerks : MonoBehaviour
             if (chanceToShot < 100 && gunUses % 10 == 0)
                 chanceToShot += 1;
         }
+    }
+
+    public void AddOtherSkill(string skill)
+    {
+        if (otherSkills == null)
+            otherSkills = new List<string>();
+        otherSkills.Add(skill);
+    }
+
+    public string Skilled(string skill)
+    {
+        if (otherSkills == null)
+            return "Unskilled";
+        if (otherSkills.Contains(skill))
+            return "Skilled";
+        else
+            return "Unskilled";
     }
 
     public static string GetJson()

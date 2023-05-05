@@ -19,10 +19,13 @@ public class PerksPanel : MonoBehaviour
     private Health playerHP;
     private bool active = false;
     private SoundsTrigger sound;
-
+    private List<string> otherSkills;
     // Start is called before the first frame update
     void Start()
     {
+        otherSkills = new List<string>();
+        otherSkills.Add("Horn Removal");
+        otherSkills.Add("Lockpicking");
         gUI = FindObjectOfType<GUIScript>();
         typeSc = FindObjectOfType<TypeScene>();
         map = FindObjectOfType<MapControl>();
@@ -138,6 +141,16 @@ public class PerksPanel : MonoBehaviour
             ShowInfoConsole("No perk have been selected!");
         }
         
+    }
+
+    public void OtherSkillBtn()
+    {
+        sound.PlayClickButton();
+        consoleDesc.text = "Other skills:\n";
+        foreach(string skill in otherSkills)
+        {
+            consoleDesc.text += skill + ": " + SkillsAndPerks.playerSkill.Skilled(skill) + "\n";
+        }
     }
 
     private void IncCounterPerk(Perk perkObj)
