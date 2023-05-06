@@ -23,8 +23,10 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
-    isWorker: 0
+    isWorker: 1
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: Unfortunately I don't have time to hunt right now
     reply: Ok. I guess I'll have to hunt rhinos myself.
     nextModule: 0
@@ -35,3 +37,5 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0

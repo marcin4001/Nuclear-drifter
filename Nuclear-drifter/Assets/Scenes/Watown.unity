@@ -8411,6 +8411,7 @@ GameObject:
   - component: {fileID: 1163931509}
   - component: {fileID: 1163931508}
   - component: {fileID: 1163931505}
+  - component: {fileID: 1163931510}
   m_Layer: 0
   m_Name: Gary_69
   m_TagString: NPC
@@ -8611,6 +8612,18 @@ MonoBehaviour:
   indexNPC: 4
   distance: 1.1
   nPCJob: {fileID: 0}
+--- !u!114 &1163931510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163931502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb62cfe70220c478147ba8dba2d952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1188049221
 PrefabInstance:
   m_ObjectHideFlags: 0

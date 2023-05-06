@@ -99,17 +99,18 @@ public class SkillsAndPerks : MonoBehaviour
     {
         if (otherSkills == null)
             otherSkills = new List<string>();
-        otherSkills.Add(skill);
+        if(!otherSkills.Contains(skill))
+            otherSkills.Add(skill);
     }
 
     public string Skilled(string skill)
     {
         if (otherSkills == null)
-            return "Unskilled";
+            return "☐";
         if (otherSkills.Contains(skill))
-            return "Skilled";
+            return "■";
         else
-            return "Unskilled";
+            return "☐";
     }
 
     public static string GetJson()

@@ -25,6 +25,7 @@ public class LockpickingTeacher : Job
             {
                 currency.amountItem = costLearning;
                 inv.RemoveFew(currency);
+                SkillsAndPerks.playerSkill.AddOtherSkill("Lockpicking");
                 return "";
             }
             else
