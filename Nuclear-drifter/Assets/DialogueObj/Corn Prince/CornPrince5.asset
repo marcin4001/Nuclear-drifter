@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418495f2637209748b929aac76bfaabb, type: 3}
+  m_Name: CornPrince5
+  m_EditorClassIdentifier: 
+  dialogues:
+  - choice: How did you become a zombie?
+    reply: It's a long story. In short, I was a regular farmer who got irradiated
+      by the fallout from an atomic bomb explosion. Luckily or unluckily, depending
+      on your point of view, I survived and became a zombie. For over 200 years,
+      I've been growing corn and doing everything in my power to stay alive.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+  - choice: I'll take one box of Atomic Flakes. ($10)
+    reply: 
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 1
+    workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+  - choice: Nice talking to you, bye!
+    reply: 
+    nextModule: -1
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0

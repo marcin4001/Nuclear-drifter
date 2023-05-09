@@ -6,7 +6,9 @@ public class Barman : Job
 {
     public Slot[] items;
     public Slot currency;
+    public bool halfPrice = false;
     private Inventory inv;
+
     private void Start()
     {
         inv = FindObjectOfType<Inventory>();
@@ -20,7 +22,29 @@ public class Barman : Job
         Slot _item = items[opt];
         if(_item == null) return "I have no such item. I'm sorry.";
         if (_item.itemElement == null) return "I have no such item. I'm sorry.";
-        if(inv.CanBuy(_item))
+        if (halfPrice)
+        {
+            if (inv.CanBuyHalfPrice(_item))
+            {
+                if (inv.Add(_item))
+                {
+                    currency.amountItem = _item.amountItem * (_item.itemElement.value/2);
+                    Debug.Log(currency.amountItem);
+                    inv.RemoveFew(currency);
+                    return "Please, your " + _item.itemElement.nameItem + ".";
+                }
+                else
+                {
+                    return "I can't sell you " + _item.itemElement.nameItem + ".\n(Inventory is full)";
+                }
+            }
+            else
+            {
+                return "You don't have enough money for a " + _item.itemElement.nameItem + ".";
+            }
+        }
+
+        if (inv.CanBuy(_item))
         {
             if(inv.Add(_item))
             {

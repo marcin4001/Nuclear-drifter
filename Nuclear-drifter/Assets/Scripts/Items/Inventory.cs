@@ -231,6 +231,22 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public bool CanBuyHalfPrice(Slot _slot)
+    {
+        Slot money = FindItem(300);
+        int cost = (_slot.itemElement.value / 2) * _slot.amountItem;
+        Debug.Log(cost);
+        if (money != null)
+        {
+            if (money.amountItem >= cost) return true;
+            else return false;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public bool HaveMoney(int cost)
     {
         Slot money = FindItem(300);
