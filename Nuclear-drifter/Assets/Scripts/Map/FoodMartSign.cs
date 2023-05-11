@@ -6,7 +6,9 @@ using TMPro;
 public class FoodMartSign : MonoBehaviour
 {
     public TextMeshPro text;
+    public TextMeshPro textBigSandy;
     public GameObject trigger;
+    public GameObject triggerBigSandy;
     private GUIScript gUI;
     private Experience exp;
 
@@ -21,6 +23,15 @@ public class FoodMartSign : MonoBehaviour
         {
             if(trigger != null)
                 Destroy(trigger);
+        }
+        if (!PropertyPlayer.property.bigSandyFound)
+        {
+            textBigSandy.enabled = false;
+        }
+        else
+        {
+            if (triggerBigSandy != null)
+                Destroy(triggerBigSandy);
             Destroy(this);
         }
         gUI = FindObjectOfType<GUIScript>();
@@ -37,4 +48,13 @@ public class FoodMartSign : MonoBehaviour
             Destroy(trigger);
     }
 
+    public void ActiveTextBigSandy()
+    {
+        PropertyPlayer.property.bigSandyFound = true;
+        textBigSandy.enabled = true;
+        gUI.AddText("You found Big Sandy");
+        exp.AddExp(100);
+        if (triggerBigSandy != null)
+            Destroy(triggerBigSandy);
+    }
 }

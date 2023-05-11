@@ -38,6 +38,7 @@ public class PropertyPlayer : MonoBehaviour
     public int prevDehydration = 0;
     public bool afterFoodmart = false;
     public string[] consoleText;
+    public bool bigSandyFound = false;
 
     // Start is called before the first frame update
     void Awake()

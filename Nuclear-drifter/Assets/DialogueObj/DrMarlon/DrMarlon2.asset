@@ -25,10 +25,12 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: How did you find this hidden reactor?
     reply: Six years ago when I was still living in Watown I found an old newspaper
       from 2077. In one of the articles there was a story about a new nuclear reactor.
-      After reading that article, I started wandering around Old Zeeland until I
+      After reading that article, I started wandering around Old Zealand until I
       found it under the FoodMart.
     nextModule: 0
     missionStart: 0
@@ -38,6 +40,8 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: Do you know where the deposits of uranium from the subway are?
     reply: I know where the deposits are! They are in the warehouse at the end of
       this corridor. I won't give them to you! They are needed for me to start the
@@ -50,6 +54,8 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: Take care!
     reply: 
     nextModule: -1
@@ -60,3 +66,5 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
