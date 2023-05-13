@@ -5,6 +5,7 @@ using UnityEngine;
 public class LocationTrigger : MonoBehaviour
 {
     public string location;
+    public string locationExit = "Wasteland";
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Hero")
@@ -18,7 +19,7 @@ public class LocationTrigger : MonoBehaviour
     {
         if (collision.tag == "Hero")
         {
-            PropertyPlayer.property.location = "Wasteland";
+            PropertyPlayer.property.location = locationExit;
         }
     }
 }
