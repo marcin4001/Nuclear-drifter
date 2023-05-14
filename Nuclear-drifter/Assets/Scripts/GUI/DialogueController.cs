@@ -133,6 +133,7 @@ public class DialogueController : MonoBehaviour
             if(d.missionStart)
             {
                 if (mission != null) mission.StartMission(d.startIdMission);
+                else MissionList.global.StartMission(d.startIdMission);
             }
             if (d.missionEnd)
             {

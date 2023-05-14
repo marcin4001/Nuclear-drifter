@@ -138,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}
       propertyPath: boxes.Array.data[0].eqSlots.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}
@@ -187,6 +187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}
+      propertyPath: boxes.Array.data[0].eqSlots.Array.data[4].amountItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
+        type: 3}
       propertyPath: boxes.Array.data[1].eqSlots.Array.data[0].amountItem
       value: 4
       objectReference: {fileID: 0}
@@ -223,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}
       propertyPath: boxes.Array.data[1].eqSlots.Array.data[7].amountItem
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}
@@ -306,6 +311,12 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}
+      propertyPath: boxes.Array.data[0].eqSlots.Array.data[4].itemElement
+      value: 
+      objectReference: {fileID: 11400000, guid: 5268d889729f6964faeb068c1be84f9a,
+        type: 2}
+    - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
+        type: 3}
       propertyPath: boxes.Array.data[1].eqSlots.Array.data[0].itemElement
       value: 
       objectReference: {fileID: 11400000, guid: c095aacffed462644ba51de3016d5b07,
@@ -350,7 +361,7 @@ PrefabInstance:
         type: 3}
       propertyPath: boxes.Array.data[1].eqSlots.Array.data[7].itemElement
       value: 
-      objectReference: {fileID: 11400000, guid: 5268d889729f6964faeb068c1be84f9a,
+      objectReference: {fileID: 11400000, guid: b2dad4eafb847ac418146d77c7c87335,
         type: 2}
     - target: {fileID: 7553442579539617956, guid: be3bef50d94ab60478292af138a539fb,
         type: 3}
@@ -9378,6 +9389,7 @@ GameObject:
   - component: {fileID: 8349569702780891714}
   - component: {fileID: 5429563652300510927}
   - component: {fileID: 7888523762348100014}
+  - component: {fileID: 8762008618827084441}
   m_Layer: 0
   m_Name: Spike_3
   m_TagString: NPC
@@ -9405,6 +9417,7 @@ MonoBehaviour:
   cbReply: Hey there, it's good to see you again. What brings you back to Big Shandy?
   modules:
   - {fileID: 11400000, guid: 7c45d7d3dcf83a04980ea141b7d75209, type: 2}
+  - {fileID: 11400000, guid: ac4891747ccdbab48a76eeba44066693, type: 2}
   startIndex: 0
   indexNPC: 0
   distance: 1.1
@@ -9467,3 +9480,25 @@ Transform:
   m_Father: {fileID: 7854796600130189890}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8762008618827084441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888523762348100013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed1c8fb51e17964fba5660072337f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle:
+    itemElement: {fileID: 11400000, guid: 5268d889729f6964faeb068c1be84f9a, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
+  currency:
+    itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1

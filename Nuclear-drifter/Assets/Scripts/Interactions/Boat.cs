@@ -10,7 +10,9 @@ public class Boat : MonoBehaviour
     public Vector2 playerPos;
     public int hour = 12;
     public int idMission;
+    public int idMissionToComplete = 34;
     public string location;
+    public int idPaddle = 57;
     private FadePanel fade;
     private GUIScript gUI;
     private PlayerClickMove player;
@@ -18,6 +20,7 @@ public class Boat : MonoBehaviour
     private TimeGame time;
     private SoundsTrigger sound;
     private PauseMenu pause;
+    private Inventory inv;
     private bool active = true;
 
 
@@ -31,6 +34,9 @@ public class Boat : MonoBehaviour
         fade = FindObjectOfType<FadePanel>();
         pause = FindObjectOfType<PauseMenu>();
         sound = FindObjectOfType<SoundsTrigger>();
+        inv = FindObjectOfType<Inventory>();
+        if (idMission < 0)
+            return;
         MissionObj mission = MissionList.global.GetMission(idMission);
         if(!mission.complete)
         {
@@ -48,9 +54,23 @@ public class Boat : MonoBehaviour
     {
         if (!active)
             return;
-
+        if (!inv.FindItemB(idPaddle))
+        {
+            gUI.AddText("To use the boat, you must");
+            gUI.AddText("have a paddle.");
+            return;
+        }
         if (player.ObjIsNearPlayer(transform.position, 1.6f))
         {
+            MissionObj mission = MissionList.global.GetMission(idMissionToComplete);
+            if (mission != null)
+            {
+                if (!mission.complete)
+                {
+                    mission.complete = true;
+                    FindObjectOfType<Experience>().AddExp(mission.exp);
+                }
+            }
             pause.activeEsc = false;
             PropertyPlayer.property.currentHealth = playerHP.currentHealth;
             PropertyPlayer.property.maxHealth = playerHP.maxAfterRad;

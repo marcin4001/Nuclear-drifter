@@ -411,7 +411,7 @@ MonoBehaviour:
   - task: Get Atomic Flakes for the Corn Prince
     alt: 
     ownerName: Corn Prince
-    location: Farlands
+    location: Big Sandy
     start: 0
     complete: 0
     idSort: 33
@@ -419,6 +419,17 @@ MonoBehaviour:
     respect: 0
     respectUSA: 0
     idHelp: 33
+  - task: Find the paddle to sail away in the boat
+    alt: 
+    ownerName: Me
+    location: Big Sandy
+    start: 0
+    complete: 0
+    idSort: 34
+    exp: 500
+    respect: 0
+    respectUSA: 0
+    idHelp: 34
   globalNPCs:
   - npcName: Sarah
     init: 1

@@ -43,6 +43,19 @@ MonoBehaviour:
     workOpt: 0
     checkEmptyReplyWork: 0
     nextModuleWork: 0
+  - choice: Can I use the boat at the dock?
+    reply: Of course, you can use the boat, but you need a paddle to row it. I sell
+      paddles for $160, do you need one?
+    nextModule: 1
+    missionStart: 1
+    startIdMission: 34
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 1
+    isWorker: 0
+    workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: Bye, Spike. Stay safe.
     reply: 
     nextModule: -1
