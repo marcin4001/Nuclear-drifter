@@ -16,6 +16,7 @@ public class Container : MonoBehaviour
     private GUIScript gUI;
     private SoundsTrigger sound;
     private SoundUse soundUse;
+    private float chanceNoOpenLock = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class Container : MonoBehaviour
         {
             bool playerHaveKey = controller.GetInvPlayer().FindItemB(keyId);
             if (playerHaveKey)
-            {
+            { 
                 if (!player.ObjIsNearPlayer(transform.position, 1.1f))
                 {
                     if (indexBackground == 3)
@@ -52,6 +53,21 @@ public class Container : MonoBehaviour
                     else
                         gUI.AddText("The " + nameObj + " is too far");
                     return;
+                }
+                if (canUsePicklock)
+                {
+                    float randomChanceNum = Random.Range(0f, 1f);
+                    if (chanceNoOpenLock >= randomChanceNum)
+                    {
+                        gUI.AddText("The lock has not been");
+                        gUI.AddText("opened");
+                        gUI.AddText("Your lockpick has been");
+                        gUI.AddText("broken");
+                        Slot lockpick = controller.GetInvPlayer().FindItem(keyId);
+                        controller.GetInvPlayer().RemoveOne(lockpick);
+                        sound.PlayBreakLockpick();
+                        return;
+                    }
                 }
                 OpenBox();
                 isLocked = false;

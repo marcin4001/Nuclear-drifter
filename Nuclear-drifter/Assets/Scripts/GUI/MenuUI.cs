@@ -146,6 +146,7 @@ public class MenuUI : MonoBehaviour
         PropertyPlayer.property.foodMartFound = false;
         PropertyPlayer.property.ResetDehydration();
         PropertyPlayer.property.afterFoodmart = false;
+        PropertyPlayer.property.bigSandyFound = false;
         SaveAndLoad.NewGame();
     }
 }
