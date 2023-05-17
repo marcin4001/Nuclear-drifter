@@ -624,6 +624,7 @@ GameObject:
   - component: {fileID: 384472462}
   - component: {fileID: 384472463}
   - component: {fileID: 384472464}
+  - component: {fileID: 384472465}
   m_Layer: 0
   m_Name: PluginSave
   m_TagString: Untagged
@@ -761,6 +762,45 @@ MonoBehaviour:
     isKilled: 0
   - nameEnemy: cyclop21
     idMission: 31
+    isKilled: 0
+--- !u!114 &384472465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384472459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53ddb7e6d5fadc4c8dd8d7974235732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missions:
+  - task: Get Atomic Flakes for the Corn Prince
+    alt: 
+    ownerName: Corn Prince
+    location: Big Sandy
+    start: 0
+    complete: 0
+    idSort: 33
+    exp: 300
+    respect: 0
+    respectUSA: 0
+    idHelp: 33
+  - task: Find the paddle to sail away in the boat
+    alt: 
+    ownerName: Me
+    location: Big Sandy
+    start: 0
+    complete: 0
+    idSort: 34
+    exp: 500
+    respect: 0
+    respectUSA: 0
+    idHelp: 34
+  enemies:
+  - nameEnemy: ScorpionPaddle
+    idMission: 34
     isKilled: 0
 --- !u!1 &430795936
 GameObject:
@@ -1261,6 +1301,7 @@ MonoBehaviour:
   sleeping: {fileID: 0}
   chestOpen: {fileID: 0}
   refrigeratorOpen: {fileID: 0}
+  breakLockpick: {fileID: 0}
 --- !u!82 &558392528
 AudioSource:
   m_ObjectHideFlags: 0
