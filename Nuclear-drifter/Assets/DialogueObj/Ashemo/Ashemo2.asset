@@ -25,10 +25,12 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 1
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: Where is Yorkset?
     reply: "The Yorkset settlement is northeast of here. It's a settlement by the
       ocean. The arrogant Jaxon is the leader of this settlement. I advise you to
-      avoid this place for now. \rYou'd better go to Watown, young man.\n"
+      avoid this place for now. \rYou'd better go to Watown, young man."
     nextModule: 0
     missionStart: 0
     startIdMission: 0
@@ -37,6 +39,8 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 5
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: "\rTell me about New Tolham."
     reply: New Tolham is a settlement by the ocean, which I founded many years ago.
       Here you'll find a hotel with free rooms, a grocery store and the Jason shepherd's
@@ -50,6 +54,8 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: "\rCan I do something for you?"
     reply: I have a job for a traveler. A month ago I ordered gas masks from Moolow
       Isles. I need them for my people and guards because there's radiation area
@@ -63,6 +69,8 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -73,3 +81,5 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
