@@ -24,6 +24,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 4
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: dbf38e6cb70e7e54f82bc2b6ab35e050, type: 3}
   - choice: Where is Watown?
     reply: Watown is northeast of here. It's a little further than New Tolham. The
       settlement is ruled by my eldest brother Joshua. Between Watown and Woodhill
@@ -36,6 +39,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 1
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 9a8783071a3c4874599add5bc362af99, type: 3}
   - choice: How long have you ruled the settlement?
     reply: I've been in charge of the settlement for over 40 years since my father
       went south. So far I have been doing well despite my age.
@@ -47,6 +53,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 83bd4ade6409d05468df9cb64d69f6d2, type: 3}
   - choice: Do you have any work for me?
     reply: No, but ask the other settlers. Maybe they will find something to do for
       you.
@@ -58,6 +67,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 6501e63f7de8cb34fb160fde49d674d7, type: 3}
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -68,3 +80,6 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}

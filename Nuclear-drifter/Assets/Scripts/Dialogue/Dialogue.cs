@@ -19,4 +19,5 @@ public class Dialogue
     public int workOpt = 0;
     public bool checkEmptyReplyWork = false;
     public int nextModuleWork = 0;
+    public AudioClip replyClip;
 }

@@ -25,6 +25,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 1
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 7ce4ac57778d3b243ad0b1db53d8bee3, type: 3}
   - choice: Where is Yorkset?
     reply: "The Yorkset settlement is northeast of here. It's a settlement by the
       ocean. The arrogant Jaxon is the leader of this settlement. I advise you to
@@ -37,6 +40,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 5
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: ff63074ed673ed141ba9565667aa8b8d, type: 3}
   - choice: "\rTell me about New Tolham."
     reply: New Tolham is a settlement by the ocean, which I founded many years ago.
       Here you'll find a hotel with free rooms, a grocery store and the Jason shepherd's
@@ -50,6 +56,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: c3d44be64b0d47c41ae3de1257f6014b, type: 3}
   - choice: Do you have any other work for me?
     reply: No, but ask the local people or other settlement leaders. Maybe they'll
       find jobs for you.
@@ -61,6 +70,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 76a1be66e3ccaae42978929cab2a7f5d, type: 3}
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -71,3 +83,6 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}

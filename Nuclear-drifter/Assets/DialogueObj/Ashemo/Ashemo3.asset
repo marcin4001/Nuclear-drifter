@@ -25,6 +25,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 8
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 870812b24a1f3804fbf0598d06432367, type: 3}
   - choice: I can't do it. This island is too far away.
     reply: Okay. Maybe someone else will bring this package.
     nextModule: 0
@@ -35,3 +38,6 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: e737efa15330ac442bff0cf6873a6662, type: 3}

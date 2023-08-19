@@ -22,6 +22,11 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 1
+    isWorker: 0
+    workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: b4536d53449914d4d9506dcbcc5b4482, type: 3}
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -30,3 +35,8 @@ MonoBehaviour:
     missionEnd: 0
     endIdMission: 0
     changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}

@@ -23,6 +23,7 @@ public class DialogueController : MonoBehaviour
     public List<int> idMissionsEndGame;
     private TypeScene typeSc;
     private SoundsTrigger sound;
+    private TalkingHeadController head;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class DialogueController : MonoBehaviour
         dialCanvas.enabled = false;
         typeSc = FindObjectOfType<TypeScene>();
         sound = FindObjectOfType<SoundsTrigger>();
+        head = FindObjectOfType<TalkingHeadController>();
         if(blockEndButton != null)
         {
             blockEndButton.SetActive(false);
@@ -56,6 +58,7 @@ public class DialogueController : MonoBehaviour
         active = false;
         
         typeSc.inMenu = false;
+        if(head != null) head.Close();
     }
 
     public void CloseCanvas()
@@ -63,6 +66,7 @@ public class DialogueController : MonoBehaviour
         dialCanvas.enabled = false;
         active = false;
         typeSc.inMenu = false;
+        if (head != null) head.Close();
     }
 
     public void OpenDialogue(NPCBasic _NPC)
@@ -74,8 +78,8 @@ public class DialogueController : MonoBehaviour
         menu.activeEsc = false;
         active = true;
         typeSc.inMenu = true;
+        if (head != null) head.SetHead(_NPC);
         SetDialogueStart();
-        
     }
 
     private void SetDialogueStart()
@@ -88,11 +92,15 @@ public class DialogueController : MonoBehaviour
             if(npc.GetInit())
             {
                 replyText.text = CheckDot(npc.firstReply); 
+                if(npc.firstReplyClip != null && head != null)
+                    head.Play(npc.firstReplyClip);
                 npc.SetInit();
             }
             else
             {
                 replyText.text = CheckDot(npc.cbReply);
+                if (npc.cbReplyClip != null && head != null)
+                    head.Play(npc.cbReplyClip);
             }
             if (mission != null) mission.CheckMission();
             DialogueModule module = npc.modules[npc.startIndex];
@@ -150,6 +158,8 @@ public class DialogueController : MonoBehaviour
                 if (replyText.text == "")
                 {
                     replyText.text = CheckDot(d.reply);
+                    if(d.replyClip != null && head != null)
+                        head.Play(d.replyClip);
                     if(d.checkEmptyReplyWork)
                     {
                         npc.SetStartIndex(d.nextModuleWork);
@@ -159,6 +169,8 @@ public class DialogueController : MonoBehaviour
             else
             {
                 replyText.text = CheckDot(d.reply);
+                if (d.replyClip != null && head != null)
+                    head.Play(d.replyClip);
             }
             int index = d.nextModule;
             if (index == 0) index = npc.startIndex;

@@ -11,6 +11,8 @@ public class NPCBasic : MonoBehaviour
     public string firstReply;
     [TextArea(2, 3)]
     public string cbReply;
+    public AudioClip firstReplyClip;
+    public AudioClip cbReplyClip;
     private bool init = true;
     public DialogueModule[] modules;
     public int startIndex = 0;

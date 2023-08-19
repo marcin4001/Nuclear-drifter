@@ -12304,6 +12304,8 @@ MonoBehaviour:
   city: WoodHill
   firstReply: Welcome to my home, traveler. What brings you to the me?
   cbReply: "\rWelcome back. What brings you to me?"
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: f42eb380b7d481240b759cf56898661a, type: 2}
   - {fileID: 11400000, guid: 152daff89c8afcb4e9a30991674e914d, type: 2}
@@ -12645,6 +12647,8 @@ MonoBehaviour:
   city: Woodhill
   firstReply: Hi! Ow! What are you looking for here?
   cbReply: What do you want again?
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: 57e4419ca7e319b4ab89cffa50394a11, type: 2}
   - {fileID: 11400000, guid: ed989a4876d6bed47b38bf2a3123a402, type: 2}
@@ -13908,6 +13912,7 @@ GameObject:
   - component: {fileID: 4868275026358363796}
   - component: {fileID: 8865784879873131033}
   - component: {fileID: 6713070094242291068}
+  - component: {fileID: 8865784879873131034}
   - component: {fileID: 6713070094242291069}
   m_Layer: 0
   m_Name: Sarah_78
@@ -13936,6 +13941,8 @@ MonoBehaviour:
     After my father left the settlement, I started to rule Woodhill. What brings
     you to the me?
   cbReply: Welcome back my son. What brings you to the me?
+  firstReplyClip: {fileID: 8300000, guid: 93ba50eaaa82bdc43bc94b1a0305bacb, type: 3}
+  cbReplyClip: {fileID: 8300000, guid: dcf93e1bc87b19047b517cfb79c40b14, type: 3}
   modules:
   - {fileID: 11400000, guid: df220f9f3e2fd1a4390876f4acf688f1, type: 2}
   - {fileID: 11400000, guid: 885fe8c58997f0447aeaaa58f3acf11f, type: 2}
@@ -14193,6 +14200,26 @@ MonoBehaviour:
   forward: {fileID: 2727117998612790522, guid: fa85853f71321f042af66d1d2794eccb, type: 3}
   left: {fileID: -4787497059307583932, guid: fa85853f71321f042af66d1d2794eccb, type: 3}
   right: {fileID: 4839462344738802612, guid: fa85853f71321f042af66d1d2794eccb, type: 3}
+--- !u!114 &8865784879873131034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6713070094242291067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b029d7a875edc7a4caec944467ac701b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouth:
+  - {fileID: 21300000, guid: 3ccd66b11d648494990c682729e94936, type: 3}
+  - {fileID: 21300000, guid: 50484828873b3eb4ba2bfe03fada4029, type: 3}
+  - {fileID: 21300000, guid: 8f241bd66515751478d6b0c7893bb74a, type: 3}
+  - {fileID: 21300000, guid: 07831f042320f3f469b47d90de86606c, type: 3}
+  - {fileID: 21300000, guid: e36bc560819713d448d8657f11331554, type: 3}
+  - {fileID: 21300000, guid: be58bee100205f540bb3153ab999a823, type: 3}
+  closedEyes: {fileID: 21300000, guid: f76e4e386a5abee4a810084a7d217c32, type: 3}
 --- !u!114 &8865784880603757861
 MonoBehaviour:
   m_ObjectHideFlags: 0
