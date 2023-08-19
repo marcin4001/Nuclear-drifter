@@ -20,4 +20,5 @@ public class Dialogue
     public bool checkEmptyReplyWork = false;
     public int nextModuleWork = 0;
     public AudioClip replyClip;
+    public int pitchClip = 0;
 }

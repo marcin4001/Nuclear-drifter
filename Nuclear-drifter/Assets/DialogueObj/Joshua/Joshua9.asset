@@ -23,6 +23,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 696b852b4b81292449abad3b0ddbc99c, type: 3}
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -33,3 +36,6 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}

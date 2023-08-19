@@ -8603,6 +8603,8 @@ MonoBehaviour:
   firstReply: Hey. I'm Gary. We already met at Dr. Paul's clinic. You cured me of
     radiation sickness. Thank you so much for that.
   cbReply: Hello again, bro
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: 15ec2d4deb9b2844bbe60fb08028d345, type: 2}
   - {fileID: 11400000, guid: 180dea6d523e13040958ace408ae5ac5, type: 2}
@@ -13293,6 +13295,8 @@ MonoBehaviour:
   city: Watown
   firstReply: "\rWelcome to my home, traveler. I am Karen."
   cbReply: "\rHello again, young man."
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: fcb69d2e66c45744db5731519bea3c4c, type: 2}
   - {fileID: 11400000, guid: ddcc5f0a1620ec54a9af656c92f341d4, type: 2}
@@ -13531,6 +13535,8 @@ MonoBehaviour:
   city: Watown
   firstReply: Ouch! Ouch! Ouch!
   cbReply: Ouch! Ouch! Ouch!
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: 87b610a9ef9debd4c937ceb14b1628b2, type: 2}
   - {fileID: 11400000, guid: 090fd0f0c55af6746bcbc756d861dcf4, type: 2}
@@ -13803,6 +13809,7 @@ GameObject:
   - component: {fileID: 2465716435116818812}
   - component: {fileID: 2465716435116818813}
   - component: {fileID: 5754078806763496535}
+  - component: {fileID: 5754078806763496536}
   m_Layer: 0
   m_Name: Joshua_78
   m_TagString: NPC
@@ -13828,6 +13835,8 @@ MonoBehaviour:
   firstReply: "\rHello, I'm Joshua. I am the founder and leader of Watown. How can
     I help you, traveler?"
   cbReply: "\rWelcome back to my home, traveler."
+  firstReplyClip: {fileID: 8300000, guid: 0a511cc35470de54f8027b5f8000a8bd, type: 3}
+  cbReplyClip: {fileID: 8300000, guid: 62e121f266faca94f89e44e60f47930e, type: 3}
   modules:
   - {fileID: 11400000, guid: 8a103ad70eb23a243b22283a9977e4b1, type: 2}
   - {fileID: 11400000, guid: 6a1c892f3106f7a469d7f24bb4269182, type: 2}
@@ -14117,6 +14126,8 @@ MonoBehaviour:
   city: Watown
   firstReply: Welcome stranger to my clinic. I'm Dr. Paul.
   cbReply: Welcome back, stranger.
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: c278f2ad297591b4785e55eee57c52b5, type: 2}
   - {fileID: 11400000, guid: 2517486011f2eb142b977fbeb9de8f2b, type: 2}
@@ -14859,6 +14870,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: EndJoshua
+--- !u!114 &5754078806763496536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465716435116818807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b029d7a875edc7a4caec944467ac701b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouth:
+  - {fileID: 21300000, guid: 0fb1c3427996122459f79c8c77eeca8d, type: 3}
+  - {fileID: 21300000, guid: 9f3d49e00f934de41b620f2b6d85a873, type: 3}
+  - {fileID: 21300000, guid: 326ae2d74b76ff34a945bee7ef667872, type: 3}
+  - {fileID: 21300000, guid: 766ee55f799d34f499a8458917c4cce9, type: 3}
+  - {fileID: 21300000, guid: 0146450fea25bb34c8d9933e0cd5182a, type: 3}
+  - {fileID: 21300000, guid: afaf5bb4db8e5574586270fbed8dc3f5, type: 3}
+  closedEyes: {fileID: 21300000, guid: 46056120e5bf4474dae56409704b3a59, type: 3}
 --- !u!212 &5928705096263125448
 SpriteRenderer:
   m_ObjectHideFlags: 0

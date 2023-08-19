@@ -12507,6 +12507,8 @@ MonoBehaviour:
   firstReply: Welcome to the Passport office. My name is Roy. I am issuing passports
     in Old Zealand. How can I help you?
   cbReply: "\rWelcome back to my office. How can I help you now?"
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: 49e769291604e4c439308af1f0b5e25b, type: 2}
   - {fileID: 11400000, guid: 68353ce99c0b1a8418275ca94fc4371f, type: 2}
@@ -12673,6 +12675,8 @@ MonoBehaviour:
   firstReply: Hello Stranger. I'm Dr. Ryan. I'm a Yorkset doctor. I take care of
     the health of the settlement's people. How can I help you?
   cbReply: Hello again. How can I help you?
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: b8574fb8692e2f146aa6208f1e4bdbf9, type: 2}
   - {fileID: 11400000, guid: 0f0ea897c1676d645996b5d49e792f4b, type: 2}
@@ -12710,6 +12714,7 @@ MonoBehaviour:
     amountItem: 1
     ammo: 0
     id: -1
+  halfPrice: 0
 --- !u!61 &403415854481891001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13043,6 +13048,7 @@ MonoBehaviour:
     amountItem: 1
     ammo: 0
     id: -1
+  halfPrice: 0
 --- !u!114 &1963344502551061848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13060,6 +13066,8 @@ MonoBehaviour:
   city: Yorkset
   firstReply: Hi, I'm Fred. How can I help you?
   cbReply: Hello again. How can I help you now?
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: 4b52ea13d68d9e841a31df25b805c0c4, type: 2}
   - {fileID: 11400000, guid: 05b7b24d8db971c41833fc2d525d28d1, type: 2}
@@ -13368,6 +13376,7 @@ GameObject:
   - component: {fileID: 5003252822895679701}
   - component: {fileID: 5003252822895679700}
   - component: {fileID: 5003252822895679699}
+  - component: {fileID: 7155967065749768113}
   m_Layer: 0
   m_Name: Jaxon_78
   m_TagString: NPC
@@ -13494,6 +13503,8 @@ MonoBehaviour:
   firstReply: Welcome. I'm Jaxon. I'm the leader of this lousy settlement. I am a
     busy man. Don't waste my time. Say what you want?
   cbReply: What do you want from me again?
+  firstReplyClip: {fileID: 8300000, guid: 0cd164689a4dd314d9651146376df4c3, type: 3}
+  cbReplyClip: {fileID: 8300000, guid: 2d0d52ad72afdfa4cb74a82e6b5f77b2, type: 3}
   modules:
   - {fileID: 11400000, guid: 0fb14c15409bab34583b147a31773c8b, type: 2}
   - {fileID: 11400000, guid: 3bc5e53e41db7a941b824e3935ee67ee, type: 2}
@@ -13659,6 +13670,26 @@ MonoBehaviour:
     type: 3}
   left: {fileID: -7461311627190703975, guid: b22a48f7ff2fac2479357eb7d2d21a7c, type: 3}
   right: {fileID: -3346288643848644817, guid: b22a48f7ff2fac2479357eb7d2d21a7c, type: 3}
+--- !u!114 &7155967065749768113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5003252822895679698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b029d7a875edc7a4caec944467ac701b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouth:
+  - {fileID: 21300000, guid: e3c78907ecbbdc64591ef4b6e298ab60, type: 3}
+  - {fileID: 21300000, guid: 7e3d759939ca3e24fb49b9c65536a23d, type: 3}
+  - {fileID: 21300000, guid: 101911dd05dc7da41bd14cf24c1b0c89, type: 3}
+  - {fileID: 21300000, guid: 535f6358b8d4eb945afe7929a3080c5c, type: 3}
+  - {fileID: 21300000, guid: 2390e3348882a30418f12a2463e42da0, type: 3}
+  - {fileID: 21300000, guid: a6985509638141a4b91f37680866a8fc, type: 3}
+  closedEyes: {fileID: 21300000, guid: 6ba1cda752e40f7449bba8d54c3359eb, type: 3}
 --- !u!212 &7573454017757856892
 SpriteRenderer:
   m_ObjectHideFlags: 0

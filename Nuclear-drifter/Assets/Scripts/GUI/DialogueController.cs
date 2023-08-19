@@ -159,7 +159,7 @@ public class DialogueController : MonoBehaviour
                 {
                     replyText.text = CheckDot(d.reply);
                     if(d.replyClip != null && head != null)
-                        head.Play(d.replyClip);
+                        head.Play(d.replyClip, d.pitchClip);
                     if(d.checkEmptyReplyWork)
                     {
                         npc.SetStartIndex(d.nextModuleWork);
@@ -170,7 +170,7 @@ public class DialogueController : MonoBehaviour
             {
                 replyText.text = CheckDot(d.reply);
                 if (d.replyClip != null && head != null)
-                    head.Play(d.replyClip);
+                    head.Play(d.replyClip, d.pitchClip);
             }
             int index = d.nextModule;
             if (index == 0) index = npc.startIndex;

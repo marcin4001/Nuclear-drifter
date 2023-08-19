@@ -16,6 +16,7 @@ public class TalkingHeadController : MonoBehaviour
     public float blinkingTimer = 0f;
     public bool isComplete = false;
     private float[] spectrumData;
+    private int pitch = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,11 +53,16 @@ public class TalkingHeadController : MonoBehaviour
         foreach(float spectrum in spectrumData)
             averageSpectrum += spectrum;
         averageSpectrum = averageSpectrum/spectrumData.Length;
-        int indexMouth = Mathf.FloorToInt(averageSpectrum * (headObj.mouth.Length - 1) * 1000);
-        if(indexMouth < headObj.mouth.Length)
+        int indexMouth = Mathf.FloorToInt(averageSpectrum * (headObj.mouth.Length - 1 - pitch) * 1000);
+        Debug.Log(indexMouth);
+        if (indexMouth < headObj.mouth.Length)
+        {
             mouthImg.overrideSprite = headObj.mouth[indexMouth];
+        }
         else
+        {
             mouthImg.overrideSprite = headObj.mouth[headObj.mouth.Length - 1];
+        }
     }
 
     public void SetHead(NPCBasic _NPC)
@@ -79,11 +85,12 @@ public class TalkingHeadController : MonoBehaviour
         blinkingTimer = 0f;
     }
 
-    public void Play(AudioClip clip)
+    public void Play(AudioClip clip, int _pitch = 0)
     {
         if (headObj == null)
             return;
         source.clip = clip;
+        pitch = _pitch;
         source.Play();
         isComplete = true;
     }

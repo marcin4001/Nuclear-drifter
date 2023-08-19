@@ -25,6 +25,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 54fc87a0bd4bafc48bad182cd518d711, type: 3}
+    pitchClip: 0
   - choice: "\rI come from the far south! My well is dry!"
     reply: I don't care. I don't help the poor. Get outta here.
     nextModule: 0
@@ -35,6 +39,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 9301a255147681546859fcd77a1ed6d9, type: 3}
+    pitchClip: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -45,3 +53,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0

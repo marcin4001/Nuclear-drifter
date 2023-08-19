@@ -25,6 +25,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 5
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: a7399fd7c1d27be4bb99ed7f3caeec28, type: 3}
   - choice: I don't have time for this right now. I'm sorry.
     reply: Okay. I'll find myself another delivery man.
     nextModule: 0
@@ -35,3 +38,6 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: fac808519ef946b4284aade610e01650, type: 3}

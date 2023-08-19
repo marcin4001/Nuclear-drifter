@@ -24,6 +24,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 81a982c79dfaa4644b1870c21da98431, type: 3}
+    pitchClip: 0
   - choice: When and how was this settlement established?
     reply: Yorkset is a young settlement that I founded. I was the richest man in
       New Tolham and could not communicate with Ashemo, the leader of the settlement,
@@ -37,6 +41,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: f91a30b9137164d459fee861fa61c14a, type: 3}
+    pitchClip: 0
   - choice: Is there anything interesting in Yorkset.
     reply: There are several places in Yorkset that may interest you. There is the
       Dr. Ryan Medical Clinic, the home of the water supplier and the passport office.
@@ -48,6 +56,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 102d17b9fef72fa46aa3ab0d1d65d0e4, type: 3}
+    pitchClip: 0
   - choice: Where can I find your old tomahawk?
     reply: I lost it northeast of Yorkset when I fought a rhino. It should still
       be lying next to that snarling beast.
@@ -59,6 +71,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 956fd4fd9c32bbf488f26802f3964c1c, type: 3}
+    pitchClip: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -69,3 +85,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0

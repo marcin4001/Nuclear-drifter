@@ -25,6 +25,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: fac701ec8e4e6f9418a9c08c2ec6f4c8, type: 3}
   - choice: Where is this subway?
     reply: The subway is located east of the settlement near the cemetery.
     nextModule: 0
@@ -35,6 +38,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 503f638d713f20c4d847dc253f106df1, type: 3}
   - choice: Do I need to know anything else about the subway?
     reply: Before entering the subway, get yourself a rope and a gas mask. This place
       may be heavily contaminated. You can get the mask from American Army on Moolow
@@ -47,6 +53,9 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 65aa050f9e502ba429fb88c4837a6901, type: 3}
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -57,3 +66,6 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
