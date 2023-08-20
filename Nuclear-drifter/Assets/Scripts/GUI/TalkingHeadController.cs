@@ -17,6 +17,7 @@ public class TalkingHeadController : MonoBehaviour
     public bool isComplete = false;
     private float[] spectrumData;
     private int pitch = 0;
+    private bool switchOn = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +68,11 @@ public class TalkingHeadController : MonoBehaviour
 
     public void SetHead(NPCBasic _NPC)
     {
+        if(!switchOn)
+        {
+            backgroundImg.SetActive(false);
+            return;
+        }
         headObj = _NPC.GetComponent<HeadObj>();
         if (headObj == null)
         {
@@ -109,5 +115,10 @@ public class TalkingHeadController : MonoBehaviour
         isBlinking = false;
         mouthImg.overrideSprite = headObj.mouth[0];
         blinkingTimer = 0f;
+    }
+
+    public void SetSwitchOn(bool value)
+    {
+        switchOn = value;
     }
 }

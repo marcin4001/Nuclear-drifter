@@ -17,7 +17,9 @@ public class Experience : MonoBehaviour
         prevTh = PropertyPlayer.property.prevTh;
         lvlPoint = PropertyPlayer.property.lvlPoint;
         gUI = FindObjectOfType<GUIScript>();
-        gUI.ShowExp(level, currentExp, (25 * (5 * (level + 1) + 4) * level));
+        int expLexel = currentExp - (25 * (5 * level + 4) * (level - 1));
+        int maxExpLevel = (25 * (5 * (level + 1) + 4) * level) - (25 * (5 * level + 4) * (level - 1));
+        gUI.ShowExp(level, expLexel, maxExpLevel);
     }
 
     public void AddExp(int exp)
@@ -32,7 +34,9 @@ public class Experience : MonoBehaviour
             gUI.ShowNextLvl();
         }
         UpdateProperty();
-        gUI.ShowExp(level, currentExp, (25 * (5 * (level + 1) + 4) * level));
+        int expLexel = currentExp - (25 * (5 * level + 4) * (level - 1));
+        int maxExpLevel = (25 * (5 * (level + 1) + 4) * level) - (25 * (5 * level + 4) * (level - 1));
+        gUI.ShowExp(level, expLexel, maxExpLevel);
     }
 
     public bool RemoveLevelPoints(int point)

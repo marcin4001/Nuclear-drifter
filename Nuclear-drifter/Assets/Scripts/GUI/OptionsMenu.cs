@@ -8,6 +8,7 @@ public class OptionsMenu : MonoBehaviour
 {
     public Dropdown resDropdown;
     public Toggle fullScreenToggle;
+    public Toggle talkingHeadToogle;
     public List<string> resText;
     public int currentResolution = 0;
     public bool fullscreen = true;
@@ -21,6 +22,7 @@ public class OptionsMenu : MonoBehaviour
     private FightSound fightSound;
     private CanvasScaler600p canvasScaler;
     private SoundUse soundUse;
+    private TalkingHeadController head;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,11 @@ public class OptionsMenu : MonoBehaviour
         Resolution[] temp = Screen.resolutions;
         resolutions = temp.Where(r => r.width >= 800 && r.width <= 1920 && r.refreshRate == 60).ToArray();
         fullscreen = Screen.fullScreen;
-        fullScreenToggle.isOn = fullscreen;  
+        fullScreenToggle.isOn = fullscreen;
+        talkingHeadToogle.isOn = PlayerPrefs.GetInt("talkingHead", 1) != 0;
+        head = FindObjectOfType<TalkingHeadController>();
+        if (head != null)
+            head.SetSwitchOn(PlayerPrefs.GetInt("talkingHead", 1) != 0);
         int i = 0;
         foreach(Resolution res in resolutions)
         {
@@ -97,6 +103,15 @@ public class OptionsMenu : MonoBehaviour
     {
         Screen.SetResolution(resolutions[currentResolution].width, resolutions[currentResolution].height, value);
         fullscreen = value;
+        if (sfxSound != null)
+            sfxSound.PlayClickButton();
+    }
+
+    public void ChangeTalkingHead(bool value)
+    {
+        PlayerPrefs.SetInt("talkingHead", value ? 1 : 0);
+        if (head != null)
+            head.SetSwitchOn(value);
         if (sfxSound != null)
             sfxSound.PlayClickButton();
     }

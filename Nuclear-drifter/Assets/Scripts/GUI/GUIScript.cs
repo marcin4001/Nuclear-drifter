@@ -15,6 +15,7 @@ public class GUIScript : MonoBehaviour
     public Image bioImg;
 
     public RectTransform hpBar;
+    public RectTransform expBar;
 
     public Health playerHealth;
     public TimeGame time;
@@ -74,7 +75,10 @@ public class GUIScript : MonoBehaviour
 
     public void ShowExp(int lvl, int exp, int nextTh)
     {
-        expLabel.text = "lvl:" + lvl + " exp:" + exp + "/" + nextTh;
+        expLabel.text = lvl.ToString("D2");//"lvl:" + lvl + " exp:" + exp + "/" + nextTh;
+        float percentExp = (float)exp / (float)nextTh;
+        percentExp = Mathf.Clamp01(percentExp);
+        expBar.localScale = new Vector3(percentExp, 1f, 1f);
     }
 
     public void ActiveBtnPanel(bool value)
