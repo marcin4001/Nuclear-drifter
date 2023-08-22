@@ -7609,9 +7609,9 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 5b8fef76070347f4583b9742f0ae4a27, type: 2}
+    m_Data: {fileID: 11400000, guid: 72966645d9fc6364eb303bf38561d4b3, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 469e081e4e799454c910e57bb76ecd79, type: 2}
+    m_Data: {fileID: 11400000, guid: 6052ff691710c814d919211e303ea676, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -7622,11 +7622,9 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: -7771770936949205714, guid: 0f477609ecd8f304983c2bdcf27d3664,
-      type: 3}
+    m_Data: {fileID: -364507397, guid: 6059217d444d74e4ab5e46d928c734b1, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 4251513205799142013, guid: 0f477609ecd8f304983c2bdcf27d3664,
-      type: 3}
+    m_Data: {fileID: 1592154038, guid: 6059217d444d74e4ab5e46d928c734b1, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 2
     m_Data:
@@ -12964,8 +12962,8 @@ Tilemap:
   - first: {x: 30, y: 52, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12974,8 +12972,8 @@ Tilemap:
   - first: {x: 31, y: 52, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12984,8 +12982,8 @@ Tilemap:
   - first: {x: 36, y: 52, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12994,8 +12992,8 @@ Tilemap:
   - first: {x: 37, y: 52, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13015,30 +13013,29 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 837958eda45862549adc319122440ec4, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 04ddfbdaa21815d44a567fbccf63f874, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: 148497bf8fc03804b9a123c8afb720e4, type: 2}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: 08b68a9c36cbb024196ddad45e82ac2a, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 0b4dc0175bc8ccc4bbe2a084d333b3cb, type: 2}
+    m_Data: {fileID: 11400000, guid: 0710c1a4264460449a1eabdd529673c5, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 1064890781, guid: 68ca372ac013bfc49babea64cb3c047e, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 454533613, guid: 68ca372ac013bfc49babea64cb3c047e, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: 408264520, guid: f76a5cf9be0d5a44bbdd15b5fb50c1c5, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: -1563376266, guid: f76a5cf9be0d5a44bbdd15b5fb50c1c5, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -7763138877045200632, guid: 0f477609ecd8f304983c2bdcf27d3664,
-      type: 3}
+    m_Data: {fileID: -1638545598, guid: 68ca372ac013bfc49babea64cb3c047e, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 5
     m_Data:
@@ -17881,6 +17878,8 @@ MonoBehaviour:
   city: Power Plant
   firstReply: Oh God! Don't kill me! I heard you killed my people! Please spare me!
   cbReply: Oh, it's you again!
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
   modules:
   - {fileID: 11400000, guid: e08a2d42001485a4badf1f48922682eb, type: 2}
   - {fileID: 11400000, guid: 46eaaba91f3577142939ee26c0c2d9d5, type: 2}
