@@ -47,6 +47,26 @@ public class Trapdoor : MonoBehaviour
     {
         bool open = true;
         result = new List<string>();
+        if(indexTrapdoor < 0)
+        {
+            if (player.ObjIsNearPlayer(transform.position, 1.1f))
+            {
+                holeTrapdoor.enabled = true;
+                upTrapdoor.enabled = true;
+                downTrapdoor.enabled = false;
+                player.active = false;
+                player.SetStop(true);
+                gUI.blockGUI = true;
+                sound.UseTrapdoor();
+                Invoke("LoadScene", 1.0f);
+            }
+            else
+            {
+                gUI.AddText("Trapdoor is too far");
+            }
+            return;
+        }
+
         if (!PropertyPlayer.property.trapdoorOpened[indexTrapdoor])
         {
             result.Add("Items needed to open:");
