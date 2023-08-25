@@ -625,6 +625,7 @@ GameObject:
   - component: {fileID: 384472463}
   - component: {fileID: 384472464}
   - component: {fileID: 384472465}
+  - component: {fileID: 384472466}
   m_Layer: 0
   m_Name: PluginSave
   m_TagString: Untagged
@@ -801,6 +802,25 @@ MonoBehaviour:
   enemies:
   - nameEnemy: ScorpionPaddle
     idMission: 34
+    isKilled: 0
+--- !u!114 &384472466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384472459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bd5190d760376409cdbb2ad7d302cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - nameEnemy: bandit14
+    idMission: 23
+    isKilled: 0
+  - nameEnemy: bandit15
+    idMission: 23
     isKilled: 0
 --- !u!1 &430795936
 GameObject:
