@@ -703,6 +703,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 129270300}
   are: 1
+  isCheckout: 0
 --- !u!1 &102108482
 GameObject:
   m_ObjectHideFlags: 0
@@ -7893,6 +7894,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 897888444}
   are: 1
+  isCheckout: 0
 --- !u!1001 &319178967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8013,6 +8015,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 348033126}
   are: 0
+  isCheckout: 1
 --- !u!61 &348033128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8258,6 +8261,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 2060625170}
   are: 1
+  isCheckout: 0
 --- !u!1 &392272591
 GameObject:
   m_ObjectHideFlags: 0
@@ -12813,6 +12817,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 33028550}
   are: 1
+  isCheckout: 0
 --- !u!1 &707999703
 GameObject:
   m_ObjectHideFlags: 0
@@ -13220,6 +13225,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 738181064}
   are: 1
+  isCheckout: 0
 --- !u!1 &724213835
 GameObject:
   m_ObjectHideFlags: 0
@@ -13367,6 +13373,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 811509546}
   are: 1
+  isCheckout: 0
 --- !u!1 &738181063
 GameObject:
   m_ObjectHideFlags: 0
@@ -14113,6 +14120,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 490591952}
   are: 1
+  isCheckout: 0
 --- !u!1001 &866042639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14589,6 +14597,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 1465634300}
   are: 1
+  isCheckout: 0
 --- !u!1 &951310673
 GameObject:
   m_ObjectHideFlags: 0
@@ -15395,6 +15404,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 1757560699}
   are: 1
+  isCheckout: 0
 --- !u!1001 &1131335661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16749,6 +16759,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 102108483}
   are: 1
+  isCheckout: 0
 --- !u!1 &1332793277
 GameObject:
   m_ObjectHideFlags: 0
@@ -17452,6 +17463,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 1382557658}
   are: 0
+  isCheckout: 1
 --- !u!61 &1382557660
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17694,6 +17706,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 889035676}
   are: 1
+  isCheckout: 0
 --- !u!1 &1454378924
 GameObject:
   m_ObjectHideFlags: 0
@@ -18222,6 +18235,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 1776240458}
   are: 1
+  isCheckout: 0
 --- !u!1 &1508816940
 GameObject:
   m_ObjectHideFlags: 0
@@ -18996,6 +19010,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 1583848309}
   are: 0
+  isCheckout: 1
 --- !u!61 &1583848311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19073,6 +19088,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 1589298101}
   are: 0
+  isCheckout: 1
 --- !u!61 &1589298103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19838,6 +19854,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 1922416536}
   are: 1
+  isCheckout: 0
 --- !u!20 &1702125722 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2244689762883206568, guid: 50be026967f9fd6498a8eb5ed125d78e,
@@ -19991,6 +20008,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 606942964}
   are: 1
+  isCheckout: 0
 --- !u!1 &1719247564
 GameObject:
   m_ObjectHideFlags: 0
@@ -20138,6 +20156,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 245115175}
   are: 1
+  isCheckout: 0
 --- !u!1 &1727344153
 GameObject:
   m_ObjectHideFlags: 0
@@ -20638,6 +20657,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 767627298}
   are: 1
+  isCheckout: 0
 --- !u!1 &1776240457
 GameObject:
   m_ObjectHideFlags: 0
@@ -20798,6 +20818,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 1839835329}
   are: 0
+  isCheckout: 1
 --- !u!61 &1839835331
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21421,6 +21442,7 @@ MonoBehaviour:
   minDistance: 1.6
   center: {fileID: 2073254329}
   are: 1
+  isCheckout: 0
 --- !u!1 &1950815020
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,10 +10,12 @@ public class StoreShelves : MonoBehaviour
     public float minDistance;
     public Transform center;
     public bool are = true;
+    public bool isCheckout = false;
     private PlayerClickMove player;
     private GUIScript gUI;
     private Inventory inv;
     private InventoryBox inventoryBox;
+    private SoundUse sound;
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class StoreShelves : MonoBehaviour
         gUI = FindObjectOfType<GUIScript>();
         inventoryBox = FindObjectOfType<InventoryBox>();
         inv = FindObjectOfType<Inventory>();
+        sound = FindObjectOfType<SoundUse>();
     }
 
     public void Use()
@@ -48,6 +51,10 @@ public class StoreShelves : MonoBehaviour
             bool added = inv.AddOne(slot);
             if (added)
             {
+                if (isCheckout)
+                    sound.PlayCash();
+                else 
+                    sound.PlayPickUp();
                 if(slot.itemElement.idItem != 300)
                     gUI.AddText("You found " + slot.itemElement.nameItem);
                 else
