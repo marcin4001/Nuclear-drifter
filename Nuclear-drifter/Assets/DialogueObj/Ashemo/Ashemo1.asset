@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ashemo1
   m_EditorClassIdentifier: 
   dialogues:
-  - choice: Help me! My well in the south is dry!
+  - choice: Help me! My well has dried up!
     reply: I'm sorry. I can't help you. There are no water suppliers in my settlement.
       Ask people in Watown or Yorkset.
     nextModule: 1
@@ -27,6 +27,7 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 8300000, guid: b4536d53449914d4d9506dcbcc5b4482, type: 3}
+    pitchClip: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -40,3 +41,4 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 0}
+    pitchClip: 0

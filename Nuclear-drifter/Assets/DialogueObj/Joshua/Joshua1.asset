@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Joshua1
   m_EditorClassIdentifier: 
   dialogues:
-  - choice: "\rI come from the south! The well next to my house is dry!"
+  - choice: I come from the south! The well next to my house has dried up!
     reply: Sorry, I can't help you! Ask in Yorkset, maybe someone will help you there.
     nextModule: 1
     missionStart: 0
@@ -26,6 +26,7 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 8300000, guid: 10597b988bb54914b8f1adf2b1cf0276, type: 3}
+    pitchClip: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -39,3 +40,4 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 0}
+    pitchClip: 0

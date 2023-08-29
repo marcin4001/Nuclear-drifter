@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MaxG1
   m_EditorClassIdentifier: 
   dialogues:
-  - choice: "\rI come from the south. My well is dry!"
+  - choice: I come from the south. My well has dried up!
     reply: Oh that's not good. Get in touch with Sarah. She is the Elder of Woodhill.
       You will find her in the north of the settlement, next to the gun store.
     nextModule: 1
@@ -24,6 +24,10 @@ MonoBehaviour:
     changeStartIndex: 1
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
   - choice: Bye
     reply: 
     nextModule: -1
@@ -34,3 +38,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0

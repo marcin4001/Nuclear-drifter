@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sarah1
   m_EditorClassIdentifier: 
   dialogues:
-  - choice: I came from the south. My well is dry!
+  - choice: I came from the south. My well has dried up!
     reply: Not good! Unfortunately, I can not help you. But you can go to Watown
       or New Tolham. These are my brothers' settlements. Maybe they will help you.
     nextModule: 1
@@ -27,6 +27,7 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 8300000, guid: 6defff9977096bb4a894f43b04c1fc66, type: 3}
+    pitchClip: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -40,3 +41,4 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 0}
+    pitchClip: 0
