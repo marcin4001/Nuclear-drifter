@@ -170,6 +170,7 @@ public class Trapdoor : MonoBehaviour
         if(!inside)PropertyPlayer.property.posOutside = player.transform.position;
         if (location != "")
             PropertyPlayer.property.location = location;
+        PropertyPlayer.property.consoleText = gUI.consoleText.ToArray();
         PropertyPlayer.property.SaveTemp();
     }
 }
