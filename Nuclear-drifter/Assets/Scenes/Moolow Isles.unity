@@ -8214,10 +8214,6 @@ MonoBehaviour:
     amountItem: 1
     ammo: 10
     id: -1
-  - itemElement: {fileID: 11400000, guid: 2bf278af5b5a9a6459e05f19b221987b, type: 2}
-    amountItem: 1
-    ammo: 10
-    id: -1
   - itemElement: {fileID: 11400000, guid: 76eeae42fa06d524b999128e997522e8, type: 2}
     amountItem: 1
     ammo: 10
@@ -12920,6 +12916,7 @@ GameObject:
   - component: {fileID: 1890147639320098363}
   - component: {fileID: 1890147639320098364}
   - component: {fileID: 8635163534980895511}
+  - component: {fileID: 8635163534980895512}
   m_Layer: 0
   m_Name: Gordon_78
   m_TagString: NPC
@@ -12945,8 +12942,8 @@ MonoBehaviour:
   firstReply: Welcome stranger to my office. I am Col. Gordon. I command the soldiers
     on this island. How can I help you?
   cbReply: Hello again. What do you want from me this time?
-  firstReplyClip: {fileID: 0}
-  cbReplyClip: {fileID: 0}
+  firstReplyClip: {fileID: 8300000, guid: e7443c35347cbab4fb32aa91bf0e2005, type: 3}
+  cbReplyClip: {fileID: 8300000, guid: 40a1f4c9e2047e64f80062594f66108b, type: 3}
   modules:
   - {fileID: 11400000, guid: 3d8112346a4cde64eaf16bf74e55d11f, type: 2}
   - {fileID: 11400000, guid: 8d69eaaa45062054db76992b1fbb9493, type: 2}
@@ -14048,6 +14045,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: EndGordon
+--- !u!114 &8635163534980895512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890147639320098359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b029d7a875edc7a4caec944467ac701b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouth:
+  - {fileID: 1560139008, guid: 1491642bb531302408cbd491cc6273f7, type: 3}
+  - {fileID: -1777373322, guid: 1491642bb531302408cbd491cc6273f7, type: 3}
+  - {fileID: -308621053, guid: 1491642bb531302408cbd491cc6273f7, type: 3}
+  - {fileID: 790708257, guid: 1491642bb531302408cbd491cc6273f7, type: 3}
+  - {fileID: -856376802, guid: 1491642bb531302408cbd491cc6273f7, type: 3}
+  - {fileID: -70769705, guid: 1491642bb531302408cbd491cc6273f7, type: 3}
+  closedEyes: {fileID: -2005929861, guid: 1491642bb531302408cbd491cc6273f7, type: 3}
 --- !u!61 &8723602939703179307
 BoxCollider2D:
   m_ObjectHideFlags: 0

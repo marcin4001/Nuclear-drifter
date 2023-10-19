@@ -25,6 +25,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 1c4c955b6c6ad904781b327b1be2b99e, type: 3}
+    pitchClip: 0
   - choice: What happened to the people of Old Zeland?
     reply: On the continent, only people who have hidden in the subway survived.
       Other people died or turned into zombies. In 2229 people left the subway and
@@ -37,6 +41,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: cd5dceae93e255943a95e2bb8243a32d, type: 3}
+    pitchClip: 0
   - choice: What was the reason for the beginning of the war?
     reply: The main cause of the war was the dispute over the last uranium deposits
       in the world. The United States discovered a large deposit of this material
@@ -50,6 +58,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 6b86a8691d3c49242b92ffa9031d8e92, type: 3}
+    pitchClip: 0
   - choice: This is all I wanted to know.
     reply: Ok. What else do you want from me?
     nextModule: 0
@@ -60,3 +72,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 42df75481c8924e4a9b9a0126021d127, type: 3}
+    pitchClip: 0

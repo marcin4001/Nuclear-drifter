@@ -24,6 +24,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 1
     workOpt: 6
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: dc834ac78bc19414b96630f55fb48dc4, type: 3}
+    pitchClip: 0
   - choice: Unfortunately, I can't do that. I'm too weak.
     reply: Ok, I'll delegate this task to someone else.
     nextModule: 0
@@ -34,3 +38,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 5dc86106e2857734f82e79341d82300c, type: 3}
+    pitchClip: 0

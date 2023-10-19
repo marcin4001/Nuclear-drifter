@@ -25,6 +25,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: bc742f5fa82458946b52aecb06f5d426, type: 3}
+    pitchClip: 0
   - choice: What is the geopolitical situation of this region?
     reply: For 200 years there was no war in this region. The United States took
       over Moolow Isles. The continent called Old Zealand belongs to people living
@@ -38,6 +42,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 6e7eefd735b7e2b4f88c759abbcd69a1, type: 3}
+    pitchClip: 0
   - choice: Is there anything else I can do for you, sir?
     reply: Yes, I have one task for a trusted person like you. Since the end of the
       war, we have been searching for uranium deposits on the continent. If you can
@@ -51,6 +59,10 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 35320c77f3cdd66418742a91205d6fa9, type: 3}
+    pitchClip: 0
   - choice: Goodbye, sir
     reply: 
     nextModule: -1
@@ -61,3 +73,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
