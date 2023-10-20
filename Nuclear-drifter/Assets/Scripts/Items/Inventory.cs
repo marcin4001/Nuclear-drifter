@@ -284,6 +284,23 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveAmmo(Slot _slot, int _ammo)
+    {
+        if (_slot.isGun())
+        {
+            if (_slot.ammo > 0)
+            {
+                _slot.ammo -= _ammo;
+                if(_slot.ammo < 0)
+                    _slot.ammo = 0;
+            }
+            else
+            {
+                gUI.AddText("Ammo is over!");
+            }
+        }
+    }
+
     public void RemoveAllUni(Slot _slot)
     {
         slots.Remove(_slot);

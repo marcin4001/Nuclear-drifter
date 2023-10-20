@@ -198,7 +198,7 @@ public class CombatSystem : MonoBehaviour
                     gUI.AddText("You missed!");
                     misses += 1;
                 }
-                inv.RemoveOne(weaponSlot);
+                inv.RemoveAmmo(weaponSlot, currentWeapon.GetAmmoToRemove());
                 if (weaponSlot.isOutOfAmmo())
                 {
                     gUI.AddText("Out of ammo!");

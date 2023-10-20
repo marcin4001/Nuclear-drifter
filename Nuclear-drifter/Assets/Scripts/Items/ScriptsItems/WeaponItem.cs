@@ -11,6 +11,7 @@ public class WeaponItem : Item
     public bool isBomb = false;
     public int soundId = 0;
     public float criticChance;
+    public bool multishot = false;
 
     private void Awake()
     {
@@ -22,5 +23,17 @@ public class WeaponItem : Item
         CombatSystem combat = FindObjectOfType<CombatSystem>();
         if (combat != null) combat.SelectWeapon(this);
         //Debug.Log("Use: " + name);
+    }
+
+    public int GetAmmoToRemove()
+    {
+        if(multishot)
+        {
+            return 3;
+        }
+        else
+        {
+            return 1;
+        }
     }
 }

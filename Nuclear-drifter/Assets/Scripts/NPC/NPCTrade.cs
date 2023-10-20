@@ -6,6 +6,7 @@ public class NPCTrade : MonoBehaviour
 {
     public string nameNPC;
     public float distance = 1.1f;
+    public bool useAlternative = false;
     private PlayerClickMove player;
     private GUIScript gUI;
     private ChangeDirectionNPC dir;
@@ -37,7 +38,7 @@ public class NPCTrade : MonoBehaviour
                 Vector3 dirPlayer = transform.parent.position - player.transform.position;
                 player.SetDir((Vector2)dirPlayer);
             }
-            trade.Open();
+            trade.Open(useAlternative);
         }
         else
         {

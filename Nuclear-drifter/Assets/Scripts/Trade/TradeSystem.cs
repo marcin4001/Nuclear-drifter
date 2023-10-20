@@ -73,14 +73,58 @@ public class TradeSystem : MonoBehaviour
         typeSc.inBox = 0;
     }
 
-    public void Open()
+    public void Open(bool useAlternative = false)
     {
+        if(offer != null)
+        {
+            if(offer.isAlternative)
+            {
+                if (useAlternative)
+                {
+                    slots = offer.alternativeSlot;
+                }
+                else
+                {
+                    slots = offer.slots;
+                }
+                SetItems();
+            }
+        }
         active = true;
         tradeGO.SetActive(active);
         gUI.move.active = !active;
         gUI.blockGUI = active;
         gUI.DeactiveBtn(!active);
         typeSc.inBox = 2;
+    }
+
+    public void SetItems()
+    {
+        if(slots == null)
+        {
+            foreach(TradeSlot slot in tradeSlots)
+                slot.ClearSlot();
+            return;
+        }
+        if (slots.Count > 0)
+        {
+            for (int i = 0; i < tradeSlots.Length; i++)
+            {
+                if (i < slots.Count)
+                {
+                    tradeSlots[i].SetSlot(slots[i]);
+                }
+                else
+                {
+                    tradeSlots[i].ClearSlot();
+                }
+            }
+        }
+        else
+        {
+            foreach (TradeSlot slot in tradeSlots)
+                slot.ClearSlot();
+        }
     }
 
     public bool SellSlotIsEmpty()

@@ -635,6 +635,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -4457,16 +4481,16 @@ TextureImporter:
       Fred_175: 5374659190746749379
       Fred_114: -5415923136537915987
       Fred_171: 1184476360310926710
-      Fred_84: 2943547819888076426
-      Fred_19: -3476463125803492527
-      Fred_38: -1988475889940632651
-      Fred_166: 3238124205866908287
-      Fred_11: -4540256925963281346
-      Fred_169: -676250618519350372
-      Fred_126: -7838253289498297515
-      Fred_105: 3050082212423032488
-      Fred_150: -2579695013355160971
       Fred_23: 8012554976967913024
+      Fred_38: -1988475889940632651
+      Fred_126: -7838253289498297515
+      Fred_84: 2943547819888076426
+      Fred_166: 3238124205866908287
+      Fred_19: -3476463125803492527
+      Fred_169: -676250618519350372
+      Fred_105: 3050082212423032488
+      Fred_11: -4540256925963281346
+      Fred_150: -2579695013355160971
       Fred_173: 1770943271744938197
       Fred_109: 6073283418051442240
       Fred_94: 3284569760401083222
@@ -4515,13 +4539,13 @@ TextureImporter:
       Fred_52: 382118092886929658
       Fred_81: 5425423631194430705
       Fred_58: 4989902287988667515
-      Fred_71: -4658908835093189088
       Fred_25: 3121563624417004496
       Fred_124: 7535482146179979985
       Fred_134: -2339413095967102239
+      Fred_71: -4658908835093189088
       Fred_9: 1426910817453788685
-      Fred_145: -1224974082720314372
       Fred_2: 9039676152371128785
+      Fred_145: -1224974082720314372
       Fred_160: -6046884784687300203
       Fred_59: -3143812438648961877
       Fred_10: -700494998291956438
@@ -4548,8 +4572,8 @@ TextureImporter:
       Fred_68: 2089656235476899311
       Fred_155: -8385877883328608120
       Fred_54: -5805238370415048159
-      Fred_162: 8975543516730201022
       Fred_167: 8955492854583323332
+      Fred_162: 8975543516730201022
       Fred_143: 3129783974631772895
       Fred_101: -5304390993211939336
       Fred_91: 4359645471294905031
