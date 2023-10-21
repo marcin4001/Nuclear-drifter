@@ -5776,6 +5776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameNPC: Gun Dealer
   distance: 1.75
+  useAlternative: 0
 --- !u!1 &541945117
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,6 +6586,8 @@ MonoBehaviour:
     amountItem: 2
     ammo: 0
     id: -1
+  isAlternative: 0
+  alternativeSlot: []
 --- !u!4 &876790106
 Transform:
   m_ObjectHideFlags: 0
@@ -10302,6 +10305,10 @@ PrefabInstance:
     - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
       propertyPath: isLocked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
+      propertyPath: sequence
+      value: LLRR
       objectReference: {fileID: 0}
     - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
       propertyPath: canUsePicklock

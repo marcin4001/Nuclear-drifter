@@ -5587,6 +5587,8 @@ MonoBehaviour:
     amountItem: 3
     ammo: 0
     id: -1
+  isAlternative: 0
+  alternativeSlot: []
 --- !u!4 &485249317
 Transform:
   m_ObjectHideFlags: 0
@@ -12484,6 +12486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameNPC: Food Seller
   distance: 1.75
+  useAlternative: 0
 --- !u!61 &4835852897259020540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13143,6 +13146,10 @@ PrefabInstance:
     - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
+      propertyPath: sequence
+      value: RLLR
       objectReference: {fileID: 0}
     - target: {fileID: 1038475, guid: 69e21ab94fdf6bc499cc795c743cebc8, type: 3}
       propertyPath: canUsePicklock

@@ -11,11 +11,13 @@ public class Container : MonoBehaviour
     public bool isLocked = true;
     public int keyId = -1;
     public bool canUsePicklock = false;
+    public string sequence = "";
     private EqChestController controller;
     private PlayerClickMove player;
     private GUIScript gUI;
     private SoundsTrigger sound;
     private SoundUse soundUse;
+    private LockpickingPanel lockpickingPanel;
     private float chanceNoOpenLock = 0.2f;
 
     // Start is called before the first frame update
@@ -26,6 +28,7 @@ public class Container : MonoBehaviour
         gUI = FindObjectOfType<GUIScript>();
         sound = FindObjectOfType<SoundsTrigger>();
         soundUse = FindObjectOfType<SoundUse>();
+        lockpickingPanel = FindObjectOfType<LockpickingPanel>();
         if(keyId > -1)
         {
             isLocked = !controller.GetKeyUse(indexEq);
@@ -56,34 +59,36 @@ public class Container : MonoBehaviour
                 }
                 if (canUsePicklock)
                 {
-                    float randomChanceNum = Random.Range(0f, 1f);
-                    if (chanceNoOpenLock >= randomChanceNum)
-                    {
-                        gUI.AddText("The lock has not been");
-                        gUI.AddText("opened");
-                        gUI.AddText("Your lockpick has been");
-                        gUI.AddText("broken");
-                        Slot lockpick = controller.GetInvPlayer().FindItem(keyId);
-                        controller.GetInvPlayer().RemoveOne(lockpick);
-                        sound.PlayBreakLockpick();
-                        return;
-                    }
+                    lockpickingPanel.Open(this);
+                    return;
+                    //float randomChanceNum = Random.Range(0f, 1f);
+                    //if (chanceNoOpenLock >= randomChanceNum)
+                    //{
+                    //    gUI.AddText("The lock has not been");
+                    //    gUI.AddText("opened");
+                    //    gUI.AddText("Your lockpick has been");
+                    //    gUI.AddText("broken");
+                    //    Slot lockpick = controller.GetInvPlayer().FindItem(keyId);
+                    //    controller.GetInvPlayer().RemoveOne(lockpick);
+                    //    sound.PlayBreakLockpick();
+                    //    return;
+                    //}
                 }
                 OpenBox();
                 isLocked = false;
                 controller.SetKeyUse(indexEq);
                 gUI.AddText("Lock has been opened");
-                if (canUsePicklock)
-                {
-                    float randomNum = Random.Range(0f, 1f);
-                    if(randomNum < 0.6f)
-                    {
-                        Slot lockpick = controller.GetInvPlayer().FindItem(keyId);
-                        controller.GetInvPlayer().RemoveOne(lockpick);
-                        gUI.AddText("Your lockpick has been");
-                        gUI.AddText("broken");
-                    }
-                }
+                //if (canUsePicklock)
+                //{
+                //    float randomNum = Random.Range(0f, 1f);
+                //    if(randomNum < 0.6f)
+                //    {
+                //        Slot lockpick = controller.GetInvPlayer().FindItem(keyId);
+                //        controller.GetInvPlayer().RemoveOne(lockpick);
+                //        gUI.AddText("Your lockpick has been");
+                //        gUI.AddText("broken");
+                //    }
+                //}
             }
             else
             {
@@ -124,6 +129,24 @@ public class Container : MonoBehaviour
             else
                 gUI.AddText("The " + nameObj + " is too far");
         }
+    }
+
+    public void BrokenLockpick()
+    {
+        gUI.AddText("The lock has not been");
+        gUI.AddText("opened");
+        gUI.AddText("Your lockpick has been");
+        gUI.AddText("broken");
+        Slot lockpick = controller.GetInvPlayer().FindItem(keyId);
+        controller.GetInvPlayer().RemoveOne(lockpick);
+        sound.PlayBreakLockpick();
+    }
+
+    public void OpenWithLockpick()
+    {
+        OpenBox();
+        isLocked = false;
+        controller.SetKeyUse(indexEq);
     }
 
     public void LockOpen()

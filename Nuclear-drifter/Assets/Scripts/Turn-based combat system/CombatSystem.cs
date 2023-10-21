@@ -178,7 +178,17 @@ public class CombatSystem : MonoBehaviour
             SkillsAndPerks.playerSkill.AddUses(currentWeapon);
             if(weaponSlot.isGun())
             {
-                fightSound.PlayWeapon(currentWeapon.soundId);
+                if (currentWeapon.multishot)
+                {
+                    if(weaponSlot.ammo < 2)
+                        fightSound.PlayWeapon(currentWeapon.oneShotSoundId);
+                    else 
+                        fightSound.PlayWeapon(currentWeapon.soundId);
+                }
+                else
+                {
+                    fightSound.PlayWeapon(currentWeapon.soundId);
+                }
                 int randomNumber = Random.Range(0, 101);
                 if ((randomNumber <= SkillsAndPerks.playerSkill.chanceToShot) || (misses >= 2))
                 {

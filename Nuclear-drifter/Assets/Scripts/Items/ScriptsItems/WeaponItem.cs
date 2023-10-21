@@ -12,6 +12,7 @@ public class WeaponItem : Item
     public int soundId = 0;
     public float criticChance;
     public bool multishot = false;
+    public int oneShotSoundId = 0;
 
     private void Awake()
     {

@@ -4575,6 +4575,11 @@ PrefabInstance:
       propertyPath: indexEq
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1902664514317690706, guid: 3e9f60e6fcda2c143ad693247044f5da,
+        type: 3}
+      propertyPath: sequence
+      value: LRRLLR
+      objectReference: {fileID: 0}
     - target: {fileID: 3143905289919212441, guid: 3e9f60e6fcda2c143ad693247044f5da,
         type: 3}
       propertyPath: m_RootOrder
@@ -6087,6 +6092,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59a57754d95c57d4ba4cfff0e6d75600, type: 3}
+--- !u!1 &1228701108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228701110}
+  - component: {fileID: 1228701109}
+  m_Layer: 0
+  m_Name: AddItem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1228701109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228701108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e18ec092f233f845a78ad77601c25e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemElement: {fileID: 11400000, guid: 54152939112728149b6b49d77d41589a, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
+  keyCode: 283
+--- !u!4 &1228701110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228701108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1298921268
 GameObject:
   m_ObjectHideFlags: 0
@@ -6721,6 +6776,8 @@ MonoBehaviour:
     amountItem: 2
     ammo: 0
     id: -1
+  isAlternative: 0
+  alternativeSlot: []
 --- !u!4 &1356975660
 Transform:
   m_ObjectHideFlags: 0
@@ -7992,6 +8049,10 @@ PrefabInstance:
     - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
+      propertyPath: sequence
+      value: LRRLRRRLRL
       objectReference: {fileID: 0}
     - target: {fileID: 21783885, guid: 48632155b43612a429e59f0c92c116c3, type: 3}
       propertyPath: canUsePicklock
