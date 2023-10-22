@@ -15,10 +15,12 @@ public class PrologueController : MonoBehaviour
     public string sceneName;
     public bool showLoading = true;
     private LoadingScreen loading;
+    private AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
         loading = FindObjectOfType<LoadingScreen>();
+        source = GetComponent<AudioSource>();
         backgroundImg.overrideSprite = prologueObjs[currentIndex].backgroundImg;
         text.text = prologueObjs[currentIndex].text;
         StartCoroutine(StartActiveEnter());
@@ -29,6 +31,11 @@ public class PrologueController : MonoBehaviour
         activeEnter = false;
         yield return new WaitForSeconds(1.5f);
         activeEnter = true;
+        if(source != null)
+        {
+            source.clip = prologueObjs[currentIndex].clip;
+            source.Play();
+        }
     }
 
     // Update is called once per frame
@@ -42,6 +49,8 @@ public class PrologueController : MonoBehaviour
 
     private IEnumerator ChangeBgImage()
     {
+        if(source != null)
+            source.Stop();
         activeEnter = false;
         anim.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1.5f);
@@ -60,6 +69,11 @@ public class PrologueController : MonoBehaviour
         }
         anim.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
+        if(source != null)
+        {
+            source.clip = prologueObjs[currentIndex].clip;
+            source.Play();
+        }
         activeEnter = true;
     }
 }

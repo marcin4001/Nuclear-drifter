@@ -14,6 +14,7 @@ public class SoundUse : MonoBehaviour
     public AudioClip pickUpClip;
     public AudioClip dropClip;
     public AudioClip lockClip;
+    public AudioClip lockpickingGoodClip;
     public AudioClip levelUpClip;
     private AudioSource source;
 
@@ -75,6 +76,11 @@ public class SoundUse : MonoBehaviour
     public void PlayLock()
     {
         source.PlayOneShot(lockClip);
+    }
+
+    public void PlayLockpickingGood()
+    {
+        source.PlayOneShot(lockpickingGoodClip);
     }
 
     public void PlayLevelUp()

@@ -221,6 +221,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 558392523}
   m_RootOrder: 2
@@ -232,7 +233,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &28157951
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -245,6 +246,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -438,6 +440,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -650,6 +653,7 @@ GameObject:
   - component: {fileID: 558392520}
   - component: {fileID: 558392525}
   - component: {fileID: 558392524}
+  - component: {fileID: 558392526}
   m_Layer: 5
   m_Name: PrologueCanvas
   m_TagString: Untagged
@@ -728,6 +732,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1723312262}
   - {fileID: 1478499153}
@@ -760,30 +765,36 @@ MonoBehaviour:
       of Old Zealand. The United States government wanted to mine these uranium deposits,
       but the government of Old Zealand did not agree. Thus began a 30-year conflict
       over uranium.
+    clip: {fileID: 8300000, guid: b707c9b06ec12084f9e3a4f8250e1ed8, type: 3}
   - backgroundImg: {fileID: 21300000, guid: f793ea123d217fc4084e9ea2d69ebe88, type: 3}
     text: On November 14, 2089, a nuclear war began that lasted 3 hours. The U.S.
       Army and Old Zealand used their entire nuclear arsenal in this battle.
+    clip: {fileID: 8300000, guid: 77219d83454594148840ed497180af39, type: 3}
   - backgroundImg: {fileID: 21300000, guid: 215f6fe1502230645b259ee8f23dff83, type: 3}
     text: Many people died during the conflict. The only survivors were people who
       hid in the subway under Old Zealand. In the subway they created their camp
       where they lived for many decades because the area on the surface was highly
       irradiated.
+    clip: {fileID: 8300000, guid: 3b495b681460d3443a337312c9f2d31e, type: 3}
   - backgroundImg: {fileID: 21300000, guid: b0d51f55aa2d9c941b145648be2b0a6a, type: 3}
     text: In 2229, after 140 years, people decided to leave the safety of the metropolitan
       area and go outside. They headed to the southwest, where they established the
       first settlement and named it Woodhill. Over the next few years, people split
       up and established other settlements scattered across the continent.
+    clip: {fileID: 8300000, guid: 7a2bc04f6d8458b4495d323a7f638a4e, type: 3}
   - backgroundImg: {fileID: 21300000, guid: d17b26906a7613e43b111784fb085a88, type: 3}
     text: On April 12, 2289, a farmer raising two-headed sheep noticed that his well
       had gone dry. Terrified that his sheep would perish, he decided to go on an
       expedition in search of water. He took with him a map given to him by his grandfather,
       a wolf knife and some provisions. The map showed only one point in the direction
       the farmer decided to go...
+    clip: {fileID: 8300000, guid: 0336c4df3c7036541974f526593ce05e, type: 3}
   text: {fileID: 2010836995}
   backgroundImg: {fileID: 1723312263}
   anim: {fileID: 1723312265}
   activeEnter: 1
   sceneName: MainWorld
+  showLoading: 1
 --- !u!114 &558392525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,6 +807,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0875dcee7fbc7b9418c2ee9bc42e5047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &558392526
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558392519}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &873948787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1010,7 +1117,7 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
-  serializedVersion: 3
+  serializedVersion: 4
   m_GIWorkflowMode: 1
   m_EnableBakedLightmaps: 0
   m_EnableRealtimeLightmaps: 0
@@ -1023,7 +1130,7 @@ LightingSettings:
   m_LightmapMaxSize: 1024
   m_BakeResolution: 40
   m_Padding: 2
-  m_TextureCompression: 1
+  m_LightmapCompression: 2
   m_AO: 0
   m_AOMaxDistance: 1
   m_CompAOExponent: 1
@@ -1064,6 +1171,7 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaDirect: 0.5
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
+  m_PVRTiledBaking: 0
 --- !u!1 &1478499152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1200,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2002810790}
   - {fileID: 2010836994}
@@ -1307,6 +1416,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 558392523}
   m_RootOrder: 0
@@ -1356,7 +1466,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!95 &1723312265
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1369,6 +1479,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -1487,6 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1519,6 +1631,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1620,6 +1733,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1478499153}
   m_RootOrder: 0
@@ -1699,6 +1813,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1478499153}
   m_RootOrder: 1

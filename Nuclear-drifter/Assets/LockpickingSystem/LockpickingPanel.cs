@@ -20,12 +20,16 @@ public class LockpickingPanel : MonoBehaviour
     private MapControl map;
     private PauseMenu menu;
     private TypeScene typeSc;
+    private SoundUse soundUse;
+    private SoundsTrigger soundsTrigger;
     // Start is called before the first frame update
     void Start()
     {
         map = FindObjectOfType<MapControl>();
         menu = FindObjectOfType<PauseMenu>();
         typeSc = FindObjectOfType<TypeScene>();
+        soundUse = FindObjectOfType<SoundUse>();
+        soundsTrigger = FindObjectOfType<SoundsTrigger>();
         padlockSignImg.overrideSprite = greyPadlock;
         chanceText.text = "Chance: " + chance;
         active = false;
@@ -63,6 +67,7 @@ public class LockpickingPanel : MonoBehaviour
         map.keyActive = true;
         menu.activeEsc = true;
         typeSc.inMenu = false;
+        soundsTrigger.PlayClickButton();
     }
 
     public void RightButton()
@@ -88,6 +93,7 @@ public class LockpickingPanel : MonoBehaviour
                 Hide();
                 return;
             }
+            soundUse.PlayLockpickingGood();
             padlockSignImg.overrideSprite = greenPadlock;
         }
         else
@@ -104,6 +110,7 @@ public class LockpickingPanel : MonoBehaviour
                 padlockSignImg.overrideSprite = redPadlock;
                 chanceText.text = "Chance: " + chance;
                 currentSeqIndex = 0;
+                soundUse.PlayLock();
             }
         }
     }
