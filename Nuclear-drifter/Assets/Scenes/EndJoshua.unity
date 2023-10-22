@@ -654,6 +654,8 @@ GameObject:
   - component: {fileID: 558392525}
   - component: {fileID: 558392524}
   - component: {fileID: 558392526}
+  - component: {fileID: 558392527}
+  - component: {fileID: 558392528}
   m_Layer: 5
   m_Name: EndingCanvas
   m_TagString: Untagged
@@ -764,20 +766,24 @@ MonoBehaviour:
       every settlement in Old Zealand. The event allowed the settlements to develop
       more dynamically. Settlers began using pre-war electrical devices such as computers
       and telephones.
+    clip: {fileID: 8300000, guid: 7856f6b23aca191468400d58696ebd7e, type: 3}
   - backgroundImg: {fileID: 21300000, guid: 7ced9fbbf765a084abe8c31b342b2ef2, type: 3}
     text: In 2290, a council of all settlement leaders met in Watown. At this council,
       it was agreed that Watown would be the new capital of Old Zealand, and Joshua
       became the first president. A police force and 1 branch of the army were also
       established.
+    clip: {fileID: 8300000, guid: 49b7f99351bb88b42a40d38703df87b2, type: 3}
   - backgroundImg: {fileID: 21300000, guid: 1e221a154e70f804fb86cbcdeda4df84, type: 3}
     text: A few months after the launch of the nuclear power plant, the US military
       withdrew from Moolow Island. This marked the final defeat of the US in the
       war for the last uranium deposits. The island was returned to the administrative
       composition of Old Zealand.
+    clip: {fileID: 8300000, guid: 52701bfb4e2d8404db002d24f6cd833b, type: 3}
   - backgroundImg: {fileID: 21300000, guid: d17b26906a7613e43b111784fb085a88, type: 3}
     text: 'The young farmer who found the nuclear power plant has returned home and
       to his mutant sheep. Leaders of the settlements never learned that this young
       boy was the grandson of the last overseer. '
+    clip: {fileID: 8300000, guid: a2bc8e919c9f3d8448f85847e1d78ee1, type: 3}
   text: {fileID: 2010836995}
   backgroundImg: {fileID: 1723312263}
   anim: {fileID: 1723312265}
@@ -809,6 +815,115 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_ach: 15
+--- !u!82 &558392527
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558392519}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &558392528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558392519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8776e3cdc3d653479764d77317e4371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: sfxSound
 --- !u!1001 &873948787
 PrefabInstance:
   m_ObjectHideFlags: 0

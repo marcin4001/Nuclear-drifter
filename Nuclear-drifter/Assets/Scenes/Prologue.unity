@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 558392525}
   - component: {fileID: 558392524}
   - component: {fileID: 558392526}
+  - component: {fileID: 558392527}
   m_Layer: 5
   m_Name: PrologueCanvas
   m_TagString: Untagged
@@ -903,6 +904,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &558392527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558392519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8776e3cdc3d653479764d77317e4371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: sfxSound
 --- !u!1001 &873948787
 PrefabInstance:
   m_ObjectHideFlags: 0
