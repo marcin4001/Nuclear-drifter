@@ -39,6 +39,7 @@ public class PropertyPlayer : MonoBehaviour
     public bool afterFoodmart = false;
     public string[] consoleText;
     public bool bigSandyFound = false;
+    public bool gotPicture = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -85,6 +86,11 @@ public class PropertyPlayer : MonoBehaviour
     public void SetGotMachete()
     {
         gotMachete = true;
+    }
+
+    public void SetGotPicture()
+    {
+        gotPicture = true;
     }
 
     public void SaveTemp()
