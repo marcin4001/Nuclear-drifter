@@ -61,11 +61,11 @@ MonoBehaviour:
     nextModuleWork: 0
     replyClip: {fileID: 0}
     pitchClip: 0
-  - choice: What's this picture, Mr. President?
-    reply: It's me, lad. I took it from my wrecked office when I was fleeing from
-      the war. I wanted to keep it as a memento of those days when I was still the
-      president of Old Zealand.
-    nextModule: 0
+  - choice: Is there something I can do for you?
+    reply: Yes, I have an issue. My valuable portrait was stolen by wild zombies
+      from the camp near the lead mine. If you could retrieve it for me, I'd be very
+      grateful.
+    nextModule: 1
     missionStart: 0
     startIdMission: 0
     missionEnd: 0

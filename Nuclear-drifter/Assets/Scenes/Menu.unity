@@ -627,6 +627,7 @@ GameObject:
   - component: {fileID: 384472464}
   - component: {fileID: 384472465}
   - component: {fileID: 384472466}
+  - component: {fileID: 384472467}
   m_Layer: 0
   m_Name: PluginSave
   m_TagString: Untagged
@@ -823,6 +824,30 @@ MonoBehaviour:
   - nameEnemy: bandit15
     idMission: 23
     isKilled: 0
+--- !u!114 &384472467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384472459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652895cd055d95a40b7b0ef200e66979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mission:
+    task: Find the president's portrait in the zombie camp
+    alt: 
+    ownerName: Ronald
+    location: Big Sandy
+    start: 0
+    complete: 0
+    idSort: 35
+    exp: 300
+    respect: 0
+    respectUSA: 0
+    idHelp: 35
 --- !u!1 &430795936
 GameObject:
   m_ObjectHideFlags: 0
