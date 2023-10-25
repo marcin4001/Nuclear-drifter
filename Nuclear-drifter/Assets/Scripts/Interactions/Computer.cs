@@ -6,12 +6,14 @@ public class Computer : MonoBehaviour
 {
     public float minDistance = 1.5f;
     private TerminalController terminal;
+    private TerminalTextController terminalText;
     private PlayerClickMove player;
     private GUIScript gUI;
 
     private void Start()
     {
         terminal = FindObjectOfType<TerminalController>();
+        terminalText = FindObjectOfType<TerminalTextController>();
         player = FindObjectOfType<PlayerClickMove>();
         gUI = FindObjectOfType<GUIScript>();
     }
@@ -26,7 +28,14 @@ public class Computer : MonoBehaviour
         }
         if (player.ObjIsNearPlayer(transform.position, minDistance))
         {
-            terminal.StartTerminal();
+            if (terminal != null)
+            {
+                terminal.StartTerminal();
+            }
+            if(terminalText != null)
+            {
+                terminalText.StartTerminal();
+            }
         }
         else
         {
