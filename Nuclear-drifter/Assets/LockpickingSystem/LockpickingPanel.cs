@@ -115,9 +115,14 @@ public class LockpickingPanel : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyUp(KeyCode.L) && !active)
-    //        Open("LRRRL");
-    //}
+    private void Update()
+    {
+        if(active)
+        {
+            if(Input.GetKeyDown(KeyCode.LeftArrow)) 
+                LeftButton();
+            if(Input.GetKeyDown(KeyCode.RightArrow))
+                RightButton();
+        }
+    }
 }

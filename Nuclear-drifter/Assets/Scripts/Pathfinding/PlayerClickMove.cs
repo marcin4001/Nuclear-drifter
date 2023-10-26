@@ -341,6 +341,18 @@ public class PlayerClickMove : MonoBehaviour
                     }
                 }
             }
+
+            if (Input.GetMouseButtonDown(2) && !typeSc.combatState)
+            {
+                if ((int)mode > 0)
+                {
+                    mode--;
+                }
+                else
+                {
+                    mode = (Mouse_mode)(maxMode - 1);
+                }
+            }
         }
         else
         {
@@ -375,6 +387,18 @@ public class PlayerClickMove : MonoBehaviour
                 } else
                 {
                     modeGui = 0;
+                }
+            }
+
+            if (Input.GetMouseButtonDown(2))
+            {
+                if ((int)modeGui > 0)
+                {
+                    modeGui--;
+                }
+                else
+                {
+                    modeGui = (inv_mode)(maxModeGui - 1);
                 }
             }
         }

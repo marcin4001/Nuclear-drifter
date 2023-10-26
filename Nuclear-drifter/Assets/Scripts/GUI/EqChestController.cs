@@ -22,6 +22,7 @@ public class EqChestController : MonoBehaviour
     private GameObject boxObj;
     private SoundsTrigger sound;
     private SoundUse soundUse;
+    private MapControl map;
     //public int testIndex = 0;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class EqChestController : MonoBehaviour
         inBackpack = false;
         sound = FindObjectOfType<SoundsTrigger>();
         soundUse = FindObjectOfType<SoundUse>();
+        map = FindObjectOfType<MapControl>();
     }
 
     public Inventory GetInvPlayer()
@@ -74,6 +76,7 @@ public class EqChestController : MonoBehaviour
             boxObj = null;
         }
         sound.PlayClickButton();
+        map.keyActive = true;
     }
 
     public void CloseCanvas()
@@ -99,10 +102,12 @@ public class EqChestController : MonoBehaviour
             boxObj = obj;
         }
         SetItems();
+        map.keyActive = false;
     }
 
     public void OpenBackpack()
     {
+        map.keyActive = false;
         backImg.overrideSprite = backpackBg;
         active = true;
         goEq.SetActive(active);

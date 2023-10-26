@@ -28,7 +28,7 @@ public class TerminalController : MonoBehaviour
     public Text timeText;
     private TimeGame time;
     private Experience exp;
-
+    private MapControl map;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +41,7 @@ public class TerminalController : MonoBehaviour
         active = false;
         mission = MissionList.global.GetMission(missionId);
         exp = FindObjectOfType<Experience>();
+        map = FindObjectOfType<MapControl>();
         if(mission != null)
         {
             if (mission.complete)
@@ -100,6 +101,7 @@ public class TerminalController : MonoBehaviour
         pause.activeEsc = false;
         typeSc.inMenu = true;
         counter = 0;
+        map.keyActive = false;
         foreach(Device device in devices)
         {
             if(device != null)
@@ -146,6 +148,7 @@ public class TerminalController : MonoBehaviour
         active = false;
         pause.activeEsc = true;
         typeSc.inMenu = false;
+        map.keyActive = true;
     }
 
     public void NButton()

@@ -20,6 +20,7 @@ public class TradeSystem : MonoBehaviour
     private Offer offer;
     private SoundsTrigger sound;
     private SoundUse soundUse;
+    private MapControl map;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class TradeSystem : MonoBehaviour
         inv = FindObjectOfType<Inventory>();
         offer = FindObjectOfType<Offer>();
         soundUse = FindObjectOfType<SoundUse>();
+        map = FindObjectOfType<MapControl>();
         if (offer != null) slots = offer.slots;
         if (slots == null) slots = new List<Slot>();
         else
@@ -63,6 +65,7 @@ public class TradeSystem : MonoBehaviour
         RemoveAll();
         typeSc.inBox = 0;
         sound.PlayClickButton();
+        map.keyActive = true;
     }
 
     public void CloseCanvas()
@@ -96,6 +99,7 @@ public class TradeSystem : MonoBehaviour
         gUI.blockGUI = active;
         gUI.DeactiveBtn(!active);
         typeSc.inBox = 2;
+        map.keyActive = false;
     }
 
     public void SetItems()

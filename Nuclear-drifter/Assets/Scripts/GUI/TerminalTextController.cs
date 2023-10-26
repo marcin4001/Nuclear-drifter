@@ -20,6 +20,7 @@ public class TerminalTextController : MonoBehaviour
     public Text timeText;
     private TimeGame time;
     private Experience exp;
+    private MapControl map;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class TerminalTextController : MonoBehaviour
         terminalCanvas.enabled = false;
         active = false;
         exp = FindObjectOfType<Experience>();
-
+        map = FindObjectOfType<MapControl>();
     }
 
     // Update is called once per frame
@@ -75,6 +76,7 @@ public class TerminalTextController : MonoBehaviour
         active = true;
         pause.activeEsc = false;
         typeSc.inMenu = true;
+        map.keyActive = false;
     }
 
     public void Exit()
@@ -84,5 +86,6 @@ public class TerminalTextController : MonoBehaviour
         active = false;
         pause.activeEsc = true;
         typeSc.inMenu = false;
+        map.keyActive = true;
     }
 }
