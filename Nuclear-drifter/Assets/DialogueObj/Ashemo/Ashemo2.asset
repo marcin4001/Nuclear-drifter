@@ -28,6 +28,7 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 8300000, guid: 7ce4ac57778d3b243ad0b1db53d8bee3, type: 3}
+    pitchClip: 0
   - choice: Where is Yorkset?
     reply: "The Yorkset settlement is northeast of here. It's a settlement by the
       ocean. The arrogant Jaxon is the leader of this settlement. I advise you to
@@ -43,6 +44,7 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 8300000, guid: ff63074ed673ed141ba9565667aa8b8d, type: 3}
+    pitchClip: 1
   - choice: "\rTell me about New Tolham."
     reply: New Tolham is a settlement by the ocean, which I founded many years ago.
       Here you'll find a hotel with free rooms, a grocery store and the Jason shepherd's
@@ -59,6 +61,7 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 8300000, guid: c3d44be64b0d47c41ae3de1257f6014b, type: 3}
+    pitchClip: 0
   - choice: "\rCan I do something for you?"
     reply: I have a job for a traveler. A month ago I ordered gas masks from Moolow
       Isles. I need them for my people and guards because there's radiation area
@@ -75,6 +78,7 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 8300000, guid: 6bedf96f417ae7e4c8336bed49f989f3, type: 3}
+    pitchClip: 0
   - choice: Goodbye
     reply: 
     nextModule: -1
@@ -88,3 +92,4 @@ MonoBehaviour:
     checkEmptyReplyWork: 0
     nextModuleWork: 0
     replyClip: {fileID: 0}
+    pitchClip: 0
