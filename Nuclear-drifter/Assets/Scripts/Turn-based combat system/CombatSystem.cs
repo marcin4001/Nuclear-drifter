@@ -264,10 +264,18 @@ public class CombatSystem : MonoBehaviour
         {
             if (!e.isDead())
             {
-                e.Shot(currentWeapon.damage);
-                gUI.AddText(e.nameEnemy + " was hit!");
-                gUI.AddText(e.nameEnemy + " lost " + currentWeapon.damage + "hp");
-                e.Bomb();
+                if (!e.explosionDefense)
+                {
+                    e.Shot(currentWeapon.damage);
+                    gUI.AddText(e.nameEnemy + " was hit!");
+                    gUI.AddText(e.nameEnemy + " lost " + currentWeapon.damage + "hp");
+                    e.Bomb();
+                }
+                else
+                {
+                    gUI.AddText(e.nameEnemy + " is resistant to");
+                    gUI.AddText("explosion");
+                }
             }
         }
         ClearWeapon();

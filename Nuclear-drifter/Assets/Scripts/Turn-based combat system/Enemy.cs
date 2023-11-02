@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public int soundIndex = -1;
     public GameObject redSqr;
     public float chanceCritic = 0f;
+    public bool explosionDefense = false;
     private CombatSystem system;
     private Collider2D col;
     private GUIScript gUI;
