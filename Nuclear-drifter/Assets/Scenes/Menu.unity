@@ -135,6 +135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreditsCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 198079636496076054, guid: 6cd513d49ff64f34798e3aef060f5395,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2465228022587838535, guid: 6cd513d49ff64f34798e3aef060f5395,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2718,7 +2723,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Marcin4001 \rBeta 1.4"
+  m_Text: "Marcin4001 \rBeta 1.5"
 --- !u!222 &2023045998
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3156,6 +3161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1707065110124447534, guid: 0bfc319ca9a82594b8d160e10b7770dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1707065110272944309, guid: 0bfc319ca9a82594b8d160e10b7770dc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3590,6 +3600,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5059693865406455529, guid: f4877963b39d1be4bb0a9d296ccc0ebf,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059693865406455529, guid: f4877963b39d1be4bb0a9d296ccc0ebf,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8915091809096607890, guid: f4877963b39d1be4bb0a9d296ccc0ebf,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3599,21 +3619,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8915091809641083433, guid: f4877963b39d1be4bb0a9d296ccc0ebf,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8915091809641083433, guid: f4877963b39d1be4bb0a9d296ccc0ebf,
-        type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1280
-      objectReference: {fileID: 0}
-    - target: {fileID: 8915091809641083433, guid: f4877963b39d1be4bb0a9d296ccc0ebf,
-        type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 8915091809641083435, guid: f4877963b39d1be4bb0a9d296ccc0ebf,
         type: 3}

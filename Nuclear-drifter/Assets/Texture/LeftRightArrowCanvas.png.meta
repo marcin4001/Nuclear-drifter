@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d2425e34642ef0418442ac3d1ad70d5
+guid: c13e845fa859bbe42beb4d5899e8fc30
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BakeContextMenu_0
+      name: LeftRightArrowCanvas_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 110
-        width: 109
-        height: 84
+        y: 10
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 221773faca9d54b4db62247b7d440026
-      internalID: -481600496
+      spriteID: 731f8de788eb3534a808dc7ca02a7e3e
+      internalID: 765293443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BakeContextMenu_1
+      name: LeftRightArrowCanvas_1
       rect:
         serializedVersion: 2
-        x: 5
-        y: 69
-        width: 109
-        height: 32
+        x: 48
+        y: 10
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,50 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24a04f6e3b7f2b8409b6a067d9f41eb0
-      internalID: -2031512804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BakeContextMenu_2
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 27
-        width: 109
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abe3c152dfd7f4e478c2b642de152cfa
-      internalID: -521844583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BakeContextMenu_3
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 5
-        width: 21
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1597551f7c025d04b97f835925bbf5e8
-      internalID: 1715047591
+      spriteID: e79b2d776bfb3504ba3b844ed92a7b11
+      internalID: 462390242
       vertices: []
       indices: 
       edges: []
@@ -223,10 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BakeContextMenu_3: 1715047591
-      BakeContextMenu_0: -481600496
-      BakeContextMenu_1: -2031512804
-      BakeContextMenu_2: -521844583
+      LeftRightArrowCanvas_1: 462390242
+      LeftRightArrowCanvas_0: 765293443
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using Newtonsoft.Json.Linq;
 
 public class OptionsMenu : MonoBehaviour
 {
     public Dropdown resDropdown;
+    public Text resLabel;
     public Toggle fullScreenToggle;
     public Toggle talkingHeadToogle;
     public List<string> resText;
     public int currentResolution = 0;
+    public int currentResolutionSelect = 0;
     public bool fullscreen = true;
     public Scrollbar musicScroll;
     public Scrollbar sfxScroll;
@@ -46,6 +49,9 @@ public class OptionsMenu : MonoBehaviour
             if(res.width == Screen.width && res.height == Screen.height)
             {
                 currentResolution = i;
+                currentResolutionSelect = i;
+                if(resLabel != null)
+                    resLabel.text = currentRes;
             }
             i++;
         }
@@ -53,6 +59,8 @@ public class OptionsMenu : MonoBehaviour
         resDropdown.AddOptions(resText);
         resDropdown.value = currentResolution;
         resDropdown.RefreshShownValue();
+
+
         canvasOpt.enabled = false;
         musicScroll.value = PlayerPrefs.GetFloat("mainMusic", 1.0f);
         sfxScroll.value = PlayerPrefs.GetFloat("sfxSound", 1.0f);
@@ -124,6 +132,41 @@ public class OptionsMenu : MonoBehaviour
             canvasScaler.ChangeScale(new Vector2 (resolutions[value].width, resolutions[value].height));
     }
 
+    public void RightButton()
+    {
+        currentResolutionSelect += 1;
+        if(currentResolutionSelect >= resolutions.Length)
+            currentResolutionSelect = 0;
+        ChangeResolutionText();
+        if (sfxSound != null)
+            sfxSound.PlayClickButton();
+    }
+
+    public void LeftButton()
+    {
+        currentResolutionSelect -= 1;
+        if (currentResolutionSelect < 0)
+            currentResolutionSelect = resolutions.Length - 1;
+        ChangeResolutionText();
+        if (sfxSound != null)
+            sfxSound.PlayClickButton();
+    }
+
+    public void ChangeResolutionText()
+    {
+        resLabel.text = resText[currentResolutionSelect];
+    }
+
+    public void ApplyResolution()
+    {
+        Screen.SetResolution(resolutions[currentResolutionSelect].width, resolutions[currentResolutionSelect].height, fullscreen);
+        currentResolution = currentResolutionSelect;
+        if (canvasScaler != null)
+            canvasScaler.ChangeScale(new Vector2(resolutions[currentResolutionSelect].width, resolutions[currentResolutionSelect].height));
+        if (sfxSound != null)
+            sfxSound.PlayClickButton();
+    }
+
     public void ChangeSpeed()
     {
         double speed = speedScroll.value;
@@ -142,6 +185,7 @@ public class OptionsMenu : MonoBehaviour
     public void OpenOptions()
     {
         canvasOpt.enabled = true;
+        ChangeResolutionText();
     }
 
     public void CloseOptions()
@@ -149,5 +193,6 @@ public class OptionsMenu : MonoBehaviour
         canvasOpt.enabled = false;
         if (sfxSound != null)
             sfxSound.PlayClickButton();
+        currentResolutionSelect = currentResolution;
     }
 }
