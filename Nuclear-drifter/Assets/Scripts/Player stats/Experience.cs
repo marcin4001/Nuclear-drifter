@@ -52,6 +52,13 @@ public class Experience : MonoBehaviour
             return false;
     }
 
+    public string GetDescExp()
+    {
+        int expLexel = currentExp - (25 * (5 * level + 4) * (level - 1));
+        int maxExpLevel = (25 * (5 * (level + 1) + 4) * level) - (25 * (5 * level + 4) * (level - 1));
+        return "Level: " + level + "\nExp to the next level: " + expLexel + "/" + maxExpLevel;
+    }
+
     private void UpdateProperty()
     {
         PropertyPlayer.property.currentExp = currentExp;

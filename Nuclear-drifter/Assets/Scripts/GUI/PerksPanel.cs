@@ -151,6 +151,9 @@ public class PerksPanel : MonoBehaviour
         {
             consoleDesc.text += skill + ": " + SkillsAndPerks.playerSkill.Skilled(skill) + "\n";
         }
+        consoleDesc.text += "Chance of Hitting:" + "\n";
+        consoleDesc.text += "- Guns: " + SkillsAndPerks.playerSkill.chanceToShot + "%\n";
+        consoleDesc.text += "- Melee Weapons: " + SkillsAndPerks.playerSkill.chanceToHit + "%\n";
     }
 
     private void IncCounterPerk(Perk perkObj)
@@ -203,10 +206,11 @@ public class PerksPanel : MonoBehaviour
     {
         consoleDesc.text = info + "\n";
         consoleDesc.text += "Your point: " + exp.lvlPoint + " LP\n";
+        consoleDesc.text += exp.GetDescExp() + "\n";
         consoleDesc.text += "Health: " + playerHP.currentHealth + "/" + playerHP.maxHealth + "\n";
         consoleDesc.text += "Hand Damage: " + SkillsAndPerks.playerSkill.handDamage + "\n";
-        consoleDesc.text += "Chance of Hitting:" + "\n";
-        consoleDesc.text += "- Guns: " + SkillsAndPerks.playerSkill.chanceToShot + "%\n";
-        consoleDesc.text += "- Melee Weapons: " + SkillsAndPerks.playerSkill.chanceToHit + "%\n";
+        //consoleDesc.text += "Chance of Hitting:" + "\n";
+        //consoleDesc.text += "- Guns: " + SkillsAndPerks.playerSkill.chanceToShot + "%\n";
+        //consoleDesc.text += "- Melee Weapons: " + SkillsAndPerks.playerSkill.chanceToHit + "%\n";
     }
 }

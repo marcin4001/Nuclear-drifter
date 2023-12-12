@@ -13,6 +13,22 @@ MonoBehaviour:
   m_Name: Gordon8
   m_EditorClassIdentifier: 
   dialogues:
+  - choice: Where should I begin my search, sir?
+    reply: Your first step should be locating Samson in Watown. Samson, as our trusted
+      spy, was tasked by me to identify the last uranium deposits. He's usually found
+      on his farm.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 0
+    workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 8300000, guid: 42798033b9e55b74db103e9c779f4593, type: 3}
+    pitchClip: 0
   - choice: Can you tell me something about nuclear war?
     reply: The nuclear war began on November 14, 2089 and ended after 3 hours. The
       US Army and Old Zealand used their entire nuclear arsenal in this battle. It

@@ -18,14 +18,32 @@ MonoBehaviour:
       carrots and mutapples. Mutapples are a new variety of apple that grew up after
       the war. These apples provide more vitamin C and are 3 times sweeter than pre-war
       apples.
-    nextModule: 1
+    nextModule: 0
     missionStart: 0
     startIdMission: 0
     missionEnd: 0
     endIdMission: 0
-    changeStartIndex: 1
+    changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
+  - choice: I want to buy a mutapple. ($5)
+    reply: Please, your Mutapple.
+    nextModule: 0
+    missionStart: 0
+    startIdMission: 0
+    missionEnd: 0
+    endIdMission: 0
+    changeStartIndex: 0
+    isWorker: 1
+    workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
   - choice: Take care!
     reply: 
     nextModule: -1
@@ -36,3 +54,7 @@ MonoBehaviour:
     changeStartIndex: 0
     isWorker: 0
     workOpt: 0
+    checkEmptyReplyWork: 0
+    nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
