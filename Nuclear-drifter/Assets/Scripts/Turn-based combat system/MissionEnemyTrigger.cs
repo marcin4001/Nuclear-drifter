@@ -6,10 +6,12 @@ public class MissionEnemyTrigger : MonoBehaviour
 {
     public int idEnemy = 0;
     public EnemyMission enemyMission;
+    public string nameEnemy = "";
+    public int idMission;
     // Start is called before the first frame update
     void Start()
     {
-        enemyMission = EnemyMissionList.global.GetEnemy(idEnemy);
+        enemyMission = EnemyMissionList.global.GetEnemy(idEnemy, this);
         if(enemyMission != null)
         {
             if (enemyMission.GetIsKilled())

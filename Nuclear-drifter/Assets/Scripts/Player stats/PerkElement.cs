@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public enum TypePerk
 {
     hp, handDmg, gunDmg, largeGun,
-    radRes, poisonRes, damageRes, repair
+    radRes, poisonRes, damageRes, repair, goodTrader
 }
 
 public class PerkElement : MonoBehaviour

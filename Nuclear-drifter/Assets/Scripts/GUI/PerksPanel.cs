@@ -197,6 +197,9 @@ public class PerksPanel : MonoBehaviour
             case TypePerk.repair:
                 SkillsAndPerks.playerSkill.repair = true;
                 break;
+            case TypePerk.goodTrader:
+                SkillsAndPerks.playerSkill.goodTrader = true;
+                break;
             default:
                 break;
         }

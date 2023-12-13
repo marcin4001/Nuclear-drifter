@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 384472465}
   - component: {fileID: 384472466}
   - component: {fileID: 384472467}
+  - component: {fileID: 384472468}
   m_Layer: 0
   m_Name: PluginSave
   m_TagString: Untagged
@@ -853,6 +854,41 @@ MonoBehaviour:
     respect: 0
     respectUSA: 0
     idHelp: 35
+--- !u!114 &384472468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384472459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f998b1055140d4fae04b863015b91c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missions:
+  - task: Hidden Mission
+    alt: 
+    ownerName: 
+    location: 
+    start: 0
+    complete: 0
+    idSort: 0
+    exp: 0
+    respect: 0
+    respectUSA: 0
+    idHelp: 36
+  - task: Defeat zombies from the Camp before the Mine
+    alt: 
+    ownerName: Marcus
+    location: Big Sandy
+    start: 0
+    complete: 0
+    idSort: 36
+    exp: 750
+    respect: 0
+    respectUSA: 0
+    idHelp: 37
 --- !u!1 &430795936
 GameObject:
   m_ObjectHideFlags: 0

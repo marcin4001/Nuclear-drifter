@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyMissionList : MonoBehaviour
@@ -20,17 +21,42 @@ public class EnemyMissionList : MonoBehaviour
         }
     }
 
-    public EnemyMission GetEnemy(int id)
+    public EnemyMission GetEnemy(int id, MissionEnemyTrigger trigger)
     {
         if (enemies.Length <= 0) return null;
-        if (id >= 0 && id < enemies.Length)
+        if (id < 0) return null;
+        EnemyMission enemy = null;
+        if (id < enemies.Length)
         {
-            return enemies[id];
+            enemy = enemies[id];
+            Debug.Log(1);
         }
         else
         {
-            return null;
-        } 
+            List<EnemyMission> enemyList = enemies.ToList();
+            while (id >= enemyList.Count)
+            {
+                enemyList.Add(new EnemyMission());
+            }
+            enemies = enemyList.ToArray();
+            enemy = enemies[id];
+            Debug.Log(-1);
+        }
+        if (enemy.nameEnemy == "" || enemy.nameEnemy == null)
+        {
+            Debug.Log(trigger.nameEnemy);
+            enemy.nameEnemy = trigger.nameEnemy;
+            enemy.idMission = trigger.idMission;
+        }
+        return enemy;
+        //if (id >= 0 && id < enemies.Length)
+        //{
+        //    return enemies[id];
+        //}
+        //else
+        //{
+        //    return null;
+        //} 
     }
 
     public int HowMunyAlive(int id_mission)

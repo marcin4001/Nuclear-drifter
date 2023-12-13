@@ -20,6 +20,7 @@ public class SkillsAndPerks : MonoBehaviour
     public bool poisonResistance = false;
     public int damageResistance = 0;
     public bool repair = false;
+    public bool goodTrader = false;
     public int meleeWeaponUses = 0;
     public int gunUses = 0;
     public int chanceToHit = 70;
@@ -59,6 +60,7 @@ public class SkillsAndPerks : MonoBehaviour
         poisonResistance = false;
         damageResistance = 0;
         repair = false;
+        goodTrader = false;
         meleeWeaponUses = 0;
         gunUses = 0;
         chanceToHit = chanceToHitDefault;

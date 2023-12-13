@@ -66,7 +66,7 @@ public class MissionListGUI : MonoBehaviour
         {
             foreach(MissionObj mission in list)
             {
-                if (mission.start && !mission.complete)
+                if (mission.start && !mission.complete && mission.ownerName != "")
                 {
                     content += mission.task + "\n";
                     if(mission.alt != "")
@@ -93,7 +93,7 @@ public class MissionListGUI : MonoBehaviour
         {
             foreach (MissionObj mission in list)
             {
-                if (mission.complete)
+                if (mission.complete && mission.ownerName != "")
                 {
                     content += mission.task + "\n";
                     if (mission.alt != "")
