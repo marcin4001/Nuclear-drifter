@@ -2356,6 +2356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idMission: 22
+  onlyStartMission: 1
 --- !u!61 &131428133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5624,6 +5625,8 @@ MonoBehaviour:
     amountItem: 3
     ammo: 0
     id: -1
+  isAlternative: 0
+  alternativeSlot: []
 --- !u!4 &485249317
 Transform:
   m_ObjectHideFlags: 0
@@ -6876,6 +6879,7 @@ MonoBehaviour:
   key: {fileID: 11400000, guid: 1da9c39d5f923c14e9d24e5ab444023c, type: 2}
   rope: {fileID: 0}
   gasMask: {fileID: 0}
+  noNeedKey: 0
   indexTrapdoor: 1
   texts:
   - This is the entrance to

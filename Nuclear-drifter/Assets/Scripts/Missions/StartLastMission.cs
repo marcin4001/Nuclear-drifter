@@ -8,7 +8,8 @@ public class StartLastMission : MonoBehaviour
     public int lastMissionId = 32;
     public int secoundMission = 25;
     public string[] textSecoundMissionStart;
-
+    public int respect = 75;
+    public bool withoutInfo = false;
     private MissionObj preLastMission;
     private MissionObj lastMission;
     private MissionTextGUI textGUI;
@@ -37,9 +38,21 @@ public class StartLastMission : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("StartLastMission");
         if (collision.tag == "Hero" && preLastMission.complete)
         {
+            int currentRespect = MissionList.global.GetCurrentRespect();
+            if(currentRespect < respect)
+            {
+                Destroy(gameObject);
+                return;
+            }
             lastMission.start = true;
+            if(withoutInfo)
+            {
+                Destroy(gameObject);
+                return;
+            }
             textGUI.Show("New Mission: " + lastMission.task);
 
             MissionObj secound_mission = MissionList.global.GetMission(secoundMission);

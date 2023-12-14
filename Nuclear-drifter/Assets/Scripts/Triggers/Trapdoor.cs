@@ -12,7 +12,7 @@ public class Trapdoor : MonoBehaviour
     public Item key;
     public Item rope;
     public Item gasMask;
-
+    public bool noNeedKey = false;
     public int indexTrapdoor = 0;
     public string[] texts;
     public List<string> result;
@@ -70,7 +70,7 @@ public class Trapdoor : MonoBehaviour
         if (!PropertyPlayer.property.trapdoorOpened[indexTrapdoor])
         {
             result.Add("Items needed to open:");
-            if (key != null)
+            if (key != null && !noNeedKey)
             {
                 if (!inv.FindItemB(key.idItem))
                 {
@@ -172,5 +172,10 @@ public class Trapdoor : MonoBehaviour
             PropertyPlayer.property.location = location;
         PropertyPlayer.property.consoleText = gUI.consoleText.ToArray();
         PropertyPlayer.property.SaveTemp();
+    }
+
+    public void SetNoNeedKey()
+    {
+        noNeedKey = true;
     }
 }

@@ -27,4 +27,10 @@ public class MissionDetails
     public bool killAlt;
     public bool noCheckStart;
     public int id_ach = -1;
+    public Trapdoor trapdoor;
+
+    public MissionDetails()
+    {
+        id_ach = -1;
+    }
 }

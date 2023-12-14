@@ -23,6 +23,22 @@ public class MissionNPC : MonoBehaviour
         exp = FindObjectOfType<Experience>();
         respectM = GetComponent<RespectMission>();
         achievement = FindObjectOfType<Achievement>();
+
+        foreach(MissionDetails details in mission)
+        {
+            if(details != null)
+            {
+                MissionObj missionObj = MissionList.global.GetMission(details.id);
+                if(missionObj != null)
+                {
+                    if (missionObj.complete && details.trapdoor != null)
+                    {
+                        Debug.Log("Open trapdoor: " + gameObject.name);
+                        details.trapdoor.SetNoNeedKey();
+                    }
+                }
+            }
+        }
     }
 
     public MissionDetails GetMission(int id)
@@ -63,6 +79,8 @@ public class MissionNPC : MonoBehaviour
             }
             if(m.killAlt)
                 inv.RemoveFew(m.slotItem);
+            if (m.trapdoor != null)
+                m.trapdoor.SetNoNeedKey();
             if (m.id_ach >= 0)
                 achievement.SetAchievement(m.id_ach);
         }
