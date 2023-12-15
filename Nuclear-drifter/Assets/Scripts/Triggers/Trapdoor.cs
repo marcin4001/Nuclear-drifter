@@ -20,6 +20,7 @@ public class Trapdoor : MonoBehaviour
     public Vector2 posInside;
     public bool inside = false;
     public string location;
+    public SubwayIcon subwayIcon;
     private GUIScript gUI;
     private Inventory inv;
     private PlayerClickMove player;
@@ -177,5 +178,7 @@ public class Trapdoor : MonoBehaviour
     public void SetNoNeedKey()
     {
         noNeedKey = true;
+        if (subwayIcon != null)
+            subwayIcon.SetIconActive();
     }
 }
