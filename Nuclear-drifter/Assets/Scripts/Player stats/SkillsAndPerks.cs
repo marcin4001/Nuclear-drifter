@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public enum chanceTo
 {
@@ -45,6 +46,19 @@ public class SkillsAndPerks : MonoBehaviour
             return perks[id];
         else
             return null;
+    }
+
+    public void AddPerk(int id, string namePerk)
+    {
+        if (id < perks.Length)
+            return;
+        List<Perk> tempList = perks.ToList();
+        while (tempList.Count <= id)
+        {
+            tempList.Add(new Perk());
+        }
+        perks = tempList.ToArray();
+        perks[id].name = namePerk;
     }
 
     public void SetDefault()

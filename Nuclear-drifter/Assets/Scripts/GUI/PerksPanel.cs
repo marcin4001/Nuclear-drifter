@@ -50,6 +50,14 @@ public class PerksPanel : MonoBehaviour
                         perk.ChangeTextLevel(tempPerk.level);
                     }
                 }
+                else
+                {
+                    SkillsAndPerks.playerSkill.AddPerk(perk.indexPerk, perk.namePerk);
+                    tempPerk = SkillsAndPerks.playerSkill.GetPerk(perk.indexPerk);
+                    perk.ChangeTextLevel(tempPerk.level);
+                    if (perk.type == TypePerk.goodTrader)
+                        SkillsAndPerks.playerSkill.goodTrader = false;
+                }
             }
         }
     }

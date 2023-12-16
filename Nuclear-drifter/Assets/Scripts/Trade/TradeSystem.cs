@@ -232,6 +232,15 @@ public class TradeSystem : MonoBehaviour
         {
             if (!sellSlot.itemSlot.itemElement.noSell)
             {
+                if(SkillsAndPerks.playerSkill.goodTrader)
+                {
+                    money.amountItem = sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem;
+                    gUI.AddText("You got $" + money.amountItem);
+                    if (money.amountItem > 0) inv.Add(money);
+                    sellSlot.ClearSlot();
+                    soundUse.PlayCash();
+                    return;
+                }
                 if (sellSlot.itemSlot.itemElement.idItem != 300)
                 {
                     money.amountItem = Mathf.RoundToInt((sellSlot.itemSlot.itemElement.value * sellSlot.itemSlot.amountItem) * sellPercent);
