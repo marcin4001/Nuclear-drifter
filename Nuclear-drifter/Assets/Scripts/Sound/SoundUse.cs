@@ -16,6 +16,7 @@ public class SoundUse : MonoBehaviour
     public AudioClip lockClip;
     public AudioClip lockpickingGoodClip;
     public AudioClip levelUpClip;
+    public AudioClip inhaler;
     private AudioSource source;
 
     private void Awake()
@@ -86,5 +87,10 @@ public class SoundUse : MonoBehaviour
     public void PlayLevelUp()
     {
         source.PlayOneShot(levelUpClip);
+    }
+
+    public void PlayInhaler()
+    {
+        source.PlayOneShot(inhaler);
     }
 }

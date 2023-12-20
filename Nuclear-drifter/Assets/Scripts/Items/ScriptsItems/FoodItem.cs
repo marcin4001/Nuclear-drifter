@@ -11,6 +11,8 @@ public class FoodItem : Item
     public bool isPoison = false;
     public bool addRad = false;
     public bool isDrink = false;
+    public bool isInhaler = false;
+    public bool isDrag = false;
     private Health hp;
     private Irrigation irrigation;
 
@@ -38,6 +40,11 @@ public class FoodItem : Item
             if (isDrink) irrigation.Drink();
 
             SoundUse sound = FindObjectOfType<SoundUse>();
+            if(isInhaler)
+            {
+                sound.PlayInhaler();
+                return;
+            }
             if (isDrink) sound.PlayDrink();
             else sound.PlayEat();
         }
