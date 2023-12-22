@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8aa49cb432b61c4d951a82f5f09b891
+guid: 06b4a71b4d0603649afb94465457dde4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dehydrationUI_0
+      name: Trapdoor_ladderDark_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 11
-        width: 28
-        height: 27
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc3bb0eb9f5c6274a90bdec1459d2992
-      internalID: 445098880
+      spriteID: fa463a2d2e502044696f62d554086b55
+      internalID: -919818214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dehydrationUI_1
+      name: Trapdoor_ladderDark_1
       rect:
         serializedVersion: 2
-        x: 49
-        y: 11
-        width: 28
-        height: 27
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f937de986c26b704d9883cea49073fa7
-      internalID: -1952449720
+      spriteID: 4b8b37ef1b0374941b00eb2fbab35df1
+      internalID: 732942731
       vertices: []
       indices: 
       edges: []
@@ -181,8 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dehydrationUI_1: -1952449720
-      dehydrationUI_0: 445098880
+      Trapdoor_ladderDark_0: -919818214
+      Trapdoor_ladderDark_1: 732942731
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -34,6 +34,7 @@ public class GUIScript : MonoBehaviour
     public Image newLvlLabel;
     public Image warningLabel;
     public Image irrigationImg;
+    public Image drugsSignImg;
 
     public Sprite irrigationUp;
     public Sprite irrigationDown;
@@ -63,6 +64,8 @@ public class GUIScript : MonoBehaviour
             newLvlLabel.enabled = false;
         if (warningLabel != null)
             warningLabel.enabled = false;
+        if(drugsSignImg != null)
+            drugsSignImg.enabled = false;
         if(PropertyPlayer.property.consoleText != null)
         {
             foreach(string console_text in PropertyPlayer.property.consoleText)
@@ -118,6 +121,12 @@ public class GUIScript : MonoBehaviour
     {
         if (warningLabel != null)
             warningLabel.enabled = true;
+    }
+
+    public void ShowDrugsSign(bool value)
+    {
+        if(drugsSignImg != null)
+            drugsSignImg.enabled = value;
     }
 
     public void CloseNextLvl()

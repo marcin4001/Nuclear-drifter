@@ -64,9 +64,15 @@ public class SlotElement : MonoBehaviour
                                 return;
                             }
                             FoodItem food = (FoodItem)itemSlot.itemElement;
+                            if(!gUI.GetCombatState() && food.isDrag)
+                            {
+                                gUI.AddText("I'm not fighting anyone");
+                                return;
+                            }
                             food.SetHP(gUI.playerHealth);
                             itemSlot.itemElement.Use();
                             inv.RemoveOne(itemSlot);
+                            if (food.isDrag) UseDrag();
                             if (typeSc.combatState) EatCombatAction();
 
                         }
@@ -147,6 +153,15 @@ public class SlotElement : MonoBehaviour
         if(combat != null)
         {
             combat.UseAP();
+        }
+    }
+
+    public void UseDrag()
+    {
+        CombatSystem combat = FindObjectOfType<CombatSystem>();
+        if (combat != null)
+        {
+            combat.UseDrag();
         }
     }
 

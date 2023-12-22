@@ -42,6 +42,7 @@ public class CombatSystem : MonoBehaviour
     private GridNode grid;
     private AchievementPoison achievementPoison;
     public int misses = 0;
+    public bool useDrag = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -144,6 +145,12 @@ public class CombatSystem : MonoBehaviour
         }
     }
 
+    public void UseDrag()
+    {
+        gUI.ShowDrugsSign(true);
+        useDrag = true;
+    }
+
     private void AfterEat()
     {
         EnemyRound();
@@ -168,9 +175,12 @@ public class CombatSystem : MonoBehaviour
         if(currentWeapon == null)
         {
             fightSound.PlayWeapon(soundHand);
-            enemy.Shot(handDamage);
+            int currentHandDamage = handDamage;
+            if (useDrag)
+                currentHandDamage *= 2;
+            enemy.Shot(currentHandDamage);
             gUI.AddText(enemy.nameEnemy + " was hit!");
-            gUI.AddText(enemy.nameEnemy + " lost " + handDamage + "hp");
+            gUI.AddText(enemy.nameEnemy + " lost " + currentHandDamage + "hp");
             misses = 0;
         }
         else
@@ -190,10 +200,16 @@ public class CombatSystem : MonoBehaviour
                     fightSound.PlayWeapon(currentWeapon.soundId);
                 }
                 int randomNumber = Random.Range(0, 101);
-                if ((randomNumber <= SkillsAndPerks.playerSkill.chanceToShot) || (misses >= 2))
+                int chanceToShot = SkillsAndPerks.playerSkill.chanceToShot;
+                if (useDrag)
+                    chanceToShot = 100;
+                if ((randomNumber <= chanceToShot) || (misses >= 2))
                 {
                     int finalDamage = currentWeapon.damage + SkillsAndPerks.playerSkill.additionalGunDamage;
-                    if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
+                    float criticChance = currentWeapon.criticChance;
+                    if(useDrag)
+                        criticChance *= 2;
+                    if (Random.Range(0f, 1f) <= criticChance)
                     {
                         finalDamage = finalDamage * 2;
                         gUI.AddText("Critical Shot!!!");
@@ -226,10 +242,16 @@ public class CombatSystem : MonoBehaviour
             {
                 fightSound.PlayWeapon(currentWeapon.soundId);
                 int randomNumber = Random.Range(0, 101);
-                if ((randomNumber <= SkillsAndPerks.playerSkill.chanceToHit) || (misses >= 2))
+                int chanceToHit = SkillsAndPerks.playerSkill.chanceToHit;
+                if (useDrag)
+                    chanceToHit = 100;
+                if ((randomNumber <= chanceToHit) || (misses >= 2))
                 {
                     int hitDamage = currentWeapon.damage;
-                    if (Random.Range(0f, 1f) <= currentWeapon.criticChance)
+                    float criticChance = currentWeapon.criticChance;
+                    if (useDrag)
+                        criticChance *= 2;
+                    if (Random.Range(0f, 1f) <= criticChance)
                     {
                         hitDamage = hitDamage * 2;
                         gUI.AddText("Critical hit!!!");
@@ -525,6 +547,8 @@ public class CombatSystem : MonoBehaviour
         soundsMain.Mute(false);
         ClearArea();
         cycle.SetNormalTime();
+        gUI.ShowDrugsSign(false);
+        useDrag = false;
     }
 
     public void SkipBtn()

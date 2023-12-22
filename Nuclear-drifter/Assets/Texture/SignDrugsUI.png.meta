@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8aa49cb432b61c4d951a82f5f09b891
+guid: affab8b18856f7b4f881e3354296ea15
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,11 +129,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dehydrationUI_0
+      name: SignDrugsUI_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 11
+        x: 5
+        y: 6
         width: 28
         height: 27
       alignment: 0
@@ -143,29 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc3bb0eb9f5c6274a90bdec1459d2992
-      internalID: 445098880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dehydrationUI_1
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 11
-        width: 28
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f937de986c26b704d9883cea49073fa7
-      internalID: -1952449720
+      spriteID: 457a861ff08b39047a256060735ca64d
+      internalID: 1049470975
       vertices: []
       indices: 
       edges: []
@@ -181,8 +160,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dehydrationUI_1: -1952449720
-      dehydrationUI_0: 445098880
+      SignDrugsUI_0: 1049470975
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
