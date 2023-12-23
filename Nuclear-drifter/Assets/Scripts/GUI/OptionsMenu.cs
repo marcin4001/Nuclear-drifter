@@ -11,6 +11,8 @@ public class OptionsMenu : MonoBehaviour
     public Text resLabel;
     public Toggle fullScreenToggle;
     public Toggle talkingHeadToogle;
+    public KnobInput fullScreenKnob;
+    public KnobInput talkingHeadKnob;
     public List<string> resText;
     public int currentResolution = 0;
     public int currentResolutionSelect = 0;
@@ -36,8 +38,7 @@ public class OptionsMenu : MonoBehaviour
         Resolution[] temp = Screen.resolutions;
         resolutions = temp.Where(r => r.width >= 800 && r.width <= 1920 && r.refreshRate == 60).ToArray();
         fullscreen = Screen.fullScreen;
-        fullScreenToggle.isOn = fullscreen;
-        talkingHeadToogle.isOn = PlayerPrefs.GetInt("talkingHead", 1) != 0;
+        
         head = FindObjectOfType<TalkingHeadController>();
         if (head != null)
             head.SetSwitchOn(PlayerPrefs.GetInt("talkingHead", 1) != 0);
@@ -84,6 +85,14 @@ public class OptionsMenu : MonoBehaviour
         soundUse = FindObjectOfType<SoundUse>();
         if (soundUse != null)
             soundUse.SetVolume(sfxScroll.value);
+        if (fullScreenToggle.gameObject.activeSelf)
+            fullScreenToggle.isOn = fullscreen;
+        if (talkingHeadToogle.gameObject.activeSelf)
+            talkingHeadToogle.isOn = PlayerPrefs.GetInt("talkingHead", 1) != 0;
+        if (fullScreenKnob != null)
+            fullScreenKnob.SetIsOn(fullscreen);
+        if (talkingHeadKnob != null)
+            talkingHeadKnob.SetIsOn(PlayerPrefs.GetInt("talkingHead", 1) != 0);
         canvasScaler = FindObjectOfType<CanvasScaler600p>();
         if (canvasScaler != null)
             canvasScaler.ChangeScale(new Vector2 (Screen.width, Screen.height));
@@ -109,6 +118,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void ChangeFullscreen(bool value)
     {
+        Debug.Log(resolutions[currentResolution]);
         Screen.SetResolution(resolutions[currentResolution].width, resolutions[currentResolution].height, value);
         fullscreen = value;
         if (sfxSound != null)
