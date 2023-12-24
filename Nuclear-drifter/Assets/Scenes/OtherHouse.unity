@@ -7421,7 +7421,7 @@ GameObject:
   - component: {fileID: 1343433857}
   - component: {fileID: 1343433856}
   m_Layer: 0
-  m_Name: ' Drunkard2NPC'
+  m_Name: ' DrunkardNPC'
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12701,7 +12701,7 @@ GameObject:
   - component: {fileID: 9051836880300727960}
   - component: {fileID: 9051836880300727961}
   m_Layer: 0
-  m_Name: ' Drunkard1NPC'
+  m_Name: BuzzNPC
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12786,7 +12786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &9051836881291790597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12965,27 +12965,6 @@ MonoBehaviour:
     type: 3}
   left: {fileID: 2994842019522532090, guid: 9a6e8030e775c5742bd2335e1bd88184, type: 3}
   right: {fileID: 7753997045314467135, guid: 9a6e8030e775c5742bd2335e1bd88184, type: 3}
---- !u!114 &9051836881560560394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9051836881560560503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c833e8d8e0a5d4abf302d07528a2d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - Hello bro!
-  - Will you drink with me?
-  nameNPC: Settler
-  currentIndex: 0
-  counter: 0
-  counterMax: 3.5
-  active: 0
-  text: {fileID: 9051836881291790597}
 --- !u!212 &9051836881560560395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13066,15 +13045,66 @@ GameObject:
   - component: {fileID: 9051836881560560502}
   - component: {fileID: 9051836881560560395}
   - component: {fileID: 9051836881560560392}
-  - component: {fileID: 9051836881560560394}
   - component: {fileID: 9051836881560560393}
+  - component: {fileID: 9051836881560560505}
+  - component: {fileID: 9051836881560560504}
   m_Layer: 0
-  m_Name: Drunkard_52
+  m_Name: Buzz_52
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9051836881560560504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9051836881560560503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fba349bc9ffa204c9f0969a418f243d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - itemElement: {fileID: 11400000, guid: a6a720f1835bb2048b788a86b602e073, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: 0
+  currency:
+    itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
+    amountItem: 1
+    ammo: 0
+    id: -1
+  halfPrice: 0
+--- !u!114 &9051836881560560505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9051836881560560503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309b51a9f3c1a5c44a61e96a33dbb795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameNPC: Buzz
+  job: Dealer
+  city: Inn
+  firstReply: Hey! Looking for a good boost in combat? Try Green Zen. Just 25 dollars
+    a piece.
+  cbReply: Hey! Looking for a good boost in combat? Try Green Zen. Just 25 dollars
+    a piece.
+  firstReplyClip: {fileID: 0}
+  cbReplyClip: {fileID: 0}
+  modules:
+  - {fileID: 11400000, guid: 1b467ae8878ac284c889468cc12be7df, type: 2}
+  startIndex: 0
+  indexNPC: 4
+  distance: 1.1
+  nPCJob: {fileID: 0}
 --- !u!212 &9161918626190502391
 SpriteRenderer:
   m_ObjectHideFlags: 0
