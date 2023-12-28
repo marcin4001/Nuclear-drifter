@@ -99,6 +99,7 @@ public class TradeSlot : MonoBehaviour
                 gUI.AddText("You spent $" + trade.money.amountItem);
                 inv.RemoveFew(trade.money);
                 sound.PlayCash();
+                SetAmmoIcon();
             }
             else
             {
@@ -122,6 +123,7 @@ public class TradeSlot : MonoBehaviour
                 gUI.AddText("You spent $" + trade.money.amountItem);
                 inv.RemoveFew(trade.money);
                 sound.PlayCash();
+                SetAmmoIcon();
             }
             else
             {
@@ -185,5 +187,31 @@ public class TradeSlot : MonoBehaviour
         itemSlot = null;
         imgSlot.enabled = false;
         labelSlot.text = "";
+    }
+
+    public void SetAmmoIcon()
+    {
+        if (itemSlot == null) return;
+        if(itemSlot.itemElement != null)
+        {
+            if (itemSlot.itemElement is WeaponItem)
+            {
+                WeaponItem weaponItem = (WeaponItem)itemSlot.itemElement;
+                if (weaponItem != null)
+                {
+                    if (!weaponItem.isMeleeWeapon && !weaponItem.isBomb && weaponItem != null)
+                    {
+                        if (inv.FindItemB(itemSlot.itemElement.idItem))
+                        {
+                            imgSlot.overrideSprite = weaponItem.ammoSprite;
+                        }
+                        else
+                        {
+                            imgSlot.overrideSprite = itemSlot.itemElement.image;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

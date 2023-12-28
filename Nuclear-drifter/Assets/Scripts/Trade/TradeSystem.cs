@@ -93,6 +93,10 @@ public class TradeSystem : MonoBehaviour
                 SetItems();
             }
         }
+        foreach(TradeSlot slot in tradeSlots)
+        {
+            slot.SetAmmoIcon();
+        }
         active = true;
         tradeGO.SetActive(active);
         gUI.move.active = !active;
@@ -239,6 +243,10 @@ public class TradeSystem : MonoBehaviour
                     if (money.amountItem > 0) inv.Add(money);
                     sellSlot.ClearSlot();
                     soundUse.PlayCash();
+                    foreach (TradeSlot slot in tradeSlots)
+                    {
+                        slot.SetAmmoIcon();
+                    }
                     return;
                 }
                 if (sellSlot.itemSlot.itemElement.idItem != 300)
@@ -255,6 +263,10 @@ public class TradeSystem : MonoBehaviour
                     gUI.AddText("You got $" + money.amountItem);
                     if (money.amountItem > 0) inv.Add(money);
                     sellSlot.ClearSlot();
+                }
+                foreach (TradeSlot slot in tradeSlots)
+                {
+                    slot.SetAmmoIcon();
                 }
                 soundUse.PlayCash();
             }
