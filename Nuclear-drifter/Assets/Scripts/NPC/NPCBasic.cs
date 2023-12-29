@@ -97,6 +97,7 @@ public class NPCBasic : MonoBehaviour
     public void SetHaveRespect()
     {
         haveRespect = true;
+        if(listNPC == null) listNPC = FindObjectOfType<NPCList>();
         if (listNPC != null) listNPC.SetHaveRespect(indexNPC);
     }
 

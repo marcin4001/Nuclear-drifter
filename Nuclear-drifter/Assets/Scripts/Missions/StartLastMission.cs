@@ -10,6 +10,7 @@ public class StartLastMission : MonoBehaviour
     public string[] textSecoundMissionStart;
     public int respect = 75;
     public bool withoutInfo = false;
+    public NPCBasic npcToSetRespect;
     private MissionObj preLastMission;
     private MissionObj lastMission;
     private MissionTextGUI textGUI;
@@ -22,7 +23,10 @@ public class StartLastMission : MonoBehaviour
         {
             if (lastMission.start)
             {
+                if (npcToSetRespect != null)
+                    npcToSetRespect.SetHaveRespect();
                 Destroy(gameObject);
+                return;
             }
             else
             {
@@ -38,17 +42,18 @@ public class StartLastMission : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("StartLastMission");
         if (collision.tag == "Hero" && preLastMission.complete)
         {
-            int currentRespect = MissionList.global.GetCurrentRespect();
+            int currentRespect = MissionList.global.PercentRespect();
             if(currentRespect < respect)
             {
                 Destroy(gameObject);
                 return;
             }
             lastMission.start = true;
-            if(withoutInfo)
+            if (npcToSetRespect != null)
+                npcToSetRespect.SetHaveRespect();
+            if (withoutInfo)
             {
                 Destroy(gameObject);
                 return;

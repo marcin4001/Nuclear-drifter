@@ -15,7 +15,7 @@ public class TradeSlot : MonoBehaviour
     private SoundUse sound;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         gUI = FindObjectOfType<GUIScript>();
         inv = FindObjectOfType<Inventory>();
@@ -199,8 +199,10 @@ public class TradeSlot : MonoBehaviour
                 WeaponItem weaponItem = (WeaponItem)itemSlot.itemElement;
                 if (weaponItem != null)
                 {
-                    if (!weaponItem.isMeleeWeapon && !weaponItem.isBomb && weaponItem != null)
+                    if (!weaponItem.isMeleeWeapon && !weaponItem.isBomb && weaponItem.ammoSprite != null)
                     {
+                        //if(inv == null)
+                        //    inv = FindObjectOfType<Inventory>();
                         if (inv.FindItemB(itemSlot.itemElement.idItem))
                         {
                             imgSlot.overrideSprite = weaponItem.ammoSprite;
