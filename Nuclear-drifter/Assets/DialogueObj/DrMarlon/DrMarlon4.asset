@@ -16,8 +16,7 @@ MonoBehaviour:
   - choice: What should I do for you?
     reply: I need graphite to create moderators for the reactor. It can be found
       in a mine northwest of here. I can't go there myself it is very dangerous there.
-      There are cyclops there. If you bring me 12 packages of graphite I will share
-      the elergy with the rest of the continent.
+      There are cyclops there. To start this reactor, I need 12 packages of graphite.
     nextModule: 0
     missionStart: 1
     startIdMission: 31
@@ -28,3 +27,5 @@ MonoBehaviour:
     workOpt: 0
     checkEmptyReplyWork: 0
     nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0

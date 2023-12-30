@@ -27,6 +27,8 @@ MonoBehaviour:
     workOpt: 0
     checkEmptyReplyWork: 0
     nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
   - choice: How did you find this hidden reactor?
     reply: Six years ago when I was still living in Watown I found an old newspaper
       from 2077. In one of the articles there was a story about a new nuclear reactor.
@@ -42,10 +44,11 @@ MonoBehaviour:
     workOpt: 0
     checkEmptyReplyWork: 0
     nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
   - choice: Do you know where the deposits of uranium from the subway are?
-    reply: I know where the deposits are! They are in the warehouse at the end of
-      this corridor. I won't give them to you! They are needed for me to start the
-      reactor.
+    reply: "I know where the deposits are! They're in the warehouse at the end of
+      this corridor. I won't give them to anyone! \nI need them to start the reactor."
     nextModule: 0
     missionStart: 0
     startIdMission: 0
@@ -56,6 +59,8 @@ MonoBehaviour:
     workOpt: 0
     checkEmptyReplyWork: 0
     nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
   - choice: Take care!
     reply: 
     nextModule: -1
@@ -68,3 +73,5 @@ MonoBehaviour:
     workOpt: 0
     checkEmptyReplyWork: 0
     nextModuleWork: 0
+    replyClip: {fileID: 0}
+    pitchClip: 0
