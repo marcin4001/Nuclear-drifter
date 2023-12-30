@@ -51,12 +51,14 @@ public class VendingMachine : MonoBehaviour
             }
             else
             {
-                gUI.AddText("You don't have enough money!");
+                gUI.AddText("You don't have enough");
+                gUI.AddText("money!");
             }
         }
         else
         {
-            gUI.AddText("You don't have enough money!");
+            gUI.AddText("You don't have enough");
+            gUI.AddText("money!");
         }
     }
 
