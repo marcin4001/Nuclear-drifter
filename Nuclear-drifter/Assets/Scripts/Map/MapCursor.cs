@@ -6,6 +6,7 @@ public class MapCursor : MonoBehaviour
 {
     public Transform cursorPlayer;
     public Transform player;
+    public Vector2 subwayOutsidePos = new Vector2(254f, 109);
     private TypeScene scene;
 
     // Start is called before the first frame update
@@ -14,6 +15,8 @@ public class MapCursor : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         scene = FindObjectOfType<TypeScene>();
         cursorPlayer.localPosition = PropertyPlayer.property.posOutside;
+        if (scene.subway)
+            cursorPlayer.localPosition = subwayOutsidePos;
     }
 
     // Update is called once per frame
