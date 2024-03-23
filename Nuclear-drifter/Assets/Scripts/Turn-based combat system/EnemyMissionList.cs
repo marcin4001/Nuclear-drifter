@@ -29,7 +29,6 @@ public class EnemyMissionList : MonoBehaviour
         if (id < enemies.Length)
         {
             enemy = enemies[id];
-            Debug.Log(1);
         }
         else
         {
@@ -40,7 +39,6 @@ public class EnemyMissionList : MonoBehaviour
             }
             enemies = enemyList.ToArray();
             enemy = enemies[id];
-            Debug.Log(-1);
         }
         if (enemy.nameEnemy == "" || enemy.nameEnemy == null)
         {

@@ -7,6 +7,7 @@ public class MiscItem : Item
 {
     public bool isBackpack = false;
     public bool isCigarette = false;
+    public bool isMoney = false;
     public int cigaretteDamage = 0;
     private Health hp;
     private void Awake()
@@ -47,6 +48,15 @@ public class MiscItem : Item
                 gUI.AddText("Smoking kills!");
             }
             return;
+        }
+        if(isMoney)
+        {
+            MoneyScreen moneyscreen = FindObjectOfType<MoneyScreen>();
+            if (moneyscreen != null)
+            {
+                moneyscreen.OpenMoney();
+                return;
+            }
         }
 
         if (gUI != null) gUI.AddText("This cannot be used");
