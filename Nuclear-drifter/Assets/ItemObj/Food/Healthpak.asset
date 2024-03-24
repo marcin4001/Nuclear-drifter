@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Healthpak
   m_EditorClassIdentifier: 
   nameItem: Healthpak
-  image: {fileID: 21300000, guid: bdd280a4a28f3ab4ebb380b5da2befd2, type: 3}
+  image: {fileID: -1520638258, guid: 87425b34a8ca9094db44a97bd5368b65, type: 3}
   description: +40 HP
   value: 15
   idItem: 207
@@ -25,3 +25,5 @@ MonoBehaviour:
   isPoison: 0
   addRad: 0
   isDrink: 0
+  isInhaler: 0
+  isDrag: 0

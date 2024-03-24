@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RadKiller
   m_EditorClassIdentifier: 
   nameItem: Rad Killer
-  image: {fileID: -4001657251097077254, guid: fc9aff2a090f58141a8fb95c7af1b289, type: 3}
+  image: {fileID: -756745626, guid: 87425b34a8ca9094db44a97bd5368b65, type: 3}
   description: '- Rad'
   value: 50
   idItem: 211
@@ -25,3 +25,5 @@ MonoBehaviour:
   isPoison: 0
   addRad: 0
   isDrink: 1
+  isInhaler: 0
+  isDrag: 0

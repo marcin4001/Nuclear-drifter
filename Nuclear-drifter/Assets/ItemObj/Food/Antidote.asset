@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Antidote
   m_EditorClassIdentifier: 
   nameItem: Antidote
-  image: {fileID: 3812773907732362644, guid: fc9aff2a090f58141a8fb95c7af1b289, type: 3}
+  image: {fileID: -1277778711, guid: 87425b34a8ca9094db44a97bd5368b65, type: 3}
   description: '- Poison, +50 HP'
   value: 50
   idItem: 200
@@ -25,3 +25,5 @@ MonoBehaviour:
   isPoison: 0
   addRad: 0
   isDrink: 1
+  isInhaler: 0
+  isDrag: 0

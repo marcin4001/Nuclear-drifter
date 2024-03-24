@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RadKiller Duo
   m_EditorClassIdentifier: 
   nameItem: Rad Killer Duo
-  image: {fileID: 1321638500245789079, guid: 121a023f73efd4244a1d3e4d54799da3, type: 3}
+  image: {fileID: 1455475041, guid: 87425b34a8ca9094db44a97bd5368b65, type: 3}
   description: '- Rad, + 50HP'
   value: 75
   idItem: 218
@@ -25,3 +25,5 @@ MonoBehaviour:
   isPoison: 0
   addRad: 0
   isDrink: 1
+  isInhaler: 0
+  isDrag: 0

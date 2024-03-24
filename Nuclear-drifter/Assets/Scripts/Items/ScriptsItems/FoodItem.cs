@@ -34,7 +34,7 @@ public class FoodItem : Item
         {
             hp.AddHealth(addHP);
             if (healsPoison) hp.SetPoison(false);
-            if (healsRad) hp.SetRad(false);
+            if (healsRad) hp.RemoveOneRadLevel();
             if (isPoison) hp.SetPoison(true);
             if (addRad && !SkillsAndPerks.playerSkill.radResistance) hp.SetRad(true);
             if (isDrink) irrigation.Drink();

@@ -94,6 +94,30 @@ public class Health : MonoBehaviour
         radMeter.SetRadLevel(levelRad);
     }
 
+    public void RemoveOneRadLevel()
+    {
+        if(levelRad <= 0)
+        {
+            levelRad = 0;
+            return;
+        }
+        levelRad -= 1;
+        if(levelRad == 2)
+        {
+            maxHealth = (int)(0.7f * maxAfterRad);
+        }
+        if (levelRad == 1)
+        {
+            maxHealth = (int)(0.8f * maxAfterRad);
+        }
+        if (levelRad == 0)
+        {
+            maxHealth = maxAfterRad;
+            isRad = false;
+        }
+        radMeter.SetRadLevel(levelRad);
+    }
+
     public void SetPoison(bool value)
     {
         if (value)
