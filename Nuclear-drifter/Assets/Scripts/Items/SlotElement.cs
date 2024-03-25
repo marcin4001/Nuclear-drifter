@@ -58,10 +58,13 @@ public class SlotElement : MonoBehaviour
                     {
                         if (itemSlot.itemElement.GetItemType() == ItemType.Food)
                         {
-                            if(typeSc.radZone && itemSlot.itemElement.idItem == 211)
+                            if(typeSc.radZone)
                             {
-                                gUI.AddText("It won't help me now");
-                                return;
+                                if (itemSlot.itemElement.idItem == 211 || itemSlot.itemElement.idItem == 218)
+                                {
+                                    gUI.AddText("It won't help me now");
+                                    return;
+                                }
                             }
                             FoodItem food = (FoodItem)itemSlot.itemElement;
                             if(!gUI.GetCombatState() && food.isDrag)

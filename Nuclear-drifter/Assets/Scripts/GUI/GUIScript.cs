@@ -39,6 +39,7 @@ public class GUIScript : MonoBehaviour
     public Sprite irrigationUp;
     public Sprite irrigationDown;
 
+    private Text warningText;
     private GraphicRaycaster raycaster;
     private EventSystem system;
     private PointerEventData data;
@@ -63,7 +64,11 @@ public class GUIScript : MonoBehaviour
         if (newLvlLabel != null)
             newLvlLabel.enabled = false;
         if (warningLabel != null)
+        {
+            warningText = warningLabel.GetComponentInChildren<Text>();
             warningLabel.enabled = false;
+            warningText.enabled = false;
+        }
         if(drugsSignImg != null)
             drugsSignImg.enabled = false;
         if(PropertyPlayer.property.consoleText != null)
@@ -117,10 +122,18 @@ public class GUIScript : MonoBehaviour
         }
     }
 
-    public void ShowWarning()
+    public void ShowWarning(bool isInfo = true)
     {
-        if (warningLabel != null)
-            warningLabel.enabled = true;
+        if (warningLabel == null)
+            return;
+        warningLabel.enabled = true;
+        if(warningText == null)
+            warningText = warningLabel.GetComponentInChildren<Text>();
+        warningText.enabled = true;
+        if (isInfo)
+            warningText.text = "Info";
+        else
+            warningText.text = "Caution";
     }
 
     public void ShowDrugsSign(bool value)
@@ -139,6 +152,9 @@ public class GUIScript : MonoBehaviour
     {
         sound.PlayClickButton();
         warningLabel.enabled = false;
+        if (warningText == null)
+            warningText = warningLabel.GetComponentInChildren<Text>();
+        warningText.enabled = false;
     }
 
     public void AddText(string _text)
@@ -228,6 +244,7 @@ public class GUIScript : MonoBehaviour
         {
             move.active = false;
         }
+
     }
 
     public string GetTime()

@@ -57,7 +57,7 @@ public class Irrigation : MonoBehaviour
                 gUI.AddText("You are dehydrated!");
                 gUI.AddText("You need to drink");
                 gUI.AddText("something within 6 hours!");
-                gUI.ShowWarning();
+                gUI.ShowWarning(false);
                 PropertyPlayer.property.SavePrevDehydration();
             }
 
@@ -67,7 +67,7 @@ public class Irrigation : MonoBehaviour
                 gUI.AddText("You are dehydrated!");
                 gUI.AddText("You need to drink");
                 gUI.AddText("something within 1 hour!");
-                gUI.ShowWarning();
+                gUI.ShowWarning(false);
                 secondWarning = true;
             }
 

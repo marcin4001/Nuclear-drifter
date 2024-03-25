@@ -98,8 +98,8 @@ public class MenuUI : MonoBehaviour
 
     private void ResetProperty()
     {
-        PropertyPlayer.property.currentHealth = 75;
-        PropertyPlayer.property.maxHealth = 75;
+        PropertyPlayer.property.currentHealth = 50;
+        PropertyPlayer.property.maxHealth = 50;
         PropertyPlayer.property.isPoison = false;
         PropertyPlayer.property.isRad = false;
         PropertyPlayer.property.levelRad = 0;

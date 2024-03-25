@@ -8,6 +8,7 @@ public class FoodItem : Item
     public int addHP = 0;
     public bool healsPoison = false;
     public bool healsRad = false;
+    public bool healsRadMax = false;
     public bool isPoison = false;
     public bool addRad = false;
     public bool isDrink = false;
@@ -35,6 +36,7 @@ public class FoodItem : Item
             hp.AddHealth(addHP);
             if (healsPoison) hp.SetPoison(false);
             if (healsRad) hp.RemoveOneRadLevel();
+            if (healsRadMax) hp.SetRad(false);
             if (isPoison) hp.SetPoison(true);
             if (addRad && !SkillsAndPerks.playerSkill.radResistance) hp.SetRad(true);
             if (isDrink) irrigation.Drink();
