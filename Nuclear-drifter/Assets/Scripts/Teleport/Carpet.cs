@@ -12,6 +12,7 @@ public class Carpet : MonoBehaviour
     private TimeGame time;
     public bool isLock = false;
     public bool closeInNight = false;
+    public bool closeInDay = false;
     public string locationInside;
     public bool noSound = false;
     private SoundUse sound;
@@ -29,6 +30,7 @@ public class Carpet : MonoBehaviour
         if (collision.tag == "Hero")
         {
             if (closeInNight) IsNight();
+            if (closeInDay) IsDay();
             if (!isLock)
             {
                 if (door != null) box.door = door;
@@ -42,6 +44,7 @@ public class Carpet : MonoBehaviour
             {
                 gUI.AddText("The door is locked!");
                 if(closeInNight) gUI.AddText("Opening at 6 am");
+                if (closeInDay) gUI.AddText("Opening at 9 pm");
                 sound.PlayLock();
             }
         }
@@ -51,5 +54,11 @@ public class Carpet : MonoBehaviour
     {
         if (time.hour >= 6 && time.hour < 21) isLock = false;
         else isLock = true;
+    }
+
+    public void IsDay()
+    {
+        if (time.hour >= 6 && time.hour < 21) isLock = true;
+        else isLock = false;
     }
 }
