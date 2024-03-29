@@ -311,7 +311,7 @@ public class CombatSystem : MonoBehaviour
 
     public void SelectWeapon(WeaponItem weapon)
     {
-        bool largeGun = new[] { 0, 4 }.Contains(weapon.idItem);
+        bool largeGun = new[] { 0, 4, 5 }.Contains(weapon.idItem);
         Slot temp = inv.FindItem(weapon.idItem);
         if (temp != null)
         {

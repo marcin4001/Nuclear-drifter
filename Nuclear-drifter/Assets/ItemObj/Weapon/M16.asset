@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fffbab53c10bc458df05fb08e49c22, type: 3}
+  m_Name: M16
+  m_EditorClassIdentifier: 
+  nameItem: M16
+  image: {fileID: 21300000, guid: df0a5dc9eeb3f1546822559f01e7e715, type: 3}
+  description: 'Ammo: 5.56 mm'
+  value: 250
+  idItem: 5
+  noRemove: 0
+  noSell: 0
+  ammoAmount: 0
+  damage: 55
+  isMeleeWeapon: 0
+  isBomb: 0
+  soundId: 1
+  criticChance: 0.1
+  multishot: 1
+  oneShotSoundId: 8
+  ammoSprite: {fileID: 1428898144, guid: a01163874ddb39f43929da7171ea2a71, type: 3}
