@@ -186,6 +186,7 @@ MonoBehaviour:
   animBomb: {fileID: 220639836053656912}
   isDark: 0
   misses: 0
+  useDrag: 0
 --- !u!114 &220639836096212097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +217,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f4b38377ec7b40848b91582d8a065721, type: 3}
   - {fileID: 8300000, guid: 0d8f6a8302c36b344b690268c0f5f28c, type: 3}
   - {fileID: 8300000, guid: 1233f248f22200e43aeee63ce68e5364, type: 3}
+  - {fileID: 8300000, guid: 7ece17ea616e74343b2fe39964388eb2, type: 3}
+  - {fileID: 8300000, guid: 69adf81973c1ba34d865b02b844bef85, type: 3}
   clickButton: {fileID: 8300000, guid: fa098cab9e143e14abab880fbcadf469, type: 3}
 --- !u!82 &220639836096212110
 AudioSource:
