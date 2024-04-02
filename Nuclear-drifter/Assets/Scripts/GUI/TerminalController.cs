@@ -26,6 +26,8 @@ public class TerminalController : MonoBehaviour
     private float counterF = 0f;
     public float counterFmax = 1f;
     public Text timeText;
+    public GameObject StartPanel;
+
     private TimeGame time;
     private Experience exp;
     private MapControl map;
@@ -47,7 +49,8 @@ public class TerminalController : MonoBehaviour
             if (mission.complete)
                 state = TerminalState.end;
         }
-
+        if(StartPanel != null)
+            StartPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -102,7 +105,9 @@ public class TerminalController : MonoBehaviour
         typeSc.inMenu = true;
         counter = 0;
         map.keyActive = false;
-        foreach(Device device in devices)
+        if (StartPanel != null)
+            StartPanel.SetActive(false);
+        foreach (Device device in devices)
         {
             if(device != null)
             {
@@ -214,6 +219,20 @@ public class TerminalController : MonoBehaviour
                     exp.AddExp(mission.exp);
             }
             sound.PlayClickButton();
+        }
+    }
+
+    public void ToggleStartPanel()
+    {
+        if (StartPanel.activeSelf)
+        {
+            sound.PlayClickButton();
+            StartPanel.SetActive(false);
+        }
+        else
+        {
+            sound.PlayClickButton();
+            StartPanel.SetActive(true);
         }
     }
 }
