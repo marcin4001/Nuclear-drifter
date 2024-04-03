@@ -18,9 +18,13 @@ public class TerminalTextController : MonoBehaviour
     private float counterF = 0f;
     public float counterFmax = 0.5f;
     public Text timeText;
+    public GameObject StartPanel;
+    public GameObject StartButtonPressed;
+
     private TimeGame time;
     private Experience exp;
     private MapControl map;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,10 @@ public class TerminalTextController : MonoBehaviour
         active = false;
         exp = FindObjectOfType<Experience>();
         map = FindObjectOfType<MapControl>();
+        if (StartPanel != null)
+            StartPanel.SetActive(false);
+        if (StartButtonPressed != null)
+            StartButtonPressed.SetActive(false);
     }
 
     // Update is called once per frame
@@ -77,6 +85,10 @@ public class TerminalTextController : MonoBehaviour
         pause.activeEsc = false;
         typeSc.inMenu = true;
         map.keyActive = false;
+        if (StartPanel != null)
+            StartPanel.SetActive(false);
+        if (StartButtonPressed != null)
+            StartButtonPressed.SetActive(false);
     }
 
     public void Exit()
@@ -87,5 +99,23 @@ public class TerminalTextController : MonoBehaviour
         pause.activeEsc = true;
         typeSc.inMenu = false;
         map.keyActive = true;
+    }
+
+    public void ToggleStartPanel()
+    {
+        if (StartPanel.activeSelf)
+        {
+            sound.PlayClickButton();
+            StartPanel.SetActive(false);
+            if (StartButtonPressed != null)
+                StartButtonPressed.SetActive(false);
+        }
+        else
+        {
+            sound.PlayClickButton();
+            StartPanel.SetActive(true);
+            if (StartButtonPressed != null)
+                StartButtonPressed.SetActive(true);
+        }
     }
 }

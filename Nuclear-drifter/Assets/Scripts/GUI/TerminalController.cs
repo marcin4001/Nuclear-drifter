@@ -27,6 +27,7 @@ public class TerminalController : MonoBehaviour
     public float counterFmax = 1f;
     public Text timeText;
     public GameObject StartPanel;
+    public GameObject StartButtonPressed;
 
     private TimeGame time;
     private Experience exp;
@@ -51,6 +52,8 @@ public class TerminalController : MonoBehaviour
         }
         if(StartPanel != null)
             StartPanel.SetActive(false);
+        if(StartButtonPressed != null)
+            StartButtonPressed.SetActive(false);
     }
 
     // Update is called once per frame
@@ -107,6 +110,8 @@ public class TerminalController : MonoBehaviour
         map.keyActive = false;
         if (StartPanel != null)
             StartPanel.SetActive(false);
+        if(StartButtonPressed != null)
+            StartButtonPressed.SetActive(false);
         foreach (Device device in devices)
         {
             if(device != null)
@@ -228,11 +233,15 @@ public class TerminalController : MonoBehaviour
         {
             sound.PlayClickButton();
             StartPanel.SetActive(false);
+            if(StartButtonPressed != null)
+                StartButtonPressed.SetActive(false);
         }
         else
         {
             sound.PlayClickButton();
             StartPanel.SetActive(true);
+            if (StartButtonPressed != null)
+                StartButtonPressed.SetActive(true);
         }
     }
 }

@@ -635,6 +635,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -4406,10 +4430,10 @@ TextureImporter:
       Guard3_48: 1501789059155970759
       Guard3_81: 823086456266366441
       Guard3_26: 6115586588466493977
-      Guard3_2: -7522816240901819172
       Guard3_95: -8974583195485885678
-      Guard3_90: -8084719132309316015
       Guard3_163: -8938252809853476994
+      Guard3_90: -8084719132309316015
+      Guard3_2: -7522816240901819172
       Guard3_51: -6818583775116376244
       Guard3_28: 6536611411266340614
       Guard3_41: 4650750726261885252
@@ -4461,9 +4485,9 @@ TextureImporter:
       Guard3_12: 3034840276986355361
       Guard3_44: 6933966340723356177
       Guard3_110: -7217716146937114476
-      Guard3_7: -3306792535502401346
-      Guard3_173: -7741959352359381673
       Guard3_147: 3802398235139963060
+      Guard3_173: -7741959352359381673
+      Guard3_7: -3306792535502401346
       Guard3_30: -7393632452150858156
       Guard3_136: -607577629354826411
       Guard3_1: -3029119089890851536
@@ -4513,22 +4537,22 @@ TextureImporter:
       Guard3_52: 7801887940460500999
       Guard3_164: -5036458313642048618
       Guard3_114: -6160552318501398486
-      Guard3_24: 6688475015504413732
+      Guard3_116: 2114146580798303257
       Guard3_34: -7281435751995335197
       Guard3_9: 943119744434951331
+      Guard3_24: 6688475015504413732
       Guard3_57: 4297897511672233333
-      Guard3_116: 2114146580798303257
-      Guard3_59: 2794187653675060029
       Guard3_171: -3028304123094344931
       Guard3_42: -128165028185664037
+      Guard3_59: 2794187653675060029
       Guard3_62: -56939626987424513
       Guard3_113: 5088616499625435108
       Guard3_87: -1740559081043918253
       Guard3_63: 3932501558955024075
-      Guard3_121: -2821170679149988726
       Guard3_170: -1933185525949121593
       Guard3_112: 6146723256662024846
       Guard3_177: 1121029953367828368
+      Guard3_121: -2821170679149988726
       Guard3_53: 8036097878756953078
       Guard3_111: 2006226751695941328
       Guard3_158: -4653635483049704187

@@ -12,6 +12,7 @@ public class NPCbg : MonoBehaviour
     public float counterMax = 3.5f;
     public bool active = false;
     public TextMeshPro text;
+    public TextMeshPro otherText;
 
     private PlayerClickMove player;
 
@@ -64,6 +65,10 @@ public class NPCbg : MonoBehaviour
             {
                 dir.ResetPos();
             }
+        }
+        if(otherText != null)
+        {
+            otherText.enabled = false;
         }
     }
 
