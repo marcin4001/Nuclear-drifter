@@ -27,7 +27,7 @@ public class Achievement : MonoBehaviour
 #endif
     public void SetAchievement(int id)
     {
-        Debug.Log(id);
+        
         if(names.Length != 0 && id < names.Length && SteamManager.Initialized)
         {
             bool complete = false;

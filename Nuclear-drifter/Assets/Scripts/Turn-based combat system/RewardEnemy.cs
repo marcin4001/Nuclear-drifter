@@ -11,6 +11,7 @@ public class RewardEnemy : MonoBehaviour
     private GUIScript gUI;
     public int chance = 100;
     public bool giveRandomItem = false;
+    public bool isCyclop = false;
     private ItemDB itemDB;
 
     // Start is called before the first frame update
@@ -51,7 +52,7 @@ public class RewardEnemy : MonoBehaviour
 
     public void GiveRandomItem()
     {
-        Slot randomItem = itemDB.GetRandomItem();
+        Slot randomItem = (isCyclop) ? itemDB.GetRandomCyclopItem() : itemDB.GetRandomZombieItem();
         if (inv.IsFull() && !inv.FindItemB(randomItem.itemElement.idItem))
         {
             GameObject obj = Instantiate(itemPref, transform.position, Quaternion.identity);

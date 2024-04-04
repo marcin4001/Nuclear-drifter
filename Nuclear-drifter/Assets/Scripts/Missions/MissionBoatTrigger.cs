@@ -32,6 +32,7 @@ public class MissionBoatTrigger : MonoBehaviour
             gUI.ClearText();
             foreach (string text in texts)
                 gUI.AddText(text);
+            gUI.ShowWarning();
             Destroy(gameObject);
         }
     }
