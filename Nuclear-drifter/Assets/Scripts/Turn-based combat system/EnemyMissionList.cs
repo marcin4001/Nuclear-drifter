@@ -42,7 +42,6 @@ public class EnemyMissionList : MonoBehaviour
         }
         if (enemy.nameEnemy == "" || enemy.nameEnemy == null)
         {
-            Debug.Log(trigger.nameEnemy);
             enemy.nameEnemy = trigger.nameEnemy;
             enemy.idMission = trigger.idMission;
         }
