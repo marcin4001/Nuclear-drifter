@@ -6582,6 +6582,7 @@ GameObject:
   - component: {fileID: 888769507}
   - component: {fileID: 888769506}
   - component: {fileID: 888769505}
+  - component: {fileID: 888769509}
   m_Layer: 0
   m_Name: Jack_3
   m_TagString: NPC
@@ -6727,6 +6728,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &888769509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888769502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446906e0a3d17b241b251c8d600f1e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currency:
+    itemElement: {fileID: 11400000, guid: 4d2c24ed28927e64eb7644de321840c0, type: 2}
+    amountItem: 0
+    ammo: 0
+    id: -1
+  inv: {fileID: 0}
+  betType: 0
+  colorChoice: 0
+  parityChoice: 0
+  numberChoice: 0
+  colors: []
 --- !u!1 &991088107
 GameObject:
   m_ObjectHideFlags: 0
