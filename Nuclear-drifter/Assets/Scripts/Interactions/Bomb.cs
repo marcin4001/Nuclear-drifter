@@ -13,6 +13,7 @@ public class Bomb : MonoBehaviour
     public float chanceExplosion = 0.5f;
     public float chanceExplosionWithRepair = 0.1f;
     public string explosionScene;
+    public GameObject scrapMetal;
     private Inventory inv;
     private PlayerClickMove player;
     private GUIScript gUI;
@@ -22,13 +23,29 @@ public class Bomb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (indexDevice < 0) isDismantled = stateInit;
+        else isDismantled = DeviceList.global.devices[indexDevice].repair;
+        if(scrapMetal != null)
+        {
+            if(isDismantled)
+            {
+                Destroy(transform.parent.GetComponent<Collider2D>());
+                scrapMetal.SetActive(true);
+                FindObjectOfType<GridNode>().UpdateGrid();
+                Destroy(transform.parent.gameObject);
+                return;
+            }
+            else
+            {
+                scrapMetal.SetActive(false);
+            }
+        }
         inv = FindObjectOfType<Inventory>();
         player = FindObjectOfType<PlayerClickMove>();
         gUI = FindObjectOfType<GUIScript>();
-        if (indexDevice < 0) isDismantled = stateInit;
-        else isDismantled = DeviceList.global.devices[indexDevice].repair;
         fade = FindObjectOfType<FadePanel>();
         sound = FindObjectOfType<SoundsTrigger>();
+        
     }
 
     public void Use()
@@ -83,5 +100,12 @@ public class Bomb : MonoBehaviour
         isDismantled = true;
         DeviceList.global.devices[indexDevice].repair = isDismantled;
         gUI.AddText("Bomb has been disarmed!");
+        if (scrapMetal != null)
+        {
+            Destroy(transform.parent.GetComponent<Collider2D>());
+            scrapMetal.SetActive(true);
+            FindObjectOfType<GridNode>().UpdateGrid();
+            Destroy(transform.parent.gameObject);
+        }
     }
 }
