@@ -41,8 +41,10 @@ public class Barrel : MonoBehaviour
     {
         if(!isEmpty && !PropertyPlayer.property.gotMachete)
         {
-            inv.Add(controller.GetItem());
+            Slot item = controller.GetItem();
+            inv.Add(item);
             PropertyPlayer.property.SetGotMachete();
+            gUI.AddText("Found: " + item.itemElement.name + " x" + item.amountItem);
         }
         else
         {

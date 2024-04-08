@@ -52,13 +52,15 @@ public class Device : MonoBehaviour
         {
             if (!SkillsAndPerks.playerSkill.repair)
             {
-                gUI.AddText("You can't repair devices!");
+                gUI.AddText(nameDevice + " is broken");
+                gUI.AddText("You can't repair devices");
                 return;
             }
             if (PropertyPlayer.property.isDehydrated)
             {
+                gUI.AddText(nameDevice + " is broken");
                 gUI.AddText("You are dehydrated!");
-                gUI.AddText("You can't use it now!");
+                gUI.AddText("You can't fix it now!");
                 return;
             }
             bool canFix = true;
