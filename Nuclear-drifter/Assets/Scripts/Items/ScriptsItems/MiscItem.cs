@@ -44,6 +44,7 @@ public class MiscItem : Item
             }
             if (gUI != null)
             {
+                gUI.ShowWarning(false);
                 gUI.AddText("Don't smoke!");
                 gUI.AddText("Smoking kills!");
             }
