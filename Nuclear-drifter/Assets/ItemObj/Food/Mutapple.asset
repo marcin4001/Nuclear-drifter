@@ -13,12 +13,18 @@ MonoBehaviour:
   m_Name: Mutapple
   m_EditorClassIdentifier: 
   nameItem: Mutapple
-  image: {fileID: -1862835387933990315, guid: fc9aff2a090f58141a8fb95c7af1b289, type: 3}
+  image: {fileID: 21300000, guid: 5562d75d06961e945a8f606547a28cd1, type: 3}
   description: +10 HP
   value: 5
   idItem: 208
+  noRemove: 0
+  noSell: 0
   addHP: 10
   healsPoison: 0
   healsRad: 0
+  healsRadMax: 0
   isPoison: 0
   addRad: 0
+  isDrink: 0
+  isInhaler: 0
+  isDrag: 0
