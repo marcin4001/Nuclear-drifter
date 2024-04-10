@@ -44,7 +44,7 @@ public class Barrel : MonoBehaviour
             Slot item = controller.GetItem();
             inv.Add(item);
             PropertyPlayer.property.SetGotMachete();
-            gUI.AddText("Found: " + item.itemElement.name + " x" + item.amountItem);
+            gUI.AddText("Found: " + item.itemElement.nameItem + " x" + item.amountItem);
         }
         else
         {

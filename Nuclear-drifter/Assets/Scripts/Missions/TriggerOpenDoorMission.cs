@@ -34,6 +34,7 @@ public class TriggerOpenDoorMission : MonoBehaviour
             if(aliveEnemy <= 0)
             {
                 door.isLock = false;
+                gUI.ShowWarning();
                 gUI.AddText("You hear the door lock");
                 gUI.AddText("open...");
                 sounds.PlayOpenLockDoor();

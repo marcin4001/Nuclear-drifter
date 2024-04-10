@@ -41,7 +41,9 @@ public class Bag : MonoBehaviour
     {
         if(!isEmpty && !PropertyPlayer.property.gotPicture)
         {
-            inv.Add(bagController.GetItemSlot());
+            Slot item = bagController.GetItemSlot();
+            inv.Add(item);
+            gUI.AddText("Found: " + item.itemElement.nameItem + " x" + item.amountItem);
             PropertyPlayer.property.SetGotPicture();
         }
         else
