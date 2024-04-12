@@ -17,6 +17,7 @@ public class DialogueController : MonoBehaviour
     public Text cityText;
 
     public Text replyText;
+    public Text moneyText;
     public DialChoice[] choices;
     public bool active = false;
     public GameObject blockEndButton;
@@ -24,6 +25,7 @@ public class DialogueController : MonoBehaviour
     private TypeScene typeSc;
     private SoundsTrigger sound;
     private TalkingHeadController head;
+    private Inventory inv;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,8 @@ public class DialogueController : MonoBehaviour
         typeSc = FindObjectOfType<TypeScene>();
         sound = FindObjectOfType<SoundsTrigger>();
         head = FindObjectOfType<TalkingHeadController>();
-        if(blockEndButton != null)
+        inv = FindObjectOfType<Inventory>();
+        if (blockEndButton != null)
         {
             blockEndButton.SetActive(false);
         }
@@ -115,6 +118,7 @@ public class DialogueController : MonoBehaviour
                     choices[i].Clear();
                 }
             }
+            SetMoneyText();
         }
     }
 
@@ -186,6 +190,20 @@ public class DialogueController : MonoBehaviour
                     choices[i].Clear();
                 }
             }
+            SetMoneyText();
+        }
+    }
+
+    public void SetMoneyText()
+    {
+        Slot money = inv.FindItem(300);
+        if (money != null)
+        {
+            moneyText.text = money.amountItem + "$";
+        }
+        else
+        {
+            moneyText.text = "0$";
         }
     }
 
